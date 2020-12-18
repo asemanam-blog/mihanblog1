@@ -1,0 +1,2458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc@rsd.html" />
+<script type="text/javascript" src="../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1625540*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[2]='0';commentCnt[3]='0';commentCnt[4]='0';commentCnt[5]='0';commentCnt[6]='0';commentCnt[9]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[2]='10';
+mihanblogDisLikeArrCnt[2]='1';
+mihanblogLikeArrCnt[3]='9';
+mihanblogDisLikeArrCnt[3]='1';
+mihanblogLikeArrCnt[4]='13';
+mihanblogDisLikeArrCnt[4]='3';
+mihanblogLikeArrCnt[5]='5';
+mihanblogDisLikeArrCnt[5]='0';
+mihanblogLikeArrCnt[6]='9';
+mihanblogDisLikeArrCnt[6]='0';
+mihanblogLikeArrCnt[9]='11';
+mihanblogDisLikeArrCnt[9]='1';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://amoozesh.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://amoozesh.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','6');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','دوشنبه 1 شهریور 1395');
+	
+	setStatVar('today_view','9');
+	setStatVar('yesterday_view','84');
+	
+	setStatVar('this_month_view','714');
+	setStatVar('last_month_view','1174');
+
+	setStatVar('total_view','68155');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (13:31)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://amoozesh.mihanblog.com/statupdate/?data[refereruri]=http://amoozesh.mihanblog.com/&data[postid]=&data[requesturi]=/post/author/2339&data[sdate]=1607768251&data[hash]=f954502420d5c4102ee56f6b0976f55d&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://amoozesh.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://amoozesh.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://amoozesh.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://amoozesh.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://amoozesh.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://amoozesh.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://amoozesh.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://amoozesh.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://amoozesh.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://amoozesh.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://amoozesh.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://amoozesh.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://amoozesh.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://amoozesh.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://amoozesh.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+
+<style>
+    /*
+    Theme Name: Smashing Theme - Widget Ready V
+    Theme URI: http://smashingmagazine.com/
+    Description: Designed by <a href="http://www.designdisease.com">Elena G. - DesignDisease</a>.
+    Version: 1.01
+    Author: Design Disease
+    Author URI: http://wp-themes.designdisease.com/
+    */
+
+
+body { background: #fff url(http://mihanblog.com/public/public/user_data/template/23/images/BkgBody.gif) repeat center; font-family: tahoma, Arial, Helvetica, sans-serif; font-size: 12px; padding: 20px; margin: 0px; color:#35383d;}
+
+html { padding: 0; margin: 0;}
+
+a:link { text-decoration: none; color : #218dd1; border: 0px; -moz-outline-style: none;}
+a:active { text-decoration: underline; color : #218dd1; border: 0px; -moz-outline-style: none;}
+a:visited { text-decoration: none; color : #218dd1; border: 0px; -moz-outline-style: none;}
+a:hover	{ text-decoration: underline; color : #cc0000; border: 0px; -moz-outline-style: none;}
+a:focus { outline: none;-moz-outline-style: none;}
+img{
+    max-width : 505px;
+}
+h1, h2, h3, h4 { font-family: Arial, Helvetica, sans-serif;}
+
+img { padding: 0px; margin: 0px; border: none; text-align: center;}
+hr { border-left:0px solid #abb0b5; border-right:0px solid #abb0b5; border-top:1px dotted #abb0b5; border-bottom:0px solid #abb0b5; height : 1px;  }
+
+
+input { font-family: 'Verdana'; color: #282b31; font-size: 11px;}
+textarea { font-family: 'Verdana'; color: #282b31; font-size: 11px;}
+select { font-family: 'Verdana'; color: #282b31; font-size: 11px;}
+
+    /* BGContainer +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.BGC { width: 980px; margin: 0 auto; padding: 0px; position: relative; }
+
+    /* Header +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+    /**/ * html .Header {text-align:right;height: 80px;} /* */
+.Header {margin:0 0 0 15px;text-align:right; background: #fff url(http://mihanblog.com/public/public/user_data/template/23/images/HeaderBkg.gif) no-repeat left top; width: 535px; position: relative; clear: left; padding: 0px 30px 0px 0px; min-height:80px;}
+
+.Header h1 { direction:rtl;white-space:nowrap;overflow:hidden;font-size: 26px; line-height: 26px; letter-spacing: 0px; padding: 27px 5px 0px 0px; margin: 0px; font-weight: bold; }
+.Header h1 a { color:#ff3300; text-decoration: none; }
+.Header h1 a:visited { color:#ff3300; text-decoration: none; }
+.Header h1 a:hover { color:#ff3300; text-decoration: none; }
+.Header .Desc { color:#8f8f8f; font-size: 15px; line-height: 15px; font-weight: bold; letter-spacing: 0px; font-family: 'Arial'; padding: 0px; margin: 0px 0px 0px 0px;}
+
+    /* Search ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Search { position: absolute; background: url(http://mihanblog.com/public/public/user_data/template/23/images/Search.gif) no-repeat left top; top: 20px; right: -220px; width: 220px; height: 63px;}
+.Search  div { padding: 28px 10px 10px 10px; margin: 0px;}
+.Search  input { border: none; color: #fff; font-size: 11px;}
+.Search  input.search {width: 21px; height: 21px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/SearchButton.gif) no-repeat;}
+.Search  input.keyword { background:transparent none repeat scroll 0 0;border:medium none;direction:rtl;padding:5px 5px 5px 15px;width:180px; }
+#buttonsearch { padding: 0px; margin: -21px 175px 0px 0px; top: 0px; background: none; }
+
+    /* Syndicate ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Syn { position: absolute; top: 45px; right: -400px; width: 170px;}
+.Syn ul { text-align:left;margin: 0px; padding: 0px;}
+.Syn li { background: url(http://mihanblog.com/public/public/user_data/template/23/images/SynIco.gif) no-repeat left center; margin: 0px; padding: 0px 0px 1px 15px; list-style-type: none; font-size: 10px; color:#25252b;}
+.Syn li a { color:#25252b; font-size: 10px; text-decoration: underline; }
+.Syn li a:visited { color:#25252b; font-size: 10px; text-decoration: underline; }
+.Syn li a:hover { color:#25252b; font-size: 10px; text-decoration: underline; }
+
+    /* Container +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.CON {margin:0px;text-align:right;background: #fff url(http://mihanblog.com/public/public/user_data/template/23/images/BGC.gif) repeat-y center; width: 980px; float: left; position: relative; padding: 0px}
+
+    /* Side Central Single +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SCS { background: url(http://mihanblog.com/public/public/user_data/template/23/images/SC.gif) no-repeat left top; width: 505px; float: left; padding: 0px 30px 15px 45px;}
+.SCS h1 { font-size: 20px; font-weight: normal; background: url(http://mihanblog.com/public/public/user_data/template/23/images/Dotted.gif) repeat-x bottom; padding-bottom: 10px; letter-spacing: -1px; }
+.SCS h2 { font-size: 18px; font-weight: normal; }
+.SCS h3 { font-size: 14px; font-weight: bold; }
+
+.SCS p { font-size: 12px; line-height: 17px;}
+.SCS p strong {}
+.SCS img {}
+.SCS ul { padding: 10px 0px; margin: 0px; }
+.SCS li { padding: 2px 0px 2px 15px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostContentLiIco.png) no-repeat left top; font-size: 11px; line-height: 15px; color:#4c4c4c; }
+.SCS blockquote { padding: 2px 10px; background: #e9f8ff; margin: 0px; color:#336699; }
+.SCS blockquote p { font-size: 11px; padding: 5px 0px; margin: 5px 0px; line-height: 15px;}
+.SCS blockquote li { padding: 2px 0px 2px 15px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostContentBlockLiIco.png) no-repeat left top; font-size: 11px; line-height: 15px; color:#336699; }
+.SCS blockquote a { color:#0080ca; }
+.SCS blockquote a:visited { color:#0080ca; }
+.SCS blockquote a:hover { color:#003399; }
+
+    /* Side Central +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SC {text-align:right; background: url(http://mihanblog.com/public/public/user_data/template/23/images/SC.gif) no-repeat left top; width: 505px; float: left; padding: 0px 0px 15px 45px;}
+.SC h2 { font-weight: normal;}
+.pagetitle { font-size: 24px; font-weight: normal; letter-spacing: -1px; border-bottom: solid 1px #787878; padding: 0px 0px 15px 0px; margin: 0px 0px 15px 0px; color:#787878;}
+
+    /* Menu +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.Menu { padding: 15px 0px 30px 0px; width: 505px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/Dotted.gif) repeat-x top;}
+.Menu em { display: none}
+.Menu ul { list-style: none; margin: 0px; padding: 0px;}
+.Menu ul li ul { display: none;}
+.Menu li { padding: 0px; margin: 0px; display: inline; font-size: 10px; line-height: 11px; font-weight: bold;}
+.Menu a { padding: 0px 0px 0px 3px; margin-right: 2px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/MLeft.png) no-repeat left top; float: left;}
+.Menu a span { padding: 4px 9px 5px 6px; display: block; background: url(http://mihanblog.com/public/public/user_data/template/23/images/MRight.png) no-repeat right top; float: right; }
+.Menu a span { float: none; color: #3b98d2;}
+.Menu a:hover span { color: #3b98d2;}
+.Menu a:hover { background-position: 0% -20px; color:#ffffff; text-decoration: none;}
+.Menu a:hover span { background-position: 100% -20px;  color:#ffffff;}
+.Menu .on { background: url(http://mihanblog.com/public/public/user_data/template/23/images/MLeft.png) no-repeat left bottom; color:#ffffff; }
+.Menu .on span { background: url(http://mihanblog.com/public/public/user_data/template/23/images/MRight.png) no-repeat right bottom; color:#ffffff; }
+
+    /* Post +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Post {	overflow:hidden;width:505px;padding: 15px 0px; position: relative; clear: left;}
+.PostHead { direction:rtl;position: relative; clear: left; width: 405px; padding-left: 100px;}
+.PostHead h1 { text-align:right;font-size: 19px; line-height: 19px; letter-spacing: -1px; font-weight: normal; padding: 0px 2px 1px 0px; margin: 0px; color:#cc0000;}
+.PostHead h1 a { color: #218dd1; text-decoration: none;}
+.PostHead h1 a:visited { color: #218dd1; text-decoration: none;}
+.PostHead h1 a:hover { color:#cc0000; text-decoration: none;}
+.PostHead ul { text-align:right;padding: 0px; margin: 0px;}
+.PostHead li { list-style-type: none; display:block}
+.PostHead li a { color:#8a98a2; text-decoration: underline;}
+.PostHead li a:visited { color:#8a98a2; text-decoration: underline;}
+.PostHead li a:hover { color:#8a98a2; text-decoration: underline;}
+
+.PostAuthor {background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostAuthor.png) no-repeat right center; padding: 1px 12px 1px 5px; margin: 0px; font-size: 10px; color:#8a98a2; font-weight: bold;display:block;}
+.PostCateg { float:right;background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostCategr.png) no-repeat right center; padding: 1px 12px 1px 5px; margin: 0px; font-size: 10px; color:#8a98a2; font-weight: bold;display:block;}
+
+    /**/ * html .PostTime { right: 30px;} /**/
+.PostTime { position: absolute; top: 20px; left: 0px; color:#8a98a2;}
+
+.PostContent {overflow:hidden;width:505px;direction:rtl;text-align:right; padding: 5px 0px 5px 0px; font-size: 12px; line-height: 17px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/Dotted.gif) repeat-x bottom; color:#444640; }
+.PostContent p { color:#444640; font-size: 12px; line-height: 17px;}
+.PostContent p strong {}
+.PostContent img {}
+.PostContent ul { padding: 10px 0px; margin: 0px; }
+.PostContent li { padding: 2px 15px 2px 0px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostContentLiIco.png) no-repeat right top; font-size: 11px; line-height: 15px; color:#4c4c4c; }
+.PostContent blockquote { padding: 2px 10px; background: #e9f8ff; margin: 0px; color:#336699; }
+.PostContent blockquote p { font-size: 11px; padding: 5px 0px; margin: 5px 0px; line-height: 15px;}
+.PostContent blockquote li { padding: 2px 0px 2px 15px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostContentBlockLiIco.png) no-repeat left top; font-size: 11px; line-height: 15px; color:#336699; }
+.PostContent blockquote a { color:#0080ca; }
+.PostContent blockquote a:visited { color:#0080ca; }
+.PostContent blockquote a:hover { color:#003399; }
+.PostContent a { text-decoration: underline;}
+
+.PostDet { text-align:left;direction:rtl;padding-top: 10px;}
+.PostDet ul { padding: 0px; margin: 0px;}
+.PostDet li { padding: 2px 0px 5px 15px; margin: 0px 10px 0px 0px; list-style-type: none; display: inline; color:#336699; font-size: 10px; font-weight: bold; }
+.PostDet li a {color:#ff3300;}
+.PostDet li a:visited { text-decoration: underline; color:#ff3300;}
+.PostDet li a:hover { text-decoration: underline; color:#990000;}
+
+.PostCom { background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostCom.png) no-repeat left center; }
+
+
+    /* Side Right +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SR {text-align:right;background: url(http://mihanblog.com/public/public/user_data/template/23/images/SR.gif) no-repeat right top; width: 400px; float: right; }
+.SR .poll #poll_question {color:#660000; }
+.SR h2 { font-size: 14px; letter-spacing: normal; font-weight: bold;}
+.SR h3 { font-size: 14px; letter-spacing: normal; font-weight: bold;}
+
+    /* Side Right Left +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SRL {width: 215px; float: left; padding: 5px 5px 5px 0px; color:#fff;}
+.SRL h3 { color:#ffffcc; padding: 5px 0px 5px 0px; margin: 0px; text-transform: uppercase; font-size: 14px; color:#666; letter-spacing: 0px;}
+.SRL p { color:#fff; font-size: 11px;}
+
+    /* Panel SRL +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.PT { height: 5px; width: 5px; position: absolute; top: 0px; right: 0px;}
+    /**/ *html .PT  { right: 5px;} /**/
+.Panel { position: relative; margin-bottom: 5px; padding: 10px 10px 10px 10px;  color:#333; font-size: 11px;}
+.Panel ul { margin: 0px; padding: 0px;}
+.Panel ul li {direction:rtl;width:175px;margin: 0px; padding: 0px; list-style-type: none; font-size: 11px; }
+.Panel ul li a { background: url(http://mihanblog.com/public/public/user_data/template/23/images/CategLi.png) no-repeat right top; display: block; padding: 1px 10px 2px 0px; font-size: 11px; }
+.Panel ul li a:visited { background: url(http://mihanblog.com/public/public/user_data/template/23/images/CategLi.png) no-repeat right top; display: block; }
+.Panel ul li a:hover { background: #ffffff url(http://mihanblog.com/public/public/user_data/template/23/images/CategLi.png) no-repeat right top; display: block; text-decoration: none;}
+
+.Panel ul ul li { margin: 0px; padding: 0px 0px 0px 10px; list-style-type: none; font-size: 10px; border-bottom: solid 1px #e1f3fa;}
+.Panel ul ul li a { margin: 0px; padding: 0px; list-style-type: none; font-size: 10px; background: none;}
+.Panel ul ul li a:visited { margin: 0px; padding: 0px; list-style-type: none; font-size: 10px; background: none;}
+.Panel ul ul li a:hover { margin: 0px; padding: 0px; list-style-type: none; font-size: 10px; background: none;}
+
+.Panel p { color:#333; font-size: 11px;}
+
+
+    /* Panel Blue +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PBlue .PT { background: url(http://mihanblog.com/public/public/user_data/template/23/images/BlueTop.gif) no-repeat;}
+.PBlue { background: #e1f3fa url(http://mihanblog.com/public/public/user_data/template/23/images/BlueBottom.gif) no-repeat right bottom; border-left: solid 10px #c7e5f1;}
+.PBlue ul { border-top: solid 1px #c7e5f1;}
+.PBlue ul li { border-bottom: solid 1px #c7e5f1;}
+.PBlue ul li a {color:#336699;}
+.PBlue ul li a:visited { color:#336699; }
+.PBlue ul li a:hover { color:#003366;}
+.PBlue ul ul li { border-bottom: solid 1px #e1f3fa;}
+
+    /* Panel Yellow +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PYellow .PT { background: url(http://mihanblog.com/public/public/user_data/template/23/images/YellowTop.gif) no-repeat;}
+.PYellow { background: #faf4e1 url(http://mihanblog.com/public/public/user_data/template/23/images/YellowBottom.gif) no-repeat right bottom; border-left: solid 10px #ebe3c8;}
+.PYellow ul { border-top: solid 1px #ebe3c8;}
+.PYellow ul li { border-bottom: solid 1px #ebe3c8;}
+.PYellow ul li a { color:#cc6600;}
+.PYellow ul li a:visited { color:#cc6600; }
+.PYellow ul li a:hover { color:#993300;}
+.PYellow ul ul li { border-bottom: solid 1px #faf4e1;}
+
+    /* Panel Pink +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PPink .PT { background: url(http://mihanblog.com/public/public/user_data/template/23/images/PinkTop.gif) no-repeat;}
+.PPink { background: #f2e2d5 url(http://mihanblog.com/public/public/user_data/template/23/images/PinkBottom.gif) no-repeat right bottom; border-left: solid 10px #e4cab5;}
+.PPink ul { border-top: solid 1px #e4cab5;}
+.PPink ul li { border-bottom: solid 1px #e4cab5;}
+.PPink ul li a { color:#993333;}
+.PPink ul li a:visited { color:#993333; }
+.PPink ul li a:hover { color:#660000;}
+.PPink ul ul li { border-bottom: solid 1px #f2e2d5;}
+
+
+    /* Panel Green +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PGreen .PT { background: url(http://mihanblog.com/public/public/user_data/template/23/images/GreenTop.png) no-repeat;}
+.PGreen { background: #95E088 url(http://mihanblog.com/public/public/user_data/template/23/images/GreenBottom.png) no-repeat right bottom; border-left: solid 10px #70B764;}
+.PGreen ul { border-top: solid 1px #70B764;}
+.PGreen ul li { border-bottom: solid 1px #70B764;}
+.PGreen ul li a { color:#993333;}
+.PGreen ul li a:visited { color:#993333; }
+.PGreen ul li a:hover { color:#660000;}
+.PGreen ul ul li { border-bottom: solid 1px #70B764;}
+
+    /* Panel Marron +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PMaroon .PT { background: url(http://mihanblog.com/public/public/user_data/template/23/images/MaroonTop.png) no-repeat;}
+.PMaroon { background: #FAE4E3 url(http://mihanblog.com/public/public/user_data/template/23/images/MaroonBottom.png) no-repeat right bottom; border-left: solid 10px #F39199;}
+.PMaroon ul { border-top: solid 1px #F39199;}
+.PMaroon ul li { border-bottom: solid 1px #F39199;}
+.PMaroon ul li a { color:#993333;}
+.PMaroon ul li a:visited { color:#993333; }
+.PMaroon ul li a:hover { color:#660000;}
+.PMaroon ul ul li { border-bottom: solid 1px #7F39199;}
+
+
+    /* Panel Marron +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PGray .PT { background: url(http://mihanblog.com/public/public/user_data/template/23/images/GrayTop.png) no-repeat;}
+.PGray { background: #D4D4D4 url(http://mihanblog.com/public/public/user_data/template/23/images/GrayBottom.png) no-repeat right bottom; border-left: solid 10px #A1A1A1;}
+.PGray ul { border-top: solid 1px #A1A1A1;}
+.PGray ul li { border-bottom: solid 1px #A1A1A1;}
+.PGray ul li a { color:#993333;}
+.PGray ul li a:visited { color:#993333; }
+.PGray ul li a:hover { color:#660000;}
+.PGray ul ul li { border-bottom: solid 1px #A1A1A1;}
+
+    /* Side Right Right +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SRR { direction:rtl;position: relative; width: 160px; float: right; padding: 10px; color:#fff; font-size: 11px; }
+.SRR h3 { background: url(http://mihanblog.com/public/public/user_data/template/23/images/SRRH3.gif) repeat-x left bottom; color:#ffffff; padding: 0px 0px 5px 0px; margin: 0px 0px 5px 0px; letter-spacing: 0px; }
+.SRR h2 { background: url(http://mihanblog.com/public/public/user_data/template/23/images/SRRH3.gif) repeat-x left bottom; color:#ffffff; padding: 0px 0px 5px 0px; margin: 0px 0px 5px 0px; letter-spacing: 0px; }
+.SRR ul { padding: 0px; margin: 0px;}
+.SRR li { line-height:16px;padding: 0px 8px 0px 0px; margin: 0px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/SRRIco.png) no-repeat right top; color:#e4e4e4; font-size: 11px;}
+.SRR li a { color:#ffffff;}
+.SRR li a:visited { color:#ffffff; }
+.SRR li a:hover { color:#ffffff;}
+.SRR p { color:#fff; font-size: 11px;}
+
+.SRR #user_logo img{width:150px;height:150px;margin-bottom:5px;}
+.SRR #user_logo p{padding:0px;margin:0px}
+.SRR #user_logo a{color:#FBEBF0;font-weight:bold;padding:2px 0;}
+
+
+    /* Footer ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Footer { text-align:left;background: #fff url(http://mihanblog.com/public/public/user_data/template/23/images/Footer.gif) no-repeat left bottom; width: 505px; position: relative; clear: left; padding: 15px 30px 15px 30px; margin: 0px 0px 0px 15px;}
+
+.FL { position: absolute; top: -8px; left: -15px; height: 8px; width: 8px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/FL.gif) no-repeat left top; }
+.FR { position: absolute; top: -8px; right: -400px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/FR.gif) no-repeat left top; height: 8px; width: 188px; }
+.Footer p { font-size: 10px; color:#8a8a93; padding: 0px; margin: 0px; }
+.Footer a { color:#8a8a93; text-decoration: underline;}
+.Footer a:visited { color:#8a8a93; text-decoration: underline;}
+.Footer a:hover { color:#8a8a93; text-decoration: underline;}
+
+
+.owner_photo{
+    color:#fff;
+    float:right;
+    margin:5px 0px 5px 5px;
+}
+
+
+.clearfix {display: inline-block;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+.poll{
+    direction:rtl;
+}
+.poll li{
+    list-style:none;
+    background:none;
+    padding:0px;
+}
+.cloud li{
+    list-style:none;
+    background:none;
+    padding:0px 2px;
+    float:right;
+}
+
+
+
+input.btn {padding:0px;font-family:tahoma;border:medium none;color:#fff; width: 85px; height: 26px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/SubmitComment.gif) no-repeat; margin-top: 10px;}
+input.btn:hover {cursor:pointer;border:medium none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/SubmitComment.gif) no-repeat 0 -26px; margin-top: 10px;}
+input.btnIE {border:medium none; width: 85px; height: 26px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/SubmitComment.gif) no-repeat 0 -26px; margin-top: 10px; margin-top: 10px;}
+
+
+.mihan_logo{
+    background: url(http://mihanblog.com/public/public/images/logo/poweredby.gif) no-repeat top center;
+    text-align:center;
+    height:131px;
+    margin-top:10px;
+}
+
+.stat li{background:none;}
+.stat span{color:#660000;}
+
+#parentheses p{
+    float:right;
+    padding:0px 1px;
+    margin:0px;
+    direction:rtl;
+    text-align:right;
+
+}
+.PBlue ul #parentheses p{color:#336699;}
+
+.page_box ul{
+    direction:rtl;
+    height:17px;
+    margin:3px auto;
+    max-width:460px;
+    text-align:left;
+    width:460px;
+    list-style:none;
+}
+.page_box ul{
+    height:17px;
+}
+.page_box li{
+    float:right;
+    margin-right:5px;
+    list-style:none;
+    background:none;
+}
+.page_box a{
+    border:1px solid #CCCCCC;
+    display:block;
+    line-height:17px;
+    text-align:center;
+    width:17px;
+    color:#A21096;
+}
+.page_box a:hover{
+    text-decoration:none;
+}
+.page_box a b{
+    color:#fff;
+    background:#EFD5EF none repeat scroll 0 0;
+    display:block;
+    line-height:17px;
+    text-align:center;
+    width:17px;
+}
+.cb_general{
+    line-height:18px;
+}
+
+.cb_share{
+    text-align:right;
+    padding: 10px 0;
+}
+.cb_share a{
+    font-size:11px;
+    text-decoration:none
+}
+.cb_share a img{
+    padding:0 0 0 5px;
+}
+
+
+
+.cblike{
+    margin:4px 0px;
+}
+.cblike a {
+    float:left;
+    padding:3px;
+    text-align:center;
+    font-size:12px;
+    color:#FFF;
+    display:block;
+    line-height:15px;
+    text-decoration: none;
+}
+
+
+
+
+.cblike a.clike_plus {
+    background-color:#009900 ; /*green #039B03*/
+
+    border-radius: 5px ;
+
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    /*border:1px solid green;
+             border-right:0px;*/
+}
+.cblike a.clike_minus {
+    background-color:#CC0000;
+    border-radius: 5px ;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+    /*border:1px solid red;
+             border-left:0px;*/
+}
+.cblike a.clike_minus:hover {
+    background-color:red;
+    text-decoration: none;
+}
+.cblike a.clike_plus:hover {
+    background-color:green;
+    text-decoration: none;
+}
+.cblike a span{
+    font-weight:bold;
+    font-size:13px;
+
+    color:#fff;
+}
+
+</style>
+
+
+
+<head>
+    <title>آموزش وبلاگ نویسی - مطالب بخش پشتیبانی</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="آموزش وبلاگ نویسی "/>
+    <meta name="keywords" content="آموزش وبلاگ نویسی - وبلاگ نویسی - وبلاگ نویسی در میهن بلاگ"/>
+
+    <link rel="alternate" type="application/rss+xml" title="آموزش وبلاگ نویسی" href="../rss/index.html" />
+    <link rel="alternate" type="application/atom+xml" title="آموزش وبلاگ نویسی" href="../atom/index.html" />
+
+
+</head>
+
+<body>
+
+<div class="BGC">
+<!-- start header -->
+
+<div class="Header">
+    <h1><a>آموزش وبلاگ نویسی</a></h1>
+    <p class="Desc">وبلاگ نویسی کار جذابیه اما با کمی اطلاعات میتونید این کار رو حرفه ای تر انجام بدید!</p>
+
+    <form id="frm-16076555145fd2e05a6bb42" method="get" action="http://amoozesh.mihanblog.com/post/search/fid/16076555145fd2e05a6bb42"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+        <div class="Search">
+            <div>
+                <input type="text" name="search_text" class="keyword" />
+                <div id="buttonsearch"><input type="submit" value="" class="search" /></div>
+            </div>
+        </div>
+    <input type="hidden" name="frm-id" value="16076555145fd2e05a6bb42" id="frm-id" /></form>
+    <div class="Syn">
+        <ul>
+            <li><a href="../rss/index.html">RSS</a></li>
+            <li><a href="../atom/index.html">Atom</a></li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+<!-- Container -->
+<div class="CON">
+
+<!-- Start SC -->
+<div class="SC">
+<div class="Menu">
+    <ul>
+        <li><a class="on" href="mailto:"><span>ایمیل به ما</span></a></li>
+        <li><a class="on" href="javascript:messageForm()"><span>تماس با ما</span></a></li>
+
+        <!--<li class="page_item page-item-2"><a href="http://wp-themes.designdisease.com/testrun/about/" title="About"><span>About</span></a></li>-->
+    </ul>
+
+</div>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		    <div class="Post clearfix" id="6">
+
+        <div class="PostHead">
+            <h2><a href="../6.html" rel="bookmark">چجور یه وبلاگ پرمخاطب و با بازدید بالا داشته باشم؟</a></h2>
+            <ul>
+                <li class="PostAuthor clearfix">نویسنده: <a href="2339.html">بخش پشتیبانی</a> </li>
+
+                <li class="PostCateg clearfix">طبقه بندی:<a href="../category/1.html">وبلاگ در موتورهای جستجو</a>،&nbsp;<a href="../category/4.html">صفحات جانبی وبلاگ</a>،&nbsp;<a href="../category/2.html">افزایش بازدید وبلاگ</a>،&nbsp;</li>
+            </ul>
+        </div>
+        <small class="PostTime">دوشنبه 1 شهریور 1395</small>
+
+
+
+
+        <div class="PostContent clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://amoozesh.mihanblog.com/post/6&amp;title=چجور یه وبلاگ پرمخاطب و با بازدید بالا داشته باشم؟">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo clearfix"></div><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<font face="Mihan-Iransans">در این آموزش سعی داریم بهتون بگیم که چطوری به‌صورت اصولی(و نه از راه‌های غیراخلاقی) بازدیدکننده وبلاگتون رو بالا ببرید. مطلب رو طوری نوشتیم که اگر وبلاگتون رو تازه ثبت کردید هم بتونید از اون بهره ببرید. پس، دستا روی میز، حواسا به جلو که میریم برای پربازدید کردن وبلاگامون.<br>وبلاگتون رو تو میهن‌بلاگ ثبت کردید و حالا میخواید شروع کنید به نوشتن و فعالیت. همه وبلاگ نویسا به بازدیدکننده هاشون اهمیت میدن، که اگر براشون اهمیت نداشت اصلاً تو اینترنت نمی‌نوشتن. <br><br><b>انتخاب یه قالب خوب</b><br>قدم اول برای جذب بازدیدکننده داشتن یه قالب وبلاگ خوب و جذابه. پس قالب وبلاگی رو انتخاب کنید که استاندارد باشه و خوندن متن‌ها توش ساده باشه. از قالب‌های عجق وجق استفاده نکنید و حتی‌الامکان قالبی انتخاب کنید که ریسپانسیو باشه. اینجوری مخاطباتون با هر ابزاری که وبلاگتون رو ببینن، وبلاگتون تو سایز و اندازه درست بهشون نمایش داده میشه.<br>از طرفی یادتون باشه از اضافات پرهیز کنید. پیغام خوش آمدگویی، پخش موسیقی، تبدیل‌شدن موس به قلب و سایر موارد این‌چنینی تأثیر منفی روی بازدیدکننده وبلاگتون داره. شما باید روی محتوای پست هاتون تمرکز کنید و از کارهای این‌چنینی حتی‌الامکان پرهیز کنید.<br><br><b>ثبت وبلاگ تو موتورهای جستجو</b><br>درصد بالایی از بازدید وبلاگ‌ها از طریق موتورهای جستجو تأمین میشه پس موتورهای جستجو حائز اهمیت هستن. ما قبلاً تو پستی مجزا بهتون توضیح دادیم که <a href="../4.html" target="_blank" title="">چجوری وبلاگتون رو توی موتورهای جستجو</a> ثبت کنید. طبق این آموزش وبلاگتون رو تو موتورهای جستجو ثبت کنید.<br><br><b>انتشار پست‌ها در بازه‌های زمانی مشخص</b><br>یه سری وبلاگ هستن که یه هفته هیچ مطلبی تو وبلاگشون قرار نمیدن و یه دفعه تو یه روز 20 پست منتشر میکنن. این روش مناسبی برای انتشار محتوا نیست. سعی کنید تو بازه‌های زمانی مشخص(مثلاً روزی یه پست، یا هفته‌ای دو تا پست و...) پست‌های وبلاگتون رو منتشر کنید. اینجوری موتورهای جستجو هر وقت که به وبلاگتون سر بزنن، با مطلبی جدید مواجه میشن و به وبلاگتون رتبه بهتری میدن. اگر مشغله دارید و فقط میتونید تو یه روز وبلاگتون رو آپدیت کنید و چند تا پست بذارید، از امکان «پست در آینده» استفاده کنید. اگر نمیدونید این امکان چی هست <a href="http://mihanblog.com/faq/post/Post-Article-in-future" target="_blank" title="">اینجا رو مطالعه کنید</a>. به کمک امکان پست مطلب در آینده میتونید پست‌ها رو تو یه روز بنویسید و بعد تو طول هفته پست‌ها به‌صورت خودکار منتشر بشن.<br><br><b>تیترهای خوب و جذاب بنویسید</b><br>تیتر مطلب خیلی مهمه. سعی کنید تیترهای واقعی و درعین‌حال جذاب بزنید. تیتر خوب باید به مخاطب بگه که قرار در خصوص چه موضوعی مطالعه کنه. درنتیجه تیترهای زرد نزنید چون مخاطب پس میزنه. از طرفی تیترها باید کوتاه و مفید باشن. پس تیترهای روشن و شفاف و حتی‌الامکان کوتاه برای پست هاتون بنویسید.<br><br></font><font face="Mihan-Iransans"><b>محتوا، محتوا، محتوا</b><br>مهم‌ترین چیز تو یه وبلاگ محتواشه. یعنی شما خوشگل‌ترین وبلاگ رو هم که داشته باشی باز هم بدردتون نخواهد خورد اگر محتوای خوبی نداشت باشه. این نکات رو تو نوشتن پست در نظر بگیرید:<br></font><ul><li><font face="Mihan-Iransans">مطالب کپی تو وبلاگتون قرار ندید. اگر می‌خواهید مطلبی را از وبلاگ یا سایت دیگه نقل کنید، بخشی از اون متن رو بیارید و بعد نقد و نظر خودتون رو در مورد اون مطلب بنویسید. درهرصورت اگر مطلبی رو کپی می‌کنید، روی اون ارزشی ایجاد کنید(مثلاً نقد بنویسید) تا محتواتون ویژه باشه.</font></li><li><font face="Mihan-Iransans">تو متن پست هاتون لینک بدید. اگر دارید در مورد یه سایت خاص یا یه محصول خاص صحبت می کنید به اون سایت لینک بدید. مثلاً اگر دارید در مورد یه شاعر فرانسوی پست می‌نویسید، به صفحه ویکی پدیای اون فرد لینک بدید. لینک‌ها تأثیر مثبتی در افزایش رتبه شما تو موتورهای جستجو دارن.</font></li><li><font face="Mihan-Iransans">خلاصه‌ای از پست تون رو تو اول متن با فونت و سایز متفاوت از باقی متن پست قرار بدید. این‌جوری فرد میتونه چکیده‌ای از پست وبلاگتون رو بخونه و جذب پست بشه.</font></li><li><font face="Mihan-Iransans">از فونت‌ها و سایز مناسب برای متن پست تون استفاده کنید. یه دفعه وسط پست با رنگ قرمز و سایز 72 چیزی ننویسید!</font></li><li><font face="Mihan-Iransans">کلمات کلیدی رو حتماً وارد کنید. کلمات کلید خیلی مهمن. سعی کنید از کلماتی که تو پست استفاده کردید تو «کلمات کلیدی» بیارید و یا موضوع رو در قالب کلمه کلیدی بنویسید.&nbsp;</font></li><li><font face="Mihan-Iransans">تعداد پست‌های نمایش داده‌شده تو صفحه اصلی رو زیاد نذارید. مثلاً نمایش 5 پست تو صفحه اصلی منطقی بنظر میرسه. اینجوری هم صفحه زودتر به کاربر نمایش داده میشه و هم صفحه اصلی وبلاگتون شکیل‌تر میشه.</font></li><li><font face="Mihan-Iransans">در مورد موضوعات روز بنویسید و نظرتون در مورد اونها رو با بقیه به اشتراک بذارید. اگر میخواید در مورد اتفاق خبری که امروز رخ‌داده بنویسید فقط بخشی از متن خبر رو تو پست بیارید و در ادامش نظر خودتون رو در مورد اون رخ داد بنویسید.</font><br></li></ul><font face="Mihan-Iransans"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/1.jpg" target="_blank" title=""><div align="center"><font face="Mihan-Iransans"><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/1.jpg" alt="" align="bottom" border="0" height="299" hspace="0" vspace="0" width="535"></font></div></a></font><font face="Mihan-Iransans"><b><br>عکس و ویدیو فراموش نشه!</b><br>تو متن پست هاتون سعی کنید تصاویر مرتبط یا ویدیوهای مرتبط قرار بدید. تأثیر تصویر و ویدیو تو درک پست فوق‌العاده بالاست و از طرفی موتورهای جستجو امتیاز بیشتری به وبلاگ شما میدن. اگر عکس میخواید تو پست وبلاگ قرار بدید سایز عکس رو طوری انتخاب کنید که روی قالب وبلاگتون بشینه و پست رو به هم نریزه. یعنی از قالب بیرون نزنه.<br><br><b>موضوعات وبلاگ، بنظر بی‌اهمیت و درواقع با اهمیت</b><br>مطالبی که تو وبلاگتون منتشر می‌کنید رو موضوع‌بندی کنید و بعد، هر پستی که منتشر می‌کنید موضوعش رو هم انتخاب کنید. اینجوری هم مخاطبتون میتونه بره تو یه موضوع خاص و مطالب اون موضوع رو بخونه، هم وبلاگ مرتبی دارید و هم موتورهای جستجو احسنت گویان بهتون امتیاز بالایی میدن.<br><br><b>انتشار مطالب در شبکه‌های اجتماعی</b><br>یه اکانت برای وبلاگتون تو شبکه‌های اجتماعی بسازید و لینک پست‌های وبلاگتون رو توی اون قرار بدید. اینجوری مخاطباتون میتونن بهتر باهاتون در ارتباط باشن و راحت‌تر در جریان آخرین پست وبلاگتون قرار بگیرن.<br><br><b>صبر، صبر و ایوب وار صبر</b><br>اینکه از راه اخلاقی وبلاگتون رو توسعه بدید و از طرفی هم یه شبه تعداد زیادی بازدیدکننده جذب کنید غیر ممکنه. سعی کنید نکاتی که در بالا آوردیم و با صبر و حوصله انجام بدید و خواهید دید که به‌مرورزمان مخاطبای وبلاگتون افزایش پیدا میکنن. با افزایش مخاطبای وبلاگتون میتونید از وبلاگتون درآمدزایی داشته باشید. ما تو یه پست به‌صورت مجزا در مورد روش‌های درآمدزایی از وبلاگ براتون خواهیم نوشت. فعلاً ثبات قدم باشید و پست‌های خوب بنویسید و با دنیا به اشتراک بذارید.<br><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/2.jpg" target="_blank" title=""><div align="center"><font face="Mihan-Iransans"><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/2.jpg" alt="" align="bottom" border="0" hspace="0" vspace="0"></font></div></a></font>
+
+</p>
+            <p></p>
+            <p></p>
+
+            <!--<blockquote><p> Mauris eu wisi. Ut ante dui, aliquet nec, congue non, accumsan sit amet, lectus. </p></blockquote>-->
+
+            <ul class="clearfix">
+
+                                    <li>
+                        برچسب ها:
+                                                    <a href="../tag/افزایش&#32;بازدید&#32;وبلاگ.html" >افزایش بازدید وبلاگ</a>،
+                                                    <a href="../tag/وبلاگ&#32;موفق.html" >وبلاگ موفق</a>،
+                                                    <a href="../tag/بازدیدکننده&#32;وبلاگ.html" >بازدیدکننده وبلاگ</a>،
+                                                    <a href="../tag/جذب&#32;مخاطب&#32;وبلاگ.html" >جذب مخاطب وبلاگ</a>،
+                                                    <a href="../tag/وبلاگ&#32;نویسی.html" >وبلاگ نویسی</a>،
+                                                    <a href="../tag/چگونگی&#32;وبلاگ&#32;نویسی.html" >چگونگی وبلاگ نویسی</a>،
+                                                &nbsp;
+                    </li>
+                
+
+
+                
+
+            </ul>
+
+        </div>
+        <style>
+
+
+        </style>
+        <div  class="PostDet">
+            <li style="float: left;" class="PostCom">	<a target="_self" href="../6.html#commentlist" class="comment-link">نظرات(<script>setCommentCnt(6)</script>)</a>&nbsp;</li>
+            <div style="float: left; margin-top: -5px;"> <script>mihanblogPostLike('6','like')</script></div>
+        </div>
+    </div>
+
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="5">
+
+        <div class="PostHead">
+            <h2><a href="../5.html" rel="bookmark">قرار دادن تصویر یا فایل در پست وبلاگ</a></h2>
+            <ul>
+                <li class="PostAuthor clearfix">نویسنده: <a href="2339.html">بخش پشتیبانی</a> </li>
+
+                
+            </ul>
+        </div>
+        <small class="PostTime">شنبه 9 مرداد 1395</small>
+
+
+
+
+        <div class="PostContent clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://amoozesh.mihanblog.com/post/5&amp;title=قرار دادن تصویر یا فایل در پست وبلاگ">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo clearfix"></div>
+
+
+
+
+برای قرار دادن تصویر یا فایل تو وبلاگتون، مسیر سختی پیش رو ندارید. ما تو این پست بهتون آموزش میدیم که چجوری تو وبلاگتون تصویر یا هر فایل دیگه ای قرار بدید. فقط قبل از رفتن سراغ آموزش، لازمه بدونید که پست به 3 بهش تقسیم شده:<br><ol><li>آموزش قرار دادن تصویر یا فایل در بخش «مدیریت فایل»</li><li>آموزش قرار دادن تصویر در پست وبلاگ</li><li>آموزش قرار دادن فایل در پست وبلاگ</li></ol>مرحله اول آموزش رو حتما باید بخونید و طی کنید. بعد از مرحله اول، اگر میخواید عکس بذارید تو وبلاگتون، مرحله دوم رو مطالعه کنید و اگر میخواید فایل تو وبلاگتون قرار بدید مرحله سوم رو مطالعه کنید و نیازی به مطالعه مرحله دوم نیست.<br>خب!<br>بریم که شروع کنیم.<br><br><div align="center"><b>بخش اول<br></b></div>اول از همه به پنل وبلاگتون تو میهن بلاگ برید و بعد هم به بخش «مدیریت فایل» برید. تو بخش مدیریت فایل همونطور که تو تصویر می بینید، روی «ارسال فایل» کلیک کنید.<br><br><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/1.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/1.jpg" alt="" align="bottom" border="0" height="301" hspace="0" vspace="0" width="536"></a><br><br><div align="right"><br><br></div><div align="right">یه پنجره مثل شکل زیر بهتون نمایش داده میشه. تو این پنجره روی Choose File کلیک کنید.<br><br><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/2.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/2.jpg" alt="" align="bottom" border="0" height="298" hspace="0" vspace="0" width="541"></a><br><br><div align="right">بعد از کلیک روی گزینه گفته شده، وارد هارد کامپیوترتون میشید. عکس یا فایلی که میخواید بذارید تو وبلاگتون رو انتخاب کنید.<br><br><br><br>همونطور که تو تصویر می بینید، ما یه تصویر رو تو بخش «مدیریت فایل» قرار دادیم. اگر فایلی جز تصویر هم تو بخش «مدیریت فایل» قرار بدید هم به همین شکل هست.<br><br><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/3.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/3.jpg" alt="" align="bottom" border="0" height="295" hspace="0" vspace="0" width="541"></a><br><br><div align="right"><br><br></div></div>حالا اگر روی فایلی که تو بخش «مدیریت فایل» قرار دادید کلیک کنید، میتونید اون فایل رو ببینید. مثلا با کلیک رو تصویر به صفحه جدیدی منتقل میشید به شکل زیر:<br><br><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/4.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/4.jpg" alt="" align="bottom" border="0" height="275" hspace="0" vspace="0" width="516"></a><br><br><div align="right">آدرسی که با فلش تو تصویر میبینید، همون آدرسیه که هرکسی داشت باشش میتونه تصویر رو ببینه. یعنی اگر این آدرس رو به یه نفر ایمیل کنید، میتونه این تصویر رو ببینه و نیازی نیست خود فایل رو بفرستید. آدرس رو کپی کنید چون تو مرحله بعد بهش نیاز دارید.<br></div><div align="right"><br><br><br><br><div align="center"><b>بخش دوم(برای قرار دادن تصویر در پست وبلاگ)<br></b></div>خب. حالا که تصویر روی توی بخش «مدیریت فایل» قرار دادید میتونید اون رو تو پست وبلاگتون قرار بدید. کافیه به بخش «ارسال مطلب» برید. پست وبلاگتون رو بنویسید. وقتی نوبت قراردادن تصویر تو پست رسید به روش زیر ادامه بدید:<br>مشابه شکل زیر روی آیکون «تصویر» کلیک کنید.<br><br><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/5.jpg" target="_blank" title=""><div align="center"><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/5.jpg" alt="" align="bottom" border="0" height="292" hspace="0" vspace="0" width="539"></div></a><br><br><br>یه پنجره باز میشه. تو بخش «آدرس تصویر» آدرس تصویرتون رو قرار بدید(با Ctrl+V) و بعد روی «ثبت» کلیک کنید.<br><br><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/6.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/6.jpg" alt="" align="bottom" border="0" height="271" hspace="0" vspace="0" width="547"></a><br><br><div align="right"><br>همونطور که می بینید تصویر تو پنل تون نمایش داده میشه. حالا اگر از مرورگر فایرفاکس استفاده کنید، می تونید همینجا تصویر رو کوچیک و بزرگ کنید و سایزش رو تغییر بدید. کافیه روی تصویر کلیک کنید. گوشه های تصویر مربع هایی نمایش داده میشه که اگر موس رو روشون ببرید، می تونید تصویر رو کوچیک بزرگ کنید.<br><br><br><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/7.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/7.jpg" alt="" align="bottom" border="0" height="336" hspace="0" vspace="0" width="530"></a><br><span lang="FA"><br></span><div align="right"><span lang="FA">و تمام!</span></div>
+
+</div></div></div><p class="MsoNormal" dir="RTL"><span lang="FA">به همین سادگی تونستید یه تصویر تو پست
+تون قرار بدید.</span></p>
+
+<p class="MsoNormal" dir="RTL"><span dir="LTR">&nbsp;</span></p>
+
+<p class="MsoNormal" dir="RTL"><span lang="FA">&nbsp;</span></p><p class="MsoNormal" dir="RTL"><span lang="FA"><br></span></p>
+
+<p class="MsoNormal" dir="RTL" align="center"><b><span lang="FA">بخش سوم(قراردادن فایل در پست)</span></b></p>
+
+<p class="MsoNormal" dir="RTL"><span lang="FA">تو بخش اول دیدید که ما یه فایل رو تو
+بخش «مدیریت فایل» قرار دادیم و بعد هم آدرسش رو کپی کردیم.</span></p>
+
+<p class="MsoNormal" dir="RTL"><span lang="FA">حالا به بخش «ارسال مطلب» برید. تو این
+بخش پست وبلاگتون رو بنویسید و در جایی از پست که می خواهید فایل رو قرار بدید
+متنی بنویسید(مثلا برای دانلود فایل اینجا کلیک کنید).</span></p>
+
+<p class="MsoNormal" dir="RTL"><span lang="FA">دقیقا مشابه تصویر زیر:</span></p><p class="MsoNormal" dir="RTL" align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/8.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/8.jpg" alt="" align="bottom" border="0" height="283" hspace="0" vspace="0" width="512"></a></p><p class="MsoNormal" dir="RTL"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/8.jpg" target="_blank" title=""><br></a></p><p class="MsoNormal" dir="RTL"><br></p><p class="MsoNormal" dir="RTL">حالا بخشی که برای دانلود فایل نوشتید رو انتخاب کنید(مثل تصویر). برای انتخاب متن هم کافیه موس رو ببرید اول متن و کلیک چپ رو نگه دارید و تا آخر متن بکشید موس رو.</p><p class="MsoNormal" dir="RTL" align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/9.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/9.jpg" alt="" align="bottom" border="0" height="262" hspace="0" vspace="0" width="496"></a></p><p class="MsoNormal" dir="RTL">بعد از انتخاب متن، روی آیکون کره زمین که تو تصویر هم نشون داده شده کلیک کنید. <br></p><p class="MsoNormal" dir="RTL"><br></p><p class="MsoNormal" dir="RTL">یه پنجره باز میشه. تو بخش «آدرس لینک» آدرس فایلتون که تو بخش اول کپی کردید رو قرار بدید(با Ctrl+V) و بعد روی «ثبت» کلیک کنید.<br></p><p class="MsoNormal" dir="RTL" align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/12.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/12.jpg" alt="" align="bottom" border="0" height="225" hspace="0" vspace="0" width="486"></a></p><p class="MsoNormal" dir="RTL"><br></p><p class="MsoNormal" dir="RTL"><br></p><p class="MsoNormal" dir="RTL">وقتی ثبت رو بزنید، فایلتون به متن لینک میشه. یعنی هر کی رو اون بخش از متن کلیک کنه(که به رنگ آبی میشه بعد از انتشار) فایل رو مشاهده میکنه. مثل شکل زیر:</p><p class="MsoNormal" dir="RTL" align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/11.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/addfile/11.jpg" alt="" align="bottom" border="0" height="255" hspace="0" vspace="0" width="478"></a></p><p class="MsoNormal" dir="RTL">و تمام!<br><span lang="FA"></span><span dir="LTR"></span></p>
+
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>AR-SA</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="371">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin-top:0in;
+	mso-para-margin-right:0in;
+	mso-para-margin-bottom:8.0pt;
+	mso-para-margin-left:0in;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Arial;
+	mso-bidi-theme-font:minor-bidi;}
+</style>
+<![endif]--></div></div></div></div></div></div>
+
+
+
+
+
+
+
+
+
+</p>
+            <p></p>
+            <p></p>
+
+            <!--<blockquote><p> Mauris eu wisi. Ut ante dui, aliquet nec, congue non, accumsan sit amet, lectus. </p></blockquote>-->
+
+            <ul class="clearfix">
+
+                                    <li>
+                        برچسب ها:
+                                                    <a href="../tag/قراردادن&#32;تصویر&#32;در&#32;وبلاگ.html" >قراردادن تصویر در وبلاگ</a>،
+                                                    <a href="../tag/قرار&#32;دادن&#32;فایل&#32;در&#32;وبلاگ.html" >قرار دادن فایل در وبلاگ</a>،
+                                                    <a href="../tag/قرار&#32;دادن&#32;pdf&#32;در&#32;وبلاگ.html" >قرار دادن pdf در وبلاگ</a>،
+                                                    <a href="../tag/قرار&#32;دادن&#32;آهنگ&#32;در&#32;وبلاگ.html" >قرار دادن آهنگ در وبلاگ</a>،
+                                                    <a href="../tag/قرار&#32;دادن&#32;فیلم&#32;در&#32;وبلاگ.html" >قرار دادن فیلم در وبلاگ</a>،
+                                                &nbsp;
+                    </li>
+                
+
+
+                
+
+            </ul>
+
+        </div>
+        <style>
+
+
+        </style>
+        <div  class="PostDet">
+            <li style="float: left;" class="PostCom">	<a target="_self" href="../5.html#commentlist" class="comment-link">نظرات(<script>setCommentCnt(5)</script>)</a>&nbsp;</li>
+            <div style="float: left; margin-top: -5px;"> <script>mihanblogPostLike('5','like')</script></div>
+        </div>
+    </div>
+
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="9">
+
+        <div class="PostHead">
+            <h2><a href="../9.html" rel="bookmark">تغییر تصویر بالای وبلاگ و قالب به تصویر دلخواه</a></h2>
+            <ul>
+                <li class="PostAuthor clearfix">نویسنده: <a href="2339.html">بخش پشتیبانی</a> </li>
+
+                <li class="PostCateg clearfix">طبقه بندی:<a href="../category/5.html">شخصی سازی وبلاگ</a>،&nbsp;</li>
+            </ul>
+        </div>
+        <small class="PostTime">سه شنبه 7 اردیبهشت 1395</small>
+
+
+
+
+        <div class="PostContent clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://amoozesh.mihanblog.com/post/9&amp;title=تغییر تصویر بالای وبلاگ و قالب به تصویر دلخواه">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo clearfix"></div>
+
+
+<div>خب!</div><div>تو این پست وبلاگ میخوایم به یکی از سؤالات قدیمی و همیشگی وبلاگ نویس ها پاسخ بدیم. همه وبلاگ نویس ها وبلاگی با قالب شخصی‌سازی‌شده میخوان. از اونجایی که قالب‌های وبلاگ‌ها غالباً توسط چندین وبلاگ استفاده میشه درنتیجه خیلی از وبلاگ نویس ها دلشون میخواد قالبشون رو کمی تغییر بدن تا مختص به خودشون و وبلاگشون باشه. مهمترین تغییر تو این مسیر، تغییر تصویر بالای قالب وبلاگ یا Header وبلاگ هست. اما برای تغییر اون تصویر شما نیاز به دانش برنامه‌نویسی دارید و خب! طبیعتاً همه دانش برنامه‌نویسی ندارن.</div><div>اما امروز میخوایم بهتون یاد بدیم بدون نیاز به دانش برنامه‌نویسی و کمی وقت صرف کردن اون عکس بالای وبلاگ رو تغییر بدید و یه تغییری تو وبلاگتون ایجاد کنید. پس، هدفون رو آتیش کنید و با ما همراه باشید.</div><div>تو قدم اول باید تصویر فعلی قالب وبلاگتون رو دانلود کنید تا بفهمید سایزش چقدره. مثلاً به این تصویر نگاه کنید:</div><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/changeImage/01.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/changeImage/01.jpg" alt="" height="349" hspace="0" vspace="0" width="598" align="bottom" border="0"></a></div><div>&nbsp;</div><div>من میخوام اون تصویر گل بالای وبلاگ رو بردارم و یه تصویر مورد نظر خودم رو قرار بدم. برای شروع رو عکسی که میخواید تغییرش بدید کلیک راست کنید و بعد گزینه Save image as رو انتخاب کنید. محلی که تصویر باید تو کامپیوترتون ذخیره بشه رو انتخاب کنید و بعد هم تصویر رو ذخیره کنید.</div><div>کار تقریباً تمومه!</div><div>حالا به پوشه‌ای که اون تصویر توش قرار داره برید و روی تصویر کلیک راست کنید. بعد گزینه Properties رو انتخاب کنید. بعد هم تو پنجره باز شد به تب Details برید. تو این تب، سایز تصویر مورد نظرتون نوشته‌شده. همونطور که تو تصویر می‌بینید.</div><div><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/changeImage/02.jpg" target="_blank" title=""><div align="center"><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/changeImage/02.jpg" alt="" hspace="0" vspace="0" align="bottom" border="0"></div></a><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/changeImage/02.jpg" target="_blank" title=""><div align="center"><br></div></a></div><div>همونطور که تو تصویر می‌بینید ارتفاع تصویرتون 271 و عرضش 1024 پیکسل هست.&nbsp;</div><div>حالا وقتشه اون عکسی که میخواید بذارید بالای وبلاگتون رو پیدا کنید. عکس مورد نظرتون رو انتخاب و تو فتوشاپ یا هر نرم‌افزار دیگه ای که میشه باهاش سایز عکس رو تغییر داد باز کنید. سایز عکس رو به سایز اومده تو تصویر بالا(یعنی سایز تصویر فعلی بالای وبلاگتون) تغییر بدید. یعنی تصویر جدید که میخواید بذارید تو وبلاگتون هم باید سایزش 1024*271 باشه.</div><div>خب حالا که تصویر رو دارید به پنل وبلاگ میهن بلاگیتون برید.</div><div>تو پنل به بخش «مدیریت فایل» برید. مشابه تصویر زیر.</div><div><div align="center">&nbsp;<a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/changeImage/03.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/changeImage/03.jpg" alt="" height="234" hspace="0" vspace="0" width="580" align="bottom" border="0"></a></div><br></div><div>حالا روی دکمه «ارسال فایل جدید» کلیک کنید. پنجره‌ای مثل تصویر زیر بهتون نمایش داده میشه.</div><div><div align="center">&nbsp;<a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/changeImage/04.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/changeImage/04.jpg" alt="" height="275" hspace="0" vspace="0" width="584" align="bottom" border="0"></a></div><br></div><div>روی دکمه choose file کلیک کنید و تصویر جدیدی که میخواید بذارید رو قالب وبلاگتون رو انتخاب کنید. بعد هم تصویر رو بارگزاری کنید. بعد از بارگزاری تصویر تو بخش «مدیریت فایل» باید اون تصویر رو ببینید. مثل تصویر زیر:</div><div><div align="center">&nbsp;<a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/changeImage/05.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/changeImage/05.jpg" alt="" height="256" hspace="0" vspace="0" width="586" align="bottom" border="0"></a></div><br></div><div>روی تصویری که تو «مدیریت فایل»تون قرار دادید کلیک کنید تا تو یه تب جدید باز بشه. به این صورت که تو تصویر زیر می بینید:</div><div><div align="center">&nbsp;<a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/changeImage/06.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/changeImage/06.jpg" alt="" height="208" hspace="0" vspace="0" width="589" align="bottom" border="0"></a></div><br></div><div>خب!</div><div>حالا آدرس تصویر رو که تو نوار مرورگرتون قرار داره(همونطور که تو تصویر با فلش نشون دادیم) رو کامل انتخاب کنید و آدرس رو کپی کنید.(روی آدرس راست کلیک کنید copy رو انتخاب کنید)</div><div>حالا وقتشه برید تو قالب وبلاگتون و اونجا یه تغییراتی ایجاد کنید. این بخش آموزش خیلی حساسه پس صدای موسیقی رو بیشتر کنید.</div><div>تو پنل وبلاگتون تو میهن بلاگ به بخش «قالب ها» برید. همچین صفحه ای رو باید ببینید.</div><div><div align="center">&nbsp;<a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/changeImage/07.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/changeImage/07.jpg" alt="" height="368" hspace="0" vspace="0" width="590" align="bottom" border="0"></a></div><br></div><div>تو این صفحه، اون بالا روی دکمه «ویرایش قالب فعلی» کلیک کنید. به صفحه جدید میرید.</div><div><div align="center">&nbsp;<a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/changeImage/08.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/changeImage/08.jpg" alt="" height="392" hspace="0" vspace="0" width="589" align="bottom" border="0"></a></div><br></div><div>تو این صفحه جدید روی کیبرد کلیدهای ترکیبی Ctrl+f رو بزنید. با اینکار شما میتونید تو نوار باز شده بالای صفحه، یه کلمه یا هرچیزی رو جستجو کنید و اگر تو صفحه وجود داشت مرورگر بهتون نشون میده. از طرفی عکس فعلی قالب وبلاگتون رو که ذخیره کردید تو کامپیوتر رو دوباره باز کنید و اسمش رو بخونید. مثلا تصویر قالب ما این بود اسمش: img08</div><div>تو مرورگر و تو صفحه بالا(یعنی صفحه ویرایش قالب فعلی) کلیدهای ترکیبی Ctrl+f رو بزنید و بعد هم تو نوار جستجوی باز شده اسم عکس فعلی قالب وبلاگتون رو وارد کنید. مثلا ما باید تو اون نوار جستجو بنویسیم: img08</div><div>مرورگر تو کدهای قالب وبلاگتون میگرده و بخشی که اسم عکس قالبتون اومده رو براتون علامت گذاری میکنه. همونطور که تو تصویر بالا میبینید.</div><div>همونطور که تو بخش کد وبلاگتون میبینید و تو تصویر بالا هم معلومه، عکس فعلی وبلاگتون یه آدرسی داره که با http شروع میشه و با jpg تموم میشه. این بخش از کد، آدرس تصویر فعلی وبلاگ شماست. حالا شما باید این آدرس رو با آدرس تصویر جدید عوض کنید.</div><div>پس از جایی که نوشته شده http کلیک چپ موس رو بفشارید و تا jpg بکشید تا آبی بشه رنگش و این یعنی انتخاب شده. حالا کلیدهای ترکیبی Ctrl+V رو بزنید. اینجوری آدرس قدیمی تصویر وبلاگتون با تصویر جدید عوض میشه.</div><div>حالا روی دکمه «ثبت تغییرات» کلیک کنید.</div><div>تمام!</div><div>حالا اگه به وبلاگتون برید و صفحه رو یه بار Refresh کنید(با کلیدهای ترکیبی Ctrl+F5) میبینید که تصویر بالای وبلاگتون عوض شده.</div><div>مثل تصویر زیر:</div><div align="center">&nbsp;<a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/changeImage/09.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/changeImage/09.jpg" alt="" height="315" hspace="0" vspace="0" width="575" align="bottom" border="0"></a></div><div><br></div>
+
+
+
+
+
+
+
+
+</p>
+            <p></p>
+            <p></p>
+
+            <!--<blockquote><p> Mauris eu wisi. Ut ante dui, aliquet nec, congue non, accumsan sit amet, lectus. </p></blockquote>-->
+
+            <ul class="clearfix">
+
+                                    <li>
+                        برچسب ها:
+                                                    <a href="../tag/آموزش&#32;وبلاگ&#32;نویسی.html" >آموزش وبلاگ نویسی</a>،
+                                                    <a href="../tag/تغییر&#32;تصویر&#32;قالب&#32;وبلاگ.html" >تغییر تصویر قالب وبلاگ</a>،
+                                                    <a href="../tag/شخصی&#32;سازی&#32;قالب&#32;وبلاگ.html" >شخصی سازی قالب وبلاگ</a>،
+                                                    <a href="../tag/تغییر&#32;قالب&#32;وبلاگ.html" >تغییر قالب وبلاگ</a>،
+                                                    <a href="../tag/وبلاگ&#32;نویسی&#32;با&#32;میهن&#32;بلاگ.html" >وبلاگ نویسی با میهن بلاگ</a>،
+                                                &nbsp;
+                    </li>
+                
+
+
+                
+
+            </ul>
+
+        </div>
+        <style>
+
+
+        </style>
+        <div  class="PostDet">
+            <li style="float: left;" class="PostCom">	<a target="_self" href="../9.html#commentlist" class="comment-link">نظرات(<script>setCommentCnt(9)</script>)</a>&nbsp;</li>
+            <div style="float: left; margin-top: -5px;"> <script>mihanblogPostLike('9','like')</script></div>
+        </div>
+    </div>
+
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="4">
+
+        <div class="PostHead">
+            <h2><a href="../4.html" rel="bookmark">ثبت وبلاگ در گوگل و سایر موتورهای جستجو</a></h2>
+            <ul>
+                <li class="PostAuthor clearfix">نویسنده: <a href="2339.html">بخش پشتیبانی</a> </li>
+
+                <li class="PostCateg clearfix">طبقه بندی:<a href="../category/1.html">وبلاگ در موتورهای جستجو</a>،&nbsp;</li>
+            </ul>
+        </div>
+        <small class="PostTime">سه شنبه 31 فروردین 1395</small>
+
+
+
+
+        <div class="PostContent clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://amoozesh.mihanblog.com/post/4&amp;title=ثبت وبلاگ در گوگل و سایر موتورهای جستجو">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo clearfix"></div>
+
+اگر به‌تازگی وبلاگتون رو راه‌اندازی کردید، ممکنه براتون سوال پیش بیاد که «بازدیدکننده‌ها چجوری وبلاگ من رو پیدا میکنن؟» <br>خب راه‌های مختلفی برای دیده شدن وبلاگ شما وجود داره. برخی از بازدیدکننده‌های شما از موتورهای جستجو به وبلاگ شما میان. مثلاً شما تو وبلاگتون مطلبی نوشتید در مورد «جدیدترین یافته‌های پژوهشگران برای درمان سرطان». اگر فردی تو گوگل سرچ کنه:«راه‌های درمان سرطان» یا «درمان سرطان» گوگل در بین تمام وبلاگ‌ها و سایت‌هایی که به اون کاربر پیشنهاد میده، وبلاگ شما رو هم پیشنهاد میده. درنتیجه اون کاربر از طریق گوگل با وبلاگ شما آشنا میشه.<br>مراجعه کاربران از موتورهای جستجو نظیر گوگل یکی از شایع‌ترین روش‌های دیده شدن وبلاگ شماست. درنتیجه اینکه موتورهای جستجو وبلاگ شما رو تو کدوم صفحه و به چه فرمی نمایش میدن حائز اهمیت. چه‌کاری از دست شما برمیاد؟<br>اولین کاری که باید بکنید اینه که وبلاگتون رو به گوگل و سایر موتورهای جستجو معرفی کنید. بریم سراغ اینکه چطور اینکار رو باید بکنید.<br>اولین راهکار اینه که به موتورهای جستجو مراجعه کنید و وبلاگتون رو مستقیماً معرفی کنید. برای معرفی وبلاگتون به موتور جستجوی گوگل <a href="https://www.google.com/webmasters/tools/submit-url?hl=en&amp;mesd=AB9YKzLta0dnIHy0l3OX6q4rq4WP-BPwYSmb9pIxlGw9u_abq5v88ASWc-fcCvnLwVNjOaatEisuBbG6CADGy1O992_MpXzMc6n9oZx_OBmyQ80YblWoET7f33rZxSTiweYU4BMj75w9" target="_blank" title="">به این صفحه</a> مراجعه کنید. صفحه‌ای مشابه تصویر زیر بهتون نمایش داده میشه:<br><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/submittogoogle/01.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/submittogoogle/01.jpg" alt="" height="183" hspace="0" vspace="0" width="584" align="bottom" border="0"></a><br></div><br>تو این صفحه آدرس وبلاگتون رو وارد کنید(مثلاً amoozesh.mihanblog.com) و روی دکمه Submit Request کلیک کنید. با کلیک روی دکمه موردنظر صفحه به این شکل تغییر میکنه:<br><div align="center"><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/submittogoogle/02.jpg" alt="" height="153" hspace="0" vspace="0" width="582" align="bottom" border="0"><br></div><br>و این یعنی وبلاگتون ثبت‌شده تو موتور جستجوی گوگل و به زودی گوگل شروع به نمایش وبلاگتون تو نتایجش میکنه.<br>گوگل شناخته‌شده‌ترین موتور جستجوست و تا همینجا هم میتونه کافی باشه. اما اگه خیلی تأکیددارید که تو موتور جستجوی دیگه ای هم وبلاگتون رو ثبت کنید باید برید سراغ bing. هدفون رو به گوش بذارید. موسیقی رو play کنید و با ما همراه باشید.<br>برای ثبت وبلاگتون تو موتور جستجوی bing <a href="http://www.bing.com/toolbox/submit-site-url" target="_blank" title="">به این آدرس</a> برید. با صفحه‌ای به شکل زیر روبرو میشید:<br><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/submittogoogle/03.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/submittogoogle/03.jpg" alt="" height="476" hspace="0" vspace="0" width="584" align="bottom" border="0"></a><br></div><br>تو بخش اول فرم آدرس وبلاگتون رو وارد کنید(مثلاً http://amoozesh.mihanblog.com) و کپچای نمایش داده‌شده رو وارد کنید و روی دکمه submit کلیک کنید.<br>صفحه به این شکل تغییر میکنه:<br><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/submittogoogle/04.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/submittogoogle/04.jpg" alt="" height="440" hspace="0" vspace="0" width="587" align="bottom" border="0"></a><br></div><br>خب تبریک میگیم. تو موتور جستجوی bing هم ثبت شدید.<br>اما همونطور که گفتیم به‌غیراز راه معرفی وبلاگ به‌صورت مستقیم به موتورهای جستجو، راه دیگه هم وجود داره. سرویس‌های زیادی تو اینترنت فعالیت میکنن که کارشون اینه که وبلاگ شما رو به تعداد زیادی موتور جستجو معرفی میکنن. کافیه تو گوگل جستجو کنید «معرفی وبلاگ به موتورهای جستجو».<br>یکی از سرویس‌های معرفی‌شده رو انتخاب کنید و باقی فرآیند رو طی کنید. بااین‌حال نیاز چندانی به این کار ندارید و همینکه وبلاگتون رو مستقیم به گوگل و بینگ معرفی کردید کافی میتونه باشه.<br>حالا وقتشه به وبلاگتون برگردید و مطالب خوب و دست اول بنویسید.<br><br>
+
+
+
+
+
+
+</p>
+            <p></p>
+            <p></p>
+
+            <!--<blockquote><p> Mauris eu wisi. Ut ante dui, aliquet nec, congue non, accumsan sit amet, lectus. </p></blockquote>-->
+
+            <ul class="clearfix">
+
+                                    <li>
+                        برچسب ها:
+                                                    <a href="../tag/ثبت&#32;وبلاگ&#32;در&#32;گوگل.html" >ثبت وبلاگ در گوگل</a>،
+                                                    <a href="../tag/ثبت&#32;وبلاگ&#32;در&#32;بینگ.html" >ثبت وبلاگ در بینگ</a>،
+                                                    <a href="../tag/ثبت&#32;وبلاگ&#32;در&#32;موتورهای&#32;جستجو.html" >ثبت وبلاگ در موتورهای جستجو</a>،
+                                                    <a href="../tag/ثبت&#32;وبلاگ.html" >ثبت وبلاگ</a>،
+                                                    <a href="../tag/معرفی&#32;وبلاگ&#32;به&#32;موتورهای&#32;جستجو.html" >معرفی وبلاگ به موتورهای جستجو</a>،
+                                                    <a href="../tag/آموزش&#32;وبلاگ&#32;نویسی.html" >آموزش وبلاگ نویسی</a>،
+                                                    <a href="../tag/وبلاگ&#32;نویسی&#32;در&#32;میهن&#32;بلاگ.html" >وبلاگ نویسی در میهن بلاگ</a>،
+                                                &nbsp;
+                    </li>
+                
+
+
+                
+
+            </ul>
+
+        </div>
+        <style>
+
+
+        </style>
+        <div  class="PostDet">
+            <li style="float: left;" class="PostCom">	<a target="_self" href="../4.html#commentlist" class="comment-link">نظرات(<script>setCommentCnt(4)</script>)</a>&nbsp;</li>
+            <div style="float: left; margin-top: -5px;"> <script>mihanblogPostLike('4','like')</script></div>
+        </div>
+    </div>
+
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="3">
+
+        <div class="PostHead">
+            <h2><a href="../3.html" rel="bookmark">روش جلوگیری از فیلتر شدن وبلاگ</a></h2>
+            <ul>
+                <li class="PostAuthor clearfix">نویسنده: <a href="2339.html">بخش پشتیبانی</a> </li>
+
+                <li class="PostCateg clearfix">طبقه بندی:<a href="../category/3.html">جلوگیری از فیلتر شدن وبلاگ</a>،&nbsp;</li>
+            </ul>
+        </div>
+        <small class="PostTime">سه شنبه 31 فروردین 1395</small>
+
+
+
+
+        <div class="PostContent clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://amoozesh.mihanblog.com/post/3&amp;title=روش جلوگیری از فیلتر شدن وبلاگ">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo clearfix"></div>
+
+<div>یکی از مواردی که یک وبلاگ نویس خوب باید مدنظر قرار بده، احترام به قوانین کشور و تولید محتوا در چارچوب قوانین تعیین‌شده در کشور هستش. اگر وبلاگ نویس هستید و تو یکی از سرویس‌دهنده‌های وبلاگی فارسی‌زبان (مثل میهن‌بلاگ) فعالیت می‌کنید باید بدونید که سرویس‌دهنده‌های فعال در داخل کشور موظف به همکاری با کمیته فیلترینگ هستن؛ یعنی اگر وبلاگی از مجموعه وبلاگ‌های سرویس‌دهنده، محتوای خلاف قوانین تولید کنه، سرویس‌دهنده وظیفه رسیدگی به اون وبلاگ و حذف محتوای خلاف قانون اون رو داره. درنتیجه هرلحظه امکان حذف یکی از مطالب وبلاگ تون و یا حتی کل وبلاگ تون وجود داره.</div><div>خب! شمایی که با زحمت زیاد وبلاگی رو راه‌اندازی و محتوای مناسب تو وبلاگ تون قرار می‌دید، با استرس حذف شدن وبلاگ یا محتواها تون چطور باید کنار بیاید؟ راهکار چیه؟</div><div>جواب خیلی سادست. ثبت وبلاگ تون تو سایت «ساماندهی».</div><div>اینکه سایت ساماندهی چیه و وظیفش چیه رو میتونید تو سایتشون مطالعه کنید، اما همینقد براتون بگیم که برای جلوگیری از حذف محتوا یا کل وبلاگ تون بایست وبلاگ تون رو تو سایت ساماندهی ثبت کنید. این‌جوری اگر محتوای خلاف قوانین داشته باشید، سایت ساماندهی بهتون اطلاع میده و بهتون اخطار میده که محتوا رو حذف یا اصلاح کنید.</div><div>تو این مطلب وبلاگ می خوایم بهتون توضیح بدیم که چجوری تو سایت ساماندهی ثبت‌نام کنید.</div><div>برای شروع <a href="http://samandehi.ir" target="_blank" title="">به سایت ساماندهی برید</a>. تو سایت ساماندهی با چنین تصویری مواجه میشید:</div><div><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/01.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/01.jpg" alt="" height="582" hspace="0" vspace="0" width="613" align="bottom" border="0"></a><br></div><br></div><div>روی لینک «ثبت‌نام و ثبت سایت» کلیک کنید.</div><div>بعد از کلیک به صفحه‌ای مشابه تصویر زیر منتقل میشید:</div><div><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/02.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/02.jpg" alt="" hspace="0" vspace="0" align="bottom" border="0"></a><br></div><br></div><div>تو فرمی که مشاهده می‌کنید گزینه «شخص حقیقی – تبعه ایران» رو انتخاب کنید و مشابه سایر فرم‌های اینترنت، این فرم رو هم به روش مرسوم پر کنید. تیک تایید قوانین رو بزنید و بعد روی دکمه «تایید» کلیک کنید.</div><div>بعد از کلیک روی دکمه «تایید» تصویری مشابه تصویر زیر می‌بینید که بهتون اطلاع میده به سراغ ایمیلتون برید و لینک فعال‌سازی رو کلیک کنید:</div><div><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/03.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/03.jpg" alt="" hspace="0" vspace="0" align="bottom" border="0"></a><br></div><br></div><div>به ایمیلتون که برید، پیامی مشاهده می‌کنید به شکل زیر:</div><div><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/04.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/04.jpg" alt="" hspace="0" vspace="0" align="bottom" border="0"></a><br></div><br></div><div>روی لینک کلیک کنید.</div><div>به صفحه‌ای منتقل میشید مشابه تصویر زیر که بهتون اطلاع میده شناسه کاربریتون تایید شده:</div><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/05.jpg" target="_blank" title=""><div align="center"><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/05.jpg" alt="" hspace="0" vspace="0" align="bottom" border="0"></div></a><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/05.jpg" target="_blank" title=""><div align="center"><br></div></a><div>تو فرمی که مشاهده می‌کنید اطلاعات رو وارد کنید و وارد پنلتون تو سایت ساماندهی بشید.</div><div>تو پنلتون با صفحه‌ای مشابه تصویر زیر مواجه میشید:</div><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/06.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/06.jpg" alt="" height="531" hspace="0" vspace="0" width="598" align="bottom" border="0"></a><br></div><br><div>اطلاعات خواسته‌شده تو فرم رو پر کنید. حواستون باشه که شماره تلفن همراه و تلفن ثابت رو به‌درستی وارد کنید چون تو مرحله بعد بهش نیاز خواهید داشت.</div><div>بعد از تکمیل فرم روی دکمه «تایید» کلیک کنید.</div><div>بعد از تکمیل فرم به صفحه‌ای منتقل میشید که ازتون میخواد هم شماره همراه و هم تلفن ثابتتون رو تایید کنید.</div><div><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/07.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/07.jpg" alt="" height="313" hspace="0" vspace="0" width="602" align="bottom" border="0"></a><br></div><br></div><div>توضیحات تصویر رو مطالعه کنید و فرآیند تایید رو طی کنید.</div><div>بعد از طی کردن فرآیند، صفحه‌ای که تو تصویر بالا دیدید رو Refresh کنید.(کلیدهای ترکیبی Ctrl+F5 رو بفشارید)</div><div>اگر فرآیند تایید رو به‌درستی طی کرده باشید، صفحه بدین شکل درمیاد:</div><div><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/08.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/08.jpg" alt="" height="334" hspace="0" vspace="0" width="603" align="bottom" border="0"></a><br></div><br></div><div>حالا تو منوی کناری صفحه روی گزینه «افزودن رسانه برخط» کلیک کنید. به صفحه‌ای منتقل میشید به این شکل:</div><div><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/09.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/09.jpg" alt="" height="302" hspace="0" vspace="0" width="604" align="bottom" border="0"></a><br></div><br></div><div>فرم رو تکمیل کنید. تو بخش «عنوان وب‌سایت» اسم سایتتون رو بنویسید (مثلاً وبلاگ ادمین میهن‌بلاگ). تو بخش «نوع رسانه برخط» هم گزینه «وبلاگ» رو انتخاب کنید. تو بخش «نام دامنه وب‌سایت» هم آدرس وبلاگتون رو وارد کنید. (مثلاً Admin.mihanblog.com)</div><div>بعد از تکمیل فرم روی دکمه «تایید» کلیک کنید.</div><div>به صفحه‌ای بدین شکل منتقل میشید:</div><div><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/11.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/11.jpg" alt="" height="298" hspace="0" vspace="0" width="602" align="bottom" border="0"></a><br></div><br></div><div>از اینجا به بعد رو خوب دقت کنید که ماجرا شاید براتون کمی پیچیده باشد!</div><div>تو این مرحله، سایت ساماندهی نیاز به مدرکی داره که باورش شه صاحب وبلاگی که ثبت کردید خود شمایید. درنتیجه ازتون میخواد تو title وبلاگتون یه کد رو قرار بدید.</div><div>کدی که تو صفحه ساماندهی بهتون نشون داده شده (مثلاً اینجا PVTSNTN) رو کپی کنید. برای تغییر عنوان وبلاگتون و قرار دادن کد موردنظر، به پنل وبلاگتون تو میهن‌بلاگ برید و به کمک <a href="http://mihanblog.com/faq/setting/Change-Weblog-Subject" target="_blank" title="">این راهنما </a>کد موردنظر رو تو عنوان وبلاگتون قرار بدید. قرار دادن کد موقتیه و در کمتر از چند دقیقه میتونید عنوان وبلاگتون رو به شکل قبل برگردونید.</div><div>خب! تقریبا به آخراش رسیدید.</div><div>بعدازاینکه کد رو تو وبلاگتون قرار دادید به ساماندهی برگردید و تایید کنید که کد رو تغییر دادید. درنتیجه روی دکمه «تایید تغییر» کلیک کنید.</div><div>حالا میتونید تا ساماندهی فرآیند تایید رو طی میکنه یه موسیقی خوب گوش کنید.(مثلاً قطعه Time اثر استاد Hans Zimmer پیشنهاد خوبیه)</div><div>صفحه ساماندهی رو Refresh کنید تا به شکل تصویر زیر دربیاد:</div><div><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/15.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/15.jpg" alt="" height="292" hspace="0" vspace="0" width="594" align="bottom" border="0"></a><br></div><br></div><div>تبریک میگیم!</div><div>وبلاگتون ثبت شد. حالا اگه از منوی کناری روی گزینه «مدیریت رسانه برخط» کلیک کنید با صفحه‌ای به شکل زیر مواجه میشید:</div><div><div align="center"><a href="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/16.jpg" target="_blank" title=""><img src="../../../file.mihanblog.com/public/user_data/user_files/542/1625540/samandehi/16.jpg" alt="" height="297" hspace="0" vspace="0" width="601" align="bottom" border="0"></a><br></div><br></div><div>و این یعنی وبلاگتون ثبت‌شده و حالا میتونید با خیال راحت محتوا تولید کنید. هر از چندگاهی هم به پنل سایت ساماندهی سر بزنید که اگر پیغامی براتون اومده بود در جریان باشید.</div><div>تمام!</div><div><br></div>
+
+
+
+
+
+
+</p>
+            <p></p>
+            <p></p>
+
+            <!--<blockquote><p> Mauris eu wisi. Ut ante dui, aliquet nec, congue non, accumsan sit amet, lectus. </p></blockquote>-->
+
+            <ul class="clearfix">
+
+                                    <li>
+                        برچسب ها:
+                                                    <a href="../tag/فیلترینگ.html" >فیلترینگ</a>،
+                                                    <a href="../tag/فیلتر&#32;شدن&#32;وبلاگ.html" >فیلتر شدن وبلاگ</a>،
+                                                    <a href="../tag/آموزش&#32;وبلاگ&#32;نویسی.html" >آموزش وبلاگ نویسی</a>،
+                                                    <a href="../tag/ثبت&#32;در&#32;ساماندهی.html" >ثبت در ساماندهی</a>،
+                                                    <a href="../tag/ثبت&#32;وبلاگ.html" >ثبت وبلاگ</a>،
+                                                    <a href="../tag/جلوگیری&#32;از&#32;فیلتر&#32;شدن&#32;وبلاگ.html" >جلوگیری از فیلتر شدن وبلاگ</a>،
+                                                    <a href="../tag/میهن&#32;بلاگ.html" >میهن بلاگ</a>،
+                                                &nbsp;
+                    </li>
+                
+
+
+                
+
+            </ul>
+
+        </div>
+        <style>
+
+
+        </style>
+        <div  class="PostDet">
+            <li style="float: left;" class="PostCom">	<a target="_self" href="../3.html#commentlist" class="comment-link">نظرات(<script>setCommentCnt(3)</script>)</a>&nbsp;</li>
+            <div style="float: left; margin-top: -5px;"> <script>mihanblogPostLike('3','like')</script></div>
+        </div>
+    </div>
+
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="2">
+
+        <div class="PostHead">
+            <h2><a href="../2.html" rel="bookmark">چرا وبلاگ نویسی؟</a></h2>
+            <ul>
+                <li class="PostAuthor clearfix">نویسنده: <a href="2339.html">بخش پشتیبانی</a> </li>
+
+                
+            </ul>
+        </div>
+        <small class="PostTime">دوشنبه 11 خرداد 1394</small>
+
+
+
+
+        <div class="PostContent clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://amoozesh.mihanblog.com/post/2&amp;title=چرا وبلاگ نویسی؟">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo clearfix"></div>
+
+<div style="text-align: justify;"><span style="font-size: small;">در این مطلب می خواهیم با مفاهیم پایه وبلاگ نویسی و اهداف و تاثیرات آن آشنا شویم.</span></div><div style="text-align: justify;"><span style="font-size: small;"><br></span></div><div style="text-align: justify;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://instructionaltechtalk.com/wp-content/uploads/2015/01/blog-lawfuel.jpg" alt=""></div>
+<div><div style="text-align: justify;"><font size="2"><br></font></div><div style="text-align: justify;"><font size="2" color="#009900"><b>وبلاگ چیست؟&nbsp;</b></font></div><div><span style="font-family: Tahoma, Arial; line-height: 22px; text-align: justify;"><font size="2">وبلاگ یک یا چندین صفحه اینترنتی شخصی یا گروهی است که در آن شخص یا گروه به نوشتن مطالب متوالی (روزانه یا چند روز در میان) در موضوعات متنوع و دلخواه می پردازند.و افکار،عقاید اشعار و یا خاطرات خود را برای مطالعه عموم در آن قرار می دهند.از آنجایی که وبلاگ در اینترنت نشر می یابد می توان آنرا یک نشریه اینترنتی شخصی هم اطلاق کرد.و حتی گاهی بعضی ها پا را از این هم فراتر می گذارند و وبلاگ را یک رسانه اینترنتی می نامند.</font></span></div><div><span style="font-family: Tahoma, Arial; line-height: 22px; text-align: justify;"><font size="2">در دنیای امروز صدها میلیون نفر از مردم سراسر دنیا از تمام سطوح اجتماعی و از تمامی قشرها به وبلاگ نویسی روی آورده اند و از طریق وبلاگ نویسی نوشته های خود را در معرض دید عموم قرار داده اند.</font></span></div><div><span style="font-family: Tahoma, Arial; line-height: 22px; text-align: justify;"><font size="2"><br></font></span></div><div style="text-align: justify;"><b><font size="2" color="#009900">ما برای چه باید وبلاگ نویسی کنیم ؟</font></b></div><div style="text-align: justify;"><font size="2">هر گاه در هر مکان و زمانی شما در ذهن خود به این نتیجه رسیدید که دانش یا مطلبی دارید که بازگو کردن آن توسط شما برای دیگران می تواند مفید باشد و یا گره ای از مشکلات آن ها باز می کند می توانید شروع کنید به وبلاگ نویسی.</font></div><div style="text-align: justify;"><font size="2"><br></font></div><div style="text-align: justify;"><b><font size="2" color="#009900">برای وبلاگ نویسی به چه ابزاری نیاز دارید ؟</font></b></div><div style="text-align: justify;"><font size="2">دارا بودن یک کامپیوتر و اتصال به اینترنت (اگر امکان فراهم کردن آن را ندارید می توانید از کافی نت ها هم استفاده کنید)</font></div><div style="text-align: justify;"><font size="2">داشتن دانش پایه کامپیوتر(اصول اولیه تایپ کردن) و کار با سیستم عامل موجود بر روی کامپیوترتان&nbsp;</font></div><div style="text-align: justify;"><font size="2"><br></font></div><div><div style="text-align: justify;"><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: small; line-height: 24.0639991760254px;">در مجموع <b>بخشی&nbsp;از تاثیرات وبلاگ ها</b> را می توان در پنج مورد خلاصه کرد:&nbsp;</span></div><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: small; line-height: 24.0639991760254px;"><div style="text-align: justify;"><span style="line-height: 24.0639991760254px;">-تعامل کاربران با اینترنت</span></div></span><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: small; line-height: 24.0639991760254px;"><div style="text-align: justify;"><span style="line-height: 24.0639991760254px;">-خارج شدن انحصار تولید محتوا</span></div></span><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: small; line-height: 24.0639991760254px;"><div style="text-align: justify;"><span style="line-height: 24.0639991760254px;">-حرفه ای شدن کاربران</span></div></span><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: small; line-height: 24.0639991760254px;"><div style="text-align: justify;"><span style="line-height: 24.0639991760254px;">-ارتباطات موثر</span></div></span><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: small; line-height: 24.0639991760254px;"><div style="text-align: justify;"><span style="line-height: 24.0639991760254px;">-شناخت نیازهای افراد</span></div><div style="text-align: justify;"><span style="line-height: 24.0639991760254px;">حالا با دانستن این اطلاعات پایه ای تعلل جایز نیست همین حالا در یکی از چندین&nbsp;</span><a href="../../../www.mihanblog.com/index.html" target="" title=""><b><font color="#ff0000">سرویس دهنگان وبلاگی</font></b></a><span style="line-height: 24.0639991760254px;">&nbsp;ثبت نام کنید و کار خود را آغاز کنید&nbsp;</span></div></span></div>
+
+</div>
+
+
+
+</p>
+            <p></p>
+            <p></p>
+
+            <!--<blockquote><p> Mauris eu wisi. Ut ante dui, aliquet nec, congue non, accumsan sit amet, lectus. </p></blockquote>-->
+
+            <ul class="clearfix">
+
+                                    <li>
+                        برچسب ها:
+                                                    <a href="../tag/وبلاگ.html" >وبلاگ</a>،
+                                                    <a href="../tag/بلاگ.html" >بلاگ</a>،
+                                                    <a href="../tag/وبلاگ&#32;نویسی.html" >وبلاگ نویسی</a>،
+                                                &nbsp;
+                    </li>
+                
+
+
+                
+
+            </ul>
+
+        </div>
+        <style>
+
+
+        </style>
+        <div  class="PostDet">
+            <li style="float: left;" class="PostCom">	<a target="_self" href="../2.html#commentlist" class="comment-link">نظرات(<script>setCommentCnt(2)</script>)</a>&nbsp;</li>
+            <div style="float: left; margin-top: -5px;"> <script>mihanblogPostLike('2','like')</script></div>
+        </div>
+    </div>
+
+
+    <div class="clearer"></div>
+
+
+<!-- Comment -->
+
+
+<div>
+
+    <style>
+
+            /*** COMMENT BODY***/
+        .comment_body{
+            background: #FAF4E1;
+            margin:10px;
+            border-radius: 5px;
+            border-right:5px solid #EBE3C8;
+            overflow:hidden
+        }
+
+        .comment .comment_reply {
+            background: none repeat scroll 0 0 #F2E2D5;
+            border-radius: 5px 5px 5px 5px;
+            border-right: 5px solid #E4CAB5;
+            font-size: 10px;
+            width: 350px;
+            margin-top:10px;
+            overflow:hidden
+        }
+        .comment .comemnt_text {
+            direction: rtl;
+            line-height: 1.5em;
+            text-align: right;
+        }
+
+
+
+        .comment .name {
+            font-weight: 600;
+            color: #4E3E09;
+            padding-right: 5px;
+            text-align: right;
+            line-height: 26px;
+            float: right;
+        }
+
+
+        .comment .date {
+            font-size: 10px;
+            padding: 5px;
+            color: #7E7E7E;
+            float: left;
+        }
+
+
+        .comment .comemnt_web {
+            padding: 5px 0 5px 15px; color: #999; direction: ltr; text-align: left;
+
+        }
+
+
+        .comment .comemnt_web a {
+            color: #554c3d;
+            text-decoration: underline;
+        }
+
+
+
+        .comment_det{
+            border-bottom:1px solid #F4F4F2;
+            padding:4px;
+
+        }
+
+
+        .comment .name,.date,.comemnt_text,.comment_reply{
+            margin-right:3px;
+            padding-right:3px;
+
+        }
+
+            /**** COMMENT FORM ****/
+
+        .comment_form {
+            background: none repeat scroll 0 0 #FAE4E3;
+            border-radius: 5px 5px 5px 5px;
+            border-right: 5px solid #F39199;
+            direction: rtl;
+            margin: 10px;
+            padding: 20px;
+
+        }
+
+
+
+        .comment_form label {
+            width: 100px;
+            display: block;
+            float: right;
+            text-align: left;
+            font-size: 11px;
+            color: #555;
+            padding-left: 10px;
+        }
+
+
+        .comment_form .comment_form_row {
+            margin: 3px 0;
+        }
+
+
+        #imageCodeWrapper .imageCode_input #imgstr {
+            font-size: 25px;
+            height: 34px;
+            width: 70px;
+        }
+
+        .comment_form input.btn { input.btn {
+                                      background: url("http://mihanblog.com/public/public/user_data/template/23/images/SubmitComment.gif") no-repeat scroll 0 0 		transparent;
+                                      border: medium none;
+                                      color: #FFFFFF;
+                                      font-family: tahoma;
+                                      height: 26px;
+                                      margin-top: 10px;
+                                      padding: 0;
+                                      width: 85px;
+                                  }
+        .comment_form .comment_form_textarea, .comment_form .comment_form_textbox {
+            border: 1px solid #C5C5C5;
+        }
+
+
+
+
+    </style>
+
+    </div>
+<!-- End Comment-->
+
+
+
+<!-- Start Nav -->
+<div align="center" class="page_box clearfix">
+    </div>
+<!-- End Nav -->
+
+
+</div>
+<!-- End SC -->
+<div class="SR"><div class="SRL">
+
+
+
+
+
+
+
+
+            <!-- Start Categ -->
+        <div class="Panel PBlue">
+            <h3>آرشیو موضوعی</h3>
+            <ul>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="../category/5.html"><p>شخصی سازی وبلاگ</p><p>(1)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="../category/1.html"><p>وبلاگ در موتورهای جستجو</p><p>(2)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="../category/4.html"><p>صفحات جانبی وبلاگ</p><p>(1)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="../category/3.html"><p>جلوگیری از فیلتر شدن وبلاگ</p><p>(1)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="../category/2.html"><p>افزایش بازدید وبلاگ</p><p>(1)</p></a></li>
+                            </ul>
+            <div class="PT"></div>
+        </div>
+        <!-- End Categ -->
+    
+    <!-- Start Archives -->
+            <div class="Panel PYellow">
+            <h3>آرشیو</h3>
+            <ul>
+                                    <li><a href='../archive/1395/6.html' title=' شهریور 1395(1)'> شهریور 1395</a></li>
+                                    <li><a href='../archive/1395/5.html' title=' مرداد 1395(1)'> مرداد 1395</a></li>
+                                    <li><a href='../archive/1395/2.html' title=' اردیبهشت 1395(1)'> اردیبهشت 1395</a></li>
+                                    <li><a href='../archive/1395/1.html' title=' فروردین 1395(1)'> فروردین 1395</a></li>
+                                <li><a href="../archive.html"><b>لیست آرشیوها</b></a></li>
+            </ul>
+            <div class="PT"></div>
+        </div>
+        <!-- End Archives -->
+
+    <!-- Start Links -->
+        <!-- End Links -->
+
+    <!-- Start Links -->
+        <!-- End Links -->
+
+    <!-- Start extrapage -->
+        <!-- End extrapage -->
+
+    <div align="center"></div>
+
+
+
+
+</div><div class="SRR">
+
+    <div id="user_logo" class="clearfix">
+        <div align="center"></div>
+        <div align="center"><a href="2339.html">بخش پشتیبانی</a></div>
+        <p>در این وبلاگ ترفندها و راهکارهایی برای داشتن وبلاگی مناسب و کاربردی رو آموزش میدیم.</p>
+    </div><br />
+
+    <!-- Start Recent posts -->
+            <h3>آخرین پست ها</h3>
+        <ul class="clearfix">
+                            <li><h2><a  href="../6.html">چجور یه وبلاگ پرمخاطب و با بازدید بالا داشته باشم؟</a></h2></li>
+                            <li><h2><a  href="../5.html">قرار دادن تصویر یا فایل در پست وبلاگ</a></h2></li>
+                            <li><h2><a  href="../9.html">تغییر تصویر بالای وبلاگ و قالب به تصویر دلخواه</a></h2></li>
+                            <li><h2><a  href="../4.html">ثبت وبلاگ در گوگل و سایر موتورهای جستجو</a></h2></li>
+                            <li><h2><a  href="../3.html">روش جلوگیری از فیلتر شدن وبلاگ</a></h2></li>
+                            <li><h2><a  href="../2.html">چرا وبلاگ نویسی؟</a></h2></li>
+                        <li><a  href="../list.html"><b>لیست آخرین پستها</b></a></li>
+        </ul>
+        <!-- End Recent posts -->
+    <br />
+            <h3>نویسندگان</h3>
+        <ul class="clearfix">
+                            <li class="clearfix"  id="parentheses">
+                    <p><a href="2339.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/1/2339.jpg" style="width:16px;" /></a></p><a  class="clearfix" href="2339.html"><p>بخش پشتیبانی</p><p>(6)</p></a>
+                </li>
+
+                    </ul>
+        <br/>
+
+    <!-- Start Recent Poll -->
+    
+		    <!-- End Recent Poll -->
+    <br />
+
+
+            <h3><span class="clearfix">آمار وبلاگ</span></h3>
+        <ul class='stat'>
+            <li>کل بازدید : <span><script>getStatVar('total_view');</script></span></li>
+            <li>بازدید امروز :<span><script>getStatVar('today_view');</script></span></li>
+            <li>بازدید دیروز : <span><script>getStatVar('yesterday_view');</script></span></li>
+            <li>بازدید این ماه : <span><script>getStatVar('this_month_view');</script></span></li>
+            <li>بازدید ماه قبل : <span><script>getStatVar('last_month_view');</script></span></li>
+            <li>تعداد نویسندگان : <span><script>getStatVar('total_author');</script></span></li>
+            <li>تعداد کل پست ها : <span><script>getStatVar('total_post');</script></span></li>
+            <li>آخرین بازدید : <span><script>getStatVar('last_view_date');</script></span></li>
+            <li>آخرین بروز رسانی : <span><script>getStatVar('modify_date');</script></span></li>
+        </ul>
+        <br />
+
+    <!-- Start Recent Tag_Cloud -->
+            <h3><span class="clearfix">اَبر برچسبها</span></h3>
+        <div class="clearfix">
+            <ul class="cloud">
+                                    <li><a href="../tag/افزایش+بازدید+وبلاگ.html" style="font-size:1em">افزایش بازدید وبلاگ</a>&nbsp;</li>
+                                    <li><a href="../tag/بازدیدکننده+وبلاگ.html" style="font-size:1em">بازدیدکننده وبلاگ</a>&nbsp;</li>
+                                    <li><a href="../tag/چگونگی+وبلاگ+نویسی.html" style="font-size:1em">چگونگی وبلاگ نویسی</a>&nbsp;</li>
+                                    <li><a href="../tag/قرار+دادن+فیلم+در+وبلاگ.html" style="font-size:1em">قرار دادن فیلم در وبلاگ</a>&nbsp;</li>
+                                    <li><a href="../tag/قرار+دادن+آهنگ+در+وبلاگ.html" style="font-size:1em">قرار دادن آهنگ در وبلاگ</a>&nbsp;</li>
+                                    <li><a href="../tag/وبلاگ+نویسی.html" style="font-size:1.5em">وبلاگ نویسی</a>&nbsp;</li>
+                                    <li><a href="../tag/ثبت+وبلاگ.html" style="font-size:1.5em">ثبت وبلاگ</a>&nbsp;</li>
+                                    <li><a href="../tag/آموزش+وبلاگ+نویسی.html" style="font-size:2em">آموزش وبلاگ نویسی</a>&nbsp;</li>
+                                    <li><a href="../tag/وبلاگ+موفق.html" style="font-size:1em">وبلاگ موفق</a>&nbsp;</li>
+                                    <li><a href="../tag/جذب+مخاطب+وبلاگ.html" style="font-size:1em">جذب مخاطب وبلاگ</a>&nbsp;</li>
+                            </ul>
+        </div>
+        <!-- End Recent Tag_Cloud -->
+    <br />
+
+
+    <div align="center" class="mihan_logo"></div>
+
+
+
+
+
+</div></div>
+
+
+</div>
+
+<!-- Container -->
+
+
+<div class="Footer"><div class="FL"></div><div class="FR"></div>
+    <p><strong>POWERED BY <a href="../../../www.mihanblog.com/index.html"><font color="#FF0000" size="2px">M</font>IHAN<font color="#FF0000" size="2px">B</font>LOG.COM</a></strong><br />
+        Smashing Theme is created by: www.designdisease.com</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'amoozesh.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

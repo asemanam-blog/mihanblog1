@@ -1,0 +1,1263 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc@rsd.html" />
+<script type="text/javascript" src="../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1033403*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[70]='1';commentCnt[71]='3';commentCnt[73]='0';commentCnt[75]='1';commentCnt[76]='5';commentCnt[78]='2';commentCnt[80]='0';commentCnt[81]='2';commentCnt[82]='-';commentCnt[83]='0';commentCnt[84]='1';commentCnt[85]='1';commentCnt[86]='5';commentCnt[87]='5';commentCnt[88]='1';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[78]='0';
+mihanblogDisLikeArrCnt[78]='0';
+mihanblogLikeArrCnt[81]='0';
+mihanblogDisLikeArrCnt[81]='0';
+mihanblogLikeArrCnt[83]='0';
+mihanblogDisLikeArrCnt[83]='0';
+mihanblogLikeArrCnt[86]='0';
+mihanblogDisLikeArrCnt[86]='0';
+mihanblogLikeArrCnt[87]='0';
+mihanblogDisLikeArrCnt[87]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://baraneaseg.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://baraneaseg.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','159');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','پنجشنبه 7 فروردین 1393');
+	
+	setStatVar('today_view','3');
+	setStatVar('yesterday_view','15');
+	
+	setStatVar('this_month_view','517');
+	setStatVar('last_month_view','389');
+
+	setStatVar('total_view','106545');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (06:46)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://baraneaseg.mihanblog.com/statupdate/?data[refereruri]=http://baraneaseg.mihanblog.com/&data[postid]=&data[requesturi]=/page/7&data[sdate]=1607830350&data[hash]=fe250e611cada71b5d2aed7306dbd4a4&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://baraneaseg.mihanblog.com/page/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<script type="text/javascript">var ariotik_user_id = 792;</script>
+<script type="text/javascript" src="http://ariotik.ir/website/js"></script>
+<script type="text/javascript">var abarclick_user_id = 713;</script>
+<script type="text/javascript" src="http://abarclick.ir/website/js"></script>
+
+<script type="text/javascript">var ariotik_user_id = 792;</script>
+<script type="text/javascript" src="http://ariotik.ir/website/js"></script>
+
+<head><div id="first_p" style="text-align: center; margin-top: 5px;"><a onclick="document.getElementById('main_p').style.display = 'block';document.getElementById('first_p').style.display = 'none';" href="7.html#"><img src="http://nightnama.ir/codes/backgr/7.gif" border="0"></a></div><div id="main_p" style="display: none;">
+<a target="_blank" href="http://nightnama.ir/codes/backgr">دریافت کد صفحه ورودی</a><br>
+
+
+
+<title>باران عشق</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Farsi">
+<meta name="description" content="باران عشق - ♥♥بارانی باش تو هم مثل من♥♥ - باران عشق">
+<meta name="keywords" content="باران عشق,baraneaseg, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="باران عشق" href="../post/rss/index.html" />
+<link href="http://nightnama.ir/theme/21/style.css" type="text/css" rel="stylesheet">
+<style>
+#header{background:#3a3a3a url(http://nightnama.ir/theme/21/header.jpg) no-repeat top right;height:400;width:100%;color:#838383;font-size:8pt;text-align:right}
+</style>
+</head>
+
+<body>
+
+<div align=center><div style="width:1000">
+
+<div class=smz>
+
+<div id=header>
+<div class=top-BlogTitle></div>
+<div class=top-menu><div class=BlogTitle>باران عشق</div><div class=Description>♥♥بارانی باش تو هم مثل من♥♥</div></div>
+
+<div class=top-menu2>
+<div style="float:right;width:0px;direction:rtl; height:20px"></div>
+<div style="float:right;width:500">
+<a href="../index.html">صفحه اصلی</a> |
+<a rel="nofollow" href="mailto:">ایمیل مدیر</a> |
+<a rel="nofollow" href="javascript:messageForm()">تماس با من</a> |
+<a title="نایت نما" href="http://nightnama.ir" target="_blank" >قالب وبلاگ</a> |
+<a rel="nofollow" href="../post/rss/index.html" target="_blank" >عناوین مطالب</a>
+</div></div></div>
+
+<div id=main-back>
+
+<div class=Sid>
+<div id=Sidebar> 
+
+<div class="TopSid"><div class=TopSid2>نویسندگان</div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../post/author/881009.html">هستی   157 </a></div></div>
+<div class=LowSid></div>
+
+		
+<BlogLinksBlock>
+<div class=TopSid><div class=TopSid2>
+<b>لینک دوستان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a target="_blank" href="http://nightnama.ir">قالب وبلاگ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://sb13.ir/">::: بانک علوم :::</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.farsfunny.ir/">نمکستان</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.fbsff.blogfa.com/">کلبه من،کلبه غم/آسمون اینجا همیشه ابریست</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://email3.ir/">&quot;&quot;ارسال ایمیل تبلیغاتی&quot;&quot;</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../sheelman.mihanblog.com/index.html">چراغ خواب شلمن</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://nicerdicer-plus.rozblog.com/">&quot;&quot;خرد کن نایسر نایسر پلاس&quot;&quot;</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.idvb.ir/">دانلود کلیپ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../naasimehonar.mihanblog.com/index.html">هنر معماری</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../elm-city.mihanblog.com/index.html">... علمی مهندسی ...</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../tiraxtur-fifa.mihanblog.com/index.html">فوتبال - تراختور</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../hamidss1994.mihanblog.com/index.html">عکس آهنگ فیلم داستان و خبر داغ...</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.137213721372.blogfa.com/">رویای مهتاب</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../mirhashemi-2.mihanblog.com/index.html">هموطن</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../kaptanbloom.mihanblog.com/index.html">کاپتان بلوم</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../lovlygirl-justforu.mihanblog.com/index.html">دختری از جنس غم با لبخندی سردتر از یخ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../happygirl80.mihanblog.com/index.html">دنیای رنگی من</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../eshghess.mihanblog.com/index.html">پگاه استقلالی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../fab-friends.mihanblog.com/index.html">صدای پای عشق</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../hamidsss1994.mihanblog.com/index.html">داستان عاشقانه زیبا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../asheghane9.mihanblog.com/index.html">عاشقانه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../banke-etelaat.mihanblog.com/index.html">علوم آزمایشگاه دزفول</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../amd75.mihanblog.com/index.html">دلنوشته های یک مرد</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../tehwatchmens.mihanblog.com/index.html">ساعت مچی مردانه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../donyayzard.mihanblog.com/index.html">دنیای سرد</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://frbidden-love.blogfa.com/">عشق ممنوع</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../chashmemeygoon.mihanblog.com/index.html">چشم میگون</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../bazi-city.mihanblog.com/index.html">... دانلود بازی ...</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://musigi-city.mihanblog.com/">دانلود آهنگ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../furushgah-city.mihanblog.com/index.html">بهترین فروشگاه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../ax-women-ir.mihanblog.com/index.html">عكس بازیگران زن ایرانی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ddownloadd-city.mihanblog.com">... دانلودكده ....</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../asemone-asheghi.mihanblog.com/index.html">آسمون عاشقی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://takbilliards.ir/">بیلیارد</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../hrwriting.mihanblog.com/index.html">&quot; نوشته های همایون رقابی&quot;</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../aznooo.mihanblog.com/index.html">شهدای زنجانرود</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../khotbehsara.mihanblog.com/index.html">آنایوردم خطبه سرا نگین تالش</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../msaal.mihanblog.com/index.html">&quot;باز تابش امسال&quot;</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../ebimiri.mihanblog.com/index.html">پسر مشرقی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://nit.persianblog.ir/">تکنولوژی  جدید</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../weloveus.mihanblog.com/index.html">عشق &amp; نفرت</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ai-nafas.mihanblog.com/">مثل آب آرام باش....</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../30gar-qam.mihanblog.com/index.html">آخرین سیگار.......</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../baran360.mihanblog.com/index.html">حرف های بارانی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../cgirls.mihanblog.com/index.html">نوجوانان تیز هوش</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://hasty76.blogfa.com/">عمق احساس</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://pinkremembrance.blogfa.com/">دلــــنوشته هآیِ صـــــورتــیـــِ مـنــ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../buyglasses-biz.mihanblog.com/index.html">عینک آفتابی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../fereshteh9.mihanblog.com/index.html">فرشته</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../mortezamousazadeh.mihanblog.com/index.html">دیـــــــــــــــــــــــــــــرو</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://juik.blogsky.com/">لینک باکس</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://unique-boy.persianblog.ir/">غـــــــرور عاشـــــقانه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://royajooon94.blogfa.com/">به نــــــام عشق زیباترین دروغ دنیــــا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.manotosport.ir/">من و تو اسپورت</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://kolbehlove.persianblog.ir/">کلبه کوچک عاشقی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://pesarekhastee.blogfa.com/">حرفهای پسر خسته از زندگی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://myrayban.ir/page/link">تبادل لینک</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://buy-glasses.ir">خرید عینک آفتابی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../1hamotaghi.mihanblog.com/index.html">لیلی جونم</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../www.zemzemeh-baran.mihanblog.com/index.html">زمزمه بارون</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../ipromissu4ever.mihanblog.com/index.html">سکوت آبی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../amir-maleki.mihanblog.com/index.html">ورزش حرفه ای</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.fapma.blogfa.com/">اینجا همه چی دونیه!!!</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../naderkhan.mihanblog.com/index.html">لیمو ترش</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.lahzehayetanhaee.blogfa.com/">Lovely Web</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../rosezard.mihanblog.com/index.html">arose ghorbat</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../amir-maleki.mihanblog.com/index.html">ورزش حرفه ای</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://boxlink.loxblog.com/">افزایش آمار</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.sajad0206.loxblog.com/">کبوتری در تاریکی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://eshgh-bi-enteha.blogfa.com/">عشق بی انتها</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.productdesigner.ir">.:: پارک علم و فناوری ::.</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://melodylonely.blogfa.com/">اینجا همه چی در همه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://vahedmvp.lxb.ir/">شرافتهای مظلوم</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../kachoo.mihanblog.com/index.html">sarnevesht</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../www.yatoyabazamto.mihanblog.com/index.html">عاشقانه ها</a></div><div class=li-Sid>
+<a target="_blank" href="http://nightnama.ir">نایت نما</a></div>
+<div class=li-Sid>
+<a target="_blank" href="http://nightnama.ir">قالب میهن بلاگ</a></div></div>
+<div class=LowSid></div>
+</BlogLinksBlock>
+
+
+
+<div class=TopSid><div class=TopSid2>
+<b>پیوندهای روزانه</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://takparvar.ir/post/33" title="">ورمی کمپوست</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://womenclock.parsiablog.com" title="">ساعت زنانه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://bodyshaping.ir" title="">اسلیم لیفت</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.mahz.ir/" title="">صنایع الکترونیک مهزیار</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://glasses2013.ir" title="">خرید عینک آفتابی 2013</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://link98club.r98.ir" title="با سلام....
+ 
+لـــینکـدونـــی | سیستم تبادل لینـــک و بــــنر 
+
+تبادل لینـــک و بــــنر  |   بهترین راه محبوبیت سایت شما در گوگل 
+
+جدیدترین سیستم تبادل بنر و لینک
+
+ پس زود بیاید 
+http://link98club.rozblog.com">سیستم تبادل لینـــک و بــــنر هوشمند</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.hidecor.ir/" title="">برچسبهای دیواری</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.tikbuy.ir" title="با سلام فروشگاه تیک عرضه کننده محصولات متنوع از سراسر وب پس از هر خرید ,کارت شارژ رایگان هدیه میدهد محصولات ما شامل انواع عینک نرم افزار لوازم خانگی لوازم آرایشی لوازم پزشکی گردنبند و دستبند پوشاک لوازم الکترونیکی ادکلن ساعت کارتون مستند و... می باشد خرید شما افتخار ماستwww.tikbuy.ir (جهت تبادل لینک ابتدا ما رو لینک کنید بعد اطلاع بدید)">کارت شارژ رایگان هدیه بگیرید</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.link118.com/" title="">تبادل لینک</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://chargeha.com" title="">فروش اینترنتی کارت شارژ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://fabner.biz/products/buy-a-sunglasses/buy" title="">خرید عینک ریبن اصل</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.nightnama.ir">قالب وبلاگ</a></div>
+<div class=li-Sid>
+<a target="_blank" href="http://nightnama.ir">قالب های نایت نما</a></div></div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>نایت نما</div></div>
+<div class=CenterSid>
+
+
+
+
+<div class=li-Sid><center>
+<a target="_blank" title="طراحی سایت" href="http://www.hamkarweb.ir/">طراحی سایت</a> |
+<a target="_blank" title="اسکریپت دونی" href="http://www.script2ni.ir/">اسکریپت دونی</a> |
+<a target="_blank" title="گالری عکس" href="http://www.nightnama.ir/gallery">گالری عکس</a>
+</div>
+<br><div class=LowSid></div>
+
+</div>
+</div>
+
+<div class=main>
+
+<div class=post>
+
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/88">آموزش تماس گرفتن مستقیم با خط دایورت شده – ترفند موبایل</a></div></div>
+<div class=t-date>تاریخ : سه شنبه 7 آذر 1391  | 20:32  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+<div style="line-height: 20px; text-align: justify;"><i><font size="2" style="background-color: rgb(0, 0, 0);" color="#ffcc33"><br></font></i></div><div style="line-height: 20px; text-align: justify;"><i><font size="2" style="background-color: rgb(0, 0, 0);" color="#ffcc33"><br></font></i></div><div style="line-height: 20px; text-align: justify;"><i><font size="2" style="background-color: rgb(0, 0, 0);" color="#ffcc33">همانطور که می‏دانید در گوشی‏های تلفن همراه قابلیتی به نام Divert یا انتقال مکالمه وجود دارد. بدین صورت که هنگامی که خط خود را بر روی شماره‏ای دایورت می‏کنید، از این پس هر تماسی با شما گرفته شود به طور اتوماتیک به شماره مورد نظر تعیین شده منتقل می‏گردد. در نتیجه هیچ کس نمیتواند به طور مستقیم با خط شما تماس بگیرد و گوشی شما هیچ‏گاه زنگ نخواهد خورد. بسیاری افراد از این کار جهت این‏که به هیچ تلفنی پاسخ ندهند و به اصطلاح اطرافیان را بپیچانند استفاده می‏کنند. اما از آنجا که دست بالای دست بسیار است قصد داریم ترفندی جالب را به شما معرفی کنیم که با استفاده از آن می‏توانید به طور مستقیم با خطی که دایورت شده است تماس بگیرید! قطعاً فردی که خط خود را دایورت کرده است شگفت‏زده می‏شود که چطور شما توانسته اید با او تماس بگیرید، بدون اینکه تماس‏تان دایورت شود! این ترفند بر روی کلیه گوشی‏هایی که قابلیت دایورت را دارا هستند قابل انجام است.</font></i></div><div style="line-height: 20px; text-align: justify;"><i><font size="2" style="background-color: rgb(0, 0, 0);" color="#ffcc33">در ادامه نحوه انجام ترفند را ببینید.</font></i></div><div><br></div><div style="line-height: 20px; background-color: rgb(247, 247, 247); text-align: justify;"><a href="http://mobilesky.ir/" style="color: rgb(0, 0, 0); text-decoration: initial;"></a></div>
+
+
+
+
+
+
+
+
+<br><a href='http://baraneaseg.mihanblog.com/post/88'>بیا ادامه مطالب پشیمون نمیشی</a>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(88)">نظرات  <script>setCommentCnt(88)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/87">عکس های جالب ، خنده دار و دیدنی از خوراکی ها (حتما ببینید!)کاریکاتور</a></div></div>
+<div class=t-date>تاریخ : چهارشنبه 1 آذر 1391  | 19:05  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+<img hspace="0" border="0" align="baseline" vspace="0" src="http://upcity.ir/images/86178724227712269217.jpg" alt="">
+
+
+<div><br></div><div><font class="Apple-style-span" size="5" color="#990000">بیا ادامه مطلب چرا نمیزنی بیا دیگه&nbsp;</font></div><div><font class="Apple-style-span" size="5" color="#990000"><br></font></div>
+
+<br><a href='http://baraneaseg.mihanblog.com/post/87'>ادامه مطلب</a>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(87)">نظرات  <script>setCommentCnt(87)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/86">شکستن اسونه... </a></div></div>
+<div class=t-date>تاریخ : شنبه 27 آبان 1391  | 20:43  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+<div><font class="Apple-style-span" color="#339999" size="3"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upcity.ir/images/66971201969277598296.jpg" alt=""></font></div>
+<font class="Apple-style-span" color="#339999"><span style="font-size: medium; ">تو می گفتی نمی شکنم....</span><br><br><span style="font-size: medium; ">اما شکستن آسان بود</span><br><br><span style="font-size: medium; ">سنگ نمی خواست!</span><br><br><span style="font-size: medium; ">گم کردن دستانت</span><br><br><span style="font-size: medium; ">ندیدن انتظار چشمانت</span><br><br><span style="font-size: medium; ">و خاطره شدن گرمای بوسه هایت</span><br><br><span style="font-size: medium; ">کافی بود</span><br><br><span style="font-size: medium; ">برای شکستن</span><br><br><span style="font-size: medium; ">برای تمام شدن....</span>&nbsp;</font>
+
+
+
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(86)">نظرات  <script>setCommentCnt(86)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/85">تمام زندگیم را دلتنگی پر کرده است </a></div></div>
+<div class=t-date>تاریخ : شنبه 27 آبان 1391  | 20:32  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+<span class="Apple-style-span" style="background-color: rgb(0, 0, 0); "><font class="Apple-style-span" color="#999999"><p><span style="font-size: medium; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upcity.ir/images/89819307085670486029.jpg" alt=""></span></p><p><span style="font-size: medium; ">تمام زندگیم را دلتنگی پر کرده است ...</span><br><span style="font-size: medium; ">دلتنگی از کسی که دوستش داشتم و عمیق ترین درد ها و رنج های عالم را در رگهایم جاری کرد !!!</span><br><span style="font-size: medium; ">دردهایی که کابوس شبها و حقیقت روزهایم شد ...</span><br><span style="font-size: medium; ">و حسرتی عمیق به قلبم آویخت و پوست تن کودک عشقم را با تاولهای دردناک</span></p><div class="text_exposed_show"><span style="font-size: medium; ">داغ ستم پوشاند ...</span><br><span style="font-size: medium; ">دلتنگی برای کسی که فرصت اندکی برای خواستنش برای داشتنش</span><br><span style="font-size: medium; ">داشتم ...</span><br><span style="font-size: medium; ">دلتنگی از مرزهایی که دورم کشیدند و مرا وادار کردند به دست خویش از کسانی که ...</span><br><span style="font-size: medium; ">دوستشان دارم کنده شوم ...</span><br><span style="font-size: medium; ">در آن سوی مرزها دوست داشتن گناه است</span><br><span style="font-size: medium; ">حق من نیست</span><br><span style="font-size: medium; ">که به آتش گناهی که عشق در آن سهمی داشت</span>&nbsp;مرا بسوزانند ...</div></font></span>
+
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(85)">نظرات  <script>setCommentCnt(85)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/84">گدا</a></div></div>
+<div class=t-date>تاریخ : جمعه 26 آبان 1391  | 10:09  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+<div><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="2"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upcity.ir/images/72011850545315523590.jpg" alt=""></font></div><span class="Apple-style-span" style="background-color: rgb(0, 0, 0);"><font class="Apple-style-span" color="#ff99ff"><span class="Apple-style-span" style="font-family: Tahoma; font-size: 12px; "><span style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif; ">از آن خوشم که شدم نوکر سرای حسین</span><br><span style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif; ">منم غلام کسی که بود گدای حسین</span><br><br><span style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif; ">دو چشم داده خداوند تا که گریه کنم</span><br><span style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif; ">یکی برای حسن آن یکی برای حسین</span><br><br><span style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif; ">یقین که آتش دوزخ حرام گردیده</span><br><span style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif; ">به جسم آنکه بود یار آشنای حسین</span><br><br><span style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif; ">برای بخشش کوه گناه یک راه است</span><br><span style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif; ">بریز قطره ی اشکی تو در عزای حسین</span><br><br><span style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif; ">کبوتر دل عشاق هر شب جمعه</span><br><span style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif; ">نشسته است روی گنبد طلای حسین</span><br><br><span style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif; ">خدا کند که شبی زائر حرم گردیم</span><br><span style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif; ">و جان دهیم همان شب به کربلای حسین</span><br><br><span style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif; ">به گوش جان تو اگر بشنوی هنوز آید</span><br><span style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif; ">ز زیر نیزه و تیغ و سنان صدای حسین</span></span>
+
+
+</font></span><div><span class="Apple-style-span" style="font-family: Tahoma; font-size: 12px; "><span class="Apple-style-span" style="background-color: rgb(255, 255, 255); "><font class="Apple-style-span" color="#666600"><span style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif; "><br></span></font></span></span></div>
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(84)">نظرات  <script>setCommentCnt(84)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/82">خوش آمد گوی</a></div></div>
+<div class=t-date>تاریخ : سه شنبه 23 آبان 1391  | 21:50  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+
+
+
+<img hspace="0" border="0" align="baseline" vspace="0" src="http://upcity.ir/images/72542501342774500157.gif" alt="">
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(82)">نظرات  <script>setCommentCnt(82)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/83">دانستنی هایی در مورد فواید اشک ریختن برای بدن</a></div></div>
+<div class=t-date>تاریخ : سه شنبه 23 آبان 1391  | 21:42  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+
+
+<div><font class="Apple-style-span" color="#cc66cc"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upcity.ir/images/67093678103496844736.jpg" alt=""></font></div><div><span class="Apple-style-span" style="font-family: Tahoma; background-color: rgb(0, 0, 0);"><font class="Apple-style-span" color="#cc66cc"><div style="direction: rtl; text-align: justify; line-height: 16px; ">محققان بر این باورند که گریه و خنده هر دو ریشه در یك بخش از مغز دارند و همانطور كه خنده فواید زیادی برای بدن دارد كه می‌توان از آنها به پایین آوردن فشار خون، افزایش قدرت ایمنی بدن و بهبود حالت روحی اشاره كرد گریه نیز خواص مشابهی دارد.</div><div style="direction: rtl; text-align: justify; line-height: 16px; "><br><strong>علت اشک ریختن را میتوان به سه دسته تقسیم کرد:</strong><br><br><strong>اشک های عاطفی، مربوط به استرس؛</strong><br>ایران ناز، نتایج بررسی ها نشان میدهد، بین اشک هایی که به علت یک مسئله عاطفی ریخته می شود با اشکی که مربوط به استرس است یا به علت تحریک با یک ماده محرک مانند پیاز به وجود می آید، اختلاف شیمیایی مهمی وجود دارد. اشک های ناشی از مسائل عاطفی بیشتر حاوی هورمون هایی با یک ماده اصلی پروتئینی به نام «پرولاکتین» و «آدرینوکورتیکوتروپیک» و «لوسین» است. این مواد، زمانی که فرد تحت استرس قرار می گیرد، تولید می شود.<br><br><strong>اشک مرطوب کننده؛</strong><br>چشم همه ما انسان ها نیاز به مایع محافظ دارد. این مایع محافظ از طریق غده لاکریمال که در قسمت بالای چشم قرار دارد و به «اشک بازال» معروف است، ترشح می شود. این نوع اشک حاوی ماده شیمیایی است که عملکرد ضدباکتریایی و ضدویروسی دارد.</div><div style="direction: rtl; text-align: justify; line-height: 16px; ">&nbsp;</div><div style="direction: rtl; text-align: justify; line-height: 16px; ">بدون این ماده، چشم که یک محیط مرطوب است، در معرض خشک شدن و حمله میکروب های مختلف قرار می گیرد.آبریزش به علت حساسیت؛یکی از مهم ترین عملکردهای اشک، محافظت چشم از ماده محرک خارجی است. این اشک ها، «اشک های رفلکس» نام دارد. در این شرایط چشم شروع به آبریزش می کند تا ماده محرک از چشم شسته شود.<br><br><strong>فواید اشک</strong><br>باکتری را از بین می برد؛ اشک خاصیت ضدباکتری طبیعی دارد. در اشک ماده ای وجود دارد که می تواند ۹۰ تا ۹۵درصد باکتری باقی مانده روی صفحه کلید رایانه، دستگیره ها و ... را در عرض ۵ دقیقه از بین ببرد.<br><br>بهبود دهنده خلق و خو؛ اشک حاوی ۲۴ درصد پروتئین به نام «آلبومین» است که در تنظیم کردن سیستم متابولیک بدن موثر است.<br><br>دفع کننده سموم؛ اشک، سموم بدن را دفع می کند.<br><br>کاهش دهنده استرس؛ گریه، هورمون های مربوط به استرس را از بدن خارج می کند، علاوه بر آن با رفع استرس در پیش گیری از بیماری هایی مانند فشارخون بالا که بر اثر استرس به وجود می آید، موثر است.<br><br>ایجاد کننده احساس خوب؛ اگرچه تحت فشار قرار دارید اما گریه کردن باعث تسکین می شود و در نتیجه فرد احساس خوبی پیدا می کند.<br><br>1) هنگامی که ما دچار استرس هیجانی می شویم، مغز وبدن ما شروع به تولید ترکیبات شیمیایی و هورمونهای خاصی میکند. گریه کردن کمک میکند تا این ترکیبات شیمیایی زائد که نیازی به آنها نیست از بدن حذف گردند.<br><br>۲) اشکهای احساسی در واقع مواد سمی ای که در پی استرس هیجانی در خون تجمع می یابند را از بدن دفع میکند.<br><br>۳) اشکهای احساسی سطح منگنز بدن را کاهش میدهند. این مواد معدنی بروی خلق و خو تاثیر مستقیم میگذارد. غلظت منگنز اشک احساسی ۳۰ برابر بیشتر از منگنز موجود در سرم خون است.<br><br>۴) اشک احساسی نسبت به اشک پایه و رفلکس حاوی ۲۴ درصد پروتئین آلبومین بیشتری میباشد.<br><br>۵) گریه مانند ادرار و تعریق باعث حذف مواد سمی و محصولات زائد بدن میشود<br><br>۶) گریه یک مکانیسم رایگان، طبیعی و قدرتمند برای کنار آمدن با درد، استرس و اندوه است.<br><br>نکته:انسان ها پس از گریه کردن از لحاظ جسمی و روانی احساس بهتری می کنند و در واقع سبک و خالی می شوند زیرا مواد انباشته شده در بدن هنگام گریه دفع می شود.</div></font></span></div>
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(83)">نظرات  <script>setCommentCnt(83)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/81">راه کار جدید برای استفاده بهینه از باطری گوشی  </a></div></div>
+<div class=t-date>تاریخ : شنبه 20 آبان 1391  | 17:27  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+
+
+
+<span class="Apple-style-span" style="font-family: Tahoma; font-size: 13px; line-height: 22px; background-color: rgb(0, 0, 0);"><font class="Apple-style-span" color="#ffcc66">1. تنظیم زمان وقفه ذخیره کننده نیرو :&nbsp;<br>تنظیمات&gt; عمومی&gt; شخصی سازی&gt; نمایش (نوکیا S60 3rd)&nbsp;<br>هر چه ساعت در هنگام بیکاری گوشی شما زمان کمتری نمایش داده شود ، میزان مصرف باطری گوشی موبایل شما به همان نسبت کمتر میشود.&nbsp;<br><br><br><br><br><br>2. بستن همه برنامه هایی که استفاده نمیشوند&nbsp;<br>داشتن برنامه های در حال اجرا در پس زمینه ممکن است از قابلیت چند وظیفه ای گوشی شما استفاده کند ، اما زمانی که تلفن همراه خود را در جیبتان گذاشتید یا از آن استفاده نمیکنید کاملا بی فایده است زیرا هم از باطری گوشی شما استفاده میکند ، هم کارت حافظه را درگیر کرده و هم پردازنده گوشی را بی دلیل مشغول میکند.&nbsp;<br><br><br><br>» برای بستن برنامه های کاربردی ، به سادگی کلید منو را پایین نگاه داشته (در نوکیا S60 2,3,5 edition) تا اینکه شما شاهد یک پنجره باز شو شوید ، سپس با فشردن دکمه "c" و انتخاب "بله" از برنامه خارج شوید.&nbsp;<br><br>3. غیر فعال کردن موقعیت شما در جی پی اس&nbsp;<br><br><br><br>تنظیمات&gt; عمومی&gt; موقعیت&gt; روشها موقعیت&nbsp;<br>تنظیمات&gt; تلفن&gt; برنامه sett. &gt; موقعیت&gt; روش موقعیت (نسخه S60 5th)&nbsp;<br><br>یکی از پرمصرفترین برنامه هایی است که بسیار از باطری گوشی شما استفاده میکند.&nbsp;<br>با غیر فعال نمودن این قابلیت هنگامی که از آن استفاده نمیکنید میتواند به شکل چشمگیری در مصرف باطری گوشی شما صرفخ جویی کند.این قابلیت تنها در گوشی های GPS دار وجود دارد&nbsp;<br><br><br><br><br><br>4. کاهش روشنایی شما&nbsp;<br>تنظیمات&gt; عمومی&gt; Personalisation&gt; نمایش&gt; سنسور نور&nbsp;<br>تنظیمات&gt; تلفن&gt; نمایش&gt; سنسور نور (نسخه S60 5th)&nbsp;<br><br><br><br>بسیای از کاربران عاشق نور زیاد صفحه نمایش موبایل هستند ، در مقابل عده ای نیز به نور کم و پایین علاقمندند که میگویند نور زیاد چشم ما را اذیت میکند!&nbsp;<br>در هر صورت بهتر است نور LCD موبایل را از نیمه کمتر یا بصورت کامل کم کنید که باعث شود حد اکثر استفاده را از موبایل خود بکنید.&nbsp;<br><br><br><br><br><br>5. غیرفعال کردن بلوتوث شما&nbsp;<br>تنظیمات&gt; اتصال&gt; بلوتوث&nbsp;<br><br><br><br>بلوتوث یکی از ویژگی های فوق العاده است که به کاربران اجازه می دهد تا اطلاعات خود را بصورت بی سیم مشترک سازند. با این حال ، بعید است که شما بصورت تمام وقت فایل های خود را منتقل کنید. پس بهتر است هنگامی که از آن استفاده نمیکنید آن را خاموش نگاه دارید.نه تنها با خاموش کردن از باتری گوشی خود بیشتر استفاده میکنید بلکه عمر آن را افزایش میدهید.&nbsp;<br><br><br><br><br><br>6. استفاده از دارک تم ها و تم های تیره (روش تأیید نشده)&nbsp;<br>چند نفر گفته اند که استفاده از "تم تیره" کمک خواهد کرد که عمر باتری طولانی و محافظت از صفحه نمایش بیشتر شود. این روش را ما تایید نمیکنیم. اگر چه این روش تأیید نشده است ، اما شاید بتوان گفت که ممکن است از انرژی کمتری از صفحه نمایش استفاده کند !</font></span>
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(81)">نظرات  <script>setCommentCnt(81)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/80">ترفند های مختلف تلفن همراه/ترفند تماس با شماره دایورت شده - ترفند موبایل </a></div></div>
+<div class=t-date>تاریخ : شنبه 20 آبان 1391  | 17:24  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+
+<span class="Apple-style-span" style="font-family: Tahoma; font-size: 13px; line-height: 22px; background-color: rgb(0, 0, 0);"><font class="Apple-style-span" color="#33ccff"><br>همانطور که می‏دانید در گوشی‏های تلفن همراه قابلیتی به نام Divert یا انتقال مکالمه وجود دارد. بدین صورت که هنگامی که خط خود را بر روی شماره‏ای دایورت می‏کنید، از این پس هر تماسی با شما گرفته شود به طور اتوماتیک به شماره مورد نظر تعیین شده منتقل می‏گردد.&nbsp;<br>در نتیجه هیچ کس نمیتواند به طور مستقیم با خط شما تماس بگیرد و گوشی شما هیچ‏گاه زنگ نخواهد خورد. بسیاری افراد از این کار جهت این‏که به هیچ تلفنی پاسخ ندهند استفاده می‏کنند. اما از آنجا که دست بالای دست بسیار است قصد داریم ترفندی جالب را به شما معرفی کنیم که با استفاده از آن می‏توانید به طور مستقیم با خطی که دایورت شده است تماس بگیرید! قطعاً فردی که خط خود را دایورت کرده است شگفت‏زده می‏شود که چطور شما توانسته‏اید با او تماس بگیرید، بدون اینکه تماس‏تان دایورت شود!&nbsp;<br><br>این ترفند بر روی کلیه گوشی‏هایی که قابلیت دایورت را دارا هستند قابل انجام است. نحوه کار بسیار ساده است.&nbsp;<br>شما بایستی شماره خودتان را بر روی شماره‏ای که قصد دارید با آن تماس بگیرید دایورت کنید، سپس از خط خودتان با خط خودتان تماس بگیرید!&nbsp;<br>به همین سادگی و همین پیچیدگی که گفته شد!&nbsp;<br><br><br>جهت فهم بیشتر مثالی می‏زنیم:&nbsp;<br>فرض کنید شماره شما ۰۹۱۲۰۰۰۰۰۰۰ است. شماره فردی هم که قصد دارید با او تماس بگیرید (که خطش را دایورت کرده است) ۰۹۳۵۰۰۰۰۰۰۰ است.&nbsp;<br>در گوشی به بخش مربوط به تنظیمات Divert (در بعضی گوشی‏ها Call Forwarding) بروید.&nbsp;<br>خط خود را بر روی شماره ۰۹۳۵۰۰۰۰۰۰۰ که شماره فرد مورد نظر است دایورت کنید.&nbsp;<br>اکنون توسط همین گوشی و همین خط خودتان که اکنون دایورتش کرده‏اید با شماره ۰۹۱۲۰۰۰۰۰۰۰ که شماره خودتان است تماس بگیرید.&nbsp;<br>با این کار خط طرف مقابل زنگ می‏خورد و شما بوق آزاد می‏شنوید که به منزله برقرای تماس مستقیم با فرد مورد نظر است؛ به این ترتیب از دایورتی که صورت گرفته عبور کرده اید.&nbsp;<br>این ترفند بر روی کلیه خطوط تلفن همراه اعم از همراه اول، ایرانسل و تالیا تست شده و قابل انجام است.&nbsp;<br>در پایان دقت کنید پس از برقراری تماس، خط خود را از حالت دایورت خارج کنید.&nbsp;</font></span>
+
+
+
+
+
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(80)">نظرات  <script>setCommentCnt(80)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/78">آیا می دانید...............؟</a></div></div>
+<div class=t-date>تاریخ : چهارشنبه 17 آبان 1391  | 17:37  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+
+
+
+<div><span class="Apple-style-span" style="font-family: Tahoma; font-size: 12px; "><span style="font-size: small; background-color: rgb(0, 0, 0);"><font class="Apple-style-span" color="#999900"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/images/506jkbd9ko91x9dai33.png" alt=""></font></span></span></div><span class="Apple-style-span" style="font-family: Tahoma; font-size: 12px; background-color: rgb(0, 0, 0);"><font class="Apple-style-span" color="#999900"><span style="font-size: small; ">آیا می‌دانید&nbsp;یک انسان ۸ ثانیه بعد از قطع گردن هنوز به هوش است.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;سالی ۵۰۰ شهاب سنگ به زمین برخورد می‌کنند.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;خورشید روزی ۱۲۶٫۰۰۰ میلیارد اسب بخار انرژی به زمین می‌فرستد.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;کوچک‌ترین زمین فوتبال ساخته شده یک بیست هزارم یک تار مو است (نانو).</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;با دویدن می‌توان مسافر زمان بود و کسری از ثانیه از دیگران بیشتر عمر کرد.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;۵۶ درصد افرادی که دست چپ هستند، تایپیستند.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;برای تولید ۱ لیتر بنزین ۲۳٫۵تن گیاه در گذشته مدفون شده است.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;هر ۱ دقیقه نسل یک موجود زنده منقرض می‌شود.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;داوینچی با یک دست می‌نوشت و با دست دیگر نقاشی می‌کشید.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;گوش و بینی در تمام طول عمر رشد می‌کنند.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;آب دریا بهترین ماسک صورت است.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;در ساخت برج ایفل ۲٫۵ میلیون پیچ و مهره به کار رفته است.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;بینی انسان قادر به تشخیص ۱۰٫۰۰۰ نوع بوی مختلف است.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;انرژی که خورشید در ۱ ثانیه تولید می‌کند برای مصرف ۱ میلیون سال زمین کافی است.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;غیرممکن است که بتوانید با چشم باز عطسه کنید.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;ما در طول زندگیمان ۱۸ کیلو پوست می‌اندازیم.</span><br><span style="font-size: small; "><a href="http://www.roozeshadi.com/" style="text-decoration: none; ">آیا می‌دانید</a>&nbsp;رنگ مورد علاقه ۸۰ درصد آمریکایی‌ها آبی است!</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;وقتی شخصی در سریلانکا سرش را از طرفی به طرفی دیگر تکان می‌دهد یعنی باشه.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;در این دنیا تعداد جوجه‌ها از آدم‌ها بیشتر است.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;نوارهای لاستیکی خیلی طول می‌کشد تا سرد شوند.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;مغز در هنگام خواب فعال‌تر از وقتی است که تلویزیون می‌بینید.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;اگر مادران در زمان بارداری سیب به خصوص سبز استفاده کنند نوزادانشان زیبا می‌شوند.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;مادران باردار از انگور و جوانه گندم و امگا ۳ استفاده کنند بچه‌های آن‌ها تیزهوش می‌شوند.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;<a href="http://www.roozeshadi.com/" style="text-decoration: none; ">خورشید</a>&nbsp;فقط ۱ بر ۴۰٫۰۰۰جرم خود را از دست داده است.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;ایران ۱۰۱۸ شهر دارد.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;پر آب‌ترین رود ایران کارون در خوزستان است.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;بام ایران استان چهارمحال و بختیاری است.</span><br><span style="font-size: small; ">آیا می‌دانید&nbsp;هر فردی در طول ۲۴ ساعت ۲۳ هزار بار نفس می‌کشد.</span></font></span>
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(78)">نظرات  <script>setCommentCnt(78)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/76">اس ام اس  </a></div></div>
+<div class=t-date>تاریخ : یکشنبه 14 آبان 1391  | 19:39  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><span class="Apple-style-span" style="font-family: Tahoma; font-size: 12px; line-height: 15px; background-color: rgb(0, 0, 0); "><h2 align="right" style="font-weight: bold; font-size: 12px; padding-bottom: 10px; "><font class="Apple-style-span" color="#990000"><br>&nbsp;<font>&nbsp;</font></font><font><strong><font class="Apple-style-span" color="#990000">بعضی لحظه هاست<br>که واقعا دلم واست تنگ میشه<br>من اسم اون لحظه های قشنگو گذاشتم<br>“همیشه”<br>--------------------------------------------------------</font></strong><p style="font-family: Tahoma; margin-top: 0px; margin-bottom: 0px; "></p><p style="font-family: Tahoma; margin-top: 0px; margin-bottom: 0px; "><strong><font class="Apple-style-span" color="#990000">این که چقدر از آن روز ها گذشته،<br>یا اینکه چقدر هر دویمان عوض شده ایم،<br>یا اینکه هر کداممان کجای دنیا افتاده ایم…<br>اصلا مهم نیست<br>باز باران که ببارد<br>هروقت که میخواهد باشد<br>دلم هوایت را میکند…<br>--------------------------------------------------------</font></strong></p><p style="font-family: Tahoma; margin-top: 0px; margin-bottom: 0px; "><strong><font class="Apple-style-span" color="#990000">یکنفر در همین نزدیکی ها<br>چیزی به وسعت یک زندگی برایت جا گذاشته است…<br>خیالت راحت باشد<br>آرام چشمهایت را ببند<br>یک نفر برای همه نگرانی هایت بیدار است<br>یکنفر که از همه زیبایی های دنیا<br>تنها تو را باور دارد<br>--------------------------------------------------------</font></strong></p><p style="font-family: Tahoma; margin-top: 0px; margin-bottom: 0px; "><strong><font class="Apple-style-span" color="#990000">نیمه گـُمشده ام نیستی که بـا نیمه ی دیگــر به جُستجویت برخیزم<br>تو… تمام گُمشده منی . . .</font></strong></p><div><strong><br></strong></div></font></h2></span>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(76)">نظرات  <script>setCommentCnt(76)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/75">امروز</a></div></div>
+<div class=t-date>تاریخ : یکشنبه 14 آبان 1391  | 18:08  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+<span class="Apple-style-span" style="font-family: Tahoma; font-size: 12px; line-height: 15px; background-color: rgb(0, 0, 0); "><h2 align="right" style="font-weight: bold; font-size: 12px; padding-bottom: 10px; "><font><font class="Apple-style-span" color="#cc9933"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upcity.ir/images/13251002120857158988.jpg" alt=""><br>&nbsp;<font>&nbsp;</font></font><font><strong><font class="Apple-style-span" color="#cc9933">تو رو بخدا برا من مواظب خودت باش<br><br>گریه نکن آروم بگیر بفکر زندگیت باش<br><br>غصم میشه اگه بفهمم داری غصه میخوری<br><br>شکایت از کسی نکن با اینکه خیلی دلخوری<br><br>دلت نگیره مهربون عاشقتم اینو بدون<br><br>دلم گرفته میدونی از هم جدا کردنمون<br><br>دل نگرتونتم همش اگه خطا کردم ببخش<br><br>بازم منو بخاطره تموم خوبیات ببخش</font></strong><p style="font-family: Tahoma; color: rgb(255, 255, 255); margin-top: 0px; margin-bottom: 0px; "></p></font></font></h2><div style="color: rgb(236, 233, 216); "><span><font color="#FFFFCC"><span><font color="#FFFFCC"><strong><br></strong></font></span></font></span></div></span><font color="#FFFFCC"></font>
+
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(75)">نظرات  <script>setCommentCnt(75)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/73">اس ام اس عید غدیر</a></div></div>
+<div class=t-date>تاریخ : جمعه 12 آبان 1391  | 18:46  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+
+<span class="Apple-style-span" style="font-family: Tahoma; font-size: 13px; line-height: 22px; "><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 13px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; text-align: center; background-position: initial initial; background-repeat: initial initial; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upcity.ir/images/64516605447083417941.jpg" alt=""></p></span><span class="Apple-style-span" style="font-family: Tahoma; font-size: 12px; line-height: 19px; "><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 12px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><font face="Tahoma" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 12px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><span style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 8.5pt; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><br>خورشید چراغکی ز رخسار علیست / مه نقطه کوچکی ز پرگار علیست<br><br>هرکس که فرستد به محمد صلوات / همسایه دیوار به دیوار علیست<br><br>عید غدیر مبارک<br>------------------------------------------<br><br>روز عید غدیرخم از شریف ترین اعیاد امت من است.<br><font class="Apple-style-span" color="#3a508b"><br></font><span lang="fa" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; ">اس ام اس عید غدیر خم</span><br><br>------------------------------------------<br><br>نازد به خودش خدا که حیدر دارد / دریای فضائلی مطهر دارد<br><br>همتای علی نخواهد آمد والله / صد بار اگر کعبه ترک بردارد<br><br>عید غدیر خم مبارک باد<br><span lang="fa" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; ">اس ام اس عید غدیر خم</span><br><br>------------------------------------------<br><br><font class="Apple-style-span" color="#3a508b">خدایا</font> به حق شاه مردان / مرا محتاج نامردان مگردان<br><br>فرا رسیدن عید غدیرخم بر عاشقان آن حضرت مبارک<br><br>دلا امشب به می باید وضو کرد / و هر ناممکنی را آرزو کرد<br><br>عید بر شما مبارک<br><span lang="fa" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; ">اس ام اس عید غدیر خم</span><br><br>------------------------------------------<br><br><a href="http://mihandownload.com/" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: initial; outline-style: none; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; text-decoration: none; color: rgb(58, 80, 139); background-position: initial initial; background-repeat: initial initial; "><span style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; text-decoration: none; background-position: initial initial; background-repeat: initial initial; ">علی</span></a>&nbsp;در عرش بالا بی نظیر است<br><br>علی بر عالم و آدم امیر است<br><br>به عشق نام مولایم نوشتم<br><br>چه عیدی بهتر از عید غدیر است؟<br><span lang="fa" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; ">اس ام اس عید غدیر خم</span><br><br>------------------------------------------<br><br>آنان كه علی خدای خود پندارند / كفرش به كنار عجب خدایی دارند<br><br>------------------------------------------<br><br>چون نامه ی اعمال مرا پیچیدند<br><br>بردند به میزان عمل سنجیدند<br><br>بیش از همه کس گناه ما بود ولی<br><br>آن را به محبت&nbsp;<a href="http://mihandownload.com/" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: initial; outline-style: none; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; text-decoration: none; color: rgb(58, 80, 139); background-position: initial initial; background-repeat: initial initial; "><span style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; text-decoration: none; background-position: initial initial; background-repeat: initial initial; ">علی</span></a>&nbsp;بخشیدند<br><br>عیدتان مبارک<br><span lang="fa" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; ">اس ام اس عید غدیر خم</span><br><br>------------------------------------------<br><br>تمام لذت عمرم در این است / كه مولایم امیرالمومنین است<br><br>عیدشما مبارک<br><span lang="fa" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; ">اس ام اس عید غدیر خم</span><br><br>------------------------------------------<br><br>نه فقط بنده به ذات ازلی می نازد<br><br>ناشر حكم ول<a href="http://www.far30mobile.com/" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: initial; outline-style: none; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; text-decoration: none; color: rgb(58, 80, 139); background-position: initial initial; background-repeat: initial initial; "><span style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; text-decoration: none; background-position: initial initial; background-repeat: initial initial; ">ا</span></a>یت به ولی می نازد<br><br>گر بنازد به علی شیعه ندارد عجبی<br><br>عجب اینجاست خدا هم به علی می نازد<br><span lang="fa" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; ">اس ام اس عید غدیر خم</span><br><br>------------------------------------------<br><br>هان! ای مردمان!&nbsp;<a href="http://mihandownload.com/" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: initial; outline-style: none; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; text-decoration: none; color: rgb(58, 80, 139); background-position: initial initial; background-repeat: initial initial; "><span style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; text-decoration: none; background-position: initial initial; background-repeat: initial initial; ">علی</span></a>&nbsp;را برتر بدانید، که او برترین انسان از زن و مرد بعد از من است... هرکه با او بستیزد و بر ولایتش گردن ننهد نفرین و خشم من بر او باد. (خطبه ی غدیریه)</span></font></p><div align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 12px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; ">&nbsp;</div><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 12px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><font face="Tahoma" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 12px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><span style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 8.5pt; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><span lang="fa" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; ">اس ام اس عید غدیر خم</span><br><br><br>------------------------------------------<br><br>قرآن به جز از وصف علی آیه ندارد<br><br>ایمان به جز از حب علی پایه ندارد<br><br>گفتم بروم سایه لطفش بنشینم<br><br>گفتا كه علی نور بود سایه ندارد<br><br>عید غدیر مبارک<br><span lang="fa" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; ">اس ام اس عید غدیر خم</span><br><br>------------------------------------------<br><br>شبی در محفلی ذکر علی بود<br><br>شنیدم عارفی فرزانه فرمود<br><br>اگر آتش به زیر پوست داری<br><br>نسوزی گر علی را دوست داری<br><br>خورشید&nbsp;<a href="http://www.far30mobile.com/" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: initial; outline-style: none; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; text-decoration: none; color: rgb(58, 80, 139); background-position: initial initial; background-repeat: initial initial; "><span style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; text-decoration: none; background-position: initial initial; background-repeat: initial initial; "><font color="#000000" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; ">ش</font></span></a>کفته در غدیر است علی<br><br>باران بهار در کویر است علی<br><br>بر مسند عاشقی شهی بی همتاست<br><br>بر ملک محمدی امیر است علی</span></font></p><div align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 12px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; ">&nbsp;</div><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 12px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><font face="Tahoma" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 12px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><span style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 8.5pt; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><span lang="fa" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; ">اس ام اس عید غدیر خم</span><br><br>------------------------------------------<br><br>مدح علی و آل علی بر زبان ماست / گویا زبان برای همین در دهان ماست<br><br>------------------------------------------<br><br>روز مـحـشــر پـرسـیـد ز مـن رب جـلــــــــی<br><br>گفت تو غـرق گنـاهی؟ گفتمش یـا رب بلی<br><br>گفت پس آتش نمیـگیرد چـرا جـسم و تنـت<br><br>گفتمش چون حـك نمودم روی قلبم یا علی</span></font></p><div align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 12px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; ">&nbsp;</div><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 12px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><font face="Tahoma" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 12px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><span style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 8.5pt; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><span lang="fa" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; ">اس ام اس عید غدیر خم</span><br><br><br>------------------------------------------<br><br>شبی در محفلی ذكر علی بود ، شنیدم عاشقی مستانه فرمود ، اگر آتش به زیر پوست داری ، نسوزی گر علی را دوست داری . عید غدیر خم بر شما مبارك</span></font></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 12px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><font face="Tahoma" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 12px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><span style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 8.5pt; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><span lang="fa" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; ">اس ام اس عید غدیر خم</span><br><br><br>------------------------------------------<br><br><a href="http://mihandownload.com/" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: initial; outline-style: none; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; text-decoration: none; color: rgb(58, 80, 139); background-position: initial initial; background-repeat: initial initial; "><span style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; text-decoration: none; background-position: initial initial; background-repeat: initial initial; ">نام علی</span></a>&nbsp;: عدالت -- راه علی : سعادت -- عشق علی : شهادت -- ذكر علی : عبادت -- عید علی : مبارك</span></font></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 12px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><font face="Tahoma" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 12px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><span style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 8.5pt; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><span lang="fa" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; ">اس ام اس عید غدیر خم</span><br><br><br>------------------------------------------<br><br>ما زین جهان از پی دیدار میرویم ، از بهر دیدن حیدر كرار میرویم ، درب بهشت گر نگشایند به روی ما ، گوییم یا علی و ز دیوار میرویم<br><br>------------------------------------------<br><br>عجب<a href="http://mihandownload.com/" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: initial; outline-style: none; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; text-decoration: none; color: rgb(58, 80, 139); background-position: initial initial; background-repeat: initial initial; "><span style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; text-decoration: none; background-position: initial initial; background-repeat: initial initial; ">&nbsp;تمثیلی</span></a>&nbsp;است این كه علی مولود كعبه است . . . یعنی اینكه باطن قبله را در امام پیدا كن . عید غدیر خم مبارك<br><span lang="fa" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; ">اس ام اس عید غدیر خم</span><br><br>------------------------------------------<br><br>ای خدای&nbsp;<a href="http://mihandownload.com/" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: initial; outline-style: none; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; text-decoration: none; color: rgb(58, 80, 139); background-position: initial initial; background-repeat: initial initial; "><span style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; text-decoration: none; background-position: initial initial; background-repeat: initial initial; ">مرتضی&nbsp;</span></a>، گردی از گامهای فتوت مرتضی را بر سر جهانیان بپاش تا ریشه نامردی در جهان بخشكد . عید غدیر خم ، عید ولایت و امامت مبارك</span></font></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 12px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><font face="Tahoma" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 12px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><span style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 8.5pt; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; "><span lang="fa" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; ">اس ام اس عید غدیر خم</span><br><br>------------------------------------------<br><br>اگر خلق عالم علی را می شناختند ، دوستش میداشتند و اگر خلق عالم علی را دوست میداشتند ، جهنم آفریده نمیشد .<br><br>------------------------------------------<br><br>به روز غدیر خم از مقام لم یزلی ، به كائنات ندا شد به صوت جلی . كه بعد احمد مرسل به كهتر و مهتر ، امام و سرور و مولا علیست علی ، عید غدیر خم بر شما مبارك<br><br>------------------------------------------<br><br><a href="http://mihandownload.com/" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: initial; outline-style: none; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; text-decoration: none; color: rgb(58, 80, 139); background-position: initial initial; background-repeat: initial initial; "><span style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 11px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; text-decoration: none; background-position: initial initial; background-repeat: initial initial; ">رسولی</span></a>&nbsp;كز غدیر خم ننوشد ، ردای سبز بعثت را نپوشد . عید غدیر خم مبارك</span></font></p></span>
+
+
+
+
+
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(73)">نظرات  <script>setCommentCnt(73)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/71">اس ام اس های زیبا و خواندنی شکایت و نفرت</a></div></div>
+<div class=t-date>تاریخ : چهارشنبه 10 آبان 1391  | 09:00  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><span class="Apple-style-span" style="color: rgb(48, 48, 48); font-family: Tahoma, Geneva, sans-serif; font-size: 13px; line-height: 30px; ">&nbsp;</span><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/images/40d85x5k08jcthuu08f.jpg" alt=""><div><span class="Apple-style-span" style="color: rgb(48, 48, 48); font-family: Tahoma, Geneva, sans-serif; font-size: 13px; line-height: 30px; ">تو این دو روز زندگی ، شبیه من فراوونه<br>یه لحظه چشماتو ببند ، گذشتن از من آسونه<br><span style="color: rgb(255, 160, 122); ">♥♥♥♥♥♥♥♥♥پیامک خیانت و نامردی♥♥♥♥♥♥♥♥♥&nbsp;</span><br>این تو نیستی که مرا از یاد برده ای<br>این منم که به یادم اجازه نمیدهم حتی از نزدیکی ذهن تو عبور کند<br>صحبت از فراموشی نیست ، صحبت از لیاقت است !!!<br><a target="_blank" title="اس ام اس خیانت" href="http://www.beytoote.com/fun/sms/sms-have-betrayed.html" style="text-decoration: none; color: rgb(209, 60, 159); "><span style="color: rgb(255, 160, 122); ">♥♥♥♥♥♥♥♥♥پیامک خیانت و نامردی♥♥♥♥♥♥♥♥♥&nbsp;</span></a><br>همیشه درد از دیگران است<br>گاهی از نبودنشان<br>گاه از بودنشان<br><span style="color: rgb(255, 160, 122); ">♥♥♥♥♥♥♥♥♥پیامک خیانت و نامردی♥♥♥♥♥♥♥♥♥&nbsp;</span><br>در خیالم پشت سرت آب ریختم نه برای اینکه برگردی ، تا پاک شود هرچه رد پای توست از زندگی<br><span style="color: rgb(255, 160, 122); ">♥♥♥♥♥♥♥♥♥پیامک خیانت و نامردی♥♥♥♥♥♥♥♥♥&nbsp;</span><br>جالب است که انسانها دو چشم دارند ولی با یک چشم به دیگران می نگرند<br>و جالب تر اینکه انسانها یک چهره دارند اما دورویی می کنند<br><span style="color: rgb(255, 160, 122); ">♥♥♥♥♥♥♥♥♥پیامک خیانت و نامردی♥♥♥♥♥♥♥♥♥&nbsp;</span><br>نمیتونم ببخشمت ، دور شو برو نبینمت<br>تیکه ای بودی از دلم ، گندیدی و بریدمت<br><span style="color: rgb(255, 160, 122); ">♥♥♥♥♥♥♥♥♥پیامک خیانت و نامردی♥♥♥♥♥♥♥♥♥&nbsp;</span><br>این که هر بار سرت با یکی گرم باشد دلیل بر ارزشت نیست<br>آنقدر بی ارزشی که خیلی ها اندازه تو هستند<br><span style="color: rgb(255, 160, 122); ">♥♥♥♥♥♥♥♥♥پیامک خیانت و نامردی♥♥♥♥♥♥♥♥♥&nbsp;</span><br>در آغوش خودم هستم<br>من خودم را در آغوش گرفته ام ! نه چندان با لطافت و نه چندان با محبت<br>اما وفادارِ وفادار<br><span style="color: rgb(255, 160, 122); ">♥♥♥♥♥♥♥♥♥پیامک خیانت و نامردی♥♥♥♥♥♥♥♥♥&nbsp;</span><br>چه قدر تلخ شده ای !!!<br>آنقدر که حتی وقتی صدایت را می شنوم احساس می کنم دیگر دلم برایت نمی لرزد<br><span style="color: rgb(255, 160, 122); ">♥♥♥♥♥♥♥♥♥پیامک خیانت و نامردی♥♥♥♥♥♥♥♥♥&nbsp;</span><br>درست متر کن ! آدم ها هم قد خودشان اند ، نه هم قد تصورات تو<br><span style="color: rgb(255, 160, 122); ">♥♥♥♥♥♥♥♥♥پیامک خیانت و نامردی♥♥♥♥♥♥♥♥♥&nbsp;</span><br>من ، تو : ما<br>یادت هست ؟<br>ولی تمام شد<br>حالا چی ؟ تو ، او : شما<br>من هم به سلامت<br><span style="color: rgb(255, 160, 122); ">♥♥♥♥♥♥♥♥♥پیامک خیانت و نامردی♥♥♥♥♥♥♥♥♥&nbsp;</span><br>فکر می کردم تو همدردی ، اما نه ! تو هم دردی<br><span style="color: rgb(255, 160, 122); ">♥♥♥♥♥♥♥♥♥پیامک خیانت و نامردی♥♥♥♥♥♥♥♥♥&nbsp;</span><br>خدایا<br>در انجماد نگاه های سرد این مردم ، دلم برای جهنمت تنگ شده است !<br><span style="color: rgb(255, 160, 122); ">♥♥♥♥♥♥♥♥♥پیامک خیانت و نامردی♥♥♥♥♥♥♥♥♥&nbsp;</span><br>هرگز نگو که دوست داری ، اگر حقیقتاً بدان اهمیت نمی دهی<br>درباره احساست سخن نگو ، اگر واقعا وجود ندارد<br>هرگز دستی را نگیر وقتی قصد شکستن قلبش را داری<br>هرگز نگو برای همیشه وقتی می دانی که جدا می شوی<br>هرگز به چشمانی نگاه نکن وقتی قصد دروغ گفتن داری<br>هرگز سلامی نده وقتی می دانی که خداحافظی در پیش است<br>قلبی را قفل نکن وقتی کلیدش را نداری<br>به کسی نگو که تنها اوست وقتی در فکرت به او خیانت میکنی</span>
+
+
+</div><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(71)">نظرات  <script>setCommentCnt(71)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/70">خدایا پس چرا من زن ندارم؟(خنده دار)</a></div></div>
+<div class=t-date>تاریخ : سه شنبه 9 آبان 1391  | 09:00  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+<img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/images/rec2di8oj1gnma01wvw.jpg" alt="">
+
+
+<div><br></div><div><span class="Apple-style-span" style="color: rgb(48, 48, 48); font-family: Tahoma, Geneva, sans-serif; font-size: 13px; line-height: 30px; "><span style="font-size: 10pt; color: rgb(240, 128, 128); ">&nbsp;خدایا پس چرا من زن ندارم؟</span><br><br><span style="font-size: 10pt; color: rgb(240, 128, 128); ">&nbsp;&nbsp;&nbsp; زنی زیبا و سیمین تن ندارم؟</span><br><br><span style="font-size: 10pt; ">&nbsp;&nbsp;&nbsp; دوتا زن دارد این همسایه ما</span><br><br><span style="font-size: 10pt; ">&nbsp;&nbsp;&nbsp; همان یک دانه را هم من ندارم</span><br><br><span style="font-size: 10pt; color: rgb(240, 128, 128); ">&nbsp;&nbsp;&nbsp; آژانس ملکی امشب گفت به من:</span><br><br><span style="font-size: 10pt; color: rgb(240, 128, 128); ">&nbsp;&nbsp;&nbsp; مجرد, بهر تو مسکن ندارم</span><br><br><span style="font-size: 10pt; ">&nbsp;&nbsp;&nbsp; چه خاکی بر سرم باید بریزم؟</span><br><br><span style="font-size: 10pt; ">&nbsp;&nbsp;&nbsp; من بیچاره آخر زن ندارم</span><br><br><span style="font-size: 10pt; ">&nbsp;&nbsp;&nbsp;<span style="color: rgb(240, 128, 128); ">&nbsp;خداوندا تو ستارالعیوبی</span></span><br><br><span style="font-size: 10pt; color: rgb(240, 128, 128); ">&nbsp;&nbsp;&nbsp; وبر این نکته سوءظن ندارم</span><br><br><span style="font-size: 10pt; ">&nbsp;&nbsp;&nbsp; شدم خسته دگر از حرف مردم</span><br><br><span style="font-size: 10pt; ">&nbsp;&nbsp;&nbsp; تو میدانی دل از آهن ندارم</span><br><br><span style="font-size: 10pt; color: rgb(240, 128, 128); ">&nbsp;&nbsp;&nbsp; تجرد ظاهرا”عیب بزرگی است</span><br><br><span style="font-size: 10pt; color: rgb(240, 128, 128); ">&nbsp;&nbsp;&nbsp; من عیب دیگری اصلا”ندارم</span><br><br><span style="font-size: 10pt; ">&nbsp;&nbsp;&nbsp; خودم میدانم این”اصلا” غلط بود</span><br><br><span style="font-size: 10pt; ">&nbsp;&nbsp;&nbsp; در اینجا قافیه لیکن ندارم</span><br><br><span style="font-size: 10pt; ">&nbsp;<span style="color: rgb(240, 128, 128); ">&nbsp;&nbsp; تو عیبم را بپوش و هدیه ای ده</span></span><br><br><span style="font-size: 10pt; color: rgb(240, 128, 128); ">&nbsp;&nbsp;&nbsp; خبر داری نیکول کیدمن ندارم؟</span><br><br><span style="font-size: 10pt; ">&nbsp;&nbsp;&nbsp; اگر او را فرستی دیگر از تو</span><br><br><span style="font-size: 10pt; ">&nbsp;&nbsp;&nbsp; گلایه قد یک ارزن ندارم</span></span></div>
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(70)">نظرات  <script>setCommentCnt(70)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+
+
+
+</div>
+<style>.pging {    direction:rtl;    font-size:1.2em;    height:30px;    margin:40px 0 0;    color:#c2a900;    padding-bottom: 20px;    text-align: center;}
+.pging a:link, .pging a:visited {border:1px solid #c2a900;    display:inline-block;    margin:0 3px;    padding:1px 5px;    text-decoration:none;}
+.pging a:hover, .pging a:active {    color:#c2a900;}.pging a.current:link, .pging a.current:visited {    background-color:#c2a900;    border:1px solid #c2a900;    color:red;    cursor:text;}</style> <div class=pging>
+<p align="center"><font face="Tahoma" style="font-size: 9pt">
+			تعداد کل صفحات : 11 ::     			<a href="3.html">
+			<font color="#c2a900"><i>...</i></font></a>  			<a href="4.html">
+			<font color="#c2a900"><span>4</span></font></a>  			<a href="5.html">
+			<font color="#c2a900"><span>5</span></font></a>  			<a href="6.html">
+			<font color="#c2a900"><span>6</span></font></a>  			<a href="7.html">
+			<font color="#c2a900"><b>7</b></font></a>  			<a href="8.html">
+			<font color="#c2a900"><span>8</span></font></a>  			<a href="http://baraneaseg.mihanblog.com/page/9">
+			<font color="#c2a900"><span>9</span></font></a>  			<a href="http://baraneaseg.mihanblog.com/page/10">
+			<font color="#c2a900"><span>10</span></font></a>  			<a href="http://baraneaseg.mihanblog.com/page/11">
+			<font color="#c2a900"><i>...</i></font></a>  <br><br></div>
+</font></p></div></div>
+
+
+<div class=Sid>
+<div id=Sidebar>
+
+<div class=TopSid><div class=TopSid2>			
+<b>درباره وبلاگ</b></div></div>
+<div class=CenterSid><div class=li-Sid2>  <p align="center">
+<img src="../../static.mihanblog.com/public/user_data/web_photo/345/1033403.jpg@3518"  /><br></p></div></div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آرشیو مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../post/archive/1393/1/1.html"> هفته اول فروردین 1393 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/11/1.html"> هفته اول بهمن 1392 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/10/4.html"> هفته چهارم دی 1392 ، 2 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/10/3.html"> هفته سوم دی 1392 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/10/2.html"> هفته دوم دی 1392 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/10/1.html"> هفته اول دی 1392 ، 2 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/9/3.html"> هفته سوم آذر 1392 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/9/1.html"> هفته اول آذر 1392 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/8/2.html"> هفته دوم آبان 1392 ، 2 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/8/1.html"> هفته اول آبان 1392 ، 1 </a></div></div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آخرین مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../post/205.html">سلام</a></div><div class=li-Sid>
+<a href="../post/202.html">خانه خدا</a></div><div class=li-Sid>
+<a href="../post/204.html">مادر مهربان</a></div><div class=li-Sid>
+<a href="../post/203.html">امضاء شناسی</a></div><div class=li-Sid>
+<a href="../post/1.html">خاطرات یک دفتر</a></div><div class=li-Sid>
+<a href="../post/199.html">نا خواسته مسافر شدم...</a></div><div class=li-Sid>
+<a href="../post/198.html">خسته ام از زندگی</a></div><div class=li-Sid>
+<a href="../post/197.html">باران</a></div><div class=li-Sid>
+<a href="../post/194.html">یلدا</a></div><div class=li-Sid>
+<a href="../post/191.html">تصاویری طنز از اثرات استفاده اینترنت (طنز جالب) </a></div><div class=li-Sid>
+<a href="../post/186.html">دلنوشته های دلنشین  </a></div><div class=li-Sid>
+<a href="../post/185.html">10 سال عشق یک جفت مارمولک به جفتش!! </a></div><div class=li-Sid>
+<a href="../post/183.html">محرم</a></div><div class=li-Sid>
+<a href="../post/182.html">تقدیم به اونایی دلتنگ هستن</a></div><div class=li-Sid>
+<a href="../post/181.html">یکی بود یکی نبود</a></div><center><a href="../post/list.html"><b>لیست آخرین مطالب</b></a></center></div>
+<div class=LowSid></div>
+
+
+
+<div class=TopSid><div class=TopSid2>
+<b>آمار سایت</b></div></div>
+<div class=CenterSid>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right></div>
+<div class=LowSid></div>	
+
+<div class="TopSid"><div class=TopSid2>امکانات وب</div></div>
+<div class=CenterSid>
+<div class=About>
+<div style="text-align:center">
+<!-- Music player by www.1abzar.com ---><center>
+<script language="javascript" src="http://1abzaar.ir/tools/player/?pl=1&file=http://javanup.ir/upload/r5152m1wqrse2lmizfck.mp3&start=1"></script><div style="display:none"><h2><a href="http://www.1abzar.com" rel="nofollow" >کد آهنگ</a></h2></div>
+
+
+<a href="http://ariotik.ir/ref:792"><img src="http://ariotik.ir/template/site/images/banner3.gif" alt="کسب درآمد"></a>
+
+
+<center><br><br><a href="http://blog2i.com" target="_blank"><img 
+border="0" src="http://blog2i.com/rank.php?url=http://baraneaseg.mihanblog.com/&s=4" title="وبلاگ"></a><br><br>
+
+<!-- mihantools.net --->
+<a href="http://mihantools.net/tools/contact/e.php?email=hastigarib@yahoo.com" target="_blank">تماس با مدیر وبلاگ</a><div style="display:none"><h1><a href="http://mihantools.net">فرم تماس</a></h1></div>
+<!-- mihantools.net --->
+
+
+
+<div align="center"><a href="http://etransteam.com/blog/" target="_blank" title="بلاگ گروه مترجمین ایران زمین - ترجمه متون تخصصی">بلاگ گروه مترجمین ایران زمین</a></div>
+<!-- End Susa Web Tools - Love Meter -->
+<!-- Begin Susa Web Tools - Fal Hafez -->
+<script src="http://susawebtools.ir/services/fal/hafez/index.php?skin=14"></script>
+<div style="margin-right:25%; margin-top:-3%"><a href="http://susawebtools.ir/?p=61">دریافت کد فال حافظ</a></div>
+<!-- End Susa Web Tools - Fal Hafez -->
+<!-- start logo cod off http://melodylonely.blogfa.com/ -->
+<p align="center"><p align="center"><a href="http://melodylonely.blogfa.com/" target="_blank"><img border="0" src="http://s1.picofile.com/file/7509444080/2.gif" width="160" height="200" alt="love :: life"></a></p>
+<!--finish logo cod off http://melodylonely.blogfa.com/ -->
+<p align="center"><a href="http://www.yazdmusic98.vcp.ir" target="_blank"><img border="0" 
+
+<!----www.bahar22.com----><center><script type="text/javascript" src="http://bahar22.com/ftp/other/17/004-2.js"></script></center><!----www.bahar22.com----><p align="center"><font face="Tahoma" style="font-size: 7pt"><a target="_blank" href="http://www.bahar22.com"><span style="text-decoration: none"><font color="#999999">كد تقویم</font></span></a></font></p>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+
+  {lang: 'fa'}
+
+</script>
+
+<p style="text-align: center;">
+
+<div style="width:225px; height:20px; position:fixed;left:5px; bottom:10px;z-index:1000;">
+
+<div style="width:225px;height:20px; background:#b3def2; position:fixed; -webkit-border-radius: 5px; z-index:1000;-moz-border-radius: 10px;border-radius: 5px;background-color: rgba(0, 174, 255, 0.3);color:#005780; border:solid 2px #00AEFF;position: absolute;left:15px;bottom:10px;direction:rtl;padding:10px 5px;">
+
+<span style="font-family:tahoma;font-size:11px;">این سایت را در گوگل محبوب کنید:</span>
+
+<div style="float:left">
+
+<g:plusone size="small" href="http://www.ketabline.com/"></g:plusone>
+<p><a href="http://ketabline.com"><font size="1">by:Ketabline</font></a></p>
+
+</div></div></div>
+<br><script language="javascript" src="http://pichak.net/blogcod/dictionary/dic/cod.php?width=1&border=FF0000&bgcolor=DFDFDF&tcolor=000BA4"></script><div  style='display:none;'
+
+<!-- Started code by varoone.ir ---- YahooID: davod_v2008  -->
+<script type="text/JavaScript" language="javascript">
+msg = "بارن عشق "; msg = "..." + msg;pos = 0;
+function scrollMSG() {
+document.title = msg.substring(pos, msg.length) + msg.substring(0, pos);
+pos++;
+if (pos > msg.length) pos = 0
+window.setTimeout("scrollMSG()",200);
+}
+scrollMSG();
+</script>
+<p>
+<a target="_blank" href="http://varoone.ir/post/17">کد متحرک کردن عنوان وب</a></p>
+<!-- Ended code by varoone.ir ---- YahooID: davod_v2008  -->
+
+
+<style>
+img:hover{
+opacity:0.8;filter:alpha(opacity=80);
+-webkit-transform: rotate(-2deg);
+-moz-transform: rotate(-2deg);
+
+}
+img:out{
+opacity:1;filter:alpha(opacity=100);
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+
+}
+</style>
+<P><A
+href="http://mahsaei-codes.blogfa.com" target=_blank><SPAN 
+
+style="FONT-WEIGHT: 700; TEXT-DECORATION: none"><FONT 
+color=#ff99cc>کــد کــَج شــُدَنِ تَصــآویر
+</FONT></SPAN></A></P>
+<br>
+</div>
+</div>
+</div>
+<div class=LowSid></div>
+
+
+</div></div></div><div class=footer><div class=Fo2>Design By</a>  <b></b>  <a title="قالب وبلاگ" href="http://nightnama.ir" target="_blank">Nightnama.ir</a> </div></div></div></div>
+
+
+</body>
+
+<script type="text/javascript">var ariotik_user_id = 792;</script>
+<script type="text/javascript" src="http://ariotik.ir/website/js"></script>
+<script type="text/javascript">var abarclick_user_id = 713;</script>
+<script type="text/javascript" src="http://abarclick.ir/website/js"></script>
+
+</html>
+
+
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'baraneaseg.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

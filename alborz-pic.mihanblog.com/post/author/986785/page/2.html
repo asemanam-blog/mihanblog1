@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('1399/09/27');
+		/*1145999*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[902]='1';commentCnt[1041]='2';commentCnt[1042]='1';commentCnt[1045]='0';commentCnt[1046]='2';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[902]='12';
+mihanblogDisLikeArrCnt[902]='0';
+mihanblogLikeArrCnt[1041]='9';
+mihanblogDisLikeArrCnt[1041]='0';
+mihanblogLikeArrCnt[1042]='3';
+mihanblogDisLikeArrCnt[1042]='0';
+mihanblogLikeArrCnt[1045]='2';
+mihanblogDisLikeArrCnt[1045]='0';
+mihanblogLikeArrCnt[1046]='2';
+mihanblogDisLikeArrCnt[1046]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://alborz-pic.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://alborz-pic.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','1028');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','1396/05/21');
+	
+	setStatVar('today_view','125');
+	setStatVar('yesterday_view','985');
+	
+	setStatVar('this_month_view','6101');
+	setStatVar('last_month_view','11165');
+
+	setStatVar('total_view','2326521');
+	setStatVar('last_view_date','1399/09/27 (17:15)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://alborz-pic.mihanblog.com/statupdate/?data[refereruri]=http://alborz-pic.mihanblog.com/post/author/986785&data[postid]=&data[requesturi]=/post/author/986785/page/2&data[sdate]=1608212855&data[hash]=e75cd3a4f8ac4cc4062bbbfc6c0a62da&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+<head>
+<title>سایت تفریحی و سرگرمی* همه چی از همه جا * - مطالب alborz-pic alborz</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="designer" content="Theme - Designer">
+<meta name="designerUrl" content="http://www.theme-designer.com/">
+<meta name="language" content="Farsi">
+<meta name="author" content="alborz-pic alborz">
+<meta name="description" content="سایت تفریحی و سرگرمی* همه چی از همه جا * - مطالب alborz-pic alborz - سایت تفریحی و سرگرمی* همه چی از همه جا *">
+<meta name="keywords" content="سایت تفریحی و سرگرمی* همه چی از همه جا * - مطالب alborz-pic alborz, سایت تفریحی و سرگرمی* همه چی از همه جا *">
+<link rel="alternate" type="application/rss+xml" title="سایت تفریحی و سرگرمی* همه چی از همه جا * - مطالب alborz-pic alborz" href="../../../rss/index.html" />
+<link href="http://themeupload.theme-designer.com/66/c.css" type="text/css" rel="stylesheet">
+<script type='text/javascript' src="http://themeupload.theme-designer.com/66/js/flexcroll.js"></script>
+</head>
+<!-- Template66-mihanblog -->
+<!-- Version: 1.0 -->
+<!-- Url template: http://www.theme-designer.com/template66.html -->
+<!-- Design By: wWw.Theme-Designer.Com -->
+
+<!---------- background ---------------------------->
+<!---------- address-image --------->
+<body style="
+	background-color:#423d3d;
+	background-image:url('http://themeupload.theme-designer.com/66/image/1.jpg');
+	background-repeat:no-repeat; background-position:center top;" dir="rtl">
+<!---------- address-image --------->
+<!---------- background ---------------------------->
+
+
+<!---------- he ---------------------------->
+<!---------- address-image --------->
+<div style="
+	background-image:url('http://themeupload.theme-designer.com/66/image/2.png');
+	background-repeat:no-repeat; background-position:center top;
+	height:179px; overflow:hiiden;
+	margin:36px 0px 0px 0px;">
+<!---------- address-image --------->
+
+<div class="theme-designer-com_koli_width">
+
+<div class="theme-designer-com_makan_blogtitle">
+<div class="theme-designer-com_blogtitle"><a href="../../../../index.html">سایت تفریحی و سرگرمی* همه چی از همه جا *</a></div>
+<div class="theme-designer-com_description">همه چی از همه جا </div>
+</div>
+
+<div class="theme-designer-com_makan_header_icon">
+<div class="theme-designer-com_header_icon1"><a title="تماس با ما" href="javascript:messageForm()"><img border="0" width="" height="" src="http://themeupload.theme-designer.com/66/image/4.gif"></a></div>
+<div class="theme-designer-com_header_icon1"><a title="خانه" href="../../../../index.html"><img border="0" width="" height="" src="http://themeupload.theme-designer.com/66/image/5.gif"></a></div>
+<div class="theme-designer-com_header_icon1"><a target="_blank" title="لینك rss" href="../../../rss/index.html"><img border="0" width="" height="" src="http://themeupload.theme-designer.com/66/image/6.gif"></a></div>
+</div>
+
+<div class="theme-designer-com_makan_header_menu">
+<div class="theme-designer-com_header_menu">
+<a href="../../../../index.html">صفحه ی نخست</a>|
+<a href="mailto:">پست الکترونیک</a>|
+<a href="javascript:messageForm()">تماس با ما</a>|
+<a href="../../../archive.html">آرشیو مطالب</a>|
+<a target="_blank" href="../../../rss/index.html">لینك rss</a>|
+<a target="_blank" href="http://alborz-pic.mihanblog.com/m/">نسخه موبایل</a>
+</div>
+</div>
+
+</div>
+
+</div>
+<!---------- he ---------------------------->
+
+<div align="center">
+<div class="theme-designer-com_body">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="21" valign="top">&nbsp;</td>
+<td width="612" valign="top">
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0" class="boxtop_table">
+<tr>
+<td width="286" valign="top">
+
+<div class="theme-designer-com_boxtop-zard_background1">
+<div class="boxtop-zard_title">آخرین مطالب</div>
+</div>
+<div class="theme-designer-com_boxtop-zard_background2">
+<div align="center"><div class="boxtop_w-h"><div class="boxtop_m">
+<div id='mycustomscroll' class='flexcroll' dir="ltr">
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../../../1051.html" title="1396/05/21" > مراحل رشد نوزاد </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../../../1050.html" title="1395/09/8" > از سیر تا پیاز آنفولانزا و راه های درمان آن </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../../../1049.html" title="1395/09/8" > ماجرای جالب چارلی چاپلین کوچک </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../../../1048.html" title="1395/09/8" > قلقلک هوش کودکان بدون سرگرمی با موبایل و تبلت </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../../../1047.html" title="1395/09/8" > موزه کالبدهای شکافته شده توسط «دکتر مرگ»  </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../../../1046.html" title="1395/09/4" > اینفوگرافیک؛ حقایقی پیرامون سلفی گرفتن </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../../../902.html" title="1395/09/2" > معجزات آیت الکرسی  </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../../../1041.html" title="1395/09/1" > وضعیت دهه شصتیا برای دریافت امکانات این شکلی بود  </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../../../1045.html" title="1395/08/29" > راهپیمایی زائران اربعین حسینی در مسیر عشق </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../../../1042.html" title="1395/08/29" >   	زیارت اربعین در طول تاریخ به روایت تصاویر </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../../../1044.html" title="1395/08/29" > اربعین است که می آید ... </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../../../1043.html" title="1395/08/28" > در هزاران عاشورای فردی به کدام طرف پیوسته ایم؟ </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../../../1040.html" title="1395/08/25" > معمای عجیب 2 برادر که با غروب آفتاب فلج می‌شوند! </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../../../1039.html" title="1395/08/25" > غار اصحاب کهف در کجا واقع شده است؟ + تصاویر </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../../../1038.html" title="1395/08/25" > عکس ساعت 60 میلیون تومانی مهران مدیری! </a></div>
+<div class="vmenu-c"></div>
+</div>
+</div></div></div>
+</div>
+<div class="theme-designer-com_boxtop-zard_background3"></div>
+
+</td>
+<td width="32" valign="top">&nbsp;</td>
+<td width="286" valign="top">
+
+<div class="theme-designer-com_boxtop-khakestari_background1">
+<div class="boxtop-khakestari_title">
+پیوندهای روزانه
+</div>
+</div>
+<div class="theme-designer-com_boxtop-khakestari_background2">
+<div align="center"><div class="boxtop_w-h"><div class="boxtop_m">
+<div id='mycustomscroll' class='flexcroll' dir="ltr">
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://toosanbar.rzb.ir/" title="طوسان بار البرز 
+ 
+حمل اثاثیه منزل و مبلمان 
+جابجایی جهیزیه و لوازم ادارات
+گاو صندوق 
+ساید بای ساید
+پیانو و ....
+ 
+بسته بندی با پتو توسط کارگران مجرب و ورزیده 
+با بیمه
+ 
+با مجوز رسمی 
+ 
+36208490
+36208495
+32733556
+0912-6381978 
+شفیعی" >طوسان بار</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://toosanbar.mihanblog.com/" title="طوسان بار البرز 
+ 
+حمل اثاثیه منزل و مبلمان 
+جابجایی جهیزیه و لوازم ادارات
+گاو صندوق 
+ساید بای ساید
+پیانو و ....
+ 
+بسته بندی با پتو توسط کارگران مجرب و ورزیده 
+با بیمه
+ 
+با مجوز رسمی 
+ 
+36208490
+36208495
+32733556
+0912-6381978 
+شفیعی" >باربری البرز</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://min00o.mihanblog.com" title="" > &quot; صدایی در سکوت &quot;</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://linsurance365.blogfa.com" title="" >بیمه عمر و سرمایه گذاری</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://myworld76.blogfa.com" title="" > My World</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.labkhande-1-fereshte.blogfa.com" title="" >خاطرات تلخ و شیرین من</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://mojtabaghiasi.mihanblog.com" title="" > مـــــجتبــــــــی غـــــــیاثی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://amouzadeh937.mihanblog.com" title="" >بـغـض شـبـانـــــــــــــه</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://ofoghbashagard.blogfa.com" title="سفربه محرومترین نقطه دنیا" >افق بشاگرد</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://negar3690.blogfa.com" title="" >ßrökêñ hêårt</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.madha.blogveb.com" title="" >جوان امروز</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://anti-ebliss.mihanblog.com" title="" >بانک مقالات ضد شیطان پرستی وضد فراماسونری</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://aram75.mihanblog.com" title="" >پشت دریاها شهری است. قایقی خواهم ساخت ...</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://days-of-my-life-iran.blogfa.com" title="" >❤ Moments of my ✎</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://cafekahkeshan.mihanblog.com" title="" >	 کافه کهکشان </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://alitaker.blogveb.com" title="" >مجله سرگرمی علمی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://harchitobekhai.blogfa.com" title="" >هر چی تو بخوای</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://2rost.blogsky.com" title="" >زیبابودن و همسر خوبی بودن</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://pooriya88.mihanblog.com" title="" >·•●♦ ورود ممنوع ♦●•·</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.namazfatemeh.blogfa.com" title="" >نماز؛ دریچه ای به سوی خوشبختی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://zinat-vaghar.mihanblog.com" title="" >زینت زن حفظ حجاب است.</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://nohdare94.mihanblog.com" title="سلام آرش جوم" >.اینجه همه چى قاطی پاطیه.</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://marand2012.mihanblog.com" title="" >marand2012</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.masihanami.blogfa.com" title="" >علی ضیا با طعم ویتامین 3</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://masoud447.blogfa.com" title="" >تمامی کدهای مخفی گوشی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://mary111.blogfa.com" title="" >رویای خیس</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://313sarbazgomnam.mihanblog.com" title="" >دینی مذهبی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://agricalture-aligoodarz.mihanblog.com" title="" >کشــاورزی الیگـــودرز</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.3tar.loxblog.com" title="" >ستــــــــــــــاره شـــــــــــــب</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://azan3.blogfa.com" title="" >روستای اذان اصفهان </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://davoodbagheri.mihanblog.com" title="" >دانش آموزان مریخی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://feri2m.loxblog.ir" title="" > تسلیحات نظامی ایران و جهان</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.diddigar.lxb.ir" title="" >---دید دیگر</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://riazinovin.loxblog.com" title="" >آموزش نوین</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://jokotanz111.persianblog.ir" title="" >ای دلم!!!وای دلم!!!</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://sadafjo0n.loxblog.com" title="" >حقیقت عشق</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://2fblog.r98.ir" title="" >مطالب جالب و فوق العاده از سراسر وب</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="../../../../linkdaily/index.html" >لیست کامل پیوندهای روزانه</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a  href="javascript:linkdailyForm()" >ارسال پیوند</a></div>
+<div class="vmenu-c"></div>
+</div>
+</div></div></div>
+</div>
+<div class="theme-designer-com_boxtop-khakestari_background3"></div>
+
+</td>
+</tr>
+</table>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="theme-designer-com_menuright-border2">
+<div class="theme-designer-com_menuright-border4">
+<div class="theme-designer-com_menuright-border1">
+<div class="theme-designer-com_menuright-border3">
+<div class="theme-designer-com_menuright-post">
+
+<div class="theme-designer-com-comments-box">
+<div class="comments-icon"></div>
+<div class="comments-text"><a target="_self" href="../../../1046.html#commentlist">نظرات <script>setCommentCnt(1046)</script> </a></div>
+</div>
+<div class="theme-designer-com_koli_clear"></div>
+
+<div class="theme-designer-com_post-backtitle">
+<div class="theme-designer-com_post-title" align="right"><a href="../../../1046.html">اینفوگرافیک؛ حقایقی پیرامون سلفی گرفتن</a></div>
+</div>
+
+<div align="center">
+<div class="theme-designer-com_post-badane" align="right">
+<div class="theme-designer-com-post-text"><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;">روز نوزده نوامبر سال ۲۰۱۳ بود که موسسه آکسفورد، کلمه selfie را کلمه سال ۲۰۱۳ اعلام کرد، علت این انتخاب افزایش ۱۷۰۰۰ درصدی استفاده از این کلمه نسبت به سال قبل اعلام شد. درست است که سلفی‌ها در سال ۲۰۱۳ و ۲۰۱۴ در اوج بودند، اما این پدیده کماکان نیز در فعالیت‌های شبکه‌های اجتماعی افراد خصوصاً نسل جوان‌تر نقش مهمی دارد. در ادامه ایمیل حقایقی جالب پیرامون سلفی گرفتن را بصورت اینفوگرافیک آورده‌ایم:<br style="line-height: 1.22em;">&nbsp;</font></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><b style="line-height: 1.22em;"><font face="Tahoma" color="#CC0000" size="3" style="line-height: 1.22em;"><a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci3.googleusercontent.com/proxy/YZ2SVBW6kIVt17XSlOux482l9m0GGKEer60UoKc18SrVX7bvwyTe2P8dbOGk393h55aXGNJtzuedjHFire-HB0aqCZPEU8YyGfHbfXM=s0-d-e1-ft#http://persian-star.net/1395/9/3/selfie-infographic.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.net" class="CToWUd" style="line-height: 1.22em;"></a></font></b></p>
+
+
+ </div>
+<br>
+<script>mihanblogPostLike('1046','like')</script><br>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">مرتبط با: <a href="../../../category/1.html">
+گالری عکس</a> , <a href="../../../category/43.html">
+مطالب جالب و خواندنی</a> , <a href="../../../category/45.html">
+سرگرمی , تفریحی</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">برچسب‌ها: <a href="../../../tag/سایت&#32;تفریحی&#32;و&#32;سرگرمی.html">
+سایت تفریحی و سرگرمی</a> , <a href="../../../tag/سلفی&#32;گرفتن.html">
+سلفی گرفتن</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+</div>
+</div>
+
+<div id="theme-designer-com-post-linksabet" style="margin:6px 0px 0px 0px;"><ul>
+<li><center><a href="../../../1046.html" ><span class="theme-designer-com_koli_hidden">لینک ثابت</span></a></center></li>
+</ul></div>
+
+<div class="theme-designer-com-post-footer"><div class="theme-designer-com-post-footer2">
+منتشر شده در تاریخ 1395/09/4 توسط alborz-pic alborz</div></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="theme-designer-com_menuright-border2">
+<div class="theme-designer-com_menuright-border4">
+<div class="theme-designer-com_menuright-border1">
+<div class="theme-designer-com_menuright-border3">
+<div class="theme-designer-com_menuright-post">
+
+<div class="theme-designer-com-comments-box">
+<div class="comments-icon"></div>
+<div class="comments-text"><a target="_self" href="../../../902.html#commentlist">نظرات <script>setCommentCnt(902)</script> </a></div>
+</div>
+<div class="theme-designer-com_koli_clear"></div>
+
+<div class="theme-designer-com_post-backtitle">
+<div class="theme-designer-com_post-title" align="right"><a href="../../../902.html">معجزات آیت الکرسی </a></div>
+</div>
+
+<div align="center">
+<div class="theme-designer-com_post-badane" align="right">
+<div class="theme-designer-com-post-text">
+
+
+
+
+<div style="text-align: right;">معجزات آیت الکرسی&nbsp;</div><div style="text-align: center;"><br></div><div style="text-align: center;"><p style="font-size: 13px; line-height: 26px; text-align: right;"><b><font color="#339999">روایت شده که از پیامبر (ص) پرسیدند:قرآن برتر است یا تورات؟ فرمودند:در قرآن آیه ای است که از تمام کتابهایی که خداوند بر پیامبرانش نازل فرموده بهتر و برتر و والاتر است و آن آیت الکرسی است.</font></b></p><p style="font-size: 13px; line-height: 26px; text-align: right;"><b><font color="#339999">&nbsp;رسول اکرم(ص) به علی(ع) فرمودند:قرآن کلامی برتر و بزرگ است و&nbsp;<span style="display: inline-block;">سوره بقره</span>&nbsp;، سید قرآن و آیت الکرسی سید بقره است.</font></b></p><p style="font-size: 13px; line-height: 26px; text-align: right;"><b><font color="#339999">&nbsp;سپس فرمود:در آیت الکرسی، پنجاه کلمه است و در هر کلمه پنجاه برکت و خیر وجود دارد .</font></b></p><p style="font-size: 13px; line-height: 26px; text-align: right;"><b><font color="#339999">&nbsp;امام صادق (ع) فرمود:همانا من از آیت الکرسی برای بالا رفتن درجات استفاده می کنم.</font></b></p><p style="font-size: 13px; line-height: 26px; text-align: right;"><b><font color="#339999">&nbsp;رسول خدا (ص) فرمود :یا علی ! آقا و سرور سخنان , قرآن است و آقا و سرور قرآن ,&nbsp;<em>سوره بقره</em>&nbsp;و آقا و سرور&nbsp;<span style="display: inline-block;">سوره بقره</span>&nbsp;, آیت الکرسی است . ای علی ! هر آینه درآیت الکرسی پنجاه کلمه است و در هر کلمه ای پنجاه خیر و برکت نهفته است .</font></b></p><p style="font-size: 13px; line-height: 26px; text-align: right;"><b><font color="#339999">&nbsp;<span style="display: inline-block;">حضرت فاطمه</span>&nbsp;(ع) می فرماید که پدرم فرمودند :خیر و برکت شما با خواندن آیت الکرسی افزایش می یابد .</font></b></p><p style="font-size: 13px; line-height: 26px; text-align: right;"><b><font color="#339999">&nbsp;پبامبر اسلام (ص) خطاب به علی (ع) می فرماید :یا علی، این آیه را به فرزندان، همسایگان و همگان بیاموز چرا که این آیه از تمام آیات نازل شده باعظمت‌تر است .</font></b></p><p style="font-size: 13px; line-height: 26px; text-align: right;"><b><font color="#339999">&nbsp;قرائت آن، با قرائت ربع قرآن برابر است .</font></b></p><ul style="text-align: start; font-family: Tahoma, Verdana, &quot;Times New Roman&quot;; line-height: 20.9px;"><li><font size="3"><font face="arial" color="#cc0000"><b><a href="../../../902.html" target="_blank" title="معجزات آیت الکرسی "><ul style="text-align: start; font-family: Tahoma, Verdana, &quot;Times New Roman&quot;; line-height: 20.9px;"><li><font size="3"><font face="arial" color="#cc0000"><b>بقیه خواص و فواید را در ادامه مطلب مشاهده کنید.</b></font></font></li></ul><p style="line-height: 26px; font-size: 13px;"></p></a></b></font></font></li></ul><p style="text-align: right; line-height: 26px; font-size: 13px;"><b><font color="#339999"><br></font></b></p><p style="font-size: 13px; line-height: 26px; text-align: right;"><b><font color="#339999"><br></font></b></p></div><div style="text-align: center;"><br></div><div style="text-align: center;"><a href="../../../902.html" target="_blank" title=""><img hspace="0" border="0" align="absmiddle" vspace="0" src="http://bayanbox.ir/view/5666356565956430738/1213.jpg" alt=" آیت الکرسی "></a></div>
+
+
+
+
+
+
+
+
+
+ </div>
+<a href='../../../902.html'>ادامه مطلب</a><br>
+<script>mihanblogPostLike('902','like')</script><br>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">مرتبط با: <a href="../../../category/36.html">
+عکس های مذهبی</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">برچسب‌ها: <a href="../../../tag/آیت&#32;الکرسی.html">
+آیت الکرسی</a> , <a href="../../../tag/ایت&#32;الکرسی.html">
+ایت الکرسی</a> , <a href="../../../tag/خواص&#32;آیت&#32;الکرسی.html">
+خواص آیت الکرسی</a> , <a href="../../../tag/خواندن&#32;آیت&#32;الکرسی.html">
+خواندن آیت الکرسی</a> , <a href="../../../tag/فواید&#32;آیت&#32;الکرسی.html">
+فواید آیت الکرسی</a> , <a href="../../../tag/فواید&#32;خواندن&#32;آیت&#32;الکرسی.html">
+فواید خواندن آیت الکرسی</a> , <a href="../../../tag/معجزات&#32;بزرگ&#32;آیت&#32;الكرسی.html">
+معجزات بزرگ آیت الكرسی</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+</div>
+</div>
+
+<div id="theme-designer-com-post-linksabet" style="margin:6px 0px 0px 0px;"><ul>
+<li><center><a href="../../../902.html" ><span class="theme-designer-com_koli_hidden">لینک ثابت</span></a></center></li>
+</ul></div>
+
+<div class="theme-designer-com-post-footer"><div class="theme-designer-com-post-footer2">
+منتشر شده در تاریخ 1395/09/2 توسط alborz-pic alborz</div></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="theme-designer-com_menuright-border2">
+<div class="theme-designer-com_menuright-border4">
+<div class="theme-designer-com_menuright-border1">
+<div class="theme-designer-com_menuright-border3">
+<div class="theme-designer-com_menuright-post">
+
+<div class="theme-designer-com-comments-box">
+<div class="comments-icon"></div>
+<div class="comments-text"><a target="_self" href="../../../1041.html#commentlist">نظرات <script>setCommentCnt(1041)</script> </a></div>
+</div>
+<div class="theme-designer-com_koli_clear"></div>
+
+<div class="theme-designer-com_post-backtitle">
+<div class="theme-designer-com_post-title" align="right"><a href="../../../1041.html">وضعیت دهه شصتیا برای دریافت امکانات این شکلی بود </a></div>
+</div>
+
+<div align="center">
+<div class="theme-designer-com_post-badane" align="right">
+<div class="theme-designer-com-post-text">
+
+
+<div><span style="font-family: Tahoma; font-size: 13.3333px; font-weight: bold; text-align: -webkit-center;"><br></span></div><span style="font-family: Tahoma; font-size: 13.3333px; font-weight: bold; text-align: -webkit-center;">وضعیت دهه شصتیا برای دریافت امکانات این شکلی بود&nbsp;</span>
+
+
+<div><span style="font-family: Tahoma; font-size: 13.3333px; font-weight: bold; text-align: -webkit-center;"><br></span></div><div style="text-align: center;"><a href="post/1041.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci4.googleusercontent.com/proxy/cWk2wztdFFWqZVyO54VPo3zDMonDwxkp8OFPOUkqQrdiM3A0d51DT3qADSapegFAnbdxe05NgqJ_2qW5G0N-dJaTNz-9Uhor5Ef-XZKkoMmyw2Iqx0A=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/24/1064386_733.gif" title="شوخی‌های جالب شبکه‌های اجتماعی (332)" alt="شوخی‌های جالب شبکه‌های اجتماعی (332)" class="m_-5768016455310540213img-responsive-news CToWUd" height="340" width="264"></a></div>
+
+
+
+
+
+ </div>
+<br>
+<script>mihanblogPostLike('1041','like')</script><br>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">مرتبط با: <a href="../../../category/45.html">
+سرگرمی , تفریحی</a> , <a href="../../../category/43.html">
+مطالب جالب و خواندنی</a> , <a href="../../../category/1.html">
+گالری عکس</a> , <a href="../../../category/46.html">
+تصاویر متحرک</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">برچسب‌ها: <a href="../../../tag/سایت&#32;تفریحی&#32;و&#32;سرگرمی.html">
+سایت تفریحی و سرگرمی</a> , <a href="../../../tag/وضعیت&#32;دهه&#32;شصتیا&#32;برای&#32;دریافت&#32;امکانات&#32;این&#32;شکلی&#32;بود.html">
+وضعیت دهه شصتیا برای دریافت امکانات این شکلی بود</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+</div>
+</div>
+
+<div id="theme-designer-com-post-linksabet" style="margin:6px 0px 0px 0px;"><ul>
+<li><center><a href="../../../1041.html" ><span class="theme-designer-com_koli_hidden">لینک ثابت</span></a></center></li>
+</ul></div>
+
+<div class="theme-designer-com-post-footer"><div class="theme-designer-com-post-footer2">
+منتشر شده در تاریخ 1395/09/1 توسط alborz-pic alborz</div></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="theme-designer-com_menuright-border2">
+<div class="theme-designer-com_menuright-border4">
+<div class="theme-designer-com_menuright-border1">
+<div class="theme-designer-com_menuright-border3">
+<div class="theme-designer-com_menuright-post">
+
+<div class="theme-designer-com-comments-box">
+<div class="comments-icon"></div>
+<div class="comments-text"><a target="_self" href="../../../1045.html#commentlist">نظرات <script>setCommentCnt(1045)</script> </a></div>
+</div>
+<div class="theme-designer-com_koli_clear"></div>
+
+<div class="theme-designer-com_post-backtitle">
+<div class="theme-designer-com_post-title" align="right"><a href="../../../1045.html">راهپیمایی زائران اربعین حسینی در مسیر عشق</a></div>
+</div>
+
+<div align="center">
+<div class="theme-designer-com_post-badane" align="right">
+<div class="theme-designer-com-post-text"><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;">در آستانه اربعین سرور و سالار شهیدان، حضرت اباعبدالله الحسین(ع) و در پیاده روی عظیم ‌اربعین حسینی، این روزها هزاران زائر در مسیر عشق بسوی کربلا در حرکتند ...<br style="line-height: 1.22em;">&nbsp;</font><a href="post/1044.html" target="" title="سایت تفریحی و سرگرمی" style="font-family: tahoma; font-size: 11px;"></a></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center; display: inline !important;"><font face="Tahoma" style="line-height: 1.22em; font-size: 9pt;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci5.googleusercontent.com/proxy/-_tyC04LRaMIWU9I1JSMQ79NaOwS2wKo-WPu2-3Bbzb62I5e3hZdC6hzaeLr83Z9VPNgiTCImXfRZKFUCb7cCgqFNkQXNg=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/01.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font></font></p><a href="post/1044.html" target="" title="سایت تفریحی و سرگرمی"><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"></font></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" style="line-height: 1.22em; font-size: 9pt;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci3.googleusercontent.com/proxy/gE9bHmSGAfvqa7IO7QucHztfZjU3mKiOWvkpTfu2n54XDqW_9GSMNZl1-0IOpymDXpPCs1U2llTNiK8BQt23jNc4UU9s4Q=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/02.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci3.googleusercontent.com/proxy/glCdpMzGpOgMSy7rwP_pGbERX5hh02tSbkDs0siKgp_-mxBXcZ5aydVdbTmBUAyKC9i0gL-hhuvd0SbzpMDOm07CVeXi9A=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/03.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci6.googleusercontent.com/proxy/Jjwso1A8zpXlTRUCI0RpSziGQnTtcIFbvH9N77_fUOi6MuZEs6shFdGCQoICEIC3XTzvSgp6KQ0vDAmsEM8mFMwWMbowIw=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/04.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.net" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci5.googleusercontent.com/proxy/43Z9BSjLsfsCg0jE7tWqIELIIt6AiH9uXwDdjmqwPEiEeCHFDFObhFXa41PVXwrY0O18XOjFsUtUIY_loiGWJIla0YLvbw=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/05.jpg" border="0" alt="گروه اینترنتی پرشیـن استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci6.googleusercontent.com/proxy/_jAFSbcPzDslONcuHSrpWqSPj7KiX0t0rKldl9jczu2jguk32iU0Vmp7TPt6hrYUFaxnTDy3wa5l90NaO-ykVEvIM17U3A=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/06.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci4.googleusercontent.com/proxy/l2SWv6S1W9vLfb8Z33esgGKCSzVHMviQvgqGJb0Hbkf3JMJvwImBxfk-86XA_ALaF4bQZmcQlbGkiDwQbb631qQk_NGBSA=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/07.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci4.googleusercontent.com/proxy/MuPselF4LdJpArklJV9-lU___Q1Ah8mYPHAM_30L9lrAj4_IgGt2t6PY9k6CnNNSoiOKYYPhxSCZ_mZsNxmJqbFs-4gASw=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/08.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci3.googleusercontent.com/proxy/utT7xrD_aE8YZCjVlexBsHwtV9opIJQykiiFq10_EdtbZsEVRHoU4JutWyx-VKLlQDdM-tWMvGSRe5ucjOejHleV0SsHvA=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/09.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci5.googleusercontent.com/proxy/l_CqelwHtnLo1CzXpdPbmDXmDSDtT55FVZywzr6VgI_fpsLZqpOlsOZ9B7sncfzxkkCbej5gsuv4cHNev1z4gOlSz20nBw=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/10.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci6.googleusercontent.com/proxy/d1NGRvZwiT-3x0vt7hlEn36jAjQJstVbLeVP6ERIqkiD8dXXeJI5qq3TMRf8y7lgahu6yeuFNvhhGlHAlmtDUiarI18EbQ=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/11.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci5.googleusercontent.com/proxy/iLeYgVGlE1U5TmDuF0Eu_EDDWKlfeZcBxIjP73DiSq-WFVdCsR1w2xYCAPVkOIULnRjw1wErOGTrm9b17pIxQAQrvZfjdw=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/12.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.net" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci3.googleusercontent.com/proxy/6_FUFs73PDx9wlKItkIyrnThblfrK9yMrbyrrcfPUnGnJ1SrES4iRJPrtLNbQOnWn3HjWZOK8LNMk9skN-MyKilQHoxjKA=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/13.jpg" border="0" alt="گروه اینترنتی پرشیـن استـار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci4.googleusercontent.com/proxy/8XJEhbm0pDdW_yUD-JzDtAg4pb8_XYXoEYbMJVMya40H-KdBmHavmTYqI0SzgUDMLvqPH334SJ1X5bqjWwjAfbm4gLZjtQ=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/14.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci6.googleusercontent.com/proxy/gQY_WrIXuU1_IpdMOq62FZMC3yXZUr9Ha0vGYXPvDgsDdVQ_awv1IeH-dlbej5bMMOcxWqqc6iP6cTuyUu9_fiTK3ZrnDg=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/15.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci6.googleusercontent.com/proxy/b9VDPgtCil54jvTcmmFOA5Vcpcd6uV2Sow-V8zZquR5meN8ekWhq8aN_fawrhBDvwwoiYD0A8NfNGMsYRPAB2HTUaRFmqg=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/16.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci6.googleusercontent.com/proxy/m09OemBHf2Aw_dcv08yCZemSlyAJLmYEYqpSubMaQ1DAVMdrs4hxNYQdUHaR5Whem1d9WqppXV8vC-NS9-no7NXTJoDYPg=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/17.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci5.googleusercontent.com/proxy/754zDXytVItJ0naxBrHG73EEdUSynaRTdnB-R7zEL5oC3R9pyXr3He_taLu8iPay0DW2zJODhB50rmgUtz9u6mNtuVSegA=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/18.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci3.googleusercontent.com/proxy/vsB2bubn-0HyJ0BzKgJJPDwSu8k7kImLWdKQ6LMJYNY4m8RRUcf-qczCilEcz60ScdsP1wjKAF5EO3IVkCEfYk2jjAah8w=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/19.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci3.googleusercontent.com/proxy/ckOGtDNGeuheLMa_cNd3QrJ8XK4TbUsEoTgno4erG7G89UXhYSgJTEKvfUBJ_Oi20BPkPqXIUUVAAkWFZe3Yk2lgZmunZw=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/20.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci5.googleusercontent.com/proxy/0OKE_xVPZurtAD1Mb_VrD_bW_lMEk5eq9Kx5TNV_AaR7Zl6Y-73eTMJ9f6SOUvX87JIONKbsiJvkN_JlKTBc47T0V7XCsA=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/21.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.net" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci4.googleusercontent.com/proxy/xlZOp8WsXNi-rWvzoN3G1ojZ6VS-j0WMAjUHZIArBxS12IGYjei0JUBhJQvw--zd8xZUZEqmQG2T3u7jIA2zuzPce6SkVg=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/22.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci6.googleusercontent.com/proxy/cFyzyEfCW5ndrYmCXYeBZEPuV7HApqBPMrH0PpzZMSTceNaacYqQlI0YY4sSuUBvS6mkuxQE26l5REnawOTV2cyp8fbcFQ=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/23.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci6.googleusercontent.com/proxy/7oGTecnGTIHUSF9nQR7E674AWO3Cn7fyDdIeYH2kTM5AYLeVJVNuYG4_kSwxgxNaw_SnZebQbZ8Uk7f__6opjqZmNcHfzQ=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/24.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci6.googleusercontent.com/proxy/MKs_BOCtxx3NUt3pwDH7ipSjfqyJuxcXYE8Ct1RUy-ZUNLa-XYJIlUO-M5BdOnVl3oG5w8T9gRmd1h5osHyFHhyLEyW4Jw=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/25.jpg" border="0" alt="گروه اینترنتـی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci5.googleusercontent.com/proxy/bqhG5DePaUX_EWUt4-wRpVGWgrxO-8rA_IWHrvTbQfdpoPCplFP5e1_qz2k5m02mfx5r31wl0IpfZCWJIo-uVOvAssdCIw=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/26.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.net" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci6.googleusercontent.com/proxy/oSmj9_2Ja0y-U13msISm_a3xRdP56lshgDYmDoRLCkfOhb5cUND1o2Hx37s1m9eE6Q6tFLweo8lZZTi3ZpKD9G42ztfFWA=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/27.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci6.googleusercontent.com/proxy/HdZXX3k3bWCBw8aiPk4eEUtmMimDqfuvrDbdeneZwVubSo5izgf2rOv17PwjKXahxBGjSTzk-2ZKxG0hyO2DSSZQ6kJveQ=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/28.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci4.googleusercontent.com/proxy/reZKMM-RQ0uDduJMhsLIWI5GUt7hCRAPo2JOxmWBb-mxeI4Gp0tfiXs_P74P4C6O6iRaHPnpkvig5pMVWT6SFCV0LGW_CQ=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/29.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci5.googleusercontent.com/proxy/b5RHouRb4lgXZ1boVV7Z0m2RjJ8T2nGLq2EDA_RJFahMyQy3cLznj1UUARacAWbhyUglutK78xXiizrAi2oHstjKOYNBVw=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/30.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci6.googleusercontent.com/proxy/ETV5ld6oFsoYAhCbNpwB77vF6Qt57u52yc_DIrKPw9wEn47nbL6XS9jzfYbsLjXF5lK6loWhBzIIm7xrOtTO3pO9whuYJQ=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/31.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci3.googleusercontent.com/proxy/bh83LAdxejKipkS-jFVllRRQhP8FDPNNdDtPLtRlxS1vrng7tE0_oDn3StPJVyMtaCeyJYvn4VjfO9EaFwZsPU2dVRXDpA=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/32.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci6.googleusercontent.com/proxy/NdHrUjbkulZOTASE8eVg36K_6r7ppLOKlTNFHSkoWFPorWL8DWdlFWo6PDPQ2QA_2tLo1-fj3t9_7eu-SbqFOd23LeKXXw=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/33.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci4.googleusercontent.com/proxy/8DllsozzlM4uLtCD-r2t-a11SR8yKryCN3GessjhZVtXYB8rWx0ghROtu1VXu1yTbfP9GkujzybwverjOqbchgoeE1-tyA=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/34.jpg" border="0" alt="گروه اینترنتی پرشیـن استـار | www.Persian-Star.net" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci3.googleusercontent.com/proxy/Z5zdmH-Zm25N0U9lRGeFwzWZUe9CHtJMWAs5-vB8hkuSVLgBi2FHzElzhI_YWKuxrw1tFxFcvH5i_sJA_7n7BbprjYWdIg=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/35.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci3.googleusercontent.com/proxy/2g3NMxZnAemivJ3r6j1t3vkE9Qgaxt5FrPWQVyafRDgz0cHazwtdJUISY3U-mJgW0y2foCJNRRcKAV6hXtnNpnsrILoehg=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/36.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci4.googleusercontent.com/proxy/Lou_2nAyJnjV1AWLTaoQtSwp40p9NNvkpOj5Xwfaj6VlQS2oYs4R_LQilTJdQBiz3wH61pdTY5bCiNsL7AQr52COJSgGYQ=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/37.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci3.googleusercontent.com/proxy/4-9eGm-wfsMoqXalwAKdw9g45Sl-JC39BboVsB5SgHsqVrcFgXwGCJT4C0nYce_OZbFqfwK7VNXlX2GyZ4EuPdpAubiW6w=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/38.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci5.googleusercontent.com/proxy/ER6I8VNajijYZmQf_e1Prm9zd2GH8dLPatJ-vBsP_RrNBi1upIhYFDxFQKmwlv6cuD1EEfoP3pN6U9qLDZS5XtYkSudJ4A=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/39.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci4.googleusercontent.com/proxy/hJwrAxTpaE4RpcJHMkXYhcf6ySATIvnBBSl1g1ChiwDpxBI9App8VREQz1y2nwWwsx0j4BYzPBsTQ5Q01wDjVr3UGeOnDw=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/40.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci5.googleusercontent.com/proxy/SCIx2gEQQbZtNMTYUIrHVncAjl6NWDVdMs2L7s2XGvqxmj9kjXO0L42i-b-LxWIYH0hIdh0YMZYonH8jx1VUC9fMA4GhPw=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/41.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci4.googleusercontent.com/proxy/tWECmrfmLoWDuAVh_oBV9Ycnldv-DCpv8-b57Qf3iwZRhJvFCp9gUU_O7IqH071tB6MzIX3dFyNcM73wXIbNxrthusU5-w=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/42.jpg" border="0" alt="گروه اینترنتی پرشیـن استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci5.googleusercontent.com/proxy/OuUW_k2YJh8ADqeN16BCXYjl9pifixYPhXJFc4yO2pK-F-S_JGWPBNGbjZ5eERYZkbxew2SWQihXKPRD0bRYn6_wgq6mYg=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/43.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.net" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci5.googleusercontent.com/proxy/kFW1t8CGnLMKo6DWhCTjaanBgshy5mGnA8mmnlUzJCKhE05OGN9tzEiw3BnjiEzTSrEwbf1GEE-rB-Y6xK41tVbBI7l04A=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/44.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci5.googleusercontent.com/proxy/D29J8SSi7Tn9YjFItoPV4kC2hm7dhuk31hl-9WaX56kg7NlPQHcLLKdM_LBuSQaGE7sXzvhdt9i48vTyrTlLwlLVMJOHWQ=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/45.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci6.googleusercontent.com/proxy/Z5JQIYE67TMsfJHYz3PmqJQAGNnPKcXdPFHcVS9muJO1sja92nq_xDpLc33ZDRUAyJ1DVo7AXjlkZQtDkQAKh7fUCp0NvA=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/46.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci3.googleusercontent.com/proxy/Qk1MyWiG9Oc6VJ3mG6C0-Vr_OksIAa1u3qICVis7uR3OJfMfCkgDGhC9mnxdpIQeBI-Fb2WVb99A3XIdZV8x0OCe-HnbqA=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/47.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci5.googleusercontent.com/proxy/keBp98oWas-BvZA_YRoDy-5KJDnkYIsxH7g3Ehp8ZP_WuOt6gIrU9dedTWYjDmwPkCiSfBfmKjEdk3Akmq-bgcL38FDLkg=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/48.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci4.googleusercontent.com/proxy/oH_bTJEKrVUYef9cdgvZaG1KNWn2D0__2h8styXxgDhwVHaQwckOnhQI9X-FZklpnl8fYyP3LIIdlUUi-GEhm-_Qdy07oA=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/49.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><font color="#1155cc" face="Verdana"><span style="line-height: 1.22em;"><img src="https://ci5.googleusercontent.com/proxy/QHidAucjCgQPORY9PUuLKBrqbS3B-vqdyqIAQF2aUQTcBkXtuzbnNJl8ZROnxvrs5FZj8igOhXZP4xn3BIN4KIOqRUu79Q=s0-d-e1-ft#http://persian-star.net/1395/8/29/Arbaein/50.jpg" border="0" alt="گروه اینترنتی پرشیـن استـار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></span></font></font></p></a>
+
+
+ </div>
+<br>
+<script>mihanblogPostLike('1045','like')</script><br>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">مرتبط با: <a href="../../../category/1.html">
+گالری عکس</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">برچسب‌ها: <a href="../../../tag/راهپیمایی&#32;زائران&#32;اربعین&#32;حسینی&#32;در&#32;مسیر&#32;عشق.html">
+راهپیمایی زائران اربعین حسینی در مسیر عشق</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+</div>
+</div>
+
+<div id="theme-designer-com-post-linksabet" style="margin:6px 0px 0px 0px;"><ul>
+<li><center><a href="../../../1045.html" ><span class="theme-designer-com_koli_hidden">لینک ثابت</span></a></center></li>
+</ul></div>
+
+<div class="theme-designer-com-post-footer"><div class="theme-designer-com-post-footer2">
+منتشر شده در تاریخ 1395/08/29 توسط alborz-pic alborz</div></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="theme-designer-com_menuright-border2">
+<div class="theme-designer-com_menuright-border4">
+<div class="theme-designer-com_menuright-border1">
+<div class="theme-designer-com_menuright-border3">
+<div class="theme-designer-com_menuright-post">
+
+<div class="theme-designer-com-comments-box">
+<div class="comments-icon"></div>
+<div class="comments-text"><a target="_self" href="../../../1042.html#commentlist">نظرات <script>setCommentCnt(1042)</script> </a></div>
+</div>
+<div class="theme-designer-com_koli_clear"></div>
+
+<div class="theme-designer-com_post-backtitle">
+<div class="theme-designer-com_post-title" align="right"><a href="../../../1042.html">  	زیارت اربعین در طول تاریخ به روایت تصاویر</a></div>
+</div>
+
+<div align="center">
+<div class="theme-designer-com_post-badane" align="right">
+<div class="theme-designer-com-post-text">
+
+<div align="right" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><b style="line-height: 1.22em;">شهادت امام حسین (علیه السلام) به دست یزید و اسارت خاندان عصمت و عطارت از شام به عراق در طول تاریخ شعله فروزانی بوده که هیچ چیز و هیچ کس نتوانسته آن را خاموش کند و تصاویر برجا مانده در طول تاریخ گواه این مدعاست.<br style="line-height: 1.22em;">&nbsp;</b></div><div align="right" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><b style="line-height: 1.22em;">&nbsp;</b></div><div align="right" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><b style="line-height: 1.22em;">منابع موثق تاریخی تاکید می کند، از زمانی که حضرت زین العابدین، امام سجاد (علیه السلام) با «جابر بن عبد الله انصاری»، صحابه پیامبر (ص) در کربلای مقدس دیدار کرد، این سرزمین به قبله عاشقان سید و سالار شهیدان و علمدار با وفایش حضرت ابالفضل تبدیل شد.</b></div><div style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px; text-align: justify;"><b style="line-height: 1.22em;">&nbsp;</b></div><div align="right" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><b style="line-height: 1.22em;">این دیدار بنا به تاکید منابع موثق تاریخی در روز بیستم ماه صفر انجام شد که مصادف با اربعین حسینی بود. از آن تاریخ هر سال عاشقان و دوستداران سید الشهدا راهی «سرزمین طف» می‌‌شدند تا روز بیستم صفر ضمن حضور در محل واقعه جانگداز کربلا با امام حسین و حضرت ابالفضل تجدید عهد کنند.<br style="line-height: 1.22em;">&nbsp;<br style="line-height: 1.22em;">نکته حائز اهمیت این است که هر سال که می گذرد، بر شمار زائران آن حضرت افزوده می‌ شود. آمار و ارقام موجود نشان می دهد، شمار زائران اربعین حسینی در سال 1968 میلادی به بیش از نیم میلیون زائر رسید و در اولین سال های دهه هفتاد بالغ بر یک میلیون نفر عنوان گردید.</b></div><div align="right" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><b style="line-height: 1.22em;"><br style="line-height: 1.22em;">حتی در دوره دیکتاتوری حزب منحل بعث و حاکمیت «صدام حسین» با وجود تمام سرکوبگری های نظام و اعمال فشارها و ممنوعیت های اعمال شده، زیارت اربعین همچنان ادامه داشت.&nbsp; &nbsp;<br style="line-height: 1.22em;">&nbsp;<br style="line-height: 1.22em;">با سرنگونی رژیم بعث در سال 2003 میلادی زیارت اربعین شکل و شمایل جدیدی به خود گرفت و از آن تاریخ تاکنون هر سال بر شمار زائران آن حضرت در روز اربعین در قالب زیارت و راهپیمایی معروف اربعین افزایش می یابد، به گونه ای که براساس آمار و ارقام موثق شمار زائران در راهپیمایی اربعین سال گذشته (2015 میلادی) بیش از 19 میلیون نفر اعلام شد که بیش از یک میلیون و 500 هزار نفر از آنها را زائران خارجی تشکیل می دادند که از کشورهای مختلف جهان راهی کربلا شده بودند.<br style="line-height: 1.22em;">&nbsp;<br style="line-height: 1.22em;">آنچه در ذیل می آید، تصاویر برجای مانده از زیارت اربعین در طول تا کنون است.<br style="line-height: 1.22em;">&nbsp;</b><div align="center" style="line-height: 1.22em;"><span style="line-height: 1.22em; font-weight: bold;">&nbsp;<br style="line-height: 1.22em;">&nbsp;</span><div align="center" style="line-height: 1.22em;"><a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci3.googleusercontent.com/proxy/JRmZDRNhvUZjnWITKccEsWknyCHBbfAiq85ozrJl_tPW8DtN7hSu1_S01nc1JUJzV_v8M9h5F1n0onGsyr6kNGQyu-YQGHEcNwl0FHaH8pfNbDmxkBA=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/25/1065450_166.jpg" title="زیارت اربعین در طول تاریخ به روایت تصاویر" alt="زیارت اربعین در طول تاریخ به روایت تصاویر" class="m_-4613830831103263049img-responsive-news CToWUd" height="367" width="550" style="line-height: 1.22em;"></a><br style="line-height: 1.22em;"><span style="line-height: 1.22em; font-weight: bold;">زائران اربعین حسینی در حرکت به سمت كربلا معلی سال 1915</span><br style="line-height: 1.22em;">&nbsp;</div></div><div align="center" style="line-height: 1.22em;">&nbsp;</div><div align="center" style="line-height: 1.22em;"><a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci3.googleusercontent.com/proxy/kjMmxCyHttAaEp1_Bbr_J33pbAjf6KiNKr0HMWk6IwjHI3pjzgyiMcqu4kMGKteQkt-w9A7-dRr_Bmjm2RHxaJNIlC_hBKZmyF1PJuIB6TD8jNVgQm8=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/25/1065451_895.jpg" title="زیارت اربعین در طول تاریخ به روایت تصاویر" alt="زیارت اربعین در طول تاریخ به روایت تصاویر" class="m_-4613830831103263049img-responsive-news CToWUd a6T" height="367" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":oj" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="بارگیری" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div><span style="line-height: 1.22em; font-weight: bold;"><br style="line-height: 1.22em;">زائران اربعین حسینی در حرکت به سمت كربلا معلی سال 1916<br style="line-height: 1.22em;">&nbsp;</span></div><div align="center" style="line-height: 1.22em;">&nbsp;</div><div align="center" style="line-height: 1.22em;"><a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci4.googleusercontent.com/proxy/ac3HC20915KgKXX_OIoLDDpTkJwqoGuUKhSSdLO88dev4FLX7da4YdHlG7ZjFBfzOKL0Ud40-4FtY_5bunMuqal5LZe5UiUqihd6U8bPLw9L7GGaO7E=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/25/1065452_918.jpg" title="زیارت اربعین در طول تاریخ به روایت تصاویر" alt="زیارت اربعین در طول تاریخ به روایت تصاویر" class="m_-4613830831103263049img-responsive-news CToWUd a6T" height="367" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":o3" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="بارگیری" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div><span style="line-height: 1.22em; font-weight: bold;"><br style="line-height: 1.22em;">زائران اربعین حسینی در حرکت به سمت كربلا معلی سال 1905<br style="line-height: 1.22em;">&nbsp;</span></div><div align="center" style="line-height: 1.22em;">&nbsp;</div><div align="center" style="line-height: 1.22em;"><a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci5.googleusercontent.com/proxy/s4m263XODPXcZiKGaQmcxWUKafnYN6phJ5mYnI2m2BQM00GBEx2dDtYPrzDP-zv5EfB_MEqFswiQqI6pLsrtpaHOj2qEsKRLon8wzQd-7rJPzccHsjY=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/25/1065453_353.jpg" title="زیارت اربعین در طول تاریخ به روایت تصاویر" alt="زیارت اربعین در طول تاریخ به روایت تصاویر" class="m_-4613830831103263049img-responsive-news CToWUd a6T" height="367" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":o8" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="بارگیری" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div><span style="line-height: 1.22em; font-weight: bold;"><br style="line-height: 1.22em;">زائران حسینی كربلا معلی سال 1909<br style="line-height: 1.22em;">&nbsp;</span></div><div align="center" style="line-height: 1.22em;">&nbsp;</div><div align="center" style="line-height: 1.22em;"><a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci5.googleusercontent.com/proxy/yivl9g50vQitiewE2baxhpK7tJH4fXWAE5Y5JoUBZli7zN-KIJQWlL4PLM1fLQmLrO7sjTGdWnVZTyrcLCg8ZFDvPYQ1zeuTdeZXRFNP_7RTx-M1UGs=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/25/1065454_162.jpg" title="زیارت اربعین در طول تاریخ به روایت تصاویر" alt="زیارت اربعین در طول تاریخ به روایت تصاویر" class="m_-4613830831103263049img-responsive-news CToWUd a6T" height="367" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":o4" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="بارگیری" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div><span style="line-height: 1.22em; font-weight: bold;"><br style="line-height: 1.22em;">زائران اربعین حسینی در حرکت به سمت كربلا معلی سال 1932<br style="line-height: 1.22em;">&nbsp;</span></div><div align="center" style="line-height: 1.22em;">&nbsp;</div><div align="center" style="line-height: 1.22em;"><a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci3.googleusercontent.com/proxy/KXnQBTjMSBB3qu_jCImgbk6zlMVNhn4JwU0otofLZJLfmN3SxI6trTK_JFvO4hB8q1HLNljXTneZlRdd5qSGc8NfM9m_vDwVCQww2MdG-hg_EEnK9BU=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/25/1065455_436.jpg" title="زیارت اربعین در طول تاریخ به روایت تصاویر" alt="زیارت اربعین در طول تاریخ به روایت تصاویر" class="m_-4613830831103263049img-responsive-news CToWUd a6T" height="367" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":od" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="بارگیری" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div></div><div align="center" style="line-height: 1.22em;">&nbsp;</div><div align="center" style="line-height: 1.22em;"><a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci4.googleusercontent.com/proxy/KFZ5rA9B68L_mXoc85FJFPDXY4TKJzHA1K2X5sHY73_M6hW3k-zx0Yzd0qFbvC32u58aH2Gsw2QXzI_04TauDT3G8gQFl3Ub7Qr9AaYFeJ300LgMmyI=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/25/1065456_965.jpg" title="زیارت اربعین در طول تاریخ به روایت تصاویر" alt="زیارت اربعین در طول تاریخ به روایت تصاویر" class="m_-4613830831103263049img-responsive-news CToWUd a6T" height="367" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":oa" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="بارگیری" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div></div><div align="center" style="line-height: 1.22em;">&nbsp;</div><div align="center" style="line-height: 1.22em;"><a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci5.googleusercontent.com/proxy/0Wo99Hv3RMFdxdFZaVAouN8cOc-L-rARbVphmZXdjMgwKhxjZ55uRB1NZIj_3Sv7VxsWDKLcGlmtd6DJmniS82A31q7RB4kDRuiUZQ_-0itE2nmLrBI=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/25/1065457_784.jpg" title="زیارت اربعین در طول تاریخ به روایت تصاویر" alt="زیارت اربعین در طول تاریخ به روایت تصاویر" class="m_-4613830831103263049img-responsive-news CToWUd a6T" height="367" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":o6" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="بارگیری" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div></div><div align="center" style="line-height: 1.22em;">&nbsp;</div><div align="center" style="line-height: 1.22em;"><a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci3.googleusercontent.com/proxy/f89E3OnXW949WIpjiHR7g3xL2BU3X7j85_7E3DWAcwOxQICq5qro47xw6jSSrWukFOwIoe7FmTdFAqkTeLwAiWWU2EJK72CQwwodSJhJXb9M6KktIf0=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/25/1065458_465.jpg" title="زیارت اربعین در طول تاریخ به روایت تصاویر" alt="زیارت اربعین در طول تاریخ به روایت تصاویر" class="m_-4613830831103263049img-responsive-news CToWUd a6T" height="367" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":oh" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="بارگیری" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div><span style="line-height: 1.22em; font-weight: bold;"><br style="line-height: 1.22em;">تصویری از مرجع عالیقدر آیت الله العظمى سید علی حسینی شاهرودی (قدس سره) در زیاره و راهپیمایی اربعین می باشد</span></div><div align="center" style="line-height: 1.22em;"><span style="line-height: 1.22em; font-weight: bold;"><br style="line-height: 1.22em;"><a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci3.googleusercontent.com/proxy/-_BJeiiQkPSjKU23mhkU1U1GwDRvacEXrwnj9Vdnb1YtW5zcOkCaBNjxQghHD0xXbjkFy8Kc5fAya50l2qKUD2Fz6tcztPO7IykRDN3FRAZebCpBUaE=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/25/1065459_665.jpg" title="زیارت اربعین در طول تاریخ به روایت تصاویر" alt="زیارت اربعین در طول تاریخ به روایت تصاویر" class="m_-4613830831103263049img-responsive-news CToWUd a6T" height="367" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-weight: normal; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":og" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="بارگیری" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div></span></div><div align="center" style="line-height: 1.22em;">&nbsp;</div><div align="center" style="line-height: 1.22em;"><a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci4.googleusercontent.com/proxy/-cB9EOoHaZ8LOs6EVhs4Pult1jP8OuNlmbbM-xpHJHkTacprzc8wT85g5mGKTlSnuIwgxtrf9ofM1n_7C3LZRRN0bRF8quMPI5p-0FZUwYNhuG0rKQI=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/25/1065460_463.jpg" title="زیارت اربعین در طول تاریخ به روایت تصاویر" alt="زیارت اربعین در طول تاریخ به روایت تصاویر" class="m_-4613830831103263049img-responsive-news CToWUd a6T" height="367" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":oc" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="بارگیری" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div></div><div align="center" style="line-height: 1.22em;">&nbsp;</div><div align="center" style="line-height: 1.22em;"><a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci3.googleusercontent.com/proxy/_mibp3Aq-JJQFYmTUHXqTkHt-UcmhrSOez3CMbAOmH2y1dfOFoNFXD19MBKx1_3UXTJgsNWJvUO77JaIsiEhuEF-lWQ4_2ybRY5Zq3E1FoZIgQhwGtc=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/25/1065461_891.jpg" title="زیارت اربعین در طول تاریخ به روایت تصاویر" alt="زیارت اربعین در طول تاریخ به روایت تصاویر" class="m_-4613830831103263049img-responsive-news CToWUd a6T" height="367" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":of" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="بارگیری" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div><span style="line-height: 1.22em; font-weight: bold;"><br style="line-height: 1.22em;">کامیون های ولوو در حال انتقال زائران حسینی بین دو دهه 60 و هفتاد قرن بیست</span></div><div align="center" style="line-height: 1.22em;"><span style="line-height: 1.22em; font-weight: bold;"><br style="line-height: 1.22em;"><a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci3.googleusercontent.com/proxy/Ox-Qbkdb5PAvx-GpZaiAyBYEx327zS494yt7MIaJb3w8NtbPSCbtUf9o4NYxXZ-_a8b-HVA1A0AvambVONUmVEE6kaVwkK6MaNbiwvw6iX-S2mD223k=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/25/1065462_551.jpg" title="زیارت اربعین در طول تاریخ به روایت تصاویر" alt="زیارت اربعین در طول تاریخ به روایت تصاویر" class="m_-4613830831103263049img-responsive-news CToWUd a6T" height="367" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-weight: normal; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":o9" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="بارگیری" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div><br style="line-height: 1.22em;">زائران اربعین حسینی در حرکت به سمت كربلا معلی سال 1971<br style="line-height: 1.22em;">&nbsp;</span></div><div align="center" style="line-height: 1.22em;">&nbsp;</div><div align="center" style="line-height: 1.22em;"><a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci3.googleusercontent.com/proxy/7HHs_oO_-8tcMXUUkYbYoT_IFD1lEAHJlMfH8OZUeloCv_UZMX8phN7gwHmTrKBqfiPx84z8yBSltkdN36THi601MIWicvqFefC8VrqicEdkwkAHNUU=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/25/1065463_807.jpg" title="زیارت اربعین در طول تاریخ به روایت تصاویر" alt="زیارت اربعین در طول تاریخ به روایت تصاویر" class="m_-4613830831103263049img-responsive-news CToWUd a6T" height="367" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":oi" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="بارگیری" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div><span style="line-height: 1.22em; font-weight: bold;"><br style="line-height: 1.22em;">زائران اربعین حسینی در حرکت به سمت كربلا معلی سال 2003<br style="line-height: 1.22em;">&nbsp;</span></div><div align="center" style="line-height: 1.22em;">&nbsp;</div><div align="center" style="line-height: 1.22em;"><span style="line-height: 1.22em; font-weight: bold;"><a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci6.googleusercontent.com/proxy/-OoHhccYtLXrfqWBSXcx5IJ_RC1DbEXLoAwPt8xz90dEprW4Yj9-OJEhMBRZ37Wig4x0FB5HJx-V69eIATaOZ_ycMkLMPVROa5iw-qMMDF7vsDXp2x4=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/25/1065464_986.jpg" title="زیارت اربعین در طول تاریخ به روایت تصاویر" alt="زیارت اربعین در طول تاریخ به روایت تصاویر" class="m_-4613830831103263049img-responsive-news CToWUd" height="367" width="550" style="line-height: 1.22em;"></a><br style="line-height: 1.22em;">اربعین حسینی در كربلا معلی سال 2003</span></div><div align="center" style="line-height: 1.22em;">&nbsp;</div><div align="center" style="line-height: 1.22em;">&nbsp;<a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci4.googleusercontent.com/proxy/R7w75weT6qVup2SOtsO1HarNNPrzrQFfM8kFS3UVO-AkN-qZ0aNcMfi4tU1PuzfryBVrWwzXxD6gxYOV-4L2nEWNrs_dxKC896RZleBg8-0NvB59b1Q=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/25/1065465_678.jpg" title="زیارت اربعین در طول تاریخ به روایت تصاویر" alt="زیارت اربعین در طول تاریخ به روایت تصاویر" class="m_-4613830831103263049img-responsive-news CToWUd a6T" height="367" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01; left: 237px; top: 7635.33px;"><div id=":o2" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" data-tooltip="بارگیری" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div></div><div align="center" style="line-height: 1.22em;">&nbsp;</div><div align="center" style="line-height: 1.22em;"><a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci6.googleusercontent.com/proxy/khERFxskoIKzjU50PKxJ6PaAlrPVF9-gGNJ1yqw9qIh2J_vVqqhXLswG2mDCvtS9Q-G6MhYmvFY3aFSJGq4C8nhbmtaFkEJ1Lc0Q3xi-jwxcHov4qMo=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/25/1065466_305.jpg" title="زیارت اربعین در طول تاریخ به روایت تصاویر" alt="زیارت اربعین در طول تاریخ به روایت تصاویر" class="m_-4613830831103263049img-responsive-news CToWUd a6T" height="367" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01; left: 241px; top: 8021.33px;"><div id=":o7" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" data-tooltip="بارگیری" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div>&nbsp;</div><div align="center" style="line-height: 1.22em;">&nbsp;</div><div align="center" style="line-height: 1.22em;"><a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci4.googleusercontent.com/proxy/bNf_Q7A8HS8UeE3waaYlcrCBkCYFbX1DCr6yOPqqz9OpyOjepd27YVl_-onYHted1kJheF4EUn77cX4r9Uhm09G9FH6rcVfwArh4LfK9jzzSiSNamuM=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/25/1065467_334.jpg" title="زیارت اربعین در طول تاریخ به روایت تصاویر" alt="زیارت اربعین در طول تاریخ به روایت تصاویر" class="m_-4613830831103263049img-responsive-news CToWUd a6T" height="367" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":oe" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="بارگیری" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div>&nbsp;</div><div align="center" style="line-height: 1.22em;">&nbsp;</div><div style="line-height: 1.22em;"><div align="center" style="line-height: 1.22em;"><a href="post/1042.html" target="" title="سایت تفریحی و سرگرمی"><img src="https://ci4.googleusercontent.com/proxy/IIo5zPxHL8Dk7K5jxFKIDv5BQgj8idW2rdmFhs4viRn3P4OuawPCmXRvK2Nw4wDvksK72kxgFfmN61msVWsBDpLjicS6Slad26qgcQ_Zxt1MtskmQpE=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/25/1065468_338.jpg" title="زیارت اربعین در طول تاریخ به روایت تصاویر" alt="زیارت اربعین در طول تاریخ به روایت تصاویر" class="m_-4613830831103263049img-responsive-news CToWUd a6T" height="367" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 1; left: 241px; top: 8793.33px;"><div id=":ob" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" data-tooltip="بارگیری" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div></div></div></div>
+
+
+
+
+
+
+ </div>
+<br>
+<script>mihanblogPostLike('1042','like')</script><br>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">مرتبط با: <a href="../../../category/1.html">
+گالری عکس</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">برچسب‌ها: <a href="../../../tag/سایت&#32;تفریحی&#32;و&#32;سرگرمی.html">
+سایت تفریحی و سرگرمی</a> , <a href="../../../tag/زیارت&#32;اربعین&#32;در&#32;طول&#32;تاریخ&#32;به&#32;روایت&#32;تصاویر.html">
+زیارت اربعین در طول تاریخ به روایت تصاویر</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+</div>
+</div>
+
+<div id="theme-designer-com-post-linksabet" style="margin:6px 0px 0px 0px;"><ul>
+<li><center><a href="../../../1042.html" ><span class="theme-designer-com_koli_hidden">لینک ثابت</span></a></center></li>
+</ul></div>
+
+<div class="theme-designer-com-post-footer"><div class="theme-designer-com-post-footer2">
+منتشر شده در تاریخ 1395/08/29 توسط alborz-pic alborz</div></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ------------comment------------ -->
+<div style="margin:30px 15px 0px 0px;">
+</div>
+<!-- ------------/comment------------ -->
+
+
+<table border="0" width="100%" id="table3" cellspacing="0" cellpadding="0">
+<tr>
+<td width="30"></td>
+<td>
+<table border="0" width="100%" id="table4" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center">
+<p align="right">
+<div class="theme-designer-com-list-page">تعداد کل صفحات: 206 </div>
+<div class="pagenu"><a href="1.html"><span>1</span></a></div><div class="pagenu"><a href="2.html"><b>2</b></a></div><div class="pagenu"><a href="3.html"><span>3</span></a></div><div class="pagenu"><a href="4.html"><span>4</span></a></div><div class="pagenu"><a href="5.html"><span>5</span></a></div><div class="pagenu"><a href="6.html"><span>6</span></a></div><div class="pagenu"><a href="7.html"><span>7</span></a></div><div class="pagenu"><a href="8.html"><i>...</i></a></div></td>
+</tr>
+</table>
+</td>
+<td width="30"></td>
+</tr>
+</table>
+<br>
+<br>
+
+</td>
+<td width="12" valign="top">&nbsp;</td>
+<td width="288" valign="top">
+
+<div class="search">
+<form method="Get" target="_blank" action="http://google.com/search" class=sch><input name="sitesearch" value="http://alborz-pic.mihanblog.com" type="hidden">
+<div style="height:26px; overflow:hidden; width:277px; overflow:hidden;">
+<input type="text" name="q" size="5" class=txt value="" onfocus="if (this.value == '') {this.value = '';}" onblur="if (this.value == '') {this.value = '';}"><input type="submit" value=" " class="but">
+</div>
+</form>
+</div>
+
+<div class="theme-designer-com_menuleft-border2">
+<div class="theme-designer-com_menuleft-border1">
+<div class="theme-designer-com_menuleft-border3">
+<div class="theme-designer-com_menuleft-border4">
+<div align="center">
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">درباره وبگاه</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="menuleft-text">
+<div align="center" style="padding:0px 0px 5px 0px;"><img src="http://static.mihanblog.com//public/user_data/web_photo/382/1145999.jpg?4191"  /></div>
+سایت تفریحی و سرگرمی</div>
+<div class="vmenu"><a target="_blank" href="../../986785.html">alborz-pic alborz</a></div>
+</div>
+
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">موضوعات</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="vmenu"><a href="../../../category/45.html" title="450" >سرگرمی , تفریحی</a></div>
+<div class="vmenu"><a href="../../../category/43.html" title="549" >مطالب جالب و خواندنی</a></div>
+<div class="vmenu"><a href="../../../category/1.html" title="484" >گالری عکس</a></div>
+<div class="vmenu"><a href="../../../category/46.html" title="20" >تصاویر متحرک</a></div>
+<div class="vmenu"><a href="../../../category/37.html" title="5" >پس زمینه و والپیپر</a></div>
+<div class="vmenu"><a href="../../../category/36.html" title="18" >عکس های مذهبی</a></div>
+<div class="vmenu"><a href="../../../category/35.html" title="13" >عکسهای ورزشی</a></div>
+<div class="vmenu"><a href="../../../category/34.html" title="7" >عکسهای ناز کودکان</a></div>
+<div class="vmenu"><a href="../../../category/33.html" title="23" >عکسهای عاشقانه</a></div>
+<div class="vmenu"><a href="../../../category/23.html" title="60" >خواننده و بازیگر ایرانی</a></div>
+<div class="vmenu"><a href="../../../category/32.html" title="6" >عکس های فیلم و سریال</a></div>
+<div class="vmenu"><a href="../../../category/31.html" title="33" >عکس های خنده دار</a></div>
+<div class="vmenu"><a href="../../../category/30.html" title="23" >عکس های خبری</a></div>
+<div class="vmenu"><a href="../../../category/27.html" title="15" >عكس های هنری خلاقانه</a></div>
+<div class="vmenu"><a href="../../../category/29.html" title="11" >عکس های حیوانات</a></div>
+<div class="vmenu"><a href="../../../category/44.html" title="9" >دنیای  ماشین</a></div>
+<div class="vmenu"><a href="../../../category/28.html" title="6" >عکس های حوادث</a></div>
+<div class="vmenu"><a href="../../../category/26.html" title="2" >عكس های فانتزی</a></div>
+<div class="vmenu"><a href="../../../category/25.html" title="4" >عكس های طبیعت زیبا</a></div>
+<div class="vmenu"><a href="../../../category/24.html" title="3" >عكس های 3 بعدی</a></div>
+<div class="vmenu"><a href="../../../category/38.html" title="2" >كارت پستال مناسبت ها</a></div>
+<div class="vmenu"><a href="../../../category/42.html" title="4" >مدل کفش زنانه و پسرانه</a></div>
+<div class="vmenu"><a href="../../../category/41.html" title="1" >مدل مو دخترانه و پسرانه</a></div>
+<div class="vmenu"><a href="../../../category/40.html" title="24" >مدل لباس زنانه و مردانه</a></div>
+<div class="vmenu"><a href="../../../category/19.html" title="15" >موبایل</a></div>
+<div class="vmenu"><a href="../../../category/22.html" title="2" >کلیپ موبایل</a></div>
+<div class="vmenu"><a href="../../../category/20.html" title="21" >دانلود</a></div>
+<div class="vmenu"><a href="../../../category/18.html" title="15" >دانلود نرم افزار</a></div>
+<div class="vmenu"><a href="../../../category/17.html" title="2" >دانلود آهنگ جدید</a></div>
+<div class="vmenu"><a href="../../../category/9.html" title="64" >دانستنی ها</a></div>
+<div class="vmenu"><a href="../../../category/16.html" title="13" >آیا میدانید ؟</a></div>
+<div class="vmenu"><a href="../../../category/15.html" title="27" >دانستنی های تغذیه</a></div>
+<div class="vmenu"><a href="../../../category/14.html" title="13" >دانستنی های زندگی</a></div>
+<div class="vmenu"><a href="../../../category/12.html" title="17" >دانستنیهای روانشناسی</a></div>
+<div class="vmenu"><a href="../../../category/13.html" title="47" >دانستنی های سلامتی</a></div>
+<div class="vmenu"><a href="../../../category/11.html" title="16" >دانستنی های زناشویی</a></div>
+<div class="vmenu"><a href="../../../category/10.html" title="10" >داستان کوتاه و خواندنی</a></div>
+<div class="vmenu"><a href="../../../category/7.html" title="24" >اس ام اس</a></div>
+<div class="vmenu"><a href="../../../category/8.html" title="9" >اس ام اس عاشقانه</a></div>
+<div class="vmenu"><a href="../../../category/6.html" title="1" >اخبار ورزشی</a></div>
+<div class="vmenu"><a href="../../../category/5.html" title="9" >اخبار سینما</a></div>
+<div class="vmenu"><a href="../../../category/4.html" title="16" >اخبار حوادث</a></div>
+<div class="vmenu"><a href="../../../category/3.html" title="1" >کد آهنگ پیشواز</a></div>
+</div>
+
+
+		<form id="frm-16080763235fd94c23c9b2c" method="post" action="http://alborz-pic.mihanblog.com/poll/new/fid/16080763235fd94c23c9b2c/atrty/1608076323/avrvy/0/key/7a654ffee29a594c0d79e918ab4fdbb9/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="366055" id="data[pollid]" />		
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">نظر سنجی</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div align="center"><div class="menuleft-other">
+نظرتون در مورد این وبلاگ<br>
+<label><input type="checkbox"  name="data[v1]" id="v1" value="1" />خوب</label><br><label><input type="checkbox"  name="data[v2]" id="v2" value="1" />هی بد نیست</label><br><label><input type="checkbox"  name="data[v3]" id="v3" value="1" />بد</label><br><label><input type="checkbox"  name="data[v4]" id="v4" value="1" />غیر قابل تحمل</label><br><center><input type="submit" value="ثبت" style="height: 20; width:150; margin:10px 0px 0px 0px;"/></center>
+</div></div>
+</div>
+
+		<input type="hidden" name="frm-id" value="16080763235fd94c23c9b2c" id="frm-id" /></form>
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">لینک دوستان</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="vmenu"><a target="_blank" href="http://www.seomastering.com/" title="" >Free SEO Tools</a></div><div class="vmenu"><a target="_blank" href="http://clockbiz.mihanblog.com" title="" >ساعت مچی</a></div><div class="vmenu"><a target="_blank" href="http://google.com" title="" >google</a></div><div class="vmenu"><a target="_blank" href="http://www.alexa.com" title="" >alexa</a></div><div class="vmenu"><a target="_blank" href="http://www.bestlastsecond.com/torkie/istanbul.html" >تور استانبول</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.bestlastsecond.com/torkie/antalya.html" >تور آنتالیا</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.bestlastsecond.com/kish.html" >تور کیش</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.bestlastsecond.com/mashhad.html" >تور مشهد</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.tbs.ir/mba" >دوره MBA</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.tbs.ir/dba" >دوره DBA</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.tbs.ir/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d9%81%d8%b1%d9%88%d8%b4/" >آموزش فروش</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.tbs.ir/%d9%85%d8%af%db%8c%d8%b1%db%8c%d8%aa-%da%a9%d8%b3%d8%a8-%d9%88-%da%a9%d8%a7%d8%b1/" >مدیریت کسب و کار</a></div>
+</div>
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">آرشیو مطالب</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="vmenu"><a href="../../../archive/1396/5/3.html" title="1"> هفته سوم مرداد 1396</a></div>
+<div class="vmenu"><a href="../../../archive/1395/9/2.html" title="4"> هفته دوم آذر 1395</a></div>
+<div class="vmenu"><a href="../../../archive/1395/9/1.html" title="3"> هفته اول آذر 1395</a></div>
+<div class="vmenu"><a href="../../../archive/1395/8/4.html" title="20"> هفته چهارم آبان 1395</a></div>
+<div class="vmenu"><a href="../../../archive/1395/8/3.html" title="15"> هفته سوم آبان 1395</a></div>
+<div class="vmenu"><a href="../../../archive/1395/8/2.html" title="5"> هفته دوم آبان 1395</a></div>
+<div class="vmenu"><a href="../../../archive/1395/7/4.html" title="1"> هفته چهارم مهر 1395</a></div>
+<div class="vmenu"><a href="../../../archive/1395/7/3.html" title="2"> هفته سوم مهر 1395</a></div>
+<div class="vmenu"><a href="../../../archive/1395/7/2.html" title="5"> هفته دوم مهر 1395</a></div>
+<div class="vmenu"><a href="../../../archive/1395/7/1.html" title="20"> هفته اول مهر 1395</a></div>
+<div class="vmenu"><a href="../../../archive/1395/6/4.html" title="20"> هفته چهارم شهریور 1395</a></div>
+<div class="vmenu"><a href="../../../archive/1395/6/3.html" title="1"> هفته سوم شهریور 1395</a></div>
+</div>
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">نویسندگان</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="vmenu"><a href="../../986785.html" title="1028" >alborz-pic alborz</a></div></div>
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">برچسب ها</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div align="center"><div class="menuleft-other"><div align="right">
+<a href="../../../tag/alborzpic.html" style="font-size:1.07em">
+alborzpic</a> , <a href="../../../tag/عکس.html" style="font-size:1.18em">
+عکس</a> , <a href="../../../tag/pic.html" style="font-size:1.14em">
+pic</a> , <a href="../../../tag/البرز+پیک.html" style="font-size:1.49em">
+البرز پیک</a> , <a href="../../../tag/جالب.html" style="font-size:1.07em">
+جالب</a> , <a href="../../../tag/سایت+تفریحی+و+سرگرمی.html" style="font-size:1.63em">
+سایت تفریحی و سرگرمی</a> , <a href="../../../tag/alborz-pic.html" style="font-size:2em">
+alborz-pic</a> , <a href="../../../tag/البرز.html" style="font-size:1.21em">
+البرز</a> , <a href="../../../tag/alborz.html" style="font-size:1.59em">
+alborz</a> , <a href="../../../tag/زیبا.html" style="font-size:1em">
+زیبا</a> , </div></div></div>
+</div>
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">دیگر موارد</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div align="center"><div class="menuleft-other">
+<div align="right">
+تعداد مطالب : <script>getStatVar('total_post');</script><br>
+تعداد نویسندگان : <script>getStatVar('total_author');</script><br>
+آخرین بروز رسانی : <script>getStatVar('modify_date');</script><br>
+بازدید امروز : <script>getStatVar('today_view');</script><br>
+بازدید دیروز : <script>getStatVar('yesterday_view');</script><br>
+بازدید این ماه : <script>getStatVar('this_month_view');</script><br>
+بازدید ماه قبل : <script>getStatVar('last_month_view');</script><br>
+بازدید کل : <script>getStatVar('total_view');</script><br>
+آخرین بازدید : <script>getStatVar('last_view_date');</script><br><br>
+</div></div></div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</td>
+<td width="16" valign="top">&nbsp;</td>
+</tr>
+</table>
+</div>
+</div>
+
+<div align="center" dir="rtl">
+<div class="theme-designer-com-footer1">
+<div class="theme-designer-com-footer-w-h">
+<div class="theme-designer-com_footer_menu2">
+<a href="../../../../index.html">صفحه ی نخست</a>|
+<a href="mailto:">پست الکترونیک</a>|
+<a href="javascript:messageForm()">تماس با ما</a>|
+<a href="../../../archive.html">آرشیو مطالب</a>|
+<a target="_blank" href="../../../rss/index.html">لینك rss</a>|
+<a target="_blank" href="http://alborz-pic.mihanblog.com/m/">نسخه موبایل</a>
+</div>
+<div class="theme-designer-com-footer-w-h2">
+<a class="footer_theme-designer-11" href="http://www.theme-designer.com"></a>
+<div class="theme-designer-com-footer-12" align="right">
+تمام حقوق متعلق به <a href="../../../../index.html"> سایت تفریحی و سرگرمی* همه چی از همه جا * </a> می باشد
+&nbsp;|&nbsp;
+كد نویسی و گرافیک : <a target="_blank" title="قالب وبلاگ" href="http://www.theme-designer.com">تم دیزاینر</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'alborz-pic.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

@@ -1,0 +1,1696 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://cabaret.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1174704*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','139');
+	setStatVar('total_author','2');
+	setStatVar('modify_date','جمعه 17 بهمن 1393');
+	
+	setStatVar('today_view','6');
+	setStatVar('yesterday_view','12');
+	
+	setStatVar('this_month_view','385');
+	setStatVar('last_month_view','527');
+
+	setStatVar('total_view','218930');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (11:59)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://cabaret.mihanblog.com/statupdate/?data[refereruri]=http://asheghedivoone.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607778603&data[hash]=8b4d969ea4ba2783fd901d95b11b639e&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[160]='8';commentCnt[161]='37';commentCnt[164]='23';commentCnt[166]='14';commentCnt[167]='33';commentCnt[168]='10';commentCnt[169]='3';commentCnt[171]='3';commentCnt[172]='45';commentCnt[174]='33';commentCnt[175]='44';commentCnt[176]='8';commentCnt[178]='4';commentCnt[179]='1';commentCnt[180]='22';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[160]='7';
+mihanblogDisLikeArrCnt[160]='0';
+mihanblogLikeArrCnt[161]='16';
+mihanblogDisLikeArrCnt[161]='0';
+mihanblogLikeArrCnt[164]='5';
+mihanblogDisLikeArrCnt[164]='0';
+mihanblogLikeArrCnt[166]='4';
+mihanblogDisLikeArrCnt[166]='0';
+mihanblogLikeArrCnt[167]='3';
+mihanblogDisLikeArrCnt[167]='0';
+mihanblogLikeArrCnt[168]='2';
+mihanblogDisLikeArrCnt[168]='0';
+mihanblogLikeArrCnt[169]='4';
+mihanblogDisLikeArrCnt[169]='0';
+mihanblogLikeArrCnt[171]='3';
+mihanblogDisLikeArrCnt[171]='0';
+mihanblogLikeArrCnt[172]='8';
+mihanblogDisLikeArrCnt[172]='0';
+mihanblogLikeArrCnt[174]='11';
+mihanblogDisLikeArrCnt[174]='0';
+mihanblogLikeArrCnt[175]='3';
+mihanblogDisLikeArrCnt[175]='0';
+mihanblogLikeArrCnt[176]='0';
+mihanblogDisLikeArrCnt[176]='1';
+mihanblogLikeArrCnt[178]='3';
+mihanblogDisLikeArrCnt[178]='1';
+mihanblogLikeArrCnt[179]='3';
+mihanblogDisLikeArrCnt[179]='0';
+mihanblogLikeArrCnt[180]='9';
+mihanblogDisLikeArrCnt[180]='1';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://cabaret.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://cabaret.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://cabaret.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://cabaret.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://cabaret.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://cabaret.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://cabaret.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://cabaret.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://cabaret.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://cabaret.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://cabaret.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://cabaret.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://cabaret.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://cabaret.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://cabaret.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://cabaret.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://cabaret.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fa-IR">
+
+<head><!--قالب 001162748-->
+<title> کلبه خودمونی</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Farsi"><script type="text/javascript" >var url = "http://cabaret.mihanblog.com"</script>
+<meta name="description" content=" کلبه خودمونی - دلنوشته عاشقانه&nbsp; -  کلبه خودمونی">
+<meta name="keywords" content=" کلبه خودمونی,cabaret, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title=" کلبه خودمونی" href="http://cabaret.mihanblog.com/post/rss/">
+  <script type="text/javascript" src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/love/41-60/001162748/001162748m.js"></script>
+ 
+<!--[if lt IE 9]>
+<script src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/love/41-60/001162748/html5.js"></script>
+<![endif]--> 
+</head>
+<body>
+
+
+
+
+<!-- menu --> 
+ <nav>
+		<ul> 
+<li><a href="index.html">صفحه نخست</a></li>
+<li><a href="mailto:">رایانامه</a></li>
+<li><a href="javascript:messageForm()" target="blank">ارتباط با ما</a></li>
+<li><a href="http://cabaret.mihanblog.com/post/list" target="blank">آرشیو</a></li>
+<li><a href="http://www.&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/" target="blank">ایران نقش</a></li>
+
+<div class=sidebar-top2><div class=sidebar-top-txt2>
+<b>آرشیو مطالب</b></div></div>
+<marquee scrollamount=3 scrolldelay=1 direction=up width=100% height=150px  onmouseover='this.stop()' onmouseout='this.start()'>
+<li>
+<a href="http://cabaret.mihanblog.com/post/archive/1393/6" > شهریور 1393</a></li><li>
+<a href="http://cabaret.mihanblog.com/post/archive/1393/5" > مرداد 1393</a></li><li>
+<a href="http://cabaret.mihanblog.com/post/archive/1393/4" > تیر 1393</a></li><li>
+<a href="http://cabaret.mihanblog.com/post/archive/1393/3" > خرداد 1393</a></li><li>
+<a href="http://cabaret.mihanblog.com/post/archive/1393/2" > اردیبهشت 1393</a></li><li>
+<a href="http://cabaret.mihanblog.com/post/archive/1393/1" > فروردین 1393</a></li><li>
+<a href="http://cabaret.mihanblog.com/post/archive/1392/12" > اسفند 1392</a></li><li>
+<a href="http://cabaret.mihanblog.com/post/archive/1392/11" > بهمن 1392</a></li><li>
+<a href="http://cabaret.mihanblog.com/post/archive/1392/10" > دی 1392</a></li><li>
+<a href="http://cabaret.mihanblog.com/post/archive/1392/9" > آذر 1392</a></li><li>
+<a href="http://cabaret.mihanblog.com/post/archive/1392/8" > آبان 1392</a></li><li>
+<a href="http://cabaret.mihanblog.com/post/archive/1392/7" > مهر 1392</a></li><li>
+<a href="http://cabaret.mihanblog.com/post/archive/1392/6" > شهریور 1392</a></li><li>
+<a href="http://cabaret.mihanblog.com/post/archive/1392/5" > مرداد 1392</a></li><li>
+<a href="http://cabaret.mihanblog.com/post/archive/1392/4" > تیر 1392</a></li></marquee> 
+
+
+
+
+<div class=sidebar-top2><div class=sidebar-top-txt2>
+<b>پیوندها</b></div></div>
+<marquee scrollamount=3 scrolldelay=1 direction=up width=100% height=200px  onmouseover='this.stop()' onmouseout='this.start()'>
+<li>
+<a href="http://b10411.blogfa.com/" title="" target="_blank">اشعار عاشقانه</a></li><li>
+<a href="http://sciencebank.ir/" title="" target="_blank">::: بانک علوم ::: Science Bank :::</a></li><li>
+<a href="http://8pic.ir/" title="" target="_blank">آپلود عکس</a></li><li>
+<a href="http://www.milaadesign.com/wiz.swf" title="" target="_blank">سایتی که ذهنتو میخونه</a></li><li>
+<a href="http://muharram.net" title="" target="_blank">خرید تی شرت محرم</a></li><li>
+<a href="http://off.modiranmarket.biz" title="" target="_blank">خرید عینک</a></li><li>
+<a target="_blank" href="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;">ایران نقش</a></li></marquee> 
+			
+		</ul> 
+	 </nav> <article>
+<div align="center">
+<div id=wrapper>
+<div class="bottom-page">
+<div id=Back>
+
+
+
+
+<div id="Header">
+<div id="top-block">
+<div id="BlogTitle"><a href="index.html"> کلبه خودمونی</a></div>
+<div id="BlogDescription">دلنوشته عاشقانه</div>
+<div id="feed"><a target="blank" href="http://cabaret.mihanblog.com/post/rss/"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/love/41-60/001162748/images/feed-bg.png"></a></div>
+<div class="pervious"><b>آخرین مطالب :</b></div><div id="pervious">
+
+ 
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var i = 0;
+var pausecontent2=new Array() ;
+/*]]>*/
+</script>
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "پــاییـــز...";
+var b = "شنبه 29 شهریور 1393";
+var c = "/post/180";
+pausecontent2[ i ] = '<a href="http://cabaret.mihanblog.com/'+c+'" title="نوشته شده در تاریخ: '+b+'">'+a+'</a>';
+i++;
+/*]]>*/
+</script> 
+
+
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "خــــــاطرهـــا...";
+var b = "دوشنبه 24 شهریور 1393";
+var c = "/post/179";
+pausecontent2[ i ] = '<a href="http://cabaret.mihanblog.com/'+c+'" title="نوشته شده در تاریخ: '+b+'">'+a+'</a>';
+i++;
+/*]]>*/
+</script> 
+
+
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "کاش کمی عوض میشدیم...";
+var b = "یکشنبه 16 شهریور 1393";
+var c = "/post/178";
+pausecontent2[ i ] = '<a href="http://cabaret.mihanblog.com/'+c+'" title="نوشته شده در تاریخ: '+b+'">'+a+'</a>';
+i++;
+/*]]>*/
+</script> 
+
+
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "لیاقت";
+var b = "دوشنبه 3 شهریور 1393";
+var c = "/post/176";
+pausecontent2[ i ] = '<a href="http://cabaret.mihanblog.com/'+c+'" title="نوشته شده در تاریخ: '+b+'">'+a+'</a>';
+i++;
+/*]]>*/
+</script> 
+
+
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "قاصدک روشا...";
+var b = "دوشنبه 27 مرداد 1393";
+var c = "/post/175";
+pausecontent2[ i ] = '<a href="http://cabaret.mihanblog.com/'+c+'" title="نوشته شده در تاریخ: '+b+'">'+a+'</a>';
+i++;
+/*]]>*/
+</script> 
+
+
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "شبهای قدر";
+var b = "چهارشنبه 25 تیر 1393";
+var c = "/post/174";
+pausecontent2[ i ] = '<a href="http://cabaret.mihanblog.com/'+c+'" title="نوشته شده در تاریخ: '+b+'">'+a+'</a>';
+i++;
+/*]]>*/
+</script> 
+
+
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "رفیق باس ...";
+var b = "سه شنبه 17 تیر 1393";
+var c = "/post/172";
+pausecontent2[ i ] = '<a href="http://cabaret.mihanblog.com/'+c+'" title="نوشته شده در تاریخ: '+b+'">'+a+'</a>';
+i++;
+/*]]>*/
+</script> 
+
+
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "حرفی نیست....";
+var b = "شنبه 14 تیر 1393";
+var c = "/post/171";
+pausecontent2[ i ] = '<a href="http://cabaret.mihanblog.com/'+c+'" title="نوشته شده در تاریخ: '+b+'">'+a+'</a>';
+i++;
+/*]]>*/
+</script> 
+
+
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "من تورا میخواهم...";
+var b = "چهارشنبه 11 تیر 1393";
+var c = "/post/169";
+pausecontent2[ i ] = '<a href="http://cabaret.mihanblog.com/'+c+'" title="نوشته شده در تاریخ: '+b+'">'+a+'</a>';
+i++;
+/*]]>*/
+</script> 
+
+
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "کاش میفهمید ...";
+var b = "یکشنبه 8 تیر 1393";
+var c = "/post/168";
+pausecontent2[ i ] = '<a href="http://cabaret.mihanblog.com/'+c+'" title="نوشته شده در تاریخ: '+b+'">'+a+'</a>';
+i++;
+/*]]>*/
+</script> 
+
+
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "شخصیت شناسی با خطوط کف دست";
+var b = "جمعه 23 خرداد 1393";
+var c = "/post/167";
+pausecontent2[ i ] = '<a href="http://cabaret.mihanblog.com/'+c+'" title="نوشته شده در تاریخ: '+b+'">'+a+'</a>';
+i++;
+/*]]>*/
+</script> 
+
+
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "کاش زندگی ما آدم ها...";
+var b = "دوشنبه 19 خرداد 1393";
+var c = "/post/166";
+pausecontent2[ i ] = '<a href="http://cabaret.mihanblog.com/'+c+'" title="نوشته شده در تاریخ: '+b+'">'+a+'</a>';
+i++;
+/*]]>*/
+</script> 
+
+
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "عروسک پارچه ای";
+var b = "جمعه 16 خرداد 1393";
+var c = "/post/164";
+pausecontent2[ i ] = '<a href="http://cabaret.mihanblog.com/'+c+'" title="نوشته شده در تاریخ: '+b+'">'+a+'</a>';
+i++;
+/*]]>*/
+</script> 
+
+
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "دنیای دختر";
+var b = "پنجشنبه 11 اردیبهشت 1393";
+var c = "/post/161";
+pausecontent2[ i ] = '<a href="http://cabaret.mihanblog.com/'+c+'" title="نوشته شده در تاریخ: '+b+'">'+a+'</a>';
+i++;
+/*]]>*/
+</script> 
+
+
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "دختر";
+var b = "پنجشنبه 11 اردیبهشت 1393";
+var c = "/post/160";
+pausecontent2[ i ] = '<a href="http://cabaret.mihanblog.com/'+c+'" title="نوشته شده در تاریخ: '+b+'">'+a+'</a>';
+i++;
+/*]]>*/
+</script> 
+
+
+
+
+
+
+<script type="text/javascript">
+pausecontent2[ i ] = '<a href="http://cabaret.mihanblog.com/&lt;-PostLink-&gt;" title="" > </a>';
+new pausescroller(pausecontent2, "code", "m", 2000);</script>
+ </div><!--/pervious-->
+
+
+
+</div><!--/top-block-->
+<table border="0" width="1000" cellspacing="0" cellpadding="0">		
+
+
+<tr>
+
+
+
+
+
+
+
+<td width="670" valign="top">
+
+
+<div id="contant">
+
+			
+   
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+			<div class="post">		
+<div class=post-top>
+
+<div class="post-top2">
+  <b><a href="http://cabaret.mihanblog.com/post/180" title="پــاییـــز...">پــاییـــز...</a></b></div>
+
+</div> <div class=entry>					
+<div class="screen">
+ <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div align="center"><img src="http://8pic.ir/images/qfyyg0o7zkoyii8377oe.jpg" alt="" hspace="0" vspace="0" align="bottom" border="0"><br></div><div align="center"><font color="#FFFF00"><br></font><b><font size="3"><font color="#FFFF00">گوش کن !!<br><br>&nbsp;<br><br>صداى نفس هاى<font color="#FF9900"> پاییز</font> می آید...<br><br>&nbsp;<br><br>نگرانى هایت را از برگ هاى درختان آویزان کن ،<br><br>&nbsp;<br><br>چند روز دیگر می ریزند</font><br></font></b></div><div align="center"><br></div>
+
+
+ 
+						<br />						<br /><div class="tags">
+						برچسب ها :   <a href="http://cabaret.mihanblog.com/post/tag/%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" title="عاشقانه" >عاشقانه</a> , <br />												دسته بندی : 					    <a href="http://cabaret.mihanblog.com/post/category/1" title="مطالب عاشقانه" >مطالب عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/7" title="شعر های عاشقانه" >شعر های عاشقانه</a> , <br /><p></p>
+				
+	</div></div>	</div>	</a>
+                                <div><script>mihanblogPostLike('180','like')</script><div/><br/>
+
+<div class=post-bottom>
+<div class=date>&nbsp;01:07 -  &nbsp;شنبه 29 شهریور 1393 &nbsp; <a href="http://cabaret.mihanblog.com/post/author/1008042"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/love/41-60/001162748/images/author-icon.jpg"> BEHN@M </a> </div>
+<div class=Comment><a target="_self" href="javascript:newComment(180)">دیدگاه  <script>setCommentCnt(180)</script> </a>
+<script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div><!--end post-->
+  	<div class="post">		
+<div class=post-top>
+
+<div class="post-top2">
+  <b><a href="http://cabaret.mihanblog.com/post/179" title="خــــــاطرهـــا...">خــــــاطرهـــا...</a></b></div>
+
+</div> <div class=entry>					
+<div class="screen">
+ 
+
+
+
+<div align="center"><img src="http://8pic.ir/images/68ucm8gve0w91gdvo3tc.jpg" alt="" hspace="0" vspace="0" align="bottom" border="0"><br><font size="2"><br></font><div align="right"><font size="3"><b><font color="#FFFF00">مـــــــــــــرد می خواهد</font><br><br>&nbsp;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#FF9900"> خـــــــــــــــاطره هـــا</font> <font color="#FFFF00">را</font><br><br>&nbsp;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#FFFF00">&nbsp;&nbsp;&nbsp; بدون اشک مرور کردن...</font></b></font><br></div></div>
+
+
+
+
+
+
+
+
+
+
+ 
+						<br />						<br /><div class="tags">
+						برچسب ها :   <a href="http://cabaret.mihanblog.com/post/tag/%D8%AF%D9%84%D8%AA%D9%86%DA%AF%DB%8C" title="دلتنگی" >دلتنگی</a> , <br />												دسته بندی : 					    <a href="http://cabaret.mihanblog.com/post/category/8" title="دست نوشته های عاشقانه" >دست نوشته های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/7" title="شعر های عاشقانه" >شعر های عاشقانه</a> , <br /><p></p>
+				
+	</div></div>	</div>	</a>
+                                <div><script>mihanblogPostLike('179','like')</script><div/><br/>
+
+<div class=post-bottom>
+<div class=date>&nbsp;22:54 -  &nbsp;دوشنبه 24 شهریور 1393 &nbsp; <a href="http://cabaret.mihanblog.com/post/author/1008042"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/love/41-60/001162748/images/author-icon.jpg"> BEHN@M </a> </div>
+<div class=Comment><a target="_self" href="javascript:newComment(179)">دیدگاه  <script>setCommentCnt(179)</script> </a>
+<script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div><!--end post-->
+  	<div class="post">		
+<div class=post-top>
+
+<div class="post-top2">
+  <b><a href="http://cabaret.mihanblog.com/post/178" title="کاش کمی عوض میشدیم...">کاش کمی عوض میشدیم...</a></b></div>
+
+</div> <div class=entry>					
+<div class="screen">
+ 
+<div align="center"><font size="2"><b><font color="#FF0000">تنهایی</font> بهتر است<br><br>خودتی خودت<br><br>حداقل روحت <font color="#3366FF">آسایش</font> بیشتری دارد<br><br><font color="#FF0000">نگرانی</font> كمتری داری<br><br>و میتوانی برای خودت باشی<br><br>هیچ كس دیگر به با هم بودن های قدیم اعتقاد ندارد<br><br>همه میخواهند تو را از سر خود باز كنند<br><br></b></font></div><div align="center"><font size="3"><b><font size="2" color="#CC33CC">كاش كمی عوض میشدیم</font><br><br><img src="http://8pic.ir/images/713uy0m21tr709eigyky.jpg" alt="" align="bottom" border="0" hspace="0" vspace="0"><br></b></font></div>
+
+
+
+
+ 
+						<br />						<br /><div class="tags">
+						برچسب ها :   <a href="http://cabaret.mihanblog.com/post/tag/%D8%AC%D9%85%D9%84%D8%A7%D8%AA%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" title="جملات عاشقانه" >جملات عاشقانه</a> , <br />												دسته بندی : 					    <a href="http://cabaret.mihanblog.com/post/category/1" title="مطالب عاشقانه" >مطالب عاشقانه</a> , <br /><p></p>
+				
+	</div></div>	</div>	</a>
+                                <div><script>mihanblogPostLike('178','like')</script><div/><br/>
+
+<div class=post-bottom>
+<div class=date>&nbsp;20:28 -  &nbsp;یکشنبه 16 شهریور 1393 &nbsp; <a href="http://cabaret.mihanblog.com/post/author/1008042"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/love/41-60/001162748/images/author-icon.jpg"> BEHN@M </a> </div>
+<div class=Comment><a target="_self" href="javascript:newComment(178)">دیدگاه  <script>setCommentCnt(178)</script> </a>
+<script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div><!--end post-->
+  	<div class="post">		
+<div class=post-top>
+
+<div class="post-top2">
+  <b><a href="http://cabaret.mihanblog.com/post/176" title="لیاقت">لیاقت</a></b></div>
+
+</div> <div class=entry>					
+<div class="screen">
+<a href="http://cabaret.mihanblog.com/post/author/1043878"></a> 
+
+<div align="center"><font color="#CCCCCC" size="3"><b><br><br><img src="http://forum.hammihan.com/user_images/20_01_2013/27573.png" alt="" border="0" align="bottom" height="324" hspace="0" vspace="0" width="484"><br><br><br>معجزه میکند گذشت <font color="#FF0000">زمـــــــــــــــــان</font>!&nbsp;&nbsp;&nbsp; <br><br><br>&nbsp;&nbsp;&nbsp;&nbsp; بـــــــــــــگذار <font color="#FF0000">صادقانه</font> بگویم<br><br><br>آنـــــــکه <font color="#FF0000">قــــــدر بــــــودنت</font> را <font color="#FF0000">نـــــــــــدانست&nbsp;&nbsp;&nbsp;</font> <br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#FF0000"> لایـــــــــــق</font> حـــــضور در<font color="#FF0000"> افکارت</font> نــیست <font color="#FF0000">بـــــــــــــــگذار</font> بــرود!<br><br><br>خــــــــــواهد فــــــــهمید<br><br><br><font color="#FF0000">جاده های بــــــــــــاز&nbsp;</font>&nbsp;&nbsp; <br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; از <font color="#FF0000">آغوش بسته</font> ی تـــــــــو <font color="#FF0000">جذاب تر</font> نــــــــــــــیست</b></font><br></div>
+
+
+
+
+
+
+ 
+						<br />						<br /><div class="tags">
+																		دسته بندی : 					    <a href="http://cabaret.mihanblog.com/post/category/1" title="مطالب عاشقانه" >مطالب عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/8" title="دست نوشته های عاشقانه" >دست نوشته های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/7" title="شعر های عاشقانه" >شعر های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/2" title="عکس های عاشقانه" >عکس های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/9" title="درد و دل" >درد و دل</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/12" title="جدید ترین اس ام اس های عاشقانه" >جدید ترین اس ام اس های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/3" title="دلنوشته های شما" >دلنوشته های شما</a> , <br /><p></p>
+				
+	</div></div>	</div>	</a>
+                                <div><script>mihanblogPostLike('176','like')</script><div/><br/>
+
+<div class=post-bottom>
+<div class=date>&nbsp;16:01 -  &nbsp;دوشنبه 3 شهریور 1393 &nbsp; <a href="http://cabaret.mihanblog.com/post/author/1043878"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/love/41-60/001162748/images/author-icon.jpg"> ROshaaa </a> </div>
+<div class=Comment><a target="_self" href="javascript:newComment(176)">دلنوشته  <script>setCommentCnt(176)</script> </a>
+<script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div><!--end post-->
+  	<div class="post">		
+<div class=post-top>
+
+<div class="post-top2">
+  <b><a href="http://cabaret.mihanblog.com/post/175" title="قاصدک روشا...">قاصدک روشا...</a></b></div>
+
+</div> <div class=entry>					
+<div class="screen">
+<a href="http://cabaret.mihanblog.com/post/author/1043878"></a> 
+
+
+
+
+<div align="center"><font face="arial,helvetica,sans-serif"><b><font size="3"><font color="#33CCFF">&nbsp;♥ قاصدک تنهای من ♥<br><br></font><br><font color="#FFFF66">بیا توشه راه برگیریم و به مرور قطار زندگیم برویم<br><br></font><br><font color="#33CCFF"><font color="#3366FF">سر هر ایستگاه بایستیم و خاطره ای تازه کنیم ........<br><br></font>&nbsp;</font><br><font color="#FFFF00">چند روزیست در میان همهمه ی ادمیان و روزمره گیشان گم شده ام<br><br></font><br><font style="direction: ltr;" color="#3366FF">بی اختیار وسط مسیر ایستاده ام ... نمیدانم کجا بروم ؟ کجا را&nbsp; دارم که&nbsp; بروم ؟<br><br></font><font color="#3366FF"></font><br><font color="#FFFF33">برای همین به مرور لحظات اوج و عمق زندگیم نیازمندم تا بدانم(از کجا امده ام ،امدنم بهر چه بود؟)<br><br></font><br><font color="#3366FF">قاصدک همراه من پرواز کن تا ببینی چند بار شکستم اما باز کمر راست کردم چند بار تنها شدم اما<br><br></font><br><font color="#FFFF00">&nbsp;با تنهایی هایم هم دوست شدم تا که شاید حداقل او پیشم بماند اما نماند و در هر ایستگاه کسی مهمان<br><br><br><font color="#3366FF">&nbsp;زندگیم شد</font></font><font color="#3366FF"> و تنهایی هایم را راند اما فقط مهمان بود و در همان ایستگاه برایم دست خداحافظی تکان میداد <br><br><br><font color="#FFFF33">گویا بار سختی های</font></font><font color="#FFFF33"> زندگی من و بغض ها فروخورده ام خیلی سنگین بود ک هر کس که وارد این زندگی شد <br><br><br><font color="#3366FF">چون درختی ک تحمل </font></font><font color="#3366FF">بار هایش را ندارد مرا به زمین گذاشت و به بالا صعود کرد و رفت گله ای ندارم <br><br><br><font color="#FFFF33">نه اینکه گله ای نیست&nbsp; </font></font><font color="#FFFF00"><font color="#FFFF33">نه فقط گله کردن ر</font>ا نیاموخته ام.یادگرفتم بگویم شاید این سرنوشت دخترک <br><br><br><font color="#3366FF">قصه است</font></font><font color="#3366FF"> قاصدک گریه نکن تو تنها همسفر زندگیم هستی تا که خبرهای این دنیای بی وفا را ب گوشم برسانی<br>&nbsp;</font><br><br><font color="#FFFF00">البته بایدگفت این دنیای بی وفا لطف هایی هم ب من کرده است ک ذره بین به دست گرفته ام <br><br></font><br><font color="#3366FF">تا که شاید هم قد&nbsp; بدی هایش شود و من دل خوش کنم ب خوبی های زود گذر و بدی های ماندگار<br><br></font><br><font color="#FFFF00">قاصدک بایست و نگاه کن ...انگار دردکشیده تر از من هم هست<br><br></font><br><font color="#3366FF">این همه ناشکری هایم را با این سرعت ب کجامی بری؟<br><br></font><br><font color="#FFFF00">اسمان هفتم؟ قاصدک ابرویم را نبر من تنها<br><br></font><br><font size="4" color="#3366FF">خدا</font><font color="#3366FF"> را دارم ک ایستگاه به ایستگاه</font><br><br><br><font color="#FFFF00">یار و همراه من است<br><br></font><br><font color="#3366FF">بگذار او برایم<br><br></font><br><font color="#FFFF33">بماند.</font></font></b></font><br><br><font size="4"><b><font color="#FF99FF" face="georgia,times new roman,times,serif"><br><font color="#3366FF">((♥روشا♥))</font></font></b></font><br><br><br><img src="http://www.delnavard.ir/wp-content/uploads/qasedak.jpg" alt="" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><br><br><span lang="fa"><font class="foth9dg" style="font-size: 8pt" color="#333333" face="Tahoma"><font class="foth9dg" style="font-size: 11pt" color="#333333" face="Tahoma"><p align="center"><a href="http://parsskin.com" target="_blank"><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/89.gif" border="0" height="49" width="400"></a></p></font></font></span><p dir="RTL" align="justify"><font size="4" color="#993399" face="times new roman,times,serif"><span lang="FA">قاصدک هان چه خبر
+آوردی</span></font></p><p dir="RTL" align="justify"><font size="4" color="#993399" face="times new roman,times,serif"><span lang="FA"><br></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#CC33CC">&nbsp; از کجا وز که خبر
+آوردی</font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#CC33CC"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#CC66CC">&nbsp;&nbsp; خوش خبر باشی اما <br></font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#CC66CC"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#FF99FF"> گرد بام و در من</font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#FF99FF"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#FFCCFF">&nbsp; بی‌ثمر می‌گردی</font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#FFCCFF"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#6600CC">&nbsp; انتظار خبری نیست مرا</font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#6600CC"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<font color="#6633FF"> نه زیادی نه ز دیاری،
+باری</font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#6633FF"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <font color="#6666CC">برو آنجا که بود چشمی
+و گوشی با کس</font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#6666CC"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;<font color="#9999FF"> برو آنجا که تو را
+منتظرند</font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#9999FF"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" color="#3333FF" face="times new roman,times,serif"><span lang="FA">قاصدک</span></font></p><p dir="RTL" align="justify"><font size="4" color="#3333FF" face="times new roman,times,serif"><span lang="FA"><br></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#3366FF"> در دل من همه کورند و
+کرند <br></font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#3366FF"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#3366FF">&nbsp; دست بردار ازین در
+وطن خویش غریب</font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#3366FF"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#33CCFF">&nbsp;&nbsp; قاصد تجربه‌های همه
+تلخ</font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#33CCFF"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#66FFFF">&nbsp; با دلم می‌گوید</font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#66FFFF"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#66CCCC">که دروغی تو دروغ</font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#66CCCC"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#00CCCC"> که فریبی تو فریب</font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#00CCCC"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#339999">&nbsp;&nbsp; قاصدک هان،‌ ولی...
+آخر... ای وای</font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#339999"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" color="#336666" face="times new roman,times,serif"><span lang="FA">راستی آیا رفتی با
+باد؟</span></font></p><p dir="RTL" align="justify"><font size="4" color="#336666" face="times new roman,times,serif"><span lang="FA"><br></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#006600">با توام آی! کجا
+رفتی؟ آی</font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#006600"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#009900">راستی آیا جائی خبری
+هست هنوز؟</font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#009900"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#33CC00"> مانده خاکستر گرمی،
+جائی؟</font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#33CC00"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#33FF33">&nbsp; در اجاقی- طمع شعله
+نمی‌بندم- خردک شرری هست هنوز</font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#33FF33"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<font color="#FFFF33"> قاصدک</font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#FFFF33"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#FFCC00">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ابرهای همه عالم شب و
+روز <br></font></span></font></p><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA"><font color="#FFCC00"><br></font></span></font></p><font size="4" face="times new roman,times,serif">
+
+</font><p dir="RTL" align="justify"><font size="4" face="times new roman,times,serif"><span lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#FF9900">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; در دلم می‌گریند.</font></span></font></p><p dir="RTL" align="justify"><font color="#FF9900"><font size="4"><font face="times new roman,times,serif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#FF0000"><br></font></font></font></font></p><p dir="RTL" align="justify"><font color="#FF9900"><font size="4"><font face="times new roman,times,serif"><font color="#FF0000"><br></font></font></font></font></p><p dir="RTL" align="center"><font color="#FF9900"><font size="4"><font face="times new roman,times,serif"><font color="#FF0000">&nbsp; ((♥مهدی اخوان ثالث♥))</font></font></font></font></p><p dir="RTL" align="justify"><br></p><p dir="RTL" align="center"><br></p><p dir="RTL" align="center"><img src="http://emptyeasel.com/wp-content/uploads/2009/07/dandelion.jpg" alt="" align="bottom" border="0" hspace="0" vspace="0"></p><p dir="RTL" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br><font size="4" face="times new roman,times,serif"><span lang="FA"></span></font></p><span lang="fa"></span><span lang="fa"></span><br><span lang="fa"><font class="foth9dg" style="font-size: 8pt" color="#333333" face="Tahoma"><font class="foth9dg" style="font-size: 11pt" color="#333333" face="Tahoma"><p align="center"><a href="http://parsskin.com" target="_blank"><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/89.gif" border="0" height="49" width="400"></a></p><p align="center"><br></p></font></font></span><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><font color="#FFFFFF">قاصدک</font> <font color="#FFFF66">غم</font> دارم،</font></p><font color="#FF0000"><br><font size="4" face="times new roman,times,serif">
+</font></font><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><font color="#FFFF33">غم </font>آوارگی و دربدری،</font></p><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><br></font></p><font size="4" color="#FF0000" face="times new roman,times,serif">
+</font><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><font color="#FFFF33">غم </font>تنهایی و خونین جگری</font></p><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><br></font></p><font size="4" color="#FF0000" face="times new roman,times,serif">
+</font><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><font color="#FFFFFF">قاصدک</font> وای به من همه از خویش مرا می رانند،</font></p><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><br></font></p><font size="4" color="#FF0000" face="times new roman,times,serif">
+</font><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif">همه <font color="#3366FF">دیوانه</font> و <font color="#3366FF">دیوانه ترم</font> می خوانند</font></p><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><br></font></p><font size="4" color="#FF0000" face="times new roman,times,serif">
+</font><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif">مادر من <font color="#FFFF33">غم </font>هاست،مهد و گهواره ی من <font color="#3366FF">ماتم</font> هاست،</font></p><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><br></font></p><font size="4" color="#FF0000" face="times new roman,times,serif">
+</font><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><font color="#FFFFFF">قاصدک</font> دریابم!</font></p><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><br></font></p><font size="4" color="#FF0000" face="times new roman,times,serif">
+</font><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif">روح من <font color="#3366FF">عصیان</font> زده و <font color="#3366FF">طوفانیست</font>،</font></p><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><br></font></p><font size="4" color="#FF0000" face="times new roman,times,serif">
+</font><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif">آسمان نگهم <font color="#3366FF">بارانیست</font></font></p><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><br></font></p><font size="4" color="#FF0000" face="times new roman,times,serif">
+</font><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><font color="#FFFFFF">قاصدک </font><font color="#FFFF00">غم </font>دارم،<font color="#FFFF00">غم</font> به اندازه سنگینی عالم دارم،</font></p><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><br></font></p><font size="4" color="#FF0000" face="times new roman,times,serif">
+</font><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><font color="#FFFF33">غم</font> من صحراهاست،افق تیره او ناپیداست</font></p><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><br></font></p><font size="4" color="#FF0000" face="times new roman,times,serif">
+</font><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><font color="#FFFFFF">قاصدک</font> دیگر از این پس منم و<font color="#3366FF"> تنهایی</font></font></p><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><br></font></p><font size="4" color="#FF0000" face="times new roman,times,serif">
+</font><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif">و به تنهایی خود در هوس عیسایی،</font></p><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><br></font></p><font size="4" color="#FF0000" face="times new roman,times,serif">
+</font><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif">و به عیسایی خود منتظر معجزه ای _غوغایی</font></p><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><br></font></p><font size="4" color="#FF0000" face="times new roman,times,serif">
+</font><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><font color="#FFFFFF">قاصدک</font> حال گریزش دارم،</font></p><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><br></font></p><font size="4" color="#FF0000" face="times new roman,times,serif">
+</font><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif">می گریزم به جهانی که در آن <font color="#3333FF">پستی </font>نیست،</font></p><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><br></font></p><font size="4" color="#FF0000" face="times new roman,times,serif">
+</font><p dir="rtl" align="center"><font size="4" color="#3366FF" face="times new roman,times,serif">پستی و مستی و بد مستی نیست</font></p><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><br></font></p><font size="4" color="#FF0000" face="times new roman,times,serif">
+</font><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif">می گریزم به جهانی که مرا ناپیداست</font></p><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><br></font></p><font size="4" color="#FF0000" face="times new roman,times,serif">
+</font><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif">شاید آن نیز فقط یک <font color="#3366FF">رویاست</font></font></p><p dir="rtl" align="center"><br></p><p dir="rtl" align="center"><font size="4"><b><font color="#FF0000" face="times new roman,times,serif"><font color="#3366FF"><font color="#CCCCCC">((♥مجتبی پوریان♥))</font></font></font></b></font></p><p dir="rtl" align="center"><font size="4"><b><font color="#FF0000" face="times new roman,times,serif"><font color="#3366FF"><font color="#CCCCCC"></font><br></font></font></b></font></p><p dir="rtl" align="center"><font size="4" color="#FF0000" face="times new roman,times,serif"><font color="#3366FF"><img src="http://zendeyaad.persiangig.com/DARYA/GHASEDAK%20END.JPG" alt="" align="bottom" border="0" height="333" hspace="0" vspace="0" width="443"></font></font></p><font color="#FF0000"><span lang="fa"></span></font><br><br></div>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+						<br />						<br /><div class="tags">
+						برچسب ها :   <a href="http://cabaret.mihanblog.com/post/tag/%D8%B4%D8%B9%D8%B1%20%D8%AF%D8%B1%20%D9%85%D9%88%D8%B1%D8%AF%20%D9%82%D8%A7%D8%B5%D8%AF%DA%A9" title="شعر در مورد قاصدک" >شعر در مورد قاصدک</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D8%B4%D8%B9%D8%B1%20%D9%82%D8%A7%D8%B5%D8%AF%DA%A9%20%D8%A7%D8%AE%D9%88%D8%A7%D9%86%20%D8%AB%D8%A7%D9%84%D8%AB" title="شعر قاصدک اخوان ثالث" >شعر قاصدک اخوان ثالث</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D8%B4%D8%B9%D8%B1%20%D9%85%D8%AC%D8%AA%D8%A8%DB%8C%20%D9%BE%D9%88%D8%B1%DB%8C%D8%A7%D9%86%20%D8%AF%D8%B1%20%D9%85%D9%88%D8%B1%D8%AF%20%D9%82%D8%A7%D8%B5%D8%AF%DA%A9" title="شعر مجتبی پوریان در مورد قاصدک" >شعر مجتبی پوریان در مورد قاصدک</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87%20%D8%B1%D9%88%D8%B4%D8%A7%20%D8%AF%D8%B1%20%D9%85%D9%88%D8%B1%D8%AF%20%D9%82%D8%A7%D8%B5%D8%AF%DA%A9" title="دلنوشته روشا در مورد قاصدک" >دلنوشته روشا در مورد قاصدک</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87%20%D9%87%D8%A7%DB%8C%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C" title="دلنوشته های تنهایی" >دلنوشته های تنهایی</a> , <br />												دسته بندی : 					    <a href="http://cabaret.mihanblog.com/post/category/1" title="مطالب عاشقانه" >مطالب عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/8" title="دست نوشته های عاشقانه" >دست نوشته های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/7" title="شعر های عاشقانه" >شعر های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/2" title="عکس های عاشقانه" >عکس های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/20" title="دلنوشته های روشا" >دلنوشته های روشا</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/12" title="جدید ترین اس ام اس های عاشقانه" >جدید ترین اس ام اس های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/3" title="دلنوشته های شما" >دلنوشته های شما</a> , <br /><p></p>
+				
+	</div></div>	</div>	</a>
+                                <div><script>mihanblogPostLike('175','like')</script><div/><br/>
+
+<div class=post-bottom>
+<div class=date>&nbsp;13:56 -  &nbsp;دوشنبه 27 مرداد 1393 &nbsp; <a href="http://cabaret.mihanblog.com/post/author/1043878"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/love/41-60/001162748/images/author-icon.jpg"> ROshaaa </a> </div>
+<div class=Comment><a target="_self" href="javascript:newComment(175)">دل نوشته  <script>setCommentCnt(175)</script> </a>
+<script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div><!--end post-->
+  	<div class="post">		
+<div class=post-top>
+
+<div class="post-top2">
+  <b><a href="http://cabaret.mihanblog.com/post/174" title="شبهای قدر">شبهای قدر</a></b></div>
+
+</div> <div class=entry>					
+<div class="screen">
+ 
+<div align="center"><font size="4"><b><font face="times new roman,times,serif"><font color="#CCFFFF">امشب چه چراغانیست اسمان<br></font><br><font color="#66FFFF">چه هیاوهویست بین فرشتگان</font><br><br><br><font color="#33CCFF">خدایا :&nbsp;&nbsp;</font> <br><br><font color="#3366FF">میخواهم به قلم بیاورم حسرت های این دل بیمار را</font><br><br><font color="#3333FF">در شبهایی که تقدیرم رقم میخورد!!</font><br><br><br><font color="#99FFFF">میخواهم وجود ناچیزم را با تمام گناه هایم تسلیم بزرگی و بخششت کنم.</font><br><br><font color="#33FFFF">چه بگویم روی نگاه ندارم...</font><br><br><font color="#66CCCC">در تاریکی شب فرو میروم و اشک میریزم ،<br></font><br><font color="#33CCFF">اشک برای :</font><br><br><font color="#3366FF">لحظه هایی که وجودت را خودخواهانه نادیده گرفتم</font><br><br><font color="#3333FF">ثانیه هایی که تمام لطف و مهربانیت را وظیفه خداییت دانستم</font><br><font color="#FFCCFF"><br>دقیقه هایی که گناه کردم و بی پرده به گناهانم خندیدم</font><br><br><font color="#FF99FF">ساعت هایی که حتی مرغ یا حق ، حق گوی خداییت بود کمترین کارهای بندگی ام را<br></font><br><br><font color="#CC66CC">به بهانه ی فراموشی به دست فرشته ی چپ اعمالم سپردم</font><br><br><font color="#CC33CC">روزهایی که آن قدر در دنیا و ظواهر فریبنده اش بی رحمانه غرق میشدم که<br></font><br><font color="#993399">بنده های خدا را کوچک میشماردم.</font><br><br><font color="#99FF99">احساساتشان را یک بازی کودکانه و شکستن دلشان را یک عادت همیشگی میدانستم.</font><br><br><br><font color="#66FF99">و ماه ها و سالها </font><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#33FF33">همین طور زندگی میکردم....</font><br><br><font color="#33CC00">اما خدایا .....خدای مهربان</font><br><br><font color="#009900">مهربان نیستم اما مهربانی کن در حقم</font><br><br><font color="#006600"><br>سوگند به قرآن، همیشه حقت</font><br><br><font color="#FFCC99">سوگند به امام اولت، دلاور دل های خدایی</font><br><br><font color="#FF9966">سوگند به تمامین ستاره های تابناک امامیت</font><br><br><font color="#FF9900">ملتمسانه ازت میخواهم</font><br><br><font color="#FF6600">کشتی بخشش و امرزشت را در دریای گناهانم به حرکت در بیاوری</font><br><br><font color="#CC6600">و مرا ببخشی!</font><br><br><font color="#FF0000">((بنده ی کوچکت روشا ))</font><br><br><font color="#FFFF33">التماس دعا<br><br><br><br><img src="http://picfa.net/gallery/63/picfa-net%20%282%29.jpg" alt="" border="0" align="bottom" height="367" hspace="0" vspace="0" width="520"><br></font></font></b></font></div>
+
+
+
+
+ 
+						<br />						<br /><div class="tags">
+						برچسب ها :   <a href="http://cabaret.mihanblog.com/post/tag/%D8%B4%D8%A8%D9%87%D8%A7%DB%8C%20%D9%82%D8%AF%D8%B1" title="شبهای قدر" >شبهای قدر</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D9%85%D8%AA%D9%86%20%D8%AF%D8%B1%20%D9%85%D9%88%D8%B1%D8%AF%20%D8%B4%D8%A8%D9%87%D8%A7%DB%8C%20%D8%A7%D8%AD%DB%8C%D8%A7" title="متن در مورد شبهای احیا" >متن در مورد شبهای احیا</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D8%AF%D8%A7%D9%86%D9%88%D8%B4%D8%AA%D9%87%20%D9%87%D8%A7%DB%8C%20%D8%B1%D9%88%D8%B4%D8%A7" title="دانوشته های روشا" >دانوشته های روشا</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D9%86%D9%88%D8%B4%D8%AA%D9%87%20%D8%AF%D8%B1%20%D9%85%D9%88%D8%B1%D8%AF%20%D8%A8%D8%AE%D8%B4%D8%B4%20%DA%AF%D9%86%D8%A7%D9%87%D8%A7%D9%86" title="نوشته در مورد بخشش گناهان" >نوشته در مورد بخشش گناهان</a> , <br />												دسته بندی : 					    <a href="http://cabaret.mihanblog.com/post/category/1" title="مطالب عاشقانه" >مطالب عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/8" title="دست نوشته های عاشقانه" >دست نوشته های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/9" title="درد و دل" >درد و دل</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/20" title="دلنوشته های روشا" >دلنوشته های روشا</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/3" title="دلنوشته های شما" >دلنوشته های شما</a> , <br /><p></p>
+				
+	</div></div>	</div>	</a>
+                                <div><script>mihanblogPostLike('174','like')</script><div/><br/>
+
+<div class=post-bottom>
+<div class=date>&nbsp;21:56 -  &nbsp;چهارشنبه 25 تیر 1393 &nbsp; <a href="http://cabaret.mihanblog.com/post/author/1043878"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/love/41-60/001162748/images/author-icon.jpg"> ROshaaa </a> </div>
+<div class=Comment><a target="_self" href="javascript:newComment(174)">دل نوشته  <script>setCommentCnt(174)</script> </a>
+<script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div><!--end post-->
+  	<div class="post">		
+<div class=post-top>
+
+<div class="post-top2">
+  <b><a href="http://cabaret.mihanblog.com/post/172" title="رفیق باس ...">رفیق باس ...</a></b></div>
+
+</div> <div class=entry>					
+<div class="screen">
+<a href="http://cabaret.mihanblog.com/post/author/1043878"></a> 
+
+<div align="center"><font size="5"><b><font face="times new roman,times,serif"><font color="#66FFFF">رفیق باس....!</font><br><br><font color="#3366FF">(یک جمله در مورد رفیق بگو)</font></font></b></font><br><br><img src="http://salijoon.info/mail93/930416/rafigh/userupload_2013_17419467351392120140.0589.png" alt="" border="0" align="bottom" height="250" hspace="0" vspace="0" width="522"><br><br><br><br><img src="http://salijoon.info/mail93/930416/rafigh/userupload_2013_14282364231392120140.1034.png" alt="" border="0" align="bottom" height="250" hspace="0" vspace="0" width="522"><br><br><br><br><img src="http://salijoon.info/mail93/930416/rafigh/userupload_2013_5087539911392120140.1299.png" alt="" border="0" align="bottom" height="250" hspace="0" vspace="0" width="525"><br><br><br><br><img src="http://salijoon.info/mail93/930416/rafigh/userupload_2013_2696744121392120140.1503.png" alt="" border="0" align="bottom" height="250" hspace="0" vspace="0" width="531"><br><br><br><br><img src="http://salijoon.info/mail93/930416/rafigh/userupload_2013_19776727561392119548.1985.png" alt="" border="0" align="bottom" height="219" hspace="0" vspace="0" width="538"><br><br><br><br><img src="http://salijoon.info/mail93/930416/rafigh/userupload_2013_1670825641392119548.224.jpg" alt="" border="0" align="bottom" height="263" hspace="0" vspace="0" width="535"><br><br><br><br><br><img src="http://salijoon.info/mail93/930416/rafigh/userupload_2013_12869617591392119548.2627.jpg" alt="" border="0" align="bottom" height="270" hspace="0" vspace="0" width="534"><br><br><br><br><img src="http://salijoon.info/mail93/930416/rafigh/userupload_2013_8078224891392119548.3152.jpg" alt="" border="0" align="bottom" height="271" hspace="0" vspace="0" width="510"><br><br><br><br><br><br></div>
+
+
+
+
+
+
+ 
+						<br />						<br /><div class="tags">
+						برچسب ها :   <a href="http://cabaret.mihanblog.com/post/tag/%D8%B1%D9%81%DB%8C%D9%82%20%D8%A8%D8%A7%D8%B3_____%7C(dot)%7C__________%7C(dot)%7C__________%7C(dot)%7C_____" title="رفیق باس..." >رفیق باس...</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D9%85%D8%B7%D9%84%D8%A8%20%D8%AF%D8%B1%20%D9%85%D9%88%D8%B1%D8%AF%20%D8%B1%D9%81%DB%8C%D9%82%20%D8%B5%D9%85%DB%8C%D9%85%DB%8C" title="مطلب در مورد رفیق صمیمی" >مطلب در مورد رفیق صمیمی</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D8%B9%DA%A9%D8%B3%20%D8%AF%D8%B1%20%D9%85%D9%88%D8%B1%D8%AF%20%D8%AF%D9%88%D8%B3%D8%AA%D8%A7%D9%86%20%D8%B5%D9%85%DB%8C%D9%85%DB%8C" title="عکس در مورد دوستان صمیمی" >عکس در مورد دوستان صمیمی</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D9%85%D8%B7%D8%A7%D9%84%D8%A8%20%D8%B7%D9%86%D8%B2%20%D8%AF%D8%B1%20%D9%85%D9%88%D8%B1%D8%AF%20%D8%B1%D9%81%DB%8C%D9%82" title="مطالب طنز در مورد رفیق" >مطالب طنز در مورد رفیق</a> , <br />												دسته بندی : 					    <a href="http://cabaret.mihanblog.com/post/category/1" title="مطالب عاشقانه" >مطالب عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/8" title="دست نوشته های عاشقانه" >دست نوشته های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/7" title="شعر های عاشقانه" >شعر های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/2" title="عکس های عاشقانه" >عکس های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/6" title="مطلب جالب و آموزنده" >مطلب جالب و آموزنده</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/5" title="مطالب طنز و خنده دار" >مطالب طنز و خنده دار</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/18" title="مطلب های طنز" >مطلب های طنز</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/11" title="عکس های با حال و طنز" >عکس های با حال و طنز</a> , <br /><p><a href='http://cabaret.mihanblog.com/post/172'>ادامه مطلب</a></p>
+				
+	</div></div>	</div>	</a>
+                                <div><script>mihanblogPostLike('172','like')</script><div/><br/>
+
+<div class=post-bottom>
+<div class=date>&nbsp;13:03 -  &nbsp;سه شنبه 17 تیر 1393 &nbsp; <a href="http://cabaret.mihanblog.com/post/author/1043878"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/love/41-60/001162748/images/author-icon.jpg"> ROshaaa </a> </div>
+<div class=Comment><a target="_self" href="javascript:newComment(172)">دل نوشته  <script>setCommentCnt(172)</script> </a>
+<script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div><!--end post-->
+  	<div class="post">		
+<div class=post-top>
+
+<div class="post-top2">
+  <b><a href="http://cabaret.mihanblog.com/post/171" title="حرفی نیست....">حرفی نیست....</a></b></div>
+
+</div> <div class=entry>					
+<div class="screen">
+ <div align="center"><br><font face="times new roman,times,serif" size="4"><font color="#009900"><font color="#3333FF"><font color="#FFFF33"><b>خیلــی از خـودش خـوش قــول تــر اســت …<br><br>&nbsp;خیــالـــش را مــی گـــویــــم <br><br>کـه یک عمـر اسـت زودتـر ازخـودش آمـده<br><br>&nbsp;سـر قـرارمـان !</b></font><br><br><b><font color="#FF0000">****</font></b><br><br><br></font></font></font><font face="times new roman,times,serif" size="4"><font color="#3366FF"><font color="#33FF33"><b>وقتـــی عاشقـــانه هایــت بوی رفتــن می داد...<br><br>
+این روزهای تنهـــایی دور از انتظــار نبـــود...</b></font><br><br><br><b><font color="#FF0000">****</font></b><br><br></font></font><font face="times new roman,times,serif" size="4"><font color="#FF99FF"><b>میتــــوانم فــراموشــت کنـــم...<br><br>&nbsp;فــقط با خــود سـخت می جنـــگم...<br><br>کـه دیـگر بـه یــاد نیــارمـت !</b></font><br><br><br><font color="#FF0000">****</font><br><br></font><font face="times new roman,times,serif" size="4"><span style="line-height: 115%;" lang="FA"><br></span></font><div align="center"><font color="#FF6600"><b><font face="times new roman,times,serif" size="4"><span style="line-height: 115%;" lang="FA">نمـــــیـدانــــی ،</span></font><br><br><font face="times new roman,times,serif" size="4"><span style="line-height: 115%;" lang="FA">
+چه دردی دارد !</span></font><br><br><font face="times new roman,times,serif" size="4"><span style="line-height: 115%;" lang="FA">
+وقـــتـی ..</span></font><br><br><font face="times new roman,times,serif" size="4"><span style="line-height: 115%;" lang="FA">
+حــــالـم ..</span></font><br><br></b></font><font face="times new roman,times,serif" size="4"><span style="line-height: 115%;" lang="FA"><font color="#FF6600"><b>
+در واژه هــا هــم نــمی گنــــجــد …!</b></font><br><br><font color="#FF0000"><br></font><font face="times new roman,times,serif"><font color="#FF0000">****</font><br><br></font></span></font><font face="times new roman,times,serif" size="4"><font color="#CC0000"><b>شـــاید برایت عجیب ســت این همه آرامشـــم !<br><br>
+خــودمـــانی بگویــم ؛ ...<br><br>به آخر که برسی ، دیگر فقط نـــگاه میکنــی . . .<br></b><br><br><font color="#FF0000">****</font><br><b><font color="#66FFFF"><br></font></b></font></font><b><font color="#66FFFF" face="times new roman,times,serif" size="4">وقتی می گویم دیگر ســراغم نیــا</font></b><font color="#FF6600"><b><font color="#66FFFF"><br><br><font face="times new roman,times,serif" size="4">
+ فکر نکن که فراموشت کردم ،<br><br>یا دیگر دوستت ندارم…<br><br>&nbsp;نــــــــــــه…</font><br><br></font></b><font face="times new roman,times,serif" size="4"><b><font color="#66FFFF">
+من فقط فهمیدم وقتی دلت با من نیست، <br><br>بودنت مشکلی را حل نمی کند…</font></b><br><br><font color="#FF0000">****</font><br><br></font></font><b><font face="times new roman,times,serif" size="4"><font color="#3366FF">انصـــاف نبـــود ...<br><br>رفــتنت با خــودت بـاشــد ، <br><br>فـــرامـــوش کــردنت بــا مــن …<br><br><br><img src="http://www.kelishe.com/wp-content/uploads/2013/04/romantic-separation9.jpg" alt="" border="0" align="bottom" hspace="0" vspace="0"><br><br></font></font></b></div><br></div>
+
+
+ 
+						<br />						<br /><div class="tags">
+						برچسب ها :   <a href="http://cabaret.mihanblog.com/post/tag/%D8%A7%D8%B3%20%D9%85%D8%B3%20%D8%AC%D8%AF%D8%A7%DB%8C%DB%8C" title="اس مس جدایی" >اس مس جدایی</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D9%85%D8%AA%D9%86%20%D8%A7%D8%B2%20%D8%A8%DB%8C%20%D9%88%D9%81%D8%A7%DB%8C%DB%8C" title="متن از بی وفایی" >متن از بی وفایی</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D8%AC%D9%85%D9%84%D8%A7%D8%AA%20%D8%B2%DB%8C%D8%A8%D8%A7" title="جملات زیبا" >جملات زیبا</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D8%A7%D8%B3%20%D9%85%D8%B3%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C" title="اس مس تنهایی" >اس مس تنهایی</a> , <br />												دسته بندی : 					    <a href="http://cabaret.mihanblog.com/post/category/1" title="مطالب عاشقانه" >مطالب عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/8" title="دست نوشته های عاشقانه" >دست نوشته های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/7" title="شعر های عاشقانه" >شعر های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/2" title="عکس های عاشقانه" >عکس های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/12" title="جدید ترین اس ام اس های عاشقانه" >جدید ترین اس ام اس های عاشقانه</a> , <br /><p></p>
+				
+	</div></div>	</div>	</a>
+                                <div><script>mihanblogPostLike('171','like')</script><div/><br/>
+
+<div class=post-bottom>
+<div class=date>&nbsp;13:26 -  &nbsp;شنبه 14 تیر 1393 &nbsp; <a href="http://cabaret.mihanblog.com/post/author/1043878"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/love/41-60/001162748/images/author-icon.jpg"> ROshaaa </a> </div>
+<div class=Comment><a target="_self" href="javascript:newComment(171)">دل نوشته  <script>setCommentCnt(171)</script> </a>
+<script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div><!--end post-->
+  	<div class="post">		
+<div class=post-top>
+
+<div class="post-top2">
+  <b><a href="http://cabaret.mihanblog.com/post/169" title="من تورا میخواهم...">من تورا میخواهم...</a></b></div>
+
+</div> <div class=entry>					
+<div class="screen">
+ 
+
+
+
+<div align="center"><font size="3"><b><font face="tahoma,arial,helvetica,sans-serif"><font color="#33CC00" size="2">روزگاری</font><font size="2"> خواهد رسید...<br><br><br>همچنان که در <font color="#3366FF">آغوش دیگری خفته ای...<br><br></font><br>به یاد <font color="#FF0000">من...<br><br></font><br><font color="#FFCC66">ستاره ها</font>را خواهی شمرد تا <font color="#3366FF">آرام شوی!<br><br></font><br><font color="#3366FF">دلت <font color="#FF0000">هوایم را خواهد کرد...<br><br></font></font><br>به یاد خواهی آورد <font color="#FF0000">با هم بودن هایمان را...<br><br></font><br>به یاد خواهی آورد <font color="#FF0000">خنده هایم را...<br><br></font><br>به یاد خواهی آورد <font color="#FF0000">اشک هایم را...<br><br></font><br>مطمئنم در آن لحظه در<font color="#3366FF"> دلت</font> میگویی: <font color="#3366FF">من</font> </font><font color="#FF0000"><font size="2">تو را میخواهم!</font><br><br><br></font><br><img src="http://8pic.ir/images/u95hnsam9vob8gt29zb1.jpg" alt="" border="0" align="bottom" hspace="0" vspace="0"><br></font></b></font></div><br>
+
+
+
+
+
+
+
+
+
+
+ 
+						<br />						<br /><div class="tags">
+						برچسب ها :   <a href="http://cabaret.mihanblog.com/post/tag/%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" title="عاشقانه" >عاشقانه</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D8%AF%D8%B1%D8%AF%D9%88%D8%AF%D9%84" title="دردودل" >دردودل</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D9%85%D8%B7%D8%A7%D9%84%D8%A8%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" title="مطالب عاشقانه" >مطالب عاشقانه</a> , <br />												دسته بندی : 					    <a href="http://cabaret.mihanblog.com/post/category/1" title="مطالب عاشقانه" >مطالب عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/8" title="دست نوشته های عاشقانه" >دست نوشته های عاشقانه</a> , <br /><p></p>
+				
+	</div></div>	</div>	</a>
+                                <div><script>mihanblogPostLike('169','like')</script><div/><br/>
+
+<div class=post-bottom>
+<div class=date>&nbsp;10:03 -  &nbsp;چهارشنبه 11 تیر 1393 &nbsp; <a href="http://cabaret.mihanblog.com/post/author/1008042"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/love/41-60/001162748/images/author-icon.jpg"> BEHN@M </a> </div>
+<div class=Comment><a target="_self" href="javascript:newComment(169)">دیدگاه  <script>setCommentCnt(169)</script> </a>
+<script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div><!--end post-->
+  	<div class="post">		
+<div class=post-top>
+
+<div class="post-top2">
+  <b><a href="http://cabaret.mihanblog.com/post/168" title="کاش میفهمید ...">کاش میفهمید ...</a></b></div>
+
+</div> <div class=entry>					
+<div class="screen">
+<a href="http://cabaret.mihanblog.com/post/author/1043878"></a> 
+<div align="center"><br><font color="#666666" size="2"><b><br><img src="http://mihannama.ir/wp-content/uploads/2014/04/13908095550.jpg" alt="" border="0" align="bottom" hspace="0" vspace="0"><br><br><br><font color="#FFCC00" size="4">یه وقتا دلت طوری تنگ میشه که مغزت کاملا فلج میشه<br><br><br><font color="#FF6600">بدی هاش یادت میره<br><br><br>نامردیش یادت میره<br><br></font><br><font color="#FF6600">بی محبتی و رفتارسرد و تلخش یادت میره<br><br><br>وقتی با بیرحمی تنهات گذاشت یادت میره<br><br></font><br>فقط میگی خدایا یه دقیقه ببینمش این <font color="#FF6600">دل وامونده</font> آروم شه...!</font></b></font></div>
+
+
+
+
+ 
+						<br />						<br /><div class="tags">
+						برچسب ها :   <a href="http://cabaret.mihanblog.com/post/tag/%D8%AC%D9%85%D9%84%D8%A7%D8%AA%20%D8%AF%D9%84%D8%AA%D9%86%DA%AF%DB%8C" title="جملات دلتنگی" >جملات دلتنگی</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D8%A7%D8%B3%20%D9%85%D8%B3%20%D8%AF%D9%84%D8%AA%D9%86%DA%AF%DB%8C" title="اس مس دلتنگی" >اس مس دلتنگی</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D9%85%D8%AA%D9%86%20%D8%A7%D8%B2%20%D8%AC%D8%AF%D8%A7%DB%8C%DB%8C" title="متن از جدایی" >متن از جدایی</a> , <br />												دسته بندی : 					    <a href="http://cabaret.mihanblog.com/post/category/1" title="مطالب عاشقانه" >مطالب عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/8" title="دست نوشته های عاشقانه" >دست نوشته های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/7" title="شعر های عاشقانه" >شعر های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/2" title="عکس های عاشقانه" >عکس های عاشقانه</a> , <br /><p></p>
+				
+	</div></div>	</div>	</a>
+                                <div><script>mihanblogPostLike('168','like')</script><div/><br/>
+
+<div class=post-bottom>
+<div class=date>&nbsp;13:01 -  &nbsp;یکشنبه 8 تیر 1393 &nbsp; <a href="http://cabaret.mihanblog.com/post/author/1043878"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/love/41-60/001162748/images/author-icon.jpg"> ROshaaa </a> </div>
+<div class=Comment><a target="_self" href="javascript:newComment(168)">دل نوشته  <script>setCommentCnt(168)</script> </a>
+<script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div><!--end post-->
+  	<div class="post">		
+<div class=post-top>
+
+<div class="post-top2">
+  <b><a href="http://cabaret.mihanblog.com/post/167" title="شخصیت شناسی با خطوط کف دست">شخصیت شناسی با خطوط کف دست</a></b></div>
+
+</div> <div class=entry>					
+<div class="screen">
+<a href="http://cabaret.mihanblog.com/post/author/1043878"></a> 
+
+<div align="center"><br><br><font color="#33CCFF" face="times new roman,times,serif" size="3"><b><font color="#3366FF">پست</font> دلنوشته <font color="#3366FF">و</font> اینا <font color="#3366FF">بسه</font> ی <font color="#3366FF">پست</font> تفریحی <font color="#3366FF">میذارم</font> باحاله<br><br><font color="#3366FF">فقطا </font>هر<font color="#3366FF"> کی</font> شماره <font color="#3366FF">کف </font>دستشو <font color="#3366FF">بگه </font>تو <font color="#3366FF">نظرات</font><br><br>البته <font color="#3366FF">کسایی</font> ک <font color="#3366FF">نمیترسن</font> پی <font color="#3366FF">به</font> شخصیتشون <font color="#3366FF">ببرم </font>بذارن <font color="#3366FF">منم </font>بخونم <font color="#3366FF">هااااااااا :)))</font><br><br>کف <font color="#3366FF">دست </font>من <font color="#3366FF">که</font> شماره <font color="#3366FF">هشت</font> بود<br><br>میخوام <font color="#3366FF">فال</font> بگیرم <font color="#3366FF">حالا </font>دستاتون <font color="#3366FF">رو </font>میز <font color="#3366FF">کسی</font> ک <font color="#3366FF">احیانا</font> دستشویی <font color="#3366FF">بوده </font><br><br>از <font color="#3366FF">الان</font> بگم <font color="#3366FF">من</font> فالشو<font color="#3366FF"> نمیگیرم</font> هااااااا :))</b></font><font color="#33CCFF"><br><br></font><br><img src="http://www.taknaz.ir/user_files/L12518454764.jpg" alt="" align="bottom" border="0" hspace="0" vspace="0"><br></div>
+
+
+
+
+
+
+ 
+						<br />						<br /><div class="tags">
+						برچسب ها :   <a href="http://cabaret.mihanblog.com/post/tag/%D8%B4%D8%AE%D8%B5%DB%8C%D8%AA%20%D8%B4%D9%86%D8%A7%D8%B3%DB%8C%20%D8%A8%D8%A7%20%D8%AE%D8%B7%D9%88%D8%B7%20%DA%A9%D9%81%20%D8%AF%D8%B3%D8%AA" title="شخصیت شناسی با خطوط کف دست" >شخصیت شناسی با خطوط کف دست</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D9%81%D8%A7%D9%84%20%D8%A8%DB%8C%D9%86%DB%8C%20%D8%A8%D8%A7%20%DA%A9%D9%81%20%D8%AF%D8%B3%D8%AA" title="فال بینی با کف دست" >فال بینی با کف دست</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D8%A7%DA%AF%D8%A7%D9%87%DB%8C%20%D8%A7%D8%B2%20%D8%B1%D9%85%D8%B2%20%D8%AE%D8%B7%D9%88%D8%B7%20%DA%A9%D9%81%20%D8%AF%D8%B3%D8%AA" title="اگاهی از رمز خطوط کف دست" >اگاهی از رمز خطوط کف دست</a> , <br />												دسته بندی : 					    <a href="http://cabaret.mihanblog.com/post/category/6" title="مطلب جالب و آموزنده" >مطلب جالب و آموزنده</a> , <br /><p><a href='http://cabaret.mihanblog.com/post/167'>ادامه مطلب</a></p>
+				
+	</div></div>	</div>	</a>
+                                <div><script>mihanblogPostLike('167','like')</script><div/><br/>
+
+<div class=post-bottom>
+<div class=date>&nbsp;17:50 -  &nbsp;جمعه 23 خرداد 1393 &nbsp; <a href="http://cabaret.mihanblog.com/post/author/1043878"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/love/41-60/001162748/images/author-icon.jpg"> ROshaaa </a> </div>
+<div class=Comment><a target="_self" href="javascript:newComment(167)">دل نوشته  <script>setCommentCnt(167)</script> </a>
+<script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div><!--end post-->
+  	<div class="post">		
+<div class=post-top>
+
+<div class="post-top2">
+  <b><a href="http://cabaret.mihanblog.com/post/166" title="کاش زندگی ما آدم ها...">کاش زندگی ما آدم ها...</a></b></div>
+
+</div> <div class=entry>					
+<div class="screen">
+<a href="http://cabaret.mihanblog.com/post/author/1008042"></a> 
+
+
+
+<font color="#3366FF" size="2"><b>کاش زندگی به همین سادگی بود<br><br><font color="#66FFFF">به همین سادگی!!</font><br><br>خالی از حسرت<br><br><font color="#66FFFF">پوچ از تنهایی</font><br><br>بدون بغض<br><br><font color="#66FFFF">کاش او...</font><br><br>یک تنه می توانست حریف همه ی غم های بزرگ قلب کوچکت باشد<br><br><font color="#66FFFF">کاش او می توانست غرق لبخند کند تمام دقایقت را</font><br><br>افسوس که او خود اسیر یک مشت بی کسی است<br><br><font color="#66FFFF">کاش او می توانست مونست باشد همه ی شب های بی محتوا را</font><br><br>کاش تو....<br><br><font color="#66FFFF">دلت این همه غم نداشت...!</font><br><br>کاش سادگی همه ی این درد و دل های ساده را می شد<br><br><font color="#66FFFF">برای خدا روی کاغذ نوشت</font><br><br>برای خدا نوشت و به نشانی سادگی یک آرزوی محقر برایش پست کرد<br><br><font color="#66FFFF">کاش می شد همیشه انقدر ساده نوشت</font><br><br>ساده اما ...<br><br><font color="#66FFFF">پر از حرف های ناگفته...</font><br><br>پر از لحظه هایی که ناگزیر، زود، دیر شد<br><br><font color="#66FFFF">کاش گریستن یادت نمی دادند</font><br><br>بغض، بدرقه ی چشمانت نمی کردند<br><br><font color="#66FFFF">کاش او...</font><br><br>می توانست به جای بغض هایت<br><br><font color="#66FFFF">یک آسمان گریه کند...</font><br><br>کاش او...<br><br><font color="#66FFFF">خاطره ی بودنش، جای خالی همه ی خاطره های بی سرانجام چشمان همیشه صبورت را</font><br><br>پر از پرواز پروانه های عاشق می کرد<br><br><font color="#66FFFF">کاش او...</font><br><br>نازنینم!!<br><br><font color="#66FFFF">به گمانم (او) همان (من) م!<br><br>خویش از همه ی دنیا جدا...<br><br><br><br>کاش زندگی ما آدم ها...<br><br>به همین سادگی بود....<br><br>تنها...<br><br>به همین سادگی...!!<br><br><br></font></b></font><img src="http://8pic.ir/images/ecu8yhvsw73sep02uy43.jpg" alt="" align="bottom" border="0" height="346" hspace="0" vspace="0" width="495"><br>
+
+
+
+
+
+
+
+
+
+
+ 
+						<br />						<br /><div class="tags">
+						برچسب ها :   <a href="http://cabaret.mihanblog.com/post/tag/%DA%A9%D8%A7%D8%B4%20%D8%B2%D9%86%D8%AF%DA%AF%DB%8C%20%D9%85%D8%A7%20%D8%A2%D8%AF%D9%85%20%D9%87%D8%A7_____%7C(dot)%7C__________%7C(dot)%7C__________%7C(dot)%7C_____" title="کاش زندگی ما آدم ها..." >کاش زندگی ما آدم ها...</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D8%AC%D9%85%D9%84%D8%A7%D8%AA%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" title="جملات عاشقانه" >جملات عاشقانه</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87%20%D9%87%D8%A7%DB%8C%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" title="دلنوشته های عاشقانه" >دلنوشته های عاشقانه</a> , <br />												دسته بندی : 					    <a href="http://cabaret.mihanblog.com/post/category/1" title="مطالب عاشقانه" >مطالب عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/8" title="دست نوشته های عاشقانه" >دست نوشته های عاشقانه</a> , <br /><p></p>
+				
+	</div></div>	</div>	</a>
+                                <div><script>mihanblogPostLike('166','like')</script><div/><br/>
+
+<div class=post-bottom>
+<div class=date>&nbsp;19:46 -  &nbsp;دوشنبه 19 خرداد 1393 &nbsp; <a href="http://cabaret.mihanblog.com/post/author/1008042"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/love/41-60/001162748/images/author-icon.jpg"> BEHN@M </a> </div>
+<div class=Comment><a target="_self" href="javascript:newComment(166)">دیدگاه  <script>setCommentCnt(166)</script> </a>
+<script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div><!--end post-->
+  	<div class="post">		
+<div class=post-top>
+
+<div class="post-top2">
+  <b><a href="http://cabaret.mihanblog.com/post/164" title="عروسک پارچه ای">عروسک پارچه ای</a></b></div>
+
+</div> <div class=entry>					
+<div class="screen">
+<a href="http://cabaret.mihanblog.com/post/author/1043878"></a> 
+
+
+
+
+
+<div align="center"><b><font face="times new roman,times,serif" size="3"><br><br><img src="http://night-gallery.ir/images/gallery/Exis-Night%20Gallery-21730.jpg" alt="" align="bottom" border="0" height="343" hspace="0" vspace="0" width="518"><br><br><br><font color="#FF0000">اگه مثل من یه <font color="#FFFF33">عروسک پارچه ای</font> باشی که <font color="#FFFF33">اشتباهی</font> پا به دنیا <font color="#FFFF33">ادم ها</font> گذاشته ... !</font><br><br><font color="#CC0000">هر روز از چیزهایی ک میبینی دهنت وا میمونه ! زندگی با ادما <font color="#FFFF33">خیلی سخته </font><br><br>چون ادما قدر <font color="#FFFF33">یه دونه </font>بودن همو نمیدونن</font><br><br><font color="#FF0000">&nbsp;ی جوری با هم برخورد میکنن ک انگار <font color="#FFFF33">هزار تا </font>از هرکدومشون تو دنیا هست </font><br><br><font color="#CC0000">احتمالا واسه همینه که به نظرشون خیلی مهم نمیاد که <font color="#FFFF33">مواظب هم باشن</font> و به پای هم وایسن </font><br><br><font color="#FF0000"><font color="#FFFF33">اگه </font>یکی که یه عمر باهاشون<font color="#FFFF33"> هم قدم</font> بوده پاش بشکنه به جا اینکه <font color="#FFFF33">کمکش</font> کنن چی کارش میکنن؟</font><br><br><font color="#CC0000"><font color="#FFFF33">میرن</font> دنبال کسی که پای <font color="#FFFF33">نشکسته</font> داشته باشه</font><br><br><font color="#FF0000">&nbsp;<font color="#FFFF33">اگه</font> یکی که همه ی عمر باهاشون <font color="#FFFF33">هم دل</font> بوده دلش یهو درد بگیره چی ؟ </font><br><br><font color="#CC0000">جای اینکه براش <font color="#FFFF33">نبات داغ</font> درست کنن چی کار میکنن؟ </font><br><br><font color="#FF0000"><font color="#FFFF33">ولش میکنن&nbsp;</font> میرن سراغ یه دل بدون درد </font><br><br><font color="#CC0000"><font color="#FFFF33">اگه </font>اونی که همیشه صداشون میزنه یهو صداشو <font color="#FFFF33">گم</font> کنه اولین فکری که به ذهنشون میرسه چیه؟</font><br><br><font color="#FF0000"><font color="#FFFF33">هیچی</font> میرن دنبال یه ادم دیگه با یه <font color="#FFFF33">صدای دیگه</font> </font><br><br><font color="#CC0000"><font color="#FFFF33">میرن</font> و فراموش میکنن </font><br><br><font color="#FF0000"><font color="#FFFF33">میرن</font> و پشت سر میذارن </font><br><br><font color="#CC0000"><font color="#FFFF66">میرن</font> و چشماشونو میبندن </font><br><br><font color="#FF0000">انگار نه انگار که فقط یکی از هر <font color="#FFFF33">نفر </font>تو <font color="#FFFF33">دنیا</font> هست </font><br><br><font color="#CC0000">یکی که :<br><br></font><br><font size="4"><font color="#FFFF66">یه دونه ...</font><br><br><font color="#FFFF33">یه دونه ...</font><br><br><font color="#FFFF33">یه دونه </font><font color="#CC0000">بیشتر نیست!!!</font></font></font></b><br></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+						<br />						<br /><div class="tags">
+						برچسب ها :   <a href="http://cabaret.mihanblog.com/post/tag/%D9%85%D8%AA%D9%86%20%D8%AE%DB%8C%D8%A7%D9%86%D8%AA" title="متن خیانت" >متن خیانت</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D9%85%D8%AA%D9%86%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" title="متن عاشقانه" >متن عاشقانه</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%20%D8%B9%D8%B1%D9%88%D8%B3%DA%A9%20%D9%BE%D8%A7%D8%B1%DA%86%D9%87%20%D8%A7%DB%8C" title="داستان عروسک پارچه ای" >داستان عروسک پارچه ای</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D9%85%D8%B7%D9%84%D8%A8%20%D8%A7%D8%B2%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C%20%D9%88%20%D8%A8%DB%8C%20%DA%A9%D8%B3%DB%8C" title="مطلب از تنهایی و بی کسی" >مطلب از تنهایی و بی کسی</a> , <br />												دسته بندی : 					    <a href="http://cabaret.mihanblog.com/post/category/1" title="مطالب عاشقانه" >مطالب عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/8" title="دست نوشته های عاشقانه" >دست نوشته های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/2" title="عکس های عاشقانه" >عکس های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/3" title="دلنوشته های شما" >دلنوشته های شما</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/4" title="داستان کوتاه" >داستان کوتاه</a> , <br /><p></p>
+				
+	</div></div>	</div>	</a>
+                                <div><script>mihanblogPostLike('164','like')</script><div/><br/>
+
+<div class=post-bottom>
+<div class=date>&nbsp;12:27 -  &nbsp;جمعه 16 خرداد 1393 &nbsp; <a href="http://cabaret.mihanblog.com/post/author/1043878"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/love/41-60/001162748/images/author-icon.jpg"> ROshaaa </a> </div>
+<div class=Comment><a target="_self" href="javascript:newComment(164)">دل نوشته   <script>setCommentCnt(164)</script> </a>
+<script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div><!--end post-->
+  	<div class="post">		
+<div class=post-top>
+
+<div class="post-top2">
+  <b><a href="http://cabaret.mihanblog.com/post/161" title="دنیای دختر">دنیای دختر</a></b></div>
+
+</div> <div class=entry>					
+<div class="screen">
+<a href="http://cabaret.mihanblog.com/post/author/1043878"></a> 
+
+
+<div align="center"><br><br><img src="http://s5.picofile.com/file/8109852242/%D8%AF%D8%AE%D8%AA%D8%B1_38.png" alt="" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><br><br><img src="http://s5.picofile.com/file/8108891534/%D8%AF%D8%AE%D8%AA%D8%B1_35.png" alt="" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><br><br><img src="http://s5.picofile.com/file/8109782326/%D8%AF%D8%AE%D8%AA%D8%B134.png" alt="" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><br><br><br><img src="http://s5.picofile.com/file/8107330884/16%D8%AF%D8%AE%D8%AA%D8%B1.png" alt="" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><br><br><img src="http://s5.picofile.com/file/8107354692/%D8%AF%D8%AE%D8%AA%D8%B1_18.png" alt="" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><br><br><br><img src="http://s5.picofile.com/file/8107468092/%D8%AF%D8%AE%D8%AA%D8%B1_20.png" alt="" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><br><br><img src="http://s5.picofile.com/file/8109362434/%D8%AF%D8%AE%D8%AA%D8%B1_37.png" alt="" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><br><br><br><img src="http://s5.picofile.com/file/8108246450/%D8%AF%D8%AE%D8%AA%D8%B1_30.png" alt="" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><br><img src="http://s5.picofile.com/file/8107880276/%D8%AF%D8%AE%D8%AA%D8%B1_28.png" alt="" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><br><br><img src="http://s5.picofile.com/file/8107650634/%D8%AF%D8%AE%D8%AA%D8%B1_25.png" alt="" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><br><img src="http://s5.picofile.com/file/8107880218/%D8%AF%D8%AE%D8%AA%D8%B1_26.png" alt="" align="bottom" border="0" hspace="0" vspace="0"><br></div>
+
+
+
+
+
+
+
+
+ 
+						<br />						<br /><div class="tags">
+						برچسب ها :   <a href="http://cabaret.mihanblog.com/post/tag/%D8%AF%D9%86%DB%8C%D8%A7%DB%8C%20%D8%AF%D8%AE%D8%AA%D8%B1%D8%A7%D9%86" title="دنیای دختران" >دنیای دختران</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D9%85%D8%B7%D9%84%D8%A8%20%D8%AF%D8%B1%20%D9%85%D9%88%D8%B1%D8%AF%20%D8%AF%D8%AE%D8%AA%D8%B1%D8%A7" title="مطلب در مورد دخترا" >مطلب در مورد دخترا</a> , <br />												دسته بندی : 					    <a href="http://cabaret.mihanblog.com/post/category/1" title="مطالب عاشقانه" >مطالب عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/8" title="دست نوشته های عاشقانه" >دست نوشته های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/7" title="شعر های عاشقانه" >شعر های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/2" title="عکس های عاشقانه" >عکس های عاشقانه</a> , <br /><p></p>
+				
+	</div></div>	</div>	</a>
+                                <div><script>mihanblogPostLike('161','like')</script><div/><br/>
+
+<div class=post-bottom>
+<div class=date>&nbsp;16:18 -  &nbsp;پنجشنبه 11 اردیبهشت 1393 &nbsp; <a href="http://cabaret.mihanblog.com/post/author/1043878"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/love/41-60/001162748/images/author-icon.jpg"> ROshaaa </a> </div>
+<div class=Comment><a target="_self" href="javascript:newComment(161)">دلنوشته ها  <script>setCommentCnt(161)</script> </a>
+<script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div><!--end post-->
+  	<div class="post">		
+<div class=post-top>
+
+<div class="post-top2">
+  <b><a href="http://cabaret.mihanblog.com/post/160" title="دختر">دختر</a></b></div>
+
+</div> <div class=entry>					
+<div class="screen">
+<a href="http://cabaret.mihanblog.com/post/author/1043878"></a> 
+
+<div align="center"><br><br><font style="FONT-SIZE: 14pt"><font color="#000000"><font style="FONT-SIZE: 8pt"><font color="#000000">
+<div id="postbody">
+<br><div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"><font color="#FFFFFF">ﻣﻦ ﯾﻪ</font> </span><font color="#FF66FF"><span style="font-family: Tahoma;">"دختــــرم</span></font><font color="#FF66FF"><span style="font-family: Tahoma;"> "<br><br></span></font></font> </div><div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"><font color="#FFFFFF">ﻣﻦ ﻫﻤﻮﻥ ﺩﻳﻮﻭﻧـــﻪ ﺍﻡ ﮐﻪ ﻫﻴﭻ ﻭﻗﺖ ﻋﻮﺽ ﻧﻤﻴﺸــــﻪ</font><br><br></span></font></div><div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"><font color="#FFFFFF">ﻫﻤﻮﻧﯽ ﮐﻪ ﻫﻤﻪ ﺑﺎﻫﺎﺵ</font> </span><font color="red"><span style="font-family: Tahoma;">ﺧﻮﺷﺤﺎﻝ</span></font><span style="font-family: Tahoma;"> <font color="#FFFFFF">ﻫﺴــــــتن</font><br><br></span></font></div><div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"><font color="#FFFFFF">ﻫﻤﻮﻧﯽ ﮐﻪ ﺍﻭﻧﻘﺪﺭ ﻳﻪ ﺁﻫﻨﮓ ﺭﻭ ﮔﻮﺵ ﻣﻴﺪﻩ ﮐﻪ ﺍﺯ ﺗــــﺮﺍﻧـــــﻪ</font><br><br></span></font></div><div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"><font color="#FFFFFF">ﮔﺮﻓﺘﻪ ﺗﺎ ﺭﻳﺘﻢ ﻭ ﺧﻮﺍﻧﻨﺪﺵ</font> </span><font color="#4F6228"><span style="font-family: Tahoma;">ﻣﺘﻨﻔــــــﺮ</span></font><span style="font-family: Tahoma;"> <font color="#FFFFFF">ﺑﺸﻪ</font></span><span style="font-family: Tahoma;"><font color="#FFFFFF"> ..</font><br><br></span></font></div><div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"><font color="#FFFFFF">ﻫﻤﻮﻧﯽ ﮐﻪ</font> <span style="background-color: rgb(153, 153, 153);"><span style="color: rgb(255, 204, 204);">ﻫﻖ ﻫﻖ</span></span> <font color="#FFFFFF">ﻫﻤﻪ ﺭﻭ ﺑﻪ ﺟﻮﻥ ﺩﻝ ﮔﻮﺵ ﻣﻴـــــﺪﻩ</font><br><br></span></font></div><div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"><font color="#FFFFFF">ﺍﻣﺎ ﺧﻮﺩﺵ ﺑﻐﻀﺎﺵ ﺭﻭ ﺯﻳﺮ ﺑﺎﻟﺶ</font> </span><font color="#00B0F0"><span style="font-family: Tahoma;">ﻣﻴﺘــــﺮﮐﻮﻧــــﻪ</span></font><span style="font-family: Tahoma;"> ..<br><br></span></font></div><div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"><font color="#FFFFFF">ﻫﻤﻮﻧﯽ ﮐﻪ ﻫﻤﻪ ﻓﮑﺮ ﻣﻴﮑﻨﻦ ﺳﺨﺘﻪ , ﺳﻨﮕــــﻪ ..</font><br><br></span></font></div><div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"> <font color="#FFFFFF">ﺍﻣﺎ ﺑﺎ ﻫﺮ</font></span><font color="#FFFFFF"><span style="font-family: Tahoma;">ﺗﻠﻨﮕﺮﯼ</span><span style="font-family: Tahoma;"> ﻣﻴﺸﮑﻨﻪ</span><span style="font-family: Tahoma;"> ...<br><br></span></font></font></div><div style="text-align: center;"><font color="#FFFFFF" size="4"><span style="font-family: Tahoma;">ﻫﻤﻮﻧﯽ ﮐﻪ ﻣﻮﺍﻇﺐِ ﮐﺴﯽ ﻧﺎﺭﺍﺣﺖ ﻧﺸﻪ ﺍﻣﺎ ﻫﻤﻪ<br><br></span></font></div><div style="text-align: center;"><font color="#FFFFFF" size="4"><span style="font-family: Tahoma;">ﻧﺎﺭﺍﺣﺘﺶ ﻣﻴﻜﻨﻦ</span><span style="font-family: Tahoma;"> ..<br><br></span></font></div><div style="text-align: center;"><font color="#FFFFFF" size="4"><span style="font-family: Tahoma;">ﻫﻤﻮﻧﯽ ﮐﻪ ﺗﮑﻴﻪ ﮔﺎﻩ ﺧﻮﺑﻴﻪ ﺍﻣﺎ ﻭﺍﺳﺶ ﺗﻜﻴﻪ ﮔﺎﻫﯽ<br><br></span></font></div><div style="text-align: center;"><font size="4"><font color="#FFFFFF"><span style="font-family: Tahoma;">ﻧﻴﺴﺖ</span></font><span style="font-family: Tahoma;"><font color="#FFFFFF"> ...</font><br><br></span></font></div><div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"><font color="#FFFFFF">ﻣﻦ ﯾﻪ</font> <span style="color: rgb(255, 102, 204);">دختــــــــــرم</span></span><span style="font-family: Tahoma;"><span style="color: rgb(255, 102, 204);"> </span><font color="#FFFFFF">...</font><br><br></span></font></div><div style="text-align: center;"><div style="text-align: center;"><div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"><font color="#FFFFFF">اگر کمی چشمانــم را</font><span style="background-color: rgb(102, 102, 102);"> </span></span><span style="background-color: rgb(102, 102, 102);"><font color="white"><span style="font-family: Tahoma;">سیاه</span></font></span><span style="font-family: Tahoma;"><span style="background-color: rgb(102, 102, 102);"> </span><font color="#FFFFFF">کنم ... تغییــــر میکنم!!!</font><br><br></span></font></div></div> <div style="text-align: center;"><div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"><span style="color: rgb(153, 0, 153);">لاکــــــــــ</span> <font color="#FFFFFF">بــــــــزنم!!!</font><br><br></span></font></div></div> <div style="text-align: center;"><div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"><font color="#FFFFFF">پاشنه های کفشــــــــم بلند باشد!!</font><br><br></span></font></div></div> <div style="text-align: center;"><div style="text-align: center;"><font size="4"><font color="#FFFFFF"><span style="font-family: Tahoma;">با </span></font><font color="#FF66CC"><span style="font-family: Tahoma;">گل سری کوچک</span></font><span style="font-family: Tahoma;"> <font color="#FFFFFF">زیبایی موهــــــــــایم زیباتر میشود!</font><br><br></span></font></div></div> <div style="text-align: center;"><div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"><font color="#FFFFFF">با نگاه دخترانه ام ...</font><br><br></span></font> </div></div> <div style="text-align: center;"><div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"><font color="#FFFFFF">دلِ</font> <span style="color: rgb(0, 102, 0);">پدرم</span> <font color="#FFFFFF">را میلــــــرزانم!</font><br><br></span></font></div></div> <div style="text-align: center;"><div style="text-align: center;"><font size="4"><font color="#FFFFFF"><span style="font-family: Tahoma;">با </span></font><font color="#0070C0"><span style="font-family: Tahoma;">اشکـــــــــم</span></font><span style="font-family: Tahoma;"> <font color="#FFFFFF">دلش نــــــــــرم میشود!</font><br><br></span></font></div></div> <div style="text-align: center;"><div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"><font color="#FFFFFF">خـــــودم را برای " آدمــــــــــش "</font> </span><font color="#FF0066"><span style="font-family: Tahoma;">لـــــوس</span></font><span style="font-family: Tahoma;"> <font color="#FFFFFF">میکنم!!!</font><br><font color="#FFFFFF"><br></font></span></font></div></div><font color="#FFFFFF"> </font><div style="text-align: center;"><div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"><font color="#FFFFFF">گاهی ضعیف تر از تو باشم و کمکم کنی..!</font><br><br></span></font></div></div> <div style="text-align: center;"><div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"><font color="#FFFFFF">تکیه میکنم به</font> <span style="color: rgb(0, 102, 0);">مَــــــرد</span> <font color="#FFFFFF">زندگی ام!!!</font><br><br></span></font></div></div> <div style="text-align: center;"><div style="text-align: center;"><font color="#FFFFFF" size="4"><span style="font-family: Tahoma;">مـوهای ژولیده ی صبح...<br><br></span></font></div></div><font color="#FFFFFF"> </font><div style="text-align: center;"><div style="text-align: center;"><font color="#FFFFFF" size="4"><span style="font-family: Tahoma;">صدای نخــــــراشیده ام در صبح!<br><br></span></font></div></div><font color="#FFFFFF"> </font><div style="text-align: center;"><div style="text-align: center;"><font color="#FFFFFF" size="4"><span style="font-family: Tahoma;">شیطنــــــت برای کسی که دوسش دارم...!!<br><br></span></font></div></div><font color="#FFFFFF"> </font><div style="text-align: center;"><div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"><font color="#FFFFFF">" بعـــــــــــــله"...</font><br><br></span></font></div></div> <div style="text-align: center;"><font size="4"><span style="font-family: Tahoma;"><font color="#FFCCFF">"زندگی</font> </span><font color="#CC0099"><span style="font-family: Tahoma;">دختـــــــــــرانه</span></font><span style="font-family: Tahoma;"> <font color="#FFCCFF">ام را دوست دارم!"</font><br><br><br><img src="http://www.parsafun.com/wp-content/upload/2011/06/007972.jpg" alt="" align="bottom" border="0" hspace="0" vspace="0"><br></span></font></div></div></div></font></font></font></font><br></div>
+
+
+
+
+
+
+ 
+						<br />						<br /><div class="tags">
+						برچسب ها :   <a href="http://cabaret.mihanblog.com/post/tag/%D9%85%D8%B7%D9%84%D9%84%D8%A8%20%D8%AF%D8%B1%20%D9%85%D9%88%D8%B1%D8%AF%20%D8%AF%D8%AE%D8%AA%D8%B1%D8%A7%D9%86" title="مطللب در مورد دختران" >مطللب در مورد دختران</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D8%A7%D8%AD%D8%B3%D8%A7%D8%B3%20%D8%AF%D8%AE%D8%AA%D8%B1%D8%A7%D9%86%D9%87" title="احساس دخترانه" >احساس دخترانه</a> , <a href="http://cabaret.mihanblog.com/post/tag/%D9%85%D8%AA%D9%86%20%D8%A7%D8%B2%20%D8%A7%D8%AD%D8%B3%D8%A7%D8%B3%20%DB%8C%DA%A9%20%D8%AF%D8%AE%D8%AA%D8%B1" title="متن از احساس یک دختر" >متن از احساس یک دختر</a> , <br />												دسته بندی : 					    <a href="http://cabaret.mihanblog.com/post/category/1" title="مطالب عاشقانه" >مطالب عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/8" title="دست نوشته های عاشقانه" >دست نوشته های عاشقانه</a> , 					    <a href="http://cabaret.mihanblog.com/post/category/2" title="عکس های عاشقانه" >عکس های عاشقانه</a> , <br /><p></p>
+				
+	</div></div>	</div>	</a>
+                                <div><script>mihanblogPostLike('160','like')</script><div/><br/>
+
+<div class=post-bottom>
+<div class=date>&nbsp;15:44 -  &nbsp;پنجشنبه 11 اردیبهشت 1393 &nbsp; <a href="http://cabaret.mihanblog.com/post/author/1043878"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/love/41-60/001162748/images/author-icon.jpg"> ROshaaa </a> </div>
+<div class=Comment><a target="_self" href="javascript:newComment(160)">دلنوشته ها  <script>setCommentCnt(160)</script> </a>
+<script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div><!--end post-->
+  </center><div class="Previous">	
+</div> </div><!--end contant--></td>
+<td width="330" valign="top">
+
+
+<div id=left-sidebar><div class="clear-sid"></div>
+
+<div class=sidebar-top><div class=sidebar-top-txt>			
+<b>درباره وبلاگ</b></div></div>
+<div class=sidebar-bg> <div class=li-Sid2> 
+<div style="text-align:center;padding-top:6px;"><img src="../static.mihanblog.com/public/user_data/web_photo/392/1174704.jpg@6398"  /></div>
+<br>نمی گیرد کسی جز غم سراغ خانه ی ما را<br />
+<br />
+به زودی جغد پیدا می کند ویرانه ی ما را<br />
+<br />
+از آن شادم که می آید غمش هر شب به بالینم<br />
+<br />
+چه سازم گر که غم هم گم کند کاشانه ی ما را<br />
+<br />
+چه غم گر جام ناکامان تهی ماند از می شادی<br />
+<br />
+که خون دیده و دل ، پر کند پیمانه ی ما را<br />
+<br />
+به شوخی می کند آن شوخ با زلفش سیه بازی<br />
+<br />
+اگر خواهد به رقص آرد دل دیوانه ی ما را<br />
+<br />
+ز سر تا پای من مستی زند موج از نگاه او<br />
+<br />
+نگهدارد خدا را چشم بد میخانه ی ما را<br />
+<br />
+دل مشکل پسندم را اسیر خویشتن کردی<br />
+<br />
+به دست آوردی آسان گوهر یکدانه ی مارا<br />
+<br />
+نیفتد بر زبان ها نام ما در زندگی قدسی<br />
+<br />
+مگر خواب اجل شیرین کند افسانه ی ما را<br />
+<br />
+ـــــــــــــــــــــــــــــــــــــــــــــــــــــــ<br />
+<br />
+در حضور خار ها هم می شود یک یاس بود<br />
+<br />
+در هیاهوی مترسک ها پر از احساس بود<br />
+<br />
+دست در دست پرنده، بال در بال نسیم<br />
+<br />
+ساقه های هرز این ریشه ها را داس بود<br />
+<br />
+کاش می شد حرفی از ((کاش میشد))هم نبود<br />
+<br />
+هر چه بود احساس بود و عشق بود و یاس بود<br />
+<br />
+ـــــــــــــــــــــــــــــــــــــــــــــــــــــــ<br />
+<br />
+ما<br />
+به هم نمی رسیم<br />
+امّا<br />
+بهترین غریبه ات می مانم<br />
+که تو را<br />
+همیشه دوست خواهد داشت . .<br />
+<br />
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــ<br />
+<br />
+خستــه ام . ..<br />
+<br />
+روحــم مـی خواهد برود یك گوشه بنشیند<br />
+<br />
+پشتش را بكند به دنیــا<br />
+<br />
+پاهایش را بغـل كند و بلند بلند بگوید :<br />
+<br />
+من دیگر بــازی نمی كنم<br />
+<br />
+شمـآ جــر می زنیــد ...<br />
+<br />
+دیگه از همه خسته شدم<br />
+<br />
+ـــــــــــــــــــــــــــــــــــــــــــــــــــ<br />
+<br />
+دل تنگ دیدارت بودم<br />
+<br />
+ثانیه ها را برای دیدارت گشتم و گشتم<br />
+<br />
+اما نبودی....<br />
+<br />
+میان ثانیه ها ایستادم و گریستم<br />
+<br />
+فقط برای اینکه قسمت دیگری بودی<br />
+<br />
+به هر کس رسیدی برایش <br />
+<br />
+اظهار عشق کردی<br />
+<br />
+دوست داشتن را برای همه نامه کردی<br />
+<br />
+دل همه را بازیچه کردی<br />
+<br />
+تنها برای اینکه بهم بفهمانی<br />
+<br />
+برایت مهم نیستم<br />
+<br />
+تاوان زیادی نیست<br />
+<br />
+تا تهش هستم<br />
+<br />
+اما تا کجا پیش می روی<br />
+<br />
+من که می دانم دگر کنار من نیستی<br />
+<br />
+می دانم دگر داشتنت<br />
+<br />
+آرزویی بیش نیست<br />
+<br />
+اما بدان...<br />
+<br />
+آرزو می کنم که آرزوی من<br />
+<br />
+کزان دیگری نباشد<br />
+<br />
+می دانی چرا...؟<br />
+<br />
+چون صدای قلبم را<br />
+<br />
+چون صدای خس خس سینه هام را<br />
+نشنید...<br />
+<br />
+از نگاه های دورو و سرد<br />
+<br />
+سردتر از سنگ سرد خیال<br />
+<br />
+از تن های خسته از امید<br />
+<br />
+خسته از امید های تو خالی<br />
+<br />
+از اشک های فرو نریخته<br />
+<br />
+فرو نریخته فقط از حقظ غرور<br />
+<br />
+از حرفهای نگفته مانده<br />
+<br />
+نگفته اما سپرده به تقدیر<br />
+<br />
+با تمام وجود بیزارم<br />
+<br />
+بیزارم و رها می کنم برای همیشه<br />
+<br />
+تمام زنجیر های سرد این احساس را...<br />
+<br />
+RS <br />
+<br />
+<br />
+<br />ایجاد کننده وبلاگ : <a href="http://cabaret.mihanblog.com/post/author/1008042">BEHN@M </a></div></div>
+<div class=sidebar-bottom></div>
+
+<div class=sidebar-top><div class=sidebar-top-txt>
+<b>نویسندگان</b></div></div>
+<div class=sidebar-bg> <div class=li-Sid>
+<a title="" href="http://cabaret.mihanblog.com/post/author/1008042">BEHN@M </a></div> <div class=li-Sid>
+<a title="" href="http://cabaret.mihanblog.com/post/author/1043878">ROshaaa </a></div></div>
+<div class=sidebar-bottom></div>
+
+
+
+
+			
+			
+<div class=sidebar-top>
+<div class=sidebar-top-txt>
+<b>موضوعات وب</b></div></div>			
+<div class=sidebar-bg><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/1">مطالب عاشقانه ( 90 )</a></div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/8">دست نوشته های عاشقانه ( 56 )</a></div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/7">شعر های عاشقانه ( 37 )</a></div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/2">عکس های عاشقانه ( 30 )</a></div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/6">مطلب جالب و آموزنده ( 19 )</a></div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/9">درد و دل ( 17 )</a></div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/5">مطالب طنز و خنده دار ( 11 )</a></div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/20">دلنوشته های روشا ( 11 )</a></div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/12">جدید ترین اس ام اس های عاشقانه ( 10 )</a></div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/3">دلنوشته های شما ( 11 )</a></div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/4">داستان کوتاه ( 10 )</a></div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/14">سخنان گران بها ( 6 )</a></div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/19">اس مس خنده دار ( 3 )</a></div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/18">مطلب های طنز ( 6 )</a></div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/17">ترول های خنده دار ( 4 )</a></div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/11">عکس های با حال و طنز ( 8 )</a></div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/15">کاریکاتور ( 3 )</a></div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/10">جملات دکتر شریعتی ( 3 )</a></div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/16">جدیدترین اس ام اس و جملات تبریک عید فطر 92 ( 1 )</a></div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/category/13">بازی طنز و باحال ( 1 )</a></div></div>			
+<div class=sidebar-bottom></div>
+<div class=sidebar-top>
+<div class=sidebar-top-txt>
+<b>برچسب‌ها </b></div></div>			
+<div class=sidebar-bg><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D8%AF%D9%84+%D9%86%D9%88%D8%B4%D8%AA%D9%87+%D9%87%D8%A7%DB%8C+%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" 
+	                style="font-size:1.07em">
+	                       دل نوشته های عاشقانه </div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87" 
+	                style="font-size:1.15em">
+	                       دلنوشته </div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D8%AF%D9%84%D8%AA%D9%86%DA%AF%DB%8C" 
+	                style="font-size:1.66em">
+	                       دلتنگی </div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D8%AF%D8%B1%D8%AF+%D9%88%D8%AF%D9%84" 
+	                style="font-size:1.07em">
+	                       درد ودل </div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D8%B4%D8%B9%D8%B1+%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" 
+	                style="font-size:1.19em">
+	                       شعر عاشقانه </div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D9%85%D8%B7%D9%84%D8%A8+%D8%A7%D9%85%D9%88%D8%B2%D9%86%D8%AF%D9%87" 
+	                style="font-size:1.03em">
+	                       مطلب اموزنده </div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86+%DA%A9%D9%88%D8%AA%D8%A7%D9%87+%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" 
+	                style="font-size:1em">
+	                       داستان کوتاه عاشقانه </div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87+%D9%87%D8%A7%DB%8C+%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" 
+	                style="font-size:1.03em">
+	                       دلنوشته های عاشقانه </div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D9%85%D8%B7%D8%A7%D9%84%D8%A8+%D8%BA%D9%85%DA%AF%DB%8C%D9%86" 
+	                style="font-size:1.03em">
+	                       مطالب غمگین </div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D8%AF%D9%84+%D9%86%D9%88%D8%B4%D8%AA%D9%87" 
+	                style="font-size:1em">
+	                       دل نوشته </div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D8%B9%DA%A9%D8%B3+%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" 
+	                style="font-size:1em">
+	                       عکس عاشقانه </div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D8%AC%D9%85%D9%84%D8%A7%D8%AA+%D8%A7%D8%AD%D8%B3%D8%A7%D8%B3%DB%8C+%D9%88+%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" 
+	                style="font-size:1.11em">
+	                       جملات احساسی و عاشقانه </div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86+%DA%A9%D9%88%D8%AA%D8%A7%D9%87" 
+	                style="font-size:1.03em">
+	                       داستان کوتاه </div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D9%85%D8%B7%D9%84%D8%A8+%D8%B7%D9%86%D8%B2" 
+	                style="font-size:1.05em">
+	                       مطلب طنز </div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" 
+	                style="font-size:2em">
+	                       عاشقانه </div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87+%D9%87%D8%A7" 
+	                style="font-size:1.23em">
+	                       عاشقانه ها </div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D8%AF%D8%B1%D8%AF+%D9%88+%D8%AF%D9%84" 
+	                style="font-size:1.03em">
+	                       درد و دل </div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D9%85%D8%B7%D9%84%D8%A8+%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" 
+	                style="font-size:2em">
+	                       مطلب عاشقانه </div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D9%85%D8%B7%D8%A7%D9%84%D8%A8+%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" 
+	                style="font-size:1.19em">
+	                       مطالب عاشقانه </div><div class=li-Sid>				
+<a href="http://cabaret.mihanblog.com/post/tag/%D8%AC%D9%85%D9%84%D8%A7%D8%AA+%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" 
+	                style="font-size:1.45em">
+	                       جملات عاشقانه </div></div>			
+<div class=sidebar-bottom></div>
+
+
+
+
+
+
+		
+
+	
+<div class=sidebar-top><div class=sidebar-top-txt>
+<b>صفحه بندی</b></div></div>
+<div class=sidebar-bg>
+<div class=li-Sid>
+<a href="http://cabaret.mihanblog.com/page/1">[ <b>1</b> ]</a></div><div class=li-Sid>
+<a href="http://cabaret.mihanblog.com/page/2">[ <span>2</span> ]</a></div><div class=li-Sid>
+<a href="http://cabaret.mihanblog.com/page/3">[ <span>3</span> ]</a></div><div class=li-Sid>
+<a href="http://cabaret.mihanblog.com/page/4">[ <span>4</span> ]</a></div><div class=li-Sid>
+<a href="http://cabaret.mihanblog.com/page/5">[ <span>5</span> ]</a></div><div class=li-Sid>
+<a href="http://cabaret.mihanblog.com/page/6">[ <span>6</span> ]</a></div><div class=li-Sid>
+<a href="http://cabaret.mihanblog.com/page/7">[ <span>7</span> ]</a></div><div class=li-Sid>
+<a href="http://cabaret.mihanblog.com/page/8">[ <i>...</i> ]</a></div></div>
+<div class=sidebar-bottom></div>
+<div class=sidebar-top><div class=sidebar-top-txt>
+<b>دیگر پیوندها</b></div></div>
+<div class=sidebar-bg><div class=li-Sid>
+<a target="_blank" title="طراحی قالب وبلاگهای پارسی" href="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;">ایران نقش</a></div> <div class=li-Sid>
+<a href="../faryadeashk.mihanblog.com/index.html" title="" target="_blank">♥• دختری از جنس اشک  •♥(روشا)</a></div> <div class=li-Sid>
+<a href="../asheghedivoone.mihanblog.com/index.html" title="" target="_blank">دخترک تنها</a></div> <div class=li-Sid>
+<a href="http://mojinice.blogfa.com/" title="مجتبی" target="_blank">moji nice</a></div> <div class=li-Sid>
+<a href="http://latopar7.blogfa.com/" title="" target="_blank">لت و پار</a></div> <div class=li-Sid>
+<a href="http://www.ics90.blogfa.com/" title="الهام" target="_blank">هر چی تو بخوای</a></div> <div class=li-Sid>
+<a href="http://smsjokbahal.blogfa.com/" title="امین" target="_blank">مطلب باحال داستان کوتاه اس ام اس</a></div> <div class=li-Sid>
+<a href="http://www.nadia504.blogfa.com/" title="نادیا" target="_blank">دل نوشته از جنس بلور</a></div> <div class=li-Sid>
+<a href="http://shaghayeg.blogfa.com/" title="شادی" target="_blank">کلبه ی شادی</a></div> <div class=li-Sid>
+<a href="http://ghafase-tanhaei-man.mihanblog.com/" title="پگاه" target="_blank">♥ دختری با روبان سفید ♥</a></div> <div class=li-Sid>
+<a href="http://netboook.blogfa.com/" title="قاسم" target="_blank">زندگیم شده تلخ تر از ته خیار....!</a></div>  <div class=li-Sid><a href="http://cabaret.mihanblog.com/linkdaily/" title="لیست لینک ها">لیست لینک ها</a></div> <div class=li-Sid><a href="javascript:linkdailyForm()">+ ارسال لینک</a></div></div>
+<div class=sidebar-bottom></div>
+<div class=sidebar-top><div class=sidebar-top-txt>
+<b>آمار بازید</b></div></div>
+<div class=sidebar-bg>
+<div class=li-Sid>			کل بازدید ها : <script>getStatVar('total_view');</script></div>
+			<div class=li-Sid>بازدید امروز : <script>getStatVar('today_view');</script></div>
+			<div class=li-Sid>بازدید دیروز : <script>getStatVar('yesterday_view');</script></div>
+			<div class=li-Sid>بازدید این ماه : <script>getStatVar('this_month_view');</script></div>
+			<div class=li-Sid>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></div>
+			<div class=li-Sid>تعداد نویسندگان : <script>getStatVar('total_author');</script></div>
+			<div class=li-Sid>تعداد کل مطالب : <script>getStatVar('total_post');</script></div>
+                  <div class=li-Sid>        آخرین بروز رسانی : <script>getStatVar('modify_date');</script></div>
+</div>
+<div class=sidebar-bottom></div>
+
+
+<div class=sidebar-top><div class=sidebar-top-txt>
+<b>کدهای کاربر</b></div></div>
+<div class=sidebar-bg><div class=li-Sid2>
+
+<center>                    <!-- Begin SedaYab Code --><div align="center"><object type="application/x-shockwave-flash" data="http://www.sedayab.com/play.swf" width="160" height="20" id="dewplayer" name="dewplayer"> <param name="wmode" value="transparent" /><param name="movie" value="http://www.sedayab.com/play.swf" /> <param name="flashvars" value= "mp3=http://file.sedayab.com/2622.mp3&autostart=1&autoreplay=1&showtime=1&randomplay=1" > </object><br><a title="بدون تو با صدای زانیار خسروی" target="_blank" href="http://www.sedayab.com/?id=2622">دریافت کد</a> :: <a target="_blank" href="http://www.sedayab.com/">صدایاب</a></div><!-- End SedaYab Code -->
+                    
+</center></div></div>
+<div class=sidebar-bottom></div>
+<div style='display:none'><script language="javascript" type="text/javascript"src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/M-QaLeB/blogfa/footer.js"></script></div>
+
+</div>		
+</td>
+
+</tr>
+
+</table> </div><div id="footer"> 
+<div id="irannaghsh-bt">
+<a traget="blank" href="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;" title="طراحی قالب وبلاگهای پارسی"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#99;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/love/41-60/001162748/images/spacer.gif"></a>
+</div><div id="bottom">  copyright 2012 <a href="index.html"target="_blank">
+cabaret</a> 
+</div></div> </div> </div></div> </div> </article>
+﻿</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'cabaret.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

@@ -1,0 +1,1184 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc@rsd.html" />
+<script type="text/javascript" src="../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1033403*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[106]='4';commentCnt[107]='2';commentCnt[108]='3';commentCnt[109]='8';commentCnt[110]='3';commentCnt[112]='17';commentCnt[113]='3';commentCnt[114]='8';commentCnt[115]='3';commentCnt[116]='1';commentCnt[117]='1';commentCnt[118]='2';commentCnt[119]='2';commentCnt[120]='8';commentCnt[122]='7';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[109]='0';
+mihanblogDisLikeArrCnt[109]='0';
+mihanblogLikeArrCnt[110]='0';
+mihanblogDisLikeArrCnt[110]='0';
+mihanblogLikeArrCnt[116]='0';
+mihanblogDisLikeArrCnt[116]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://baraneaseg.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://baraneaseg.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','159');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','پنجشنبه 7 فروردین 1393');
+	
+	setStatVar('today_view','3');
+	setStatVar('yesterday_view','15');
+	
+	setStatVar('this_month_view','517');
+	setStatVar('last_month_view','389');
+
+	setStatVar('total_view','106545');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (06:46)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://baraneaseg.mihanblog.com/statupdate/?data[refereruri]=http://baraneaseg.mihanblog.com/&data[postid]=&data[requesturi]=/page/5&data[sdate]=1607830350&data[hash]=1898ac2983fe30c7213cb3db48e394cb&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://baraneaseg.mihanblog.com/page/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<script type="text/javascript">var ariotik_user_id = 792;</script>
+<script type="text/javascript" src="http://ariotik.ir/website/js"></script>
+<script type="text/javascript">var abarclick_user_id = 713;</script>
+<script type="text/javascript" src="http://abarclick.ir/website/js"></script>
+
+<script type="text/javascript">var ariotik_user_id = 792;</script>
+<script type="text/javascript" src="http://ariotik.ir/website/js"></script>
+
+<head><div id="first_p" style="text-align: center; margin-top: 5px;"><a onclick="document.getElementById('main_p').style.display = 'block';document.getElementById('first_p').style.display = 'none';" href="5.html#"><img src="http://nightnama.ir/codes/backgr/7.gif" border="0"></a></div><div id="main_p" style="display: none;">
+<a target="_blank" href="http://nightnama.ir/codes/backgr">دریافت کد صفحه ورودی</a><br>
+
+
+
+<title>باران عشق</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Farsi">
+<meta name="description" content="باران عشق - ♥♥بارانی باش تو هم مثل من♥♥ - باران عشق">
+<meta name="keywords" content="باران عشق,baraneaseg, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="باران عشق" href="../post/rss/index.html" />
+<link href="http://nightnama.ir/theme/21/style.css" type="text/css" rel="stylesheet">
+<style>
+#header{background:#3a3a3a url(http://nightnama.ir/theme/21/header.jpg) no-repeat top right;height:400;width:100%;color:#838383;font-size:8pt;text-align:right}
+</style>
+</head>
+
+<body>
+
+<div align=center><div style="width:1000">
+
+<div class=smz>
+
+<div id=header>
+<div class=top-BlogTitle></div>
+<div class=top-menu><div class=BlogTitle>باران عشق</div><div class=Description>♥♥بارانی باش تو هم مثل من♥♥</div></div>
+
+<div class=top-menu2>
+<div style="float:right;width:0px;direction:rtl; height:20px"></div>
+<div style="float:right;width:500">
+<a href="../index.html">صفحه اصلی</a> |
+<a rel="nofollow" href="mailto:">ایمیل مدیر</a> |
+<a rel="nofollow" href="javascript:messageForm()">تماس با من</a> |
+<a title="نایت نما" href="http://nightnama.ir" target="_blank" >قالب وبلاگ</a> |
+<a rel="nofollow" href="../post/rss/index.html" target="_blank" >عناوین مطالب</a>
+</div></div></div>
+
+<div id=main-back>
+
+<div class=Sid>
+<div id=Sidebar> 
+
+<div class="TopSid"><div class=TopSid2>نویسندگان</div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../post/author/881009.html">هستی   157 </a></div></div>
+<div class=LowSid></div>
+
+		
+<BlogLinksBlock>
+<div class=TopSid><div class=TopSid2>
+<b>لینک دوستان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a target="_blank" href="http://nightnama.ir">قالب وبلاگ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://sb13.ir/">::: بانک علوم :::</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.farsfunny.ir/">نمکستان</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.fbsff.blogfa.com/">کلبه من،کلبه غم/آسمون اینجا همیشه ابریست</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://email3.ir/">&quot;&quot;ارسال ایمیل تبلیغاتی&quot;&quot;</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../sheelman.mihanblog.com/index.html">چراغ خواب شلمن</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://nicerdicer-plus.rozblog.com/">&quot;&quot;خرد کن نایسر نایسر پلاس&quot;&quot;</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.idvb.ir/">دانلود کلیپ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../naasimehonar.mihanblog.com/index.html">هنر معماری</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../elm-city.mihanblog.com/index.html">... علمی مهندسی ...</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../tiraxtur-fifa.mihanblog.com/index.html">فوتبال - تراختور</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../hamidss1994.mihanblog.com/index.html">عکس آهنگ فیلم داستان و خبر داغ...</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.137213721372.blogfa.com/">رویای مهتاب</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../mirhashemi-2.mihanblog.com/index.html">هموطن</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../kaptanbloom.mihanblog.com/index.html">کاپتان بلوم</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../lovlygirl-justforu.mihanblog.com/index.html">دختری از جنس غم با لبخندی سردتر از یخ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../happygirl80.mihanblog.com/index.html">دنیای رنگی من</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../eshghess.mihanblog.com/index.html">پگاه استقلالی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../fab-friends.mihanblog.com/index.html">صدای پای عشق</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../hamidsss1994.mihanblog.com/index.html">داستان عاشقانه زیبا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../asheghane9.mihanblog.com/index.html">عاشقانه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../banke-etelaat.mihanblog.com/index.html">علوم آزمایشگاه دزفول</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../amd75.mihanblog.com/index.html">دلنوشته های یک مرد</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../tehwatchmens.mihanblog.com/index.html">ساعت مچی مردانه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../donyayzard.mihanblog.com/index.html">دنیای سرد</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://frbidden-love.blogfa.com/">عشق ممنوع</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../chashmemeygoon.mihanblog.com/index.html">چشم میگون</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../bazi-city.mihanblog.com/index.html">... دانلود بازی ...</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://musigi-city.mihanblog.com/">دانلود آهنگ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../furushgah-city.mihanblog.com/index.html">بهترین فروشگاه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../ax-women-ir.mihanblog.com/index.html">عكس بازیگران زن ایرانی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ddownloadd-city.mihanblog.com">... دانلودكده ....</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../asemone-asheghi.mihanblog.com/index.html">آسمون عاشقی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://takbilliards.ir/">بیلیارد</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../hrwriting.mihanblog.com/index.html">&quot; نوشته های همایون رقابی&quot;</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../aznooo.mihanblog.com/index.html">شهدای زنجانرود</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../khotbehsara.mihanblog.com/index.html">آنایوردم خطبه سرا نگین تالش</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../msaal.mihanblog.com/index.html">&quot;باز تابش امسال&quot;</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../ebimiri.mihanblog.com/index.html">پسر مشرقی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://nit.persianblog.ir/">تکنولوژی  جدید</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../weloveus.mihanblog.com/index.html">عشق &amp; نفرت</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ai-nafas.mihanblog.com/">مثل آب آرام باش....</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../30gar-qam.mihanblog.com/index.html">آخرین سیگار.......</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../baran360.mihanblog.com/index.html">حرف های بارانی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../cgirls.mihanblog.com/index.html">نوجوانان تیز هوش</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://hasty76.blogfa.com/">عمق احساس</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://pinkremembrance.blogfa.com/">دلــــنوشته هآیِ صـــــورتــیـــِ مـنــ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../buyglasses-biz.mihanblog.com/index.html">عینک آفتابی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../fereshteh9.mihanblog.com/index.html">فرشته</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../mortezamousazadeh.mihanblog.com/index.html">دیـــــــــــــــــــــــــــــرو</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://juik.blogsky.com/">لینک باکس</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://unique-boy.persianblog.ir/">غـــــــرور عاشـــــقانه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://royajooon94.blogfa.com/">به نــــــام عشق زیباترین دروغ دنیــــا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.manotosport.ir/">من و تو اسپورت</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://kolbehlove.persianblog.ir/">کلبه کوچک عاشقی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://pesarekhastee.blogfa.com/">حرفهای پسر خسته از زندگی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://myrayban.ir/page/link">تبادل لینک</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://buy-glasses.ir">خرید عینک آفتابی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../1hamotaghi.mihanblog.com/index.html">لیلی جونم</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../www.zemzemeh-baran.mihanblog.com/index.html">زمزمه بارون</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../ipromissu4ever.mihanblog.com/index.html">سکوت آبی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../amir-maleki.mihanblog.com/index.html">ورزش حرفه ای</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.fapma.blogfa.com/">اینجا همه چی دونیه!!!</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../naderkhan.mihanblog.com/index.html">لیمو ترش</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.lahzehayetanhaee.blogfa.com/">Lovely Web</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../rosezard.mihanblog.com/index.html">arose ghorbat</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../amir-maleki.mihanblog.com/index.html">ورزش حرفه ای</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://boxlink.loxblog.com/">افزایش آمار</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.sajad0206.loxblog.com/">کبوتری در تاریکی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://eshgh-bi-enteha.blogfa.com/">عشق بی انتها</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.productdesigner.ir">.:: پارک علم و فناوری ::.</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://melodylonely.blogfa.com/">اینجا همه چی در همه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://vahedmvp.lxb.ir/">شرافتهای مظلوم</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../kachoo.mihanblog.com/index.html">sarnevesht</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../www.yatoyabazamto.mihanblog.com/index.html">عاشقانه ها</a></div><div class=li-Sid>
+<a target="_blank" href="http://nightnama.ir">نایت نما</a></div>
+<div class=li-Sid>
+<a target="_blank" href="http://nightnama.ir">قالب میهن بلاگ</a></div></div>
+<div class=LowSid></div>
+</BlogLinksBlock>
+
+
+
+<div class=TopSid><div class=TopSid2>
+<b>پیوندهای روزانه</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://takparvar.ir/post/33" title="">ورمی کمپوست</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://womenclock.parsiablog.com" title="">ساعت زنانه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://bodyshaping.ir" title="">اسلیم لیفت</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.mahz.ir/" title="">صنایع الکترونیک مهزیار</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://glasses2013.ir" title="">خرید عینک آفتابی 2013</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://link98club.r98.ir" title="با سلام....
+ 
+لـــینکـدونـــی | سیستم تبادل لینـــک و بــــنر 
+
+تبادل لینـــک و بــــنر  |   بهترین راه محبوبیت سایت شما در گوگل 
+
+جدیدترین سیستم تبادل بنر و لینک
+
+ پس زود بیاید 
+http://link98club.rozblog.com">سیستم تبادل لینـــک و بــــنر هوشمند</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.hidecor.ir/" title="">برچسبهای دیواری</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.tikbuy.ir" title="با سلام فروشگاه تیک عرضه کننده محصولات متنوع از سراسر وب پس از هر خرید ,کارت شارژ رایگان هدیه میدهد محصولات ما شامل انواع عینک نرم افزار لوازم خانگی لوازم آرایشی لوازم پزشکی گردنبند و دستبند پوشاک لوازم الکترونیکی ادکلن ساعت کارتون مستند و... می باشد خرید شما افتخار ماستwww.tikbuy.ir (جهت تبادل لینک ابتدا ما رو لینک کنید بعد اطلاع بدید)">کارت شارژ رایگان هدیه بگیرید</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.link118.com/" title="">تبادل لینک</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://chargeha.com" title="">فروش اینترنتی کارت شارژ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://fabner.biz/products/buy-a-sunglasses/buy" title="">خرید عینک ریبن اصل</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.nightnama.ir">قالب وبلاگ</a></div>
+<div class=li-Sid>
+<a target="_blank" href="http://nightnama.ir">قالب های نایت نما</a></div></div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>نایت نما</div></div>
+<div class=CenterSid>
+
+
+
+
+<div class=li-Sid><center>
+<a target="_blank" title="طراحی سایت" href="http://www.hamkarweb.ir/">طراحی سایت</a> |
+<a target="_blank" title="اسکریپت دونی" href="http://www.script2ni.ir/">اسکریپت دونی</a> |
+<a target="_blank" title="گالری عکس" href="http://www.nightnama.ir/gallery">گالری عکس</a>
+</div>
+<br><div class=LowSid></div>
+
+</div>
+</div>
+
+<div class=main>
+
+<div class=post>
+
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/122">نرم افزار فتوشاپ سری1</a></div></div>
+<div class=t-date>تاریخ : شنبه 28 بهمن 1391  | 20:45  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<font class="Apple-style-span" color="#993399"><span class="Apple-style-span" style="font-size: 12px; "><h2>نرم افزار فتوشاپ چیست؟</h2><p>نرم افزار فتوشاپ از دسته نرم افزارهایImaqe Editor می باشد به این معنا كه به كمك این نرم افزار می توان بر روی تصاویر ویرایش نمود و حتی تصاویری در درون این نرم افزار خلق نمود این نرم افزار كه توسط شركتAdobe&nbsp;ساخته شده است به كمك چند نرم افزار دیگر كه تحت همین نرم افزار كار می كنند می توانند برروی فیلم ها نیز ویرایش های را داشته باشند ولی اصل حوزه فعالیت فتوشاپ برروی تصاویر می باشد ما دراین آموزش ها قصد كردیم كه این آموزش ها را در دو سطح مبتدی برای دوستانی كه تا به حال با نرم افزار آشنایی نداشته اند و پیشرفته برای دوستانی كه با نرم افزار كاركرده ولی كامل با آن آشنا نیستن را ارائه نماییم امید است كه بعد از این آموزش ها شما را جزء آن دسته از كاربران حرفه ای این نرم افزار ببینیم و همچنین ما هم به هدف خود كه ترویج علم و مخصوصا علوم كامپیوتر می باشد رسیده باشیم.</p><p>&nbsp;</p><h2>نصب برنامه :</h2></span><span class="Apple-style-span" style="font-size: 12px; "><p>این برنامه مانند سایر نرم افزارها دارای مراحلی برای نصب می باشد كه به شرح زیر است:</p><p>CD نرم افزار را داخل درایو گذاشته و به داخلCD رفته گزینهSetup&nbsp;را بعد از گذراندن مراحل&nbsp;&nbsp;&nbsp; ( تعیین محل نصب بر روی دیسك سخت و همچنین مراحل و صفحات بعد) به صفحه &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;می رسید كه از آن نمی توان گذر نمود چون از شما كد ورود نرم افزار را طلب می كند در اینجا شما به درایوCD رفته و فایل متن (Text) داخلCD نرم افزار را باز نموده و شماره سریال داخل را بلوكه كرده كپی نمایید به داخلSetup برگشته و در قسمتSerial namber&nbsp;،Paste&nbsp;نمایید و مشخصات فردی خود را نیز وارد نمایید به این ترتیب گزینهNext روشن و فعال میگردد.حالا دكمهNext&nbsp;رازده و منتظر بمانید تا نرم افزار نصب گردد. بعد از نصب برنامه به منویStart&nbsp;رفته و از قسمتPrograms گزینهAdobe Photoshop را زده تا نرم افزار باز شود اینجا محیط نرم افزار فتوشاپ است.</p><p>كه متشكل از:</p><p>ناحیه كاری</p><p>نوار منو</p><p>نوار پارامترها</p><p>و پانل های مختلف كنترل رنگ ، سایز تصویر، لایه ها، اطلاعات صحنه، تاریخچه و غیره……می باشد.</p><p>این نرم افزار نیز مطابق تمامی نرم افزارهای تحت ویندوز دارای منوهای در بالای صفحه&nbsp;&nbsp;&nbsp;&nbsp; می باشد كه تمامی فرمانها دراین منوها البته بسته به نوع عملكرد شان دسته بندی شده اند اولین منوی كه ما با آن شروع خواهیم كرد و آشنا خواهیم شد منویFile&nbsp;می باشد.</p><h2>FILE</h2><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://uploadtak.com/images/m2493_0.jpg" alt=""></div></span><span class="Apple-style-span" style="font-size: 12px; "><p>در این منو فرمانهای ورود خروج و نیز ذخیره سازی موجود می باشد تك تك آنها را توضیح خواهیم داد.</p><p>&nbsp;</p><h2>New :</h2><p>&nbsp;به كمك این گزینه می توان یك صفحه جدید كاری درصحنه ایجاد نمود و كلید های میان بر این گزینه معادلCtrl+N می باشد . زمانی كه این گزینه را می زنید یك پنجره جدید بازمی شود كه تعیین كننده مشخصات و نوع تنظیمات صحنه ای می باشد كه شما ایجاد خواهید كرد.</p><p>&nbsp;</p><h2>Name :</h2><p>به كمك این گزینه مشخص می شود كه نام صحنه ای كه ایجاد می نمایید چه باشد.</p><p>درقسمتImage size تنظیمات مربوط به اندازه صفحه جدید می باشد كه به ترتیب توضیح خواهم داد . قسمتPreset sizes&nbsp;دراین قسمت اندازه های معیین و استاندارد و از پیش تعیین شده و را در اختیار شما قرار می دهد برای سهولت و سرعت و دقت در كار البته این گزینه به صورت پیش فرض به صورت دستی تنظیم شده است یعنی شما به صورت دلخواه می توانید اندازه صحنه جدید را ایجاد نمایید.</p><p>&nbsp;</p><h2>Width :</h2><p>&nbsp;به كمك این گزینه كه یك فیلد عددی است می توانید عرض وپنهای صفحه تعیین نمایید.</p><p>&nbsp;</p><h2>Height :</h2>به كمك این گزینه كه یك فیلد عددی است می توانید طول یك صفحه را تعیین نمایید.<p>&nbsp;</p><h2>Resolution :</h2><p>به كمك این گزینه میزان كیفیت و میزان نقاط را تشكیل دهنده یك صفحه را مشخص می كنید در رابطه با این مقوله در آینده مفصل صحبت خواهیم نمود.</p><p>درمقابل سه گزینه بالا یك منوی كركره ای وجود دارد كه معیین كننده واحد اندازه گیری &nbsp;&nbsp;&nbsp;&nbsp;می باشد.</p><p>&nbsp;</p><h2>Mode :</h2><p>&nbsp;این قسمت یك منوی كركره ای می باشد كه دراین قسمت می توانید تركیب بندی رنگ در صفحه جدید كه می خواهید ایجاد نمایید تعیین كنید. كه مدل ها را در زیر توضیح خواهم داد.</p><h2>Bitmap</h2><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://uploadtak.com/images/w7258_0.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><p>تصویری كه پیكسل ها با عوض كردن مقدار بیت ذخیره شده تغییر می كند &nbsp;( یك یعنی روشن صفر یعنی خاموش ، در صفحه نمایش رنگی بیتهای بیشتری استفاده می شوند تا سه رنگ قرمز و سبز و آبی را هم كنترل كند)</p><h2>Grayscale</h2><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://uploadtak.com/images/v422_0.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><p>&nbsp;این گزینه یك صحنه در اختیار ما می گذارد به این صورت كه هر فعالیت دراین صحنه شود به صورت سیاه سفید دیده خواهد شد و ذخیره می شود در كل صفحه ای سیاه سفید در اختیار می گذارد و رنگ در آن تاثیری به عنوان خود ماهیت اصلی رنگ ندارد فقط به صورت تیره های مختلف خاكستری نمایان می شود.</p><h2>or</h2><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://uploadtak.com/images/c41_0.jpg" alt=""></div><div><br></div></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><p>این مدل رنگ متشكل از سه رنگ اصلی قرمز سبز و آبی می باشد و با تركیب این سه رنگ ، رنگ اصلی به وجود خواهد آمد.</p><h2>Cmyk color</h2><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://uploadtak.com/images/d9791_0.jpg" alt=""></div><div><br></div></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><p>این مدل رنگ جهت چاپ مورد استفاده قرار می گیرد و دراین مدل رنگها به حسب درصد رنگهای فیروزه ای (Cyanred)سرخابی (Maqenta) زرد (Yellow) و سیاه (Black) تعریف میشود.</p><h2>Lab</h2><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://uploadtak.com/images/l3191_0.jpg" alt=""></div><div><br></div></div></span></font><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><p><font class="Apple-style-span" color="#993399">&nbsp;مدلLab جامع ترین مدل رنگی می باشد این مدل طوری طراحی شده كه در آن رنگها به دستگاه وابسته نباشد یعنی هر رنگ در صفحه نمایش و در صفحه چاپی به یك صورت ظاهر می شود. این مدل در عمل كاربرد زیادی ندارد.</font></p><p><font class="Apple-style-span" color="#993399">Contents</font></p><p><font class="Apple-style-span" color="#993399">در این قسمت شما مشخص می كنید كه صفحه جدید در قسمت پس زمینه چه خصوصیاتی را دارا باشد.</font></p><p><font class="Apple-style-span" color="#993399">به صورتWhite&nbsp;سفید یاBack qrouhd color به صورت رنگی كه برای رنگ پس زمینه انتخاب می كنید یا به صورت شفاف یا&nbsp;Trahs pareht بعد از زدن دكمهok&nbsp;صفحه جدید ایجاد می شود .</font></p><h2><font class="Apple-style-span" color="#993399">Open</font></h2><div><font class="Apple-style-span" color="#993399"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uploadtak.com/images/294_0.jpg" alt=""></font></div><div><font class="Apple-style-span" color="#993399"><br></font></div><div><font class="Apple-style-span" color="#993399"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uploadtak.com/images/o263_0.jpg" alt=""></font></div><div><font class="Apple-style-span" color="#993399"><br></font></div><div><p><font class="Apple-style-span" color="#993399">گزینه دوم در منویFile&nbsp;گزینهOpen می باشد كه معادل كلیدهای میانبرCtrl+O می باشد یا با دوبار كلیك كردن در پنجره كاری فتوشاپ می توانید به این پنجره دسترسی داشته باشید. به كمك این گزینه می توانید تصاویر را به فتوشاپ وارد نمایید.</font></p><h2><font class="Apple-style-span" color="#993399">Browse</font></h2></div><div><font class="Apple-style-span" color="#993399"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uploadtak.com/images/m933_0.jpg" alt=""></font></div><div><font class="Apple-style-span" color="#993399"><br></font></div><div><p><font class="Apple-style-span" color="#993399">به كمك این گزینه می توانید شما در داخل نرم افزار فتوشاپ یكBrowser&nbsp;یا یك پنجره مشاهدات داشته باشید.</font></p><h2><font class="Apple-style-span" color="#993399">Open Recent</font></h2><div><font class="Apple-style-span" color="#993399"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uploadtak.com/images/w259_0.jpg" alt=""></font></div><div><font class="Apple-style-span" color="#993399"><br></font></div><div><p><font class="Apple-style-span" color="#993399">به كمك این فرمان می توانید آخرین تصاویر باز شده توسط نرم افزار را دوباره بازیابی نمایید.</font></p><p><font class="Apple-style-span" color="#993399">&nbsp;</font></p><h2><font class="Apple-style-span" color="#993399">Close :</font></h2><p><font class="Apple-style-span" color="#993399">این فرمان صفحه باز انتخاب شده در نرم افزار را می بندد.</font></p><h2><font class="Apple-style-span" color="#993399">Save</font></h2></div><div><font class="Apple-style-span" color="#993399"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uploadtak.com/images/x4341_0.jpg" alt=""></font></div><div><font class="Apple-style-span" color="#993399"><br></font></div><div><font class="Apple-style-span" color="#993399"><br></font></div><div><p><font class="Apple-style-span" color="#993399">این فرمان فایل موجود در نرم افزار را به فرمت های مختلف بر روی درایو سخت ذخیره سازی می نماید.</font></p><p><font class="Apple-style-span" color="#993399">&nbsp;</font></p><h2><font class="Apple-style-span" color="#993399">Save as :</font></h2><p><font class="Apple-style-span" color="#993399">این فرمان از فایل جاری كه به كمك فرمانSave ذخیره شده ، ذخیره سازی می كند البته با نام دلخواه.</font></p><p><font class="Apple-style-span" color="#993399">&nbsp;</font></p><h2><font class="Apple-style-span" color="#993399">Save for web :</font></h2><p><font class="Apple-style-span" color="#993399">&nbsp;این گزینه تصویر جاری را برای استفاده بر روی اینترنت ذخیره سازی می نماید ( دراین رابطه در آینده توضیح خواهم داد)</font></p><p><font class="Apple-style-span" color="#993399">&nbsp;</font></p><h2><font class="Apple-style-span" color="#993399">Import :</font></h2><p><font class="Apple-style-span" color="#993399">به كمك این فرمان می توانید فایل هایی را به داخل برنامه وارد نمایید از جمله فایل هایAdobe Acrobat و غیره……………</font></p><p><font class="Apple-style-span" color="#993399">&nbsp;</font></p><h2><font class="Apple-style-span" color="#993399">Export :</font></h2><p><font class="Apple-style-span" color="#993399">به كمك این گزینه می توانید تصاویر را خروجی بگیرید.</font></p><p><font class="Apple-style-span" color="#993399">تا اینجا با خصوصیات وفعالیت ها و تا حدودی با محیط نرم افزار آشنا شدید در درس بعد ترس شما نسبت به این نرم افزار خواهد ریخت و كامل ، راحت و روان با این نرم افزار كاربردی كار خواهید كرد.</font></p></div><div><br></div><a href="http://www.taknaz.ir/" title=" نرم افزار فتوشاپ سری1 www.taknaz.ir" style="text-decoration: none; color: rgb(8, 24, 32); "></a><a href="http://www.taknaz.ir/" title=" نرم افزار فتوشاپ سری1 www.taknaz.ir" style="text-decoration: none; color: rgb(8, 24, 32); "></a></div></div></span>
+
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(122)">نظرات  <script>setCommentCnt(122)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/120">Layer Styles در فتوشاپ</a></div></div>
+<div class=t-date>تاریخ : یکشنبه 22 بهمن 1391  | 14:09  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#666600"><b>آموزش فتوشاپ درس سیزدهم، Layer Styles در فتوشاپ</b>&nbsp;<br><br><div class="post-more" style="font: normal normal normal 12px/normal tahoma; "><div style="font: normal normal normal 12px/normal tahoma; ">در فتوشاپ می توان افکت هایی به لایه ها اضافه نمود که به طور خودکار تغییراتی در لایه ایجاد می کنند. ترکیب افکت ها روی هر لایه Layer Style یا حالت لایه نامیده می شود. در این درس به شما آموزش داده می شود چگونه از آنها استفاده کنید و layer style های مورد نظر خود را روی تصویر اعمال کنید.<br><br><br><b>Layer Style چیست؟</b><br><br>نکته: اگر سعی در پیدا کردن راه ها و چگونگی نصب Layer Style ها هستید به آموزش فوق مراجعه کنید. Installing Layer Styles in&nbsp; Photoshop یا نصب Layer Styles در فتوشاپ.&nbsp;<br><br>Layer Style ها جلوه های ویژه ای هستند که با سرعت و به آسانی می وان آنها را روی لایه ها در فتوشاپ اعمال کرد تا به طور قابل ملاحظه ای ظاهر هر چیز را در کمترین زمان تغییر دهد. آنها یا به طور از قبل تنظیم شده، یا به صورت Layer Style های دست ساز وجود دارند که کاربر آنها را ایجاد و برای استفاده های بعدی خود ذخیره نموده است.&nbsp;&nbsp;<br>یکی از خصوصیات مفید Layer Style ها این است که رابطه نزدیکی با محتوای لایه (layer contents) دارد. از آنجایی که style در اصل یک موجودیت یا خصیصه مجزاست که فقط با لایه ارتباط پیدا می کند، به طور پی در پی خود را با تغییرات محتوا یعنی هر نوع ویرایش یا انتقالی که در محتوا صورت می گیرد، هماهنگ یا update می کند.بعلاوه، جلوه ها&nbsp; بعد از اعمال شدن به آسانی می توانند تنظیم و هماهنگ شوند.<br><br>متنی که در زیر مشاهده می کنید قبل و بعد از اعمال layer styles را نمایش می دهد</div><div style="font: normal normal normal 12px/normal tahoma; ">&nbsp;</div><div style="font: normal normal normal 12px/normal tahoma; ">&nbsp;</div><div class="tutorial_image" style="font: normal normal normal 12px/normal tahoma; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/4f6p9xs3asabvjcx784.jpg" alt=""></div><div style="font: normal normal normal 12px/normal tahoma; "><br><br><b>کاربرد از Layer Style های از قبل تنظیم شده یا Presets</b><br><br>نسخه جدید فتوشاپ با تعداد قابل توجهی از Layer Style های از قبل تنظیم شده که از طریق پالت Style قابل دسترسی است (Window &gt; Styles) بازگشت. برای اعمال کردن یک Layer Style، لایه<br>ای که می خواهید روی آن کار کنید را انتخاب کنید، سپس Layer Style مورد نظر را انتخاب نمایید.</div><div style="font: normal normal normal 12px/normal tahoma; ">&nbsp;</div><div style="font: normal normal normal 12px/normal tahoma; ">&nbsp;</div><div class="tutorial_image" style="font: normal normal normal 12px/normal tahoma; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/wazxrf3wx5jzfr2izh2.gif" alt=""></div><br><div class="tutorial_image" style="font: normal normal normal 12px/normal tahoma; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/ban0p08n067vekd32wfe.gif" alt=""></div><br><br>بعد از به کار بردن Layer Style،افکت های اعمال شده در لایه را می توان در پالت لایه ها دید، تنظیم نمود و غیر فعال کرد. لایه ها با افکت اعمال شده روی آنها یک آیکن'f' خواهند داشت برای باز یا بسته&nbsp;<br>شدن لیست افکت ها باید روی فلش کوچکی که در سمت راست این آیکن قرار دارد کلیک کنید.<br>وقتی یک افکت در زیر لایه ایجاد می شود، می توانید با کلیک روی آیکن چشم هر یک از افکت هایی را که لازم ندارید، غیر فعال یا مخفی کنید. این افکت ها درست مثل یک لایه، می توانند مجددا قابل مشاهده یا فعال شوند فقط کافیست روی قسمت سفید (جایی که چشم قرار داشت) کلیک کنید.<br><br><br><b>ایجاد تغییرات سریع<br>&nbsp;</b><br>&nbsp;با دوبار کلیک کردن روی آیکن f، پنجره Layer Style Options باز می شود و شما می توانید style لایه ها را سریعا تغییر دهید. از همین جا می توانید تنظیمات مورد نیاز را به صورت دستی وارد کنید.<br><div class="tutorial_image" style="font: normal normal normal 12px/normal tahoma; "><br></div><div class="tutorial_image" style="font: normal normal normal 12px/normal tahoma; "><br></div><div class="tutorial_image" style="font: normal normal normal 12px/normal tahoma; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/f0ntln0h7ymo2rhce7zh.gif" alt=""></div><div style="font: normal normal normal 12px/normal tahoma; "><br><br><b>ساخت افکت و Style</b><br><br>برای اضافه کردن افکت و style لایه ها، به Layer &gt; Layer Style &gt; Blending Options بروید و یا روی لایه کلیک راست کنید و گزینه Blending Options را انتخاب نمایید. با این کار یک پنجره تنظیمات Layer Style باز خواهد شد.</div><div style="font: normal normal normal 12px/normal tahoma; ">&nbsp;</div><div style="font: normal normal normal 12px/normal tahoma; ">&nbsp;</div><div class="tutorial_image" style="font: normal normal normal 12px/normal tahoma; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/tpi4t8aurrfk2k6uwlu.gif" alt=""></div><br><br><b>A.</b>&nbsp;لیستی از Style های از قبل تنظیم شده و آماده (Style Presets)<br><b>B.</b>&nbsp;افکت ها (Effects): شامل افکت های گوناگونی است که می توان از آنها در layer style استفاده کرد. به این نکته توجه کنید که، با کلیک کردن روی نام هر کدام از افکت ها، آن افکت فعال و گزینه هایی برای هر کدام از آنها ظاهر می شود.<br><b>C.</b>&nbsp;گزینه ها (Options) و تنظیمات (Settings): وقتی که تیک هر یک از افکت ها زده شده است، گزینه های آن هم در این قسمت نمایش داده می شود. وقتی&nbsp; Blending Options انتخاب شده است،&nbsp;<br>تنظیماتی مانند Opacity و Fill و سایر گزینه ها به نمایش در می آیند.<br><b>D.&nbsp;</b>پیش نمایش Layer Style Preview: یک صفحه پیش نمایش از Layer Style.<br>&nbsp;<br>افکت ها (B) را می توان با زدن تیک آنها، فعال یا با برداشتن تیک غیرفعال نمود. برای ویرایش یک افکت، لازم است روی نام آن کلیک کنید نه روی checkbox. تنظیمات افکت ها در قسمت Options&nbsp;<br>یعنی قسمت (C) در تصویر بالا نمایش داده می شوند. برای اعمال افکت ها و گزینه های مورد نظر، بعد از ایجاد تغییرات روی کلید OK کلیک کنید.<br>&nbsp;<br><br><b>انواع افکت های لایه:</b><br><br>Style ها را می توان با افکت های زیر ایجاد کرد:<br><br><b>Drop Shadow</b>- یک سایه پشت محتوای لایه ایجاد می کند.<br><b>Inner Shadow</b>- سایه ای روی محتوای لایه ایجاد می کند.<br><b>Outer Glow</b>- یک درخشندگی یا براقی در پشت محتوای لایه ایجاد می کند. نمی تواند مانند Drop Shadow فاصله ایحاد کند.<br><b>Inner Glow</b>- روی محتوای لایه را درخشان می کند. این افکت نیز نمی تواند مانند inner shadow بین درخشندگی و تصویر فاصله ایجاد کند.<br><b>Bevel and Emboss</b>- برای ایجاد highlight های منحصر به فرد و افکت سایه روی محتوای لایه بکار برده می شود.<br><b>Satin</b>- به محتوای لایه جلا می دهد و آن را مانند یک سطح صاف و صیقلی می کند.<br><b>Color Overlay</b>- محتوای لایه را با رنگ ساده و یک دست، رنگ می کند.<br><b>Gradient Overlay</b>- محتوای لایه را با یک صیف رنگ یا گرادیانت، رنگ می کند.<br><b>Pattern Overlay</b>- محتوای لایه را با یک الگو یا Pattern رنگ می پوشاند.<br><b>Stroke</b>-&nbsp; با استفاده از یک رنگ یک دست،گرادیانت و یا الگو، خطی در اطراف یا محیط محتوای لایه ایجاد می کند.<br>&nbsp;<br><br><b>این تمرین را انجام دهید!</b>&nbsp;<br><br>اجازه دهید برای اینکه بفهمیم چقدر از این آموزش مهارت کسب کرده ایم آن را امتحان کنیم. قصد ما آزمودن توانایی هایمان در ایجاد یک&nbsp; layer style برا روی یک متن است. ابتدا یک سند یا فایل جدید در&nbsp;<br>فتوشاپ ایجاد می کنیم و با استفاده از ابزار Type متن بزرگی به رنگ سیاه تایپ می کنیم.<br>روی لایه text کلیک راست کرده و گزینه Blending Options را انتخاب می کنیم.<br><div class="tutorial_image" style="font: normal normal normal 12px/normal tahoma; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/whk5bwcxtvfm10raya6f.gif" alt=""></div><div style="font: normal normal normal 12px/normal tahoma; "><br>در ابتدا می خواهیم یک Drop Shadow به لایه اضافه کنیم. گزینه Drop Shadow را فعال و روی آن کلیک کنید تا تنظیمات مربوطه ظاهر شود سپس تنظیمات زیر را اعمال نمایید.</div><div style="font: normal normal normal 12px/normal tahoma; ">&nbsp;</div><div style="font: normal normal normal 12px/normal tahoma; ">&nbsp;</div><div class="tutorial_image" style="font: normal normal normal 12px/normal tahoma; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/uaw5vnx7sa6wdd9tb4x.gif" alt=""></div><div style="font: normal normal normal 12px/normal tahoma; "><br><br>همین طور که در حال اعمال تنظیمات هستید، باید قادر باشید تغییرات ایجاد شده روی سند اصلی را ببینید. نگاه کردن به سند وقتی در حال انجام تغییرات هستید به شما کمک می کند تا مدیریت بهتری در تنظیمات داشته باشید و تعیین کنید چه موقع تغییر کاربردی تر و بهتر است.<br><br>&nbsp;شما باید با بیشتر این slider ها و انواع تنظیمات آن در قسمت آموزش Palette ها آشنا شده باشید. گزینه Angle ممکن است برای شما نا آشنا باشد، اما کار کردن با آن بسیار ساده است. شما هم می توانید یک مقدار عددی برای آن وارد کنید و هم با کلیک ماوس روی آیکن چرخ مانند، آن را تنظیم نمایید. این کار را ادامه دهید تا به تنیجه مطلوب دست پیدا کنید.<br>حالا اجازه دهید یک افکت Bevel and Emboss اضافه کنیم. در این مرحله قصد داریم یک برجستگی (Bevel) که مناسب با تصویر باشد ایجاد کنیم می بینید که در همین زمان متنی که ایجاد کرده بودیم&nbsp;<br>برجسته تر شد.تنظیمات زیر را استفاده نمایید.</div><div style="font: normal normal normal 12px/normal tahoma; ">&nbsp;</div><div style="font: normal normal normal 12px/normal tahoma; ">&nbsp;</div><div class="tutorial_image" style="font: normal normal normal 12px/normal tahoma; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/4o1df5m9waormu3sov5k.gif" alt=""></div><div style="font: normal normal normal 12px/normal tahoma; "><br><br>در واقع هیچ چیزی اینجا جدید نیست. ممکن است بخواهید برای درک بهتر مطالب و تنظیمات متفاوت، چیزهایی را که در بالا به آن اشاره شد را تجربه کنید، همه اینها به سلیقه شخصی شما بستگی دارد.&nbsp;<br><br>در این مرحله قصد داریم یک Gradient Overlay اضافه کنیم.&nbsp;</div><div style="font: normal normal normal 12px/normal tahoma; ">&nbsp;</div><div style="font: normal normal normal 12px/normal tahoma; ">&nbsp;</div><div class="tutorial_image" style="font: normal normal normal 12px/normal tahoma; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/zmv1op0l94tc5culixve.gif" alt=""></div><div style="font: normal normal normal 12px/normal tahoma; "><br><br>به طور پیش فرض، Gradient Overlay از یک گرادیانت یا طیف رنگ Foreground یا زمینه به Background یا پس زمینه تشکیل شده است که دقیقا چیزی نیست که ما به دنبال آن هستیم ( مگر اینکهما رنگ زمینه و پس زمینه را در فتوشاپ مخصوصا برای این مرحله نصب کرده باشیم ). مشکلی نیست، زیرا می توانیم به راحتی نمودار را با توجه به شکل زیر تنظیم کنیم.<br>روی گرادیانتی که در پنجره Gradient Picker نشان داده شده کلیک کنید ( روی طیف از سیاه به سفید). با این کار یک ویرایشگر گرادیانت یا Gradient Editor ظاهر خواهد شد. از Gradient Editor،&nbsp;<br>شما هم می توانید یک گرادیانت از قبل تنظیم شده را انتخاب کنید و هم می توانید مطابق با سلیقه خود یک گرادیانت جدید ایجاد نمایید. پایین ویرایشگر، گرادیانتی که در حال حاضر اعمال شده همـــراه با Opacity Stops (مشخص می کند میزان تیــــرگی گرادیانت در یک نقطه خاص چگونه است)&nbsp; و Color Stops (مشخص می کند کدام یک از رنگ ها در گرادیانت استفاده شده است) قرار دارد. ما می&nbsp;<br>توانیم stops ها را اضافه، کم و حتی مکان آنها را تغییر دهیم. برای انجام این کار روی یک نقطه از گرادیانت مثلا در زیر یا بالای آن و یا روی خود stop ها کلیک می کنیم.<br>قصد ما فقط تغییر stop های رنگی است که در حال استفاده است. روی اولین color stop کلیک کنید و کد&nbsp; 50a2e7 # را وارد کنید، سپس روی stop سمت راست کلیک کنید و کد 75cefc # را وارد نمایید.&nbsp;<br>روی کلید OK کلیک نمایید تا گرادیانت اعمال شود.</div><div style="font: normal normal normal 12px/normal tahoma; ">&nbsp;</div><div style="font: normal normal normal 12px/normal tahoma; ">&nbsp;</div><div class="tutorial_image" style="font: normal normal normal 12px/normal tahoma; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/oe3q926it8y6hus6k7u.jpg" alt=""></div><br><br>حالا روی OK کلیک کنید تا layer style که ایجاد کردید، اعمال شود.<div class="tutorial_image" style="font: normal normal normal 12px/normal tahoma; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/vttmlwmhpd5o1j84jnln.gif" alt=""></div><br><br>تبریک می گویم. شما از این لحظه به جمع هنرمندان آموزش دیده و خبره افکت های لایه و layer style اضافه شدید.&nbsp;</div></font></span>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(120)">نظرات  <script>setCommentCnt(120)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/119">فیلترها در فتوشاپ </a></div></div>
+<div class=t-date>تاریخ : شنبه 21 بهمن 1391  | 14:00  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><font class="Apple-style-span" color="#999900"><span class="Apple-style-span" style="font-size: 12px; "><b>آموزش فتوشاپ درس دوازدهم، فیلترها در فتوشاپ</b>&nbsp;<br><br><div class="post-more" style="font: normal normal normal 12px/normal tahoma; "><div style="font: normal normal normal 12px/normal tahoma; ">فیلترها برای تغییر ظاهر یا منظر تصاویر، لایه ها یا نواحی انتخاب شده در فتوشاپ بکار می رود. در این آموزش تعدادی از فیلترهای متداول به شما معرفی&nbsp; و نشان داده می شود که چگونه از می توانید از آنها استفاده کنید.<br><br>کارکرد فیلتر ها در فتوشاپ شبیه اضافه کردن جلوه های ویژه به فیلم ها هستند، کاربرد آنها آسان است ولی جایگاه مخصوص خود را در طراحی دارند.&nbsp;<br>راههای متعددی برای استفاده خلاقانه از فیلترها وجود دارد، بنابراین یادگیری کاربرد آنها یکی از ازرشمندترین مهارت ها در فتوشاپ است.<br><br><br><b>انتخاب فیلترها از Filter Gallery</b><br><br>Filter Gallery در فتوشاپ اساسا یک منبع قابل توجه در فتوشاپ برای کار با فیلترها است در سند شماست. در Filter Gallery، شما می توانید تعداد زیادی فیلتر مشاهده کرده و یکی از آنها را انتخاب و روی تصویر اعمال کنید یا آنها را روی هم قرار دهید مانند لایه ها. با رفتن به Filter &gt; Filter Gallery شما می توانید پنجره Filter Gallery را ببینید.<br><br>اینجا یک تصویر از Filter Gallery نمایش داده شده است:</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/w10ntsy990x7hsr46kv.jpg" alt=""></div><div><br></div></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; "><br><b>معرفی Filter Gallery</b><br><b>A.</b>&nbsp;پیش نمایش فیلتر Filter Preview<br><b>B.</b>&nbsp;لیست فیلترها (Filter List): توجه می توانید با کلیک کردن روی آیکن فلش که در بالای سمت راست&nbsp; لیست&nbsp; قرار دارد ، آنرا فعال یعنی طوری که قابل دیدن باشد و یا مخفی کنید.<br><b>C.</b>&nbsp;فیلتری که در حال حاضر در حال استفاده کردن از آن می باشید.<br><b>D.</b>&nbsp;تنظیمات فیلتر Filter Options<br><b>E.</b>&nbsp;لایه های افکت Effect Layers&nbsp;<br><b>F.</b>&nbsp;آیکن ساخت لایه افکت جدید/ آیکن پاک کردن لایه افکت (New / Delete Effect Layer)<br><br>لایه های افکت فیلتر دقیقا مانند فیلترهای معمولی در فتوشاپ کار می کنند و می توان برای به دست آوردن نتیجه مورد نظر،آنها را&nbsp; drag و&nbsp; کرد و در بالای بقیه لایه ها قرار داد.<br><br>اعمال یک فیلتر روی تصویر ازطریق گالری کار خیلی آسانی است. روی یک فیلتر کلیک کنید، تنظیمات آنرا مطابق سلیقه خود تغییر دهید و سپس کلید OK را بزنید تا فیلتر روی تصویر اعمال شود.برای قرار دادن چند فیلتر روی یکدیگر، فقط کافیست&nbsp; روی کلید&nbsp; New Effect Layer یا قسمت F در شکل بالا کلیک کنید و یک فیلتر جدید انتخاب کنید. برای بازشدن لیست فیلترها باید روی folder که در کنار نام فیلتر قرار دارد کلیک کنید.</div><div style="font: normal normal normal 12px/normal tahoma; ">&nbsp;</div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/8q80doalgsb2huj3i50d.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><b>دسترسی سریع به فیلترها<br><br></b>Filter Gallery تنها یک جستجوگر است. اگر شما دقیقا می دانید از چه فیلتری می خواهید استفاده کنید، می توانید مستقیما آن را از Filter menu (منوی فیلتر) در اختیار داشته باشید تا در کارتان از سرعت بالایی برخودار باشید.<br><br><br><b>کاربرد سایر فیلترها</b>&nbsp;<br><br>همه فیلترهای فتوشاپ در Filter Gallery موجود نیست. تعداد بیشتر آنها از طریق منوی فیلتر در دسترس کاربر قرار دارند و هر یک عملکرد و تنظیمات خاص خود را داراست.<br>ماقصد داریم در این آموزش به سراغ تک تک فیلترها برویم هرچند زمان زیادی را باید صرف کرد اما پیشنهاد می کنیم هر کدام از فیلترها را به طور جداگانه روی تصاویر آزمایش کنید و نتیجه هر یک را ببینید تا یک ایده کلی از اینکه هر کدام از فیلترها چه کاری انجام می دهند به دست آورید.<br>&nbsp;&nbsp;<br><br><b>فیلتر Blur:&nbsp;</b>با رفتن به مسیر Filter &gt; Blur:<br>این فیلترها در بسیاری از موارد و موقعیت ها مناسب هستند مثلا در عمق بخشیدن به تصویر و ...</span>
+
+
+</font><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#999900"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#999900"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/xhzxh45jt1eol6abtnq6.jpg" alt=""></font></span></div><div><font class="Apple-style-span" color="#999900"><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; "><br><b>فیلتر Noise: با رفتن به مسیر Filter &gt; Noise:</b><br><br>این شکل floating palette است که شامل تنظیماتی برای سایر خصوصیات اشیا است و به طور معمول برای تغییر رنگ ها و ضخامت یا پهنای stroke استفاده می شود.</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/6lecsbhqj9rvsgwzxmq4.jpg" alt=""></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; "><br><b>فیلترSharpen: با رفتن به مسیر Filter &gt; Sharpen:</b><br><br>این فیلتر نیز برای ترمیم عیوب و نواقص در عکاسی استفاده های فراوانی دارد، همچنین برای برجسته کردن عناصر مهم و اصلی درطرح استفاده می شود. وقتی در حال کار کردن با تصاویر مات (blurred image) هستید، یک sharpen filter می تواند برای واضح تر شدن و بهتر دیده شدن لبه های تصویر و نیز برای افزایش کنتراست بین پیکسل ها، به شما کمک کند.</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/9qexr3wnnhc48z0108ei.jpg" alt=""></div></span><span class="Apple-style-span" style="font-size: 12px; "><br><b>معایب فیلترها</b><br><br>در حالیکه همه فیلترها برای استفاده در تصاویر 8 بیتی RGB کاربرد دارند، بیشتر آنها ممکن است وقتی با فضاهای رنگی دیگرمثلا 16 یا 32 بیتی کار می کنید غیر فعال باشند. فیلترها همچنین برای استفاده در Bitmap و Indexed-color نیز کاربرد ندارند.<br>اگر شما قادر به استفاده از فیلترها نبودید، ممکن است لازم باشد به مسیر Image &gt; Mode بروید و مطمئن شوید که Mode رنگ روی RGB و 8 Bits/Channel تنظیم شده است. اگر تنظیمات نام برده درست بود ولی باز هم موفق به دیدن فیلترها نشدید در چنین مواردی ممکن است اشکال از خود تصویر باشد.</span></font></div><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(119)">نظرات  <script>setCommentCnt(119)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/118">ذخیره سازی تصاویر برای وب Save for Web </a></div></div>
+<div class=t-date>تاریخ : جمعه 20 بهمن 1391  | 13:52  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><font class="Apple-style-span" color="#ff9900"><span class="Apple-style-span" style="font-size: 12px; "><b>آموزش فتوشاپ درس یازدهم، ذخیره سازی تصاویر برای وب Save for Web&nbsp;</b><br><br><div class="post-more" style="font: normal normal normal 12px/normal tahoma; ">وقتی می خواهیم تصویر را Save for Web کنیم، همیشه در نظر گرفتن کیفیت و اندازه تصویر برای بالا بردن وضوح هنگام دیده شدن آن اهمیت زیادی دارد. در این آموزش به شما نشان داده خواهد شد، چه چیزی برای ذخیره کردن تصویر برای وب نیاز دارید.<br>&nbsp;<br>امروزه احتمالا اینترنت یکی ازبزرگترین رسانه برای نمایش کارهای هنری،&nbsp;گرافیکی&nbsp;و عکس ها است که این امر باعث شده تا داشتن اطلاعات کافی برای ذخیره کردن&nbsp; تصاویر برای وب، به امری مهم و لازم تبدیل شود.<br>اساسا، ذخیره کردن برای وب یک متعادل سازی است- شما باید کیفیت و اندازه یک رسانه را به حد تعادل برسانید تا قابلیت لازم برای ذخیره سازی را داشته باشد و نیز با نیاز های شما نیز مطابقت داشته باشد.&nbsp;&nbsp;&nbsp;<br><br>در جایی که سرعت از اهمیت بالایی برخوردار است، ممکن است مجبور شوید که شما کیفیت&nbsp; گرافیک&nbsp;خود را پایین بیاورید. در جایی که کیفیت نقش مهم تری دارد، ممکن است لازم به پایین آوردن سرعت باشید. هدف این درس این است که راههایی را به شما نشان دهیم که بتوانید&nbsp; در آنها این دو گزینه را به حد تعادل برسانید و در همین زمان هم یک تصویر با کیفیت عالی ایجاد کنید.&nbsp;<br><br><br><b>داده های صرفه جو در برابر داده های پر اتلاف</b><br><br>اگر چه فرمت های متعددی برای تصاویر وجود دارد (JPEG, GIF, PNG ،...)، تصاویر را می توان به دو دسته داده های صرفه جو و پراتلاف طبقه بندی کرد. داده های صرفه جو به رسانه این امکان را می دهد تا بدون از دست دادن و یا تلف کردن اطلاعات و یا کیفیتشان نمایش داده شوند. اما داده های پرتلاف ممکن است کیفیت و اطلاعاتشان را از دست بدهند.<br><br>متداول ترین رسانه صرفه جو در&nbsp;گرافیک&nbsp;و طراحی شامل: GIF و PNG و TIFF می شود در حالیکه JPEG از معروفترین رسانه های&nbsp;گرافیکی&nbsp;پر اتلاف به شمار می رود.<br><br><br><b>چگونه در فتوشاپ Save for Web کنیم</b><br><br>Adobe Photoshop یک راه مناسب برای بهینه سازی تصاویر برای ذخیره کردن برای وب را داراست. در فتوشاپ، به مسیر&nbsp; File &gt; Save For Web بروید و یا از کلیدهای میانبر Ctrl + Alt + Shift + S استفاده نمایید.<br>یک پنجره جدید باز خواهد شد که شامل همه تنظیمات برای ذخیره سازی و بهینه سازی یک تصویر برای وب می شود:<br></div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/oe7iv6wapa1syq21gb9.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; ">ما روش استفاده از این پنجره را با یک مثال به شما نشان می دهیم:<br><br><b>ذخیره کردن عکس ها برای وب</b><br><br>عکس ها باید همیشه به عنوان یک داده پر اتلاف ذخیره شوند و این به خاطر سایز بزرگ فایل آنهاست. وقتی یک عکس گرفته می شود، گرایش دوربین به سمت ذخیره سازی عکس در قالب یک نوع فایل فشرده مانند (JPEG)&nbsp; است تا قالب RAW، که می تواند فایلی با&nbsp; اندازه بزرگتر ایجاد کند.<br><br>نوع فایل متداول و مقدم در عکس ها JPEG است، که از نام بنیانگذاران آن یعنی "Joint Photographic Experts Group" گرفته شده است. دلیل اینکه چرا JPEG تبدیل به یک استاندارد شد به خاطر قابلیت آن در فشرده سازی داده های تصویر است که در همین زمان قادر به حفظ بالاترین کیفیت می باشد و نیز شباهت زیادی به تصاویر صرفه جو دارد ( با در نظر گرفتن اطللاعات )<br>&nbsp;&nbsp;&nbsp;<br>وقتی قصد ذخیره کردن عکس برای وب را دارید می توانید&nbsp; چند Save For Web از قبل تنظیم شده را انتخاب کنید. برای یک عکس، باید کابرد هریک از قالب های JPEG Low یا JPEG Medium و یا JPEG High را در نظر بگیرید. با توجه به تصویر زیر خواهید دید که یک عکس بدون اتلاف و از دست دادن کیفیت، فشرده می شود. در مقایسه با عکس اصلی، که بالای 250 KB است، می توانیم یک عکس با کیفیت قابل قبول و با استفاده ازفشرده سازی Medium quality یا High quality از قبل تنظیم شده که اندازه فایل آن کمتر از 30 KB است به دست آوریم.</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/bm6zksdm66mt4jnleui2.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; "><br><b>تصاویر GIF</b><br><br>گاهی اوقات، لازم است برای بهینه سازی بهترتصویردر قالب کاری که می خواهید انجام دهید، تصویر را در یک قالب صرفه جو ذخیره کنید. درطراحی وب سایت ها اغلب&nbsp; دیده شده که، در مقایسه با عکس های معمولی، در صفحه آرایی ها و طرح بندی وب سایت ها اغلب رنگ های کمتری به کار برده شده است.<br><br>GIF یا Graphics Interchange Format، یک قالب عکس است که از یک پالت که شامل بیش از 256 رنگ است استفاده می کند، که آن را&nbsp; به یک گزینه مهم برای&nbsp;گرافیک&nbsp;های وب تبدیل کرده است که از یک میدان رنگ گسترده استفاده نمی کند همچنین GIF می تواند پیکسل های تکی را طوری تنظیم کند تا به transparent تبدیل شوند که ما در این آموزش قصد آموزش و بحث در مورد آن را نداریم. تصویر زیر مقایسه بین یک تصویر با قالب GIF (با استفاده از 250 رنگ) و تصویر دیگر با قالب jpeg است، اندازه فایل هر دو دقیقا مشابه است. همین طور که می بینید قالب&nbsp;گرافیکی&nbsp;صرفه جوی GIF، از لحاظ کیفیت، شباهت بیشتری به تصویر اصلی دارد.</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/8r7e1pycnb64wdvgg5g.gif" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><br>به دلیل اینکه تصاویر GIF یک پالت محدود با 256 رنگ دارد،&nbsp; تقریبا هیچ وقت از آنها در عکس ها استفاده نمی شود، اما برای&nbsp;گرافیک&nbsp;هایی که از یک رنگ در آنها استفاده می شود یا رنگ های محدودی در ساختارشان&nbsp; بکار رفته، بسیار مناسب هستند. برای عکس ها،قالب JPEG و یا PNG را می توان استفاده کرد.<br><br><b>تصاویر با کیفیت و PNG صرفه جو<br><br></b>PNG یا Portable Network Graphics، مانند GIF ، قالب هایی با داده های صرفه جو هستند، جز اینکه آنها تعداد بیشتری رنگ را پشتیبانی می کنند ( که باعث می شود آنها در بسیاری موارد دیگر نیز بزرگتر باشند ).....و نیز می توانند به جای single transparent pixels یا تک پیکسل های شفاف، کانال های&nbsp; شفاف آلفا یا alpha transparency channels را پشتیبانی کنند.<br><br>تصاویر PNG در حال جایگزین شدن با تصاویر GIF هستند، بیشتر به خاطر اینکه آنها اساسا بهتر از تصاویر GIF قادر به فشرده سازی تصاویر هستند و از دامنه رنگ بیشتری نیز برخوردارند. آنها هنوز مانند GIF از گسره پشتیبانی وسیعی برخوردار نیستند، اما در این جهت در حال بهبود وضعیت خود هستند.<br><br>برای&nbsp;گرافیک&nbsp;هایی که باید روی وب قرار بگیرند در حالیکه کاملا کیفیت خود را حفظ کرده اند، PNG اولین انتخاب است در این موارد شما به یک تصویر با سایز بزرگتر از JPEG دست می یابید، اما در این زمان، اصولا PNG بهترین انتخاب برای زمانی است که یک&nbsp;گرافیک&nbsp;شامل خطوط تیز و یا متنی است که باید خیلی واضح و روشن نمایش داده شود، اما این کار سرانجام بستگی به تصمیم طراح دارد که کدام یک از قالب ها را&nbsp;</span></font>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(118)">نظرات  <script>setCommentCnt(118)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/117">خلق یک آگهی تبلیغاتی ساده </a></div></div>
+<div class=t-date>تاریخ : پنجشنبه 19 بهمن 1391  | 12:52  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><font class="Apple-style-span" color="#00cccc"><span class="Apple-style-span" style="font-size: 12px; "><b>آموزش فتوشاپ درس دهم، ساخت یک آگهی تبلیغاتی ساده</b>&nbsp;<br><br><div class="post-more" style="font: normal normal normal 12px/normal tahoma; ">این درس به عنوان یک تمرین برای کاربران در نظر گرفته شده است تا بتوان با آن مهارت های فرا گرفته شده در طول این سری آموزشی را مورد آزمایش قرار داد و نیز به شما آموزش داد چگونه می توان یک آگهی تبلیغاتی ساده ایجاد کرد.&nbsp;<br><br><b>نکته:</b>&nbsp;<br><br>این یک آموزش معمولی نیست. در واقع هدف اصلی ما آزمایش و تست کردن توانایی های کابرانی است که از دوره ابتدایی شروع به فراگیری این آموزش ها کرده اند. شاید این مرحله برای شما به عنوان یک آموزش جدید باشد اما پیشنهاد ما این است که آنچه تاکنون ارائه شده است را مرور کنید. قبل از شروع این آموزش شما باید مراحل قبلی آموزش ها را تکمیل کرده باشید یا اطلاعات مناسب و کافی از فضای کار فتوشاپ و نیز نحوه استفاده و عملکرد ابزار در اختیار داشته باشید. این درس توانایی های شما را محک خواهد زد و شما را مطمئن می کند که آمادگی ورود به مراحل بعدی را دارید. شما می توانید لینک های آموزش ها را برای مرور اجمالی آنها تهیه کنید در این آموزش، ما یک آگهی تبلیغاتی ساده برای یک اتفاق ساختگی و خیالی خلق خواهیم کرد. این درس مهارت های کسب شده در طی مراحل قبل را مورد بررسی و آزمایش قرار می دهد. در زیر یک مرور اجمالی روی محصول نهایی خواهیم داشت.<br>&nbsp; برای ایجاد این آگهی کوچک تبلیغاتی لازم است که یک تصویر از آن داشته باشید. (که ما آن را فراهم خواهیم کرد). قبل از شروع باید تصاویری را&nbsp;دانلود&nbsp;نمایید<br><br>برای شروع، یک سند جدی با تنظیمات زیر ایجاد کنید:&nbsp;<br><br><div align="left" style="font: normal normal normal 12px/normal tahoma; ">Width: 8 Inches Height<br>Height: 10 Inches<br>Resolution: 72 pixels/inch<br>Background: White</div><div style="font: normal normal normal 12px/normal tahoma; "><br>این مشخصات برای چاپ کردن کار مناسب نیست اما برای کاملا مناسب خواهد بود. تصویری که قبلا دانلود کرده اید باز کنید. کل تصویر را انتخاب نمایید (Select &gt; All یا Ctrl + A). تصویر انتخاب شده را کپی کنید (Edit &gt; Copy یا Ctrl + C) و آن را روی سند جدید paste کنید (Edit &gt; Paste یا Ctrl + V). این تصویر باید به طور خودکار روی یک لایه جدید قرار گیرد.</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/k0av7ythn4dkw5guv13g.jpg" alt=""></div><div><br></div></div></span><span class="Apple-style-span" style="font-size: 12px; ">برای این کار از ابزار Transformation و فرمان Scale استفاده کرده و سایز تصویر را به اندازه ی مناسب تغییر دهید. به یاد داشته باشید حین انجام این کار کلید Shift را نگه دارید تا تغییر مقیاس به یک اندازه در تمام ابعاد تصویر اعمال شود (آموزش Transform کردن)<br><br></span></font><div><font class="Apple-style-span" color="#00cccc"><span class="Apple-style-span" style="font-size: 12px; "><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/1xrcfmc3r28ril08r.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><span class="Apple-style-span" style="font-size: 12px; "><b>بدست آوردن یک مقیاس دقیق</b>&nbsp;<br><br>در اینجا یک نکته مفید برای کم و زیاد کردن دقیق سایز تصاویر با ابزار scale transformation وجود دارد. شما می توانید از طریق Options Bar یا نوار تنظیماتی که در بالای پنجره ی فتوشاپ قرار دادرد سایز مورد نظر خود را به صورت دستی وارد نمایید. در این مثال ما مقادیر H را روی 10 اینچ و W را روی 8 اینچ قرار داده ایم.</span><div><span class="Apple-style-span" style="font-size: 12px; "><br></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; "><b>تغییر دادن مقیاس تصویر برای هماهنگی بهتر&nbsp;</b><b></b><br><br>تصویر مورد نظر کمی بزرگتر از فضای طراحی سند جدید است، پس لازم است مقیاس تصویر را کمی کاهش دهیم.</div><div style="font: normal normal normal 12px/normal tahoma; "><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/hl6s9emb4iql66yait8.jpg" alt=""></div><div><br></div></span></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; "><b>ترمیم کردن تصویر&nbsp;</b><br><br>به نظر من دو قسمت از این تصویر باید ترمیم شود. اول برگی که در قسمت بالای سمت چپ عکس است و دوم برگی که در پایین سمت چپ تصویر قرار دارد. این قسمت ها در تصویر زیر مشخص شده اند.&nbsp;<br>با استفاده از ابزارهای Retouch یاHealing قسمت های مشخص شده ی تصویر را ترمیم کنید. من در اینجا از ابزار patch استفاده کرده ام.&nbsp;</div></span></font></div><div><font class="Apple-style-span" color="#00cccc"><span class="Apple-style-span" style="font-size: 12px;"><br></span><span class="Apple-style-span" style="font-size: 12px; "><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/jul26xnjrh13ir90v2.jpg" alt=""></div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/2qzn3glv9bzl3v7sucng.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; ">بعد از ترمیم این قسمت ها یک تصویر تمیز خواهید داشت.</span>
+
+
+</font></div><div><font class="Apple-style-span" color="#00cccc"><span class="Apple-style-span" style="font-size: 12px; "><br></span></font></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#00cccc"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/1xrcfmc3r28ril08r.jpg" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#00cccc"><br></font></span></div><div><font class="Apple-style-span" color="#00cccc"><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; "><br><b>اضافه کردن افکت Vignette</b>&nbsp;<br><br>اضافه کردن Vignette به یک عکس یک روش ساده برای تمرکز روی یک چیز خاص و یا یک روی مناسب و آسان برای محو کردن یک تصویرگرافیکی&nbsp;است. ما قصد داریم برای ایجاد افکت Vignette از ابزار برش استفاده کنیم. ابتدا یک لایه ی جدید در سند فعلی ایجاد کنید (آموزش کار با لایه ها). ابزار Brush را انتخاب نموده، سپس یک قلم موی بزرگ و نرم برای آن انتخاب کنید، حالا رنگ foreground را به سیاه تغییر دهید (آموزش ابزارهای نقاشی).</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/snfur8obk2bt2t84bj.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; "><br></div><div style="font: normal normal normal 12px/normal tahoma; ">با کمک این براش روی لبه ها و گوشه های تصویر بکشید (روی لایه ی جدید). بهتر است حین انجام کار روی تصویر zoom out کنید (Ctrl + -) تا کار راحت تر انجام شود. در پایان کار با زدن کلیدهای (Ctrl + "+") به 100% بازگردید.</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/uo4ql5kuru8a5jfge2ur.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; "><br></div><div style="font: normal normal normal 12px/normal tahoma; "><b>اضافه کردن متن</b>&nbsp;<br><br>مرحله ی بعد طراحی اضافه کردن متن به قسمت پایین سمت چپ تصویر می باشد. ما این کار را با استفاده از ابزار type انجام می دهیم (آموزش ابزارهای تایپ و رسم). ابتدا متن مورد نظرتان را در سه لایه ی متنی تایپ کنید، می توانید از متن زیر استفاده کنید. به علاوه، نوع، سایز و حالت فونت ها را نیز طوری تنظیم کنید که شبیه متن زیر شود. من از متد crisp anti- aliasing استفاده کرده ام که به نظر مناسب می رسد. رنگ متن را نیز به رنگ سفید تغییر دهید.</div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/mbo9quz9ie33utk9hdw.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; "><b>ساخت نوار کناری</b>&nbsp;<br><br>یک لایه ی جدید ایجاد کنید. با استفاده از ابزار Rectangular Marquee (آموزش ابزارهای انتخاب) یک ناحیه ی انتخابی در سمت راست تصویر از بالا به پایین رسم کنید. این قسمت را با کمک ابزار&nbsp; Paint Bucket (آموزش ابزارهای نقاشی) و با رنگ سیاه رنگ آمیزی کنید. هنگامی که ناحیه ی مورد نظر به طور کامل رنگ شد، کلیدهای Ctrl + D را بزنید تا از حالت انتخاب خارج شود و با کمک یک ابزار eraser یا پاکن نرم قسمت های پایین آن را کمی پاک کنید تا حالت محو شدگی ایجاد شود (آموزش ابزارهای نقاشی) .</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/sp2thsez92p2ihyt48n7.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; "><br><b>اضافه کردن آرم و اطلاعات به سند</b>&nbsp;<br><br>ابزار Custom Shape (آموزش ابزارهای رسم و تایپ) را برداشته و از قسمت نوار تنظیمات یک شکل انتخاب کنید. شکل مورد نظر را در قسمت بالای نوار کناری قرار دهید و مطمئن شوید رنگ آن سفید است. شما می توانید همزمان با کشیدن شکل کلید shift را نگه دارید تا نسبتهای به یک اندازه در شکل اعمال شوند. در این قسمت قصد داریم متنی هم در زیر شکل و در روی نوار کناری اضافه کنیم. این کار را با کمک ابزار Vertical Type انجام می دهیم. یک فونت جدید انتخاب کنید و سایز آن را طوری تنظیم کنید تا با نوار کناری مطابقت داشته باشد.</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/62gv022kf5vo7gyy2n.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; "><b>اصلاحات نهایی</b>&nbsp;<br><br>کار ما تقریبا به پایان رسده است. قصد داریم به عنوان اصلاحات تکمیلی با استفاده از ابزار براش تعدادی برگ در قسمت پایین و گوشه سمت راست تصویر اضافه کنیم. در فتوشاپ براش های برگ آماده ای وجود دارد که می توانید از آنها استفاده کنید. یک لایه ی جدید ایجاد کرده و رنگ Foreground را به سفید تغییر دهید. به پالت Brushes رفته و براشی تحت عنوان Scattered Maple Leaves را پیدا کنید.</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/dtqrf3t0oavd7v8wq2u.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; ">در لایه ی جدید، مجموعه ای از برگ های پراکنده در قسمت پایین تصویر اضافه کنید. بعد از اتمام این کار تصویر شما آماده است.</div></span><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/ixdd3puynpndkfvrf25a.jpg" alt=""><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; ">&nbsp;</div></span></font><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; "><font class="Apple-style-span" color="#00cccc"><br>اگر توانسته باشید تا انتهای این آموزش با ما همراه بوده باشید یعنی با مرحله ی پیش دبستانی آموزش فتوشاپ را موفقیت پشت سر گذاشته اید. حالا آماده اید تا به مراحل بالاتر بروید.</font></div><div><br></div></span></div><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(117)">نظرات  <script>setCommentCnt(117)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/116">کاربرد Transform در فتوشاپ </a></div></div>
+<div class=t-date>تاریخ : چهارشنبه 18 بهمن 1391  | 12:42  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><font class="Apple-style-span" color="#ffcc66"><span class="Apple-style-span" style="font-size: 12px; "><b>آموزش فتوشاپ درس نهم، کاربرد Transform (تغییر شکل دادن) در فتوشاپ</b>&nbsp;<br></span>
+
+
+</font><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#ffcc66"><br></font></span></div><div><font class="Apple-style-span" color="#ffcc66"><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; ">Transform در فتوشاپ برای مقیاس دادن (scale)، دوران دادن (rotate)، مورب کردن (skew) و در نهایت پیچ و تاب دادن distort و پرسپکتیو کردن هر تصویری که شما با ان کار می کنید، استفاده می شود. در این آموزش به شما یاد&nbsp; داده می شود چطور از&nbsp; Transform برای تنظیم کردن تصویر استفاده کنید.<br><br><br><b>مقیاس دادن به تصاویرگرافیکی</b><br><br>یکی از اساسی ترین کارهایی که transformation در فتوشاپ قادر به انجام آن است مقیاس دادن (Scaling) یا تغییر مقیاس طرح ها و تصاویر است. Scaling به شما این امکان را می دهد تا تصویر را حول یک نقطه ثقل، بزرگ یا کوچک کنید. برای تغییر مقیاس یک تصویر باید به مسیر Edit &gt; Transform &gt; Scale بروید.<br>یک سری دستــــگیره در اطراف تصویر مورد نظر از قبیل اشکال یا لایه ها ظاهر می شود. با حرکت دادن هر یک از این دستگیره ها، می توانید ســــایز تصویر را تنـــــظیم کنید. برای اعمال تغییرات بعد از Transform کردن، کلید Enter را فشار دهید.</div><div style="font: normal normal normal 12px/normal tahoma; "><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/7e5ju10s4clssuzirm6a.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><b>نکته</b><br><b>ثابت نگه داشتن نسبت ها در هنگام&nbsp; تغییر مقیاس</b><br><br>اغلب اوقات، لازم است هنگام تغییر دادن مقیاس یک شکل یا تصویر نسبت ها، به یک اندازه اعمال شود یعنی تصویر در همه جهات به یک اندازه بزرگ یا کوچک شود، این کار را می توان به آسانی و تنها با نگه داشتن کلید Shift در هنگام drag کردن دستگیره های transformation، انجام داد، همچنین با نگه داشتن کلید های shift و alt به طور همزمان می توان به همین نتیجه رسید.<br><br><br><b>دوران یا چرخش اشکال در فتوشاپ&nbsp;</b><br>برای دوران دادن یک شکل در فتوشاپ، به مسیر Edit &gt; Transform &gt; Rotate بروید. دستگیره هایی مانند آن هایی که هنگام تغییر مقیاس دیدید، ظاهر خواهد شد، اما به جای drag کردن یکی از آن ها، مکان نمای موس را نزدیک یکی از نقاط قرار داده تا به شکل یک منحنی درآید. حالا برای دوران دادن شکل، موس را به راست یا چپ بچرخانید تا شکل نیز همزمان دوران پیدا کند. بار دیگر با فشار دادن کلید Enter می توانید تغییرات انجام شده را اعمال کنید.</span></font></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#ffcc66"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/1r2kexcm9n23yro4bkh7.jpg" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#ffcc66"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#ffcc66"><br><b>نکته</b><br>شما به آسانی و با نگه داشتن کلید shift می توانید شکل را دقیقا 15 درجه دوران دهید، یعنی اگر در هنگام دوران دادن، کلید shift را نگه داشته باشید، میزان چرخشی که انجام می شود دقیقا 15 درجه است.<br>Skew و Distort و Perspective Transformations<br>سه نوع transformation دیگر که می خواهیم در مورد آنها صحبت کنیم، شباهت زیادی به یکدیگر دارند، زیرا همه آنها با drag کردن دستگیره ها کنترل می شوند. این بدین معنا نیست که عملکرد و نتیجه نهای هم آنها یکی است، بلکه منظور این است که هر سه یک جور عمل می کنند. شما می توانید با رفتن به مسیر Edit &gt; Transform گزینه های Skew و&nbsp; Distort و Perspective Transformations را روی تصویر مورد نظر خود اعمال کنید.<br><br><b>Skew یا مورب کردن</b>: در Transform کردن اشکال به صورت مورب یاSkew، می توانید اشکال را به صورت افقی یا عمودی کج یا مورب می کنند.<br><b>Distort</b>: در این نوع transform، این امکان به شما داده می شود تا یک تصویر را در هر جهتی که مایلید امتداد و گسترش دهید.<br><b>Perspective</b>: این روش به شما اجازه می دهد به تصویر نمای سه بعدی یا Perspective اضافه کنید.</font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#ffcc66"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#ffcc66"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/r1ibzpmptnsvk3wy5xbk.gif" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#ffcc66"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; "><font class="Apple-style-span" color="#ffcc66"><b>پیچ و تاب دادن به تصویر</b><br><br>Warp Transformationدر مقایسه با&nbsp; سایر Transformation ها، کاملا متفاوت است. در این روش همه شکل یا تصویر را می توان تغییر داد، که این ویژگی سبب شده تا از این transformation برای ایجاد افکت های مختلف و زیبا استفاده شود. برای استفاده از این ویژگی، به مسیر Edit &gt; Transform &gt; Warp بروید، پس از آن یک سری خطوط شبکه مانند روی تصویر ظاهر می شود که شما می توانید با drag کردن نقاط کنترل یا control points، خطوط و یا سایر قسمتهای آن شبکه، تصویر را به طور دلخواه تنظیم کنید. همچنین می توانید از قسمت نوار options ، یک سری warp آماده را انتخاب و روی تصویر اعمال نمایید.</font></div><div><font class="Apple-style-span" color="#ffcc66"><br></font></div><div><font class="Apple-style-span" color="#ffcc66"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/mtpk604gmhw1yurnuh9u.jpg" alt=""></font></div><div><font class="Apple-style-span" color="#ffcc66"><br></font></div><div><br></div></span></div><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(116)">نظرات  <script>setCommentCnt(116)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/115">ابزارهای رسم و تایپ</a></div></div>
+<div class=t-date>تاریخ : یکشنبه 15 بهمن 1391  | 16:09  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+<font class="Apple-style-span" color="#33ff33"><font class="Apple-style-span" style="background-color: rgb(255, 255, 255);"><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; "><br></div></span></font><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; ">ابزارهای Drawing و Type برای ایجاد و خلق تصاویر وکتور و نیز تایپ کردن روی صفحه های طراحی استفاده می شوند. هرچند فتوشاپ به عنوان یک ویرایشگر تصاویر وکتور تعریف نشده اما این امکان وجود دارد که تصاویر وکتوری بر پایه اشکال و عناصری به وجود آورد که قابلیت تغییر سایز دارند، بدون اینکه هنگام کوچک یا بزرگ کردنشان از کیفیت آنها کاسته شود.&nbsp;<br><br><br><b>ابزارهای تایپ ( Type Tools)</b><br><br>ابزار تایپی که به صورت پیش فرض (default) برای استفاده کابر در نظر گرفته شده، ابزار Horizontal Type یا ابزار تایپ افقی است، که برای تنظیم جهت تایپ روی تصویر به صورت افقی مورد استفاده قرار می گیرد. اگرچه فتوشاپ یک برنامه raster based است یعنی برنامه ای است که برا اساس پیکسل نوشته شده است، اما اساس وکتور خود را در تایپ حفظ کرده است و این بدین معنی است که مقیاس متن تایپ شده را می توان به هر اندازه ای که لازم است تغییر داد بدون اینکه از کیفیت آن کم شود. این خصوصیت به ما این امکان را می دهد تا به آسانی اندازه و&nbsp; حالت یا style و سایر خصوصیات متن تایپ شده را کنترل کنیم ، به علاوه در مراحل بعد یعنی در مرحله ی طراحی ، آنها را اصلاح کرد یا تغییر داد.<br><br>برای تایپ کردن در یک تصویر، ابتدا ابزار تایپ عمودی یا افقی را انتخاب کنید سپس روی قسمتی از&nbsp; تصویر که می خواهید متن در آنجا قرار داشته باشد کلیک کنید، شما باید فورا مکان نما را در جایی که کلیک کردید ببینید. در قسمت نوار options، متوجه تنظیمات ابزار تایپی که انتخاب نموده اید خواهید شد.</div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/an9be4xuj83iq8yrgnu.gif" alt=""><div style="font: normal normal normal 12px/normal tahoma; "><br><b>"Font Family"</b>: در این قسمت می توانید یک Font خاص برای تایپ کردن انتخاب کنید.<br><b>"Font Style"</b>: در این قسمت می توانید style ابزاری که انتخاب کرده اید را مشخص کنید. style های متداول شامل bold و italic و regular می باشد.<br><b>"Font Size"</b>: در این قسمت می توانید سایز متنی که تایپ می شود را انتخاب کنید.<br><b>"Anti-Aliasing Method"</b>:&nbsp; یا روش هموار کردن ناصافی ها. در این قسمت، روش&nbsp; Anti-Aliasing را برای تایپ انتخاب کنید. Anti-Aliasing به شما اجازه می دهد تا لبه های ملایم و نرمی برای متن تایپ شده به وجود بیاورید .<br><br>اینجا یک نمونه نمایشی وجود دارد که تنظیمات تایپ را&nbsp; به شما نشان می دهد .</div><div><br></div></span></font><div><span class="Apple-style-span" style="font-size: 12px;"><font class="Apple-style-span" color="#33ff33"><br></font></span></div><div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#33ff33"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/lo2wqtambxnpgn90fk5.gif" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#33ff33"><div style="font: normal normal normal 12px/normal tahoma; "><br>راههای زیادی برای مدیریت تنظیمات وجود دارند، اما توضیح در مورد جزییات آن از حوصله این درس خارج است پس ففقط یک نگاه اجمالی به این ابزار و نحوه عملکرد آن می اندازیم.&nbsp;<br>&nbsp;اگر مایل به دانستن بیشتر در مورد Type Tools هستید آموزش هایی وجود دارد که می توانید آنها را دنبال کنید. اینکه چطور می توانید به سرعت جهت متن را در فتوشاپ تغییر دهید و غیره که آموزش های بیشتر را می توانید در سایت PersianGFX پیدا کنید.<br><br><br><b>کاربرد ابزار های Shape در فتوشاپ</b><br><br>در فتوشاپ تعداد کمی اشکال vector-based یا اشکالی که بر پایه وکتور باشند تعریف شده است. که همه اینها را می توانید به آسانی به نقاشی یا طراحی خود در فتوشاپ اضافه کنید. به طور کلی 6 ابزار Shape وجود دارد.<br><b>"Rectangle Tool"</b>: ابزار ترسیم مستطیل می باشد ( اگر کلید shift را نگه دارید می توانید مربع رسم کنید ).<br><b>"Rounded Rectangle Tool"</b>: مستطیلی با گوشه های گرد ایجاد می کند. گردی گوشه ها را می توان با تنظیم radius که در قسمت نوار options قرار دارد کنترل نمود.<br><b>"Ellipse Tool"</b>: ابزاریست که می توان با آن بیضی رسم کرد. (با نگه داشتن کلید shift در هنگام رسم، می توان دایره کشید).<br><b>"Polygon Tool</b>": این ابزار، ابزار رسم چند ضلی است که می توان تعداد اضلاع (sides) را در قسمت نوار options&nbsp; انتخاب کرد.&nbsp;<br>"<b>Line Tool"</b>: برای کشیدن خط از آن استفاده می شود.<br>"<b>Custom Shapes"</b>: شامل شکل های از پیش تعیین شده یا اشکالی است که کاربر ایجاد کرده است.&nbsp;</div><div><br></div></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#33ff33"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/i8s21z9oe3ax3cs3pyj.gif" alt=""></font></span><div><span class="Apple-style-span" style="font-size: 12px; background-color: rgb(255, 255, 255);"><font class="Apple-style-span" color="#33ff33"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#33ff33">برای ایجاد یک شکل&nbsp; در تصویر، ابزار shape مورد نظرتان را انتخاب کنید، تنظیمات لازم را در قسمت نوار options اعمال کرده و شکل مورد نظر را روی تصویر drag نمایید.</font></span></div><div><span class="Apple-style-span" style="font-size: 12px; background-color: rgb(255, 255, 255);"><font class="Apple-style-span" color="#33ff33"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/wvg86s5ro0u2cyrr4cgb.gif" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#33ff33">نوجه: وقتی شما در حال خلق یک شکل جدید در فتوشاپ هستید، مطمئن شوید لایه Shape در حالت انتخاب قرار دارد. در غیر اینصورت، شکلی که بر اساس وکتور است تشکلیل نمی شود.</font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#33ff33"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; background-color: rgb(255, 255, 255);"><font class="Apple-style-span" color="#33ff33"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/3onp2j4d64u803z2chq6.gif" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#33ff33">ابزار Pen اغلب برای کاربران مبتدی به عنوان ابزاری معرفی می شود که کاربرد آن بسیار سخت است. البته خوشبختانه آموزش های فراوانی در رابطه با این ابزار در اختیار کاربران مبتدی قرار داده ایم تا بیشتر با این ابزار و فواید آن آشنا شوند. برای آشنایی بیشتر به "آموزش ابزار Pen در فتوشاپ" که بزودی بروی سایت قرار می گیرد مراجعه کنید.<br>از توجه شما سپاسگزاریم.</font></span></div>
+
+
+
+</div></div><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(115)">نظرات  <script>setCommentCnt(115)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/114">ابزارهای نقاشی</a></div></div>
+<div class=t-date>تاریخ : جمعه 13 بهمن 1391  | 15:07  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><font class="Apple-style-span" color="#33cc00"><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; ">در فتوشاپ، ابزارهای نقاشی برای کشیدن stroke (خط حاشیه یا خطی که دور محیط یک شکل قرار دارد) و رنگ کردن فضاها با استفاده از یک یا مخلوطی از رنگ ها، بکار برده می شوند. دانستن اینکه چگونه می توان از این ابزار استفاده کرد، برای هر هنرمند طراحی که مایل است در فتوشاپ مهارت بالایی کسب کند، لازم و ضروری است.<br><br><br><b>&nbsp;ابزار براش (</b><b>Brush Tool</b><b>)&nbsp;</b><br><br>برای اینکه بتوان از ابزار براش با همه توانایی هایش استفاده کرد، ابتدا لازم است بدانیم براش در فتوشاپ دقیقا چیست. یک براش از brush preset (براش های از قبل تنظیم شده) استفاده می کند که یا قبلا در فتوشاپ تعریف شده،&nbsp; یا کاربر هنگام استفاده از این ابزار آن را در brush preset تعریف می کند. یک brush preset براشی است با مشخصات تعریف شده مانند سایز و شکل.<br>فکر کنید براش ها در فتوشاپ یک مجموعه بزرگ از قلم موهای متفاوت هستند که هر کدام یک نوک قلم متفاوت دارند. تصور کنید شما نوک یکی از این قلم موها را روی صفحه طراحی فشار دهید، فورا اثر شکل آن براش روی صفحه باقی می ماند. توضیح کاربرد و عملکرد براش کمی دشوار است اما امیدوارم اصل مطلب را دریافته باشید.<br>براش ها در فتوشاپ خصوصیات زیاد دیگری نیز دارند که آنها را از قلم موهای حقیقی که در دنیای واقعی استفاده می شوند متمایز می کند. با تغییر دادن این خصوصیات، می توانیم براش های کاملا جدیدی بسازیم که کابردهای منحصر به فردی دارند و آثار ویژه ای از خود به جا می گذارند، همچنین شما می توانید براشی خلق کنید که از لحاظ شکل و اندازه متفاوت باشد، براشی که خود به طور تصادفی ذراتی را به جهات مختلف پخش کند و براشی که هنگام کشیدن رو صفحه به طور خودکار&nbsp; میزان شفافیتش کم و زیاد شود. این امکانات بی اندازه و پایان ناپذیرهستند.</div><div style="font: normal normal normal 12px/normal tahoma; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/d6o1vwn3uiuwh94ixglr.gif" alt=""></div><div style="font: normal normal normal 12px/normal tahoma; "><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><b>اجازه دهید خیلی سریع براشی با خصوصیاتی که در بالا شرح دادیم خلق کنیم.</b><br><br>یک سند یا فایل جدید با ابعاد 200x200 پیکسل با background به رنگ سفید، ایجاد کنید. ابزار براش را انتخاب کنید و در قسمت نوار&nbsp; options از brush preset picker (روی فلش کوچک کنار براشی که در حال حاضر فعال است کلیک کنید) اولین براش را انتخاب کنید.<br>روی صفحه طراحی بروید و یک حرکت چرخشی با این براش انجام دهید. روی رنگ foreground در پایین جعبه ابزار کلیک کرده و رنگ مورد علاقه خود را برای نقاشی انتخاب نمایید. مکان نما را به جایی ببرید که می خواهید نقاشی را از آنجا آغاز کنید، حالا کلید ماوس را فشار داده و یک خط ایجاد کنید.</span></font><div><span class="Apple-style-span" style="font-size: 12px;"><font class="Apple-style-span" color="#33cc00"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px;"><font class="Apple-style-span" color="#33cc00"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/k3mim4ahslhcandi8grs.gif" alt=""></font></span></div><div><font class="Apple-style-span" color="#33cc00"><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; "><b>تغییر دادن براش ها<br><br></b>این براش از قبل تنظیم شده، یک خط یک پیکسلی با لبه های سخت (hard) ایجاد می کند. ما می توانیم بعضی از مشخصه های این براش را تغییر دهیم تا چیزی کاملا متفاوت به دست آوریم.</div><div style="font: normal normal normal 12px/normal tahoma; ">&nbsp;</div><div style="font: normal normal normal 12px/normal tahoma; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/pqu5cobra3ocjwx38svr.gif" alt=""></div><div style="font: normal normal normal 12px/normal tahoma; "><br></div></span><span class="Apple-style-span" style="font-size: 12px; ">برای تغییر تنظیمات یک براش، باید به سراغ پالت Brush بروید. برای باز شدن پالت Brush به مسیر Window &gt; Brushes بروید. تصویر زیر پالت Brush&nbsp; را نمایش می دهد.</span></font></div><div><font class="Apple-style-span" color="#33cc00"><span class="Apple-style-span" style="font-size: 12px;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/k6y7x0k5e17xd9pqobfs.gif" alt=""><br></span><span class="Apple-style-span" style="font-size: 12px; "><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; "><br><b>A</b>. تنظیمات براش (Brush Settings): تنظیمات متفاوت برای قلم موی براش انتخاب شده.<br><b>B</b>. پیش نمایش(Brush Stroke Preview): یک پیش نمایش از شکلی که براش فعلی ایجاد می کند به شما نشان می دهد.<br><b>C</b>. نوع قلم موی انتخاب شده (Selected Brush Tip): نوع قلم مویی که در حال حاضر در حال استفاده از آن هستید.<br><b>D</b>. انواع قلم مو (Brush Tip Shapes): لیستی از اشکال نوک قلم موهایی که در دسترس است.<br><b>E</b>. گزینه های براش (Brush Options): گزینه هایی برای تغییر نوک براشی که در حال حاضر انتخاب کرده اید. تغییرات دائمی نخواهند بود مگر اینکه این براش را برای استفاده های بعدی ذخیره کنید.<br><br>یک کاربر می تواند ازقسمت تنظیمات Brush Tip Shape، از لیستی که اشکال آماده ای دارد، یک نوک قلم مو برای براشی که در حال استفاده از آن است را انتخاب کند.<br><br>با کلیک کردن روی هر کدام از تنظیماتی که در سمت چپ پالت براش قرار دارد، یک پنل از گزینه ها ظاهر خواهد شد که می تواند به دلخواه شما تنظیم شود.<br><br><br>در قسمت&nbsp;<b>Brush Tip Shape</b>، گزینه diameter را روی 20px تنظیم کنید. با تغییر دادن diameter, سایز براش شما تغییر کرده است.</div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/fors9sxwtjrbn6k1j0ud.gif" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; ">حالا به&nbsp;<b>Shape Dynamics</b>&nbsp;بروید و گزینه size jitter را روی 100% قرار دهید. با تغییر shape dynamics، مشاهده می کنید که اثری که از یک براش در هنگام کشیدن خط به جا می ماند، تغییر می کند.&nbsp;</span>
+
+
+</font></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#33cc00"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/fjksfq17e407dbn2g2ec.gif" alt=""></font></span></div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#33cc00"><br>سرانجام، به&nbsp;<b>Scattering</b>&nbsp;بروید و scatter را روی 300% و count را روی 1 قرار دهید. Scattering&nbsp; مکان و تعداد آثار براش را تحت تاثیر قرار می دهد.</font></span><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#33cc00"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/dv3snztux4818x3ztsaa.gif" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#33cc00"><br>حالا با براش جدید شروع به نقاشی کردن کنید و تفاوت های زیادی که این براش با براش های فتوشاپ دارد را مشاهده کنید.&nbsp;<br><br>اگر علاقمند به دانستن بیشتر در رابطه با براش ها هستید می توانید آموزش های فوق را دنبال کنید.<br><br><b><br>ابزار پاکن&nbsp;</b><br><br>ما قصد نداریم زیاد وارد جزییات بحث این ابزار شویم، زیرا شما قبلا یک درک خوب از اینکه این ابزار چه کاری انجام می دهد ، را کسب کرده اید.<br>مانند بسیاری از ابزار های دیگر در فتوشاپ، ابزارEraser از براش هایی استفاده می کند که اندازه (size) ، شکل و درجه سختی (hardness) این ابزار را تحت تاثیر قرار می دهد. مخصوصا، ابــزار Eraser دقیقا از راه هایی کنترل و تنظیم می شود که ابزار براش کنترل می شد، فقط این ابزار به جای کشیدن و نقاشی کردن ، پاک می کند.<br><br><b>نکته:</b><br>در هنگام پاک کردن لایه "Background" با این ابزار، به این نکته توجه داشته باشید که رنگ&nbsp; پس زمینه یا background color به قسمت هایی که پاک می شود، اعمال می گردد، بدین معنی که در هنگام پاک کردن لایه Background، باید رنگ background color با رنگ پیش فرض Background" یکی باشد.<br><br><b><br>ابزار Paint Bucket</b>&nbsp;<br><br>ابزار Paint Bucket برای رنگ کردن فضاها و نواحی انتخابی استفاده می شود که این ابزار فقط&nbsp; رنگ های یک دست را اعمال می کند یعنی نمی توان با این ابزار یک طیف رنگ را به محل و ناحیه مورد نظر اعمال نمود، این ابزار رنگ foreground یا همان رنگ زمینه را روی محل انتخاب شده و یا قسمت هایی که از تنوع رنگ یکسانی برخوردار می باشند اعمال می کند، برای foreground رنگ مورد علاقه خود را انتخاب کرده و روی قسمتی ازتصویر که مایلید آن را رنگ کنید فقط یک بار کلیک نمایید.</font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#33cc00"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#33cc00"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/8t7qeswudpsa7t4t7ysb.jpg" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#33cc00"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#33cc00"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/lhaehyci726w2r1sykc.jpg" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#33cc00"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#33cc00"><br>5 نوع gradient styles مختلف وجود دارد که می توانید آنها را برای ایجاد افکت های مختلف انتخاب نمایید. می توانید آنها در قسمت نوار Options&nbsp; تنظیم کنید.</font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#33cc00"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/7v1arrawqijjf808fnkt.jpg" alt=""></font></span></div><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(114)">نظرات  <script>setCommentCnt(114)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/113">ابزارهای روتوش و ترمیم</a></div></div>
+<div class=t-date>تاریخ : جمعه 13 بهمن 1391  | 14:49  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+
+<div><font class="Apple-style-span" color="#cc66cc"><br></font></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#cc66cc">فتوشاپ ابزار های&nbsp; متعددی برای روتوش تصاویر و عکس ها ارائه کرده است. در این آموزش یاد خواهید گرفت چگونه از ابزار های متداول روتوش استفاده کنید.<br><br><b>ابزار Spot Healing Brush&nbsp;</b><br><br>ابزار Spot Healing Brush اصولا برای از بین بردن و برطرف کردن سریع عیــوب و نواقص یا هر قسمت اضــــافی و ناخواسته، بکار می رود. نحوه کار با این ابزار اینگونه است که، با استفـــــاده از یک براش مناسب (می توانید تنظیمات براش را در قسمت options نوار تغییر هید) روی قسمتی که&nbsp; مایلید از تصویر حذف شود بکشید. این ابزار به طور اتوماتیک شروع به نمونه برداری کردن از اطراف آن ناحیه&nbsp; کرده و آن قسمت را ترمیم می کند.&nbsp;<br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#cc66cc"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px;"><font class="Apple-style-span" color="#cc66cc"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/2rzrg8zfz5iw5vot8yx.jpg" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><b><font class="Apple-style-span" color="#cc66cc"><br></font></b></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#cc66cc"><b>نکته</b><br><br>اگرچه ابزار Spot Healing brush ابزار مناسبی برای ترمیم سریع تصاویر می باشد، اما همیشه نمی توان تضمین کرد نمونه برداری انجام شده با قسمت پاک شده مناسبت داشته باشد یا از لحاظ رنگ و بافت با آن قسمت هماهنگ باشد.<br><br><br><b>ابزار Healing Brush&nbsp;&nbsp;</b><br><br>این ابزار نیز عملکردی شبیه ابزار Spot Healing brush دارد با این تفاوت که به جای اینکه به صورت خودکار از محل مورد نظر نمونه برداری و ترمیم کند، این ابزار به شما این امکان را می دهد تا خودتان به طور دستی از یک قسمت به عنوان منبع، نمونه برداری کنید و سپس روی قسمت مورد نظر که نیاز به ترمیم دارد بکشید. برای انتخاب یک منبع، کلید Alt را نگه دارید و روی قسمتی که مایلید نمونه برداری از آنجا انجام شود کلیک کنید سپس روی قسمتی که باید ترمیم شود بکشید. مانند ابزار Spot Healing Brush Tool، تنظیمات براش مانند سایز براش را می توان از قسمت نوار options&nbsp; کنترل کرد.</font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#cc66cc"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#cc66cc"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/byzkcxkdk1dxivsukd8.gif" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#cc66cc"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#cc66cc"><b>ابزار Patch&nbsp;</b><br><br>با استفاده از این ابزار می توان یک قسمت را به طور کامل به وسیله پیکسل های قسمت دیگر ترمیم کرد. این ابزار نیز درست مانند ابزار Healing Brush Tool نورها و بافت ها و سایه ها را به طور دقیق اصلاح می کند. برای استفاده از این ابزار، ابتدا بوسیله یکی از ابزارهای انتخاب (selection tools) یک انتخاب بکشید، سپس با استفاده از ابزار patch tool، ناحیه انتخاب شده را روی مقصد مورد نظر که قصد ترمیم آن را دارید، drag کنید.</font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#cc66cc"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#cc66cc"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/n1n6t4n6m09jmka8d2e.jpg" alt=""></font></span></div><div><font class="Apple-style-span" color="#cc66cc"><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; "><b><br></b></div><div style="font: normal normal normal 12px/normal tahoma; "><b>ابزار Clone Stamp Tool</b><br><br>&nbsp;ابزار Clone Stamp Tool این امکان را فراهم می سازد تا به وسیله یک نمونه از تصویر را، نقاشی کنید. برای انتخاب یک منبع، کلید Alt را نگه دارید و روی قسمتی که مایلید نمونه برداری از آنجا انجام شود کلیک کنید سپس روی قسمتی که باید ترمیم شود بکشید.</div><div style="font: normal normal normal 12px/normal tahoma; "><br></div></span><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/k9cp2hr1wudwhwdecttd.jpg" alt=""></font></div><div><font class="Apple-style-span" color="#cc66cc"><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; ">&nbsp;</div></span><span class="Apple-style-span" style="font-size: 12px; "><b>توجه</b><br>به خاطر داشته باشید که وقتی از این ابزار استفاده می کنید در حال بهتر کردن یا ترمیم یک تصویر نیستید. هنگام استفاده از این ابزار حالت نورها و سایه ها حفظ نمی شود.نتیجه ای که شما می بینید و جایگزین می شود دقیقا همان چیزی است که از منبع گرفته شده و بدون کوچکترین تغییر در رنگ و یا نور&nbsp; در محل مورد نظر کپی می شود و استفاده از این ابزار در بعضی موارد و موقعیت های خاص کاربرد دارد هر چند که بسیاری از کاربران فارسی زبان به نوعی از این ابزار برای روتوش تصاویر استفاده می کنند.<br><br><b>ابزارهای Blur &amp; Sharpen&nbsp;</b><br><br>ابزارهای Blur و Sharpen Tools به ما اجازه می دهد لبه های کار را نرم تر یا سخت تر کنیم. این&nbsp; ابزارها دقیقا کاری را انجام می دهند که انتظار دارید ، یعنی مات کردن و تیز کردن لبه های تصویر.<br>این ابزارها مشخصات و ویژگی های مشابهی دارند، مانند Strength یا شدت (افزایش و کاهش Strength ابزار، یا اینکه ابزار به چه میزان تصویر را مات یا شارپ خواهد کرد) و همچنین می توانید نوع براش را&nbsp; در هر دو ابزار تعیین کنید. همه این مشخصات در قسمت نوار Options قابل تغییرند. برای استفاده از ابزار blur یا sharpen tool، براش را روی مقدار مورد نظر تنظیم نمایید، کلید ماوس را نگه دارید و روی قسمتی از تصویرکه می خواهید تغییر دهید بروید.</span></font></div><div><span class="Apple-style-span" style="font-size: 12px;"><font class="Apple-style-span" color="#cc66cc"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/eoh2f77n2cxh06gzxeiq.jpg" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#cc66cc">تا اینجا باید مطلب کلیدی را در مورد ابزار های روتوش به دست آورده باشید. درس بعدی در مورد چگونگی کار با ابزارهای نقاشی در فتوشاپ می باشد. امیدواریم از این آموزش نیز لذت برده باشید.&nbsp;</font></span></div><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(113)">نظرات  <script>setCommentCnt(113)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/112">ابزار انتخاب</a></div></div>
+<div class=t-date>تاریخ : شنبه 30 دی 1391  | 17:58  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><font color="#00cccc"><span style="font-size: 12px; text-align: center; ">ابزار انتخاب یا Selection Tools برای تسهیل فرایند انتخاب اشکال و رنگ ها&nbsp; در فتوشاپ&nbsp; بکار می رود. با ابزاری مانند&nbsp;</span><b style="font-size: 12px; text-align: center; ">magnetic lasso</b><span style="font-size: 12px; text-align: center; ">&nbsp;و</span><b style="font-size: 12px; text-align: center; ">magic wand</b><span style="font-size: 12px; text-align: center; ">، فتوشاپ یک گروه از ابزارهای قدرتمند را داراست!&nbsp;</span><br style="font-size: 12px; text-align: center; "><span style="font-size: 12px; text-align: center; ">در فتوشاپ، انتخاب ها برای کار در فضاها و قسمت های خاصی بکار می روند، در حالیکه هیچ تغییری در فضاهای اطراف ایجاد نمی شود. به نظر من یک انتخاب خیلی خیلی شبیه یک استنسیل یا شابلون است. با این کار شما قادر خواهید بود در یک قسمت شروع به نقاشی یا رنگ کردن کنید بدون اینکه بقیه قسمت های طراحی تغییر کنند.</span><br style="font-size: 12px; text-align: center; "><br style="font-size: 12px; text-align: center; "><span style="font-size: 12px; text-align: center; ">انواع مختلف ابزارها در فتوشاپ وجود دارد که به شما کمک می کند انتخاب هایی با اندازه و اشکال متفاوت و خاص ایجاد کنید.&nbsp;&nbsp;</span><br style="font-size: 12px; text-align: center; "><br style="font-size: 12px; text-align: center; "><b style="font-size: 12px; text-align: center; ">&nbsp;Marquee Tools</b><br style="font-size: 12px; text-align: center; "><br style="font-size: 12px; text-align: center; "><span style="font-size: 12px; text-align: center; ">ابزار های&nbsp;</span><b style="font-size: 12px; text-align: center; ">Marquee</b><span style="font-size: 12px; text-align: center; ">&nbsp;برای ایجاد انتخاب های مستطیل شکل، بیضی شکل و انتخاب هایی که بصورت خطوط عمودی یا افقی هستند بکار می رود. برای ایجاد یک انتخاب با ابزار Marquee، به سادگی با کلیک و drag کردن روی صفحه طراحی&nbsp; می توانید شکل مورد نظر خود را ایجاد کنید.</span>
+
+
+</font><div><span style="font-size: 12px; text-align: center; "><font color="#00cccc"><br></font></span></div><div><font color="#00cccc"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/six558zey58kt1l7bcr5.gif" alt=""></font></div><div><span style="font-size: 12px; text-align: center; "><font color="#00cccc"><br></font></span></div><div><span style="font-size: 12px; text-align: center; "><font color="#00cccc"><br></font></span></div><div><div style="font-size: 12px; text-align: center; "><font color="#00cccc"><b>نکته</b><br><br><b>انتخابی که کاملا دایره ای یا مربعی شکل است</b><br><br>وقتی با ابزار&nbsp;<b>Rectangular Marquee</b>&nbsp;یا&nbsp;<b>Elliptical Marquee</b>&nbsp;انتخاب انجام می دهید، این امکان وجود دارد که یک انتخاب که کاملا دایره ای یا مربعی شکل باشد ایجاد کنید، برای انجام این کار باید همزمان با کشیدن انتخاب ها کلید&nbsp; shift را هم نگه دارید.<br><br><br><b>ابزار Lasso Tools</b><br><br>ابزارهای&nbsp;<b>Lasso Selection</b>&nbsp;به شما این امکان را می دهند تا انتخاب هایی با اشکال بی قائده و نامنظم ایجاد کنید. برای استفاده از ابزار معمولی lasso، فقط کافیست با ماوس کلیک و drag کنید. با استفاده از&nbsp;<b>Polygonal Lasso</b>، کلیک کنید و نقاط مختلفی که می خواهید را انتخاب کنید، برای بسته شدن و اتمام کار انتخاب، روی نقطه شروع کلیک کنید.<br>&nbsp;ابزار<b>Magnetic Lasso</b>&nbsp; ترکیبی از دو ابزار اول می باشد.روی لبه های قسمتی که می خواهید انتخاب کنید کلیک کرده و شروع&nbsp; به کشیدن در اطراف آن کنید. ابزار magnetic lasso به طور اتوماتیک نقاط را در لبه های کار قرار می دهد. اگر لازم بود نقاطی برای این ابزار تعریف شوند می توانید هنگام کشیدن روی آن نقاط کلیک کنید. نتیجه نهایی یک انتخاب ظریف تر و با دقت تر نسبت به انتخاب با ابزار polygonal lasso خواهد بود.</font></div><div style="font-size: 12px; text-align: center; "><font color="#00cccc">&nbsp;</font></div><font color="#00cccc"><br class="Apple-interchange-newline"></font></div><div><font color="#00cccc"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/r06yuqkttc1rrzpwdsx.gif" alt=""></font></div><div><font color="#00cccc"><br></font></div><div><font color="#00cccc"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/wz1jcedq9i0gymry2f6.gif" alt=""></font></div><div><div style="font-size: 12px; text-align: center; "><font color="#00cccc">حالا ما یک دید کلی نسبت به اینکه چطور انتخاب هایی با اشکال مختلف در فتوشاپ ایجاد کنیم داریم. همچنین یک راه برای انتخاب فضاها و قسمتهای رنگی نیز به شما نشان داده می شود.<br><br><br><b>Magic Wand Tool&nbsp;</b><br><br>ابزار&nbsp;<b>Magic Wand</b>&nbsp;یا عصای جادویی شبیه ابزارهایی که تا به حال معرفی شد، نیست. این ابزار فضاهای هم رنگ را انتخاب می کند. برای استفاده از Magic Wand Tool، شما باید روی قسمت رنگی که قصد دارید آنرا انتخاب کنید، کلیک نمایید.<br><br>به شکل زیر دقت کنید. با استفاده از Magic Wand Tool، به راحتی و تنها با یک کلیک روی قسمت سفید رنگ، این قسمت انتخاب می شود.</font></div></div><div><font color="#00cccc"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/5ydhjm9vwvg4uzqrvroz.gif" alt=""></font></div><div><div style="font-size: 12px; text-align: center; "><font color="#00cccc">نکته<br>هنگام استفاده ازMagic Wand Tool، این امکان وجود دارد که دامنه وسیع تر یا کمتری از قسمت رنگی را انتخاب نمود به این ترتیب که در قسمت نوار تنظیمات، مقدار گزینه Tolerance را تنظیم کنید. مقدار بیشتر Tolerance باعث می شود تا دامنه انتخاب وسیع تر شود و رنگ های مشابه قسمت رنگی که در حال انتخاب آن هستید نیز انتخاب شوند.<br><br><br><b>ترکیب انتخاب ها</b><br><br>گاهی، لازم می شود برای انتخاب همه قسمتهای یک شکل چند انتخاب را با هم ترکیب کرد تا بتوان کل شکل را انتخاب نمود. در چنین مواردی می توان چند انتخاب را با هم استفاده کرد. برای سهولت در کار بهتر است از کلیدهای میانبر ابزارها در روی صفحه کلید استفاده کرد.<br><br>هنگامی که در حال انجام انتخاب هستید، با نگه داشتن کلید&nbsp; shift می توانید یک انتخاب جدید انجام دهید، با انجام این کار به انتخاب موجود، یک انتخاب دیگر اضافه می شود.</font></div><font color="#00cccc"><br class="Apple-interchange-newline"></font></div><div><font color="#00cccc"><br></font></div><div><font color="#00cccc"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/efpfvb4pi97ad92o3jhz.gif" alt=""></font></div><div><font color="#00cccc"><b style="font-size: 12px; text-align: center; ">نکته</b><br style="font-size: 12px; text-align: center; "><br style="font-size: 12px; text-align: center; "><b style="font-size: 12px; text-align: center; ">کم کردن و&nbsp; متقاطع کردن انتخاب ها</b><br style="font-size: 12px; text-align: center; "><br style="font-size: 12px; text-align: center; "><span style="font-size: 12px; text-align: center; ">نه تنها می توانید به انتخاب موجود یک انتخاب جدید اضافه کنید، بلکه این امکان نیز وجود دارد که از انتخاب کم کنید یا به آن اضافه نمایید. برای کم کردن انتخاب در حالیکه کلید Alt را نگه داشته اید یک انتخاب جدید رسم نمایید و برای نگه داشتن یک ناحیه مشترک بین دو انتخاب کلید های Shift و Alt را نگه داشته اید همزمان یک انتخاب دیگر رسم کنید.</span><br style="font-size: 12px; text-align: center; "><br style="font-size: 12px; text-align: center; "><br style="font-size: 12px; text-align: center; "><b style="font-size: 12px; text-align: center; ">&nbsp;ابزار Move Tool</b><br style="font-size: 12px; text-align: center; "><br style="font-size: 12px; text-align: center; "><span style="font-size: 12px; text-align: center; ">از ابزار&nbsp;</span><b style="font-size: 12px; text-align: center; ">Move</b><span style="font-size: 12px; text-align: center; ">&nbsp;برای حرکت دادن و انتقال قسمت های انتخاب شده شکل، لایه های انتخاب شده، اشکال و سایر موارد بکار می رود.&nbsp;</span><br style="font-size: 12px; text-align: center; "><span style="font-size: 12px; text-align: center; ">برای حرکت دادن یک قسمت انتخاب شده از یک تصویر، ابزار Move&nbsp; را انتخاب کنید سپس روی همان قسمت کلیک و drag کنید و هر جایی که مایلید آن را قرار دهید. با این کار قسمتی از شکل که انتخاب شده بود را از تصویر اصلی جدا می کنید و هر جا که کلید ماوس را رها کنید، قسمت جدا شده همان جا قرار می گیرد.</span><br class="Apple-interchange-newline"></font></div><div><font color="#00cccc"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/baz5d0i3twnuxw30jsj0.gif" alt=""></font></div><div><b style="font-size: 12px; text-align: center; "><font color="#00cccc">نکته</font></b></div><div><font color="#00cccc"><br style="font-size: 12px; text-align: center; "><span style="font-size: 12px; text-align: center; ">انتقال قسمت انتخاب شده از یک تصویر مانند جدا کردن یا بریدن یک تکه از تصویر و قرار دادن آن در جای دیگر است بعد از حرکت این قسمت، تمام محتویات لایه های زیرین قابل مشاهده خواهند بود.</span><br style="font-size: 12px; text-align: center; "><span style="font-size: 12px; text-align: center; ">&nbsp;</span><br style="font-size: 12px; text-align: center; "><br style="font-size: 12px; text-align: center; "><b style="font-size: 12px; text-align: center; ">&nbsp;Crop Tool</b><br style="font-size: 12px; text-align: center; "><br style="font-size: 12px; text-align: center; "><span style="font-size: 12px; text-align: center; ">کاربرد ابزار&nbsp;</span><b style="font-size: 12px; text-align: center; ">Crop</b><span style="font-size: 12px; text-align: center; ">&nbsp;در تغییر دادن سایز صفحه طراحی و تصویر است. برای استفاده از این ابزار، در حالیکه ابزار مورد نظر اانتخاب شده است drag کرده و یک مربع بکشید تا فضایی که می خواهید سایز جدید صفحه طراحی شما باشد را کاملا در بر بگیرد.</span><br style="font-size: 12px; text-align: center; "><br style="font-size: 12px; text-align: center; "><b style="font-size: 12px; text-align: center; ">نکته</b><br style="font-size: 12px; text-align: center; "><br style="font-size: 12px; text-align: center; "><span style="font-size: 12px; text-align: center; ">توجه داشته باشید با بریدن یا crop کردن یک تصویر اطلاعات و داده های لایه پاک نمی شود بلکه فقط بعضی از داده های لایه قابل دیدن نیستند چون خارج از فضای تصویر قرار گرفته اند.</span>
+</font></div><div><span style="font-size: 12px; text-align: center; "><br></span></div><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(112)">نظرات  <script>setCommentCnt(112)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/110">کارکردن با لایه ها در فتوشاپ</a></div></div>
+<div class=t-date>تاریخ : سه شنبه 26 دی 1391  | 11:14  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+<div style="font-size: 12px; text-align: center; "><font color="#cc9933">در فتوشاپ، لایه ها برای کار کردن روی یک قسمت خاص از یک تصویر به کار می رود بدون اینکه روی قسمت های دیگر تاثیر گذاشته شود. ممکن است با این تعریف به نظر شما برسد که، لایه ها مانند یک کاغذ شفاف هستند که روی یکدیگر قرار می گیرند که می توان محل قرارگیری آنها را تغییر داد بدون اینکه به یکدیگر آسیب بزنند و یا برای هم مزاحمتی ایجاد کنند.<br><br><br><b>شرح دادن لایه ها</b></font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><br>به طرح زیر که در فتوشاپ ایجاد شده است توجه کنید:</font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/eagefhryrx6kw6nfi73k.gif" alt=""></font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><br></font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933">این طرح برای تماشاگر یک طرح گرافیکی&nbsp;ساده است درحالیکه، در فتوشاپ، این تصویر از 4 لایه ی مجزا تشکیل شده است که روی یکدیگر قرار گرفته اند. یک لایه پس زمینه آبی رنگ، 2 لایه جداگانه ابر و یک لایه با متن PersianGFX.com که در بالای سایر لایه ها قرار گرفته است.
+</font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><br></font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><br></font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/i4mfwz4fhtrshdy29cf2.jpg" alt=""></font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><br></font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933">همین طور که می بینید، لایه ها بیشتر شبیه پرده های شفافی هستند که روی هم قرار دارند، روی هر کدام چیزی متفاوت قرار دارد.<br><b><br><br>چگونه از لایه ها در فتوشاپ استفاده کنیم<br></b><br>اگر بتوانید کار با لایه ها را تجربه کنید یعنی عملا وارد فتوشاپ شوید و خود دست به ایجاد و خلق لایه ها بزنید آسان تر و زودتر کار با لایه ها را فرا خواهید گرفت. پس فتوشاپ را باز کنید و با ایجاد یک سند یا فایل جدید (New Document) کار را شروع کنید. برای انجام این کار به مسیر File &gt; New بروید. آن را روی ابعاد 400 در 400 پیکسل تنظیم کنید و مقدار resolution را هم&nbsp; 72 در نظر بگیرید.<br><b><br></b>ما قصد داریم تصویر زیر را با استفاده از تعدادی لایه خلق کنیم:
+</font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><br></font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/yfjnvw50frgdaeclncey.jpg" alt=""></font></div><div style="font-size: 12px; text-align: center; "><b><font color="#cc9933"><br></font></b></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><b>رنگ کردن پس زمینه یا Background<br></b><br>اساسا، وقتی من کار با فتوشاپ را آغاز می کنم دوست دارم ابتدا از Background شروع کنم و به تدریج به بالا حرکت کنم. بنابراین برای شروع قصد داریم لایه Background را با یک رنگ سبز تیره زیبا رنگ کنیم.<br><br><br><b>انتخاب یک سبز تیره برای رنگ زمینه یا Foreground:</b>&nbsp;برای این کار، روی رنگ Foreground&nbsp; کلیک کنید و از لغزنده(slider) برای پیدا کردن رنگ مناسب استفاده کنید. می توانید کد رنگ 36442a را در قسمت پایین صفحه و بعد از علامت # تایپ کنید.
+</font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><br></font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/cjvo93lvop4szo7nhsq.jpg" alt=""></font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><br></font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933">روی کلید OK کلیک کنید تا مقدار رنگی که وارد کردید تایید شود. حالا ابزار Fill را از جعبه ابزار یا Toolbox انتخاب کنید و روی تصویر کلیک کنید. بعد از کلیک کردن لایه background باید با رنگ foreground رنگ شده باشد یعنی رنگ foreground روی background اعمال می شود.<br><br><br><b>ایجاد لایه جدید</b><br><br>اجازه دهید تا یک نگاه اجمالی به پالت لایه ها (Layers Palette) بیاندازیم و تعدادی از کاربردهای اساسی و با اهمیت تر آن را امتحان کنیم.<br class="Apple-interchange-newline"></font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/fbskkhtmmv410ggp3i7m.gif" alt=""></font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><br></font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933">برای ایجاد یک لایه جدید، روی آیکن "New Layer" که در تصویر بالا نمایش داده شده، کلیک کنید.
+</font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><br></font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><br></font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/ssi4vj3d5o1zdg1ceo.gif" alt=""></font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><br></font></div><div style="font-size: 12px; text-align: center; "><div align="right" class="tutorial_image"><font color="#cc9933">&nbsp;</font></div><div><font color="#cc9933"><br>همین طور که مشاهده می کنید، یک لایه جدید با نام "Layer 1" ایجاد شده است. شما می توانید نام آنرا تغییر دهید به این ترتیب که روی نام آن دوبار کلیک کرده و نام مورد نظر را تایپ کنید. هنگامی که این لایه انتخاب شده است، شما خواهید توانست به طور خاص روی آن کار کنید.<br><br><br><b>کشیدن سبزه</b><br><br>ابزار Brush را انتخاب کنید. قبلا در Adobe Photoshop یک براش با نام "Dune Grass" ایجاد شده است که قصد داریم از ان برای ایجاد سبزه در طراحی استفاده کنیم.<br>در قسمت نوار تنظیمات ابزار براش، روی فلش کوچکی که در گوشه سمت راست پنجره قرار دارد کلیک کنید تا لیست براش های آماده فتوشاپ بازشود. به سمت پایین لیست حرکت کرده و براش&nbsp; Dune Grass را انتخاب کنید.</font></div><font color="#cc9933"><br class="Apple-interchange-newline"></font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/9zyt95qwv9u6omq8ktld.png" alt=""></font></div><div style="font-size: 12px; text-align: center; "><font color="#cc9933"><br></font></div><div style="font-size: 12px; text-align: center; "><div><font color="#cc9933"><br>ما قصد نداریم در این آموزش براش هایی را انتخاب کنیم که دارای جزییات زیادی هستند.اما لازم است بدانید رنگ این براش به طور یک در میان بین رنگ زمینه و پس زمینه اعمال می شود به همین خاطر، لازم است که ما یک رنگ background با یک مقدار مشابه با رنگ&nbsp; سبز مثلا کد رنگ&nbsp; 19250f# را انتخاب کنیم.&nbsp;<br><br><br>وقتی یک رنگ مناسب و خوب برای زمینه و پس زمینه انتخاب کردید، با براشی که قبلا انتخاب کردید شروع به نقاشی کردن روی لایه جدید کنید. برای استفاده از براش کلید ماوس را نگه دارید تا براش روی صفحه اعمال شود.&nbsp;</font></div><div><font color="#cc9933">&nbsp;</font></div><div><font color="#cc9933"><br></font></div><div><font color="#cc9933"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/zbqx3p8881gbp69th79.jpg" alt=""></font></div><div><font color="#cc9933"><br></font></div><div><font color="#cc9933">حالا نوبت اضافه کردن متن به تصویر است.<br><br><b>ابزار تایپ (Type Tool)</b><br>ابزار تایپ افقی (Horizontal Type Tool) را انتخاب کنید. رنگ Foreground را روی رنگ سفید تنظیم کنید. روی هر قسمت از صفحه می توانید کلیک کــــــنید و شروع به تایپ کردن نــــــمایید.
+</font></div><div><font color="#cc9933"><br></font></div><div><font color="#cc9933"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/3rr993qanjrsjgb732.jpg" alt=""></font></div><div><font color="#cc9933"><br></font></div><div><div><font color="#cc9933"><br>وقتی متن مورد نظر را تایپ کردید، با استفاده از مکان نما همه آن متن را انتخاب کنید (کلید ماوس را نگه دارید و روی متن بکشید (drag) تا انتخاب شود. کاری که قصد داریم انجام دهیم این است که&nbsp; با رفتن به نوار تنظیمات ابزار Type&nbsp; بعضی از خصوصیات متن تایپ شده را تغییر دهیم.<br>از قسمت Font گزینه Arial و در قسمت font weight گزینه Bold را انتخاب نمایید، text size یا سایز متنرا روی 60 pt قرار دهید و&nbsp; گزینه Crisp را از قسمت&nbsp; anti-aliasing انتخاب کنید.</font></div><font color="#cc9933"><br class="Apple-interchange-newline"></font></div><div><font color="#cc9933"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/9mecriv3izgl206lvzp0.jpg" alt=""></font></div><div><font color="#cc9933"><br></font></div><div><div><font color="#cc9933"><br>همین طور که ملاحظه می کنید، ابزار Type یک لایه جدید Type Layer در پالت لایه ها برای متن ایجاد کرده است. برای اعمال این متن باید روی این لایه جدید کلیک کنید یا کلیـدهای Ctrl + Enter را فشار دهید.</font></div><div><font color="#cc9933">&nbsp;</font></div></div><div><font color="#cc9933"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/3xlsrquqjbq6xrj5c1q4.jpg" alt=""></font></div><div><font color="#cc9933"><br></font></div><div><div><font color="#cc9933">خوب، حالا می خواهیم جای متن تایپ شده را طوری قرار دهیم طوریکه به نظر برسد در حــــال بیرون آمدن از بین سبزه هاست.<br><b><br>انتقال و حرکت دادن لایه ها<br></b><br>اولین کاری که لازم است انجام دهیم این است که لایه Type را پایین لایه Grass قرار دهیم بنابراین این طور به نظر می رسد که Grass (سبزه) جلوی آن قرار دارد. در پالت لایه ها، روی لایه Type کلیک و آنرا به زیر لایه Grass بکشید (drag).</font></div><div><font color="#cc9933">&nbsp;</font></div></div><div><font color="#cc9933"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/7cqg3hfichi8mqf8d1cv.gif" alt=""></font></div><div><font color="#cc9933"><br></font></div><div><font color="#cc9933"><br>حالا می توانید از ابزار Move برای تغییر موقعیت لایه در تصویر استفاده کنیم. در حالیکه لایه Type انتخاب شده است، ابزار Move را انتخاب کنید و متن را به هر جای تصویر که مایلید حرکت دهید. مثلا از جایی که سبزه ها شروع شده اند تا جاییکه به پایان می رسند.
+</font></div><div><font color="#cc9933"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/maa8lwd7r779w13gay79.gif" alt=""></font></div><div><font color="#cc9933"><br></font></div><div><font color="#cc9933"><br class="Apple-interchange-newline"><br><br>این کارخیلی ساده است. حالا که با کلیات حرکت دادن لایه ها آشنا شدید، می خواهیم چند لایه جدید دیگر ایجاد کنیم و موارد دیگر را در مورد لایه ها توضیح دهیم.<br><br><b><br>Opacity و Blending Modes و Filling Selections</b><br><br>یک لایه جدید در بالای لایه background و زیر لایه های&nbsp; type و grass ایجاد کنید، سپس با ابزار Elliptical Marquee&nbsp; یک انتخاب به شکل بیضی رسم کنید.
+</font></div><div><font color="#cc9933"><br></font></div><div><font color="#cc9933"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/mt06au1tcn24fngne4x.jpg" alt=""></font></div><div><font color="#cc9933"><br></font></div><div><font color="#cc9933">با استفاده از ابزار Fill، این ناحیه انتخابی را با رنگ سفید پر کنید(روی لایه جدید). با رفتن به مسیر Select &gt; Deselect یا زدن کلیدهای&nbsp; Ctrl + D تصویر را از حالت انتخاب خارج کنید.<br>حالا باید یک دایره بزرگ و به رنگ سفید روی صفحه طراحی داشته باشید. Blending Mode این لایه را روی Overlay قرار دهید.
+</font></div><div><font color="#cc9933"><br></font></div><div><font color="#cc9933"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/qzqysxqyz1c2grr45b7y.gif" alt=""></font></div><div><font color="#cc9933"><br></font></div><div><div><font color="#cc9933"><br>تنظیم Blending Mode کار بسیار آسانی است. ما در این آموزش قصد نداریم سراغ جزییات Blending Mode برویم، اما لطفا آنها را امتحان کنید تا ببینید چه کاری روی تصویر انجام می دهند.<br>حالا Opacity لایه را بین مقادیر 15 تا 20% تنظیم کنید.</font></div><div><font color="#cc9933">&nbsp;</font></div></div><div><font color="#cc9933"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/ssxj61zxvr1q2otlnaor.gif" alt=""></font></div><div><font color="#cc9933"><br></font></div><div><font color="#cc9933">روی لایه جدید کلیک راست کنید و گزینه Duplicate Layer را از لیست انتخاب نمایید. با انجام این کار یک کپی دقیقا مانند خود لایه ایجاد می شود. مقدار&nbsp; opacity و&nbsp; blending&nbsp; mode لایه را تغییر ندهید. با استفاده از ابزار Move جای لایه را تغییر دهید تا جایی که بتوانید لبه های دو دایره را به وضوح روی تصویر ببینید.
+</font></div><div><font color="#cc9933"><br></font></div><div><font color="#cc9933"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/yfelsl2gfxkxs3piax4d.jpg" alt=""></font></div><div><font color="#cc9933"><br></font></div><div><font color="#cc9933">دقت کنید چگونه می توانید دایره زیرین از پشت دایره جلویی قابل مشاهده کنید؟ چون لایه دایره مانند یک جسم شفاف، مثل شیشه، عمل می کند و اجازه می دهد هر چیزی که پشت آن قرار دارد قابل دیدن باشد. با کاهش میزان opacity به کمتر از مقدار 100%، ما قادر خواهیم بود از درون اشکال یا تصاویر اشکالی که در زیر آنها قرار دارد را ببینیم.
+</font></div><div><font color="#cc9933"><br></font></div><div><font color="#cc9933"><br></font></div><div><font color="#cc9933"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/ygm3quswas4vgs770rx5.gif" alt=""></font></div><div><font color="#cc9933"><br></font></div><div><font color="#cc9933"><br></font></div><div><font color="#cc9933">در آخر اجازه دهید به یکی از خصوصیات دیگر در پالت لایه ها بپردازیم. روی آیکن New Group که در پایین پالت لایه هاست کلیک کنید (آیکنی که شبیه پوشه یا folder است).<br>عملکرد و کاربرد&nbsp; Group مانند عملکرد یک folder است. شما می توانید چندی لایه را درون آن قرار دهید و سپس هنگامی که Group را انتخاب کنید، می توانید&nbsp; opacity و blending mode و موقعیت و مکان لایه هایی&nbsp; که در آن قرار دارند را همزمان تغییر دهید و بسیاری خصوصیت دیگر.<br><br>اجازه دهید آن را امتحان کنیم! دو لایه دایره را به لایه group بکشید (Drag کنید). وقتی هر دو لایه درون group قرار گرفتند، لایه Group را از پالت لایه ها انتخاب کنید، سپس با استفاده از ابزار Move، آن را در صفحه طراحی حرکت دهید. هر دو لایه دایره باید به طور همزمان حرکت کنند، در حالیکه هر کدام&nbsp; ویژگی ها و مشخصات خاص خود را حفظ کرده اند.</font>
+</div></div>
+
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(110)">نظرات  <script>setCommentCnt(110)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/109">جعبه ابزار فتوشاپ (Toolbox)</a></div></div>
+<div class=t-date>تاریخ : جمعه 22 دی 1391  | 16:57  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><font color="#339999"><br style="font-size: 12px; text-align: center;"><span style="font-size: 12px; text-align: center;">در این درس، جعبه ابزار فتوشاپ وابزارهای درون آن به شما معرفی خواهد شد. یک برداشت و درک کلی از ابزارهای نمایش داده شده باعث فهم بهتر فتوشاپ خواهد شد و شما می توانید با شناخت این ابزار، کاربرد آنها و نیز کاربرد فتوشاپ را بهتر تجسم کنید.&nbsp;</span><br style="font-size: 12px; text-align: center;"><br style="font-size: 12px; text-align: center;"><br style="font-size: 12px; text-align: center;"><b style="font-size: 12px; text-align: center;">ساختمان جعبه ابزار</b><br style="font-size: 12px; text-align: center;">
+
+
+</font><div><font color="#339999"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/lzrwt4yby1uz0vyzzxaq.jpg" alt=""></font></div><div><font color="#339999"><br></font></div><div><div style="font-size: 12px; text-align: center;"><font color="#339999">جعبه ابزار در فتوشاپ&nbsp; به 4 دسته منحصر به فرد و مجزا تقسیم شده است بطوریکه هنگام پیدا کردن ابزار مورد نظرتان هرگزبه زحمت نمی افتید. دسته بندی به این صورت می باشد:<br><br><b>1. ابزارهای Selection و Crop و Slice&nbsp;<br>2. ابزارهای Retouch و Paint&nbsp;&nbsp;<br>3. ابزارهای Drawing و (Type&nbsp; (Vector Tools<br>4. ابزارهای Annotations و Measurement&nbsp;</b><br><br>علاوه بر این 4 دسته، جعبه ابزار شامل اجزای دیگری نیز می باشد، که برجسته ترین آنها رنگ Foreground و Background است.<br><br>حالا که نحوه ی سازماندهی ابزارها را دیدید، قصد داریم نگاهی به بعضی ابزارهای ضروری در فتوشاپ بیاندازیم. این فقط یک نگاه و مرور اجمال به جعبه ابزار خواهد بود، چون اگر بخواهیم هر یک از این ابزارها را به تفصیل شرح دهیم ، می بایست یک درس جداگانه را به هر ابزار اختصاص دهیم، اما در حال حاضر لازم است که شما را با یک مفهوم کلی از اینکه بعضی از این ابزار قادر به انجام چه کاری هستند آشنا کنیم. در دروس بعدی نحوه ی استفاده و کاربرد آنها را توضیح خواهیم داد.<br><br><br><b>&nbsp;ابزارهای انتخاب&nbsp;</b><b>Selection Tools</b><b></b></font></div></div><div><b><font color="#339999"><br></font></b></div><div><font color="#339999"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/qy3v6yozp9yvcyqea7yu.jpg" alt=""></font></div><div><font color="#339999"><br></font></div><div><div style="font-size: 12px; text-align: center;"><font color="#339999"><b><br></b>ابزار&nbsp;<b>Marquee:</b>&nbsp;برای انتخاب اشکالی مانند مربع، مستطیل و بیضی استفاده می شود.<br><br>&nbsp;<b>Move Tool</b>: برای انتقال و یا حرکت دادن انتخاب ها، اشکال و لایه ها به کار برده می شود.<br><br>&nbsp;<b>Lasso Tools</b>: شامل چند ابزار دیگر نیز هست که برای مواردی که شکل یا تصویری که می خواهید انتخاب کنید نامنظم و بی قائده است استفاده می شود.<br><br>- ابزار&nbsp;<b>polygonal lasso</b>&nbsp;برای انتخاب اشکال چند ضلعی کاربرد دارد.<br>- ابزار&nbsp;<b>magnetic lasso</b>&nbsp;که به طور خودکار لبه های تصویر یا شکل را انتخاب می کند.<br>&nbsp;<br><br>ابـزار&nbsp;<b>Magic Wand</b>&nbsp;فضاهایی را که رنـگ یکـسان دارند انتـخاب می کنـد. تنها با یک بار کلیــک می توانید آن نـواحی را با استــفاده از این ابزاربه ســادگی انتـخاب کنــید. (مانند ابرهای سفید در تصویر بالا).<br><br>ابزار&nbsp;<b>Crop&nbsp;</b>به کاربر این امکان را می دهد تا فضای تصویر فعال را مجددا تعریف کند نه اینکه سایز آن را تغییر دهد. این ابزار چیزی شبیه جدا کردن یا بریدن یک تصویر کوچک از تصویر بزرگتر به وسیله یک قیچی است.</font></div></div><div><font color="#339999"><br></font></div><div><font color="#339999"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/tssmgjv5kn9u598sro.gif" alt=""></font></div><div><div style="font-size: 12px; text-align: center;"><font color="#339999"><br><b>&nbsp;ابــزارهای روتوش (Retouch Tools)</b><br>در فتوشاپ تعدادی ابزار ترمیم وجود دارد که برای درست کردن، اصلاح کردن یا به عبارتی ترمیم عیوب تصاویر و یا برای رفع قرمزی چشمها در عکس از آنها استفاده می شود.</font></div><div style="font-size: 12px; text-align: center;"><font color="#339999">&nbsp;</font></div></div><div style="font-size: 12px; text-align: center;"><font color="#339999"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/0cbv82ix0qyf0m79dar0.gif" alt=""></font></div><div><font color="#339999"><br></font></div><div><font color="#339999"><br></font></div><div><font color="#339999"><span style="font-size: 12px; text-align: center;">با استفاده از&nbsp;</span><b style="font-size: 12px; text-align: center;">Clone Stamp</b><span style="font-size: 12px; text-align: center;">&nbsp;</span><b style="font-size: 12px; text-align: center;">Tool</b><span style="font-size: 12px; text-align: center;">&nbsp;یک کاربر می تواند از&nbsp; یک نقطه از تصویر به عنوان منبع نمونه برداری کند و سپس در جای دیگر آن نقطه را استفاده کند و آن نقطه را به عبارتی در مکان دوم کپی کند.</span></font></div><div><span style="font-size: 12px; text-align: center;"><font color="#339999"><br></font></span></div><div><font color="#339999"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/izkl4x401zb15mtf2mt.gif" alt=""></font></div><div><font color="#339999"><br></font></div><div><div style="font-size: 12px; text-align: center;"><font color="#339999"><b>Eraser</b>&nbsp;<b>Tool</b>&nbsp;برای پاک کردن قسمت هایی از یک تصویر، محل انتخاب شده و یا لایه بکار برده می شود.</font></div></div><div><font color="#339999"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/tol0ttiggcnt0sf3n8x.gif" alt=""></font></div><div><font color="#339999"><br></font></div><div><font color="#339999"><span style="font-size: 12px; text-align: center;">&nbsp;</span><b style="font-size: 12px; text-align: center;">Sharpen Tool</b><span style="font-size: 12px; text-align: center;">&nbsp;برای sharp کردن لبه های تصویر بکار می رود در حالیکه&nbsp;</span><b style="font-size: 12px; text-align: center;">Blur Tool</b><span style="font-size: 12px; text-align: center;">&nbsp;لبه ها را محو و مات می کند. ابزار&nbsp;</span><b style="font-size: 12px; text-align: center;">Smudge</b><span style="font-size: 12px; text-align: center;">&nbsp;در تصویر یک لکه ایجاد می کند. مانند استفاده از نقاشی انگشتی که با انگشت می توانید رنگ ها را ترکیب کنید.</span></font></div><div><span style="font-size: 12px; text-align: center;"><font color="#339999"><br></font></span></div><div><span style="font-size: 12px; text-align: center;"><font color="#339999"><br></font></span></div><div><font color="#339999"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/rr2juyfiiaf3dbv9n0q7.gif" alt=""></font></div><div><font color="#339999"><span style="font-size: 12px; text-align: center;">&nbsp;</span><br style="font-size: 12px; text-align: center;"><b style="font-size: 12px; text-align: center;">Dodge Tool</b><span style="font-size: 12px; text-align: center;">&nbsp;تصویر را روشن تر می کند در حالیکه&nbsp;&nbsp;</span><b style="font-size: 12px; text-align: center;">Burn Tool</b><span style="font-size: 12px; text-align: center;">&nbsp;آن را تیره تر می کند.&nbsp;</span><b style="font-size: 12px; text-align: center;">Sponge Tool&nbsp;</b><span style="font-size: 12px; text-align: center;">برای اشباع کردن (Saturate)یا عدم اشباع (Desaturate) قسمتهایی از تصویر به کار می رود.........</span></font></div><div><span style="font-size: 12px; text-align: center;"><font color="#339999"><br></font></span></div><div><font color="#339999"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/22vu7eb1qkocftgu1rbo.gif" alt=""></font></div><div><font color="#339999"><br></font></div><div><font color="#339999"><b style="font-size: 12px; text-align: center;"><br>ابزارهای نقاشی (Painting Tools)</b><br style="font-size: 12px; text-align: center;"><br style="font-size: 12px; text-align: center;"><span style="font-size: 12px; text-align: center;">ابزار&nbsp;</span><b style="font-size: 12px; text-align: center;">Brush</b><span style="font-size: 12px; text-align: center;">&nbsp;و&nbsp;</span><b style="font-size: 12px; text-align: center;">Pencil</b><span style="font-size: 12px; text-align: center;">&nbsp;برای کشیدن stroke ها (خطوط محیطی اشکال ) در&nbsp;گرافیک</span><span style="font-size: 12px; text-align: center;">&nbsp;به کار می روند. این ابزار ها&nbsp; می توانند برای یک نقاشی موثر و مفید باشند.</span></font></div><div><span style="font-size: 12px; text-align: center;"><font color="#339999"><br></font></span></div><div><font color="#339999"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/lwd1hjhdb3dpxh4und5l.gif" alt=""></font></div><div><font color="#339999"><br></font></div><div><font color="#339999"><br style="font-size: 12px; text-align: center;"><b style="font-size: 12px; text-align: center;">Fill Tools<br><br></b><span style="font-size: 12px; text-align: center;">برای رنگ کردن کامل و یک دست لایه ها، نواحی انتخاب شده و فضاهای تک رنگ یا گرادیانت استفاده می شود.&nbsp;</span></font></div><div><span style="font-size: 12px; text-align: center;"><font color="#339999"><br></font></span></div><div><font color="#339999"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/yc1lwetsukex0u8zjv50.gif" alt=""></font></div><div><font color="#339999"><br></font></div><div><font color="#339999"><b style="font-size: 12px; text-align: center;">ابزارهای کشیدن طرح وکتور(Pen Tool) و ابزار تایپ (Vector Drawing &amp; Type Tools)</b><br style="font-size: 12px; text-align: center;"><br style="font-size: 12px; text-align: center;"><b style="font-size: 12px; text-align: center;">Type Tool</b><span style="font-size: 12px; text-align: center;">&nbsp;برای ایجاد و تنظیم متن در روی تصویر مورد استفاده قرار می گیرد. با این ابزار هم می توان به صورت عمودی و هم افقی تایپ کرد.</span></font></div><div><span style="font-size: 12px; text-align: center;"><font color="#339999"><br></font></span></div><div><font color="#339999"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/34fuzvmdypr357i6ix1.gif" alt=""></font></div><div><font color="#339999"><br></font></div><div><font color="#339999"><br style="font-size: 12px; text-align: center;"><span style="font-size: 12px; text-align: center;">&nbsp;</span><b style="font-size: 12px; text-align: center;">Pen</b><span style="font-size: 12px; text-align: center;">&nbsp;</span><b style="font-size: 12px; text-align: center;">Tool</b><span style="font-size: 12px; text-align: center;">&nbsp;برای ایجاد اشکال صاف و path ها، برای ایجاد اشکال وکتور بکار برده می شود.( تصاویر وکتور به تصاویری گفته می شود که می توان آنها را به هر سایز و مقیاسی که خواست بزرگ یا کوچک کرد، بدون اینکه از کیفیت تصویر کم شود).</span></font></div><div><span style="font-size: 12px; text-align: center;"><font color="#339999"><br></font></span></div><div><font color="#339999"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/njaicksfaque5n6l4nck.gif" alt=""></font></div><div><font color="#339999"><br></font></div><div><font color="#339999"><br></font></div><div><font color="#339999"><b style="font-size: 12px; text-align: center;">&nbsp;Cutom Shape</b><span style="font-size: 12px; text-align: center;">&nbsp;ها تصاویر وکتور آماده ای هستند که به صورت از قبل تنظیم شده در یک لیست قرار دارند که با باز کردن پنجره Shape به سهولت می توانید شکل دلخواه را انتخاب و در جای مناسب بکار برید، به علاوه خود شما نیز می توانید Shape جدید ایجاد کرده و آن را به&nbsp; لیست اضافه نمایید.</span></font></div><div><span style="font-size: 12px; text-align: center;"><font color="#339999"><br></font></span></div><div><font color="#339999"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/1kfmhk7ntrjv9qgjqy.gif" alt=""></font></div><div><font color="#339999"><br></font></div><div><font color="#339999"><b style="font-size: 12px; text-align: center;">Foreground / Background Color</b><br style="font-size: 12px; text-align: center;"><br style="font-size: 12px; text-align: center;"><span style="font-size: 12px; text-align: center;">&nbsp;رنگ&nbsp;</span><b style="font-size: 12px; text-align: center;">foreground</b><span style="font-size: 12px; text-align: center;">&nbsp;و رنگ&nbsp;</span><b style="font-size: 12px; text-align: center;">background</b><span style="font-size: 12px; text-align: center;">&nbsp;را می توان در هنگام&nbsp; نقاشی کردن، برای تنظیم رنگ متن در هنگام تایپ و رنگ کردن اشکال، به دلخواه تنظیم نمود. این نمایشگر کمک می کند تا رنگ هایی را که در حال استفاده شدن هستند ببینیم و نیز این امکان را ایجاد می کند که جای رنگ ها را با هم عوض کنیم.</span></font></div><div><span style="font-size: 12px; text-align: center;"><font color="#339999"><br></font></span></div><div><font color="#339999"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/asivnsaynztvwsvgmf.png" alt=""></font></div><div><font color="#339999"><br></font></div><div><font color="#339999"><br style="font-size: 12px; text-align: center;"><b style="font-size: 12px; text-align: center;">استفاده از ابزار</b><br style="font-size: 12px; text-align: center;"><br style="font-size: 12px; text-align: center;"><span style="font-size: 12px; text-align: center;">برای انتخاب کردن یک ابزار از جعبه ابزار، کافیست روی آن یک بار کلیک کنید. اگر هنگام باز شدن ابزار یک فلش سیاه رنگ در گوشه پایین&nbsp; سمت راست نشان داده شد، یعنی&nbsp; ابزار های دیگری هم در آن قرار دارد که در زیر این ابزار پنهان شده اند. برای انتخاب هر یک از ابزارهای پنهان شده، با ماوس روی فلش کلیک کنید، می بینید که محتویات آن ظاهر می شود حالا می توانید ابزار مورد نظر خود را انتخاب کنبد.</span></font></div><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(109)">نظرات  <script>setCommentCnt(109)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/108">کاربرد پالت ها در فتوشاپ</a></div></div>
+<div class=t-date>تاریخ : پنجشنبه 21 دی 1391  | 17:48  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+
+<div><br></div><div><div><div style="font-size: 12px; text-align: center;"><font color="#339999">در فتوشاپ، پالت ها برای اصلاح کردن و تغییر دادن و نیز برای نظارت و بازبینی اسناد یا فایل ها به شما کمک می کنند. یک درک خوب از چگونگی استفاده، سازماندهی و تنظیم درست پالت ها، در یادگیری اینکه چطور از فتوشاپ استفاده کنیم موثر و ضروری است.<br><br><b>پالت ها</b><br><br>برای اینکه به شما نشان دهیم پالت ها چه نقش بزرگ و مهمی را در فتوشاپ به عهده دارند، کلید Tab را فشار دهید تا تمامی پالت ها ناپدید شوند. پالت ها شامل همه چیز از نوار ابزار گرفته تا نوار انتخاب ها، لایه ها و پنجره رنگ ها می شوند.<br><br><b>در این آموزش، شما یاد خواهید گرفت چگونه:</b><br><br>-پالت ها را سازماندهی کنید.<br>-سایز پالتها را تغییر داده آنها را آشکار یا پنهان کنید.<br>-باز، بسته و مجددا راه اندازی کنید (Reset).<br>-از تنظیمات درون پالت ها استفاده کنید.<br><br><br><b>سازماندهی پالت ها</b><br><br>این امکان وجود دارد که پالت ها را مطابق سلیقه خودتان دسته بندی و مرتب کنید. با انجام این کار به افزایش کارایی خود کمک می کنید به این صورت که پالت هایی را که کاربرد آنها یعنی تعداد دفعات استفاده از آنها بیشتر است را در در قسمتی از صفحه قرار دهید که قابل دسترس تر می باشد.<br>- برای انتقال یک پالت به یک گروه پالت (palette group)مجزا، یا به palette group خودش، پالت مورد نظر را drag و سپس به یک گروه دیگر، یا هر جای دیگری از فضای کار drop کنید.<br>- برای انتقال یک گروه پالت (palette group)، نوار عنوان (title bar) پالت مورد نظر را با ماوس drag، و سپس در جایی که مناسب است رها کنید.</font></div></div><div><font color="#339999"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/szww4xytakmk0dwgvk3.gif" alt=""></font></div><div><font color="#339999"><br></font></div><div><div style="font-size: 12px; text-align: center;"><font color="#339999"><br>شما همچنین می توانید پالت ها را به یکدیگر Dock کنید، یعنی لبه های بالا و پایین هر پالت را می توان به پالت دیگر متصل نمود و این کار با drag ;vnk یک پالت به سمت بالا یا پایین پالت دیگر اتفاق می افتد.<br><br><b>تغییر دادن سایز، آشکار و پنهان کردن پالت ها</b><br><br>شاید شما با پالت بزرگی که شامل تعداد زیادی style ،color یا لایه است کار می کنید که دوست دارید همه اینها همزمان برای شما قابل دسترسی باشد. شما می توانید سایز بسیاری از پالت ها را با drag کردن کلیدی که در گوشه سمت راست قرار دارد پالت را روی سایز مورد نظرتان تنظیم کنید.</font></div><div style="font-size: 12px; text-align: center;"><font color="#339999">&nbsp;</font></div></div><div style="font-size: 12px; text-align: center;"><font color="#339999"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/26vyjiuz0j5x7przimk0.gif" alt=""></font></div><div><font color="#339999"><br></font></div><div><font color="#339999"><br></font></div><div><div class="tutorial_image" style="font-size: 12px; text-align: center;"><font color="#339999">&nbsp;</font></div><div style="font-size: 12px; text-align: center;"><font color="#339999">اگر می خواهید پالتی را که فعلا از آن استفاده نمی کنید پنهان (minimize) کنید تا در فضا صرفه جویی کرده باشید و فضای بیشتری برای کار با دیگر پالت ها در اختیار داشته باشید، کافیست روی عنوان پالت دوبار کلیک کنید.<br><b><br>بستن، باز کردن و راه اندازی مجدد یا Reset پالت ها<br></b><br>اگر تعدادی از پالت ها بدون اینکه به آنها نیاز داشته باشید باز هستند، می توانید با کلیک کردن روی&nbsp; علامت "x" که در&nbsp; گوشه بالای سمت راست پالت قرار دارد، آنها را بست.<b><br></b><br>اگر لازم است که یک پالت جدید ایجاد کنید، یا پالتی&nbsp; که قبلا بسته اید را مجددا باز کنید، از menu bar به Window بروید و پالت مورد نظرتان را بار دیگر باز کنید.<b><br></b><br>اگر در برگرداندن پالت به جای خود با مشکل مواجه شدید به مسیر Window &gt; Workspace&nbsp; بروید و در اینجا گزینه هایی مشاهده می کنید که می توانید با انتخاب آنها چیدمان پالت ها را به حالتی که مایلید برگردانید مثلا گزینه Basic همه چیز reset می شود و به جای اولیه خود که در آغاز باز شدن فتوشاپ در آنجا قرار داشته بر می گردد.<br><b><br><br>تنظیمات در پالت ها<br></b><br>در پالت ها، انواع تنظیمات از انتخاب های رنگ، styles تا opacity و دیگر مقادیر وجود دارد. همه این گزینه ها را با جزییات کامل در آینده توضیح خواهیم داد، اما برای این قسمت می خواهیم شرح دهیم که بعضی از این گزینه ها چگونه عمل می کنند.<br><br><br><b>Drop-down Menus یا منوهای باز شونده<br><br></b>برای اجرای یک Drop-down Menu یا منوی بازشونده، فقط روی فلشی که به منو چسبیده کلیک کنید. لیستی از دادهای داخلی قابل استفاده باز می شود. روی گزینه مورد نظر کلیک کنید تا انتخاب شود.&nbsp;</font></div></div><div style="font-size: 12px; text-align: center;"><font color="#339999"><br></font></div><div style="font-size: 12px; text-align: center;"><font color="#339999"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/5mblek6814ccpzla5r41.gif" alt=""></font></div><div style="font-size: 12px; text-align: center;"><font color="#339999"><br></font></div><div style="font-size: 12px; text-align: center;"><div><font color="#339999"><br><b>لغزنده یا Sliders<br><br></b>نحوه ی کار لغزنده ها به این صورت است که روی ضامن کلیک کرده و آن را روی مقدار مورد نظر drag کنید.</font></div><div><font color="#339999"><br></font></div><div><font color="#339999"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/hd0fye1u576ujfvhebg.png" alt=""></font></div><div><font color="#339999"><br></font></div><div><font color="#339999"><br><b>Swatches و Styles</b><br><br>برای انتخاب یک color swatch یا layer style، با ماوس روی آن حرکت کرده و یک بار کلیک کنید.</font></div><div><font color="#339999"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/asgbghysw7fhv3kjp88w.gif" alt=""></font></div></div></div><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(108)">نظرات  <script>setCommentCnt(108)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/107">شهات امام حسن مجتبی را تسلیت میگویم</a></div></div>
+<div class=t-date>تاریخ : چهارشنبه 20 دی 1391  | 20:51  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div><img hspace="0" border="50" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/35jkabuncrnrp53rb7y.jpg" alt=""></div><font color="#6666cc"><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: small; text-align: center;">هر كه بشنیده صداى مجتبى / تا ابد شد مبتلاى مجتبى</span><br style="font-family: tahoma, arial, helvetica, sans-serif; font-size: small; text-align: center;"><br style="font-family: tahoma, arial, helvetica, sans-serif; font-size: small; text-align: center;"><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: small; text-align: center;">سالها بهر حسین باید گریست / تا كنى درك عزاى مجتبى</span></font>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(107)">نظرات  <script>setCommentCnt(107)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/106">آشنایی با محیط کار در فتوشاپ</a></div></div>
+<div class=t-date>تاریخ : چهارشنبه 20 دی 1391  | 16:47  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+<div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/dgr6x3htdh8z41uy1r4.jpg" alt=""></div><font color="#66cccc"><span style="font-size: 12px; text-align: center;">در مواجه شدن با فتوشاپ، ممکن است کاربران دچار سردر گمی شوند. این درس به شما نشان خواهد داد فتوشاپ چیست و چگونه این غول نیرومند یعنی فتوشاپ را هدایت کنند. قبل از شروع، توجه داشته باشید که ما چگونگی کار با Adobe Photoshop ورژن 11 یا (Adobe Photoshop CS4) را به شما نشان خواهیم داد. اگر شما با ورژن های دیگر کار می کنید، ممکن است با مشکلات کمی روبرو شوید. ممکن است بعضی از خصوصیاتگرافیکی</span><span style="font-size: 12px; text-align: center;">&nbsp;کمی متفاوت به نظر برسند، اما در کل با دنبال نمودن این سلسه از آموزش ها براحتی قادرید با هر نسخه از فتوشاپ کار کنید.</span>
+
+
+</font><div><font color="#66cccc"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/epzmfod7jf1zb911h7u6.jpg" alt=""></font></div><div><font color="#66cccc"><br></font></div><div><div style="font-size: 12px; text-align: center;"><font color="#66cccc">&nbsp;</font></div><div style="font-size: 12px; text-align: center;"><font color="#66cccc"><b>فضای کار (Work Area)&nbsp;</b><br>در نگاه اول، فتوشاپ می تواند یک فضای بزرگ ترسناک باشد. حالا می خواهیم فضای کار را به قسمت های کوچکتر تجزیه کنیم تا همه چیز را برای یادگیری آسان تر کنیم.<br><br><b>A-نوار منو (Menu Bar):</b>&nbsp;یک منوی سازماندهی شده که بر اساس کارهایی که انجام می دهند دسته بندی شده اند.<br><b>B.نوار تنظیمات (Options Bar):</b>&nbsp;شامل انتخاب ها و تنظیمات خاصی می شود که در هنگام استفاده از یک ابزار می توانید آنها را گزینش کنید.<br><b>C.نوار ابزار (Tool Bar):</b>&nbsp;شامل مجموعه وسیعی از ابزار های فتوشاپ به علاوه رنگ Foreground یا زمینه، رنگ Background یا پس زمینه و خصوصیات دیگر می باشد.<br><b>D.پنجره سند (Document Window):&nbsp;</b>پنجره ای است که سند یا فایل جدیدی که طراحی روی آن انجام می شود را، در بر می گیرد.<br><b>E.فضای طراحی (Active Image Area):</b>&nbsp;پنجره سند حاوی Active Image Area می باشد(قسمت سفید رنگی که در تصویر بالا نشان داده شده) . این همان قسمت یا صفحه ای است که طراح در آن طراحی می کند.<br><b>F.هدایت کننده (Navigator):</b>&nbsp;یک نسخه کوچک از سند فعلی یا active image area که در حال کار کردن روی آن هستید. برای هدایت فضای طراحی یا هنگامی که روی صفحه zoomed in می کنید استفاده می شود.<br><b>G.پالت رنگ (Color Palette):&nbsp;</b>لوحی که برای انتخاب رنگ foreground و background ، هنگام نقاشی کردن، رنگ کردن و یا رسم کرن استفاده می شود.<br><b>H.پالت تاریخچه(History):</b>&nbsp;به طور دائم تمام تغییراتی را که درون سند انجام می شود را update می کند. می توان برای برگرداندن یا لغو کردن مراحل قبل از آن استفاده کرد-Undo&nbsp;&nbsp;<br><b>I.پالت لایه ها (Layer):</b>&nbsp;اگر فتوشاپ را یک همبرگر بزرگ تصور کنید، لایه ها می توانند طبقه ها و موادی باشند که در آن قرار دارند. لایه ها در فتوشاپ به شما اجازه می دهند تا در یک صفحه طراحی کار کنید و اجازه می دهد تصاویر و سایر اجزا طراحی روی یکدیگر یا زیر یکدیگر باشند. این یک نگاه اجمالی بود به اینکه قسمت های داخلی فتوشاپ چه شکلی دارند. در ادامه درس هر کدام از نکات بالا را به طور مفصل شرح خواهیم داد.</font></div><div style="font-size: 12px; text-align: center;"><font color="#66cccc"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/e8tk3nlal6ux27rs8u.jpg" alt=""></font></div><div style="font-size: 12px; text-align: center;"><font color="#66cccc"><br></font></div><div style="font-size: 12px; text-align: center;"><font color="#66cccc"><br><b>ایجاد یک سند جدید (New Document)</b><br>برای ایجاد یک سند جدید در فتوشاپ، از قسمت Menu Bar به مسیر&nbsp; File &gt; New بروید.<br>یک پنجره شبیه آنچه در زیر نشان داه شده، باز خواهد شد:</font></div><div style="font-size: 12px; text-align: center;"><font color="#66cccc"><a title="آشنایی با محیط کار در فتوشاپ  www.taknaz.ir" href="http://www.taknaz.ir/" style="text-decoration: initial;">&nbsp;</a><span style="text-decoration: initial;"><a title="آشنایی با محیط کار در فتوشاپ  www.taknaz.ir" href="http://www.taknaz.ir/" style="text-decoration: initial;">&nbsp;</a></span></font></div></div><div style="font-size: 12px; text-align: center;"><font color="#66cccc"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/s6jtgx66ehn79392ocu.jpg" alt=""></font></div><div style="font-size: 12px; text-align: center;"><font color="#66cccc"><br></font></div><div style="font-size: 12px; text-align: center;"><font color="#66cccc"><b>A- نام سند یا Document Name:</b>&nbsp;در این قسمت می توانید نام سند جدید را به طور اختیاری تایپ کنید.<br><b>B- ابعاد سند یا Presets:</b>&nbsp;ابعاد سند یا همان طول و عرض سند را می توان در این قسمت تنظیم نمود.<br><b>C-واحد های سند (Document Units)</b>: واحدهای ابعاد سند در این قسمت تنظیم می شوند. نوعی از این واحد ها Pixel می باشد که برای کارهای وب و کارهایی که از مونیتور باید دیده شوند مناسب است.<br><b>D- وضوح تصویر یا Resolution:</b>&nbsp;می توان وضوح تصویر را در این قسمت تنظیم کرد. Resolution یا وضوح یعنی تعداد نقاط یا پیکسل های موجود در هر اینچ. در هنگام چاپ، اساسا شما یک تصویر با کیفیت بالا می خواهید مثلا 300 پیکسل یا بالاتر، که این باعث افزایش سایز سند نیز می شود.به هر حال، برای کارهایی که اساسشان وب می باشد، یا کارهایی که فقط روی صفحه نمایش داده می شوند&nbsp;&nbsp; ( on-screen)، مقدار 72&nbsp;&nbsp; مناسب است.<br><b>E- مد رنگ یا Color Mode:</b>&nbsp;در این قسمت باید نوع Color Mode یا حالت رنگ سند مشخص شود. به طور معمول از RGB Color یا (Red/Green/Blue) برای Color Mode استفاده می کنند مگر اینکه بخواهید از یک نوع چاپ خاص استفاده کنید.<br><b>F- محتوای پس زمینه یا Background Contents:</b>&nbsp;اینجا رنگ background یا پس زمینه سند خود را می توانید انتخاب کنید.<br><br>پنجره ای که در بالا نشان داده شده است می تواند یک سند به ابعاد&nbsp; 800×600 پیکسل و با&nbsp; background سفید ایجاد کند. نام سند&nbsp; می تواند "Document Name" و&nbsp; resolution هم 72 باشد.<br><br><br><b>ذخیره کردن و بستن سند در فتوشاپ</b><br>برای ذخیره کردن یک سند در فتوشاپ، از Menu Bar&nbsp; به مسیر&nbsp; File &gt; Save بروید. وقتی می خواهید سند را ذخیره کنید ، برای نام آن چیزی در نظر بگیرید که بعدا قابل تشخیص و شناسایی باشد همچنین Formart&nbsp; را PSD انتخاب کنید، وقتی تمام این کارها را انجام دادید، و مطمئن می شوید که سند همه مشخصه های سند فتوشاپ و اطلاعات یا محتوای لایه را حفظ خواهد کرد، بنابراین شما می توانید در آینده از آن استفاده کنید.&nbsp;<br>توجه داشته باشید که این PSD با جستجوگرهای وب سازگار نیست و لازم است که برای این موارد آن را با یک فرمت متفاوت ذخیره کنید. این موضوع را در یک درس دیگر ادامه خواهیم داد.<br>برای بستن یک سند باید به مسیر File &gt; Close بروید. برای بستن همه سند های باز ، گزینه File &gt; Close All را انتخاب کنید.</font></div><div style="font-size: 12px; text-align: center;"><br></div>
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(106)">نظرات  <script>setCommentCnt(106)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+
+
+
+</div>
+<style>.pging {    direction:rtl;    font-size:1.2em;    height:30px;    margin:40px 0 0;    color:#c2a900;    padding-bottom: 20px;    text-align: center;}
+.pging a:link, .pging a:visited {border:1px solid #c2a900;    display:inline-block;    margin:0 3px;    padding:1px 5px;    text-decoration:none;}
+.pging a:hover, .pging a:active {    color:#c2a900;}.pging a.current:link, .pging a.current:visited {    background-color:#c2a900;    border:1px solid #c2a900;    color:red;    cursor:text;}</style> <div class=pging>
+<p align="center"><font face="Tahoma" style="font-size: 9pt">
+			تعداد کل صفحات : 11 ::     			<a href="1.html">
+			<font color="#c2a900"><i>...</i></font></a>  			<a href="2.html">
+			<font color="#c2a900"><span>2</span></font></a>  			<a href="3.html">
+			<font color="#c2a900"><span>3</span></font></a>  			<a href="4.html">
+			<font color="#c2a900"><span>4</span></font></a>  			<a href="5.html">
+			<font color="#c2a900"><b>5</b></font></a>  			<a href="6.html">
+			<font color="#c2a900"><span>6</span></font></a>  			<a href="7.html">
+			<font color="#c2a900"><span>7</span></font></a>  			<a href="8.html">
+			<font color="#c2a900"><span>8</span></font></a>  			<a href="http://baraneaseg.mihanblog.com/page/9">
+			<font color="#c2a900"><i>...</i></font></a>  <br><br></div>
+</font></p></div></div>
+
+
+<div class=Sid>
+<div id=Sidebar>
+
+<div class=TopSid><div class=TopSid2>			
+<b>درباره وبلاگ</b></div></div>
+<div class=CenterSid><div class=li-Sid2>  <p align="center">
+<img src="../../static.mihanblog.com/public/user_data/web_photo/345/1033403.jpg@6500"  /><br></p></div></div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آرشیو مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../post/archive/1393/1/1.html"> هفته اول فروردین 1393 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/11/1.html"> هفته اول بهمن 1392 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/10/4.html"> هفته چهارم دی 1392 ، 2 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/10/3.html"> هفته سوم دی 1392 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/10/2.html"> هفته دوم دی 1392 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/10/1.html"> هفته اول دی 1392 ، 2 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/9/3.html"> هفته سوم آذر 1392 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/9/1.html"> هفته اول آذر 1392 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/8/2.html"> هفته دوم آبان 1392 ، 2 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/8/1.html"> هفته اول آبان 1392 ، 1 </a></div></div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آخرین مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../post/205.html">سلام</a></div><div class=li-Sid>
+<a href="../post/202.html">خانه خدا</a></div><div class=li-Sid>
+<a href="../post/204.html">مادر مهربان</a></div><div class=li-Sid>
+<a href="../post/203.html">امضاء شناسی</a></div><div class=li-Sid>
+<a href="../post/1.html">خاطرات یک دفتر</a></div><div class=li-Sid>
+<a href="../post/199.html">نا خواسته مسافر شدم...</a></div><div class=li-Sid>
+<a href="../post/198.html">خسته ام از زندگی</a></div><div class=li-Sid>
+<a href="../post/197.html">باران</a></div><div class=li-Sid>
+<a href="../post/194.html">یلدا</a></div><div class=li-Sid>
+<a href="../post/191.html">تصاویری طنز از اثرات استفاده اینترنت (طنز جالب) </a></div><div class=li-Sid>
+<a href="../post/186.html">دلنوشته های دلنشین  </a></div><div class=li-Sid>
+<a href="../post/185.html">10 سال عشق یک جفت مارمولک به جفتش!! </a></div><div class=li-Sid>
+<a href="../post/183.html">محرم</a></div><div class=li-Sid>
+<a href="../post/182.html">تقدیم به اونایی دلتنگ هستن</a></div><div class=li-Sid>
+<a href="../post/181.html">یکی بود یکی نبود</a></div><center><a href="../post/list.html"><b>لیست آخرین مطالب</b></a></center></div>
+<div class=LowSid></div>
+
+
+
+<div class=TopSid><div class=TopSid2>
+<b>آمار سایت</b></div></div>
+<div class=CenterSid>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right></div>
+<div class=LowSid></div>	
+
+<div class="TopSid"><div class=TopSid2>امکانات وب</div></div>
+<div class=CenterSid>
+<div class=About>
+<div style="text-align:center">
+<!-- Music player by www.1abzar.com ---><center>
+<script language="javascript" src="http://1abzaar.ir/tools/player/?pl=1&file=http://javanup.ir/upload/r5152m1wqrse2lmizfck.mp3&start=1"></script><div style="display:none"><h2><a href="http://www.1abzar.com" rel="nofollow" >کد آهنگ</a></h2></div>
+
+
+<a href="http://ariotik.ir/ref:792"><img src="http://ariotik.ir/template/site/images/banner3.gif" alt="کسب درآمد"></a>
+
+
+<center><br><br><a href="http://blog2i.com" target="_blank"><img 
+border="0" src="http://blog2i.com/rank.php?url=http://baraneaseg.mihanblog.com/&s=4" title="وبلاگ"></a><br><br>
+
+<!-- mihantools.net --->
+<a href="http://mihantools.net/tools/contact/e.php?email=hastigarib@yahoo.com" target="_blank">تماس با مدیر وبلاگ</a><div style="display:none"><h1><a href="http://mihantools.net">فرم تماس</a></h1></div>
+<!-- mihantools.net --->
+
+
+
+<div align="center"><a href="http://etransteam.com/blog/" target="_blank" title="بلاگ گروه مترجمین ایران زمین - ترجمه متون تخصصی">بلاگ گروه مترجمین ایران زمین</a></div>
+<!-- End Susa Web Tools - Love Meter -->
+<!-- Begin Susa Web Tools - Fal Hafez -->
+<script src="http://susawebtools.ir/services/fal/hafez/index.php?skin=14"></script>
+<div style="margin-right:25%; margin-top:-3%"><a href="http://susawebtools.ir/?p=61">دریافت کد فال حافظ</a></div>
+<!-- End Susa Web Tools - Fal Hafez -->
+<!-- start logo cod off http://melodylonely.blogfa.com/ -->
+<p align="center"><p align="center"><a href="http://melodylonely.blogfa.com/" target="_blank"><img border="0" src="http://s1.picofile.com/file/7509444080/2.gif" width="160" height="200" alt="love :: life"></a></p>
+<!--finish logo cod off http://melodylonely.blogfa.com/ -->
+<p align="center"><a href="http://www.yazdmusic98.vcp.ir" target="_blank"><img border="0" 
+
+<!----www.bahar22.com----><center><script type="text/javascript" src="http://bahar22.com/ftp/other/17/004-2.js"></script></center><!----www.bahar22.com----><p align="center"><font face="Tahoma" style="font-size: 7pt"><a target="_blank" href="http://www.bahar22.com"><span style="text-decoration: none"><font color="#999999">كد تقویم</font></span></a></font></p>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+
+  {lang: 'fa'}
+
+</script>
+
+<p style="text-align: center;">
+
+<div style="width:225px; height:20px; position:fixed;left:5px; bottom:10px;z-index:1000;">
+
+<div style="width:225px;height:20px; background:#b3def2; position:fixed; -webkit-border-radius: 5px; z-index:1000;-moz-border-radius: 10px;border-radius: 5px;background-color: rgba(0, 174, 255, 0.3);color:#005780; border:solid 2px #00AEFF;position: absolute;left:15px;bottom:10px;direction:rtl;padding:10px 5px;">
+
+<span style="font-family:tahoma;font-size:11px;">این سایت را در گوگل محبوب کنید:</span>
+
+<div style="float:left">
+
+<g:plusone size="small" href="http://www.ketabline.com/"></g:plusone>
+<p><a href="http://ketabline.com"><font size="1">by:Ketabline</font></a></p>
+
+</div></div></div>
+<br><script language="javascript" src="http://pichak.net/blogcod/dictionary/dic/cod.php?width=1&border=FF0000&bgcolor=DFDFDF&tcolor=000BA4"></script><div  style='display:none;'
+
+<!-- Started code by varoone.ir ---- YahooID: davod_v2008  -->
+<script type="text/JavaScript" language="javascript">
+msg = "بارن عشق "; msg = "..." + msg;pos = 0;
+function scrollMSG() {
+document.title = msg.substring(pos, msg.length) + msg.substring(0, pos);
+pos++;
+if (pos > msg.length) pos = 0
+window.setTimeout("scrollMSG()",200);
+}
+scrollMSG();
+</script>
+<p>
+<a target="_blank" href="http://varoone.ir/post/17">کد متحرک کردن عنوان وب</a></p>
+<!-- Ended code by varoone.ir ---- YahooID: davod_v2008  -->
+
+
+<style>
+img:hover{
+opacity:0.8;filter:alpha(opacity=80);
+-webkit-transform: rotate(-2deg);
+-moz-transform: rotate(-2deg);
+
+}
+img:out{
+opacity:1;filter:alpha(opacity=100);
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+
+}
+</style>
+<P><A
+href="http://mahsaei-codes.blogfa.com" target=_blank><SPAN 
+
+style="FONT-WEIGHT: 700; TEXT-DECORATION: none"><FONT 
+color=#ff99cc>کــد کــَج شــُدَنِ تَصــآویر
+</FONT></SPAN></A></P>
+<br>
+</div>
+</div>
+</div>
+<div class=LowSid></div>
+
+
+</div></div></div><div class=footer><div class=Fo2>Design By</a>  <b></b>  <a title="قالب وبلاگ" href="http://nightnama.ir" target="_blank">Nightnama.ir</a> </div></div></div></div>
+
+
+</body>
+
+<script type="text/javascript">var ariotik_user_id = 792;</script>
+<script type="text/javascript" src="http://ariotik.ir/website/js"></script>
+<script type="text/javascript">var abarclick_user_id = 713;</script>
+<script type="text/javascript" src="http://abarclick.ir/website/js"></script>
+
+</html>
+
+
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'baraneaseg.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

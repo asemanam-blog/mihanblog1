@@ -1,0 +1,943 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc@rsd" />
+<script type="text/javascript" src="../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('23 آذر 99');
+		/*1508426*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[23]='0';commentCnt[25]='0';commentCnt[46]='3';commentCnt[48]='3';commentCnt[203]='4';commentCnt[212]='3';commentCnt[214]='6';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[25]='1';
+mihanblogDisLikeArrCnt[25]='0';
+mihanblogLikeArrCnt[46]='1';
+mihanblogDisLikeArrCnt[46]='0';
+mihanblogLikeArrCnt[48]='0';
+mihanblogDisLikeArrCnt[48]='0';
+mihanblogLikeArrCnt[203]='2';
+mihanblogDisLikeArrCnt[203]='0';
+mihanblogLikeArrCnt[212]='2';
+mihanblogDisLikeArrCnt[212]='0';
+mihanblogLikeArrCnt[214]='7';
+mihanblogDisLikeArrCnt[214]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://chemiophile.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://chemiophile.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','236');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','24 فروردین 99');
+	
+	setStatVar('today_view','6');
+	setStatVar('yesterday_view','23');
+	
+	setStatVar('this_month_view','999');
+	setStatVar('last_month_view','856');
+
+	setStatVar('total_view','82027');
+	setStatVar('last_view_date','23 آذر 99 (06:02)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://chemiophile.mihanblog.com/statupdate/?data[refereruri]=http://chemiophile.mihanblog.com/&data[postid]=&data[requesturi]=/post/category/14&data[sdate]=1607828089&data[hash]=1791518a8dd0fe1afa7f7c1d0602ad3b&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://chemiophile.mihanblog.com/post/category/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://chemiophile.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://chemiophile.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://chemiophile.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://chemiophile.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://chemiophile.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://chemiophile.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://chemiophile.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://chemiophile.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://chemiophile.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://chemiophile.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://chemiophile.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://chemiophile.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://chemiophile.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://chemiophile.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://chemiophile.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<head>
+<script language="JavaScript1.2">
+<!--
+
+top.window.moveTo(0,0);
+if (document.all) {
+top.window.resizeTo(screen.availWidth,screen.availHeight);
+}
+else if (document.layers||document.getElementById) {
+if (top.window.outerHeight<screen.availHeight||top.window.outerWidth<screen.availWidth){
+top.window.outerHeight = screen.availHeight;
+top.window.outerWidth = screen.availWidth;
+}
+}
+
+//-->
+</script>
+
+<title>لبخند میزنم :) - مطالب بوژو</title>
+<!-- Farsi WebFont: BFont.ir --> 
+<link rel="stylesheet" type="text/css" href="http://font.limil.org/koodak.min.css"/>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="keywords" content="لبخند میزنم :) - مطالب بوژو,chemiophile">
+      <META NAME="description" CONTENT="لبخند میزنم :) - مطالب بوژو - ">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <link rel="alternate" type="application/rss+xml" title="لبخند میزنم :)" href="../rss/index.html" />
+
+<style>
+.mihanblog_like_likebar{ background-color:#ffb9b9; color:#000;font-size:16px}
+.mihanblog_like_likebar:hover{ background-color:#f19696}
+.mihanblog_like_dislikebar{background-color:#c2bbb8; color:#000;font-size:16px}
+.mihanblog_like_dislikebar:hover{background-color:#928d8b}
+.mihanblog_like_Cnt{color:#000;font-size:16px}
+.mihanblog_dislike_Cnt{color:#000;font-size:16px}
+body{font-family:"B Koodak";font-size:16px;padding:0px;margin:0px;color:#d1dcf3;background:#fff}
+a, a:visited{color:#666;text-decoration: none}a:hover{color:#fceaeb;text-decoration: none}
+body {
+	BACKGROUND: #f9f9f9 url('') top right fixed no-repeat ; 
+}
+.link1{width:250px;}
+.link2{background:#274255 url(<!--place for beside icon-->) left no-repeat;padding:15px;font-weight:bold;text-align:center;color:##b8805d;}
+#page{background:url() center repeat-y; width: 1500px}img{border:none; width=500px; height=500px}
+#uwrapper {margin:0;padding:0;text-align:center;background-image:url(); background-repeat:repeat-x; background-position-y:top;}
+#header{height:0px;background:url() no-repeat right; }
+#header div{color:#2C2215;font-family:"B Koodak";font-size:30px;font-weight:bold;text-align:center;padding-top:50px}
+#header div p{margin-top:5px;margin-bottom:0px;color:#2C2215;font-family:"B Koodak";font-size: 18px;font-weight:normal;text-align:center;direction:rtl}
+#headerb{height:0px}
+#content{padding:0px 7px}
+#main{background:#  url() repeat center;float:right;width:750px;text-align:right;overflow:hidden;margin-right:180px}
+#main2{height:60px;background: url() top no-repeat;}
+#post{padding:0 0px;text-align:right}
+#posttitle{height:44px;background: url() center no-repeat;text-align:right;font-size:18px;font-weight:42;direction:rtl;padding-top:14px;padding-right:30px}
+#posttitle a, #posttitle a:visited {color:#666}#posttitle a:hover {color:#666}
+#postbody{text-align: justify;padding:0px 10px 5px 3;font-size:16px;color:#666;line-height:1.5em;direction:rtl;overflow:hidden}
+#postbody p{margin-top:10px;margin-bottom:0px}
+#postdesc{padding-top:15px;padding-right:22px;padding-left:7px;color:#666;direction:rtl}
+#space{height:20px}
+#sidebar{float:left;background:#e8d9dc url(http://uupload.ir/files/iid6_5f9ca2f7755ed15ce0c18a7076cb94ffuu.jpg) no-repeat top center ;width:360px;padding-top:500px;color:#666;line-height:1.5em;text-align:right;height:3000px}
+#sidebar a, #sidebar a:visited {color:#666}#sidebar a:hover {color:#959595}
+#mmenu{width:250px;ine-height: 1.5em;text-align:center;direction:rtl;}
+#sidebar ul{font-size:16px;list-style-type: none;margin: 0px;padding:0 5px 20px 5px}
+#sidebar li {font-size:16px;padding-right:5px;padding-bottom:0px;line-height:1.5em;direction:rtl}
+#photo{width:170px;padding-top:5px;padding-bottom:2px;text-align:center}
+#about{width:170px;text-align: justify;font-size:16px;padding:10px 7px 20px 7px;color:#666;direction:rtl}
+#feed{margin:0px;padding-bottom:10px;text-align:center}
+#custom{width:170px;color:#5e7161;overflow:auto;margin:10px 0;text-align:center;direction:rtl}
+</style>
+<script lang ="javascript">
+function GetBC(lngPostid)
+{
+intTimeZone=<-BlogTimeZone->;
+strBlogId="chemiophile";
+intCount=-1;
+strResult="";
+try {
+for (i=0;i<BlogComments.length;i+=2)
+{
+if (BlogComments[i]==lngPostid)
+intCount=BlogComments[i+1] ;
+}
+}  catch( e) {
+}
+if ( intCount==-1)  strResult="آرشیو نظرات";
+if ( intCount==0)  strResult="نظر بدهید";
+if ( intCount==1)  strResult="یک نظر";
+if ( intCount>1)  strResult=intCount + " نظر" ;
+strUrl="http://commenting.blogfa.com/?blogid=" +strBlogId + "&postid=" + lngPostid + "&timezone=" + intTimeZone ;
+strResult ="<a href="http://chemiophile.mihanblog.com/post/category/\&quot;javascript:void(0)\&quot;" onclick=\"javascript:window.open('" + strUrl + "','blogfa_comments','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px')\" >" +  strResult + " </a>" ;
+document.write ( strResult ) ;
+}
+function OpenLD()
+{
+window.open('LinkDump.aspx','blogfa_ld','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px');
+return true;
+}
+</script>
+
+</head>
+<body>
+<div id=uwrapper>
+<div align=center>
+<div id=page>
+
+<div id=content>
+<div id=main>
+<br>
+<center>
+<font color="#666" style="font-size: 30px">
+<b>  لبخند میزنم :)</b><p>
+<font color="#666"  style="font-size: 8pt">
+  <p>
+</center>
+<p>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="http://chemiophile.mihanblog.com/post/214"><b>بولت ژورنال چیه؟</b></a></div>
+<div id=postbody><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>بولت ژورنال یه دفتره برای "دنبال کردن گذشته، نظم دادن به امروز و برنامه ریزی برای فردا". این سیستم توسط Ryder Carrol نام گذاری و یه جورایی ابداع شد. خودش یه طراحه،&nbsp;<a href="https://bulletjournal.com/" target="_blank" title="">سایتش&nbsp;</a>رو هم میتونید ببینید. توی این دفتر شما میتونید هر کاری که دوس دارید رو دنبال کنید و ثبت کنید، ایده هاتونو توش بنویسید، یه وقتایی دفتر نقاشیتون بشه و خیلیی چیزای دیگه! در واقع کاملاً به خود شما بستگی داره که میخواید باهاش چیکار کنید.<div><br></div><div>برای شروع به چی نیاز داریم؟</div><div><br></div><div>اول از همه انگیزه ی خودتون رو بشناسید! چرا میخواید یه بوژو داشته باشید؟ آیا واقعا بوژو به نیاز شما پاسخ میده؟&nbsp;</div><div>اگه تصمیم خودتون رو گرفتید، به یه دفتر و یه خودکار نیاز دارید، فقط همین!&nbsp;</div><div>البته معمولاً دفترای نقطه دار و راپید رایج تره بین اونایی که بوژو دارن ولی به نظر من برا شروع با همون چیزایی که دارید شروع کنید و اگه واقعاً خوشتون اومد برید و دفتر مخصوص براش بخرید.</div><div><br></div><div>توش چی بنویسم؟</div><div>ایده ی اصلی میگه خود شما تنها کسی هستید که تصمیم میگیرید توش چی بنویسید. ولی خب من اینجا به چندتا صفحه ی رایج اشاره میکنم و از هر کدوم چندتا عکس برا ایده گرفتن میذارم.</div><div><br></div><div>سال در یک نگاه</div><div>معمولاً اینجوریه که یه صفحه شماره سال رو مینویسی و یه صفحه تقویم کل سال رو مینویسی. بعد جاهایی که دوس داری رو علامت میزنی، مثلاٌ روزای تعطیل که میخوای براشون برنامه بریزی یا اتفاقات خیلی مهم مثل تولد، سالگرد ازدواج و ...</div><div><br></div><div><img src="https://i.pinimg.com/564x/4a/d2/6f/4ad26f8e7894e3ded257bbb3547ca64d.jpg" alt="896 Me gusta, 20 comentarios - Helen, Journal with Purpose (@journalwithpurpose) en Instagram: &quot;Repost of The Traveling Bullet Journal! These gorgeous pages were created by Marenâ¦&quot;"></div><div><br></div><div>ماه در یک نگاه</div><div>یه صفحه اسم ماه و زیرش یا صفحه ی بعد تقویم ماه.&nbsp;</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="https://i.pinimg.com/564x/a0/d1/ae/a0d1ae770ce5259b00bd565ff34b3bec.jpg" alt=""></div><div><br></div><div><img src="https://i.pinimg.com/564x/b0/08/11/b00811fa2add32a01d5b89eaab3edaa6.jpg" alt="minimilist bullet journal spreads"></div><div><b><br></b></div><div><b><br></b></div><div><b>صفحات هفته ای و روزانه&nbsp;</b></div><div><b><br></b></div><div>کارایی که لازمه انجام بدید رو بنویسید و وقتی انجام شد تیک بزنید.</div><div><br></div><div><img src="https://i.pinimg.com/564x/89/36/d8/8936d887f722095fe49c4640e536444f.jpg" alt="floral bullet journal spreads"></div><div><br></div><div><b>دنبال کردن ساعت خواب (sleep tracker)</b></div><div><b><br></b></div><div><img src="https://i.pinimg.com/564x/77/ff/98/77ff9801ec05ccd97733b536e3000bb2.jpg" alt="ig@study.susan's cute sleep tracker for bullet journal idea"></div><div><img src="https://i.pinimg.com/564x/a5/b0/18/a5b0185666f1064da7edaea98576ad50.jpg" alt="Reposting Journal Inspirations on Instagram: âSleep and study tracker by @studyvapd â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢ #iloveprettynotes #iloveprettynotes_trackerâ¦â"></div><div><img src="https://i.pinimg.com/564x/0b/83/e4/0b83e4528cefe1365cb67f689e1df04e.jpg" alt="â¥   n o o b on Instagram: âNovemberâs sleep tracker ð I had no idea what to draw on this one, so I just drew the typical sleeping eyes. . Whatâs your target sleepâ¦â"></div><div><br></div><div><b>دنبال کردن حس و حال روزانه (mood tracker)</b></div><div><b><br></b></div><div><img src="https://i.pinimg.com/564x/91/22/3a/91223a67dbd99363d6970c7d06c04f59.jpg" alt="stripy scarf mood tracker"></div><div><br></div><div><b>لیست کتابهایی که خوندم</b></div><div><b><br></b></div><div><img src="https://i.pinimg.com/564x/9c/d0/8d/9cd08d656284eab3d3b214cb9ee0153c.jpg" alt="Just started a bullet journal a few days ago and love how this spread turned out  with that being said, I need good books to read &amp; movies toâ¦"></div><div><br></div><div><b>لیست فیلمهایی که دیدم</b></div><div><b><br></b></div><div><img src="https://i.pinimg.com/564x/13/f9/4b/13f94ba7780aa563e17084454612dadd.jpg" alt="These bullet journal ideas aren't only unique and fun, but easy to copy too! Click through to find 15 unique bullet journal ideas."></div><div><b><br></b></div><div><b>فهرست اهداف من در این سال</b></div><div><b><br></b></div><div><img src="https://i.pinimg.com/564x/eb/fb/cd/ebfbcddf003344cd5553d4a05e810078.jpg" alt="jtraftonart: Finally a little vacation time to break into my new journal. #bulletjournal #bujo #bujocommuni"></div><div><br></div><div><br></div><div><b>فهرست مسافرت هایی که رفتم</b></div><div><b><br></b></div><div><img src="https://i.pinimg.com/564x/c3/f3/1b/c3f31ba2037c14ede386dab2ff04dbf3.jpg" alt="18 Inspiring Travel Planning Bullet Journal Layouts"></div><div><br></div><div><b>فهرست تولد دوستان</b></div><div><br></div><div><img src="https://i.pinimg.com/564x/74/78/c0/7478c0b7c302b0711e2a3024e76967e7.jpg" alt="25+ Bullet Journal Ideas (Unique and Simple) â Diyandart"></div><div><br></div><div><b>مراقبت از سلامتی</b></div><div>میتونید یه فهرست از کارایی که لازمه برا سلامتیتون یادتون نره تهیه کنید، یا یه جدول بکشید و فعالیت های ورزشی و غذاییتون رو دنبال کنید.</div><div><br></div><div><img src="https://i.pinimg.com/564x/b8/f1/07/b8f1074f82369da7f1520a5c5e76ebd0.jpg" alt="Self care bullet journal ideas"></div><div><br></div><div><img src="https://i.pinimg.com/564x/3a/60/8f/3a608f8b824d966ea38c9676e31d662c.jpg" alt="5 Healthy Lessons Learned From 6 Months of Bullet Journaling | MyFitnessPal"></div><div><br></div><div><br></div><div>و ...</div><div><br></div><div><br></div><div>من همه ی این صفحاتو ندارم چون بهشون نیاز ندارم، بولت ژورنال قراره به ذهن شما نظم بده و فک میکنم برا آدمایی (از جمله خودم) خوبه که دوس دارن یه فهرست از هرچی که دور و برشون میبینن تهیه کنن، دائماً فعالیتاشون رو ثبت کنن و ببینن چقدر پیشرفت کردن یا دلیل عدم موفقیتشون چی بوده، مخصوصاً برای ایجاد عادت های جدید به نظر من خیلی موثره. البته بولت ژورنال بهترین و تنها راه برای رسیدن به این هدف نیست، ولی من بهتر از هر اپ و برنامه ی دیگه ای تونستم باهاش وفق پیدا کنم چون کاملاً شخصی سازی شده س و بی نهایت انعطاف داره.&nbsp;</div><div><br></div><div>سوالی داشتید بپرسید بازم :)</div><div><br></div><div><br></div><br><br></div>
+<div id=postdesc>  2 آذر 97 ساعت 
+	08:42  | <a href="../author/1203845.html">حسنا :) </a> | <a target="_self" href="javascript:newComment(214)">نظرات  <script>setCommentCnt(214)</script> </a> <script>mihanblogPostLike('214','like')</script> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="http://chemiophile.mihanblog.com/post/212"><b>آذررررر!</b></a></div>
+<div id=postbody>سلام!&nbsp;<div>راستش من نه برا شروع ماه هیچ وقت ذوق میکنم نه برا شروع سال نه شروع فصل. به نظر من نقطه ی شروع هر روزی میتونه باشه. ولی خب الان فک کردم یک آذر میتونه ازون بهانه های کوچیک برا خوشحال شدنم باشه. در زیر عکس صفحه ی آذر بوژوم رو میبینید، البته هنوز کامل نشده!&nbsp;</div><div><br></div><div><br></div><div><img hspace="0" border="0" width="650" height="800" align="baseline" vspace="0" src="http://uupload.ir/files/7pdz_azar.jpg" alt=""></div><br><br></div>
+<div id=postdesc>  1 آذر 97 ساعت 
+	08:20  | <a href="../author/1203845.html">حسنا :) </a> | <a target="_self" href="javascript:newComment(212)">نظرات  <script>setCommentCnt(212)</script> </a> <script>mihanblogPostLike('212','like')</script> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="http://chemiophile.mihanblog.com/post/203"><b>ثبت ساعت مطالعه</b></a></div>
+<div id=postbody>
+
+خب وقتی میانترم دارم آیا طبیعی نیس همه ی پستا درباره ی تکنیک های مطالعه بشه؟&nbsp;<div>و اینم بگم فک نکنید این چیزا یه روزه به دست میان، اینا چیزایی هستن که بعد از حدود 6 7 سال ثبت مداوم عادات مطالعه م به دست اومدن و برای هرکسی ممکنه متفاوت باشه این تنظیمات، من هم بعد از این سالها همچنان در حال آزمون و خطا هستم و با اینکه هرروز به سمت رشد رفتم ولی خب همیشه یه چیز بهتری وجود داره که بخوای بهش برسی.&nbsp;</div><div><br></div><div>&nbsp;چقد حرف زدم!</div><div><br></div><div>اصل مطلب :</div><div><br></div><div>دوران پیشادانشگاه! که تو خونمون بودم، یه دیوار اتاقمو سرتاسر مقوا زده بودم، زیرش یه خط کشیده بودم و نیم سانت نیم سانت علامت زده بودم، در واقع یه نمودار خیلی بزرگ دیواری بود که خط افقی نشون دهنده روز و خط عمودی نشون دهنده ساعت مطالعه بود.&nbsp;</div><div>بعد ساعت مطالعه هم طبقه بندی میشد، راستش سال اول دوم و سوم یادم نیست طبقه بندیام چی بودن، ولی سال پیش دانشگاهی یادمه طبقه بندیام به اینصورت بودن :</div><div>زیر 5 ساعت : fly</div><div>بین 5 تا 7 : butterfly</div><div>بین 7 تا 9 : bitterfly</div><div>بین 9 تا 11 : betterfly</div><div>بالای 11 : besterfly</div><div>بالای 13 : timerfly</div><div><br></div><div>یه قورباغه هم اون پایین کشیده بودم که هرروز غذاش همینا بود. اگه کمتر از 5 ساعت میخوندم یه مگس بهش میرسید،, و اگه بالای 13 میخوندم (البته مطمئنم کمتر بوده تایمرفلای ولی طبقه بندیا همین بودن) یه تایمرفلای به قورباغه می رسید و بالاش هم نوشته بودم the time no more flies!</div><div>این از این!</div><div>اما دوران پسادانشگاه چون دیگه اون حریم خصوصی نبود دوس نداشتم رو دیوار چیزی بچسبونم، اینه که تلاشهام برا ثبت ساعت مطالعه تقریبا بی نتیجه موند و فقط ختم شد به دوران امتحانات که حتما باید ثبت میکردم تا انگیزه بگیرم. اما تازگی که بوژو رفتم خریدم، دوباره یه صفحه رو به همین کار اختصاص دادم.</div><div><br></div><div>و اما الان طبقه بندی به این صورته :</div><div><br></div><div>زیر 3 ساعت : هیچی</div><div>بین 3 تا 5 : میتونم یه ویدیوی 15 دقیقه ای توی یوتیوب ببینم</div><div>بین 5 تا 7 : میتونم به خودم یه کتاب کمتر از 10 هزار تومنی جایزه بدم</div><div>بین 7 تا 9 : میتونم به خودم یه کیک خامه ای (هر مدلی دلم بخواد!) جایزه بدم</div><div>بیشتر از 9 : میتونم یه آخر هفته برم موزه</div><div><br></div><div>این هم عکسش&nbsp;</div><div><br></div><div><img hspace="0" border="0"  ="" height="500" width="700" align=" baseline" =""="" vspace="0" src="http://uupload.ir/files/oltd_20181115_231147.jpg" alt=""></div><div><br></div><div><br></div>
+
+
+
+<br><br></div>
+<div id=postdesc>  24 آبان 97 ساعت 
+	22:48  | <a href="../author/1203845.html">حسنا :) </a> | <a target="_self" href="javascript:newComment(203)">نظرات  <script>setCommentCnt(203)</script> </a> <script>mihanblogPostLike('203','like')</script> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="http://chemiophile.mihanblog.com/post/48"><b>لیست خواندنی ها</b></a></div>
+<div id=postbody>
+
+
+
+
+برای خودم یه لیست درست کردم ، کتابهایی که در طول سال میخرم رو وارد این لیست میکنم ، بعدش جلوش به تعداد صفحات تقسیم بر 100 به علاوه 1 خط میکشم. یعنی برای یک کتاب 340 صفحه ای 4 تا خط. بعدش هر 100 صفحه که بخونم روی خطوط عددشو مینویسم ، 100، 200 ، 300 و وقتی کتابو کامل خوندم رو خونه ی آخر تیک میزنم. و این هم در راستای همون شکستن کار به کارهای کوچکتره. با این کارای منظم کردنی خیلی لذت میبرم!! شما برای کتاب خوندن چه برنامه ای دارید؟&nbsp;<div><br></div><div><img width="500" height="300" hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/9upy_20170824_214442.jpg" alt=""></div><div><br></div><div>+اونایی که کنارشون e نوشتم یعنی کتاب الکترونیکی هستن. معمولا از فیدیبو میخرم.</div>
+
+
+
+
+
+
+
+
+
+<br><br></div>
+<div id=postdesc>  8 شهریور 96 ساعت 
+	15:04  | <a href="../author/1203845.html">حسنا :) </a> | <a target="_self" href="javascript:newComment(48)">نظرات  <script>setCommentCnt(48)</script> </a> <script>mihanblogPostLike('48','like')</script> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="http://chemiophile.mihanblog.com/post/46"><b>خواندنی و برنامه ریختنی : چهل حدیث</b></a></div>
+<div id=postbody>
+
+
+<p>"سلام ! اونروز بهتون گفتم که اون کتاب در مورد امام محمد باقر (ع) رو خریدم و میخوام بخونم. من دو تا حساب تو طاقچه دارم و اشتباهی با اون حسابی کتاب رو خریده بودم که رو گوشیم ندارم (چقد پیچیده!)
+</p>
+<p>بخاطر همین رفتم یه کتاب دیگه به اسم 《حکمتهای باقری ، چهل حدیث از امام باقر (ع)》 خریدم از طاقچه تا با گوشی بخونم. و خب بعد از خوندن یک حدیث تصمیم گرفتم که توی باژوم یه لیست خوندنی از تمام ۴۰ حدیث برای ۱۴ معصوم درست کنم !! به شکل زیر (جلوی هر اسم 40 خونه وجود داره و هر حدیث رو که بخونم عددش رو وارد خونه ها می کنم) :</p><p><img width="500" height="300 hspace=" 0"="" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/d93_17-08-30-14-13-16-481_deco.jpg" alt=""></p>
+<p><br></p><p><br></p><p>+ یکی از راههای انگیزشی در من برای انجام یه کار تقسیم اون به بخشای کوچیکتره و این کارا هم در راستای همونه!!</p>
+<p><br>
+</p>
+
+
+
+
+
+<br><br></div>
+<div id=postdesc>  8 شهریور 96 ساعت 
+	11:47  | <a href="../author/1203845.html">حسنا :) </a> | <a target="_self" href="javascript:newComment(46)">نظرات  <script>setCommentCnt(46)</script> </a> <script>mihanblogPostLike('46','like')</script> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="http://chemiophile.mihanblog.com/post/25"><b>علامت گذاری در بولت ژورنال</b></a></div>
+<div id=postbody>
+
+<font face="Mihan-Nassim" size="3">یه راهنمای خیلی ساده برای علامت گذاری در بوژو :</font><div><font face="Mihan-Nassim" size="3"><br></font></div><div><span style="color: rgb(74, 74, 74);"><font face="Mihan-Nassim" size="3">• نقطه تو پر : کارای انجام دادنی&nbsp;</font></span></div><div><span style="color: rgb(74, 74, 74);"><font face="Mihan-Nassim" size="3">X ضربدر : کار به اتمام رسیده</font></span></div><div><span style="color: rgb(74, 74, 74);"><font face="Mihan-Nassim" size="3">&lt; به راست : کار از قبل برنامه ریزی شده</font></span></div><div><font color="#4a4a4a" face="Mihan-Nassim" size="3">&gt; به چپ : کار منتقل شده به روزهای بعد</font></div><div><font color="#4a4a4a" face="Mihan-Nassim" size="3"><br></font></div><div><font color="#4a4a4a" face="Mihan-Nassim" size="3">O نقطه تو خالی : اتفاقات و وقایع ، مثلا تولد دوستتون ، چیزایی که باید یادتون باشه و فراموش نکنید</font></div><div><font color="#4a4a4a" face="Mihan-Nassim" size="3"><br></font></div><div><font color="#4a4a4a" face="Mihan-Nassim" size="3">- خط تیره : یادداشت کوتاه&nbsp;</font></div><div><font color="#4a4a4a" face="Mihan-Nassim" size="3"><br></font></div><div><font color="#4a4a4a" face="Mihan-Nassim" size="3">* ستاره : اولویت بالا</font></div><div><font color="#4a4a4a" face="Mihan-Nassim" size="3">! علامت تعجب : ایده ها ، چیزای الهام بخش</font></div><div><font color="#4a4a4a" face="Mihan-Nassim" size="3">علامت چشم : برای کارهایی که نیاز به بررسی بیشتر دارن&nbsp;</font></div><div><font color="#4a4a4a" face="Mihan-Nassim" size="3"><br></font></div><div><font color="#4a4a4a" size="1" face="Mihan-Nassim"><br></font></div>
+
+
+
+<br><br></div>
+<div id=postdesc>  28 مرداد 96 ساعت 
+	23:04  | <a href="../author/1203845.html">حسنا :) </a> | <a target="_self" href="javascript:newComment(25)">نظرات  <script>setCommentCnt(25)</script> </a> <script>mihanblogPostLike('25','like')</script> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="http://chemiophile.mihanblog.com/post/23"><b>495 روز با حافظ</b></a></div>
+<div id=postbody>
+
+
+
+
+<div><br></div><div>سلام! نمیدونم چقدر با bullet journal یا به قولی bujo آشنایی دارید! میتونم یه روز در موردش براتون توضیح بدم. ولی خلاصه و مفیدش اینه که یه دفتر همه کاره برای زندگی منظم !&nbsp;</div><div><br></div><div>امروز هم یهو فک کردم که باید برنامه ای برا خودم بریزم و تمام اشعار دیوان حافظ رو بخونم. که نتیجش شد این جدول :</div><div><br></div><div><br></div><div><img width="500" height="600" hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/jeu7_20170818_132838.jpg" alt=""></div><div><br></div><div>این جدول 495 تا خونه داره (به تعداد اشعار حافظ ) و هر شعری رو که بخونم شمارش رو توی این جدول ثبت می کنم !! البته راه های ساده تری هم وجود داره ، و همچنین راه های خوشگل تر ! من یه خورده برای اینکه سنگ بزرگی نشه که نزنمش از تزئینات دفترم چشم پوشی میکنم.&nbsp;</div><div><br></div><div>و اما اولین شعری که همینطوری باز کردم و خوندم و حفظش کردم !&nbsp;<img src="http://mihanblog.com/public/public/rte/images_new/smiles/16.gif"></div><div><br></div><div>نه هر که چهره بر افروخت دلبری داند ( فک کنم منظورش اینه گول تیپ و ظاهر افرادو نخورین !)</div><div>نه هر که آینه سازد سکندری داند (نفهمیدم منظورش چیه دقیقاً ! فقط فک کنم منظورش این بوده که هر گردی گردو نیس)</div><div><br></div><div>نه هر که طرف کله کج نهاد و تند نشست&nbsp;</div><div>کلاهداری و آیین سروری داند (این میتونه به بزرگ نمایان اشاره داشته باشه )</div><div><br></div><div>تو بندگی چو گدایان به شرط مزد مکن</div><div>که دوست خود روش بنده پروری داند (این بیتشو از همه بیشتر دوست داشتم !)</div><div><br></div><div>غلام همت آن رند عافیت سوزم</div><div>که در گداصفتی کیمیاگری داند (اینجاشو نفهمیدم ناسزا گفته یا تعریف کرده !)</div><div><br></div><div>وفا و عهد نگو باشد ار بیاموزی</div><div>وگرنه هر که تو دانی ستمگری داند (اینم خیلی قشنگ گفته به نظرم )</div><div><br></div><div>بباختم دل دیوانه و ندانستم</div><div>که آدمی بچه ای شیوه ی پری داند (وای وای وای !!)</div><div><br></div><div>هزار نکته ی باریکتر ز مو اینجاست</div><div>نه هر که سر بتراشد قلندری داند (مو و سر به نظرم مراعات نظیر ندارن ، در ظاهر به هم مربوطن ولی در باطن نه ! یه آرایه ای بود اینکار نه؟)</div><div><br></div><div>مدار نقطه ی بینش ز خال توست مرا</div><div>که قدر گوهر یکدانه جوهری داند (این خییییییییلی به نظرم قشنگه ! دقت کنید به گوهر یکدانه و اینکه معمولاً به خال میگن دانه و یکدانه چه ایهام زیبایی گرفته )</div><div><br></div><div>به قد و چهره هر آنکس که شاه خوبان شد</div><div>جهان بگیرد اگر دادگستری داند (قد و چهره رو نمیفهمم ! حافظ ظاهرپرست نبود قدیما )</div><div><br></div><div>ز شعر دلکش حافظ کسی بود آگاه</div><div>که لطف طبع و سخن گفتن دری داند (منو میگه !!!&nbsp;<img src="http://mihanblog.com/public/public/rte/images_new/smiles/25.gif">)<a href="https://www.bloglovin.com/blog/19043779/?claim=jmxt2fs358n">منو در بلاگلاوین دنبال کن</a></div><div><br></div>
+
+
+
+<br><br></div>
+<div id=postdesc>  27 مرداد 96 ساعت 
+	12:25  | <a href="../author/1203845.html">حسنا :) </a> | <a target="_self" href="javascript:newComment(23)">نظرات  <script>setCommentCnt(23)</script> </a> <script>mihanblogPostLike('23','like')</script> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+<center><br>
+
+</div>
+
+
+<div id=sidebar>  
+<br>
+
+
+<center>
+
+<FONT style="FONT-SIZE: 20px">
+<div class="link1" >
+<div align=left>
+
+<div id=mmenu>
+<ul>
+<li font-size="10px">
+<br>
+ 
+<br>
+</li>
+</ul></div>
+
+
+<FONT style="FONT-SIZE: 20px">
+<b>
+<div class="link1" >
+<div align=left>
+	<div class="link2"> آرشیو</div>
+</b>
+<br>
+
+<div id=mmenu>
+<ul>
+<li><a href="../archive/1398/3.html"> خرداد 1398  13 </a></li><li><a href="../archive/1398/2.html"> اردیبهشت 1398  7 </a></li><li><a href="../archive/1398/1.html"> فروردین 1398  23 </a></li><li><a href="../archive/1397/12.html"> اسفند 1397  10 </a></li><li><a href="../archive/1397/11.html"> بهمن 1397  11 </a></li><li><a href="../archive/1397/10.html"> دی 1397  19 </a></li><li><a href="../archive/1397/9.html"> آذر 1397  14 </a></li><li><a href="../archive/1397/8.html"> آبان 1397  11 </a></li><li><a href="../archive/1397/2.html"> اردیبهشت 1397  12 </a></li></ul>
+</div>
+
+<center>
+<FONT style="FONT-SIZE: 20px">
+<b>
+<div class="link1" >
+<div align=left>
+	<div class="link2"> دسته ها</div>
+</b>
+<br>
+
+<div id=mmenu>
+<ul>
+<li><a href="21.html">لبخند نوشت  5 </a></li><li><a href="20.html">HBR  1 </a></li><li><a href="2.html">روز نوشت  40 </a></li><li><a href="3.html">دانلود کتاب  4 </a></li><li><a href="1.html">روش های یادگیری و برنامه ریزی  10 </a></li><li><a href="10.html">دانشگاه  9 </a></li><li><a href="4.html">معرفی کتاب  17 </a></li><li><a href="14.html">بوژو  7 </a></li><li><a href="16.html">گپ علمی  3 </a></li><li><a href="12.html">خانه داری  1 </a></li><li><a href="13.html">مینیمالیسم  2 </a></li><li><a href="15.html">معرفی اپ و سایت  2 </a></li><li><a href="8.html">صفرپسماند  2 </a></li><li><a href="5.html">اطلاع رسانی  1 </a></li><li><a href="18.html">مهاجرت  1 </a></li><li><a href="17.html">بچه ها  2 </a></li><li><a href="9.html">اقتصاد  1 </a></li><li><a href="6.html">معرفی فیلم  4 </a></li></ul>
+</div>
+<center>
+<FONT style="FONT-SIZE: 20px">
+<b>
+<div class="link1" >
+<div align=left>
+	<div class="link2"> پیوندها</div>
+</b>
+<br>		
+<div id=mmenu>
+<ul>
+<li><a target="_blank" href="../../../maral1991.mihanblog.com/index.html">مارال</a></li><li><a target="_blank" href="https://markmanson.net">Mark Manson</a></li><li><a target="_blank" href="http://mamoolii.blogsky.com/">یه دختر معمولی</a></li><li><a target="_blank" href="http://gharetanhaei.blog.ir/">غار تنهایی او</a></li><li><a target="_blank" href="http://www.nasrinsajadi.com/">وبلاگی برای تجربه ها</a></li><li><a target="_blank" href="../../../dream-high7.mihanblog.com/index.html">فاطمه</a></li><li><a target="_blank" href="http://rezasr2.blogsky.com">آقای دکتر</a></li><li><a target="_blank" href="../../../mennomen.mihanblog.com/index.html">آسمان پندار</a></li><li><a target="_blank" href="http://pari-parsa2.blogsky.com/">پروانه</a></li><li><a target="_blank" href="http://gahyman.blog.ir/">گاهی او</a></li><li><a target="_blank" href="http://crazygirl.blog.ir">صالحه</a></li><li><a target="_blank" href="../../../bahare1378.mihanblog.com/index.html">شب شیشه ای</a></li><li><a target="_blank" href="http://futurepic.blogfa.com/">تصویر آینده</a></li><li><a target="_blank" href="https://www.academictips.org">تکنیکهای مطالعه</a></li><li><a target="_blank" href="../../../bio-14.mihanblog.com/index.html">المپیاد زیستی دوره 14</a></li><li><a target="_blank" href="http://www.internationalphoneticalphabet.org/ipa-sounds/ipa-chart-with-sounds/">همه حروف دنیا</a></li></ul>
+</div>
+<center>
+<FONT style="FONT-SIZE: 20px">
+<b>
+<div class="link1" >
+<div align=left>
+	<div class="link2"> صفحات جانبی</div>
+</b>
+<br>		
+<div id=mmenu>
+<ul>
+     	
+	              <li> <a href="../../extrapage/my.html">_</a></li><br/>
+	              	
+	              <li> <a href="../../extrapage/movies.html">فیلم و سریال</a></li><br/>
+	              	
+	              <li> <a href="../../extrapage/yearbooks.html">کتابهای ۹۸</a></li><br/>
+	              	
+	              <li> <a href="../../extrapage/specialdays.html">روزهای خاص تقویم</a></li><br/>
+	              	
+	              <li> <a href="../../extrapage/dragon.html">شکارچیان اژدها</a></li><br/>
+	              	
+	              <li> <a href="../../extrapage/doodling.html">نقاشی نقاشی</a></li><br/>
+	              	
+	              <li> <a href="../../extrapage/books.html">کتابهام</a></li><br/>
+	               	
+	 	
+	  </ul>
+</div>
+
+<FONT style="FONT-SIZE:20px">
+<b>
+<div class="link1" >
+<FONT style="FONT-SIZE: 20px">
+<b>
+<div class="link1" >
+<div id=mmenu>
+<ul style="border:none">
+<center>
+<form target=_new method=get action=http://www.google.com/search>
+<table style='width:128px;color:#333;font-size:9px'>
+<tbody><tr><td><center><a target=_new href=http://www.web-abzar.ir/tools/google.php>
+</a><input name=q size=15 maxlength="255"><br>
+<input type="submit" name="btnG" value="جست و جو"><br>
+<input value=http://Chemiophile.mihanblog.com type=radio name=sitesearch checked=''>در این وبلاگ
+<br><input type=radio name=sitesearch value="">در كل اینترنت
+<input type=hidden name=ie value=UTF-8><input type=hidden name=oe value=UTF-8><br>
+</center></td></tr></tbody></table></form></center><div style="display:none">
+</div>
+<center>
+
+
+
+<FONT style="FONT-SIZE: 20px">
+<b>
+<div class="link1" >
+<div id=mmenu>
+<ul style="border:none">
+</p>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'chemiophile.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

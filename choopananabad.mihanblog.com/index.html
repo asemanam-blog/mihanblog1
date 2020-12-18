@@ -1,0 +1,2409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://choopananabad.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1062692*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[2441]='0';commentCnt[2442]='0';commentCnt[2443]='0';commentCnt[2444]='0';commentCnt[2447]='0';commentCnt[2448]='-';commentCnt[2450]='0';commentCnt[2451]='0';commentCnt[2452]='0';commentCnt[2454]='0';commentCnt[2455]='0';commentCnt[2456]='0';commentCnt[2458]='0';commentCnt[2459]='0';commentCnt[2461]='-';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[2441]='1';
+mihanblogDisLikeArrCnt[2441]='0';
+mihanblogLikeArrCnt[2442]='1';
+mihanblogDisLikeArrCnt[2442]='0';
+mihanblogLikeArrCnt[2443]='0';
+mihanblogDisLikeArrCnt[2443]='1';
+mihanblogLikeArrCnt[2444]='0';
+mihanblogDisLikeArrCnt[2444]='0';
+mihanblogLikeArrCnt[2447]='0';
+mihanblogDisLikeArrCnt[2447]='0';
+mihanblogLikeArrCnt[2448]='0';
+mihanblogDisLikeArrCnt[2448]='0';
+mihanblogLikeArrCnt[2451]='0';
+mihanblogDisLikeArrCnt[2451]='0';
+mihanblogLikeArrCnt[2454]='0';
+mihanblogDisLikeArrCnt[2454]='0';
+mihanblogLikeArrCnt[2458]='0';
+mihanblogDisLikeArrCnt[2458]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://choopananabad.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://choopananabad.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','1966');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','شنبه 22 آذر 1399');
+	
+	setStatVar('today_view','61');
+	setStatVar('yesterday_view','240');
+	
+	setStatVar('this_month_view','8849');
+	setStatVar('last_month_view','10781');
+
+	setStatVar('total_view','1330226');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (05:50)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://choopananabad.mihanblog.com/statupdate/?data[refereruri]=http://mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607826579&data[hash]=f607f7c139355bf8ca30b317ec02ffdd&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://choopananabad.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://choopananabad.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://choopananabad.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://choopananabad.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://choopananabad.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://choopananabad.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://choopananabad.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://choopananabad.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://choopananabad.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://choopananabad.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://choopananabad.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://choopananabad.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://choopananabad.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://choopananabad.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://choopananabad.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://choopananabad.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<style>
+    /*
+    Theme Name: Accord
+    Theme URI: http://www.justkins.com
+    Description: Accord is <a href="http://www.justskins.com" title="Download Wordpress Themes">sleek wordpress theme</a> with widgets support. Designed by <a href="http://www.justskins.com">Just Skins</a> and developed by <a href="http://www.gsmhacks.com">GSM Hacks</a>.
+    Version: 1.0
+    Author: Ravish Ahuja, Aditi Tuteja & R.Bhavesh
+    Author URI: http://www.xeonext.com
+
+        This theme is released under Creative Commons Attribution 2.5 License.
+
+    */
+
+body {
+    font: 80%/150%  Tahoma, Arial;
+    color: #303030;
+    background:  #466921;
+    margin: 0px;
+    padding: 0px;
+    /*direction:rtl;*/
+}
+a {
+    color:#006699;
+    text-decoration: none;
+}
+a:visited {
+    color: #006699;
+    text-decoration: none;
+}
+a:hover {
+    color: #24A6D9;
+}
+img {
+    border: none;
+    max-width: 480px;
+}
+p {
+    padding: 0px 0px 15px;
+    margin: 0px;
+}
+h1 {
+    margin: 5px 0;
+    font: lighter 2em/1em "trebuchet MS", "Lucida Sans Unicode", Georgia;
+    color: #000;
+}
+h1 a, h1 a:visited{
+    color: #000;
+    text-decoration: none;
+}
+h1 a:hover{
+    color: #000;
+    text-decoration: none;
+    border: none;
+    background: none;
+}
+h2 {
+    color: #006699;
+    margin: 0px 0px 2px;
+    background-position:3px 0;
+    padding:0 0 1px 0;
+    width:100%;
+    font: lighter 1.5em/1em "trebuchet MS", "Lucida Sans Unicode", Georgia;
+}
+h2 a, h2 a:visited {
+    color: #006699;
+    text-decoration: none;
+}
+h2 a:hover {
+    color: #24A6D9;
+    text-decoration: none;
+}
+h3 {
+    font: bold 125%/100% "Trebuchet MS", Tahoma, Arial;
+    color: #006699;
+    margin: 10px 0px 5px;
+}
+h4 {
+    font: normal 130%/100% "Trebuchet MS", Tahoma, Arial;
+    color: #006699;
+    margin: 10px 0px 5px;
+}
+form {
+    margin:0px;
+    padding:0px;
+}
+#wrapper {
+    background: #466921;}
+#page {
+    margin: 0px auto;
+    width: 754px;
+    border:7px solid #fff;
+    border-top: none;
+    background:#fff url(http://mihanblog.com/public/public/user_data/template/2/images/pagebg.png) repeat-y left;
+}
+    /* header area */
+#header{
+    position: relative;
+    margin: 0px auto;
+    width: 768px;
+}
+
+#header h1 {
+    float:left;
+    width:159px;
+    height:45px;
+    background:url(http://mihanblog.com/public/public/user_data/template/2/images/logo.gif) no-repeat;
+    text-indent:-9009px;
+    overflow:hidden;
+    clear:both;}
+
+#header  h1 a, #headerimg h1 a:visited{
+    display:block;
+    width:227px;
+    height:27px;
+}
+#header h1 a:hover{
+}
+
+#navi{
+    float: right;
+    height: 45px;
+    width: 100%;
+    background: url(http://s6.picofile.com/file/8241740934/navbg.gif) no-repeat;
+    overflow: hidden;
+}
+#nav {
+    list-style: none;
+    margin: 7px 7px 0 0;
+    padding-top: 7px;
+}
+#nav li {
+    float: right;
+    height: 31px;
+    /*background: url(http://mihanblog.com/public/public/user_data/template/2/images/nav_tabr.png) top right no-repeat;*/
+    margin: 0 3px;
+    white-space: nowrap;
+}
+#nav .page_item a{
+    color: #006699;
+    display: block;
+    /*background: url(http://mihanblog.com/public/public/user_data/template/2/images/nav_tabl.png) top left no-repeat;*/
+    text-decoration: none;
+    padding: 0px 10px 0px 10px;
+    font: bold 11px Tahoma, Arial, Helvetica, sans-serif;
+    line-height: 31px;
+}
+#nav li:hover {
+    background-position: 100% -38px;
+    color: #F9CA3B;
+}
+#nav .page_item a:hover {
+    background-position: 0px -38px;
+    border: none;
+    color: #F9CA3B;
+}
+
+
+#mainbanner{
+    height:337px;
+    width:754px;
+    clear:both;
+    margin:0 auto;
+    background:url(http://s7.picofile.com/file/8241738892/headerchopanan.jpg) no-repeat right;
+    border-left:7px solid #fff;
+    border-right:7px solid #fff;
+    text-align:right;
+    direction:rtl;
+}
+
+.description{
+    padding: 30px 20px 0 0px;
+    color: #000;
+    font: lighter 14px "Trebuchet MS", "Lucida Sans Unicode", Verdana;
+}
+
+
+    /* content area */
+#content {
+    padding: 0px 0px 30px 0;
+    float: right;
+    width: 494px;
+    overflow:hidden;
+    direction:rtl;
+    text-align:right;
+
+}
+
+#content img {
+    padding: 3px;
+}
+#content ul{
+    padding-right:20px;
+}
+.narrowcolumn {
+    margin: 15px 0 10px 0;
+}
+
+.post {
+    clear:both;
+}
+
+.entry {
+    background: #e4f1fa;
+    padding-bottom:7px;
+    width:493px;
+    display: table;
+    overflow:hidden;
+}
+.entrytop{
+    padding-top: 9px;
+    background: #e4f1fa;
+    width:493px;
+    display:table;
+}
+
+.entry h2 {
+    width:475px;
+    margin:0 auto!important;
+}
+
+.postmeta {
+    margin: 0;
+    padding: 5px 28px 5px 2px;
+    font-size: 0.9em;
+    color: #666;
+    border-bottom: 1px solid #e4f1fa;
+    background: url(http://mihanblog.com/public/public/user_data/template/2/images/file_icon.gif) no-repeat right 50%;
+}
+
+.post-content {
+    clear: both;
+    padding: 5px;
+    width:484px;
+    overflow:hidden;
+}
+.post-content a {
+    color: #006699;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+.post-content a:hover {
+    color: #24A6D9;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: none;
+}
+
+.post-info a:hover {
+    padding: 5px 5px 15px 5px;
+    height: 15px;
+    color: #006699;
+    font: 12px "Trebuchet MS", "Tahoma", sans-serif;
+}
+.post-info a {
+    color: #006699;
+    text-decoration: none;
+}
+.post-info a:hover {
+    color: #24A6D9;
+    text-decoration: underline;
+    border: none;
+    background: none;
+}
+.post-content blockquote {
+    background: url(http://mihanblog.com/public/public/user_data/template/2/images/quote.gif) no-repeat left top ;
+    font-style:italic;
+    padding: 0 0 0 20px;
+    margin:0 0 0 10px;
+    width: 415px;
+}
+
+
+
+
+    /*Sidebar starts*/
+
+#sidebar {
+    float: left;
+    background: url(http://mihanblog.com/public/public/user_data/template/2/images/sidebarbg.gif) no-repeat top;
+    font-size:100%;
+    width: 259px;
+    margin: 0px;
+    color:#333;
+    direction:rtl;
+}
+#sidebar a{
+    color:#333;
+    text-decoration:none;
+}
+#sidebar a:hover{
+    color: #FF6600   ;
+}
+#sidebar h2 {
+    color: #d4a107;
+    margin: 15px 0px  10px 0px;
+    width:100%;
+    background:none;
+    padding:0;
+    font: lighter 1.4em/1em "trebuchet MS", "Lucida Sans Unicode", Georgia;
+    padding-bottom: 3px;
+    border-bottom:1px dotted #F9CA3B;
+}
+#sidebar p{
+    padding: 2px 0px 16px 0px;
+    margin: 0px;
+    line-height: 20px;
+}
+
+    /*sidebar list level1 */
+#mainul{
+    margin:0 15px!important;
+}
+#mainul #logo{text-align:center;}
+#mainul #logo img{
+    width:150px;
+    height:150px;
+    margin:2px;
+}
+
+#sidebar ul {
+    margin: 0;
+    padding: 0;
+    text-align:right;
+}
+#sidebar ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+    /*sidebar list level2 */
+#sidebar ul li ul {
+    padding: 0;
+    margin: 0;
+}
+#sidebar ul li ul li{
+    padding: 2px 0;
+    margin:2px 0;
+}
+#sidebar ul li .cloud_box li{
+    float:right;
+}
+#sidebar ul li ul .cloud_li{
+    padding:0px 0;
+    margin:0px 0;
+}
+#sidebar ul li ul .cloud_li a{
+    padding:0px 0px;
+    margin:0px;
+}
+    /*sidebar list level3 */
+#sidebar ul li ul li ul li{
+    padding: 1px 0;
+    border: none;
+}
+    /*blogroll */
+ul.list-blogroll li, li.list-blogroll ul li, li.linkcat ul li{
+    background: url(http://mihanblog.com/public/public/user_data/template/2/images/mini-blogroll.gif) no-repeat !important;
+    background-position:0 3px!important;
+    padding-left: 20px !important;
+}
+
+    /*Meta*/
+li.list-meta ul li, .widget_meta ul li{
+    background: url(http://mihanblog.com/public/public/user_data/template/2/images/mini-page-arrow.gif) no-repeat !important;
+    padding-left: 10px !important;
+}
+
+    /*category widget */
+li.list-cat ul li, ul.list-cat li, .widget_categories ul li{
+    background: url(http://mihanblog.com/public/public/user_data/template/2/images/mini-category.gif) no-repeat !important;
+    background-position:0 3px!important;
+    padding-left: 20px !important;
+}
+    /*archives widget */
+li.list-archives ul li, .widget_archives ul li{
+    background: url(http://mihanblog.com/public/public/user_data/template/2/images/mini-monthly-archive.gif) no-repeat !important;
+    background-position:0 3px!important;
+    padding-left: 20px !important;
+}
+    /*pages widget */
+li.list-page ul li, ul.list-page li, .widget_pages ul li, .widget_recent_entries ul li{
+    background: url(http://mihanblog.com/public/public/user_data/template/2/images/mini-page.gif) no-repeat !important;
+    background-position:100% 3px!important;
+    padding-right: 20px !important;
+}
+    /*sub-pages */
+ul li.list-page ul li ul li, ul.list-page li ul li, .widget_pages ul li ul li{
+    background: url(http://mihanblog.com/public/public/user_data/template/2/images/mini-page-arrow.gif) no-repeat !important;
+    padding-left: 10px !important;
+}
+.widget .stat span{color:#FF6600;}
+
+
+    /* Form Elements */
+#search{
+    display: none;
+}
+
+.searchtitle {
+    font:bold 15px "Trebuchet MS", sans-serif, "Lucida Sans", Tahoma!important;
+    color:#2c65a8;
+}
+#searchform {
+    margin: 5px auto ;
+    padding: 0;
+}
+
+#searchform #s {
+    height:17px;
+    width:190px;
+    margin-right:5px;
+    font:11px TAHOMA, Arial, Helvetica, sans-serif;
+    border:1px solid #fff;
+}
+
+#searchsubmit {
+    padding:0px;
+    background:#fce49b;
+    border:1px solid #FFF;
+    height:21px;
+    width:52px;
+    font:11px tahoma, Verdana;
+}
+#searchsubmit:hover {
+    background:#fff;
+}
+
+#pollsubmit {
+    padding:0px 10px;
+    background:#fce49b;
+    border:1px solid #F9CA3B;
+    height:21px;
+    font:11px tahoma, Verdana;
+}
+#pollsubmit:hover {
+    background:#fff;
+}
+
+    /* Sidebar RSS Link*/
+
+.rsslinks{
+    padding:5px 10px;
+    margin-bottom:15px;
+    direction:ltr;
+}
+.rsslinks ul{
+    list-style:none;
+    text-align:left;
+}
+.rsslinks #rss_box{
+    list-style:none;
+    text-align:left;
+}
+.rsslinks li{
+    display:inline;}
+.rsslinks li a{
+    background:url(http://mihanblog.com/public/public/user_data/template/2/images/rss.gif) no-repeat left;
+    padding:3px 3px 3px 20px;
+    margin-right:10px;}
+
+
+
+
+
+
+    /*text widget */
+.textwidget {
+    padding-top: 5px;
+}
+
+
+
+    /* footer area */
+#footerbg {
+    clear: both;
+}
+#footer {
+    width: 760px;
+    color: #e4f1fa;
+    margin: 0px auto 0px;
+    padding: 5px 0px 30px 0px;
+    line-height: 18px;
+    font-size: 0.9em;
+}
+#footer a {
+    color: #e4f1fa;
+    font-weight: bold;
+}
+
+#footer a:hover {
+    color:#FFF;
+}
+
+.xhtml_valid {
+    background:url(http://mihanblog.com/public/public/user_data/template/2/images/xhtml_valid.gif) no-repeat left ;
+    padding-left:20px;
+    margin:0 5px;
+}
+.css_valid {
+    background:url(http://mihanblog.com/public/public/user_data/template/2/images/css_valid.gif) no-repeat left;
+    padding-left:20px;
+    margin:0 5px;
+}
+.rss {
+    background:url(http://mihanblog.com/public/public/user_data/template/2/images/rss_valid.gif) no-repeat left;
+    padding-left:20px;
+    margin:0 5px;
+}
+
+    /* credits */
+
+
+
+
+.valid{
+    background:url(http://mihanblog.com/public/public/user_data/template/2/images/valid.gif) no-repeat left;
+    padding-left:20px;
+    margin:0 5px;}
+
+    /* alignments */
+.center {
+    text-align: center;
+}
+img.center, img[align="center"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.alignleft {
+    float: left;
+    font-size:9px;
+}
+img.alignleft, img[align="left"] {
+    float:left;
+    margin: 2px 10px 5px 0px;
+}
+.alignright {
+    float: right;
+}
+img.alignright, img[align="right"] {
+    float:right;
+    margin: 2px 0px 5px 10px;
+}
+.clear {
+    clear:both;
+}
+hr.clear {
+    clear:both;
+    visibility: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+.mihan_logo{
+    background: url(http://mihanblog.com/public/public/images/logo/poweredby.gif) no-repeat top center;
+    text-align:center;
+    height:131px;
+    margin:10px 0px;
+}
+.script_box{
+    margin:10px 0px;
+}
+.clearfix {display: inline-block;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+    /* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+.owner_photo{
+    color:#fff;
+    float:right;
+    margin:5px 0px 5px 5px;
+}
+.page_box ul{
+    direction:rtl;
+    height:17px;
+    margin:20px auto;
+    max-width:420px;
+    text-align:left;
+    width:420px;
+    list-style:none;
+
+}
+
+.page_box li{
+    float:right;
+    margin:0px;
+    margin-right:5px;
+    list-style:none;
+    background:none;
+
+
+}
+.page_box a,.page_box a:visited {
+    border:1px solid #E3E3E3;
+    display:block;
+    line-height:17px;
+    text-align:center;
+    width:17px;
+}
+.page_box a b{
+    color:#fff;
+    background:#005B8E  none repeat scroll 0 0;
+    border:none;
+    display:block;
+    line-height:17px;
+    text-align:center;
+    width:17px;
+    color:#fff;
+}
+.general_box {
+    margin:10px;
+    line-height:22px;
+}
+#parentheses p{
+    float:right;
+    padding:0px;
+    margin:0px;
+    direction:rtl;
+    text-align:right;
+    padding-right:2px;
+}
+
+
+.cb_share{
+    text-align:left;
+    padding-bottom: 15px;
+}
+.cb_share a{
+    font-size:11px;
+    text-decoration:none
+}
+#content .cb_share a img{
+    padding:0 0 0 5px;
+}
+</style>
+<title>چوپانانِ آباد  </title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content=""/>
+<meta name="keywords" content="چوپانان ، چوپانان آباد ، جوپونون، انارك، عباس آباد ،حجت آباد ،آشتیان، ریگ جن"/>
+
+<link rel="alternate" type="application/rss+xml" title="چوپانانِ آباد  " href="http://choopananabad.mihanblog.com/post/rss/" />
+<link rel="alternate" type="application/atom+xml" title="چوپانانِ آباد  " href="http://choopananabad.mihanblog.com/post/atom/" />
+
+</head>
+<body>
+<div id="header">
+    <div id="navi">
+        <ul id="nav">
+            <li class="page_item"><a href="index.html" >خانه</a></li>
+            <li class="page_item"><a href="mailto:mostaghimi.25@gmail.com" title="ارسال ایمیل به مدیر سایت">پست الکترونیک</a></li>
+            <li class="page_item"><a href="javascript:messageForm()" title="تماس با مدیر سایت">تماس با ما</a></li>
+            <li class="page_item"><a href="http://choopananabad.mihanblog.com/post/rss/" title="RSS">RSS</a></li>
+            <li class="page_item"><a href="http://choopananabad.mihanblog.com/post/atom/" title="Atom">Atom</a></li>
+        </ul>
+    </div>
+</div>
+<!--/header -->
+
+<div id="mainbanner">
+    <div class="description"><h1><a href="index.html">چوپانانِ آباد  </a></h1>
+        mostaghimi.25@gmail.com    </div>
+</div>
+<div id="wrapper">
+<div id="page">
+<div id="content">
+
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		    <div class="post clearfix" id="2461">
+        <div class="entrytop">
+            <div class="entry">
+                <h2><a href="http://choopananabad.mihanblog.com/post/2461" rel="bookmark">محصولات کشاورزی بیمه می شود</a></h2>
+            </div>
+        </div>
+
+        <p class="postmeta">شنبه 22 آذر 1399  		<br />
+
+            نویسنده: نسل سومی(ابوالقاسم مستقیمی) |
+
+
+
+        </p>
+        <div class="post-content">
+            <p><div class="owner_photo"></div></p>
+            <p><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<table dir="rtl" width="100%"><tbody><tr><td dir="rtl" valign="top"><br>
+					<span id="_ctl0__ctl2__ctl8_lblTitle" dir="rtl" style="font-family:Tahoma;font-size:14px;font-weight:bold;">حضور کارشناس مسئول زراعت و باغبانی به اتفاق نمایندگی بیمه محصولات کشاورزی در مرکز جهاد کشاورزی چوپانان </span><br>
+					<br>
+					<br>
+					<font style="LINE-HEIGHT: normal" size="2pt" face="tahoma">
+					<p align="right"><span style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-fareast-theme-font: minor-fareast" dir="rtl" lang="FA">مسئول نمایندگی بیمه محصولات ....</span></p></font></td>
+				<td valign="top" align="left">
+					<img id="_ctl0__ctl2__ctl8_Image2" src="http://www.agri-naein.ir/thumbnail.aspx?Quality=100&amp;width=250&amp;ImageURL=\portals\20\pic khabar99.9.16.jpg" alt="" border="0">گ</td></tr><tr><td colspan="2" style="FONT-SIZE: 10pt; FONT-FAMILY: tahoma; LINE-HEIGHT: 25px;TEXT-ALIGN: justify;" valign="top" align="right"><br><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 200%; MARGIN: 0cm 0cm 10pt; unicode-bidi: embed; DIRECTION: rtl" dir="rtl" class="MsoNormal"><span style="LINE-HEIGHT: 200%; FONT-FAMILY: 'Tahoma','sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" lang="FA"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>به
+ گزارش روابط عمومی مدیریت جهاد کشاورزی شهرستان نایین ، در روز یکشنبه 
+مورخ 16/09/99 با برنامه ریزی این مدیریت در راستای توسعه و ترویج بیمه 
+محصولات کشاورزی ، مسئول نمایندگی بیمه محصولات کشاورزی شهرستان به اتفاق 
+کارشناس مسئول زراعت و باغبانی این مدیریت با حضور در مرکز جهاد کشاورزی 
+روستای چوپانان نسبت به بیمه پذیری محصولات کشاورزی و باغداران و ارائه 
+راهنمایی در مورد کشاورز کارت اقدام نمودند .</span><span style="LINE-HEIGHT: 200%; FONT-FAMILY: 'Tahoma','sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir="ltr"></span></p></td>
+			</tr>
+			<tr>
+				<td colspan="2" valign="top" align="right"><font size="2" face="Tahoma">استفاده از این 
+						خبر بدون ذكر <font color="#ff0000">منبع</font> ممنوع</font></td></tr></tbody></table>
+
+
+
+
+</p>
+            <p><br></p>
+        </div>
+
+
+        <ul class="clearfix">
+            
+                        <li style="float: left; list-style: none outside none;">
+                <div style="float: left; margin-left: 17px; margin-right: 17px; margin-top: -4px;"> <script>mihanblogPostLike('2461','like')</script></div>
+                <a target="_self" href="javascript:void(0);" class="comment-link">نظرات(<script>setCommentCnt(2461)</script>)</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="cb_share clearfix">
+        <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://choopananabad.mihanblog.com/post/2461&amp;title=محصولات کشاورزی بیمه می شود">
+            ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+        </a>
+    </div>
+    <div class="post clearfix" id="2459">
+        <div class="entrytop">
+            <div class="entry">
+                <h2><a href="http://choopananabad.mihanblog.com/post/2459" rel="bookmark">باران ۱۶ آذر ۹۹</a></h2>
+            </div>
+        </div>
+
+        <p class="postmeta">دوشنبه 17 آذر 1399  		<br />
+
+            نویسنده: نسل سومی(ابوالقاسم مستقیمی) |
+
+
+
+        </p>
+        <div class="post-content">
+            <p><div class="owner_photo"></div></p>
+            <p><font size="5"><b>باران ۱۶ آذر ۹۹
+
+
+</b></font><div><img hspace="0" border="0" align="baseline" vspace="0" src="../file.mihanblog.com/public/user_data/user_files/355/1062692/IMG_baran.jpg" alt=""></div><div><div><font size="3">آمار بارش های قابل اندازه گیری ثبت شده در ایستگاه های شهرستان نایین طی ۲۴ ساعت گذشته منتهی به ساعت ۶:٣۰ صبح امروز دوشنبه مورخ ۹۹/۹/۱۷&nbsp;</font></div><div><font size="3">نایین: ۹/۴</font></div><div><font size="3">انارک: ۵/۵</font></div><div><font size="3">چوپانان: ۴/۵</font></div><div><font size="3">نخلک: ۴/۴</font></div><div><font size="3">چاه گربه: ۲/٨</font></div><div><font size="3"><br></font></div><div><font size="3">کمینه و بیشینه دماهای ثبت شده در ایستگاه های شهرستان نایین طی ۲۴ ساعت گذشته منتهی به ساعت ٩ صبح امروز (واحد اندازه گیری: درجه سانتیگراد)</font></div><div><font size="3">چوپانان</font></div><div><font size="3">کمینه دما: ۶</font></div><div><font size="3">بیشینه دما: ١١</font></div><div><font size="3"><br></font></div><div><font size="3">اداره_هواشناسی_نایین</font></div></div></p>
+            <p><br></p>
+        </div>
+
+
+        <ul class="clearfix">
+            
+                        <li style="float: left; list-style: none outside none;">
+                <div style="float: left; margin-left: 17px; margin-right: 17px; margin-top: -4px;"> <script>mihanblogPostLike('2459','like')</script></div>
+                <a target="_self" href="http://choopananabad.mihanblog.com/post/2459#commentlist" class="comment-link">نظرات(<script>setCommentCnt(2459)</script>)</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="cb_share clearfix">
+        <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://choopananabad.mihanblog.com/post/2459&amp;title=باران ۱۶ آذر ۹۹">
+            ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+        </a>
+    </div>
+    <div class="post clearfix" id="2458">
+        <div class="entrytop">
+            <div class="entry">
+                <h2><a href="http://choopananabad.mihanblog.com/post/2458" rel="bookmark">http://www.agri-naein.ir/thumbnail.aspx?Quality=100&amp;width=250&amp;ImageURL=\portals\20\pic%20khabar99.9.4.jpg</a></h2>
+            </div>
+        </div>
+
+        <p class="postmeta">چهارشنبه 12 آذر 1399  		<br />
+
+            نویسنده: نسل سومی(ابوالقاسم مستقیمی) |
+
+
+
+        </p>
+        <div class="post-content">
+            <p><div class="owner_photo"></div></p>
+            <p>
+<div><div><font size="3"><br></font></div><div><font size="4"><b>بازسازی و مرمت قنات روستای چوپانان</b></font></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://www.agri-naein.ir/thumbnail.aspx?Quality=100&amp;width=250&amp;ImageURL=\portals\20\pic%20khabar99.9.4.jpg" alt=""></div><div><font size="3">به گزارش مسئول آب و خاک در مهرماه سالجاری عملیات نوکنی و تغییر مسیر قسمتی از قنات روستای چوپانان که به علت عبور از زیر منازل تخریب گردیده شروع و پیش بینی می شود تا پایان آذرماه سالجاری عملیات نوسازی قسمت مذکور اتمام و جهت بهره برداری تحویل کشاورزان گردد.</font></div><div><font size="3"><br></font></div><div><font size="3">استفاده از این خبر بدون ذكر منبع ممنوع است</font></div></div>
+
+
+
+
+</p>
+            <p><br></p>
+        </div>
+
+
+        <ul class="clearfix">
+            
+                        <li style="float: left; list-style: none outside none;">
+                <div style="float: left; margin-left: 17px; margin-right: 17px; margin-top: -4px;"> <script>mihanblogPostLike('2458','like')</script></div>
+                <a target="_self" href="http://choopananabad.mihanblog.com/post/2458#commentlist" class="comment-link">نظرات(<script>setCommentCnt(2458)</script>)</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="cb_share clearfix">
+        <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://choopananabad.mihanblog.com/post/2458&amp;title=http://www.agri-naein.ir/thumbnail.aspx?Quality=100&amp;width=250&amp;ImageURL=\portals\20\pic%20khabar99.9.4.jpg">
+            ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+        </a>
+    </div>
+    <div class="post clearfix" id="2456">
+        <div class="entrytop">
+            <div class="entry">
+                <h2><a href="http://choopananabad.mihanblog.com/post/2456" rel="bookmark">اسباب بازی‌های قاچاق به مقصد نرسید</a></h2>
+            </div>
+        </div>
+
+        <p class="postmeta">یکشنبه 9 آذر 1399  		<br />
+
+            نویسنده: نسل سومی(ابوالقاسم مستقیمی) |
+
+
+
+        </p>
+        <div class="post-content">
+            <p><div class="owner_photo"></div></p>
+            <p><div class="news_center_body"><div class="title" style="margin-bottom: 10px;margin-top: 4px;">             <h1 style="padding: 0;margin: 0;" class="title title_news"> 	    	<span href="https://www.iribnews.ir/fa/news/2936981/اسباب-بازی‌های-قاچاق-به-مقصد-نرسید"> 	    		اسباب بازی‌های قاچاق به مقصد نرسید 	    	</span>             </h1>         </div>                                   <div class="excerpt">                                  <p class="subtitle" itemprop="description">یک محموله اسباب بازی الکترونیکی خارجی قاچاق به ارزش ۱۵ میلیارد ریال در یکی از محور‌های فرعی چوپانان کشف شد.</p>                              </div>              </div>     <div class="body body_media_content_show" style="text-align: justify;padding: 10px;">         <div dir="rtl"><img class="image_btn img-responsive-news img-responsive" style="margin: 10px 10px;" title="اسباب بازی‌های قاچاق به مقصد نرسید" src="https://www.iribnews.ir/files/fa/news/1399/9/9/5663804_509.jpg" alt="اسباب بازی‌های قاچاق به مقصد نرسید" width="310" height="206" align="left">به گزارش<a href="https://isfahan.iribnews.ir/"> خبرگزاری صدا و سیما، مرکزاصفهان؛</a>
+ جانشین فرمانده انتظامی استان گفت: ماموران پاسگاه انتظامی چوپانان حین 
+کنترل یکی از محور‌های فرعی این منطقه به یک کامیون کشنده تانکر دار که از 
+جنوب کشور به مقصد یکی از استان‌های شمالی در حرکت بود، مشکوک شدند و آن را
+ متوقف کردند.<br>سرهنگ محمدرضا هاشمی فر افزود: در بازرسی از تانکر این 
+خودرو ۷۰ کارتن اسباب بازی الکترونیکی "پی اس فور و پی اس فایو" و دسته 
+بازی و ایکس باکس و پیانوی خارجی بدون مدارک گمرکی و قانونی کشف شد.<br>وی 
+با اشاره به اینکه کارشناسان ارزش کالا‌های کشف شده را ۱۵ میلیارد ریال 
+اعلام کردند گفت: راننده این خودرو دستگیر و کامیون و محموله آن توقیف شد.</div></div>
+
+
+</p>
+            <p><br></p>
+        </div>
+
+
+        <ul class="clearfix">
+            
+                        <li style="float: left; list-style: none outside none;">
+                <div style="float: left; margin-left: 17px; margin-right: 17px; margin-top: -4px;"> <script>mihanblogPostLike('2456','like')</script></div>
+                <a target="_self" href="http://choopananabad.mihanblog.com/post/2456#commentlist" class="comment-link">نظرات(<script>setCommentCnt(2456)</script>)</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="cb_share clearfix">
+        <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://choopananabad.mihanblog.com/post/2456&amp;title=اسباب بازی‌های قاچاق به مقصد نرسید">
+            ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+        </a>
+    </div>
+    <div class="post clearfix" id="2455">
+        <div class="entrytop">
+            <div class="entry">
+                <h2><a href="http://choopananabad.mihanblog.com/post/2455" rel="bookmark">شنبه ۹۹/۹/۸چوپانان باران بارید</a></h2>
+            </div>
+        </div>
+
+        <p class="postmeta">یکشنبه 9 آذر 1399  		<br />
+
+            نویسنده: نسل سومی(ابوالقاسم مستقیمی) |
+
+
+
+        </p>
+        <div class="post-content">
+            <p><div class="owner_photo"></div></p>
+            <p><div><font size="3"><br></font></div><div><b><font size="4">شنبه ۹۹/۹/۸چوپانان باران بارید</font></b></div><div><font size="3">آمار بارش قابل اندازه گیری ثبت شده در ایستگاه های شهرستان نایین طی ۲۴ ساعت گذشته منتهی به ساعت ۶:٣۰ صبح امروز یکشنبه مورخ ۹۹/۹/۹ (واحد اندازه گیری: میلیمتر)</font></div><font size="3">&nbsp;<br>نایین: ۶/٢ <br>چاه گربه: ۳/۶<br>انارک: ٢/۵<br>چوپانان: ١/۲<br>نخلک: ۰/۵<br><br>چوپانان<br>کمینه دما: ۶<br>بیشینه دما: ١٢<br>اداره_هواشناسی_نایین</font></p>
+            <p><br></p>
+        </div>
+
+
+        <ul class="clearfix">
+            
+                        <li style="float: left; list-style: none outside none;">
+                <div style="float: left; margin-left: 17px; margin-right: 17px; margin-top: -4px;"> <script>mihanblogPostLike('2455','like')</script></div>
+                <a target="_self" href="http://choopananabad.mihanblog.com/post/2455#commentlist" class="comment-link">نظرات(<script>setCommentCnt(2455)</script>)</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="cb_share clearfix">
+        <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://choopananabad.mihanblog.com/post/2455&amp;title=شنبه ۹۹/۹/۸چوپانان باران بارید">
+            ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+        </a>
+    </div>
+    <div class="post clearfix" id="2454">
+        <div class="entrytop">
+            <div class="entry">
+                <h2><a href="http://choopananabad.mihanblog.com/post/2454" rel="bookmark">بارش خوب چوپانان و منطقه در شبانروز یکشنبه99/2/9</a></h2>
+            </div>
+        </div>
+
+        <p class="postmeta">دوشنبه 3 آذر 1399  |  نوع مطلب :<a href="http://choopananabad.mihanblog.com/post/category/8">آینده نگری</a>&nbsp;،<a href="http://choopananabad.mihanblog.com/post/category/4">زراعت و باغبانی</a>&nbsp;،<a href="http://choopananabad.mihanblog.com/post/category/3">قنات</a>&nbsp;،		<br />
+
+            نویسنده: نسل سومی(ابوالقاسم مستقیمی) |
+
+
+
+        </p>
+        <div class="post-content">
+            <p><div class="owner_photo"></div></p>
+            <p><h2 class="post-title" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 0.5rem; line-height: 2rem; max-width: 100%;"><a href="https://choopananabad.blogsky.com/1399/09/03/post-2000/%d8%a8%d8%a7%d8%b1%d8%b4-%d8%ae%d9%88%d8%a8-%da%86%d9%88%d9%be%d8%a7%d9%86%d8%a7%d9%86-%d9%88-%d9%85%d9%86%d8%b7%d9%82%d9%87-%d8%af%d8%b1-%d8%b4%d8%a8%d8%a7%d9%86%d8%b1%d9%88%d8%b2-%db%8c%da%a9%d8%b4%d9%86%d8%a8%d9%8799-2-9" class="post-title-link text-decoration-none" style="box-sizing: border-box; max-width: 100%;"><font size="2" style="">بارش خوب چوپانان و منطقه در شبانروز یکشنبه99/2/9</font></a></h2><h2 class="post-title" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 0.5rem; line-height: 2rem; max-width: 100%; text-align: right;"><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">آمار بارش در 24 ساعت گذشته&nbsp; &nbsp;در سطح شهرستان&nbsp; &nbsp;(از ساعت شش و نیم صبح روز یک شنبه&nbsp; تا شش ونیم صبح امروز(99/09/03)</font></div><div style="box-sizing: border-box; max-width: 100%;"><span style="box-sizing: border-box; max-width: 100%; font-weight: normal;"><font size="2">مصر:04.7</font></span></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">خور:05.3</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">گود:04.2</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">جندق:03.5</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">جعفر آباد :05.7</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">چاه ملک:04.6</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">گرمه:04.0</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">فرخی:05.</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">بیاضه:06.0</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="">ایراج:03.2</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="">هفتومان:04.5</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">اردیب:06.5</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">بازیاب:04.5</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">خنج:05.0</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">مهرجان:04.4</font><span style="font-weight: normal; font-size: small;">میلیمتر&nbsp;</span></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">پیش بینی هوای خوروبیابانک&nbsp;</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;"><br></font></div><div style="box-sizing: border-box; max-width: 100%;"><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">آمار بارش قابل اندازه گیری ثبت شده در ایستگاه های&nbsp;<span style="box-sizing: border-box; max-width: 100%;">شهرستان نایین</span>&nbsp;طی ۲۴ ساعت گذشته منتهی به ساعت ۶:٣۰ صبح امروز دوشنبه مورخ ۹۹/۹/٣ (واحد اندازه گیری: میلیمتر)</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">خاروان: ۴/٨</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">اله آباد: ۴/٧</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">چاه گربه: ۴/۶</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">کدنوئیه: ۴/۵</font></div><div style="box-sizing: border-box; max-width: 100%;"><span style="box-sizing: border-box; max-width: 100%;"><font size="2" style="" color="#3333ff">چوپانان: ۴/۵</font></span></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">سبرز: ۴/٣&nbsp;</font></div><div style="box-sizing: border-box; max-width: 100%;"><span style="box-sizing: border-box; max-width: 100%;"><font size="2" style=""><span style="box-sizing: border-box; max-width: 100%;">انارک: ۴</span>&nbsp;</font></span></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">نخلک: ۳/٨&nbsp;</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">هماباد: ۳/۵&nbsp;</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">مظفرآباد: ۳/٢&nbsp;</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">هندچوئیه: ۲/٩</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">بلان: ٢/٨</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">نایین: ٢/١</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">ورپشت: ١/٨</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">سپرو: ١/۵</font></div><div style="box-sizing: border-box; max-width: 100%;"><font size="2" style="font-weight: normal;">نیستانک: ١</font></div><div style="box-sizing: border-box; max-width: 100%;"><span style="box-sizing: border-box; max-width: 100%; font-weight: normal;"><font size="2">t.me/choopananabad</font></span></div></div></h2>
+
+
+</p>
+            <p><br></p>
+        </div>
+
+
+        <ul class="clearfix">
+            
+                        <li style="float: left; list-style: none outside none;">
+                <div style="float: left; margin-left: 17px; margin-right: 17px; margin-top: -4px;"> <script>mihanblogPostLike('2454','like')</script></div>
+                <a target="_self" href="http://choopananabad.mihanblog.com/post/2454#commentlist" class="comment-link">نظرات(<script>setCommentCnt(2454)</script>)</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="cb_share clearfix">
+        <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://choopananabad.mihanblog.com/post/2454&amp;title=بارش خوب چوپانان و منطقه در شبانروز یکشنبه99/2/9">
+            ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+        </a>
+    </div>
+    <div class="post clearfix" id="2452">
+        <div class="entrytop">
+            <div class="entry">
+                <h2><a href="http://choopananabad.mihanblog.com/post/2452" rel="bookmark">مختل شدن فشرده سازی گاز در ایستگاه مادر(نایین) در زمستان</a></h2>
+            </div>
+        </div>
+
+        <p class="postmeta">سه شنبه 27 آبان 1399  |  نوع مطلب :<a href="http://choopananabad.mihanblog.com/post/category/8">آینده نگری</a>&nbsp;،<a href="http://choopananabad.mihanblog.com/post/category/10">امور اجتماعی</a>&nbsp;،<a href="http://choopananabad.mihanblog.com/post/category/13">همسایه ها</a>&nbsp;،		<br />
+
+            نویسنده: نسل سومی(ابوالقاسم مستقیمی) |
+
+
+
+        </p>
+        <div class="post-content">
+            <p><div class="owner_photo"></div></p>
+            <p><div><div><span style="font-size: small;">&nbsp;<b>مختل شدن فشرده سازی گاز در ایستگاه مادر(نایین) در زمستان</b></span></div><div><font size="2">واکنش شرکت گاز اصفهان به قطعی و افت فشار شهرهای جندق و خور</font></div><div><font size="2"><br></font></div><div><font size="2">مدیرعامل شرکت گاز استان اصفهان:</font></div><div><font size="2">گاز مصرفی مشترکین این شهرستان با استفاده از گاز فشرده شده (سی ان جی) و با بارگیری از شهرستان نایین و حمل با تانکرهای مخصوص تامین می‌شود.</font></div><div><font size="2">با سرد شدن هوا و افزایش مصرف در کل کشور، فشار گاز در خطوط سراسری کاهش یافته و امکان فشرده سازی گاز در ایستگاه مادر(نایین) و بارگیری آن در تانکرها مختل می‌شود.</font></div><div><font size="2">جهت پیشگیری از اشکال در فشرده ‌سازی گاز به علت افت فشار خطوط، از&nbsp; همه مشترکین عزیز در سطح استان تقاضا می‌شود با مصرف منطقی و بهینه شرکت را یاری کنند. /فارس</font></div><div><font size="2"><br></font></div><div><font size="2" style="">پایگاه اصفهان خبر</font></div><div></div></div>
+
+
+</p>
+            <p><br></p>
+        </div>
+
+
+        <ul class="clearfix">
+            
+                        <li style="float: left; list-style: none outside none;">
+                <div style="float: left; margin-left: 17px; margin-right: 17px; margin-top: -4px;"> <script>mihanblogPostLike('2452','like')</script></div>
+                <a target="_self" href="http://choopananabad.mihanblog.com/post/2452#commentlist" class="comment-link">نظرات(<script>setCommentCnt(2452)</script>)</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="cb_share clearfix">
+        <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://choopananabad.mihanblog.com/post/2452&amp;title=مختل شدن فشرده سازی گاز در ایستگاه مادر(نایین) در زمستان">
+            ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+        </a>
+    </div>
+    <div class="post clearfix" id="2451">
+        <div class="entrytop">
+            <div class="entry">
+                <h2><a href="http://choopananabad.mihanblog.com/post/2451" rel="bookmark">رئیس اداره راه و شهرسازی  نایین تعویض شد</a></h2>
+            </div>
+        </div>
+
+        <p class="postmeta">سه شنبه 27 آبان 1399  |  نوع مطلب :<a href="http://choopananabad.mihanblog.com/post/category/10">امور اجتماعی</a>&nbsp;،		<br />
+
+            نویسنده: نسل سومی(ابوالقاسم مستقیمی) |
+
+
+
+        </p>
+        <div class="post-content">
+            <p><div class="owner_photo"></div></p>
+            <p><div><div><font size="3"><b>رئیس اداره راه و شهرسازی&nbsp; نایین تعویض شد</b></font></div><div><font size="2"><br></font></div><div><font size="2">روسای ادارات راه و شهرسازی شهرستان های اصفهان و نایین منصوب شدند.</font></div><div><font size="2"><br></font></div><div><font size="2">به گزارش پایگاه خبری وزارت راه و شهرسازی(اصفهان)، علیرضا قاری‌قرآن، مدیرکل راه و شهرسازی استان اصفهان در احکامی جداگانه «محمدرضا حق‌شناس» را به‌عنوان سرپرست اداره راه و شهرسازی شهرستان اصفهان و «مظفر اسلامی» را به‌عنوان سرپرست اداره راه و شهرسازی شهرستان نایین، منصوب کرد.&nbsp;&nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2">در متن احکام، ضمن اشاره به سوابق علمی و تجارب رؤسای تازه منصوب‌‌شده، بر استفاده از تمامی ظرفیت‌ها و استعدادهای بالقوه موجود، در راستای نیل به اهداف سازمانی تاکید شده است. همچنین از زحمات و تلاش‌های «نورالله عقدایی» رئیس سابق اداره راه و شهرسازی شهرستان نایین تقدیر شده است.&nbsp;&nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2">گفتنی است؛ «مظفر اسلامی» پیش از این ریاست اداره راه و شهرسازی شهرستان اصفهان را عهده‌دار بوده</font></div></div>
+
+
+</p>
+            <p><br></p>
+        </div>
+
+
+        <ul class="clearfix">
+            
+                        <li style="float: left; list-style: none outside none;">
+                <div style="float: left; margin-left: 17px; margin-right: 17px; margin-top: -4px;"> <script>mihanblogPostLike('2451','like')</script></div>
+                <a target="_self" href="http://choopananabad.mihanblog.com/post/2451#commentlist" class="comment-link">نظرات(<script>setCommentCnt(2451)</script>)</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="cb_share clearfix">
+        <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://choopananabad.mihanblog.com/post/2451&amp;title=رئیس اداره راه و شهرسازی  نایین تعویض شد">
+            ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+        </a>
+    </div>
+    <div class="post clearfix" id="2450">
+        <div class="entrytop">
+            <div class="entry">
+                <h2><a href="http://choopananabad.mihanblog.com/post/2450" rel="bookmark">کشت جو جایگزین گندم</a></h2>
+            </div>
+        </div>
+
+        <p class="postmeta">دوشنبه 26 آبان 1399  |  نوع مطلب :<a href="http://choopananabad.mihanblog.com/post/category/8">آینده نگری</a>&nbsp;،<a href="http://choopananabad.mihanblog.com/post/category/4">زراعت و باغبانی</a>&nbsp;،		<br />
+
+            نویسنده: نسل سومی(ابوالقاسم مستقیمی) |
+
+
+
+        </p>
+        <div class="post-content">
+            <p><div class="owner_photo"></div></p>
+            <p><h1 class="title" style="box-sizing: border-box; font-size: 29px; margin: 0px; font-family: vazir; padding: 8px 31px 8px 0px; position: relative; color: rgb(1, 59, 130); line-height: 1.5em;">کشت جو جایگزین گندم</h1><div class="lead justify" style="box-sizing: border-box; font-family: vazir; text-align: justify; font-size: 15px; line-height: 25px; padding: 10px 20px; background: rgb(249, 249, 249);"><span class="src-b" style="box-sizing: border-box; display: inline; color: rgb(85, 85, 85); font-size: 0.94em;">مهر :&nbsp;</span>مشاور عالی نظام صنفی کشاورزی و منابع طبیعی از کمبود و گرانی بذر جو انتقاد کرد و گفت: وزارت جهاد حتی نمی‌تواند تولید محصولات استراتژیک را مدیریت کند چه برسد به اینکه طرح الگوی کشت را اجرا کند.</div><div class="article-body" style="box-sizing: border-box; font-family: vazir; max-width: 100%; margin-left: auto; margin-right: auto; margin-top: 1.1em; box-shadow: none; padding: 0px 10px; border-radius: 5px; font-size: medium; border-top: 0px solid rgb(221, 221, 221) !important;"><div class="primary-files" style="box-sizing: border-box;"><a class="fancybox contain-img" href="https://static4.donya-e-eqtesad.com/thumbnail/Oe9eV9fJ1Xdg/vXJwwA1o8rIoZ7wrPHPV-QYqssTF6UH1BwhMCHO9O4SdbVkfXsgGzqj6-qS0Iv61lBH-hXHgenSPkchyUb3fFQ8Bvzddp2ShSJaBFXhTFTcSNrTDzPAfew,,/p30+%282%29.jpg" title="کشت جو جایگزین گندم" style="box-sizing: border-box; background-color: transparent; text-decoration-line: none; display: block;"><img src="https://static4.donya-e-eqtesad.com/thumbnail/Oe9eV9fJ1Xdg/vXJwwA1o8rIoZ7wrPHPV-QYqssTF6UH1BwhMCHO9O4SdbVkfXsgGzqj6-qS0Iv61lBH-hXHgenSPkchyUb3fFQ8Bvzddp2ShSJaBFXhTFTcSNrTDzPAfew,,/p30+%282%29.jpg" alt="کشت جو جایگزین گندم" style="box-sizing: border-box; border: 0px; display: block; width: 310px; height: auto; box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;"><span class="img-caption" style="box-sizing: border-box; padding: 4px 0px; text-align: center; display: block; color: rgb(68, 68, 68); font-size: 12px; border-bottom: 1px solid rgb(230, 230, 230);"></span></a></div><div id="echo-detail" style="box-sizing: border-box; max-width: 100%; margin-left: auto; margin-right: auto;"><div style="box-sizing: border-box; color: rgb(63, 63, 63);"><p style="box-sizing: border-box; font-size: 15px; line-height: 28px; margin: 20px 0px; color: rgb(0, 0, 0); text-align: justify;">سیدجعفر حسینی از کمبود شدید بذر جو خبر داد و گفت: در کنار گرانی سرسام آور قیمت کود و سموم شیمیایی، کشاورزان با چالش کمبود و گرانی بذر جو نیز مواجه شده‌اند.</p><p style="box-sizing: border-box; font-size: 15px; line-height: 28px; margin: 20px 0px; color: rgb(0, 0, 0); text-align: justify;">وی اضافه کرد: کشاورزان هر کیلوگرم جو را که در بهار ١٧٠٠ تومان فروخته بودند الان برای تامین بذر موردنیاز خود باید کیلویی ٤٥٠٠ تومان خریداری کنند. همچنین دامداران نیز برای تعلیف دام‌های خود باید جو را به همین قیمت خریداری کنند.</p><p style="box-sizing: border-box; font-size: 15px; line-height: 28px; margin: 20px 0px; color: rgb(0, 0, 0); text-align: justify;">این فعال بخش‌خصوصی اضافه کرد: قیمت خرید تضمینی جو در سال زراعی گذشته متناسب با هزینه‌های واقعی تولید نبود، ضمن اینکه با افزایش نرخ گندم نیز تناسبی نداشت بنابراین کشاورزان از کشت استقبال چندانی نکردند.</p><p style="box-sizing: border-box; font-size: 15px; line-height: 28px; margin: 20px 0px; color: rgb(0, 0, 0); text-align: justify;">وی با بیان اینکه همواره قیمت جو در قیمت تضمینی ۲۰ درصد کمتر از نرخ گندم است، گفت: سال گذشته قیمت جو ۱,۶۳۰ تومان تعیین شد و وقتی که نرخ گندم را به ۲,۵۰۰ تومان افزایش دادند قیمت جو مورد بی‌توجهی قرار گرفت درحالی‌که باید قیمت جو نیز به ۲,۰۰۰ تومان افزایش می‌یافت تا مورد استقبال کشاورزان قرار بگیرد و کشت کنند.</p><p style="box-sizing: border-box; font-size: 15px; line-height: 28px; margin: 20px 0px; color: rgb(0, 0, 0); text-align: justify;">حسینی ادامه داد: این مسائل باعث شد تولید جو کاهش یابد و وضعیت تولید جوی بذری نتوانست نیاز را تامین کند. به همین دلیل کشاورزان درحال‌حاضر به جای اینکه جوی بذری گواهی شده را به قیمت مصوب ۳,۳۰۰ تومان خریداری کنند مجبورند جوی معمولی را از بازار آزاد کیلویی ۴,۵۰۰ تومان بخرند.</p><p style="box-sizing: border-box; font-size: 15px; line-height: 28px; margin: 20px 0px; color: rgb(0, 0, 0); text-align: justify;">به گفته وی، اولین آسیب این مساله آن است که جو معمولی مناسب کشت نیست و علاوه بر کاهش عملکرد ممکن است بیماری داشته باشد که این نیز به تولید آسیب می‌زند همچنین وقتی این جو مورد استفاده کشاورزان قرار می‌گیرد و کشت می‌شود برای دامدارانی که از آن به‌عنوان خوراک دام استفاده می‌کنند، چالش ایجاد می‌شود و با کمبود مواجه می‌شوند.</p><p style="box-sizing: border-box; font-size: 15px; line-height: 28px; margin: 20px 0px; color: rgb(0, 0, 0); text-align: justify;">این فعال بخش‌خصوصی درباره تخصیص یارانه به بذر موردنیاز کشاورزان نیز گفت: دولت قبلا به شرکت‌های تولیدکننده بذر یارانه می‌داد اما امسال با این قیمت‌گذاری که انجام شده عملا یارانه بذر را هم از جیب کشاورز می‌دهند ضمن اینکه امسال قیمت خرید تضمینی جو ۲,۳۷۰ تومان اعلام شده است.</p><p style="box-sizing: border-box; font-size: 15px; line-height: 28px; margin: 20px 0px; color: rgb(0, 0, 0); text-align: justify;">حسینی اضافه کرد: هر چند که قیمت تضمینی ۴۰۰۰ تومانی گندم موردنظر کشاورزان نیست ولی با توجه به تفاوت ۲۰ درصدی قیمت تضمینی گندم و جو&nbsp; باید قیمت جو را ۳,۲۰۰ تومان تعیین می‌کردند. این مسائل سبب می‌شود ما سال آینده مجددا با این چالش‌ها مواجه شویم.</p><p style="box-sizing: border-box; font-size: 15px; line-height: 28px; margin: 20px 0px; color: rgb(0, 0, 0); text-align: justify;">وی گفت: البته این احتمال نیز وجود دارد که با توجه به افزایش چشمگیر قیمت جو در بازار آزاد، کشاورزان به کشت این محصول روی آورند که البته این نیز مشکلات خاص خود را خواهد داشت و با افزایش کشت جو که جایگزین گندم می‌شود شاهد کاهش کشت گندم خواهیم بود.</p><p style="box-sizing: border-box; font-size: 15px; line-height: 28px; margin: 20px 0px; color: rgb(0, 0, 0); text-align: justify;">حسینی تصریح کرد: نکته مهم این است که معاونت زراعت وزارت جهاد کشاورزی با وجود آنکه بر اجرای طرح الگوی کشت اصرار می‌کند حتی نمی‌تواند تولید محصولات استراتژیکی مانند گندم و جو را مدیریت کند. متاسفانه اقدام قابل‌توجهی از سوی این معاونت برای تامین بذر موردنیاز کشاورزان انجام نگرفته است</p></div></div></div>
+
+
+</p>
+            <p><br></p>
+        </div>
+
+
+        <ul class="clearfix">
+            
+                        <li style="float: left; list-style: none outside none;">
+                <div style="float: left; margin-left: 17px; margin-right: 17px; margin-top: -4px;"> <script>mihanblogPostLike('2450','like')</script></div>
+                <a target="_self" href="http://choopananabad.mihanblog.com/post/2450#commentlist" class="comment-link">نظرات(<script>setCommentCnt(2450)</script>)</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="cb_share clearfix">
+        <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://choopananabad.mihanblog.com/post/2450&amp;title=کشت جو جایگزین گندم">
+            ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+        </a>
+    </div>
+    <div class="post clearfix" id="2448">
+        <div class="entrytop">
+            <div class="entry">
+                <h2><a href="http://choopananabad.mihanblog.com/post/2448" rel="bookmark">جمعه هم در چوپانان باران بارید</a></h2>
+            </div>
+        </div>
+
+        <p class="postmeta">شنبه 24 آبان 1399  |  نوع مطلب :<a href="http://choopananabad.mihanblog.com/post/category/8">آینده نگری</a>&nbsp;،<a href="http://choopananabad.mihanblog.com/post/category/4">زراعت و باغبانی</a>&nbsp;،<a href="http://choopananabad.mihanblog.com/post/category/3">قنات</a>&nbsp;،		<br />
+
+            نویسنده: نسل سومی(ابوالقاسم مستقیمی) |
+
+
+
+        </p>
+        <div class="post-content">
+            <p><div class="owner_photo"></div></p>
+            <p>
+
+<div><font size="4"><b>جمعه هم در چوپانان باران بارید</b></font></div><div><br></div><div><font size="2">آمار بارش قابل اندازه گیری ثبت شده در ایستگاه های شهرستان نایین طی ۲۴ ساعت گذشته منتهی به ساعت ۶:٣۰ صبح امروز شنبه مورخ ۹۹/۸/٢۴ (واحد اندازه گیری: میلیمتر)</font></div><div><font size="2"><br></font></div><div><font size="2">نایین: ۶/٧</font></div><div><font size="2">بلان: ۶/۶</font></div><div><font size="2">چاه گربه: ۴</font></div><div><font size="2"><b>چوپانان: ٣/٨</b></font></div><div><font size="2">نخلک: ۳/۶&nbsp;</font></div><div><font size="2">سبرز: ۳/۵&nbsp;</font></div><div><font size="2">خاروان: ۲/٨&nbsp;</font></div><div><font size="2">سپرو: ۰/۵&nbsp;</font></div><div><font size="2">هماباد: ۰/۲&nbsp;</font></div><div><font size="2">نیستانک: ۰/١</font></div><div><font size="2"><br></font></div><div><font size="2">چوپانان</font></div><div><font size="2">کمینه دمای امروز: ۸</font></div><div><font size="2">بیشینه دمای روز گذشته: ۱۲</font></div><div><font size="2"><br></font></div><div><font size="2">هواشناسی_نایین</font></div>
+
+
+
+
+
+
+</p>
+            <p><br></p>
+        </div>
+
+
+        <ul class="clearfix">
+            
+                        <li style="float: left; list-style: none outside none;">
+                <div style="float: left; margin-left: 17px; margin-right: 17px; margin-top: -4px;"> <script>mihanblogPostLike('2448','like')</script></div>
+                <a target="_self" href="javascript:void(0);" class="comment-link">نظرات(<script>setCommentCnt(2448)</script>)</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="cb_share clearfix">
+        <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://choopananabad.mihanblog.com/post/2448&amp;title=جمعه هم در چوپانان باران بارید">
+            ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+        </a>
+    </div>
+    <div class="post clearfix" id="2447">
+        <div class="entrytop">
+            <div class="entry">
+                <h2><a href="http://choopananabad.mihanblog.com/post/2447" rel="bookmark">بارندگی خوب در چوپانان و مناطق اطراف</a></h2>
+            </div>
+        </div>
+
+        <p class="postmeta">جمعه 23 آبان 1399  |  نوع مطلب :<a href="http://choopananabad.mihanblog.com/post/category/8">آینده نگری</a>&nbsp;،<a href="http://choopananabad.mihanblog.com/post/category/4">زراعت و باغبانی</a>&nbsp;،<a href="http://choopananabad.mihanblog.com/post/category/3">قنات</a>&nbsp;،		<br />
+
+            نویسنده: نسل سومی(ابوالقاسم مستقیمی) |
+
+
+
+        </p>
+        <div class="post-content">
+            <p><div class="owner_photo"></div></p>
+            <p>
+
+
+<b style="color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; "><font size="4">بارندگی خوب در چوپانان و مناطق اطراف</font></b><div style="color: rgb(48, 48, 48); font-family: Tahoma, Arial; text-align: right;"><div style="font-size: 12.8px;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/82.gif" style="border: none; max-width: 480px; padding: 3px; ">آمار بارش قابل اندازه گیری ثبت شده در ایستگاه های شهرستان نایین طی ۲۴ ساعت گذشته منتهی به ساعت ۶:٣۰ صبح امروز جمعه مورخ ۹۹/۸/٢۳ (واحد اندازه گیری: میلیمتر)</div><div style="font-size: 12.8px;"><br></div><div style=""><font size="2"><b>چوپانان: ۵/٣</b></font></div><div style=""><font size="2"><b>نخلک: ٣/٧&nbsp;</b></font></div><div style=""><font size="2">چاه گربه: ۱/۵&nbsp;</font></div><div style=""><font size="2">اداره_هواشناسی_نایین </font><span style="font-size: 12.8px;">.</span></div><div style="font-size: 12.8px;"><b>آ مار&nbsp; بارش 24 ساعت گذشته&nbsp; &nbsp;در سطح شهرستان&nbsp; خور و بیابانک&nbsp; (از ساعت شش و نیم صبح روز گذشته تا شش ونیم صبح امروز</b> <b>99/08/23)</b></div><div style=""><font size="2">بیاضه:05.0</font></div><div style=""><font size="2">هفتومان:02.5</font></div><div style=""><font size="2">مصر:02.5</font></div><div style=""><font size="2">خور:02.9</font></div><div style=""><font size="2">جندق:04.5</font></div><div style=""><font size="2">بازیاب:01.5</font></div><div style=""><font size="2">ایراج:02.5</font></div><div style=""><font size="2">فرخی:04.0</font></div><div style=""><font size="2">گرمه:05.0</font></div></div>
+
+
+
+
+
+
+
+
+</p>
+            <p><br></p>
+        </div>
+
+
+        <ul class="clearfix">
+            
+                        <li style="float: left; list-style: none outside none;">
+                <div style="float: left; margin-left: 17px; margin-right: 17px; margin-top: -4px;"> <script>mihanblogPostLike('2447','like')</script></div>
+                <a target="_self" href="http://choopananabad.mihanblog.com/post/2447#commentlist" class="comment-link">نظرات(<script>setCommentCnt(2447)</script>)</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="cb_share clearfix">
+        <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://choopananabad.mihanblog.com/post/2447&amp;title=بارندگی خوب در چوپانان و مناطق اطراف">
+            ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+        </a>
+    </div>
+    <div class="post clearfix" id="2444">
+        <div class="entrytop">
+            <div class="entry">
+                <h2><a href="http://choopananabad.mihanblog.com/post/2444" rel="bookmark">مرگ کارگر معدن مس انارک بر اثر سقوط در دستگاه انتقال مواد</a></h2>
+            </div>
+        </div>
+
+        <p class="postmeta">دوشنبه 19 آبان 1399  		<br />
+
+            نویسنده: نسل سومی(ابوالقاسم مستقیمی) |
+
+
+
+        </p>
+        <div class="post-content">
+            <p><div class="owner_photo"></div></p>
+            <p><div class="title" style="font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: bold; font-stretch: normal; font-size: 16px; line-height: normal; font-family: Arial; color: rgb(154, 16, 16); text-align: center; margin-bottom: 10px; margin-top: 4px;">مرگ کارگر معدن مس انارک بر اثر سقوط در دستگاه انتقال مواد</div><div class="subtitle" style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; line-height: normal; font-family: tahoma, Arial; background-color: rgb(241, 233, 213); padding: 8pt; margin: 10px 0pt 20px; border-top: 1px solid rgb(178, 154, 112); border-bottom: 1px solid rgb(178, 154, 112);">منابع کارگری در استان اصفهان؛ از مرگ یکی از کارگران معدن مس انارک در شهرستان نایین به دلیل سقوط در دستگاه انتقال مواد (اسکرو) خبر دادند.</div><div class="body" style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 10pt; line-height: normal; font-family: Tahoma, Arial; margin-top: 10px; margin-bottom: 5px; text-align: justify;">به گزارش ایلنا، یکی از کارگران معدن مس انارک شهرستان نایین در استان اصفهان، حین انجام کار در اثر سقوط در دستگاه اسکرو (انتقال مواد) دچار حادثه شد و جان باخت.<br><br>از قرار معلوم؛ فرد فوت شده از کارگران شرکت توسعه و فن آوری مس مسکنی در معادن انارک شهرستان نایین بوده که حین کار از ارتفاع ۲۰ متری به داخل دستگاه انتقال مواد سقوط می‌کند و بر اثر برخورد با پره‌های حلزونی دستگاه اسکرو (انتقال مواد) جان خود را از دست می‌دهد.<br><br>به دنبال وقوع این حادثه؛ ماموران امداد و نجات بدن بی‌جان این کارگر را از داخل دستگاه و پره‌ها بیرون کشیده و برای سیر مراحل قانونی تحویل پزشکی قانونی دادند.<br><br>علت سقوط این کارگر به داخل دستگاه از سوی کارشناسان در دست بررسی است</div>
+
+
+</p>
+            <p><br></p>
+        </div>
+
+
+        <ul class="clearfix">
+            
+                        <li style="float: left; list-style: none outside none;">
+                <div style="float: left; margin-left: 17px; margin-right: 17px; margin-top: -4px;"> <script>mihanblogPostLike('2444','like')</script></div>
+                <a target="_self" href="http://choopananabad.mihanblog.com/post/2444#commentlist" class="comment-link">نظرات(<script>setCommentCnt(2444)</script>)</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="cb_share clearfix">
+        <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://choopananabad.mihanblog.com/post/2444&amp;title=مرگ کارگر معدن مس انارک بر اثر سقوط در دستگاه انتقال مواد">
+            ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+        </a>
+    </div>
+    <div class="post clearfix" id="2443">
+        <div class="entrytop">
+            <div class="entry">
+                <h2><a href="http://choopananabad.mihanblog.com/post/2443" rel="bookmark"> بیش از 59 کیلوگرم مواد مخدر در سه راهی چوپانان کشف شد</a></h2>
+            </div>
+        </div>
+
+        <p class="postmeta">دوشنبه 19 آبان 1399  		<br />
+
+            نویسنده: نسل سومی(ابوالقاسم مستقیمی) |
+
+
+
+        </p>
+        <div class="post-content">
+            <p><div class="owner_photo"></div></p>
+            <p>
+
+
+<div><br></div><div><h1 class="entry-title title" style="box-sizing: border-box; font-size: 18px; margin: 0px 0px 5px; font-family: IRANSans; line-height: 1.5em; color: rgb(51, 51, 51); text-align: justify;">بیش از 59 کیلوگرم مواد مخدر در سه راهی چوپانان کشف شد</h1><h2 class="excerpt" style="box-sizing: border-box; font-family: IRANSans; font-weight: 400; line-height: 1.8em; color: rgb(51, 51, 51); margin: 5px 0px 10px; font-size: 13px; background-color: rgb(243, 243, 243); padding: 10px 5px; border-right: 4px solid rgb(221, 221, 221); text-align: justify;">فرمانده انتظامی نایین در شرق استان اصفهان از کشف بیش از 59 کیلوگرم تریاک در سه راهی چوپانان خبر داد.</h2><div class="thumbnail" style="box-sizing: border-box; font-family: IRANSans; padding: 0px; margin-bottom: 20px; line-height: 1.42857; border: 1px solid transparent; border-radius: 0px; transition: border 0.2s ease-in-out 0s; color: rgb(51, 51, 51); font-size: 14px; text-align: justify;"><a target="_blank" href="https://sahebnews.ir/1026319/%d8%a8%db%8c%d8%b4-%d8%a7%d8%b2-59-%da%a9%db%8c%d9%84%d9%88%da%af%d8%b1%d9%85-%d9%85%d9%88%d8%a7%d8%af-%d9%85%d8%ae%d8%af%d8%b1-%d8%af%d8%b1-%d8%b3%d9%87-%d8%b1%d8%a7%d9%87%db%8c-%da%86%d9%88%d9%be.htm" style="box-sizing: border-box; background-color: transparent; color: rgb(0, 0, 0); text-decoration-line: none;"><img width="575" height="323" src="https://sahebnews.ir/files/uploads/2020/11/3815069_493-575x323.jpg" class="attachment-large-thumb size-large-thumb colorbox-1026319  wp-post-image" alt="3815069_493" loading="lazy" style="box-sizing: border-box; border: 0px rgb(211, 211, 211); vertical-align: middle; display: block; max-width: 100%; height: auto; margin-right: auto; margin-left: auto; padding: 5px; background-color: rgb(211, 211, 211); border-radius: 0px; transition: all 0.4s ease 0s;"></a></div><div class="meta-news" style="box-sizing: border-box; font-family: IRANSans; color: rgb(136, 136, 136); font-weight: 700; font-size: 14px; text-align: justify;"><div class="row" style="box-sizing: border-box; margin-right: -15px; margin-left: -15px;"><div class="col-xs-9 col-md-9 col-lg-9" style="box-sizing: border-box; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: right; width: 270px;"><span class="news-date" style="box-sizing: border-box;">تاریخ انتشار: ۱۱:۲۴ - دوشنبه ۱۳۹۹/۰۸/۱۹</span></div><div class="col-xs-3 col-md-3 col-lg-3 ltr" style="box-sizing: border-box; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: right; width: 90px; direction: ltr !important;"><span class="print-news" style="box-sizing: border-box;"><a href="https://sahebnews.ir/1026319/%d8%a8%db%8c%d8%b4-%d8%a7%d8%b2-59-%da%a9%db%8c%d9%84%d9%88%da%af%d8%b1%d9%85-%d9%85%d9%88%d8%a7%d8%af-%d9%85%d8%ae%d8%af%d8%b1-%d8%af%d8%b1-%d8%b3%d9%87-%d8%b1%d8%a7%d9%87%db%8c-%da%86%d9%88%d9%be.htm/print/" title="چاپ خبر" rel="nofollow" style="box-sizing: border-box; background-color: transparent; color: rgb(136, 136, 136); text-decoration-line: none;">چاپ خبر</a></span></div></div></div><div class="row" style="box-sizing: border-box; font-family: IRANSans; margin-right: -15px; margin-left: -15px; color: rgb(51, 51, 51); font-size: 14px; text-align: justify;"><div class="col-xs-12 col-md-12 col-lg-12" style="box-sizing: border-box; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: right; width: 360px;"><div class="line" style="box-sizing: border-box; text-align: center; position: relative; height: 21px; margin: 5px 0px;"><div class="separator-holder" style="box-sizing: border-box; display: inline-block; position: relative; padding: 0px 3px; z-index: 2;"><span class="separator" style="box-sizing: border-box; display: inline-block; width: 4px; height: 4px; margin: 0px 5px; background-color: rgb(204, 204, 204); border-radius: 50%;"></span>&nbsp;<span class="separator" style="box-sizing: border-box; display: inline-block; width: 4px; height: 4px; margin: 0px 5px; background-color: rgb(204, 204, 204); border-radius: 50%;"></span>&nbsp;<span class="separator" style="box-sizing: border-box; display: inline-block; width: 4px; height: 4px; margin: 0px 5px; background-color: rgb(204, 204, 204); border-radius: 50%;"></span></div></div></div></div><div class="entry-content" style="box-sizing: border-box; font-family: IRANSans; line-height: 1.8em; color: rgb(51, 51, 51); font-size: 14px; text-align: justify;"><p style="box-sizing: border-box; margin: 0px 0px 10px; line-height: 1.8em;">به گزارش&nbsp;<a href="https://sahebnews.ir/" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(0, 0, 0); text-decoration-line: none;">صاحب نیوز</a>؛ سرگرد هادی کیان مهر گفت: ماموران انتظامی مستقر در سه راهی چوپانان شب گذشته هنگام کنترل و بررسی خودروهای عبوری به یک دستگاه پراید و یک دستگاه پژو مشکوک شدند.</p><p style="box-sizing: border-box; margin: 0px 0px 10px; line-height: 1.8em;">وی افزود: ماموران پس از بررسی پراید موفق به کشف 59 کیلو و 650 گرم تریاک که جاساز شده بود شدند و در این رابطه راننده را دستگیر کردند.</p><p style="box-sizing: border-box; margin: 0px 0px 10px; line-height: 1.8em;">فرمانده انتظامی نایین گفت: راننده این سواری قصد داشت این مقدار مواد مخدر را از استان‌های شرقی و جنوبی به شهرهای مرکزی کشور منتقل کند.</p><p style="box-sizing: border-box; margin: 0px 0px 10px; line-height: 1.8em;">روزانه بطور متوسط افزون بر هفت هزار دستگاه خودرو از سه راهی چوپانان در ۱۹۰ کیلومتری نایین عبور می‌کند</p></div></div></p>
+            <p><br></p>
+        </div>
+
+
+        <ul class="clearfix">
+            
+                        <li style="float: left; list-style: none outside none;">
+                <div style="float: left; margin-left: 17px; margin-right: 17px; margin-top: -4px;"> <script>mihanblogPostLike('2443','like')</script></div>
+                <a target="_self" href="http://choopananabad.mihanblog.com/post/2443#commentlist" class="comment-link">نظرات(<script>setCommentCnt(2443)</script>)</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="cb_share clearfix">
+        <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://choopananabad.mihanblog.com/post/2443&amp;title= بیش از 59 کیلوگرم مواد مخدر در سه راهی چوپانان کشف شد">
+            ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+        </a>
+    </div>
+    <div class="post clearfix" id="2442">
+        <div class="entrytop">
+            <div class="entry">
+                <h2><a href="http://choopananabad.mihanblog.com/post/2442" rel="bookmark">حاجی استاد اصغر افضل، معماری كاردان و بنّائی همه فن حریف</a></h2>
+            </div>
+        </div>
+
+        <p class="postmeta">یکشنبه 18 آبان 1399  		<br />
+
+            نویسنده: نسل سومی(ابوالقاسم مستقیمی) |
+
+
+
+        </p>
+        <div class="post-content">
+            <p><div class="owner_photo"></div></p>
+            <p>
+
+
+
+<div><br></div><div><p style="padding: 0px 0px 15px; margin: 0px; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right;"></p><p style="padding: 0px 0px 15px; margin: 0px; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right;"></p><div id="InPost_MihanblogShopAds" style="color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; height: 0px; width: 484px; border: 0px;"></div><p class="MsoNormal" dir="RTL" style="padding: 0px 0px 15px; margin: 0px 0px 0.0001pt; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: justify; direction: rtl; unicode-bidi: embed;"></p><p dir="RTL" style="padding: 0px 0px 15px; margin: 0px 0px 0.0001pt; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; direction: rtl; unicode-bidi: embed;"><font size="4" face="Helvetica, sans-serif" color="#330099">حاجی استاد اصغر افضل، معماری كاردان و بنّائی همه فن حریف</font></p><p dir="RTL" style="padding: 0px 0px 15px; margin: 0px 0px 0.0001pt; font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; direction: rtl; unicode-bidi: embed;"><font style="" size="4" face="Helvetica, sans-serif" color="#000066">مقاله مصاحبه زیر در بهن ماه ۹۲ در همین وبلاگ منتشر شد و امروز به مناسبت در گذشت شادروان حاج استا اصغر باز نشر می شود خداوند آن شاد روان را بیامرزد</font></p><p dir="RTL" style="padding: 0px 0px 15px; margin: 0px 0px 0.0001pt; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; direction: rtl; unicode-bidi: embed;"><img src="http://s5.picofile.com/file/8110833526/1535447_10152106946674399_1904838334_n.jpg" alt="" style="border: none; max-width: 480px; padding: 3px;" vspace="0" hspace="0" border="0" align="baseline"></p><p dir="RTL" style="padding: 0px 0px 15px; margin: 0px 0px 0.0001pt; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; direction: rtl; unicode-bidi: embed;"><b><font size="3"><span style="font-family: &quot;B Nazanin&quot;;" lang="FA">چوپانان امروز ما ، نتیجه تلاش بزرگ مردان و زنانی است كه در طول یك قرن زحمات جانفرسایی را متحمّل شده اند و هر كدام با توجه به تخصص و علم ونیروی كار و درایت وكاردانی و سرمایه خویش چوپانان را به امروز رسانده اند و آن را چون نگینی در كویر در كنار ریگ جن به مانند عروسی&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;, serif;" lang="FA">&nbsp;</span><span style="font-family: &quot;B Nazanin&quot;;" lang="FA">رویایی بر تخت نشانده اند كه امروز دل هر سیاح و جهانگردی را می رباید و همه را انگشت به دهان می نماید</span><span style="font-family: &quot;Times New Roman&quot;, serif;" lang="FA">&nbsp;،</span><span style="font-family: &quot;B Nazanin&quot;;" lang="FA">&nbsp;در این راه افراد بسیاری كوشیده اند و من بر آنم كه تا در توانم هست از تك تك آنها قدری دانی كنم و شرح حالشان را&nbsp;</span><span style="font-family: &quot;Times New Roman&quot;, serif;" lang="FA">&nbsp;</span><span style="font-family: &quot;B Nazanin&quot;;" lang="FA">بیارایم ،چون دست توانای آتها چنین زیبایی مسحور كننده ای را در دل كویر نگاشته است.</span></font></b><font size="2"><span style="font-family: Helvetica, sans-serif;" lang="AR-SA"></span></font></p><p dir="RTL" style="padding: 0px 0px 15px; margin: 0px 0px 0.0001pt; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; direction: rtl; unicode-bidi: embed;"><font size="3"><b><span style="font-family: &quot;B Nazanin&quot;;" lang="FA">و یكی از این بزرگان حاج استاد اصغر افضل است او كه در بنای معماری سنتی چوپانان همچون ، معلم استادش سنگ تمام گذاشته و هم در ساختن بخش اعظمی از چوپانان تلاش نموده و هم تعدادی بنّا و معمار در مكتب خویش برای سازندگی چوپانان، تربیت نموده است و علم و مهارت خود را به آنان منتقل نموده است او در باره معرفی خویش چنین می گوید:</span></b><span style="font-family: Helvetica, sans-serif;" lang="AR-SA"></span></font></p><p dir="RTL" style="padding: 0px 0px 15px; margin: 0px 0px 0.0001pt; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; direction: rtl; unicode-bidi: embed;"><font size="3"><b><span style="font-family: Helvetica, sans-serif;" lang="FA">"متولد چوپانانم از پدر و مادری جندقی در سال 1308. هشت ساله بودم که روزی مادرم مرا نزد استاد محمد حسین ( نظریان ) برد و از او خواهش کرد که مرا به شاگردی قبول کند</span></b><b><span dir="LTR" style="font-family: Helvetica, sans-serif;">.</span></b><b><span style="font-family: Helvetica, sans-serif;" lang="FA">&nbsp;</span></b><b><span style="font-family: Helvetica, sans-serif;" lang="FA">این شد که من بنّا شدم و تا قدرت ایستادن روی داربست را داشتم کار کردم</span></b><b><span dir="LTR" style="font-family: Helvetica, sans-serif;">.</span></b><b><span style="font-family: Helvetica, sans-serif;" lang="FA">&nbsp;</span></b><b><span style="font-family: Helvetica, sans-serif;" lang="FA">از همان روزهای اول چون رضایت صاحب کار برایم مهم بود با تمام توان کار می کردم</span></b><b><span style="font-family: Helvetica, sans-serif;" lang="FA">&nbsp;</span></b><b><span dir="LTR" style="font-family: Helvetica, sans-serif;">&nbsp;</span></b><b><span style="font-family: Helvetica, sans-serif;" lang="FA">و همیشه کمترین دستمزد را برای خودم در نظر می گرفتم</span></b><b><span dir="LTR" style="font-family: Helvetica, sans-serif;">.</span></b><b><span style="font-family: Helvetica, sans-serif;" lang="FA">&nbsp;</span></b><b><span style="font-family: Helvetica, sans-serif;" lang="FA">چون اعتقاد داشتم که آنها به کار من احتیاج دارند پس هرچه دستمزد بخواهم مجبورند و می دهند اما ته دلشان راضی نیست و در این مال خیر و برکت نیست. برای ساختن خانه خودم خیلیها حاضر بودند در مقابل یک روز کار من سه و حتی چهار روز برای من کار کنند اما من به دو روز قانع بودم."</span></b><span style="font-family: Helvetica, sans-serif;" lang="AR-SA"></span></font></p><p dir="RTL" style="padding: 0px 0px 15px; margin: 0px 0px 0.0001pt; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; direction: rtl; unicode-bidi: embed;"><font size="3"><b><span style="font-family: Helvetica, sans-serif;" lang="FA">استاد افضل از مردان مومن و وظیفه شناس و قانع و تلاشگر و مردمدار و سختكوش و دقیق چوپانان است او اعتقاد شدید به لقمه حلال دارد و نه تنها خودش، وظیفه اش را به بهترین نحو انجام می دهد بلكه كارگر زیر دست او نیز باید چون استاد، وجدان كاری داشته باشد . استاد، چوپانان را دوست دارد و به مردمش عشق می ورزد او در مقابل این پرسش ما كه :</span></b><b><span style="font-family: Helvetica, sans-serif;" lang="FA">&nbsp;</span></b><b><span style="font-family: Helvetica, sans-serif;" lang="FA">حاج استاد جندق را بیشتر دوست دارید یا چوپانان را ؟ می گوید:</span></b><span style="font-family: Helvetica, sans-serif;" lang="AR-SA"></span></font></p><p dir="RTL" style="padding: 0px 0px 15px; margin: 0px 0px 0.0001pt; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; direction: rtl; unicode-bidi: embed;"><font size="3"><b><span style="font-family: Helvetica, sans-serif;" lang="FA">"</span></b><b><span style="font-family: Helvetica, sans-serif;" lang="FA">&nbsp;</span></b><b><span style="font-family: Helvetica, sans-serif;" lang="FA">چوپانان. حتی موقعیت شغلی خوبی در جندق توسط مرحوم عامری به من پیشنهاد شد که قبول نکردم او یک قواره زمین مسکونی (نزدیک400 متر) به من هدیه داد که خانه بسازم و در جندق سکونت کنم. نمیدانم چرا هم آن روز و هم حالا در جندق احساس غربت می کنم با اینکه قوم و خویش فراوان دارم. نمیدانم شاید زادگاه آدم یک جور دیگریست."</span></b><span style="font-family: Helvetica, sans-serif;" lang="AR-SA"></span></font></p><p dir="RTL" style="padding: 0px 0px 15px; margin: 0px 0px 0.0001pt; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; direction: rtl; unicode-bidi: embed;"><font size="3"><b><span style="font-family: Helvetica, sans-serif;" lang="FA">استاد افضل، مردی متواضع است و از گزافگویی پرهیز می نماید وقتی از ایشان پرسیده می شود كة :</span></b><b><span style="font-family: Helvetica, sans-serif;" lang="FA">&nbsp;</span></b><b><span style="font-family: Helvetica, sans-serif;" lang="FA">می گویند 20-30 در صد خانه های چوپانان، حجت آباد و آشتیان را شما ساختید؟ پاسخش نشان تواضع دارد مختصر می گوید:</span></b><span style="font-family: Helvetica, sans-serif;" lang="AR-SA"></span></font></p><p dir="RTL" style="padding: 0px 0px 15px; margin: 0px 0px 0.0001pt; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; direction: rtl; unicode-bidi: embed;"><font size="3"><b><span style="font-family: &quot;Times New Roman&quot;, serif;" lang="FA">"</span></b><b><span style="font-family: &quot;Times New Roman&quot;, serif;" lang="FA">&nbsp;</span></b><b><span style="font-family: &quot;B Nazanin&quot;;" lang="FA">در صدش را نمیدانم اما خیلی هایش را.</span></b><b><span style="font-family: &quot;Times New Roman&quot;, serif;" lang="FA">"</span></b><span style="font-family: Helvetica, sans-serif;" lang="AR-SA"></span></font></p><p dir="RTL" style="padding: 0px 0px 15px; margin: 0px 0px 0.0001pt; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; direction: rtl; unicode-bidi: embed;"><font size="3"><b><span style="font-family: &quot;Times New Roman&quot;, serif;" lang="FA">حاج استاد اصغر در چوپانان با یك خانواده اصیل چوپانانی ازدواج می كند كه مطمئناً همسر ایشان نقش بسزایی در موّفّقیت او در كارها و در تربیت فرزندانش داشته است ،حاجیه منور خانم همسر استاد اصغر زنی كاردان، خوش سلیقه، مهربان، قانع و متدین و دقیق بود به همین علت نیز، استاد از نظر تربیت فرزندان خیالش كاملاً جمع بود. نتیجه این وصلت&nbsp;6 پسر تحصیلكرده و2 دختر بود كه باعث افتخار چوپانان هستند و استاد آقا مهدی افضل از پیشكسوتان فرهنگی كشورند كه در دوران باز نشستگی دست به قلم برده اند و تا كنون دو اثر گرانبها برای پاسداری از چوپانان تحریر و چاپ نموده اند.و من از فرزند دیگر ایشان حسن افضل نیز آثار ترجمه شده علمی چندی را مشاهده كرده ام.</span></b><span style="font-family: Helvetica, sans-serif;" lang="AR-SA"></span></font></p><p dir="RTL" style="padding: 0px 0px 15px; margin: 0px 0px 0.0001pt; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; direction: rtl; unicode-bidi: embed;"><font size="3"><b><span style="font-family: &quot;Times New Roman&quot;, serif;" lang="FA">استاد افضل در همان دوران جوانی، به استخدام معدن سرب نخلك در آمدند و در نخلك نیز عهده دار امور بنّایی در این معدن دولتی شدند استاد افضل تقریبا همیشه نفر آخری بودند كه سوار كمپرسی دولتی بعد از یك هفته تلاش می شدند ایشان در این مورد چنین بیان می كنند:</span></b><span style="font-family: Helvetica, sans-serif;" lang="AR-SA"></span></font></p><p dir="RTL" style="padding: 0px 0px 15px; margin: 0px 0px 0.0001pt; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; direction: rtl; unicode-bidi: embed;"><font size="3"><b><span style="font-family: Helvetica, sans-serif;" lang="FA">"</span></b><b><span style="font-family: Helvetica, sans-serif;" lang="FA">&nbsp;</span></b><b><span style="font-family: Helvetica, sans-serif;" lang="FA">پنجشنبه ها خیلی ها که کارشان زودتر تمام می شد یا کارشان کنتراتی بود زودتر سوار میشدند اما من تا دقیقه آخر کار می کردم. همسفرها هم عادت کرده بودند و تاخیر مرا تحمل می کردند."</span></b><span style="font-family: Helvetica, sans-serif;" lang="AR-SA"></span></font></p><p dir="RTL" style="padding: 0px 0px 15px; margin: 0px 0px 0.0001pt; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; direction: rtl; unicode-bidi: embed;"><font size="3"><b><span style="font-family: &quot;Times New Roman&quot;, serif;" lang="FA">ایشان در باره معماری چوپانان و نظم هندسی آن چنین اعتقاد دارند:</span></b><span style="font-family: Helvetica, sans-serif;" lang="AR-SA"></span></font></p><p dir="RTL" style="padding: 0px 0px 15px; margin: 0px 0px 0.0001pt; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; direction: rtl; unicode-bidi: embed;"><font size="3"><b><span style="font-family: Helvetica, sans-serif;" lang="FA">"</span></b><b><span style="font-family: Helvetica, sans-serif;" lang="FA">&nbsp;</span></b><b><span style="font-family: Helvetica, sans-serif;" lang="FA">استاد مردم چوپانان این نظم خانه ها، کوچه ها و خیابان‌ها را مدیون چه کسانی هستند؟</span></b><span style="font-family: Helvetica, sans-serif;" lang="AR-SA"></span></font></p><p dir="RTL" style="padding: 0px 0px 15px; margin: 0px 0px 0.0001pt; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; direction: rtl; unicode-bidi: embed;"><font size="3"><b><span style="font-family: Helvetica, sans-serif;" lang="FA">میرسید علی اردکانی، که معماری، مسجد ساز بود، اول خیابان دشت و زمین‌های زراعی را طراحی کرد که بعد هم خیابان اصلی و کوچه ها از روی آن طراحی و اجرا شد. و بعد هم نظارتی بود که کدخداها و این اواخر مرحوم عبدالرحیم زاهدی با جدیت انجام می‌داد و الا در همین اواخر در حاشیه شهرهای بزرگ&nbsp; دیده میشود هر جا جوی آب پیچیده کوچه هم پیچیده و خانه ها هم به تبع آن."</span></b><span style="font-family: Helvetica, sans-serif;" lang="AR-SA"></span></font></p><p dir="RTL" style="padding: 0px 0px 15px; margin: 0px 0px 0.0001pt; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; direction: rtl; unicode-bidi: embed;"><font size="3"><b><span style="font-family: &quot;Times New Roman&quot;, serif;" lang="FA">ضمن تشكر از جناب استاد آقا مهدی افضل كه مرا در تهیه این بیوگرافی مدد فرمودند از ایشان تقاضا دارم كه شرح كاملی از تجربیات و خاطرات پدر گرامیشان را &nbsp;تهیه و جهت انتشار در اختیار همگان قرار دهند&nbsp; برای نمونه من یكی از تجربیات استاد افضل را كه در نوشته های فرزندشان خواندم طرز ساختن آب انبار بود كه واقعاً برای من مبحث جالبی بود</span></b><span style="font-family: Helvetica, sans-serif;" lang="AR-SA"></span></font></p><p dir="RTL" style="padding: 0px 0px 15px; margin: 0px 0px 0.0001pt; color: rgb(48, 48, 48); font-family: Tahoma, Arial; font-size: 12.8px; text-align: right; direction: rtl; unicode-bidi: embed;"><font size="3"><b><span style="font-family: &quot;Times New Roman&quot;, serif;" lang="FA">در پایان طول عمرو سلامتی و تندرستی برای استاد حاج اصغر آرزومندم</span></b></font></p></div>
+
+</p>
+            <p><br></p>
+        </div>
+
+
+        <ul class="clearfix">
+            
+                        <li style="float: left; list-style: none outside none;">
+                <div style="float: left; margin-left: 17px; margin-right: 17px; margin-top: -4px;"> <script>mihanblogPostLike('2442','like')</script></div>
+                <a target="_self" href="http://choopananabad.mihanblog.com/post/2442#commentlist" class="comment-link">نظرات(<script>setCommentCnt(2442)</script>)</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="cb_share clearfix">
+        <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://choopananabad.mihanblog.com/post/2442&amp;title=حاجی استاد اصغر افضل، معماری كاردان و بنّائی همه فن حریف">
+            ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+        </a>
+    </div>
+    <div class="post clearfix" id="2441">
+        <div class="entrytop">
+            <div class="entry">
+                <h2><a href="http://choopananabad.mihanblog.com/post/2441" rel="bookmark">روستای چوپانان نگین خشتی وگلی جهان در کویر</a></h2>
+            </div>
+        </div>
+
+        <p class="postmeta">شنبه 17 آبان 1399  		<br />
+
+            نویسنده: نسل سومی(ابوالقاسم مستقیمی) |
+
+
+
+        </p>
+        <div class="post-content">
+            <p><div class="owner_photo"></div></p>
+            <p>
+
+
+
+<div style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: IRANSansLight, Arial; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; direction: rtl;"><div class="news_center_body" style="box-sizing: border-box; background: rgb(230, 230, 230); padding: 28px 22px;"><div class="rutitr" style="box-sizing: border-box; font: 13px IRANSansLight; color: rgb(40, 40, 40);">در شرق استان اصفهان</div><div class="title" style="box-sizing: border-box; font: 700 15px / 20px IRANSansMedium; color: rgb(154, 16, 16); margin-bottom: 10px; margin-top: 4px;"><h1 class="title title_news" style="box-sizing: border-box; font: 23px / 32px nassim-bold !important; padding: 0px; margin: 0px; color: rgb(0, 0, 0); text-decoration: none;"><span href="/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر" style="box-sizing: border-box;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span></h1></div><div class="excerpt" style="box-sizing: border-box;"><p class="subtitle" itemprop="description" style="box-sizing: border-box; margin: 10px 0px; color: rgb(0, 0, 0); font: 14px IRANSans, Arial; text-align: justify;">روستای چوپانان با ساختار شطرنجی منظم‌ترین روستای خشتی و گلی جهان است.</p></div></div><div class="body body_media_content_show" style="box-sizing: border-box; font: 400 14px / 30px IRANSans, Arial; margin-top: 10px; color: rgb(51, 51, 51); text-align: justify; padding: 10px;"><div dir="rtl" style="box-sizing: border-box;">به گزارش<span>&nbsp;</span><a href="https://isfahan.iribnews.ir/" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none;">خبرگزاری صدا و سیما ، مرکز اصفهان ؛</a><span>&nbsp;</span>دهیار روستای چوپانان گفت: این روستا با هزارو ۸۶۳ نفر جمعیت و ۱۲۰ سال قدمت ، با شرایط اقلیم گرم و خشک کویری ، خانه هایش از خشت و گل ساخته شده و در تابستان خنک و در زمستان گرم است.</div><div dir="rtl" style="box-sizing: border-box;"><div dir="ltr" title="چوپانان " style="box-sizing: border-box; text-align: center;"><div dir="ltr" style="box-sizing: border-box;"><div class="row videojs-main-container" style="box-sizing: border-box; margin-right: 0px !important; margin-left: 0px !important;"><div class="videojs_main" style="box-sizing: border-box; margin: 0px auto 10px; position: relative; width: 400px; max-width: 100%;"><div class="video-js vjs-default-skin vjs-has-started player_919308_5559459-dimensions vjs-controls-enabled vjs-workinghover vjs-v7 vjs-user-inactive vjs-paused vjs-ended" id="player_919308_5559459" role="region" aria-label="Video Player" style="box-sizing: border-box; width: 320px; height: 200px !important; display: block; vertical-align: top; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); position: relative; padding: 0px; font-size: 10px; line-height: 1; font-weight: 400; font-style: normal; font-family: Arial, Helvetica, sans-serif; word-break: initial;" lang="en-us"><video id="player_919308_5559459_html5_api" class="vjs-tech" tabindex="-1" src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561573_925.mp4" style="box-sizing: inherit; display: inline-block; vertical-align: baseline; position: absolute; top: 0px; left: 0px; width: 320px; height: 200px;" controls=""></video><div class="vjs-control-bar" dir="ltr" style="box-sizing: inherit; display: flex; width: 320px; position: absolute; bottom: 0px; left: 0px; right: 0px; height: 3em; background-color: rgba(43, 51, 63, 0.7); visibility: visible; opacity: 1; transition: visibility 0.1s ease 0s, opacity 0.1s ease 0s;"><button class="vjs-play-control vjs-control vjs-button vjs-paused vjs-ended" type="button" title="Replay" aria-disabled="false" style="box-sizing: inherit; color: inherit; font: inherit; margin: 0px; overflow: visible; text-transform: none; -webkit-appearance: none; cursor: pointer; background: 0px 0px; border: none; display: inline-block; text-decoration: none; transition: none 0s ease 0s; position: relative; text-align: center; padding: 0px; height: 30px; width: 4em; flex: 0 0 auto;"><span aria-hidden="true" class="vjs-icon-placeholder" style="box-sizing: inherit; font-family: VideoJS; font-weight: 400; font-style: normal; cursor: pointer; flex: 0 0 auto;"></span><span class="vjs-control-text" aria-live="polite" style="box-sizing: inherit; border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;">Replay</span></button><div class="vjs-volume-panel vjs-control vjs-volume-panel-horizontal" style="box-sizing: inherit; position: relative; text-align: center; margin: 0px; padding: 0px; height: 30px; width: 4em; flex: 0 0 auto; transition: width 1s ease 0s; display: flex;"><button class="vjs-mute-control vjs-control vjs-button vjs-vol-3" type="button" title="Mute" aria-disabled="false" style="box-sizing: inherit; color: inherit; font: inherit; margin: 0px; overflow: visible; text-transform: none; -webkit-appearance: none; cursor: pointer; background: 0px 0px; border: none; display: inline-block; text-decoration: none; transition: none 0s ease 0s; width: 4em; height: 30px; position: relative; text-align: center; padding: 0px; flex: 0 0 auto;"><span aria-hidden="true" class="vjs-icon-placeholder" style="box-sizing: inherit; font-family: VideoJS; font-weight: 400; font-style: normal;"></span><span class="vjs-control-text" aria-live="polite" style="box-sizing: inherit; border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;">Mute</span></button><div class="vjs-volume-control vjs-control vjs-volume-horizontal" style="box-sizing: inherit; position: relative; text-align: center; margin: 0px 1em 0px -1px; padding: 0px; height: 1px; width: 1px; flex: 0 0 auto; cursor: pointer; display: flex; visibility: visible; opacity: 0; transition: visibility 1s ease 0s, opacity 1s ease 0s, height 1s ease 1s, width 1s ease 0s, left 1s ease 1s, top 1s ease 1s;"><div tabindex="0" class="vjs-volume-bar vjs-slider-bar vjs-slider vjs-slider-horizontal" role="slider" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Volume Level" aria-live="polite" aria-valuetext="100%" style="box-sizing: inherit; position: relative; cursor: pointer; padding: 0px; margin: 1.35em 0.45em; user-select: none; background-color: rgba(115, 133, 159, 0.5); width: 5em; height: 0.3em;"><div class="vjs-volume-level" style="box-sizing: inherit; font-family: VideoJS; font-weight: 400; font-style: normal; position: absolute; bottom: 0px; left: 0px; background-color: rgb(255, 255, 255); height: 0.3em; width: 0px;"><span class="vjs-control-text" style="box-sizing: inherit; border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"></span></div></div></div></div><div class="vjs-progress-control vjs-control" style="box-sizing: inherit; position: relative; text-align: center; margin: 0px; padding: 0px; height: 30px; width: 4em; flex: 1 1 auto; cursor: pointer; display: flex; -webkit-box-align: center; align-items: center; min-width: 4em; touch-action: none;"><div tabindex="0" class="vjs-progress-holder vjs-slider vjs-slider-horizontal" role="slider" aria-valuenow="100.00" aria-valuemin="0" aria-valuemax="100" aria-label="Progress Bar" aria-valuetext="2:36 of 2:36" style="box-sizing: inherit; flex: 1 1 auto; transition: all 0.2s ease 0s; height: 0.3em; position: relative; cursor: pointer; padding: 0px; margin: 0px 10px; user-select: none; background-color: rgba(115, 133, 159, 0.5);"><div class="vjs-load-progress" style="box-sizing: inherit; background: rgba(115, 133, 159, 0.5); position: absolute; display: block; height: 3px; margin: 0px; padding: 0px; width: 137.93px;"><span class="vjs-control-text" style="box-sizing: inherit; border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"><span style="box-sizing: inherit;">Loaded</span>: 0%</span></div><div class="vjs-play-progress vjs-slider-bar" style="box-sizing: inherit; font-family: VideoJS; font-weight: 400; font-style: normal; background-color: rgb(255, 255, 255); position: absolute; display: block; height: 3px; margin: 0px; padding: 0px; width: 137.93px;"><span class="vjs-control-text" style="box-sizing: inherit; border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"><span style="box-sizing: inherit;">Progress</span>: 0%</span></div></div></div><div class="vjs-remaining-time vjs-time-control vjs-control" style="box-sizing: inherit; position: relative; text-align: center; margin: 0px; padding: 0px 1em; height: 30px; width: auto; flex: 0 0 auto; font-size: 1em; line-height: 3em; min-width: 2em;"><span class="vjs-control-text" style="box-sizing: inherit; border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;">Remaining Time&nbsp;</span><span class="vjs-remaining-time-display" aria-live="off" style="box-sizing: inherit;">-0:00</span></div><button class="vjs-fullscreen-control vjs-control vjs-button" type="button" title="Fullscreen" aria-disabled="false" style="box-sizing: inherit; color: inherit; font: inherit; margin: 0px; overflow: visible; text-transform: none; -webkit-appearance: none; cursor: pointer; background: 0px 0px; border: none; display: inline-block; text-decoration: none; transition: none 0s ease 0s; position: relative; text-align: center; padding: 0px; height: 30px; width: 4em; flex: 0 0 auto;"><span aria-hidden="true" class="vjs-icon-placeholder" style="box-sizing: inherit; font-family: VideoJS; font-weight: 400; font-style: normal;"></span><span class="vjs-control-text" aria-live="polite" style="box-sizing: inherit; border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;">Fullscreen</span></button></div></div></div><div class="video-tool-box" style="box-sizing: border-box; float: right; margin-bottom: 10px; clear: both;"><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#" class="video-share-code" style="box-sizing: border-box; color: rgb(255, 255, 255); outline: none; background: rgb(1, 81, 178); text-decoration: none; border-radius: 5px; display: inline-block; font: 15px / 17px nassim-bold; height: 32px; padding: 8px;">کد ویدیو</a><div class="video-player-download-link" style="box-sizing: border-box; background: rgb(1, 81, 178); border-radius: 5px; color: rgb(255, 255, 255); cursor: pointer; display: block; font: 15px / 16px nassim-bold; margin-left: 7px; padding: 8px; position: relative; float: right;"><span style="box-sizing: border-box;">دانلود</span><div class="main-div-download-qualities" style="box-sizing: border-box; display: block; right: 0px; position: absolute; top: 34px; opacity: 0; width: 140px; padding-bottom: 5px; z-index: 999;"><span style="box-sizing: border-box; text-align: right;"></span><div class="div-download-quality" style="box-sizing: border-box; padding: 10px 0px; background: rgb(222, 222, 222); border-radius: 3px; box-shadow: rgb(102, 102, 102) 0.5px 0.5px 2px 0.5px; width: 140px; display: block; overflow: hidden; text-align: center;"><a href="https://www.iribnews.ir/files/fa/news/1399/8/17/5561573_925.mp4" title="دانلود فیلم اصلی" style="box-sizing: border-box; color: rgb(85, 85, 85); outline: none; background-color: transparent; text-decoration: none; display: block; width: 140px; padding: 7px 0px; border-bottom: 1px solid rgb(209, 209, 209); border-top: 1px solid rgb(209, 209, 209);">فیلم اصلی</a></div></div></div></div></div></div></div>مصطفی جلال پور افزود: روستای چوپانان بافتی مانند شطرنج و کوچه‌های بدون بن بست داردکه در گذشته برای سهولت تردد کشاورزان ودامداران ازروستا به دشت و مزارع وباغات بوده است.<br style="box-sizing: border-box;">وی گفت: بیش از ۳۰۰ خانه و ۱۵۰ بادگیرباساختار سنتی در این روستا ساخته شده و&nbsp;همزیستی نخل و بادگیر دراینجا دیدنی است.<br style="box-sizing: border-box;">روستای چوپانان در ۱۷۰ کیلومتری شرق نائین قراردارد.</div><div dir="rtl" style="box-sizing: border-box;"><div dir="ltr" title="چوپانان " style="box-sizing: border-box; text-align: center;"><div style="box-sizing: border-box;"><div class="fluid_container_album news_album_main_part album_thumb_id" id="album_109625" style="box-sizing: border-box;"><div id="carousel-wrapper109625" style="box-sizing: border-box;"><div class="caroufredsel_wrapper" style="box-sizing: border-box; display: block; text-align: center; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: auto; width: 320px; height: 179px; margin: 0px; overflow: hidden;"><div id="carousel109625" style="box-sizing: border-box; overflow: hidden; text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; margin: 0px; width: 13120px; height: 179px;"><span id="image_5559431" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561545_954.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span><span id="image_5559432" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561546_126.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span><span id="image_5559433" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561547_265.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span><span id="image_5559434" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561548_116.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span><span id="image_5559435" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561549_436.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span><span id="image_5559436" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561550_233.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span><span id="image_5559437" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561551_606.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span><span id="image_5559438" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561552_431.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span><span id="image_5559439" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561553_114.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span><span id="image_5559440" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561554_404.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span><span id="image_5559441" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561555_624.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span><span id="image_5559442" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561556_704.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span><span id="image_5559443" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561557_360.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span><span id="image_5559444" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561558_465.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span><span id="image_5559445" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561559_529.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span><span id="image_5559446" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561560_855.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span><span id="image_5559447" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561561_343.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span><span id="image_5559448" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561562_715.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span><span id="image_5559449" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561563_399.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span><span id="image_5559450" style="box-sizing: border-box; display: block; float: left; position: relative; height: 179.2px; width: 320px;"><img src="https://www.iribnews.ir/files/fa/news/1399/8/17/5561564_816.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: 2px solid rgb(131, 148, 148); vertical-align: middle; display: block; max-width: 100%; height: 179.195px; margin: 0px auto; border-radius: 10px;"></span></div></div></div><div id="carousel-wrapper2109625" style="box-sizing: border-box;"><div class="caroufredsel_wrapper" style="box-sizing: border-box; display: block; text-align: center; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: auto; width: 320px; height: 33px; margin: 0px; overflow: hidden;"><div id="carousel_desc109625" style="box-sizing: border-box; overflow: hidden; text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; margin: 0px; width: 13120px; height: 33px;"><span id="image_5559431" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span><span id="image_5559432" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span><span id="image_5559433" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span><span id="image_5559434" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span><span id="image_5559435" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span><span id="image_5559436" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span><span id="image_5559437" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span><span id="image_5559438" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span><span id="image_5559439" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span><span id="image_5559440" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span><span id="image_5559441" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span><span id="image_5559442" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span><span id="image_5559443" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span><span id="image_5559444" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span><span id="image_5559445" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span><span id="image_5559446" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span><span id="image_5559447" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span><span id="image_5559448" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span><span id="image_5559449" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span><span id="image_5559450" class="des_box" style="box-sizing: border-box; width: 320px; display: block; float: left; position: relative; padding: 9px; text-align: center; height: 33.1px;">روستای چوپانان نگین خشتی وگلی جهان در کویر</span></div></div></div><div id="thumbs-wrapper109625" style="box-sizing: border-box; padding: 20px 40px; position: relative;"><div class="caroufredsel_wrapper" style="box-sizing: border-box; display: block; text-align: center; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: auto; width: 240px; height: 68px; margin: 0px; overflow: hidden;"><div id="thumbs109625" style="box-sizing: border-box; overflow: hidden; text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; margin: 0px; width: 5040px; height: 68px;"><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559431" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561545_954.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559432" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561546_126.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559433" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561547_265.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559434" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561548_116.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559435" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561549_436.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559436" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561550_233.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559437" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561551_606.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559438" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561552_431.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559439" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561553_114.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559440" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561554_404.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559441" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561555_624.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559442" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561556_704.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559443" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561557_360.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559444" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561558_465.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559445" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561559_529.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559446" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561560_855.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559447" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561561_343.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559448" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561562_715.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559449" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561563_399.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a><a href="https://www.iribnews.ir/fa/news/2900282/روستای-چوپانان-نگین-خشتی-وگلی-جهان-در-کویر#image_5559450" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none; display: block; float: left; position: relative; height: 67.36px; border: 2px solid rgb(136, 153, 153); width: 100px; margin: 0px 10px; overflow: hidden; border-radius: 10px; transition: border-color 0.5s ease 0s;"><img src="https://www.iribnews.ir/files/fa/news_albums/2900282/109625/thumbnails/thm_5561564_816.jpg" class="img-responsive-news img-responsive" style="box-sizing: border-box; border: none; vertical-align: middle; display: block; max-width: 100%; height: 63.3594px; float: left; width: 96px; position: absolute; top: 0px; left: 0px;"></a></div></div></div></div></div></div></div></div></div><div class="row" style="box-sizing: border-box; margin-right: 0px !important; margin-left: 0px !important; color: rgb(51, 51, 51); font-family: IRANSansLight, Arial; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><div class="col-sm-28 col-xs-36 adv_col_news_page" style="box-sizing: border-box; position: relative; min-height: 1px; float: right; width: 340px;"><div style="box-sizing: border-box; display: block;"><div style="box-sizing: border-box; padding-bottom: 15px;"><a href="http://www.iribnews.ir/fa/ads/redirect/a/9" target="_blank" style="box-sizing: border-box; color: rgb(51, 122, 183); outline: none; background-color: transparent; text-decoration: none;"><br class="Apple-interchange-newline"></a></div></div></div></div>
+
+</p>
+            <p><br></p>
+        </div>
+
+
+        <ul class="clearfix">
+            
+                        <li style="float: left; list-style: none outside none;">
+                <div style="float: left; margin-left: 17px; margin-right: 17px; margin-top: -4px;"> <script>mihanblogPostLike('2441','like')</script></div>
+                <a target="_self" href="http://choopananabad.mihanblog.com/post/2441#commentlist" class="comment-link">نظرات(<script>setCommentCnt(2441)</script>)</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="cb_share clearfix">
+        <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://choopananabad.mihanblog.com/post/2441&amp;title=روستای چوپانان نگین خشتی وگلی جهان در کویر">
+            ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+        </a>
+    </div>
+
+<!-- comment -->
+<div>
+
+
+    <style>
+
+            /*** COMMENT BODY***/
+        .comment_body{
+            background: #e6dab9;
+            margin:10px;
+            border-radius: 5px;
+            border-right:5px solid #ded1ac;
+            overflow:hidden
+
+        }
+
+        .comment .comment_reply {
+            background: #f8f2e1;
+            border-right: 5px solid #f0ead8;
+            border-radius: 5px;
+            font-size: 12px;
+            width: 350px;
+            margin-top:10px;
+            overflow:hidden
+        }
+
+
+        .comment .name {
+            font-weight: 600;
+            color: #4E3E09;
+            padding-right: 5px;
+            text-align: right;
+            line-height: 26px;
+            float: right;
+        }
+
+
+        .comment .date {
+            font-size: 10px;
+            padding: 5px;
+            color: #7E7E7E;
+            float: left;
+        }
+
+
+        .comment .comemnt_web {
+            padding: 5px 0 5px 15px; color: #999; direction: ltr; text-align: left;
+
+        }
+
+
+        .comment .comemnt_web a {
+            color: #554c3d;
+            text-decoration: underline;
+        }
+
+        .comment .comemnt_text {
+            text-align: justify;
+            line-height: 1.5em;
+            padding: 2px 5px;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .comment_det{
+            border-bottom:1px solid #e4dabd;
+            padding:4px;
+
+        }
+
+
+        .comment .name,.date,.comemnt_text,.comment_reply{
+            margin-right:3px;
+            padding-right:3px;
+
+        }
+
+            /**** COMMENT FORM ****/
+
+        .comment_form {
+            background: none repeat scroll 0 0 #ece5d9;
+            border-radius: 5px 5px 5px 5px;
+            border-right: 5px solid #dcceb7;
+            direction: rtl;
+            margin: 10px;
+            padding: 20px;
+        }
+
+
+
+        .comment_form label {
+            width: 100px;
+            display: block;
+            float: right;
+            text-align: left;
+            font-size: 11px;
+            color: #555;
+            padding-left: 10px;
+        }
+
+
+        .comment_form .comment_form_row {
+            margin: 3px 0;
+        }
+
+
+        #imageCodeWrapper .imageCode_input #imgstr {
+            font-size: 25px;
+            height: 34px;
+            width: 70px;
+        }
+
+        .comment_form input.btn:hover {
+            background: white;
+        }
+
+
+        .comment_form input.btn {
+            padding: 0px 10px;
+            background: #FCE49B;
+            border: 1px solid #F9CA3B;
+            height: 21px;
+            font: 11px tahoma, Verdana;
+        }
+        .comment_form_textbox {
+            width:240px;
+
+        }
+        .comment_form_textarea{
+            width:240px;
+        }
+
+
+
+        .comment_form .comment_form_textarea, .comment_form .comment_form_textbox {
+            border: 1px solid #C5C5C5;
+        }
+
+
+
+
+    </style>
+
+    </div>
+
+<!-- End comment -->
+
+
+<div class="general_box">
+    </div>
+
+<div align="center" class="page_box clearfix">
+    <ul><li>کل صفحات:132&nbsp;&nbsp;</li><li><a href="http://choopananabad.mihanblog.com/page/1"><b>1</b></a><li><li><a href="http://choopananabad.mihanblog.com/page/2"><span>2</span></a><li><li><a href="http://choopananabad.mihanblog.com/page/3"><span>3</span></a><li><li><a href="http://choopananabad.mihanblog.com/page/4"><span>4</span></a><li><li><a href="http://choopananabad.mihanblog.com/page/5"><span>5</span></a><li><li><a href="http://choopananabad.mihanblog.com/page/6"><span>6</span></a><li><li><a href="http://choopananabad.mihanblog.com/page/7"><span>7</span></a><li><li><a href="http://choopananabad.mihanblog.com/page/8"><i>...</i></a><li> &nbsp;&nbsp;
+    <br>
+</div>
+
+
+
+
+
+</div><!--/content -->
+
+<!-- begin sidebar -->
+
+<div id="sidebar">
+
+    <form id="frm-16077904335fd4ef618b326" method="get" action="http://choopananabad.mihanblog.com/post/search/fid/16077904335fd4ef618b326"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+        <ul class="clearfix">
+            <li>
+                <div id="searchform"">
+                <table width="100%" dir="rtl" border="0" cellspacing="3" cellpadding="0">
+                    <tr>
+                        <td><input type="text" value="" name="search_text" id="s" /></td>
+
+                        <td><input type="submit" id="searchsubmit" value="جستجو" /></td>
+                    </tr>
+                </table>
+</div>
+</li>
+</ul>
+<input type="hidden" name="frm-id" value="16077904335fd4ef618b326" id="frm-id" /></form>
+<div class="rsslinks">
+    <ul id="rss_box">
+        <li><a href="http://choopananabad.mihanblog.com/post/rss/">RSS</a></li>
+        <li><a href="http://choopananabad.mihanblog.com/post/atom/">ATOM</a></li>
+    </ul>
+
+</div>
+
+
+<ul id="mainul">
+
+    <div id="logo"><img src="../static.mihanblog.com/public/user_data/web_photo/355/1062692.jpg@7911"  /></div>
+    <div id="about" class="clearfix"></div>
+    <div align="center"><a href="http://choopananabad.mihanblog.com/post/author/907709"><b>نسل سومی(ابوالقاسم مستقیمی)</b></a></div>
+
+            <li id="recent-posts" class="widget widget_recent_entries">
+            <h2 class="sidebartitle">آخرین پستها</h2>
+            <ul >
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/2461" >محصولات کشاورزی بیمه می شود</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/2459" >باران ۱۶ آذر ۹۹</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/2458" >http://www.agri-naein.ir/thumbnail.aspx?Quality=100&amp;width=250&amp;ImageURL=\portals\20\pic%20khabar99.9.4.jpg</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/2456" >اسباب بازی‌های قاچاق به مقصد نرسید</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/2455" >شنبه ۹۹/۹/۸چوپانان باران بارید</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/2454" >بارش خوب چوپانان و منطقه در شبانروز یکشنبه99/2/9</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/2452" >مختل شدن فشرده سازی گاز در ایستگاه مادر(نایین) در زمستان</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/2451" >رئیس اداره راه و شهرسازی  نایین تعویض شد</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/2450" >کشت جو جایگزین گندم</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/2448" >جمعه هم در چوپانان باران بارید</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/2447" >بارندگی خوب در چوپانان و مناطق اطراف</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/2444" >مرگ کارگر معدن مس انارک بر اثر سقوط در دستگاه انتقال مواد</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/2443" > بیش از 59 کیلوگرم مواد مخدر در سه راهی چوپانان کشف شد</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/2442" >حاجی استاد اصغر افضل، معماری كاردان و بنّائی همه فن حریف</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/2441" >روستای چوپانان نگین خشتی وگلی جهان در کویر</a><br>
+                    </li>
+                                <li>
+                    <a href="http://choopananabad.mihanblog.com/post/list" ><b>همه پستها</b></a><br>
+                </li>
+            </ul>
+        </li>
+    
+            <li id="" class="widget"><h2 class="sidebartitle">طبقه بندی</h2>
+            <ul>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/8"><p>آینده نگری</p><p>(217)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/10"><p>امور اجتماعی</p><p>(573)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/14"><p>امور فرهنگی</p><p>(307)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/2"><p>بازاریابی</p><p>(32)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/7"><p>تاریخ چوپانان</p><p>(159)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/15"><p>جغرافیای چوپانان</p><p>(62)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/16"><p>خاطره ها</p><p>(100)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/21"><p>ریگ جن</p><p>(5)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/4"><p>زراعت و باغبانی</p><p>(120)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/1"><p>عقب افتادگی</p><p>(14)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/3"><p>قنات</p><p>(42)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/17"><p>گردشگری</p><p>(119)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/12"><p>گیاه و جانورشناسی منطقه</p><p>(65)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/9"><p>مالكیت</p><p>(24)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/11"><p>معرفی بزرگان</p><p>(191)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/5"><p>نگاه دیگران</p><p>(35)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/6"><p>نغمه ها</p><p>(13)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/20"><p>نوشته های افضل</p><p>(10)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/18"><p>نوشته های راهی</p><p>(37)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/19"><p>نوشته های نسل سومی</p><p>(27)</p></a><br>
+                    </li>
+                                    <li class="clearfix" id="parentheses">
+                        <a href="http://choopananabad.mihanblog.com/post/category/13"><p>همسایه ها</p><p>(264)</p></a><br>
+                    </li>
+                            </ul>
+        </li>
+    
+            <li id="" class="widget"><h2 class="sidebartitle">آرشیو</h2>
+            <ul>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/archive/1399/9"> آذر 1399</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/archive/1399/8"> آبان 1399</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/archive/1399/7"> مهر 1399</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/archive/1399/6"> شهریور 1399</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/archive/1399/5"> مرداد 1399</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/archive/1399/4"> تیر 1399</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/archive/1399/3"> خرداد 1399</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/archive/1399/2"> اردیبهشت 1399</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/archive/1399/1"> فروردین 1399</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/archive/1398/12"> اسفند 1398</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/archive/1398/11"> بهمن 1398</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/post/archive/1398/10"> دی 1398</a><br>
+                    </li>
+                                <li>
+                    <b><a href="http://choopananabad.mihanblog.com/post/archive">لیست آرشیوها</a></b>
+                </li>
+            </ul>
+        </li>
+    
+    
+        <li id="" class="widget"><h2 class="sidebartitle">صفحات جانبی</h2>
+            <ul>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/extrapage/ovghatesharei">اوقات شرعی چوپانان</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/extrapage/abohava">پیش بینی وضع آّب و هوای چوپانان</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/extrapage/4">قسمت 4 نصرالله خان</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/extrapage/3">ادامه قسمت 2</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/extrapage/2">قسمت 2 نصرالله خان</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananabad.mihanblog.com/extrapage/1">آن گور غریب(سرگذشت نصرالله‌خان) قسمت 1</a><br>
+                    </li>
+                            </ul>
+        </li>
+    
+    
+        <li id="" class="widget"><h2 class="sidebartitle">پیوندها</h2>
+            <ul>
+                                    <li>
+                        <a href="http://www.itpnews.com/" title="" target="_blank">آی تی پی نیوز</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://www.anaraknews.com/" title="" target="_blank">انارک نیوز</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://www.blogsky.com" title="" target="_blank">بلاگ اسكای</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://www.persiangig.com/" title="" target="_blank">`پرشین گیگ</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://www.jandagh.com/" title="" target="_blank">جندق نیوز</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://shahedestan.blogfa.com/" title="" target="_blank">چاهملك در گذر زمان</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://chupanan.blogsky.com/" title="" target="_blank">چوپانان زادبوم من</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopananvatan.blogfa.com/" title="" target="_blank">چوپانان منظم ترین دهستان خشتی ایران</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://harfonaghl.persianblog.ir/" title="" target="_blank">حرف و نقل</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://choopanan.mihanblog.com" title="" target="_blank">خبرگزاری چوپانان</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://doolende.mihanblog.com/" title="" target="_blank">دولنده</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://khabardost.blogfa.com/" title="" target="_blank">زیارتگاه شاه چراغ شهر انارک</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://ourgens.myheritage.ir/" title="" target="_blank">شجره‌نامه ما</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://abbaskadkhoda.blogfa.com/" title="" target="_blank">عباس كدخدا</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://www.bayazeh.ir/" title="" target="_blank">میراث فرهنگی بیاضه</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://www.isfahaneast.com" title="" target="_blank">نائین</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://nainna.ir/" title="" target="_blank">نائینا</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://chopponoon.mihanblog.com/" title="" target="_blank">چوپونون</a><br>
+                    </li>
+                                    <li>
+                        <a href="http://www.agri-naein.ir" title="" target="_blank">کشاورزی نائین</a><br>
+                    </li>
+                                <li>
+                    <b><a href="http://choopananabad.mihanblog.com/link/"> لیست پیوندها</a></b>
+                </li>
+            </ul>
+        </li>
+    
+    
+            <li id="" class="widget"><h2 class="sidebartitle">نویسندگان</h2>
+            <ul>
+                                    <li id="parentheses" class="clearfix">
+                        <p><a href="http://choopananabad.mihanblog.com/post/author/907709"><img src="../static.mihanblog.com/public/user_data/user_photo/303/907709.jpg" style="width:16px;" /></a></p><a href="http://choopananabad.mihanblog.com/post/author/907709"><p>نسل سومی(ابوالقاسم مستقیمی)</p><p>(1966)</p></a>
+                    </li>
+                            </ul>
+        </li>
+    
+    
+		
+            <li id="" class="widget"><h2 class="sidebartitle">آمار وبلاگ</h2>
+            <ul class="stat clearfix">
+                <li>کل بازدید : <span><script>getStatVar('total_view');</script></span></li>
+                <li>بازدید امروز :<span><script>getStatVar('today_view');</script></span></li>
+                <li>بازدید دیروز : <span><script>getStatVar('yesterday_view');</script></span></li>
+                <li>بازدید این ماه : <span><script>getStatVar('this_month_view');</script></span></li>
+                <li>بازدید ماه قبل : <span><script>getStatVar('last_month_view');</script></span></li>
+                <li>تعداد نویسندگان : <span><script>getStatVar('total_author');</script></span></li>
+                <li>تعداد کل پست ها : <span><script>getStatVar('total_post');</script></span></li>
+                <li>آخرین بازدید : <span><script>getStatVar('last_view_date');</script></span></li>
+                <li>آخرین بروز رسانی : <span><script>getStatVar('modify_date');</script></span></li>
+
+            </ul>
+        </li>
+    
+
+            <li id="" class="widget"><h2 class="sidebartitle">اَبر برچسبها</h2>
+            <ul class="clearfix cloud_box">
+                                    <li class="cloud_li" style="line-height:1.1em"><a href="http://choopananabad.mihanblog.com/post/tag/%D9%85%D8%B9%D8%B1%D9%81%DB%8C+%D8%A8%D8%B2%D8%B1%DA%AF%D8%A7%D9%86" style="font-size:1em">معرفی بزرگان&nbsp;</a></li>
+                                <br><br>
+            </ul>
+        </li>
+    
+</ul>
+
+<div  align="center" class="clearfix script_box"><script></script></div><br>
+<div align="center" class="mihan_logo"></div>
+
+</div>
+
+<!-- end sidebar -->
+<hr class="clear" />
+</div><!--/page -->
+</div><!--/wrapper -->
+
+<div id="footer">
+    <div class="alignleft"><p><strong>POWERED BY <a href="../www.mihanblog.com/index.html"><font color="#FF0000" size="2px">M</font>IHAN<font color="#FF0000" size="2px">B</font>LOG.COM</a></strong><br />
+        Themes by <a title="N95 Nokia">www.RealGeek.com/Nokia-n95/</a> , <a>www.AvivaDirectory.com</a>
+    </div>
+
+    <div class="alignright"></div>
+</div>
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'choopananabad.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

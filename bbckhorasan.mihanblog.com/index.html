@@ -1,0 +1,1725 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://bbckhorasan.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه بیست و سوم آذرماه سال 1399');
+		/*749308*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[1051]='15';commentCnt[1052]='5';commentCnt[1053]='98';commentCnt[1054]='15';commentCnt[1056]='9';commentCnt[1057]='9';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[1051]='0';
+mihanblogDisLikeArrCnt[1051]='0';
+mihanblogLikeArrCnt[1052]='0';
+mihanblogDisLikeArrCnt[1052]='0';
+mihanblogLikeArrCnt[1053]='0';
+mihanblogDisLikeArrCnt[1053]='0';
+mihanblogLikeArrCnt[1054]='0';
+mihanblogDisLikeArrCnt[1054]='0';
+mihanblogLikeArrCnt[1056]='0';
+mihanblogDisLikeArrCnt[1056]='0';
+mihanblogLikeArrCnt[1057]='0';
+mihanblogDisLikeArrCnt[1057]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://bbckhorasan.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://bbckhorasan.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','1039');
+	setStatVar('total_author','4');
+	setStatVar('modify_date','دوشنبه سی و یکم خردادماه سال 1395');
+	
+	setStatVar('today_view','25');
+	setStatVar('yesterday_view','117');
+	
+	setStatVar('this_month_view','7671');
+	setStatVar('last_month_view','12578');
+
+	setStatVar('total_view','1156386');
+	setStatVar('last_view_date','یکشنبه بیست و سوم آذرماه سال 1399 (05:51)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://bbckhorasan.mihanblog.com/statupdate/?data[refereruri]=http://ko0cho0lo0.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607828999&data[hash]=b138a2ac72761ceced19a8c01af5c9b7&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://bbckhorasan.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://bbckhorasan.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://bbckhorasan.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://bbckhorasan.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://bbckhorasan.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://bbckhorasan.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://bbckhorasan.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://bbckhorasan.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://bbckhorasan.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://bbckhorasan.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://bbckhorasan.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://bbckhorasan.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://bbckhorasan.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://bbckhorasan.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://bbckhorasan.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://bbckhorasan.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Theme-Designer" content="www.MyTheme.ir">
+
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="alternate" type="application/rss+xml" title="بی بی سی نیوز" href="http://bbckhorasan.mihanblog.com/post/rss/" />
+    <link rel="alternate" type="application/atom+xml" title="بی بی سی نیوز" href="http://bbckhorasan.mihanblog.com/post/atom/" />
+    <link href="http://mihanblog.com/public/public/user_data/template/2099991/style.css" type="text/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://mihanblog.com/public/public/user_data/template/2099991/nivo-slider.css" type="text/css">
+
+    <script type="text/javascript" src="http://mihanblog.com/public/public/user_data/template/2099991/jquery-1.4.3.min.js"></script>
+    <script type="text/javascript" src="http://mihanblog.com/public/public/user_data/template/2099991/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript">
+        var jq=jQuery.noConflict();
+        jq(window).load(function() {
+            jq('#slider').nivoSlider();
+        });
+    </script>
+
+    <title>بی بی سی نیوز</title>
+</head>
+
+<body>
+<div align="center">
+<table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td class=div2>
+<div class=div00>
+
+<div class=div60>
+    <div class=div101>
+        <div class=div10><font class=title>بی بی سی نیوز</font></div></div>
+    <div class=div11>
+        <div class=div12><font class=des>پایگاه خبری بی بی سی نیوز خراسان</font></div></div>
+</div>
+
+<div class=ss>
+    <div class=s1><form id="frm-16078115305fd541ca5676b" method="get" action="http://bbckhorasan.mihanblog.com/post/search/fid/16078115305fd541ca5676b"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+        <div class=s2>
+            <input type="text" name="search_text" size="21" style="border: 0px none; color:#fff; background: none; font-family:Tahoma; font-size:9pt; direction:ltr"></div>
+        <div class=s3><input type="image" src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width=30 height=30 value="در سایت بگرد"></div>
+    <input type="hidden" name="frm-id" value="16078115305fd541ca5676b" id="frm-id" /></form></div>
+
+    <div class=s5><font class=text10><a href="index.html">صفحه نخست</a>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="mailto:sigeirezaiy@yahoo.com">پست الکترونیک</a>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="javascript:messageForm()">تماس با ما</a>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://bbckhorasan.mihanblog.com/post/atom/">ATOM</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://www.mytheme.ir" target="_blank">طراح قالب</a>
+    </font></div>
+
+    <div class="mytheme">
+        <div class="mytheme4">
+            <g:plusone size="medium"></g:plusone>
+            <script type="text/javascript">
+                window.___gcfg = {lang: 'fa'};
+                (function() {
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                    po.src = 'https://apis.google.com/js/plusone.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                })();
+            </script></div>
+    </div>
+
+</div>
+
+<div id="wrapper">
+    <div id="slider-wrapper">
+        <div id="slider" class="nivoSlider">
+
+            <!--- Start Slide Images -->
+
+            <img src="http://mihanblog.com/public/public/user_data/template/2099991/pic1.jpg" alt="گروه طراحی قالب من" width="960" height="320" border="0">
+            <img src="http://mihanblog.com/public/public/user_data/template/2099991/pic2.jpg" alt="گروه طراحی قالب من" width="960" height="320" border="0">
+            <img src="http://mihanblog.com/public/public/user_data/template/2099991/pic3.jpg" alt="گروه طراحی قالب من" width="960" height="320" border="0">
+            <img src="http://mihanblog.com/public/public/user_data/template/2099991/pic1.jpg" alt="گروه طراحی قالب من" width="960" height="320" border="0">
+            <img src="http://mihanblog.com/public/public/user_data/template/2099991/pic2.jpg" alt="گروه طراحی قالب من" width="960" height="320" border="0">
+
+            <!-- End Slide Images s-->
+
+        </div>
+    </div>
+</div>
+
+<div class=div170>
+    <div class=mdiv170>
+
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>درباره وبلاگ</font></div></div>
+            <div class=div341>
+                <div class=sm></div>
+                <div class=div32><font class=text1><center><br><br>
+                    این وبلاگ در13/10/2011 طراحی شده است<br />
+پایگاه خبری بی بی سی نیوز با افتخار اعلام میکند ما شعارمان اخباری متفاوت است.<br />
+برای دیدن اخبار فقط یک کلیک فاصله است.بی بی سی نیوز احوالی خوش برایتان ارزو مند است.سیت از واشنگتن اپدیت میشود.<br />
+با تشکر<br />
+سجاد رضایی</center><br>
+                    <b>مدیر وبلاگ :</b><a href="http://bbckhorasan.mihanblog.com/post/author/617412">سجاد رضایی</a></font></div>
+            </div><div class=div30></div>
+        </div>
+
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>مطالب اخیر</font></div></div>
+            <div class=div341><font class=text1><ul>
+                <li><h2><a href="http://bbckhorasan.mihanblog.com/post/1057">قهرمان من</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1056">دانلود سوالات فصلهای 3و4و6</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1054">لیست و قیمت های بنر تبلیغاتی در پایگاه خبری بی بی سی نیوز خراسان</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1053">سحر جعفری جوزانی برای اولین بار از مادر آمریکایی‎اش رونمایی کرد!</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1052">برای اولین بار در ایران فیلمی بدون فیلمبردار ساخته شد! +عکس</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1051">لباس بازیگران در جشنواره فجر34 دردسرساز شد!</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1050">یک کاریکاتور فوق العاده جالب از روحانی</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1049">بازهم اخاذی با شیوه تجاوز و فیلم گرفتن، چرا دختران ما هوشیار نمیشوند؟</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1048">طعنه ظریف به رسانه ملی به خاطر 90!</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1047">تصویر ظریف روی بیلبورد بزرگراه های آمریکا </a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1046">زندگی واقعی دختران مدل و مانکن! عکس</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1045">عکس هایی از تیپ و پوشش نیکی کریمی در آلمان</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1044">عکس های آنا نعمتی و دوستانش در یک کافی شاپ</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1043">بانک ملت نیرو استخدام مینماید</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1042"> فروش ایران‌ خودرو، سایپا و زامیاد سقوط کرد</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1041"> داعش بازهم سر برید+ عکس(+18)</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1040"> فراخوان انتخاباتی هاشمی رفسنجانی</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1039"> تسلیت علی دایی به فرمانده نیروی انتظامی</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1038">کفاشیان نایب رییس AFC شد</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1037">درخواست آمریکا از ایران برای حل بحران در یمن</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1036">سنای آمریکا مشروط بودن لغو تحریم های ایران را رد کرد</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1035"> خرید تجهیزات برای راکتور اراک نقض توافق ژنو نیست </a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1034"> نام نویسی آزمون دکتری تا ۲۳ آذر </a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1033"> رکورد نام برای «RQ۱۷۰»</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1032"> «نصرالله»، نام جنگ آینده لبنان با رژیم صهیونیستی</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1030"> پیکر جان‌باختگان سانحه هوایی در طبس تشییع شد</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1031"> سرنوشت آتشین قاچاقچیان سوخت و انسان</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1029">امنیت ایران ناشی از وحدت اقوام با یکدیگر است</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1023"> دختر «چاوز» نماینده ونزوئلا در سازمان ملل شد</a></h2></li><li><h2><a href="http://bbckhorasan.mihanblog.com/post/1021"> دستگیری 30 نفر مرتبط با القاعده در ایران</a></h2></li>            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>آرشیو وبلاگ</font></div></div>
+            <div class=div341><font class=text1><ul>
+                <li><a href="http://bbckhorasan.mihanblog.com/post/archive/1395/3/4"> هفته چهارم خرداد 1395</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1394/11/2"> هفته دوم بهمن 1394</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1394/10/4"> هفته چهارم دی 1394</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1394/8/3"> هفته سوم آبان 1394</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1394/6/4"> هفته چهارم شهریور 1394</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1394/2/2"> هفته دوم اردیبهشت 1394</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1393/9/3"> هفته سوم آذر 1393</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1393/5/4"> هفته چهارم مرداد 1393</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1393/3/4"> هفته چهارم خرداد 1393</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1393/1/4"> هفته چهارم فروردین 1393</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1392/11/3"> هفته سوم بهمن 1392</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1392/9/3"> هفته سوم آذر 1392</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1392/7/4"> هفته چهارم مهر 1392</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1392/7/2"> هفته دوم مهر 1392</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1392/6/4"> هفته چهارم شهریور 1392</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1392/6/2"> هفته دوم شهریور 1392</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1392/6/1"> هفته اول شهریور 1392</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1392/5/2"> هفته دوم مرداد 1392</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1392/4/4"> هفته چهارم تیر 1392</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1392/4/2"> هفته دوم تیر 1392</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1392/4/1"> هفته اول تیر 1392</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1392/2/3"> هفته سوم اردیبهشت 1392</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1392/1/3"> هفته سوم فروردین 1392</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1392/1/2"> هفته دوم فروردین 1392</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/12/4"> هفته چهارم اسفند 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/12/3"> هفته سوم اسفند 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/12/1"> هفته اول اسفند 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/11/4"> هفته چهارم بهمن 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/11/2"> هفته دوم بهمن 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/10/3"> هفته سوم دی 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/10/2"> هفته دوم دی 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/10/1"> هفته اول دی 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/9/4"> هفته چهارم آذر 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/9/3"> هفته سوم آذر 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/9/2"> هفته دوم آذر 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/9/1"> هفته اول آذر 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/8/4"> هفته چهارم آبان 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/8/2"> هفته دوم آبان 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/8/1"> هفته اول آبان 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/7/4"> هفته چهارم مهر 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/7/3"> هفته سوم مهر 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/7/2"> هفته دوم مهر 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/6/4"> هفته چهارم شهریور 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/6/3"> هفته سوم شهریور 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/6/2"> هفته دوم شهریور 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/5/4"> هفته چهارم مرداد 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/5/3"> هفته سوم مرداد 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/5/1"> هفته اول مرداد 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/4/4"> هفته چهارم تیر 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/4/3"> هفته سوم تیر 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/4/1"> هفته اول تیر 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/3/2"> هفته دوم خرداد 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/3/1"> هفته اول خرداد 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/2/4"> هفته چهارم اردیبهشت 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/2/3"> هفته سوم اردیبهشت 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/2/2"> هفته دوم اردیبهشت 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/2/1"> هفته اول اردیبهشت 1391</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/archive/1391/1/4"> هفته چهارم فروردین 1391</a></li>                <li><b><a href="http://bbckhorasan.mihanblog.com/post/archive">آرشیو كل مطالب</a></b></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>نویسندگان</font></div></div>
+            <div class=div341><font class=text1><ul>
+                <li><a href="http://bbckhorasan.mihanblog.com/post/author/617412">سجاد رضایی (1039)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/author/918683">رها حسینی (0)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/author/918685">سحر زرینی (0)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/author/918689">مینا سرور (0)</a></li>            </ul></font></div><div class=div30></div>
+        </div>
+        
+		<form id="frm-16078115305fd541ca57325" method="post" action="http://bbckhorasan.mihanblog.com/poll/new/fid/16078115305fd541ca57325/atrty/1607811530/avrvy/0/key/0b4ded661ea6c6239b40cd7581b62d28/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="208258" id="data[pollid]" />		<div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>نظرسنجی</font></div></div>
+            <div class=div341>
+                <div class=sm></div>
+                <div class=div32><font class=text1>
+                    از این وبلاگ راضی هستید؟؟<br>
+                    <label><input type="radio" name="data[answer]" value="v1">بله کاملا</label><br><label><input type="radio" name="data[answer]" value="v2">بله متوسط</label><br><label><input type="radio" name="data[answer]" value="v3">خیر راضی نیستم</label><br>                    <div align="center"><br><input type="submit" value="ثبت" style="font-family: Tahoma; font-size: 9pt"></div>
+                </font></div></div><div class=div30></div>
+        </div>
+		<input type="hidden" name="frm-id" value="16078115305fd541ca57325" id="frm-id" /></form>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>برچسبها</font></div></div>
+            <div class=div341><font class=text1><ul>
+                <li><a href="http://bbckhorasan.mihanblog.com/post/tag/%DA%A9%D8%A7%D9%87%D8%B4">کاهش</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%BA%D8%B2%D9%87">غزه</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%AF%D8%B3%D8%AA%DA%AF%DB%8C%D8%B1%DB%8C">دستگیری</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A7%D8%AD%D9%85%D8%AF%DB%8C+%D9%86%DA%98%D8%A7%D8%AF">احمدی نژاد</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86">ایران</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%85%D8%B1%D8%AF%D9%85">مردم</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%86%D9%81%D8%AA">نفت</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A7%D8%AD%D9%85%D8%AF%DB%8C%E2%80%8C%D9%86%DA%98%D8%A7%D8%AF">احمدی‌نژاد</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%AD%D9%85%D9%84%D9%87">حمله</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%AD%D9%85%D8%A7%DB%8C%D8%AA">حمایت</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A7%D9%86%DA%AF%D9%84%DB%8C%D8%B3">انگلیس</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%B2%D9%86">زن</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%D9%87">نماینده</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%DA%A9%D8%B4%D9%88%D8%B1">کشور</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A8%DB%8C+%D8%A8%DB%8C+%D8%B3%DB%8C+%D9%86%DB%8C%D9%88%D8%B2">بی بی سی نیوز</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A7%D8%B2%D8%AF%D9%88%D8%A7%D8%AC">ازدواج</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%85%D8%B4%D9%87%D8%AF">مشهد</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A7%D9%85%D8%B1%D9%88%D8%B2">امروز</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%88%D8%A7%DA%A9%D9%86%D8%B4">واکنش</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%BE%D8%B1%D8%B3%D9%BE%D9%88%D9%84%DB%8C%D8%B3">پرسپولیس</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C">ایرانی</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%AF%D9%88%D9%84%D8%AA">دولت</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%82%DB%8C%D9%85%D8%AA">قیمت</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%B9%DA%A9%D8%B3">عکس</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%AA%D9%87%D8%B1%D8%A7%D9%86">تهران</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%AC%D8%AF%DB%8C%D8%AF">جدید</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A7%D8%B9%D9%84%D8%A7%D9%85">اعلام</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%B1%D8%A6%DB%8C%D8%B3+%D8%AC%D9%85%D9%87%D9%88%D8%B1">رئیس جمهور</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%B7%D8%B1%D8%AD">طرح</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A7%D9%88%D8%A8%D8%A7%D9%85%D8%A7">اوباما</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D8%A7%D8%AA">انتخابات</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%AA%D8%AC%D8%A7%D9%88%D8%B2">تجاوز</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85">استخدام</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%B9%D8%B1%D8%A8%D8%B3%D8%AA%D8%A7%D9%86">عربستان</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%B3%D9%88%D8%B1%DB%8C%D9%87">سوریه</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%AF%D8%AE%D8%AA%D8%B1">دختر</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%AA%D8%B5%D8%A7%D9%88%DB%8C%D8%B1">تصاویر</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A7%D8%B3%D8%B1%D8%A7%D8%A6%DB%8C%D9%84">اسرائیل</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87">دانشگاه</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%81%D8%B1%D9%88%D8%B4">فروش</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%BE%DB%8C%D8%A7%D9%85">پیام</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A2%D9%85%D8%B1%DB%8C%DA%A9%D8%A7">آمریکا</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%85%D8%AA%D8%B1%D9%88">مترو</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%85%D8%AC%D9%84%D8%B3">مجلس</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A7%D8%B3%D8%AA%D9%82%D9%84%D8%A7%D9%84">استقلال</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%BE%D9%84%DB%8C%D8%B3">پلیس</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A8%D9%86%D8%B2%DB%8C%D9%86">بنزین</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A2%D8%BA%D8%A7%D8%B2">آغاز</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%AA%D8%B1%DA%A9%DB%8C%D9%87">ترکیه</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%AD%D9%88%D8%A7%D8%AF%D8%AB">حوادث</a></li>            </ul></font></div><div class=div30></div>
+        </div>
+    </div>
+</div>
+
+<div class=div200>
+    <div class=div20>
+
+        		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+            <div class=div15>
+                <div class=div015></div>
+                <div class=div18><font class=text6><h2><a href="http://bbckhorasan.mihanblog.com/post/1057">قهرمان من</a></h2></font></div>
+            </div>
+            <div class=div21>
+                <div class=div55></div>
+                <div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<div class="widget widget__desc" align="right">
+            <p>
+                همه شاید فکر کنند که قهرمان ها فقط تو داستان ها و فیلم 
+های سینمایی هستن یا شاید اصلا فکر کنن که تو زندگی عادی روزمرشون و آدمای 
+اطرافشون هیچ قهرمانی وجود نداره. </p><p>
+                ماه رمضون امسال با همکاری برنامه ماه عسل میخوایم همه شما
+ ماه عسلی ها رو به چالش بکشیم. میخوایم شما رو دعوت کنیم تا ماه عسل 
+خودتون رو بسازید. پس بیاید و قهرمان های خاموش دور و بر خودتون رو به همه 
+معرفی کنید. واضح تر بگم، ما دنبال آدم های خاص و سلبریتی ها مثل شهاب 
+حسینی یا ترانه علیدوستی نیستیم، میخوایم شما قهرمان هایی که اطرافتون 
+زندگی می کنن و معمولا با مشکلات زیادی مواجه هستن رو معرفی کنید. این 
+قهرمانها می تونن در نهایت تنگ دستی باشن یا مثلا کسی که با بزرگ کردن و 
+نگهداری از یک بچه معلول دست و پنجه نرم می کنه. این آدم نه تنها از هیشکی 
+توقعی نداره و اهل نالیدن نیست بلکه از خوشروترین افرادی هست که میشناسید. 
+اصلا فرض کنید کسی رو میشناسید که در اثر یک حادثه، ورشکسته شده اما دوباره
+ تونسته کسب و کار خودش رو راه بندازه و الان آدم بسیار موفقی شده. مثال 
+این آدما و قهرمانها اطرافتون خیلی زیاده. کافیه چشماتون رو باز کنید، 
+مطمئنا آدمایی از این دست رو همتون میشناسید و می دونید اینا قهرمان های 
+واقعی اند. برای ما و دنیا، از قهرمان تون بگید و از دلایلتون برای اینکه 
+اون فرد رو قهرمان خودتون میدونید بنویسید. نیازی به داشتن وبلاگ تو میهن 
+بلاگ نیست، کافیه به صفحه "قهرمان من" مراجعه کنید و شروع به نوشتن کنید تا
+ دنیا با قهرمان تو آشنا بشه.
+            </p>
+
+            <br>
+
+            <p>
+
+
+
+
+
+احسان علیخانی هم متن های ارسالی شما رو میخونه و حتی اگر قهرمان شما 
+پتانسیل دعوت شدن به برنامه رو داشته باشه، برای حضور در برنامه ازش دعوت 
+میشه و در ویژه برنامه عید فطر هم حتما 7 نفر از این قهرمانان واقعی به 
+برنامه دعوت خواهند شد. <br></p><p><br></p><p><span style="background-color: rgb(255, 0, 0);">ویدیو ی این مطلب در قالب اصلی</span><br></p>
+        </div>
+
+
+
+
+                    <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                    <br><br><font color="#9a3b02">نوع مطلب :</font>
+                    <a href="http://bbckhorasan.mihanblog.com/post/category/8" class=text4>جالب</a>،&nbsp;<a href="http://bbckhorasan.mihanblog.com/post/category/4" class=text4>هنر وسینما</a>،&nbsp;                    <br><font color="#9a3b02">برچسب ها :</font>
+                    <a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%82%D9%87%D8%B1%D9%85%D8%A7%D9%86" class=text4>قهرمان</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A7%D8%AD%D8%B3%D8%A7%D9%86%20%D8%B9%D9%84%DB%8C%D8%AE%D8%A7%D9%86%DB%8C" class=text4>احسان علیخانی</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%85%D8%A7%D9%87%20%D8%B1%D9%85%D8%B6%D9%88%D9%86" class=text4>ماه رمضون</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86" class=text4>داستان</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%81%DB%8C%D9%84%D9%85%20%D9%87%D8%A7%DB%8C%20%D8%B3%DB%8C%D9%86%D9%85%D8%A7%DB%8C%DB%8C" class=text4>فیلم های سینمایی</a>،                     <br><font color="#9a3b02">لینک های مرتبط :</font>
+                                    </font>
+
+
+
+
+
+
+
+
+
+                </div></div>
+            <div class=div26>
+                <div class=div27><font class=text8><a href="http://bbckhorasan.mihanblog.com/post/1057#commentlist">نظرات (<script>setCommentCnt(1057)</script>)</a></font></div>
+                <div class=div270>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://bbckhorasan.mihanblog.com/post/1057&title=قهرمان من" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.stumbleupon.com/refer.php?url=http://bbckhorasan.mihanblog.com/post/1057&title=قهرمان من" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.youtube.com/?url=http://bbckhorasan.mihanblog.com/post/1057&title=قهرمان من" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;&nbsp;
+                    <a href="http://www.facebook.com/share.php?u=http://bbckhorasan.mihanblog.com/post/1057&t=قهرمان من" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://twitter.com/home?status=Reading+this:+http://bbckhorasan.mihanblog.com/post/1057&title=قهرمان من" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://del.icio.us/post?&url=http://bbckhorasan.mihanblog.com/post/1057&title=قهرمان من" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>
+                </div>
+                <div class=div58><font class=text7><a href="http://bbckhorasan.mihanblog.com/post/author/617412">سجاد رضایی</a></font></div>
+                <div class=div581 style="padding-top: 10px;">
+
+                    <div style="float: left; margin-left: 50px;margin-top:-4px;"><script>mihanblogPostLike('1057','like')</script></div>
+
+                    <font class=text7>دوشنبه سی و یکم خردادماه سال 1395</font></div>
+            </div>
+
+            <div class=div54 style="background:#badb44;">
+                <style>
+
+
+
+
+                    .clearfix {display: inline-block;}
+                    .clearfix:after {
+                        content: ".";
+                        display: block;
+                        height: 0;
+                        clear: both;
+                        visibility: hidden;
+                    }
+
+
+
+
+                    .cblike{
+                        margin:4px 15px;
+                        float: left;
+                    }
+                    .cblike a {
+                        float:left;
+                        padding:3px;
+                        text-align:center;
+                        font-size:12px;
+                        color:#FFF;
+                        display:block;
+                        line-height:15px;
+                        text-decoration: none;
+                    }
+
+
+
+
+                    .cblike a.clike_plus {
+                        background-color:#009900 ; /*green #039B03*/
+
+                        border-radius: 5px ;
+
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+
+                        /*border:1px solid green;
+                  border-right:0px;*/
+                    }
+                    .cblike a.clike_minus {
+                        background-color:#CC0000;
+                        border-radius: 5px ;
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+
+                        /*border:1px solid red;
+                  border-left:0px;*/
+                    }
+                    .cblike a.clike_minus:hover {
+                        background-color:red;
+                        text-decoration: none;
+                    }
+                    .cblike a.clike_plus:hover {
+                        background-color:green;
+                        text-decoration: none;
+                    }
+                    .cblike a span{
+                        font-weight:bold;
+                        font-size:13px;
+
+                        color:#fff;
+                    }
+
+
+
+
+                    .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                    .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                    .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                    .com{ width:535px; float:left; background:#d4f16c; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+                    .com1{ width:517px; float:left; background:#709415; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                    .com3{ width:290px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                    .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                    .com4{ width:497px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com5{ width:497px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com6{ width:507px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                    .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+                </style>
+                            </div>
+
+        </div><div class=div54>
+            <div class=div15>
+                <div class=div015></div>
+                <div class=div18><font class=text6><h2><a href="http://bbckhorasan.mihanblog.com/post/1056">دانلود سوالات فصلهای 3و4و6</a></h2></font></div>
+            </div>
+            <div class=div21>
+                <div class=div55></div>
+                <div class=div56><font class=text4>
+سلام<br>حالتون چطوره هم کلاسیای خوبم.<br>زحمت کشیدم سوالات رو با جواباش رو گزاشتم.<br>برای دانلود به لینک زیر مراجعه نمایید.<br><br><br><br>
+
+
+
+<table id="yui_3_16_0_ym19_1_1465630589850_20496" class="yiv2783674535DTable" border="0" cellpadding="2" cellspacing="1">
+<tbody id="yui_3_16_0_ym19_1_1465630589850_20495"><tr id="yui_3_16_0_ym19_1_1465630589850_20494"><td id="yui_3_16_0_ym19_1_1465630589850_20534"><b id="yui_3_16_0_ym19_1_1465630589850_20544">Filename:</b></td><td id="yui_3_16_0_ym19_1_1465630589850_20493">فصل 3 متدولوژی.pdf</td></tr>
+<tr id="yui_3_16_0_ym19_1_1465630589850_20504"><td id="yui_3_16_0_ym19_1_1465630589850_20536"><b>Filesize:</b></td><td id="yui_3_16_0_ym19_1_1465630589850_20503">466 KB</td></tr>
+
+<tr id="yui_3_16_0_ym19_1_1465630589850_20526"><td id="yui_3_16_0_ym19_1_1465630589850_20552"><b>Download Link:</b></td><td id="yui_3_16_0_ym19_1_1465630589850_20525"><a id="yui_3_16_0_ym19_1_1465630589850_20524" rel="nofollow" target="_blank" href="http://uplod.ir/o1bfjdow0q1n/%D9%81%D8%B5%D9%84_3_%D9%85%D8%AA%D8%AF%D9%88%D9%84%D9%88%DA%98%DB%8C.pdf.htm">http://uplod.ir/o1bfjdow0q1n/فصل_3_متدولوژی.pdf.htm</a></td></tr>
+</tbody></table>
+<br><hr>
+
+
+
+<table id="yui_3_16_0_ym19_1_1465630589850_20510" class="yiv2783674535DTable" border="0" cellpadding="2" cellspacing="1">
+<tbody id="yui_3_16_0_ym19_1_1465630589850_20509"><tr id="yui_3_16_0_ym19_1_1465630589850_20508"><td><b>Filename:</b></td><td id="yui_3_16_0_ym19_1_1465630589850_20507">مدل های توسعه سیستم فصل 6.pdf</td></tr>
+<tr id="yui_3_16_0_ym19_1_1465630589850_20556"><td id="yui_3_16_0_ym19_1_1465630589850_20555"><b id="yui_3_16_0_ym19_1_1465630589850_20554">Filesize:</b></td><td>577 KB</td></tr>
+
+<tr id="yui_3_16_0_ym19_1_1465630589850_20560"><td id="yui_3_16_0_ym19_1_1465630589850_20559"><b id="yui_3_16_0_ym19_1_1465630589850_20558">Download Link:</b></td><td><a rel="nofollow" target="_blank" href="http://uplod.ir/8n5fqg8090di/%D9%85%D8%AF%D9%84_%D9%87%D8%A7%DB%8C_%D8%AA%D9%88%D8%B3%D8%B9%D9%87_%D8%B3%DB%8C%D8%B3%D8%AA%D9%85_%D9%81%D8%B5%D9%84_6.pdf.htm">http://uplod.ir/8n5fqg8090di/مدل_های_توسعه_سیستم_فصل_6.pdf.htm</a></td></tr>
+</tbody></table>
+<br><hr>
+
+
+
+<table id="yui_3_16_0_ym19_1_1465630589850_20566" class="yiv2783674535DTable" border="0" cellpadding="2" cellspacing="1">
+<tbody id="yui_3_16_0_ym19_1_1465630589850_20565"><tr id="yui_3_16_0_ym19_1_1465630589850_20564"><td id="yui_3_16_0_ym19_1_1465630589850_20563"><b id="yui_3_16_0_ym19_1_1465630589850_20562">Filename:</b></td><td>نمودار جریان داده فصل4.pdf</td></tr>
+<tr id="yui_3_16_0_ym19_1_1465630589850_20569"><td id="yui_3_16_0_ym19_1_1465630589850_20568"><b>Filesize:</b></td><td>278 KB</td></tr>
+
+<tr id="yui_3_16_0_ym19_1_1465630589850_20573"><td id="yui_3_16_0_ym19_1_1465630589850_20572"><b id="yui_3_16_0_ym19_1_1465630589850_20571">Download Link:</b></td><td><a rel="nofollow" target="_blank" href="http://uplod.ir/079xc4bi0ozc/%D9%86%D9%85%D9%88%D8%AF%D8%A7%D8%B1_%D8%AC%D8%B1%DB%8C%D8%A7%D9%86_%D8%AF%D8%A7%D8%AF%D9%87_%D9%81%D8%B5%D9%844.pdf.htm">http://uplod.ir/079xc4bi0ozc/نمودار_جریان_داده_فصل4.pdf.htm</a></td></tr>
+</tbody></table>
+<br><hr><font size="3"><span style="background-color: rgb(255, 0, 0);">با تشکر فراوان از استاد مهندس محسن اشرفی</span></font><br><br><font size="4" color="#33FF33"><b>سجاد رضایی</b></font><br><br><br><br><br><br><br>خیلی ممنونم که منو کوچک کردین.فردا منتظر پلیس سایبری باشین<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+                    <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                    <br><br><font color="#9a3b02">نوع مطلب :</font>
+                    <a href="http://bbckhorasan.mihanblog.com/post/category/10" class=text4>اخبار سایت</a>،&nbsp;                    <br><font color="#9a3b02">برچسب ها :</font>
+                    <a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF%20%D8%B3%D9%88%D8%A7%D9%84%D8%A7%D8%AA%20%D9%81%D8%B5%D9%84%D9%87%D8%A7%DB%8C%203%D9%884%D9%886" class=text4>دانلود سوالات فصلهای 3و4و6</a>،                     <br><font color="#9a3b02">لینک های مرتبط :</font>
+                                    </font>
+
+
+
+
+
+
+
+
+
+                </div></div>
+            <div class=div26>
+                <div class=div27><font class=text8><a href="http://bbckhorasan.mihanblog.com/post/1056#commentlist">نظرات (<script>setCommentCnt(1056)</script>)</a></font></div>
+                <div class=div270>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://bbckhorasan.mihanblog.com/post/1056&title=دانلود سوالات فصلهای 3و4و6" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.stumbleupon.com/refer.php?url=http://bbckhorasan.mihanblog.com/post/1056&title=دانلود سوالات فصلهای 3و4و6" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.youtube.com/?url=http://bbckhorasan.mihanblog.com/post/1056&title=دانلود سوالات فصلهای 3و4و6" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;&nbsp;
+                    <a href="http://www.facebook.com/share.php?u=http://bbckhorasan.mihanblog.com/post/1056&t=دانلود سوالات فصلهای 3و4و6" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://twitter.com/home?status=Reading+this:+http://bbckhorasan.mihanblog.com/post/1056&title=دانلود سوالات فصلهای 3و4و6" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://del.icio.us/post?&url=http://bbckhorasan.mihanblog.com/post/1056&title=دانلود سوالات فصلهای 3و4و6" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>
+                </div>
+                <div class=div58><font class=text7><a href="http://bbckhorasan.mihanblog.com/post/author/617412">سجاد رضایی</a></font></div>
+                <div class=div581 style="padding-top: 10px;">
+
+                    <div style="float: left; margin-left: 50px;margin-top:-4px;"><script>mihanblogPostLike('1056','like')</script></div>
+
+                    <font class=text7>شنبه بیست و دوم خردادماه سال 1395</font></div>
+            </div>
+
+            <div class=div54 style="background:#badb44;">
+                <style>
+
+
+
+
+                    .clearfix {display: inline-block;}
+                    .clearfix:after {
+                        content: ".";
+                        display: block;
+                        height: 0;
+                        clear: both;
+                        visibility: hidden;
+                    }
+
+
+
+
+                    .cblike{
+                        margin:4px 15px;
+                        float: left;
+                    }
+                    .cblike a {
+                        float:left;
+                        padding:3px;
+                        text-align:center;
+                        font-size:12px;
+                        color:#FFF;
+                        display:block;
+                        line-height:15px;
+                        text-decoration: none;
+                    }
+
+
+
+
+                    .cblike a.clike_plus {
+                        background-color:#009900 ; /*green #039B03*/
+
+                        border-radius: 5px ;
+
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+
+                        /*border:1px solid green;
+                  border-right:0px;*/
+                    }
+                    .cblike a.clike_minus {
+                        background-color:#CC0000;
+                        border-radius: 5px ;
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+
+                        /*border:1px solid red;
+                  border-left:0px;*/
+                    }
+                    .cblike a.clike_minus:hover {
+                        background-color:red;
+                        text-decoration: none;
+                    }
+                    .cblike a.clike_plus:hover {
+                        background-color:green;
+                        text-decoration: none;
+                    }
+                    .cblike a span{
+                        font-weight:bold;
+                        font-size:13px;
+
+                        color:#fff;
+                    }
+
+
+
+
+                    .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                    .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                    .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                    .com{ width:535px; float:left; background:#d4f16c; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+                    .com1{ width:517px; float:left; background:#709415; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                    .com3{ width:290px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                    .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                    .com4{ width:497px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com5{ width:497px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com6{ width:507px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                    .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+                </style>
+                            </div>
+
+        </div><div class=div54>
+            <div class=div15>
+                <div class=div015></div>
+                <div class=div18><font class=text6><h2><a href="http://bbckhorasan.mihanblog.com/post/1054">لیست و قیمت های بنر تبلیغاتی در پایگاه خبری بی بی سی نیوز خراسان</a></h2></font></div>
+            </div>
+            <div class=div21>
+                <div class=div55></div>
+                <div class=div56><font class=text4><div align="center"><img src="../file.mihanblog.com/public/user_data/user_files/250/749308/22222222.jpg" alt="" height="136" align="bottom" border="0" hspace="0" vspace="0" width="382"><br></div><br>سلام به کاربران و بازدید کنندگان گرامی و عزیز<br><br>از امروز مدیران سایت ها و وبلاگ ها میتوانند تا مدت محدود از این فرصت استفاده کنند<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; قیمت کم بنر های ما = رضایت مشتری<br><br><table style="border: 1px solid rgb(0, 0, 0); border-collapse: collapse; font-family: tahoma,arial,helvetica,sans-serif; font-size: 11px;" height="221" align="" cellpadding="1" cellspacing="1" width="695"><tbody><tr><td style="border:1px solid #000000; border-collapse: collapse;width: 25%;">&nbsp;60*50 پایین کادر سمت چپ سایت<br></td><td style="border:1px solid #000000; border-collapse: collapse;width: 25%;">&nbsp;قیمت واقعی یکماه:950000 ریال<br></td><td style="border:1px solid #000000; border-collapse: collapse;width: 25%;">&nbsp;60%تخفیف</td><td style="border:1px solid #000000; border-collapse: collapse;width: 25%;">&nbsp;قیمت ما:100000 ریال<br></td></tr><tr><td style="border:1px solid #000000; border-collapse: collapse;width: 25%;">&nbsp;&nbsp;50*60 سمت راست پایین سایت</td><td style="border:1px solid #000000; border-collapse: collapse;width: 25%;">&nbsp; قیمت واقعی یکماه:700000 ریال</td><td>&nbsp;60%تخفیف</td><td style="border:1px solid #000000; border-collapse: collapse;width: 25%;">&nbsp; قیمت ما:150000 ریال</td><td style="border:1px solid #000000; border-collapse: collapse;width: 25%;"><br></td></tr><tr><td style="border:1px solid #000000; border-collapse: collapse;width: 25%;">&nbsp;80*60 پایین سایت<br></td><td style="border:1px solid #000000; border-collapse: collapse;width: 25%;">&nbsp; قیمت واقعی یکماه:700000</td><td style="border:1px solid #000000; border-collapse: collapse;width: 25%;">&nbsp;57%تخفیف</td><td style="border:1px solid #000000; border-collapse: collapse;width: 25%;">&nbsp;قیمت ما:180000 ریال</td></tr><tr><td style="border:1px solid #000000; border-collapse: collapse;width: 25%;">&nbsp;100*50 پاییین سایت<br></td><td style="border:1px solid #000000; border-collapse: collapse;width: 25%;">&nbsp; قیمت واقعی یکماه:1000000</td><td style="border:1px solid #000000; border-collapse: collapse;width: 25%;">&nbsp;30%تخفیف</td><td style="border:1px solid #000000; border-collapse: collapse;width: 25%;">&nbsp;قیمت ما:700000<br></td></tr></tbody></table><div align="center"><img src="../file.mihanblog.com/public/user_data/user_files/250/749308/333333.gif" alt="" align="bottom" border="0" hspace="50" vspace="60"><img src="../file.mihanblog.com/public/user_data/user_files/250/749308/Imager.ashx.gif" alt="" align="bottom" border="0" hspace="50" vspace="60"></div>شماره تماس:09036488506<br>ایمیل:sigeirezaiy@yahoo.com<br>ادرس:ایران-مشهد-بلوار معلم-معلم69-ساختمان اسرار<br>
+
+
+                    <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                    <br><br><font color="#9a3b02">نوع مطلب :</font>
+                    <a href="http://bbckhorasan.mihanblog.com/post/category/10" class=text4>اخبار سایت</a>،&nbsp;                    <br><font color="#9a3b02">برچسب ها :</font>
+                    <a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%AA%D8%A8%D9%84%DB%8C%D8%BA%D8%A7%D8%AA%20%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA%DB%8C" class=text4>تبلیغات اینترنتی</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A8%DB%8C%20%D8%A8%DB%8C%20%D8%B3%DB%8C%20%D9%86%DB%8C%D9%88%D8%B2" class=text4>بی بی سی نیوز</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86" class=text4>خراسان</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%AA%D8%A8%D9%84%DB%8C%D8%BA%D8%A7%D8%AA%20%D8%AF%D8%B1%20%D8%A8%DB%8C%20%D8%A8%DB%8C%20%D8%B3%DB%8C%20%D9%86%DB%8C%D9%88%D8%B2" class=text4>تبلیغات در بی بی سی نیوز</a>،                     <br><font color="#9a3b02">لینک های مرتبط :</font>
+                                    </font>
+
+
+
+
+
+
+
+
+
+                </div></div>
+            <div class=div26>
+                <div class=div27><font class=text8><a href="http://bbckhorasan.mihanblog.com/post/1054#commentlist">نظرات (<script>setCommentCnt(1054)</script>)</a></font></div>
+                <div class=div270>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://bbckhorasan.mihanblog.com/post/1054&title=لیست و قیمت های بنر تبلیغاتی در پایگاه خبری بی بی سی نیوز خراسان" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.stumbleupon.com/refer.php?url=http://bbckhorasan.mihanblog.com/post/1054&title=لیست و قیمت های بنر تبلیغاتی در پایگاه خبری بی بی سی نیوز خراسان" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.youtube.com/?url=http://bbckhorasan.mihanblog.com/post/1054&title=لیست و قیمت های بنر تبلیغاتی در پایگاه خبری بی بی سی نیوز خراسان" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;&nbsp;
+                    <a href="http://www.facebook.com/share.php?u=http://bbckhorasan.mihanblog.com/post/1054&t=لیست و قیمت های بنر تبلیغاتی در پایگاه خبری بی بی سی نیوز خراسان" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://twitter.com/home?status=Reading+this:+http://bbckhorasan.mihanblog.com/post/1054&title=لیست و قیمت های بنر تبلیغاتی در پایگاه خبری بی بی سی نیوز خراسان" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://del.icio.us/post?&url=http://bbckhorasan.mihanblog.com/post/1054&title=لیست و قیمت های بنر تبلیغاتی در پایگاه خبری بی بی سی نیوز خراسان" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>
+                </div>
+                <div class=div58><font class=text7><a href="http://bbckhorasan.mihanblog.com/post/author/617412">سجاد رضایی</a></font></div>
+                <div class=div581 style="padding-top: 10px;">
+
+                    <div style="float: left; margin-left: 50px;margin-top:-4px;"><script>mihanblogPostLike('1054','like')</script></div>
+
+                    <font class=text7>جمعه نهم بهمنماه سال 1394</font></div>
+            </div>
+
+            <div class=div54 style="background:#badb44;">
+                <style>
+
+
+
+
+                    .clearfix {display: inline-block;}
+                    .clearfix:after {
+                        content: ".";
+                        display: block;
+                        height: 0;
+                        clear: both;
+                        visibility: hidden;
+                    }
+
+
+
+
+                    .cblike{
+                        margin:4px 15px;
+                        float: left;
+                    }
+                    .cblike a {
+                        float:left;
+                        padding:3px;
+                        text-align:center;
+                        font-size:12px;
+                        color:#FFF;
+                        display:block;
+                        line-height:15px;
+                        text-decoration: none;
+                    }
+
+
+
+
+                    .cblike a.clike_plus {
+                        background-color:#009900 ; /*green #039B03*/
+
+                        border-radius: 5px ;
+
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+
+                        /*border:1px solid green;
+                  border-right:0px;*/
+                    }
+                    .cblike a.clike_minus {
+                        background-color:#CC0000;
+                        border-radius: 5px ;
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+
+                        /*border:1px solid red;
+                  border-left:0px;*/
+                    }
+                    .cblike a.clike_minus:hover {
+                        background-color:red;
+                        text-decoration: none;
+                    }
+                    .cblike a.clike_plus:hover {
+                        background-color:green;
+                        text-decoration: none;
+                    }
+                    .cblike a span{
+                        font-weight:bold;
+                        font-size:13px;
+
+                        color:#fff;
+                    }
+
+
+
+
+                    .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                    .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                    .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                    .com{ width:535px; float:left; background:#d4f16c; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+                    .com1{ width:517px; float:left; background:#709415; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                    .com3{ width:290px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                    .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                    .com4{ width:497px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com5{ width:497px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com6{ width:507px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                    .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+                </style>
+                            </div>
+
+        </div><div class=div54>
+            <div class=div15>
+                <div class=div015></div>
+                <div class=div18><font class=text6><h2><a href="http://bbckhorasan.mihanblog.com/post/1053">سحر جعفری جوزانی برای اولین بار از مادر آمریکایی‎اش رونمایی کرد!</a></h2></font></div>
+            </div>
+            <div class=div21>
+                <div class=div55></div>
+                <div class=div56><font class=text4>
+<div id="custem-incus" align="center"><img src="http://seemorgh.com/images/content/culture/1394/10/04/sahar-jafarijozani.jpg" alt="سحر جعفری جوزانی برای اولین بار از مادر آمریکایی‎اش رونمایی کرد!" itemprop="image" class="caption" title="سحر جعفری جوزانی برای اولین بار از مادر آمریکایی‎اش رونمایی کرد!"></div><div align="center"><br></div><div itemprop="articleBody" class="content_body" align="center"><div id="cel_1"><p>سحر جعفری‌جوزانی دختر مسعود جعفری‌جوزانی نویسنده و کارگردان ایرانی و مادری آمریکایی است.</p></div></div>
+
+
+
+
+                    <BlogExtendedPost><br><br><b><a href='http://bbckhorasan.mihanblog.com/post/1053'>ادامه مطلب</a></b></BlogExtendedPost>
+                    <br><br><font color="#9a3b02">نوع مطلب :</font>
+                    <a href="http://bbckhorasan.mihanblog.com/post/category/4" class=text4>هنر وسینما</a>،&nbsp;                    <br><font color="#9a3b02">برچسب ها :</font>
+                    <a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%B3%D8%AD%D8%B1%20%D8%AC%D8%B9%D9%81%D8%B1%DB%8C%20%D8%AC%D9%88%D8%B2%D8%A7%D9%86%DB%8C" class=text4>سحر جعفری جوزانی</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A7%D9%88%D9%84%DB%8C%D9%86%20%D8%A8%D8%A7%D8%B1" class=text4>اولین بار</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%85%D8%A7%D8%AF%D8%B1" class=text4>مادر</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A2%D9%85%D8%B1%DB%8C%DA%A9%D8%A7%DB%8C%DB%8C%E2%80%8E" class=text4>آمریکایی‎</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%B1%D9%88%D9%86%D9%85%D8%A7%DB%8C%DB%8C" class=text4>رونمایی</a>،                     <br><font color="#9a3b02">لینک های مرتبط :</font>
+                                    </font>
+
+
+
+
+
+
+
+
+
+                </div></div>
+            <div class=div26>
+                <div class=div27><font class=text8><a href="http://bbckhorasan.mihanblog.com/post/1053#commentlist">نظرات (<script>setCommentCnt(1053)</script>)</a></font></div>
+                <div class=div270>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://bbckhorasan.mihanblog.com/post/1053&title=سحر جعفری جوزانی برای اولین بار از مادر آمریکایی‎اش رونمایی کرد!" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.stumbleupon.com/refer.php?url=http://bbckhorasan.mihanblog.com/post/1053&title=سحر جعفری جوزانی برای اولین بار از مادر آمریکایی‎اش رونمایی کرد!" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.youtube.com/?url=http://bbckhorasan.mihanblog.com/post/1053&title=سحر جعفری جوزانی برای اولین بار از مادر آمریکایی‎اش رونمایی کرد!" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;&nbsp;
+                    <a href="http://www.facebook.com/share.php?u=http://bbckhorasan.mihanblog.com/post/1053&t=سحر جعفری جوزانی برای اولین بار از مادر آمریکایی‎اش رونمایی کرد!" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://twitter.com/home?status=Reading+this:+http://bbckhorasan.mihanblog.com/post/1053&title=سحر جعفری جوزانی برای اولین بار از مادر آمریکایی‎اش رونمایی کرد!" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://del.icio.us/post?&url=http://bbckhorasan.mihanblog.com/post/1053&title=سحر جعفری جوزانی برای اولین بار از مادر آمریکایی‎اش رونمایی کرد!" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>
+                </div>
+                <div class=div58><font class=text7><a href="http://bbckhorasan.mihanblog.com/post/author/617412">سجاد رضایی</a></font></div>
+                <div class=div581 style="padding-top: 10px;">
+
+                    <div style="float: left; margin-left: 50px;margin-top:-4px;"><script>mihanblogPostLike('1053','like')</script></div>
+
+                    <font class=text7>سه شنبه بیست و نهم دیماه سال 1394</font></div>
+            </div>
+
+            <div class=div54 style="background:#badb44;">
+                <style>
+
+
+
+
+                    .clearfix {display: inline-block;}
+                    .clearfix:after {
+                        content: ".";
+                        display: block;
+                        height: 0;
+                        clear: both;
+                        visibility: hidden;
+                    }
+
+
+
+
+                    .cblike{
+                        margin:4px 15px;
+                        float: left;
+                    }
+                    .cblike a {
+                        float:left;
+                        padding:3px;
+                        text-align:center;
+                        font-size:12px;
+                        color:#FFF;
+                        display:block;
+                        line-height:15px;
+                        text-decoration: none;
+                    }
+
+
+
+
+                    .cblike a.clike_plus {
+                        background-color:#009900 ; /*green #039B03*/
+
+                        border-radius: 5px ;
+
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+
+                        /*border:1px solid green;
+                  border-right:0px;*/
+                    }
+                    .cblike a.clike_minus {
+                        background-color:#CC0000;
+                        border-radius: 5px ;
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+
+                        /*border:1px solid red;
+                  border-left:0px;*/
+                    }
+                    .cblike a.clike_minus:hover {
+                        background-color:red;
+                        text-decoration: none;
+                    }
+                    .cblike a.clike_plus:hover {
+                        background-color:green;
+                        text-decoration: none;
+                    }
+                    .cblike a span{
+                        font-weight:bold;
+                        font-size:13px;
+
+                        color:#fff;
+                    }
+
+
+
+
+                    .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                    .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                    .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                    .com{ width:535px; float:left; background:#d4f16c; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+                    .com1{ width:517px; float:left; background:#709415; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                    .com3{ width:290px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                    .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                    .com4{ width:497px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com5{ width:497px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com6{ width:507px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                    .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+                </style>
+                            </div>
+
+        </div><div class=div54>
+            <div class=div15>
+                <div class=div015></div>
+                <div class=div18><font class=text6><h2><a href="http://bbckhorasan.mihanblog.com/post/1052">برای اولین بار در ایران فیلمی بدون فیلمبردار ساخته شد! +عکس</a></h2></font></div>
+            </div>
+            <div class=div21>
+                <div class=div55></div>
+                <div class=div56><font class=text4><div id="custem-incus" align="center"><img src="http://seemorgh.com/images/content/culture/1394/10/04/gahi.jpg" alt="برای اولین بار در ایران فیلمی بدون فیلمبردار ساخته شد! +عکس" itemprop="image" class="caption" title="برای اولین بار در ایران فیلمی بدون فیلمبردار ساخته شد! +عکس"></div><div align="center"><br></div><div itemprop="articleBody" class="content_body" align="center"><div id="cel_1"><p>کارگردان فیلم «گاهی» گفت که این فیلم بدون فیلمبرداری، تدوین، گریم، طراحی صحنه و ... ساخته شده است.</p></div></div>
+
+
+                    <BlogExtendedPost><br><br><b><a href='http://bbckhorasan.mihanblog.com/post/1052'>ادامه مطلب</a></b></BlogExtendedPost>
+                    <br><br><font color="#9a3b02">نوع مطلب :</font>
+                    <a href="http://bbckhorasan.mihanblog.com/post/category/4" class=text4>هنر وسینما</a>،&nbsp;                    <br><font color="#9a3b02">برچسب ها :</font>
+                    <a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A7%D9%88%D9%84%DB%8C%D9%86" class=text4>اولین</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86" class=text4>ایران</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%81%DB%8C%D9%84%D9%85%DB%8C" class=text4>فیلمی</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A8%D8%AF%D9%88%D9%86" class=text4>بدون</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%81%DB%8C%D9%84%D9%85%D8%A8%D8%B1%D8%AF%D8%A7%D8%B1" class=text4>فیلمبردار</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%B3%D8%A7%D8%AE%D8%AA%D9%87" class=text4>ساخته</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%B9%DA%A9%D8%B3" class=text4>عکس</a>،                     <br><font color="#9a3b02">لینک های مرتبط :</font>
+                                    </font>
+
+
+
+
+
+
+
+
+
+                </div></div>
+            <div class=div26>
+                <div class=div27><font class=text8><a href="http://bbckhorasan.mihanblog.com/post/1052#commentlist">نظرات (<script>setCommentCnt(1052)</script>)</a></font></div>
+                <div class=div270>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://bbckhorasan.mihanblog.com/post/1052&title=برای اولین بار در ایران فیلمی بدون فیلمبردار ساخته شد! +عکس" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.stumbleupon.com/refer.php?url=http://bbckhorasan.mihanblog.com/post/1052&title=برای اولین بار در ایران فیلمی بدون فیلمبردار ساخته شد! +عکس" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.youtube.com/?url=http://bbckhorasan.mihanblog.com/post/1052&title=برای اولین بار در ایران فیلمی بدون فیلمبردار ساخته شد! +عکس" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;&nbsp;
+                    <a href="http://www.facebook.com/share.php?u=http://bbckhorasan.mihanblog.com/post/1052&t=برای اولین بار در ایران فیلمی بدون فیلمبردار ساخته شد! +عکس" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://twitter.com/home?status=Reading+this:+http://bbckhorasan.mihanblog.com/post/1052&title=برای اولین بار در ایران فیلمی بدون فیلمبردار ساخته شد! +عکس" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://del.icio.us/post?&url=http://bbckhorasan.mihanblog.com/post/1052&title=برای اولین بار در ایران فیلمی بدون فیلمبردار ساخته شد! +عکس" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>
+                </div>
+                <div class=div58><font class=text7><a href="http://bbckhorasan.mihanblog.com/post/author/617412">سجاد رضایی</a></font></div>
+                <div class=div581 style="padding-top: 10px;">
+
+                    <div style="float: left; margin-left: 50px;margin-top:-4px;"><script>mihanblogPostLike('1052','like')</script></div>
+
+                    <font class=text7>سه شنبه بیست و نهم دیماه سال 1394</font></div>
+            </div>
+
+            <div class=div54 style="background:#badb44;">
+                <style>
+
+
+
+
+                    .clearfix {display: inline-block;}
+                    .clearfix:after {
+                        content: ".";
+                        display: block;
+                        height: 0;
+                        clear: both;
+                        visibility: hidden;
+                    }
+
+
+
+
+                    .cblike{
+                        margin:4px 15px;
+                        float: left;
+                    }
+                    .cblike a {
+                        float:left;
+                        padding:3px;
+                        text-align:center;
+                        font-size:12px;
+                        color:#FFF;
+                        display:block;
+                        line-height:15px;
+                        text-decoration: none;
+                    }
+
+
+
+
+                    .cblike a.clike_plus {
+                        background-color:#009900 ; /*green #039B03*/
+
+                        border-radius: 5px ;
+
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+
+                        /*border:1px solid green;
+                  border-right:0px;*/
+                    }
+                    .cblike a.clike_minus {
+                        background-color:#CC0000;
+                        border-radius: 5px ;
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+
+                        /*border:1px solid red;
+                  border-left:0px;*/
+                    }
+                    .cblike a.clike_minus:hover {
+                        background-color:red;
+                        text-decoration: none;
+                    }
+                    .cblike a.clike_plus:hover {
+                        background-color:green;
+                        text-decoration: none;
+                    }
+                    .cblike a span{
+                        font-weight:bold;
+                        font-size:13px;
+
+                        color:#fff;
+                    }
+
+
+
+
+                    .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                    .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                    .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                    .com{ width:535px; float:left; background:#d4f16c; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+                    .com1{ width:517px; float:left; background:#709415; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                    .com3{ width:290px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                    .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                    .com4{ width:497px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com5{ width:497px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com6{ width:507px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                    .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+                </style>
+                            </div>
+
+        </div><div class=div54>
+            <div class=div15>
+                <div class=div015></div>
+                <div class=div18><font class=text6><h2><a href="http://bbckhorasan.mihanblog.com/post/1051">لباس بازیگران در جشنواره فجر34 دردسرساز شد!</a></h2></font></div>
+            </div>
+            <div class=div21>
+                <div class=div55></div>
+                <div class=div56><font class=text4><div id="custem-incus"><img src="http://seemorgh.com/images/content/culture/jashnvareh-2.jpg" alt="لباس بازیگران در جشنواره فجر دردسرساز شد!" itemprop="image" class="caption" title="لباس بازیگران در جشنواره فجر دردسرساز شد!"></div><br><div itemprop="articleBody" class="content_body"><div id="cel_1"><p>گفته
+ می شود امسال جشنواره فیلم فجر در نظر دارد لباس خاصی را برای عوامل 
+فیلم‌های سینمایی طراحی کند تا آن‌ها با پوشیدن این لباس‌ها روی فرش قرمز 
+جشنواره قدم بردارند.</p></div></div>
+
+
+                    <BlogExtendedPost><br><br><b><a href='http://bbckhorasan.mihanblog.com/post/1051'>ادامه مطلب</a></b></BlogExtendedPost>
+                    <br><br><font color="#9a3b02">نوع مطلب :</font>
+                    <a href="http://bbckhorasan.mihanblog.com/post/category/4" class=text4>هنر وسینما</a>،&nbsp;                    <br><font color="#9a3b02">برچسب ها :</font>
+                    <a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%84%D8%A8%D8%A7%D8%B3" class=text4>لباس</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%A8%D8%A7%D8%B2%DB%8C%DA%AF%D8%B1%D8%A7%D9%86" class=text4>بازیگران</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%AC%D8%B4%D9%86%D9%88%D8%A7%D8%B1%D9%87" class=text4>جشنواره</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D9%81%D8%AC%D8%B134" class=text4>فجر34</a>، <a href="http://bbckhorasan.mihanblog.com/post/tag/%D8%AF%D8%B1%D8%AF%D8%B3%D8%B1%D8%B3%D8%A7%D8%B2" class=text4>دردسرساز</a>،                     <br><font color="#9a3b02">لینک های مرتبط :</font>
+                                    </font>
+
+
+
+
+
+
+
+
+
+                </div></div>
+            <div class=div26>
+                <div class=div27><font class=text8><a href="http://bbckhorasan.mihanblog.com/post/1051#commentlist">نظرات (<script>setCommentCnt(1051)</script>)</a></font></div>
+                <div class=div270>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://bbckhorasan.mihanblog.com/post/1051&title=لباس بازیگران در جشنواره فجر34 دردسرساز شد!" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.stumbleupon.com/refer.php?url=http://bbckhorasan.mihanblog.com/post/1051&title=لباس بازیگران در جشنواره فجر34 دردسرساز شد!" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.youtube.com/?url=http://bbckhorasan.mihanblog.com/post/1051&title=لباس بازیگران در جشنواره فجر34 دردسرساز شد!" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;&nbsp;
+                    <a href="http://www.facebook.com/share.php?u=http://bbckhorasan.mihanblog.com/post/1051&t=لباس بازیگران در جشنواره فجر34 دردسرساز شد!" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://twitter.com/home?status=Reading+this:+http://bbckhorasan.mihanblog.com/post/1051&title=لباس بازیگران در جشنواره فجر34 دردسرساز شد!" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://del.icio.us/post?&url=http://bbckhorasan.mihanblog.com/post/1051&title=لباس بازیگران در جشنواره فجر34 دردسرساز شد!" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>
+                </div>
+                <div class=div58><font class=text7><a href="http://bbckhorasan.mihanblog.com/post/author/617412">سجاد رضایی</a></font></div>
+                <div class=div581 style="padding-top: 10px;">
+
+                    <div style="float: left; margin-left: 50px;margin-top:-4px;"><script>mihanblogPostLike('1051','like')</script></div>
+
+                    <font class=text7>سه شنبه بیست و نهم دیماه سال 1394</font></div>
+            </div>
+
+            <div class=div54 style="background:#badb44;">
+                <style>
+
+
+
+
+                    .clearfix {display: inline-block;}
+                    .clearfix:after {
+                        content: ".";
+                        display: block;
+                        height: 0;
+                        clear: both;
+                        visibility: hidden;
+                    }
+
+
+
+
+                    .cblike{
+                        margin:4px 15px;
+                        float: left;
+                    }
+                    .cblike a {
+                        float:left;
+                        padding:3px;
+                        text-align:center;
+                        font-size:12px;
+                        color:#FFF;
+                        display:block;
+                        line-height:15px;
+                        text-decoration: none;
+                    }
+
+
+
+
+                    .cblike a.clike_plus {
+                        background-color:#009900 ; /*green #039B03*/
+
+                        border-radius: 5px ;
+
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+
+                        /*border:1px solid green;
+                  border-right:0px;*/
+                    }
+                    .cblike a.clike_minus {
+                        background-color:#CC0000;
+                        border-radius: 5px ;
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+
+                        /*border:1px solid red;
+                  border-left:0px;*/
+                    }
+                    .cblike a.clike_minus:hover {
+                        background-color:red;
+                        text-decoration: none;
+                    }
+                    .cblike a.clike_plus:hover {
+                        background-color:green;
+                        text-decoration: none;
+                    }
+                    .cblike a span{
+                        font-weight:bold;
+                        font-size:13px;
+
+                        color:#fff;
+                    }
+
+
+
+
+                    .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                    .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                    .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                    .com{ width:535px; float:left; background:#d4f16c; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+                    .com1{ width:517px; float:left; background:#709415; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                    .com3{ width:290px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                    .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                    .com4{ width:497px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com5{ width:497px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com6{ width:507px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                    .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+                </style>
+                            </div>
+
+        </div>    </div>
+
+    <div class=div29></div>
+    <div class=div28><font class=text7>
+                <br><br>
+        ( کل صفحات : 174 )&nbsp;&nbsp;&nbsp;
+            <a href="http://bbckhorasan.mihanblog.com/page/1" class=text4><b>1</b></a>&nbsp;&nbsp;&nbsp;<a href="http://bbckhorasan.mihanblog.com/page/2" class=text4><span>2</span></a>&nbsp;&nbsp;&nbsp;<a href="http://bbckhorasan.mihanblog.com/page/3" class=text4><span>3</span></a>&nbsp;&nbsp;&nbsp;<a href="http://bbckhorasan.mihanblog.com/page/4" class=text4><span>4</span></a>&nbsp;&nbsp;&nbsp;<a href="http://bbckhorasan.mihanblog.com/page/5" class=text4><span>5</span></a>&nbsp;&nbsp;&nbsp;<a href="http://bbckhorasan.mihanblog.com/page/6" class=text4><span>6</span></a>&nbsp;&nbsp;&nbsp;<a href="http://bbckhorasan.mihanblog.com/page/7" class=text4><span>7</span></a>&nbsp;&nbsp;&nbsp;<a href="http://bbckhorasan.mihanblog.com/page/8" class=text4><i>...</i></a>&nbsp;&nbsp;&nbsp;<br><br><br>
+    </font>
+    </div>
+</div>
+
+
+<div class=div170>
+    <div class=mdiv170>
+
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>موضوعات</font></div></div>
+            <div class=div341><font class=text1><ul>
+                <li><a href="http://bbckhorasan.mihanblog.com/post/category/49">*اس ام اس * (2)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/48">بازارکار (1)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/47">استخدام (9)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/46">سنندج (1)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/45">کرمان (3)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/43">فارس (1)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/42">البرز (1)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/38">خوزستان (2)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/37">گیلان (2)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/36">بندر عباس (1)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/35">بوشهر (2)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/34">سیستان و بلوچستان (1)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/33">اصفهان (1)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/29">اذربایجان غربی (2)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/27">قم (2)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/26">مرکزی (1)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/25">کرج (2)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/23">خراسان جنوبی (3)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/22">خراسان رضوی (4)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/21">خراسان شمالی (1)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/20">استان تهران (5)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/19">وبگردی بی بی سی نیوز(خدمت جدید) (6)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/18">اخبار استان (5)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/17">برنامه نویسی (کد) (5)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/16">اس ام اس (5)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/15">اثار باستانی (1)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/14">بین الملل (22)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/13">در حاشیه (31)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/11">خانواده (9)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/10">اخبار سایت (26)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/9">طنز و خنده دار (7)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/8">جالب (46)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/7">اقتصادی (75)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/6">حوادث (79)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/5">ورزشی (61)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/4">هنر وسینما (25)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/3">پزشکی (14)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/2">اجتماعی (149)</a></li><li><a href="http://bbckhorasan.mihanblog.com/post/category/1">سیاسی (292)</a></li>            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>پیوند روزانه</font></div></div>
+            <div class=div341><font class=text1><ul>
+                <li><a href="http://fun-cl00b.mihanblog.com/" title="داستان-شعر-پیامک-جوک-معما-دانستنیها-شعبده-ضرب المثل-فیلم-عکس" target="_blank">کلوب سرگرمی</a></li><li><a href="../lovenever.mihanblog.com/index.html" title="" target="_blank">عسق و نفرت</a></li><li><a href="http://www.manoto36.loxblog.com/" title="" target="_blank">rahsepar</a></li><li><a href="http://spartan-98.mihanblog.com/" title="" target="_blank">@@نفس های بی هدف@@</a></li><li><a href="http://jolal.blogfa.com/" title="" target="_blank">زلال</a></li><li><a href="../www.1boy-1girl.mihanblog.com/index.html" title="" target="_blank">چترى براى دو نفر</a></li><li><a href="../www.raha00.mihanblog.com/index.html" title="" target="_blank">پاتوق</a></li><li><a href="http://khhastinews.mihanblog.com/" title="آخرین اخبار سیاسی ، اجتماعی ، اقتصادی ، ورزشی و... از گوشه و کنار جهان هستی" target="_blank">خبرنامه هستی نیوز</a></li><li><a href="http://blognews.loxblog.com/" title="" target="_blank">بلاگ نیوز</a></li><li><a href="http://negahekhamosh.mihanblog.com/" title="" target="_blank">نگاه خاموش</a></li><li><a href="http://www.nimarest.com/up" title="اپلود عکس و فایل در این سایت" target="_blank">نیمارست</a></li><li><a href="http://www.bazarjahan.mihanblog.com" title="سلام دوست عزیز 
+آیا تمایل دارید کارت شارژ آنلاین (زیر قیمت بازار) بخرید و مهمتر از همه بازاریابی برای کارت شارژ های ایرانسل و همراه اول را در وبلاگ خود  انجام دهید؟؟؟؟؟؟؟
+بهتره هرچه سریع این امکان را (که فعلا به صورت رایگان) به وبلاگ خودتون اضافه  و کسب درآمد کنید!!!!!!!
+جهت کسب اطلاعات بیشتر برین به این صفحه
+
+http://bazarjahan.mihanblog.com/post/44
+
+درصورتی که نیاز به 1شغل اینترنتی  (بازاریابی اینترنتی ) دارید این صفحه را به دقت مطالعه کنید  از فروش کارت شارژ خیلی خیلی بهتره.
+http://bazarjahan.mihanblog.com/post/20
+با سپاس فراوان از صبر و شکیبایی شما" target="_blank">کسب و کار موفق + ایده های جدید</a></li><li><a href="http://basij-mashhad.mihanblog.com" title="تمام نظرات شما اعم از سیاسی و اقتصادی و درخواستی شما را پذیراییم." target="_blank">پایگاه شهید وطن دوست</a></li><li><a href="http://www.bbcnews.parsian.loxblog.com/" title="" target="_blank">.....:::::بی بی سی نیوز :::::....</a></li><li><a href="http://www.taaj.ir" title="مرجع نیازمندی های ایرانی ، درج آگهی رایگان" target="_blank">درج آگهی رایگان</a></li><li><a href="http://epishro.ir/group-1.aspx?%D8%A2%D9%85%D9%88%D8%B2%D8%B4" title="آموزش را خواهشا تائید بفرمائید / سپاس . سارا امیدوار" target="_blank">آموزش</a></li><li><a href="http://www.vafadownload.ir" title="دانلود فایلهای کاربردی و سرگرمی و آموزشی و..." target="_blank">وفــــــــا دانلــود</a></li><li><a href="http://zinat.blogsky.com" title="http://zinat.blogsky.com" target="_blank">http://zinat.blogsky.com</a></li><li><a href="http://90bux.ir" title="کسب درآمد از اینترنت با روشی متفاوت کافیه یکبار امتحان کنی . کسب درآمد از کلیکهای خودتان+ کلیکهای زیر مجموعه ها
+امکان کسب درآمد بیشتر با زیر مجموعه گیری .
+هر کلیک تا 20 تومان
+ثبت شده در ستاد ساماندهی
+
+http://90bux.ir" target="_blank">کسب درآمد متفاوت از اینترنت</a></li><li><a href="http://sibbox.mihanblog.com" title="با سلام خدمت شما دوست گرامی از امار وبلاگت ناراحتی  بازدید كمه به سیب باكس بیا روزی سه لینك رایگان فقط برای شما 
+
+كد رو در وبلاگ خودتون بگذاری و روزی سه لینك بفرستید به همن راحتی  وبلاگ خودتون رو پر بادزید كنید
+
+همن امروز  سایت خود رو ثبت كنید فردا  دیر است 
+
+منتظر شما هستیم
+http://sibbox.mihanblog.com" target="_blank">سیب باكس </a></li><li><a href="http://linkseo.ir" title="سیستم تبادل لینک رایگان" target="_blank">تبادل لینک اتوماتیک</a></li><li><a href="http://tolueidigar.mihanblog.com/" title="" target="_blank">طـلـوعــی دیـگر در راه اسـت</a></li><li><a href="http://heydarion.persianblog.ir/" title="" target="_blank">::صراط مستقیم حضرت علی (ع) :: </a></li><li><a href="http://2khtarkermooni.mihanblog.com/" title="یه دختر کرمونی" target="_blank">یه دختر کرمونی</a></li><li><a href="http://renjershift.mihanblog.com/" title="(آینده در دستان ماست)" target="_blank">(آینده در دستان ماست)</a></li><li><a href="http://www.top700.com" title="گاهی شانس فقط یک بار به آدم رو میاره پس باید قدرش رو دونست بهترین فرصت زندگی شما برای ثروتمند شدن مجموعه ای بی نظیر برای اولین بار در ایران برای کسانی که می خواهند بهتر زندگی کنند و از کمترین وقت و هزینه بیشترین سود را ببرند.برای آگاهی از جزییات بیشتر به لینک زیر مراجعه کنید.
+http://www.top700.com" target="_blank">$سایت تخصصی کسب درآمد از اینترنت$</a></li><li><a href="http://nilo60.loxblog.ir" title="" target="_blank">hasrat</a></li><li><a href="http://parmis-group.lxb.com/" title="" target="_blank">گروه پارمیس</a></li><li><a href="../b-a-shabestar.mihanblog.com/index.html" title="" target="_blank">حجاب</a></li><li><a href="../smsjokss.mihanblog.com/index.html" title="" target="_blank">اس ام اس</a></li><li><a href="http://www.mihanmobile.net" title="دانلود موبایل،برنامه موبایل،بازی موبایل،تم موبایل،,والپیپر موبایل" target="_blank">میهن موبایل</a></li><li><a href="http://www.bime4u.com" title="وب سایت جامع بیمه عمر وتامین آتیه , عمر و سرمایه گذاری, و بیمه های زندگی.....
+از تاییدتان سپاسگزارم." target="_blank">بیمه عمر, زندگی و سرمایه گذاری</a></li><li><a href="http://alborzjobs.mihanblog.com/" title="بانک اطلاعات شهری کرج لطفا تائید و لینک خود را ارسال بفرمائید" target="_blank">بانک اطلاعات شهری کرج</a></li><li><a href="http://rozak.mihanblog.com" title="لحظه های عاشقی" target="_blank">لحظه های عاشقی </a></li><li><a href="http://mytaktazp30.mihanblog.com" title=".:: تکتاز پی سی ::." target="_blank">.:: تکتاز پی سی ::.</a></li><li><a href="../mymihancamp.mihanblog.com/index.html" title=".:: fungozar ::." target="_blank">.:: fungozar ::.</a></li><li><a href="http://love-again.blogfa.com/" title="arman" target="_blank">arman </a></li><li><a href="http://www.chaterkhoda.blogfa.com" title="یاسی" target="_blank">یاسی </a></li><li><a href="http://rahgozar1390.mihanblog.com" title="سرباز گمنام امام زمان" target="_blank">رهگذر</a></li><li><a href="http://www.bime4u.com" title="وب سایت جامع بیمه زندگی ,عمر و سرمایه گزاری" target="_blank">بیمه زندگی, عمر و سرمایه گزاری</a></li>                <li><b><a href="http://bbckhorasan.mihanblog.com/linkdaily/">همه پیوندهای روزانه</a></b></li>
+                <li><b><a href="javascript:linkdailyForm()">ارسال پیوند روزانه</a></b></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>پیوندها</font></div></div>
+            <div class=div341><font class=text1><ul>
+                <li><a href="http://www.siyahdel.loxblog.com/" title="سیاه دل    (حتما سر بزنین\خواهر گلمه)" target="_blank">سیاه دل    (حتما سر بزنین\خواهر گلمه)</a></li><li><a href="http://taktasms.mihanblog.com/" title="*تکتا اس ام اس***تفریحی و سرگرمی*" target="_blank">*تکتا اس ام اس***تفریحی و سرگرمی*</a></li><li><a href="http://ثبتنام.LXB.ir" title="ثبت نام در سایت بزرگ بی بی سی نیوز" target="_blank">ثبت نام در سایت بزرگ بی بی سی نیوز</a></li><li><a href="http://raybanarena.ir" title="خرید عینک ریبن" target="_blank">خرید عینک ریبن</a></li><li><a href="http://boosebaraatash.blogfa.com" title="╬♥═╬بوسه بر آتش╬♥═╬" target="_blank">╬♥═╬بوسه بر آتش╬♥═╬</a></li><li><a href="http://fabner.biz/products/buy-a-sunglasses/" title="" target="_blank">عینک های آفتابی</a></li><li><a href="http://fabner.com" title="" target="_blank">خرید عینک آفتابی</a></li><li><a href="http://nicefa.ir/" title="" target="_blank">نخستین مرجع کامل</a></li><li><a href="http://www.manotosport.ir/" title="" target="_blank">من و تو اسپرت</a></li><li><a href="http://ahoooo.rozblog.com" title="بزرگترین وبلاگ آهو" target="_blank">بزرگترین وبلاگ آهو</a></li><li><a href="http://blashmarket.mihanblog.com/" title="" target="_blank">بلاش مارکت</a></li><li><a href="http://barobachnarava.rozblog.com" title="" target="_blank">بروبچ ناروا</a></li><li><a href="http://lalink.ir" title="" target="_blank">خرید شال و روسری</a></li><li><a href="http://lahijanmusic141.mihanblog.com" title="لاهیجان موزیک" target="_blank">لاهیجان موزیک</a></li><li><a href="http://www.us-nod.mihanblog.com" title="یوزرنیم و پسورد روزانه نود 32" target="_blank">یوزرنیم و پسورد روزانه نود 32</a></li><li><a href="http://smsj2012.mihanblog.com/" title="اس ام اس سرکاری و مناسبتی و فلسفی و عاشقانه" target="_blank">اس ام اس روز و دلخواه شما</a></li><li><a href="http://Rainmarvelous-e.mihanblog.com " title="" target="_blank">روانشناسی باران</a></li><li><a href="http://www.iranbcs.ir" title="" target="_blank">گرافیک ایرانی</a></li><li><a href="http://linkexchange.netscript.ir/" title="تبادل لینک اتوماتیک" target="_blank">تبادل لینک اتوماتیک</a></li><li><a href="http://www.mihanstar.com" title="حتما دیدن نمایید" target="_blank">میهن استار</a></li><li><a href="../mostafa222.mihanblog.com/index.html" title="" target="_blank">کوروش بزرگ</a></li><li><a href="../yamahdymadad.mihanblog.com/index.html" title="" target="_blank">دوست آخرالزمانی</a></li><li><a href="http://www.sajjadrezaiy.loxblog.com" title="" target="_blank">سجاد.کام</a></li><li><a href="http://tolueidigar.mihanblog.com/" title="" target="_blank">طلوع دیگری در راه است</a></li><li><a href="http://www.mihanmobile.net/weblinks" title="" target="_blank">میهن موبایل</a></li><li><a href="http://toprank.ir/?ref=9658" title="اس ام اس های سرکاری جدید" target="_blank">اس ام اس جدید</a></li><li><a href="http://www.chaterkhoda.blogfa.com" title="یاسی" target="_blank">یاسی</a></li><li><a href="http://www.bbcmashhad.mihanblog.ir" title="اخبار روز" target="_blank">اخبار خراسان</a></li>                <li><a target="_blank" href="http://www.mytheme.ir">بهترین قالب های وبلاگ</a></li>
+                <li><b><a href="http://bbckhorasan.mihanblog.com/link/">همه پیوندها</a></b></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>صفحات جانبی</font></div></div>
+            <div class=div341><font class=text1><ul>
+                <li><a href="http://bbckhorasan.mihanblog.com/extrapage/ramazan">جزئیات کاهش ساعت کاری ادارات در ماه رمضان/ کاهش یک ساعته طرح ترافیک در پایتخت</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/siasatkharegi1">سلطانیه: امنیت هسته‌یی بدون خلع سلاح‌ هسته‌یی محقق نمی‌شود</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/001">نتیجه انتخابات ایران امیدوار کننده بود</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/111">1111</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/44444425656897">موش‌ها به چه می خندند؟</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/111555557785">کریم انصاری فرد رسما پرسپولیسی شد/ گزارش تصویری</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/75844444111000">اتومبیل دکتر علی شریعتی+ عکس</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/aaaaaaasss">تلاش انگلستان و آمریکا برای حمله به سوریه</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/00001135868798765">دیدار اردوغان و اوباما در سئول</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/00012154">معتبرترین و ثروتمندترین دانشگاه جهان +تصویر</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/00012252">اقدام عجیب دختر چینی برای اینکه دوست پسرش برگردد! + عکس</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/00222125522">عکس/لاله و لادن در محضر امام خمینی(ره)</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/00011545442">یک کانادایی در حرم امام رضا(ع) مسلمان شد</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/001125522545989">فتوای جنجال برانگیز برداشتن حجاب و استفاده از لباس ملی</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/000112554442">زیباترین رعد و برق سال ۲۰۱۱</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/4411225120">همه شگردهای بازار اینترنت پرسرعت در ایران!؟</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/003322114">اختراع جدید گوگل برای پارک آسان‌تر خودرو</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/0001114452">چگونه Time Line را در فیس بوک فعال کنیم؟</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/0002221100021">اندر احوالات اینترنت در ایران</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/000122522">زشت ترین و وحشتناک ترین زن جهان! + عکس</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/00011222">از حمله به حرم رضوی تا عزاداری حسینی!</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/00032211">نقش ماهواره در بی بند و باری دختران جوان</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/00012221119">خاطره قرائتی از دیدن یک دختر زیبا در اتاق رئیس</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/00012222512223">سهل انگاری یک مداح / برخورد سر نوزاد دو ماهه با پنکه سقفی + تصاویر</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/44112520">عادل فردوسی پور در زمین فوتبال حریف دایی نشد / گزارش تصویری</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/44412225">فوران خلاقیت در اینجا شما را غافلگیر می کند</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/00012222144533">سرنگونی پهپاد جاسوسی آمریکا توسط نیروهای مسلح ایران در شرق کشور</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/2221145553">پیشنهاد مقامات آمریکایی برای عملیات در ایران برای بازپس گیری هواپیمای جاسوسی</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/7744121221">نماینده مجلس: از هواپیمای آمریكایی كپی‌سازی می کنیم</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/1122455556632">اعلام آمادگی پکن برای جنگ</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/777445241">بیماری حاد مشایی و توصیه پزشکان به وی</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/0000122">خوش پوش بودن به سبک مردان هالیوودی !</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/7777777">مبلمانی که به هر شکلی که شما بخواهید در می آیند!</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/9000">هر آنچه در برنامه 90 دیشب گذشت</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/0001123">آب و هوای شهر مشهد</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/000455">جنایت هولناک در خیابان قعله مرغی</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/444444444440">«بازرس آژانس، ادعاهای «آمانو» علیه ایران را رد کرد</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/114225">غیبت احمدی‌نژاد در نشست سران اوپک گازی</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/7777">عکسی برای تمام عاشقان دل شکسته!</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/44444">جایزه پلیس اصفهان برای تحویل دادن ماهواره</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/410125215">زاد و ولد در کدام شهر کمتر است؟</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/0014558554522">كارناوال شادی در اصفهان به راه افتاد + عکس</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/02001222">تشکیل مثلث شوم علیه ایران</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/1111">زنی در مراسم‌ تدفین‌اش زنده‌ شد و مجدد مُرد! + عکس</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/00110000">هانیه توسلی</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/0001122">رونمایی هالیوودی کانن: دوربین سینمایی C300</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/90">کارتون روز: تلاش برای نجات اقتصاد اروپا!</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/0003">کارتون روز: سوار کردن کودکان زیر 12سال برروی موتور ممنوع شد!!</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/999">کارتون روز: فرار اختلاس گران از کشور با پول مردم!</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/88">کارتون روز: فرار مرغ ها!</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/77">کارتون روز: فقط vpn بانک ها فعال خواهد بود!!</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/66">کارتون روز: چهره خانم ها پس از اینکه از خواب بیدار می شوند!</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/55">کارتون روز: تخم مرغ طلا شد!</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/44">کارتون روز: وضعیت تهران پس از 2 روز بارش باران!</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/001221">انتخاب جذاب ترین مانکن و بازیگر کشور چین! + عکس</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/000112">تصاویر دیدنی از پرواز کردن طاووس های زیبا!</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/004123">راز سر به مهر خانم منشی تبهکار</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/001236">مرد رهگذر، نقاب زن قاتل را كنار زد+عكس</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/00452">دستگیری ۹۱ حاجی با یک کیلو مواد مخدر/ دستگیر شدگان تا ابد ممنوع الخروج می شوند</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/000124">مرگ و مسمومیت شدید 15 نفر بر اثر مصرف مشروب الکلی دست ساز</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/00413">تصادف اتوبوس حامل زائران ایرانی در سرزمین وحی</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/00142">راز پنهان گروگانگیری 100 میلیونی در عروسی</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/001525">خواستگاری از زنی که متاهل بود+ عکس</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/000123">جزئیات بازداشت شرور تهرانپارس+ عکس</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/0012">مادری كه فدای فرزندش شد + عكس</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/001540">علت غرق شدن یک شناور دریایی در عسلویه</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/000154">مرگ 13 خدمه کشتی کوشا/ مسوولان تلفن هایشان را خاموش کردند/ انتشار اسامی کشته شدگان</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/000412">حمله‌ جوانی با چاقو به همسرش در كلاس دانشگاه!</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/00022">پیدا شدن جسد یك زن پس از 30 سال در فریزر</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/00221">سرقت اطلاعات موبایل فقط با یک تماس</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/fghfhfhf">بازی‌های ویدئویی فیزیک مغز را تغییر می‌دهند!</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/kljljljl">زنی که چند روزه 50 سال پیر شد</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/sdffsfs">اینترنت از نان شب هم واجب تر است!</a></li><li><a href="http://bbckhorasan.mihanblog.com/extrapage/rtetete">آتشفشان جزایر قناری فعال شد</a></li>            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>آمار وبلاگ</font></div></div>
+            <div class=div341><font class=text1><ul>
+                <li>کل بازدید : <script>getStatVar('total_view');</script></li>
+                <li>بازدید امروز :<script>getStatVar('today_view');</script></li>
+                <li>بازدید دیروز : <script>getStatVar('yesterday_view');</script></li>
+                <li>بازدید این ماه : <script>getStatVar('this_month_view');</script></li>
+                <li>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></li>
+                <li>تعداد نویسندگان : <script>getStatVar('total_author');</script></li>
+                <li>تعداد کل پست ها : <script>getStatVar('total_post');</script></li>
+                <li>آخرین بازدید : <script>getStatVar('last_view_date');</script></li>
+                <li>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>امکانات جانبی</font></div></div>
+            <div class=div341>
+                <div class=sm></div>
+                <div class=div32><center><font class=text1></font></center>
+                    <style>
+                        .mihan_logo {
+                            background: url("http://mihanblog.com/public/public/images/logo/poweredby.gif") no-repeat scroll center top transparent;
+                            height: 131px;
+                            margin-top: 10px;
+                            text-align: center;
+                        }
+                    </style>
+                    <div class="mihan_logo"></div>
+
+                </div>
+            </div>
+            <div class=div30></div>
+        </div>
+
+    </div></div>
+</div>
+</td>
+</tr>
+<tr>
+    <td class="b2" valign="bottom">
+        <a href="http://www.mytheme.ir" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" border=0 width=200 height=50></a>
+    </td>
+</tr>
+</table>
+</div>
+<style>
+    img{
+        max-width : 515px;
+    }
+    h2,h1 {
+        margin: 0;
+    }
+</style>
+</body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'bbckhorasan.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

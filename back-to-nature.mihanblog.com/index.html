@@ -1,0 +1,1075 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://back-to-nature.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1364443*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[1]='64';commentCnt[108]='1';commentCnt[109]='1';commentCnt[112]='0';commentCnt[113]='1';commentCnt[114]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[1]='0';
+mihanblogDisLikeArrCnt[1]='0';
+mihanblogLikeArrCnt[108]='0';
+mihanblogDisLikeArrCnt[108]='0';
+mihanblogLikeArrCnt[109]='0';
+mihanblogDisLikeArrCnt[109]='0';
+mihanblogLikeArrCnt[112]='0';
+mihanblogDisLikeArrCnt[112]='0';
+mihanblogLikeArrCnt[113]='0';
+mihanblogDisLikeArrCnt[113]='0';
+mihanblogLikeArrCnt[114]='0';
+mihanblogDisLikeArrCnt[114]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://back-to-nature.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://back-to-nature.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','84');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','چهارشنبه 9 تیر 1395');
+	
+	setStatVar('today_view','8');
+	setStatVar('yesterday_view','73');
+	
+	setStatVar('this_month_view','1140');
+	setStatVar('last_month_view','1976');
+
+	setStatVar('total_view','219770');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (04:45)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://back-to-nature.mihanblog.com/statupdate/?data[refereruri]=http://tabiat-h.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607825757&data[hash]=29b6f1c3430be46fdb8edbeb93cdd1e6&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://back-to-nature.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://back-to-nature.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://back-to-nature.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://back-to-nature.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://back-to-nature.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://back-to-nature.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://back-to-nature.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://back-to-nature.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://back-to-nature.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://back-to-nature.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://back-to-nature.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://back-to-nature.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://back-to-nature.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://back-to-nature.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://back-to-nature.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://back-to-nature.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META NAME="description" CONTENT="">
+<META NAME="keywords" CONTENT="">
+<META NAME="DesignerUrl" CONTENT="http://Avazak.ir">
+<META NAME="Designer" CONTENT="AVAZAK">
+<link rel="alternate" type="application/rss+xml" title="بازگشت به طبیعت" href="http://back-to-nature.mihanblog.com/post/rss/" />
+<title>بازگشت به طبیعت</title>
+<link href="http://avazak.ir/Theme/style/431.css" type="text/css" rel="stylesheet">
+</style>
+
+</head>
+
+<body>
+<!--Design By : Avazak.ir-->
+<div align =center>
+<table border="0" width="1000" cellspacing="0" cellpadding="0" class="Avazak">
+<tr><td colspan="3" class="page" dir="rtl" >
+<div  class ="header" >
+<h1>بازگشت به طبیعت</h1></a>
+<p class="subtitle"></a>
+<p class="menu"><a href="index.html">صفحه اصلی</a> | 
+<a href="http://back-to-nature.mihanblog.com/post/list">عناوین مطالب</a> | 
+<a href="javascript:messageForm()">تماس با من</a> | 
+<a title="قالب رایگان میهن بلاگ" href="http://www.avazak.ir/">طراح قالب</a>
+</div>
+</td></tr>
+	<!-- end header -->
+<!--Design By : Avazak.ir-->
+<td width="200" valign="top" dir="rtl" >
+<div class="sidebar-l">
+
+<h1>آخرین مطالب</h1>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/114">قله ی شاه جهان</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/113">ارگ تاریخی بلقیس</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/109">دهنه ی حیدری</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/108">قله بینالود</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/112">نرم پا , درود</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/107">قله ی بزق</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/106">قله ی جستی از مسیر اولر(owlar )</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/105">قله ی تیغ اره</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/104">برف ریز به شیخ ابوالحسن</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/103">خرو به درود</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/102">طاغان به باغشن گچ</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/101">چناران به گرینه</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/100">دربهشت به دشت</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/99">قله اوشک</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/98">برگشاهی به کلیدر</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/97">جنگل ابر</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/96">صعود به قله ی دماوند از جبهه ی جنوبی </a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/95">جاغرق مشهد به درود نیشابور</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/94">برج ارغون شاه و کتیبه ی نادری</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/93">عمارت خورشید کلات</a></div>
+<div class="FooterSid"></div>
+
+<h1>نویسندگان</h1>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/author/1155810">مژگان فرهادی</a></div>
+<br>
+<div class="FooterSid"></div>
+<!--Design By : Avazak.ir-->
+<!--Design By : Avazak.ir-->
+
+<h1>پیوندها</h1>
+<div class="Link"><a href="http://khaterate-baranee.mihanblog.com/" title="" target="_blank" >خاطرات بارانی من...</a></div>
+<div class="Link"><a href="http://www.payamclimbing.blogfa.com/" title="" target="_blank" >گروه کوهنوردی پیام نیشابور</a></div>
+<div class="Link"><a href="http://kaviredag.blogfa.com" title="" target="_blank" >کویر داغ آران وبید گل</a></div>
+<div class="Link"><a href="http://biyataberavim.persianblog.ir/" title="" target="_blank" >بیا تا برویم</a></div>
+<div class="Link"><a href="http://www.beinabein.com/" title="" target="_blank" >ایران را بگریم ...</a></div>
+<div class="Link"><a href="http://kohnavardi20.blogfa.com" title="" target="_blank" >رخسار بیستون</a></div>
+<div class="Link"><a href="http://avaclimb.blogfa.com/" title="" target="_blank" >باشگاه کوهنوردی آوا-شیراز</a></div>
+<div class="Link"><a href="http://www.kouhkan.ir" title="" target="_blank" >*بیستون کوه *</a></div>
+<div class="Link"><a href="http://mishan.blogfa.com/" title="" target="_blank" >دیار الوند</a></div>
+<div class="Link"><a href="http://mohsen-behboudi.blogfa.com/" title="" target="_blank" >سهند ما</a></div>
+<div class="Link"><a href="http://kaljonoon.blogfa.com/" title="" target="_blank" >کوهنوردی و حس برتر</a></div>
+<div class="Link"><a href="http://damavandclub.ir" title="" target="_blank" >باشگاه کوه نوردی و اسکی دماوند</a></div>
+<div class="Link"><a href="http://www.archituska.blogfa.com/" title="" target="_blank" >آرک توسکا (جنگل توسکستان)</a></div>
+<div class="Link"><a href="http://www.tabiatgard.blogfa.com/" title="" target="_blank" >طبیعت گرد</a></div>
+<div class="Link"><a href="http://mihanamiranzamin.mihanblog.com/" title="" target="_blank" >میهنم ایران زمین</a></div>
+<div class="Link"><a href="http://kermanshah29.blogfa.com/" title="" target="_blank" >کرمانشاه گهواره تاریخ و تمدن کهن</a></div>
+<div class="Link"><a href="http://kermanshahan20.blogfa.com/" title="" target="_blank" >کرمانشاه(مناطق دیدنی و توریستی ایران)</a></div>
+<div class="Link"><a href="http://http:/hassant.blogsky.com/" title="" target="_blank" >و پَــری خواهم ساخت</a></div>
+<div class="Link"><a href="http://www.talaaloweandishe.blogfa.com/" title="" target="_blank" >*-:¦:-* تلالو اندیشه *-:¦:-*</a></div>
+<div class="Link"><a href="../tabiat-h.mihanblog.com/index.html" title="" target="_blank" >حامی طبیعت</a></div>
+<div class="Link"><a href="http://zahrakanjoori.blogfa.com/" title="" target="_blank" >دنیای کامپیوتر و اینترنت و ....</a></div>
+<div class="Link"><a title="چت روم"  target="_blank" href="http://chatyha.ir/">چت روم</a>  | <a href="http://zbrand.blogfa.com/" title="برندینگ" target="_blank">برندینگ</a>  | <a href="http://ایده.mihanblog.com/" title="ایده" target="_blank">ایده</a></div>
+<div class="Link"><a href="http://women-clock.vzw.ir/" title="خرید ساعت مچی زنانه" target="_blank">خرید ساعت مچی</a>  | <a title="چت"  target="_blank" href="http://chatmihan.ir">چت</a></div>
+<div class="Link">﻿<a href="http://buystores.ir/night-vision-goggles/" title="خرید عینک دید در شب اصل,عینک دید در شب hd vision" target="_blank">خرید عینک دید در شب اصل</a>  | <a title="جملات عاشقانه زیبا"  target="_blank" href="http://omidbiomid.blogfa.com">جملات عاشقانه زیبا</a>  | <a href="http://persianagahi.com/املاک" title="املاک" target="_blank">املاک</a></div>
+<div class="Link"><a href="http://buy-stores.ir/necklaces-spring/" title="خرید سارافون بهار" target="_blank">خرید سارافون بهار</a> | <a title="چت روم"  target="_blank" href="http://www.rahchat.com/">چت روم</a> | <a title="چت روم فارسی"  target="_blank" href="http://www.pichakchat.com/">چت روم فارسی</a></div><div class="Link"><a target="_blank" href="http://Avazak.ir">گالری عکس های زیبا</a></div>
+<div class="FooterSid"></div>
+
+<!--Design By : Avazak.ir-->
+<!--Design By : Avazak.ir-->
+<h1>برچسب ها</h1>
+<span dir="ltr">
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/tag/%D8%AF%D8%B1%D9%88%D8%AF">درود</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/tag/%D8%B1%D9%88%D8%B3%D8%AA%D8%A7%DB%8C+%D8%AE%D8%B1%D9%88">روستای خرو</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/tag/%D8%B1%D9%88%D8%B3%D8%AA%D8%A7%DB%8C+%D8%AF%D8%A7%D8%B3">روستای داس</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/tag/%D9%86%DB%8C%D8%B4%D8%A7%D8%A8%D9%88%D8%B1">نیشابور</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/tag/%D8%A8%D9%84%D9%86%D8%AF%D8%AA%D8%B1%DB%8C%D9%86+%D9%82%D9%84%D9%87+%DB%8C+%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86+%D8%B1%D8%B6%D9%88%DB%8C">بلندترین قله ی خراسان رضوی</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/tag/%D9%82%D8%B2%D9%88%DB%8C%D9%86">قزوین</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/tag/%D8%A7%D8%B3%D8%AA%D8%A7%D9%86+%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86+%D8%B1%D8%B6%D9%88%DB%8C">استان خراسان رضوی</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/tag/%D8%B4%D9%87%D8%B1+%DA%A9%D9%84%D8%A7%D8%AA">شهر کلات</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/tag/%D8%AE%D8%B1%D9%88">خرو</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/tag/%D8%A7%D8%B3%D8%AA%D8%A7%D9%86+%D9%85%D8%A7%D8%B2%D9%86%D8%AF%D8%B1%D8%A7%D9%86">استان مازندران</a></div>
+<div class="FooterSid"></div>
+<!--Design By : Avazak.ir-->
+<h1>سایت آوازک</h1>
+<div style="display: none">﻿<a href="http://tak-ham.ir" title="همسریابی" target="_blank">سایت همسریابی</a></div>
+<div class="Link"><a target="_blank" title="دانلود اهنگ جدید" href="http://fardmusic.com/">دانلود آهنگ جدید</a></div>
+<div class="Link"><a target="_blank" title="اس ام اس عاشقانه" href="http://www.jahaniha.com/cat/sms/lovely-sms">اس ام اس عاشقانه</a> | <a target="_blank" title="چت" href="http://chatmelody.ir/">چت</a> | <a target="_blank" title="چت" href="http://alexachat.com/">چت</a></div>
+<div class="Link">﻿<a href="http://wallhours.ozx.ir/" title="خرید ساعت دیواری فانتزی" target="_blank">خرید ساعت دیواری</a> | <a target="_blank" title="چت" href="http://razchat.com/">چت</a></div>
+<div class="Link">﻿<a href="http://shop-stores.ir/hours-rolex/" title="خرید ساعت طرح رولکس مدل DAYTONA" target="_blank">ساعت طرح رولکس مدل DAYTONA</a>  | <a href="http://bitterwishes.blogfa.com/" title="آرزوهای تلخ" target="_blank">آرزوهای تلخ</a> | <a title="چت روم فارسی"  target="_blank" href="http://parsimag.com/">چت روم فارسی</a></div>
+<div class="Link"><a href="http://www.tanhachat.com/" title="چت" target="_blank">چت</a> | <a href="http://koodak.me/" title="کودک و خانواده" target="_blank">کودک و خانواده</a> | <a title="دانلود آهنگ جدید"  target="_blank" href="http://vip98.ir/">دانلود آهنگ جدید</a></div><br>
+<p align="center"><a href="http://Avazak.ir/Ads/logo.htm" target="_blank"><img src=http://avazak.ir/Ads/Ads-Gallery2.gif /></a><br><div class="FooterSid"></div>
+<!--Design By : Avazak.ir-->
+<h1>طراح قالب: آوازک</h1>
+<div style="text-align: Center"  >
+[ <a title="قالب های آوازک" href="http://Avazak.ir/">طراح قالب: <a tite="ابزار وبلاگ نویسی" href="http://Avazak.ir">آوازک</a> ]<br>
+<div class="FooterSid"></div>
+</td>
+	<!-- end sidebar-l -->
+<!--Design By : Avazak.ir-->
+<td width="550" valign="top" dir="rtl" >
+<div class="bodyposts">
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="post">
+<a name="1"></a>
+<div class="Title">سرود طبیعت</a></div>
+<div class="Content"><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+<div align="center"><b><font size="2">تنها طبیعت است که بر لنگرهای استوار تکیه دارد<br><br>باقی همه بازیچه ی موج های طوفانی است.<br><br><font color="#FF0000">رومن رولان<br><br></font></font></b><br><img src="http://s5.picofile.com/file/8110715842/%D8%B7%D8%A8%DB%8C%D8%B9%D8%AA.jpg" alt="" align="absmiddle" border="0" height="234" hspace="0" vspace="0" width="376"><br></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br></p>
+</div>
+<div class ="date">
+<p class="r">[ یکشنبه 6 بهمن 1392 ]  [ 07:32 ب.ظ ]  [ مژگان فرهادی ]
+<p class="l"><span dir="rtl" > <a target="_self" href="javascript:newComment(1)">[ نظرات(<script>setCommentCnt(1)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="114"></a>
+<div class="Title">قله ی شاه جهان</a></div>
+<div class="Content">
+
+
+
+
+
+
+
+
+
+
+
+
+<div><font color="#990000"><b>دل های ما ...&nbsp; !&nbsp;&nbsp; که به هم نزدیک باشند ...&nbsp;&nbsp; دیگر چه فرقی می کند ... ؟</b></font></div><div><font color="#990000"><b>که کجای این جهان باشیم...</b></font></div><div><font color="#990000"><b>دور باش اما نزدیک ...&nbsp; من از نزدیک بودن های دور ...&nbsp; می ترسم...&nbsp; !!!&nbsp; "احمد شاملو "</b></font></div><div><font color="#990000"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b></font><br></div><div><br></div><div align="center">
+
+
+<img align="baseline" alt="" src="http://s6.picofile.com/file/8257482642/CIMG0180.JPG" border="0" vspace="0" hspace="0"></div><div align="center"><br></div><div><b><font face="tahoma,arial,helvetica,sans-serif">بعد از بازدید از ارگ تاریخی بلقیس , ناهار را در رستوران برگ سبز می خوریم و سپس در ساعت 2:45به سمت رو ستا ی بام به راه می افتیم. </font></b></div><div><b><font face="tahoma,arial,helvetica,sans-serif">بعد از بیست دقیقه , در سمت چپ جاده , تابلویی مسافت را تا روستای بام 35 کیلومتر نشان می دهد.در حدود ده کیلومتری بام , به سمت چپ که روستاهای چهارمست و جهان واقع شده , تغییر مسیر می دهیم.</font></b></div><div><b><font face="tahoma,arial,helvetica,sans-serif">ساعت 3:40 در روستای جهان پیاده می شویم و بعد از آماده کردن کوله ها به راه می افتیم...</font></b></div><div><b><font face="tahoma,arial,helvetica,sans-serif">ساعت 4 بعداز ظهر 14 خردادماه ,با کوله های شب مانی پیمایش ما آغاز می شود...</font></b></div><div><br></div><div align="center"><b>بقیه ی تصاویر در</b><a title="ادامه ی مطلب" href="http://back-to-nature.mihanblog.com/post/114" target=""> <font color="#990000" size="3"><b>ادامه ی مطلب</b></font></a></div><div align="center"><br></div><div align="center"><br></div><div align="right"><br></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><a href='http://back-to-nature.mihanblog.com/post/114'>ادامه مطلب</a><br></p>
+<br><br>
+طبقه بندی: <a href="http://back-to-nature.mihanblog.com/post/category/14">
+قله های ایران</a>، <br>برچسب ها:<a href="http://back-to-nature.mihanblog.com/post/tag/%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86%20%D8%B4%D9%85%D8%A7%D9%84%DB%8C" >خراسان شمالی</a>، 
+<a href="http://back-to-nature.mihanblog.com/post/tag/%D8%A7%D8%B3%D9%81%D8%B1%D8%A7%DB%8C%D9%86" >اسفراین</a>، 
+<a href="http://back-to-nature.mihanblog.com/post/tag/%D8%B1%D9%88%D8%B3%D8%AA%D8%A7%DB%8C%20%D8%AC%D9%87%D8%A7%D9%86" >روستای جهان</a>، 
+<a href="http://back-to-nature.mihanblog.com/post/tag/%D9%82%D9%84%D9%87%20%DB%8C%20%D8%B4%D8%A7%D9%87%20%D8%AC%D9%87%D8%A7%D9%86" >قله ی شاه جهان</a>، 
+<a href="http://back-to-nature.mihanblog.com/post/tag/%D8%A8%D9%84%D9%86%D8%AF%D8%AA%D8%B1%DB%8C%D9%86%20%D9%82%D9%84%D9%87%20%DB%8C%20%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86%20%D8%B4%D9%85%D8%A7%D9%84%DB%8C" >بلندترین قله ی خراسان شمالی</a>، 
+<br></div>
+<div class ="date">
+<p class="r">[ شنبه 15 خرداد 1395 ]  [ 11:52 ق.ظ ]  [ مژگان فرهادی ]
+<p class="l"><span dir="rtl" > <a target="_self" href="javascript:newComment(114)">[ نظرات(<script>setCommentCnt(114)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="113"></a>
+<div class="Title">ارگ تاریخی بلقیس</a></div>
+<div class="Content">
+
+
+
+
+
+
+
+
+
+<div><br></div><div><font color="#990000" face="tahoma,arial,helvetica,sans-serif" size="2"><b>تو را خدا شاد باش و برای آن که شاد شوی, </b></font></div><div><font color="#990000" face="tahoma,arial,helvetica,sans-serif" size="2"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; هر کاری از دستت بر می آید بکن. </b></font></div><div><font color="#990000" face="tahoma,arial,helvetica,sans-serif" size="2"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b></font></div><div><font color="#990000" face="tahoma,arial,helvetica,sans-serif" size="2"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " آنا گاوالد "</b></font></div><div><font face="tahoma,arial,helvetica,sans-serif"></font><font size="2"></font><b></b><font color="#990000"></font><br></div><div align="center">
+
+
+<img align="baseline" alt="" src="http://s6.picofile.com/file/8255506950/IMG_20160605_135050.jpg" border="0" vspace="0" hspace="0"></div><div align="center"><font face="tahoma,arial,helvetica,sans-serif" size="2"><b><br></b></font></div><div align="center"><font face="tahoma,arial,helvetica,sans-serif" size="2"><b>از هر فرصتی در تعطیلات باید بهره برد و مانیز این دو روز یعنی چهاردهم و پانزدهم خرداد ماه را ,به قصد صعود قله ی شاه جهان , نیشابور را ترک می کنیم.ساعت 6:20 همگی روز جمعه به سمت اسفراین به راه می افتیم. بعد از سبزوار , تابلویی , مسافت 110 کیلومتری اسفراین را نشان می دهد. </b></font></div><div align="center"><font face="tahoma,arial,helvetica,sans-serif" size="2"><b>در ابتدا, به ارگ تاریخی بلقیس که در سه کیلومتری جنوب غربی شهر کنونی اسفراین قرار گرفته , سری می زنیم...</b></font></div><div><font style="background-color: rgb(255, 255, 255);"><br></font></div><div align="center"><font face="tahoma,arial,helvetica,sans-serif" size="2" style="background-color: rgb(255, 255, 255);"><b>بقیه ی تصاویر در </b><a title="ادامه ی مطلب" href="http://back-to-nature.mihanblog.com/post/113" target=""><font color="#cc0000" face="tahoma,arial,helvetica,sans-serif" size="2" style="background-color: rgb(255, 255, 255);"><b>ادامه ی مطلب</b></font><font color="#cc0000" face="tahoma,arial,helvetica,sans-serif" style="background-color: rgb(255, 255, 255);"><b> </b></font></a></font></div><div><br></div><div align="center"><br></div><div align="center"><br></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><a href='http://back-to-nature.mihanblog.com/post/113'>ادامه مطلب</a><br></p>
+<br><br>
+طبقه بندی: <a href="http://back-to-nature.mihanblog.com/post/category/12">
+اماکن تاریخی</a>، <br>برچسب ها:<a href="http://back-to-nature.mihanblog.com/post/tag/%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86%20%D8%B4%D9%85%D8%A7%D9%84%DB%8C" >خراسان شمالی</a>، 
+<a href="http://back-to-nature.mihanblog.com/post/tag/%D8%A7%D8%B3%D9%81%D8%B1%D8%A7%DB%8C%D9%86" >اسفراین</a>، 
+<a href="http://back-to-nature.mihanblog.com/post/tag/%D8%A7%D8%B1%DA%AF%20%D8%A8%D9%84%D9%82%DB%8C%D8%B3" >ارگ بلقیس</a>، 
+<a href="http://back-to-nature.mihanblog.com/post/tag/%D9%86%D8%A7%D8%B1%DB%8C%D9%86%20%D9%82%D9%84%D8%B9%D9%87" >نارین قلعه</a>، 
+<br></div>
+<div class ="date">
+<p class="r">[ جمعه 14 خرداد 1395 ]  [ 05:55 ب.ظ ]  [ مژگان فرهادی ]
+<p class="l"><span dir="rtl" > <a target="_self" href="javascript:newComment(113)">[ نظرات(<script>setCommentCnt(113)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="109"></a>
+<div class="Title">دهنه ی حیدری</a></div>
+<div class="Content">
+
+
+
+
+
+
+
+
+
+<div><font color="#cc0000" face="tahoma,arial,helvetica,sans-serif" size="2"><b>اگر زمانی دراز به اعماق نگاه کنی , </b></font></div><div><font color="#cc0000" face="tahoma,arial,helvetica,sans-serif" size="2"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; آن گاه اعماق هم به درون تو نظر می اندازد. " نیچه "</b></font><font color="#cc0000" face="tahoma,arial,helvetica,sans-serif"><b>
+</b></font></div><div><font color="#cc0000" face="tahoma,arial,helvetica,sans-serif"><b><br></b></font></div><div align="center"><font color="#cc0000" face="tahoma,arial,helvetica,sans-serif"><b>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br></b></font></div><div align="center"><font color="#cc0000" face="tahoma,arial,helvetica,sans-serif"><img align="baseline" alt="" src="http://s7.picofile.com/file/8249834084/IMG_6764.JPG" border="0" vspace="0" hspace="0"><b></b><i></i><u></u><sub></sub><sup></sup><strike></strike></font></div><div><br></div><div><font color="#333333" face="tahoma,arial,helvetica,sans-serif" size="2"><b>امروز به دهنه ی حیدری می رویم . روستایی از توابع بخش میان جلگه ی نیشابور که کوه های آن در شمال غربی رشته کوه بینالود واقع شده است.</b></font></div><div><font color="#333333" face="tahoma,arial,helvetica,sans-serif" size="2"><b>به سمت شهر فیروزه به راه می افتیم . در 85 کیلومتری قوچان , تابلویی در طرف راست جاده , کلاته محمدجان رانشان می دهد پس از گذشتن از کلاته , قبل از روستای ماروسک, به طرف چپ جاده که نصیرآباد است می رویم و بعد از آن , آخرین روستا دهنه ی حیدری است...</b></font></div><div><b><font color="rgb(51,51,51)" size="2"><br></font></b></div><div><font color="#333333" face="tahoma,arial,helvetica,sans-serif" size="2"><b>ساعت 8 است که کوهپیمایی ما آغاز می شود...</b></font></div><div><font size="2"></font><font face="tahoma,arial,helvetica,sans-serif"></font><b></b><font color="#333333"></font><br></div><font color="#cc0000" face="tahoma,arial,helvetica,sans-serif"><div><br></div><div align="center"><font color="#330000" face="tahoma,arial,helvetica,sans-serif" size="2"><b>بقیه ی تصاویر در </b></font><a title="ادامه ی مطلب" href="http://back-to-nature.mihanblog.com/post/109" target=""><font color="#990000" face="tahoma,arial,helvetica,sans-serif" size="3"><b>ادامه ی مطلب</b></font></a></div><div align="center"><br></div><div align="center"><br></div></font>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><a href='http://back-to-nature.mihanblog.com/post/109'>ادامه مطلب</a><br></p>
+<br><br>
+طبقه بندی: <a href="http://back-to-nature.mihanblog.com/post/category/15">
+طبیعت نیشابور</a>، <br>برچسب ها:<a href="http://back-to-nature.mihanblog.com/post/tag/%D9%86%DB%8C%D8%B4%D8%A7%D8%A8%D9%88%D8%B1" >نیشابور</a>، 
+<a href="http://back-to-nature.mihanblog.com/post/tag/%D8%A8%D8%AE%D8%B4%20%D8%AA%D8%AD%D8%AA%20%D8%AC%D9%84%DA%AF%D9%87" >بخش تحت جلگه</a>، 
+<a href="http://back-to-nature.mihanblog.com/post/tag/%D8%AF%D9%87%D9%86%D9%87%20%DB%8C%20%D8%AD%DB%8C%D8%AF%D8%B1%DB%8C" >دهنه ی حیدری</a>، 
+<br></div>
+<div class ="date">
+<p class="r">[ جمعه 10 اردیبهشت 1395 ]  [ 02:52 ب.ظ ]  [ مژگان فرهادی ]
+<p class="l"><span dir="rtl" > <a target="_self" href="javascript:newComment(109)">[ نظرات(<script>setCommentCnt(109)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="108"></a>
+<div class="Title">قله بینالود</a></div>
+<div class="Content">
+
+
+
+
+
+
+<div><br></div><div><font color="#990000" face="tahoma,arial,helvetica,sans-serif" size="2"><b><br></b></font></div><div><font color="#660000" face="tahoma,arial,helvetica,sans-serif" size="2"><b>هرگز شب را باور نکردم&nbsp; </b></font><font color="#660000" face="tahoma,arial,helvetica,sans-serif" size="2"><b>&nbsp; چرا که در فراسوهای دهلیزش&nbsp;</b></font></div><div><font color="#660000" face="tahoma,arial,helvetica,sans-serif" size="2"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; به امید دریچه ای دل بسته بودم&nbsp;&nbsp;&nbsp; شکوهی در جانم تنوره می کشد&nbsp; </b></font></div><div><font color="#660000" face="tahoma,arial,helvetica,sans-serif" size="2"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; گویی از پاک ترین هوای کوهستان&nbsp;&nbsp; &nbsp;&nbsp;لبالب قدحی در کشیده ام. "شاملو"</b></font></div><div><font color="#660000"><br></font></div><div><br></div><div align="center">
+
+
+<img align="baseline" alt="" src="http://s6.picofile.com/file/8248966150/IMG_20160423_095857.jpg" border="0" vspace="0" hspace="0"></div><div><font style="background-color: transparent;"><br></font></div><div align="center"><font face="tahoma,arial,helvetica,sans-serif" size="2" style="background-color: transparent;"><b>هوای این روزهای شهرمان , همه را غافلکیر کرده و بارندگی های پی در پی جانی تازه به دیارمان داده است. </b></font></div><div align="center"><font face="tahoma,arial,helvetica,sans-serif" size="2" style="background-color: transparent;"><b>سبزی و خرمی کوه ها , از دور نمایان است و وجد و سرور را می توان در چهره ی هرکسی دید.</b></font></div><div align="center"><font face="tahoma,arial,helvetica,sans-serif" size="2"><b>اما احتمال حذف برنامه از ابتدای هفته به دلیل بارندگی بود ولی خوشبختانه دو روز پایانی ,هوا آفتابی گزارش شده بود و مشکلی برای صعود نداشتیم . پس همگی کوله ها را می بندیم و راهی کوه می شویم ...</b></font></div><div align="center"><br></div><div><font style="background-color: rgb(255, 255, 255);"><br></font></div><div align="center"><font face="tahoma,arial,helvetica,sans-serif" size="2" style="background-color: rgb(255, 255, 255);"><b>بقیه ی تصاویر در </b></font></div><div align="center"><b><font size="2" style="background-color: rgb(255, 255, 255);"></font></b><font style="background-color: rgb(255, 255, 255);"><a title="" href="http://back-to-nature.mihanblog.com/post/108" target=""><br></a></font></div><font style="background-color: rgb(255, 255, 255);"><a title="" href="http://back-to-nature.mihanblog.com/post/108" target=""><div align="center"><font color="#990000" face="tahoma,arial,helvetica,sans-serif" size="3" style="background-color: rgb(255, 255, 255);"><b>ادامه ی مطلب</b></font></div><div align="center"><b><font color="rgb(153,0,0)" size="3"><br></font></b></div></a></font><font face="tahoma,arial,helvetica,sans-serif" size="2"><div align="center"><br></div><div><br></div><b><div><br></div><div align="center"><br></div></b></font><div align="center"><br></div><div align="center"><br></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><a href='http://back-to-nature.mihanblog.com/post/108'>ادامه مطلب</a><br></p>
+<br><br>
+طبقه بندی: <a href="http://back-to-nature.mihanblog.com/post/category/20">
+قله های نیشابور</a>، <br>برچسب ها:<a href="http://back-to-nature.mihanblog.com/post/tag/%D9%86%DB%8C%D8%B4%D8%A7%D8%A8%D9%88%D8%B1" >نیشابور</a>، 
+<a href="http://back-to-nature.mihanblog.com/post/tag/%D9%82%D9%84%D9%87%20%DB%8C%20%D8%A8%DB%8C%D9%86%D8%A7%D9%84%D9%88%D8%AF" >قله ی بینالود</a>، 
+<a href="http://back-to-nature.mihanblog.com/post/tag/%D8%A8%D8%A7%D9%85%20%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86%20%D8%B1%D8%B6%D9%88%DB%8C" >بام خراسان رضوی</a>، 
+<br></div>
+<div class ="date">
+<p class="r">[ جمعه 3 اردیبهشت 1395 ]  [ 01:18 ب.ظ ]  [ مژگان فرهادی ]
+<p class="l"><span dir="rtl" > <a target="_self" href="javascript:newComment(108)">[ نظرات(<script>setCommentCnt(108)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="112"></a>
+<div class="Title">نرم پا , درود</a></div>
+<div class="Content">
+
+<div><br></div><div><br></div><div align="center">
+
+
+<img align="baseline" alt="" src="http://s6.picofile.com/file/8251678018/IMG_6614.JPG" border="0" vspace="0" hspace="0"></div><div align="center"><br></div><div align="center"><br></div>
+
+
+
+<br><a href='http://back-to-nature.mihanblog.com/post/112'>ادامه مطلب</a><br></p>
+<br><br>
+طبقه بندی: <a href="http://back-to-nature.mihanblog.com/post/category/15">
+طبیعت نیشابور</a>، <br>برچسب ها:<a href="http://back-to-nature.mihanblog.com/post/tag/%D9%86%DB%8C%D8%B4%D8%A7%D8%A8%D9%88%D8%B1" >نیشابور</a>، 
+<a href="http://back-to-nature.mihanblog.com/post/tag/%D8%AF%D8%B1%D9%88%D8%AF" >درود</a>، 
+<a href="http://back-to-nature.mihanblog.com/post/tag/%D8%AF%D8%B1%D9%87%20%DB%8C%20%D9%86%D8%B1%D9%85%20%D9%BE%D8%A7" >دره ی نرم پا</a>، 
+<br></div>
+<div class ="date">
+<p class="r">[ جمعه 27 فروردین 1395 ]  [ 08:12 ب.ظ ]  [ مژگان فرهادی ]
+<p class="l"><span dir="rtl" > <a target="_self" href="javascript:newComment(112)">[ نظرات(<script>setCommentCnt(112)</script>) ]</a></div></div>
+<br>
+<p align="center"><font face="Tahoma" style="font-size: 9pt">
+.: تعداد کل صفحات 17 :. <a href="http://back-to-nature.mihanblog.com/page/1"> [  <b>1</b>  ]</a> <a href="http://back-to-nature.mihanblog.com/page/2"> [  <span>2</span>  ]</a> <a href="http://back-to-nature.mihanblog.com/page/3"> [  <span>3</span>  ]</a> <a href="http://back-to-nature.mihanblog.com/page/4"> [  <span>4</span>  ]</a> <a href="http://back-to-nature.mihanblog.com/page/5"> [  <span>5</span>  ]</a> <a href="http://back-to-nature.mihanblog.com/page/6"> [  <span>6</span>  ]</a> <a href="http://back-to-nature.mihanblog.com/page/7"> [  <span>7</span>  ]</a> <a href="http://back-to-nature.mihanblog.com/page/8"> [  <i>...</i>  ]</a> <br>
+</p></div></td>
+	<!-- end post -->
+<!--Design By : Avazak.ir-->
+<td width="200" valign="top" dir="rtl" >
+<div class="sidebar-r">
+<!--Design By : Avazak.ir-->
+<h1>درباره وبلاگ</h1>
+<div class="About">
+<div style="text-align: justify"  >
+<img src="../static.mihanblog.com/public/user_data/web_photo/455/1364443.jpg@9155"  /><div align=center >   </div>
+</div> </div> 
+<div class="FooterSid"></div>
+<!--Design By : Avazak.ir-->
+<h1>آرشیو ماهانه</h1>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive/1395/3"> خرداد 1395</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive/1395/2"> اردیبهشت 1395</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive/1395/1"> فروردین 1395</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive/1394/12"> اسفند 1394</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive/1394/11"> بهمن 1394</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive/1394/10"> دی 1394</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive/1394/7"> مهر 1394</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive/1394/6"> شهریور 1394</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive/1394/5"> مرداد 1394</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive/1394/4"> تیر 1394</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive/1394/2"> اردیبهشت 1394</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive/1394/1"> فروردین 1394</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive/1393/12"> اسفند 1393</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive/1393/11"> بهمن 1393</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive/1393/10"> دی 1393</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive/1393/9"> آذر 1393</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive/1393/8"> آبان 1393</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive/1393/7"> مهر 1393</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive/1393/6"> شهریور 1393</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/archive">لیست آرشیوها</a></div>
+<div class="FooterSid"></div>
+<!--Design By : Avazak.ir-->
+<h1>آرشیو موضوعی</h1>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/category/20">قله های نیشابور - 16</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/category/15">طبیعت نیشابور - 31</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/category/14">قله های ایران - 12</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/category/21">آبشارها - 5</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/category/18">دریاچه ها - 2</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/category/17">دره ها - 3</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/category/16">قلعه ها - 3</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/category/19">جنگل ها - 4</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/category/4">کویر - 2</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/category/10">چشمه ها - 2</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/category/11">غارها - 3</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/category/12">اماکن تاریخی - 3</a></div>
+<div class="Link"><a href="http://back-to-nature.mihanblog.com/post/category/7">نقشه ی مسیرها - 4</a></div>
+<div class="FooterSid"></div>
+<!--Design By : Avazak.ir-->
+
+		<!--Design By : Avazak.ir-->
+<h1>آمار وبلاگ</h1>
+<div style="text-align: Right" >
+<div class="Link">بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class="Link">بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class="Link">كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class="Link">بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class="Link">بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class="Link">تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class="Link">كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center></div>
+<div class="FooterSid"></div>	
+<!--Design By : Avazak.ir-->
+<h1>لینک های ویژه</h1>
+<div class="Link"><a titl="انجمن وبلاگ نویسان" href="http://forum.avazak.ir">انجمن وبلاگ نویسان</a></div>
+<div class="Link"><a titl="اس ام اس جدید" href="http://20payamak.ir">اس ام اس عاشقانه</a></div>
+<div class="Link"><a titl="قالب رایگان" href="http://avazak.ir">قالب وبلاگ</a></div>
+<div class="Link"><a titl="کد آهنگ برای وبلاگ" href="http://music.avazak.ir">کد آهنگ</a></div>
+<div class="Link"><a titl="نغمه سرا" href="http://naghmehsara.ir">سایت عاشقانه</a></div>
+<div class="FooterSid"></div>
+<!--Design By : Avazak.ir-->
+<div class="custom">
+<h1>دیگر امکانات</h1>
+<div align="center"><script type="text/javascript" src="http://1abzar.ir/abzar/tools/no-rightclick.js"></script>
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/no-selects.js"></script> 
+
+
+<!-- Begin ToolsIR.com counter code -->
+<script type="text/javascript" src="http://counter.toolsir.com/secure.js"></script>
+<script type="text/javascript">
+  var _torder = 'visit,online,todayuser,today,weekly,link&color=003366,ECF6FE,BCE3FD&visit=3&pic=0&width=120';
+  var _turl = 'http://back-to-nature.mihanblog.com';
+  _tCounter (_torder,_turl);
+</script><div style="display:none;"><h2><a href="http://www.toolsir.com/">دریافت کد آمارگیر سایت</a></h2></div>
+<!-- End ToolsIR.com counter code -->
+
+
+
+
+<!-- shahrmajazi.com --><script language="javascript"   type="text/javascript"  src="http://YekAvA.com/upload/tools/shahrmajazi146.com.js"></script><!-- shahrmajazi.com -->
+
+</div></div>
+<div class="FooterSid"></div>
+</td></tr>
+</div></div>
+	<!-- end sidebar-r -->
+<!--Design By : Avazak.ir-->
+<tr><td width="1000" colspan="3" class="Footer" dir="rtl">
+[ <a title="قالب وبلاگ" href="http://Avazak.ir/">طراح قالب: <a tite="قالب وبلاگ" href="http://Avazak.ir">آوازک</a> | <a title="قالب وبلاگ" href="http://Avazak.ir">Theme By Avazak.ir</a> | <a title="قالب وبلاگ رایگان" href="http://avazak.ir/?feed=rss2">rss</a> ]<br>
+</td></tr></table></div></div>
+<!-- end Footer -->
+<!--Design By : Avazak.ir-->
+<div style="display:none;"><a title="مجله اینترنتی دانستنی ها" href="http://danestaniha.net/">مجله اینترنتی دانستنی ها</a> ، <a title="عکس عاشقانه جدید" href="http://gallery.avazak.ir/thumbnails.php?album=891">عکس عاشقانه جدید</a> ، <a title="اس ام اس های عاشقانه" href="http://20payamak.ir/%D8%A7%D8%B3-%D8%A7%D9%85-%D8%A7%D8%B3-%D9%87%D8%A7%DB%8C-%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87/">اس ام اس های عاشقانه</a></div>
+</body>
+
+</html>
+
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'back-to-nature.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

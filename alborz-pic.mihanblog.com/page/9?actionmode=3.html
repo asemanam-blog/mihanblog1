@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('1399/09/27');
+		/*1145999*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[1006]='0';commentCnt[1007]='0';commentCnt[1008]='2';commentCnt[1009]='1';commentCnt[1010]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[1006]='1';
+mihanblogDisLikeArrCnt[1006]='0';
+mihanblogLikeArrCnt[1007]='2';
+mihanblogDisLikeArrCnt[1007]='0';
+mihanblogLikeArrCnt[1008]='2';
+mihanblogDisLikeArrCnt[1008]='0';
+mihanblogLikeArrCnt[1009]='3';
+mihanblogDisLikeArrCnt[1009]='0';
+mihanblogLikeArrCnt[1010]='3';
+mihanblogDisLikeArrCnt[1010]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://alborz-pic.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://alborz-pic.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','1028');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','1396/05/21');
+	
+	setStatVar('today_view','125');
+	setStatVar('yesterday_view','985');
+	
+	setStatVar('this_month_view','6101');
+	setStatVar('last_month_view','11165');
+
+	setStatVar('total_view','2326521');
+	setStatVar('last_view_date','1399/09/27 (17:15)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://alborz-pic.mihanblog.com/statupdate/?data[refereruri]=http://alborz-pic.mihanblog.com/page/8&data[postid]=&data[requesturi]=/page/9?actionmode=3&data[sdate]=1608212854&data[hash]=e45d9a15028ab0bb2e64dd8b7e06e8ce&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+<head>
+<title>سایت تفریحی و سرگرمی* همه چی از همه جا *</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="designer" content="Theme - Designer">
+<meta name="designerUrl" content="http://www.theme-designer.com/">
+<meta name="language" content="Farsi">
+<meta name="author" content="alborz-pic alborz">
+<meta name="description" content="سایت تفریحی و سرگرمی* همه چی از همه جا * - سایت تفریحی و سرگرمی* همه چی از همه جا *">
+<meta name="keywords" content="سایت تفریحی و سرگرمی* همه چی از همه جا *, سایت تفریحی و سرگرمی* همه چی از همه جا *">
+<link rel="alternate" type="application/rss+xml" title="سایت تفریحی و سرگرمی* همه چی از همه جا *" href="../post/rss/index.html" />
+<link href="http://themeupload.theme-designer.com/66/c.css" type="text/css" rel="stylesheet">
+<script type='text/javascript' src="http://themeupload.theme-designer.com/66/js/flexcroll.js"></script>
+</head>
+<!-- Template66-mihanblog -->
+<!-- Version: 1.0 -->
+<!-- Url template: http://www.theme-designer.com/template66.html -->
+<!-- Design By: wWw.Theme-Designer.Com -->
+
+<!---------- background ---------------------------->
+<!---------- address-image --------->
+<body style="
+	background-color:#423d3d;
+	background-image:url('http://themeupload.theme-designer.com/66/image/1.jpg');
+	background-repeat:no-repeat; background-position:center top;" dir="rtl">
+<!---------- address-image --------->
+<!---------- background ---------------------------->
+
+
+<!---------- he ---------------------------->
+<!---------- address-image --------->
+<div style="
+	background-image:url('http://themeupload.theme-designer.com/66/image/2.png');
+	background-repeat:no-repeat; background-position:center top;
+	height:179px; overflow:hiiden;
+	margin:36px 0px 0px 0px;">
+<!---------- address-image --------->
+
+<div class="theme-designer-com_koli_width">
+
+<div class="theme-designer-com_makan_blogtitle">
+<div class="theme-designer-com_blogtitle"><a href="../index.html">سایت تفریحی و سرگرمی* همه چی از همه جا *</a></div>
+<div class="theme-designer-com_description">همه چی از همه جا </div>
+</div>
+
+<div class="theme-designer-com_makan_header_icon">
+<div class="theme-designer-com_header_icon1"><a title="تماس با ما" href="javascript:messageForm()"><img border="0" width="" height="" src="http://themeupload.theme-designer.com/66/image/4.gif"></a></div>
+<div class="theme-designer-com_header_icon1"><a title="خانه" href="../index.html"><img border="0" width="" height="" src="http://themeupload.theme-designer.com/66/image/5.gif"></a></div>
+<div class="theme-designer-com_header_icon1"><a target="_blank" title="لینك rss" href="../post/rss/index.html"><img border="0" width="" height="" src="http://themeupload.theme-designer.com/66/image/6.gif"></a></div>
+</div>
+
+<div class="theme-designer-com_makan_header_menu">
+<div class="theme-designer-com_header_menu">
+<a href="../index.html">صفحه ی نخست</a>|
+<a href="mailto:">پست الکترونیک</a>|
+<a href="javascript:messageForm()">تماس با ما</a>|
+<a href="../post/archive.html">آرشیو مطالب</a>|
+<a target="_blank" href="../post/rss/index.html">لینك rss</a>|
+<a target="_blank" href="http://alborz-pic.mihanblog.com/m/">نسخه موبایل</a>
+</div>
+</div>
+
+</div>
+
+</div>
+<!---------- he ---------------------------->
+
+<div align="center">
+<div class="theme-designer-com_body">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="21" valign="top">&nbsp;</td>
+<td width="612" valign="top">
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0" class="boxtop_table">
+<tr>
+<td width="286" valign="top">
+
+<div class="theme-designer-com_boxtop-zard_background1">
+<div class="boxtop-zard_title">آخرین مطالب</div>
+</div>
+<div class="theme-designer-com_boxtop-zard_background2">
+<div align="center"><div class="boxtop_w-h"><div class="boxtop_m">
+<div id='mycustomscroll' class='flexcroll' dir="ltr">
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1051.html" title="1396/05/21" > مراحل رشد نوزاد </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1050.html" title="1395/09/8" > از سیر تا پیاز آنفولانزا و راه های درمان آن </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1049.html" title="1395/09/8" > ماجرای جالب چارلی چاپلین کوچک </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1048.html" title="1395/09/8" > قلقلک هوش کودکان بدون سرگرمی با موبایل و تبلت </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1047.html" title="1395/09/8" > موزه کالبدهای شکافته شده توسط «دکتر مرگ»  </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1046.html" title="1395/09/4" > اینفوگرافیک؛ حقایقی پیرامون سلفی گرفتن </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/902.html" title="1395/09/2" > معجزات آیت الکرسی  </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1041.html" title="1395/09/1" > وضعیت دهه شصتیا برای دریافت امکانات این شکلی بود  </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1045.html" title="1395/08/29" > راهپیمایی زائران اربعین حسینی در مسیر عشق </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1042.html" title="1395/08/29" >   	زیارت اربعین در طول تاریخ به روایت تصاویر </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1044.html" title="1395/08/29" > اربعین است که می آید ... </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1043.html" title="1395/08/28" > در هزاران عاشورای فردی به کدام طرف پیوسته ایم؟ </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1040.html" title="1395/08/25" > معمای عجیب 2 برادر که با غروب آفتاب فلج می‌شوند! </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1039.html" title="1395/08/25" > غار اصحاب کهف در کجا واقع شده است؟ + تصاویر </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1038.html" title="1395/08/25" > عکس ساعت 60 میلیون تومانی مهران مدیری! </a></div>
+<div class="vmenu-c"></div>
+</div>
+</div></div></div>
+</div>
+<div class="theme-designer-com_boxtop-zard_background3"></div>
+
+</td>
+<td width="32" valign="top">&nbsp;</td>
+<td width="286" valign="top">
+
+<div class="theme-designer-com_boxtop-khakestari_background1">
+<div class="boxtop-khakestari_title">
+پیوندهای روزانه
+</div>
+</div>
+<div class="theme-designer-com_boxtop-khakestari_background2">
+<div align="center"><div class="boxtop_w-h"><div class="boxtop_m">
+<div id='mycustomscroll' class='flexcroll' dir="ltr">
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://toosanbar.rzb.ir/" title="طوسان بار البرز 
+ 
+حمل اثاثیه منزل و مبلمان 
+جابجایی جهیزیه و لوازم ادارات
+گاو صندوق 
+ساید بای ساید
+پیانو و ....
+ 
+بسته بندی با پتو توسط کارگران مجرب و ورزیده 
+با بیمه
+ 
+با مجوز رسمی 
+ 
+36208490
+36208495
+32733556
+0912-6381978 
+شفیعی" >طوسان بار</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://toosanbar.mihanblog.com/" title="طوسان بار البرز 
+ 
+حمل اثاثیه منزل و مبلمان 
+جابجایی جهیزیه و لوازم ادارات
+گاو صندوق 
+ساید بای ساید
+پیانو و ....
+ 
+بسته بندی با پتو توسط کارگران مجرب و ورزیده 
+با بیمه
+ 
+با مجوز رسمی 
+ 
+36208490
+36208495
+32733556
+0912-6381978 
+شفیعی" >باربری البرز</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://min00o.mihanblog.com" title="" > &quot; صدایی در سکوت &quot;</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://linsurance365.blogfa.com" title="" >بیمه عمر و سرمایه گذاری</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://myworld76.blogfa.com" title="" > My World</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.labkhande-1-fereshte.blogfa.com" title="" >خاطرات تلخ و شیرین من</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://mojtabaghiasi.mihanblog.com" title="" > مـــــجتبــــــــی غـــــــیاثی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://amouzadeh937.mihanblog.com" title="" >بـغـض شـبـانـــــــــــــه</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://ofoghbashagard.blogfa.com" title="سفربه محرومترین نقطه دنیا" >افق بشاگرد</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://negar3690.blogfa.com" title="" >ßrökêñ hêårt</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.madha.blogveb.com" title="" >جوان امروز</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://anti-ebliss.mihanblog.com" title="" >بانک مقالات ضد شیطان پرستی وضد فراماسونری</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://aram75.mihanblog.com" title="" >پشت دریاها شهری است. قایقی خواهم ساخت ...</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://days-of-my-life-iran.blogfa.com" title="" >❤ Moments of my ✎</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://cafekahkeshan.mihanblog.com" title="" >	 کافه کهکشان </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://alitaker.blogveb.com" title="" >مجله سرگرمی علمی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://harchitobekhai.blogfa.com" title="" >هر چی تو بخوای</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://2rost.blogsky.com" title="" >زیبابودن و همسر خوبی بودن</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://pooriya88.mihanblog.com" title="" >·•●♦ ورود ممنوع ♦●•·</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.namazfatemeh.blogfa.com" title="" >نماز؛ دریچه ای به سوی خوشبختی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://zinat-vaghar.mihanblog.com" title="" >زینت زن حفظ حجاب است.</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://nohdare94.mihanblog.com" title="سلام آرش جوم" >.اینجه همه چى قاطی پاطیه.</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://marand2012.mihanblog.com" title="" >marand2012</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.masihanami.blogfa.com" title="" >علی ضیا با طعم ویتامین 3</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://masoud447.blogfa.com" title="" >تمامی کدهای مخفی گوشی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://mary111.blogfa.com" title="" >رویای خیس</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://313sarbazgomnam.mihanblog.com" title="" >دینی مذهبی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://agricalture-aligoodarz.mihanblog.com" title="" >کشــاورزی الیگـــودرز</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.3tar.loxblog.com" title="" >ستــــــــــــــاره شـــــــــــــب</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://azan3.blogfa.com" title="" >روستای اذان اصفهان </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://davoodbagheri.mihanblog.com" title="" >دانش آموزان مریخی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://feri2m.loxblog.ir" title="" > تسلیحات نظامی ایران و جهان</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.diddigar.lxb.ir" title="" >---دید دیگر</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://riazinovin.loxblog.com" title="" >آموزش نوین</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://jokotanz111.persianblog.ir" title="" >ای دلم!!!وای دلم!!!</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://sadafjo0n.loxblog.com" title="" >حقیقت عشق</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://2fblog.r98.ir" title="" >مطالب جالب و فوق العاده از سراسر وب</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="../linkdaily/index.html" >لیست کامل پیوندهای روزانه</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a  href="javascript:linkdailyForm()" >ارسال پیوند</a></div>
+<div class="vmenu-c"></div>
+</div>
+</div></div></div>
+</div>
+<div class="theme-designer-com_boxtop-khakestari_background3"></div>
+
+</td>
+</tr>
+</table>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="theme-designer-com_menuright-border2">
+<div class="theme-designer-com_menuright-border4">
+<div class="theme-designer-com_menuright-border1">
+<div class="theme-designer-com_menuright-border3">
+<div class="theme-designer-com_menuright-post">
+
+<div class="theme-designer-com-comments-box">
+<div class="comments-icon"></div>
+<div class="comments-text"><a target="_self" href="../post/1010.html#commentlist">نظرات <script>setCommentCnt(1010)</script> </a></div>
+</div>
+<div class="theme-designer-com_koli_clear"></div>
+
+<div class="theme-designer-com_post-backtitle">
+<div class="theme-designer-com_post-title" align="right"><a href="../post/1010.html">خوراکی هایی که کاهش هوش را بدنبال دارند</a></div>
+</div>
+
+<div align="center">
+<div class="theme-designer-com_post-badane" align="right">
+<div class="theme-designer-com-post-text"><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><a href="post/1010.html" target="" title="alborz-pic"><img src="https://ci3.googleusercontent.com/proxy/-LDk14c0Ep3wC1Gojf4ZmHW_tZ1A697xx4OqzhRlqC7Roq25M-x0wSpEv1-ucpTMXEHaRqab8mCtX-JtjG0=s0-d-e1-ft#http://persian-star.net/1395/8/15/01.jpg" border="0" alt="گروه اینترنتی پرشیـن استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></a></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;">در رژیم غذایی ما برخی از مواد غذایی یافت می‌شوند که با خوردنشان باعث کندذهنی و نابودی هوشمان می‌شویم! بله، هضمش کمی سخت است! ‌اما در این نوشتار با چند نمونه از این مواد غذایی آشنا می‌شویم.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;">همه ما با آن دسته از مواد‌غذایی که باعث حملات قلبی، چاقی، سرطان و دیگر موارد ذکر نشده‌ای که تند و زننده هستند آشنا هستیم. اما در واقع خوراکی‌هایی وجود دارند که خوردن آنها باعث نابودی هوش می‌شود. این دسته از مواد غذایی شامل الکل، مواد ‌غذایی کم‌ارزش، قندهای مصنوعی است.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><b style="line-height: 1.22em;">1.</b></font><b style="line-height: 1.22em;"><font face="Tahoma" color="#CC0000" style="line-height: 1.22em; font-size: 10pt;">&nbsp;الکل</font></b><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;">قطعا برای شهرت الکل به عنوان قاتل مغزی خود متعجب نمی‌شویم. ما معمولاً از پیامدهای مخرب و ویرانگر الکل بر کبد خود آگاهی داریم اما این در حالی است که الکل همچنین می‌تواند صدمات جدی به سلول‌های مغزی نیز وارد کند. عوارض جانبی شناخته شده از الکل شامل لغزش‌های حافظه و عدم تمرکز است. سوء مصرف طولانی مدت الکل نیز باعث اختلال در قوای شناختی می‌شود.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><b style="line-height: 1.22em;">2.&nbsp;</b></font><b style="line-height: 1.22em;"><font face="Tahoma" color="#CC0000" style="line-height: 1.22em; font-size: 10pt;">تنقلات</font></b><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;">برگرها، سرخ‌کردنی‌ها و چیزهایی شبیه آن ما را دچار وسوسه ‌می‌کند اما خوردن این مواد غذایی باعث انباشته شدن چربی‌ها ‌می‌شود که این امر اعتیاد را بوجود می‌آورد. مصرف نامحدود تنقلات مانع تولید "دوپامین" می‌شود که ماده شیمیایی "شادی" در بدن ما است و علائمی را به وجود می‌آورد که با نوسان اخلاقی و افسردگی ارتباط دارد.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><b style="line-height: 1.22em;">3.&nbsp;</b></font><b style="line-height: 1.22em;"><font face="Tahoma" color="#CC0000" style="line-height: 1.22em; font-size: 10pt;">محصولات غذایی غنی از قند</font></b><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;">قند‌های ذخیره شده که مسبب مشکلات عصبی است. مصرف بیش از حد قند منجر به کاهش تولید یک ماده شیمیایی در مغز می‌شود که به عنوان فاکتور نوروتروفیک مشتق شده از مغز شناخته شده است. نبود این ماده باعث اختلال در یادگیری و همچنین به خاطر سپردن می‌شود. طبیعت اعتیاد‌آور شکر عواقب بلند مدتی بهمراه دارد به طوریکه بر توانایی یادگیری تاثیر می‌گذارد و مهارت‌های شناختی را تضعیف می‌کند.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><b style="line-height: 1.22em;">4.</b></font><b style="line-height: 1.22em;"><font face="Tahoma" color="#CC0000" style="line-height: 1.22em; font-size: 10pt;">&nbsp;مواد غذایی سرخ شده</font></b><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;">مواد غذایی سرخ شده، به سبک پخت جنوبی در جنوب شرقی آمریکا به عنوان "کمربند سکته مغزی" شناخته شده است. سطوح بالای چربی و کلسترول موجود در مواد غذایی سرخ شده بر دیواره‌های شریان تامین خون به مغز رسوب می‌کند؛ عدم خون‌رسانی کافی در نهایت باعث سکته مغزی می‌شود. بنابراین، هنگامی که در رژیم غذایی به طور منظم شامل مواد غذایی سرخ شده باشد، شما بیشتر با دردسر و مشکلات مواجه می‌شوید.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><b style="line-height: 1.22em;">5.&nbsp;</b></font><b style="line-height: 1.22em;"><font face="Tahoma" color="#CC0000" style="line-height: 1.22em; font-size: 10pt;">وعده‌های غذایی منجمد شده</font></b><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;">اکثر افراد در زندگی خود به دلیل زمان کمی که دارند مجبور می‌شوند که غذاهای خود را فریز کنند. مصرف مواد غذایی یخ زده، به طور منظم می‌تواند خطر ابتلا به بیماری آلزایمر را افزایش دهد و همچنین به زوال عقل که تخریب سلول‌های مغزی در طول زمان است،‌ منتهی شود.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><b style="line-height: 1.22em;">6.&nbsp;</b></font><b style="line-height: 1.22em;"><font face="Tahoma" color="#CC0000" style="line-height: 1.22em; font-size: 10pt;">محصولات غذایی شور</font></b><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;">مواد غذایی شور درست مانند مواد قندی، می‌تواند اعتیاد آور باشد و با عواقب خطرناک همراه باشد. سدیم در تغییرات فشار خون شناخته شده است اما نکته اینجاست که آیا می‌دانید که این ماده می‌تواند همچنین توانایی‌های تفکر ما را مختل سازد؟ نه برای هر چیزی پزشکان به ما توصیه نمی‌کنند که مصرف نمک را کم کنیم. نمک، به عنوان یک ماده نگهدارنده در ترشی‌ها استفاده می‌شود، پس از زیاده‌روی در خوردن آن خودداری کنید.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><b style="line-height: 1.22em;">7.</b></font><b style="line-height: 1.22em;"><font face="Tahoma" color="#CC0000" style="line-height: 1.22em; font-size: 10pt;">&nbsp;پروتئین‌های فرآوری شده</font></b><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;">پروتئین‌ها و چربی‌ها چیزهایی که ما از دوران مدرسه آنها را می‌شناسیم. زمانی که پروتئین‌ها فرآوری می‌شوند و تبدیل به سوسیس، پپرونی و کالباس، می‌شوند پروئتین‌ها خطرناک می‌شوند. مواد نگهدارنده، مانند نیترات سدیم، زمانی که در فرآوری گوشت با پروتئین‌ها ترکیب می‌شود بسیار سرطان زا می‌شوند.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><b style="line-height: 1.22em;">8.&nbsp;</b></font><b style="line-height: 1.22em;"><font face="Tahoma" color="#CC0000" style="line-height: 1.22em; font-size: 10pt;">نیکوتین</font></b><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;">نیکوتین [اگرچه جزو مواد غذایی نیست اما خوب است میان آنچه به بدن سرازیر می‌شود نیز به آن اشاره شود زیرا] زمانی که به میزان بالا مصرف می‌شود به دلیل کاهش عرضه خون و اکسیژن به مغز به عنوان عامل سرطان شناخته می‌شود. علاوه بر این، سفت ‌شدن مویرگ‌ها و تأثیر بر عملکرد انتقال دهنده‌های عصبی و انتقال مواد شیمیایی در بدن از دیگر عوارض آن به شمار می‌آید.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><b style="line-height: 1.22em;">9.&nbsp;</b></font><b style="line-height: 1.22em;"><font face="Tahoma" color="#CC0000" style="line-height: 1.22em; font-size: 10pt;">شیرین کننده‌های مصنوعی</font></b><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;">بسیاری از ما نسبت به این موضوع که شیرین کننده‌های مصنوعی در زندگی ما فاقد آسیب هستند دارای تصور غلط هستیم. استفاده از شیرین‌کننده‌های مصنوعی در نهایت به آسیب‌های مغزی منتهی می‌شود.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;"><b style="line-height: 1.22em;">10.&nbsp;</b></font><b style="line-height: 1.22em;"><font face="Tahoma" color="#CC0000" style="line-height: 1.22em; font-size: 10pt;">چربی‌های ترانس</font></b><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;">چربی‌های ترانس (trans fats) هنگام افزودن هیدروژن به روغن‌های مایع گیاهی (عمل هیدروژنه کردن)، برای بالابردن نقطه ذوب آنها (جامد کردن) جهت افزایش طول عمر و پایداری شان به وجود می‌آیند. چربی‌های ترانس در روغن‌های شیرینی‌پزی، روغن نباتی جامد، مارگارین‌ها، شیرینی‌ها، غذاهای حاضری، غذاهای سرخ شده مثل پیراشکی و سیب‌زمینی‌ سرخ‌کرده و سایر غذاهایی که با روغن‌های هیدروژنه، پخته یا سرخ شده‌اند، یافت می‌شوند.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;">مصرف چربی‌های ترانس خطر ابتلا به بیماری کرونر قلبی را افزایش می‌دهد؛ در طی یک دوره، ما را با درد و رنج یک سکته مغزی حساس مواجه می‌سازد. همچنین، مصرف این نوع چربی سبب کم شدن حجم مغز می‌شود که در نهایت به بیماری آلزایمر منتهی می‌شود.</font></p>
+
+
+ </div>
+<br>
+<script>mihanblogPostLike('1010','like')</script><br>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">مرتبط با: <a href="../post/category/43.html">
+مطالب جالب و خواندنی</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">برچسب‌ها: <a href="../post/tag/خوراکی&#32;هایی&#32;که&#32;کاهش&#32;هوش&#32;را&#32;بدنبال&#32;دارند.html">
+خوراکی هایی که کاهش هوش را بدنبال دارند</a> , <a href="../post/tag/کندذهنی&#32;و&#32;نابودی&#32;هوش.html">
+کندذهنی و نابودی هوش</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+</div>
+</div>
+
+<div id="theme-designer-com-post-linksabet" style="margin:6px 0px 0px 0px;"><ul>
+<li><center><a href="../post/1010.html" ><span class="theme-designer-com_koli_hidden">لینک ثابت</span></a></center></li>
+</ul></div>
+
+<div class="theme-designer-com-post-footer"><div class="theme-designer-com-post-footer2">
+منتشر شده در تاریخ 1395/08/17 توسط alborz-pic alborz</div></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="theme-designer-com_menuright-border2">
+<div class="theme-designer-com_menuright-border4">
+<div class="theme-designer-com_menuright-border1">
+<div class="theme-designer-com_menuright-border3">
+<div class="theme-designer-com_menuright-post">
+
+<div class="theme-designer-com-comments-box">
+<div class="comments-icon"></div>
+<div class="comments-text"><a target="_self" href="../post/1009.html#commentlist">نظرات <script>setCommentCnt(1009)</script> </a></div>
+</div>
+<div class="theme-designer-com_koli_clear"></div>
+
+<div class="theme-designer-com_post-backtitle">
+<div class="theme-designer-com_post-title" align="right"><a href="../post/1009.html">از بیل گیتس درس های زندگی بیاموزیم</a></div>
+</div>
+
+<div align="center">
+<div class="theme-designer-com_post-badane" align="right">
+<div class="theme-designer-com-post-text">
+
+
+<div><br></div><div><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;">ویلیام هنری "بیل" گیتس سوم مشهور به بیل گیتس (زاده 28 اکتبر 1955 سیاتل) کارآفرین، بازرگان، سرمایه‌دار، نیکوکار و مدیر ارشد اجرایی آمریکایی است، که در سال 1975 با مشارکت پل آلن، شرکت مایکروسافت را تأسیس نمود. وی تا سپتامبر 2016 با دارایی خالص ۸۱٫۷ میلیارد دلار، به‌عنوان ثروتمندترین فرد جهان شناخته می‌شود.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;">گیتس از ابتدای تأسیس مایکروسافت، تا سال 2000 برای مدت 25 سال، به‌عنوان مدیرعامل مایکروسافت فعالیت کرد، همچنین تا سال 2014 در مجموع 39 سال، ریاست هیئت مدیره مایکروسافت را بر عهده داشت. وی کماکان با در اختیار داشتن ۸٪ درصد از سهام این شرکت، مالک اکثریت سهام مایکروسافت می‌باشد.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;">بیل گیتس کسی بود که 25 سال متوالی عنوان ثروتمند ترین فرد جهان را از آن خود کرد و اکنون دنیای تکنولوژی و کامپیوتر به اون مدیون است. دارایی های خالص بیل گیتس، ثروتمندترین مرد دنیا از مرز 90 میلیارد دلار گذشت تا فاصله او از نفر بعدی در فهرست ثروتمندترین مردان جهان به بیش از 13 میلیارد دلار برسد.</font></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><a href="post/1009.html" target="" title="alborz-pic"><img src="https://ci4.googleusercontent.com/proxy/Jjh-u6rIDlFuYp-UEH4_G6JHEfb7mrYfAgPNASUpzkukhuMboDOMYMwC6tfZQ3FvvdGGqJdpxs8qxZ4UMq6-syM4-HyIkth8=s0-d-e1-ft#http://persian-star.net/1395/8/15/BillGates/02.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></a></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;">در پی رشد ارزش دارایی های عمومی بیل گیتس (نظیر شرکت راه آهن ملی کانادا و شرکت اکولب) دارایی های ثروتمندترین مرد دنیا به 90 میلیارد دلار رسید. بر اساس شاخص میلیاردرهای بلومبرگ، در حال حاضر ثروت گیتس 13.5 میلیارد دلار بیشتر از آمانیکو اورتگای اسپانیایی، دومین فرد ثروتمند دنیاست. با توجه به ثروت 90 میلیارد دلاری، ثروت موسس شرکت مایکروسافت هم اکنون معادل 0.5 درصد از تولید ناخالص داخلی آمریکاست.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;">احتمالا بیل گیتس مشهورترین میلیاردر دنیاست. او با ده ها میلیارد ثروت، تاثیر زیادی بر دنیای تکنولوژی دارد. بیشتر مردم با موفقیت او در دنیای کسب و کار و همچنین بشردوستی اش آشنا هستند. همه دوست دارند موفقیتی در حد و اندازه های بیل گیتس داشته داشته باشند؛ اما افراد کمی هستند که عادات زندگی او را در سبک زندگی خود به کار گیرند. شاید تقلید از برخی عادات بیل گیتس شما را به فردی مولتی میلیاردر تبدیل نکند، اما قطعا کمکتان خوهد کرد که به برخی از اهدافتان برسید.</font></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><a href="post/1009.html" target="" title="alborz-pic"><img src="https://ci3.googleusercontent.com/proxy/HLe8R35qRJGsP4i6YM0W3h6HEjO6CWG9SOUiz7p4PnXY0i-CKazGQgt-TvS3JL6eyBbiWu2hxCkmpoxXV3Cmy9HFPo4sp3Ax=s0-d-e1-ft#http://persian-star.net/1395/8/15/BillGates/03.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></a></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><font face="Tahoma" color="#006600" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">خب چطور می توان برخی از عادات بیل گیتس را در وجود خود نهادینه کرد؟</font><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;">بیل گیتس همیشه فردی کتابخوان بوده است. پدر او، ویلیام اچ. گیتس، در مصاحبه اخیرش با مجله فوربس فاش کرد که پسرش به معنای واقعی یک خوره کتاب بوده است. در زمان کودکی عاشق کتاب های علمی- تخیلی و حتی دایره المعارف ها بوده و هر جایی که می رفت، کتابی نیز با خود حمل می کرده است.<br style="line-height: 1.22em;">ماجرا تا حدی پیش رفته که گیتس پدر از بیل خواسته هر چقدر که دلش می خواهد کتاب بخواند، اما خواهش کرده که کتاب هایش را سر میز شام نیاورد!<br style="line-height: 1.22em;">هنوز هم همین طور است و بیل گیتس با اشتیاق فراوانی کتاب می خواهند. انواع کتاب ها را می توانید در کتابخانه او پیدا کنید: از زندگینامه های الهام بخش گرفته تا کتاب های فلسفی و روشنفکری. بیل گیتس همه را به کتابخوانی تشویق می کند. او به طور مرتب فهرست کتاب های مورد علاقه اش را به اشتراک می گذارد تا الهام بخش دیگران شود.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;"></font><font face="Tahoma" color="#CC3300" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">روزتان را به درستی آغاز کنید.</font><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;">بیل گیتس ترجیح می دهد روزش را با ورزش و سرحالی آغاز کند. او معمولا یک ساعت ابتدای روز را به خاطر اوضاع قلبی اش روی تردمیل می گذراند. آغاز روز با ورزش مزایای بی شماری دارد که به برخی از آنها اشاره می کنیم:<br style="line-height: 1.22em;">اول آنکه سوخت و ساز بدن را افزایش می دهد و به شما کمک می کند در طول روز کالری بیشتری سوزانده و کاهش وزن داشته باشید. همچنین به کاهش سطح استرس، حفظ تمرکز و انرژی در طول روز نیز کمک می کند. این موضوع بی شک عملکردتان را افزایش می دهد. در نهایت این که ورزش صبحگاهی خواب شبانه بهتر و آرامش بخش تری را برایتان به ارمغان می آورد.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;"></font><font face="Tahoma" color="#CC3300" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">هیچ گاه از یادگیری دست نکشید.</font><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;">این که از سنین کم در معرض آموزش ها و تجربه های گوناگون باشید، بسیار ارزشمند است. وقتی بیل گیتس در کلاس نهم بود، مدرسه اش یک کامپیوتر خریداری کرد و همین باعث شد گیتس کاملا درگیر این دستگاه شود.<br style="line-height: 1.22em;">گیتس اجازه داشت که از کلاس ریاضیاتش بیرون برود و برنامه نویسی بیاموزد. اولین برنامه ای که او نوشت، برنامه "بازی دوز" بود. او دیگر مثل قبل نشد. او در کالج عادت داشت سر کلاس هایی بنشیند که اصلا در آنها ثبت نام نکرده بود. گیتس تا همین امروز هم تشنه دانش و یادگیری است.</font></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><a href="post/1009.html" target="" title="alborz-pic"><img src="https://ci6.googleusercontent.com/proxy/Zv7Hid6qr8vxPDJqTVyCDLYU3kVC9srO-_sKXav1_blb385lUKmIJXoIfH1C4YUQ4eoR32ePfj9zu5S9IX9wCFH3mSMXtVQu=s0-d-e1-ft#http://persian-star.net/1395/8/15/BillGates/04.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.net" class="CToWUd" style="line-height: 1.22em;"></a></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><font face="Tahoma" color="#CC3300" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">به دیگران اعتبار ببخشید.</font><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;">بیل گیتس موفقیت ها، دستاوردها و اعتبار زیادی دارد. بالاخره او مخترعی هوشمند و یکی از ثروتمندترین انسان های جهان است. با این حال او به دیگران نیز اعتبار می بخشد.زمانی که در یک مصاحبه از او سوال کردند بهترین تصمیم او در دنیای کسب و کار چه بوده، او پاسخ داد: انتخاب افراد مناسب و همکاری با پل آلن به عنوان شریک تجاری مهم ترین تصمیمی بوده که تا به حال گرفته است.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;">گیتس درس خوبی به ما می دهد. نه تنها انتخاب افراد مناسب ما را به سوی موفقیت رهنمون می کند، بلکه ما باید رویکرد قدردانی نیز در پیش بگیریم و از موفقیت همکارانمان تمجید کنیم.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;"></font><font face="Tahoma" color="#CC3300" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">از اشتباهاتتان درس بگیرید.</font><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;">درس گرفتن از اشتباهات یکی از بزرگترین عوامل بلوغ و رشد است. تصمیمات نادرست و پیامدهای ناشی از آنها به ما بزرگ ترین درس های زندگی را می آموزند. تا زمانی که خودتان نخواهید، تجربه نمی تواند معلم خوبی برای شما باشد.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;">بیل گیتس یک بار توضیح داده بود که بخشی از موفقیت مایکروسافت به دلیل موفقیت تیم مدیریت در تشخیص اشتباهات بوده است؛ اشتباهاتی که ممکن بود در آینده هزینه گزافی برای شرکت بتراشد. گیتس وقتی با ضعف یکی از تصمیماتش رو به رو می شد، از تغییر موضع و آن تصمیم خود هراسی نداشت. متاسفانه بسیاری از مردم یک اشتباه را چندین بار تکرار می کنند تا بتوانند در نهایت از آن درسی بیاموزند.</font></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><a href="post/1009.html" target="" title="alborz-pic"><img src="https://ci4.googleusercontent.com/proxy/Lajj3aPsvT5o5jLi57fTxhLgrJSoFlukMMomzy2R7NhS2VWnQ02UnpVRVSsp-b9Q4iwLF-coC_c75eKkpPeQBygAidJIrvMz=s0-d-e1-ft#http://persian-star.net/1395/8/15/BillGates/05.jpg" border="0" alt="گروه اینترنتی پرشیـن استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></a></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><font face="Tahoma" color="#CC3300" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">به قضاوت های خود اعتماد کنید.</font><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;">افرادی که در طول زندگی با آنها مواجه می شویم، گاه ناامیدمان می کنند و گاه از پیش مان می روند. اغلب این افراد نگرش درستی مانند ما ندارند و اگر به آنها اجازه دهیم که به جای ما تصمیم بگیرند، نتایج فاجعه باری به دست خواهیم آورد. این موضوع به ما نشان می دهد که چرا باید به خودمان اعتماد داشته باشیم.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;">زمانی که بیل گیتس ایده تاسیس شرکت مایکروسافت را داد، خیلی ها آن را ایده ای غیرکاربردی خواندند. او رویای دنیایی را داشت که در آن چیپ های کامپیوتری چنان قدرتمند شوند که کامپیوترها و نرم افزارها در همه جا کارایی پیدا کنند. تعداد افراد کمی بودند که با او هم عقیده شدند.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;">با این حال، گیتس که به خوب بودن ایده هایش ایمان داشت، به خود اعتماد کرد. بقیه چیزها دیگر برایش مهم نبود. اگرچه شنیدن روش ها و توصیه های دیگران کار خوبی است، اما گاهی توصیه های دیگران ناشی از ترس و تردید آنهاست. شک و تردید ما را در سکون و عدم فعالیت نگه می دارد. اعتماد به خود به معنای آن است که با توجه به توانایی ها و نیازهایمان بتوانیم تصمیم درستی بگیریم.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;">خواندن عادات زندگی افرادی که در حیطه های کاری گوناگون به موفقیت رسیده اند، بسیار باارزش است. با این کار، بدون حسادت نسبت به جایگاه دیگران، سعی می کنیم از عادات و انگیزه های آنان باخبر شویم. سپس می توانیم این درس ها را در زندگی خود به کار بسته و همان موفقیتی که در انتظارش هستیم، را به دست آوریم.</font></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><a href="post/1009.html" target="" title="alborz-pic"><img src="https://ci5.googleusercontent.com/proxy/LVsM-aYJ30xw6WCpBxebZmAGD75diK_d9C2qXaLQKsrByWUK7SetCWla1RnWPooFp4sG5nby5o0nfIo99tJpBRzNW7EwTmuX=s0-d-e1-ft#http://persian-star.net/1395/8/15/BillGates/06.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></a></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;">بیل گیتس در دنیای تکنولوژی نظیر ندارد؛ او توانسته تکنولوژی را وارد هر خانه ای بکند. شناخت عادات او در زندگی شخصی و تقلید از آنها می تواند به ما کمک کند تا دنیای بهتری را برای خود بسازیم.</font></p></div> </div>
+<br>
+<script>mihanblogPostLike('1009','like')</script><br>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">مرتبط با: <a href="../post/category/45.html">
+سرگرمی , تفریحی</a> , <a href="../post/category/43.html">
+مطالب جالب و خواندنی</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">برچسب‌ها: <a href="../post/tag/از&#32;بیل&#32;گیتس&#32;درس&#32;های&#32;زندگی&#32;بیاموزیم.html">
+از بیل گیتس درس های زندگی بیاموزیم</a> , <a href="../post/tag/بیل&#32;گیتس.html">
+بیل گیتس</a> , <a href="../post/tag/درس&#32;های&#32;زندگی.html">
+درس های زندگی</a> , <a href="../post/tag/مدیرعامل&#32;مایکروسافت.html">
+مدیرعامل مایکروسافت</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+</div>
+</div>
+
+<div id="theme-designer-com-post-linksabet" style="margin:6px 0px 0px 0px;"><ul>
+<li><center><a href="../post/1009.html" ><span class="theme-designer-com_koli_hidden">لینک ثابت</span></a></center></li>
+</ul></div>
+
+<div class="theme-designer-com-post-footer"><div class="theme-designer-com-post-footer2">
+منتشر شده در تاریخ 1395/08/17 توسط alborz-pic alborz</div></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="theme-designer-com_menuright-border2">
+<div class="theme-designer-com_menuright-border4">
+<div class="theme-designer-com_menuright-border1">
+<div class="theme-designer-com_menuright-border3">
+<div class="theme-designer-com_menuright-post">
+
+<div class="theme-designer-com-comments-box">
+<div class="comments-icon"></div>
+<div class="comments-text"><a target="_self" href="../post/1008.html#commentlist">نظرات <script>setCommentCnt(1008)</script> </a></div>
+</div>
+<div class="theme-designer-com_koli_clear"></div>
+
+<div class="theme-designer-com_post-backtitle">
+<div class="theme-designer-com_post-title" align="right"><a href="../post/1008.html">نقشه دایره ای شهر بغداد</a></div>
+</div>
+
+<div align="center">
+<div class="theme-designer-com_post-badane" align="right">
+<div class="theme-designer-com-post-text"><div align="right" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><b style="line-height: 1.22em;">شهر بغداد در قرن هشتم میلادی به عنوان پایتخت خلافت عباسیان توسط خلیفه آن ها منصور بنا شد. عباسیان امویان را شکست دارند و منصور مرکز خود را برای حکومت می خواست. او سایتی حدود 30 کیلومتری شمال پایتخت ساسانیان، تیسفون در امتداد ساحل دجله انتخاب کرد و طراحی و ساخت و ساز آن را آغاز کرد.</b></div><div align="right" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><b style="line-height: 1.22em;">&nbsp;</b></div><div align="right" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><b style="line-height: 1.22em;">منصور می خواست بغداد یک شهر تمام عیار و پایتخت حکومت اسلامی عباسیان شود. به این منظور او هزاران معمار، مهندس، نقشه بردار، نجار، آهنگر و بیش از صدها هزار کارگر را از سراسر امپراتوری عباسی به این منطقه آورد. او با منجمان مشورت کرد و باتوجه به توصیه آن ها، اولین آجر را در 30 جولای سال 762 گذاشت.<br style="line-height: 1.22em;">&nbsp;</b></div><div align="right" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><b style="line-height: 1.22em;">&nbsp;</b></div><div align="right" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><b style="line-height: 1.22em;">شهر اصلی به شکل دایره ای به قطر 2 کیلومتر طراحی شد. شکل دایره ادای احترام خلیفه به آموزه های هندسی اقلیدس بود که درباره آن مطالعه کرده بود و آن را تحسین می کرد. در مرکز شهر دو تا از بهترین ساختمان های شهر قرار داشتند: مسجد بزرگ و اقامتگاه خلیفه. در اطراف کاخ خلیفه و مسجد یک گردشگاه و یک ساختمان رو به آب وجود داشت که تنها خلیفه اجازه داشت در آن اسب سواری کند. در کنار این محوطه عظیم قصر، کاخ های فرزندان خلیفه، خانه هایی برای اعضای سلطنتی و خدمتکاران و آشپزخانه های خلیفه، سربازخانه هایی برای سواره نظام ها و دیگر ادارات دولتی قرار داشتند،&nbsp; این منطقه مرکزی توسط دیوارهای داخلی محافظت می شد. محله های زندگی و ساختمان های تجاری در حلقه ای بین دیوار خارجی شهر و دومین دیوار گرد مستحکم ساخته شده بودند. دیوار خارجی 30 متر ارتفاع و 44 متر ضخامت و برج و بارو و سنگر داشت. شهر به وسیله دو خیابان عمودی متقاطع به چهار قسمت تقسیم می شد و چهار دروازه داشت. هریک از چهار دروازه به سوی یک شهر متفاوت بودند: بصره، کوفه، خراسان و دمشق. دروازه ها به یک خیابان مسقف باز می شدند که در سراسر حلقه مسکونی خارجی کشیده شده بودند.</b></div><div align="right" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><b style="line-height: 1.22em;">&nbsp;</b></div><div align="right" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><b style="line-height: 1.22em;">متاسفانه امروزی هیچ چیزی از این شهر باقی نمانده است. آخرین باقیمانده های شهر دایره ای منصور در اوایل سال 1870 تخریب شد یعنی زمانی که مدحت پاشا حاکم عثمانی بغداد شد. مدحت پاشا علاقه کمی به حفظ تاریخ داشت، اما در کل اصلاحات بزرگی برای بغداد و عراق انجام داد و چهره شهر را تغییر داد. او مدارس و موسسات آموزشی بی شماری ساخت که هیچ کدام در بغداد وجود نداشتند، هم چنین بیمارستان، انبار غذا، پارک های عمومی و سیستم تامین آب، جاده و پل. او اصلاحات ارضی و قوانین مالیاتی ایجاد کرد و عشایر را به یکجانشینی و کشاورزی تشویق کرد. سه سالی که مدحت پاشا فرمانروا بود مهم ترین سال های تاریخ مدرن بغداد به حساب می آیند.</b></div><div align="right" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;">&nbsp;</div><div style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px; text-align: justify;"><b style="line-height: 1.22em;">&nbsp;</b></div><div style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px; text-align: justify;"><div align="center" style="line-height: 1.22em;"><a href="post/1008.html" target="" title="alborz-pic"><img alt="نقشه دایره ای شهر بغداد" title="نقشه دایره ای شهر بغداد" src="https://ci4.googleusercontent.com/proxy/3vbsjQis-GwzU7wNd1TBKYBb8BUhw14_0DZlD10okACvXvF_ikaESXNXJYLDpGtMgaltQ06EcHu0R_wUlD6kTXgMjXp8g9rK8TWaSodUSwjhsnfWoPA=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/13/1051457_317.jpg" class="m_-3326569794109563666img-responsive-news CToWUd a6T" height="330" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01; left: 241px; top: 1533.66px;"><div id=":rm" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" data-tooltip="بارگیری" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div>&nbsp;</div><div style="line-height: 1.22em;">&nbsp;</div><div style="line-height: 1.22em;"><div align="center" style="line-height: 1.22em;"><a href="post/1008.html" target="" title="alborz-pic"><img alt="نقشه دایره ای شهر بغداد" title="نقشه دایره ای شهر بغداد" src="https://ci5.googleusercontent.com/proxy/reCgNQ8XUg_DD0OEu_c9QFCBz505eXSEbw3SSsMAxsCD029Hmn8Y49tKSPe_Xplr9sNz-6MSBPXB5T102xLvE1kmnUbdpM4sbhHCQcwE4i8tJJPsNJI=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/13/1051458_946.jpg" class="m_-3326569794109563666img-responsive-news CToWUd a6T" height="239" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":rl" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="بارگیری" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div>&nbsp;</div><div style="line-height: 1.22em;">&nbsp;</div><div style="line-height: 1.22em;"><div align="center" style="line-height: 1.22em;"><a href="post/1008.html" target="" title="alborz-pic"><img alt="نقشه دایره ای شهر بغداد" title="نقشه دایره ای شهر بغداد" src="https://ci4.googleusercontent.com/proxy/Xcov40nKaSqWqOL4YnHkPSCiW2IqzdYJ61TIfnmEWy0HMCKpoIvcjla-d7kgUwqp64KhrNO0VxBm9oZZY3gyg3HUqMfDCyKSRZ2ikjqymPIp5T8MmfM=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/13/1051459_865.jpg" class="m_-3326569794109563666img-responsive-news CToWUd a6T" height="440" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 1; left: 241px; top: 2250.66px;"><div id=":rn" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" data-tooltip="بارگیری" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div></div></div></div></div>
+
+
+ </div>
+<br>
+<script>mihanblogPostLike('1008','like')</script><br>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">مرتبط با: <a href="../post/category/43.html">
+مطالب جالب و خواندنی</a> , <a href="../post/category/1.html">
+گالری عکس</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">برچسب‌ها: <a href="../post/tag/نقشه&#32;دایره&#32;ای&#32;شهر&#32;بغداد.html">
+نقشه دایره ای شهر بغداد</a> , <a href="../post/tag/شهر&#32;بغداد.html">
+شهر بغداد</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+</div>
+</div>
+
+<div id="theme-designer-com-post-linksabet" style="margin:6px 0px 0px 0px;"><ul>
+<li><center><a href="../post/1008.html" ><span class="theme-designer-com_koli_hidden">لینک ثابت</span></a></center></li>
+</ul></div>
+
+<div class="theme-designer-com-post-footer"><div class="theme-designer-com-post-footer2">
+منتشر شده در تاریخ 1395/08/17 توسط alborz-pic alborz</div></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="theme-designer-com_menuright-border2">
+<div class="theme-designer-com_menuright-border4">
+<div class="theme-designer-com_menuright-border1">
+<div class="theme-designer-com_menuright-border3">
+<div class="theme-designer-com_menuright-post">
+
+<div class="theme-designer-com-comments-box">
+<div class="comments-icon"></div>
+<div class="comments-text"><a target="_self" href="../post/1007.html#commentlist">نظرات <script>setCommentCnt(1007)</script> </a></div>
+</div>
+<div class="theme-designer-com_koli_clear"></div>
+
+<div class="theme-designer-com_post-backtitle">
+<div class="theme-designer-com_post-title" align="right"><a href="../post/1007.html">گرانترین عروسی جهان</a></div>
+</div>
+
+<div align="center">
+<div class="theme-designer-com_post-badane" align="right">
+<div class="theme-designer-com-post-text"><div align="right" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><b style="line-height: 1.22em;">دختر یک سرمایه‌داری نفتی روسیه به تازگی مراسم عروسی‌اش را برگزار کرده که با توجه به لباس عروس 500 هزار پوندی و کیک 9 طبقه، از آن به عنوان گران‌ترین مراسم عروسی تاریخ نامبرده می‌شود.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;">به گزارش میرر، عروس پیش از مراسم عروسی به همراه دوستانش در یک مجتمع تفریحی در ماربیا اسپانیا به سر می‌برد و در آنجا در حال برگزاری آخرین مهمانی مجردی پیش از ازدواج بود. آن‌ها سپس با یک جت خصوصی به روسیه برگشتند تا مراسم عروسی را برگزار کنند.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;">لباس عروسی مدینه شوکیرووا (Madina Shokirova)، دختر ایلخوم شوکیروف، با انواع جواهرات تزیین و توسط طراحان بریتانیایی طراحی شده که ارزش آن بالغ بر 520 هزار پوند است.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;">این عروسِ دختر یکی از سرمایه‌داران بزرگ نفتی روسیه است و یکی از پرخرج‌ترین مراسم عروسی تاریخ را برگزار کرده است. تعداد مهمانان این مراسم نیز حدود 900 نفر - شامل اعضای خانواده، دوستان و برخی از مقامات روسیه - بود. از داماد اطلاعات زیادی موجود نیست و فقط گفته شده که نامش «سادور» است.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;">این عروسی مجلل در هتل لوکس «رادیسون رویال» مسکو برگزار شد. گفتنی است در این هتل، یک سوئیت رئیس جمهوریِ کاملا مجلل و مدرن وجود دارد که قیمت آن 4500 پوند برای هر شب است.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;">بر اساس گزارش‌ها، همسر مدینه از بستگان رئیس‌جمهور ازبکستان است. همچنین طول کیک حدود سه متر بود که توسط «رنات آگزاموف» درست شده بود. سالن مراسم نیز توسط انواع گل تزئین شده بود.<br style="line-height: 1.22em;"><br style="line-height: 1.22em;">علاوه بر این موارد گفته شده که پدر عروس نزدیک به 386 هزار پوند فقط برای سرگرم کردن مهمان‌ها هزینه کرده است. بر اساس شنیده‌ها، ایلخوم شوکیروف صاحب لوکس‌ترین هتل تاشکند، پایتخت ازبکستان، و همچنین چند هتل در روسیه است.</b><br style="line-height: 1.22em;">&nbsp;</div><div style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px; text-align: justify;">&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><a href="post/1007.html" target="" title="alborz-pic"><img src="https://ci5.googleusercontent.com/proxy/kE6_SFiv5K4w4u5e3Jer4pnQDWGGIgongB8g1u-wkGb_-zXvbF8qvKLjNsDqaRrXJAG3GPKgZV4gFg3Ys0JqifgNcjXKBfDnQxTaMtnnnN9uFnXMD1w=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/15/1052071_523.jpg" title="گرانترین عروسی جهان" alt="گرانترین عروسی جهان" class="m_2009116199244193474img-responsive-news CToWUd a6T" height="624" width="500" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01; left: 266px; top: 1750.33px;"><div id=":r2" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" data-tooltip="بارگیری" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div>&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;">&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><a href="post/1007.html" target="" title="alborz-pic"><img src="https://ci6.googleusercontent.com/proxy/drQ1NiyZPUOKd6BYDv7mMJZGHTrDZCPSfguQjQlY-MchaCZlp-jLVJy06o4mr4STWx4dqLgbLyKcdP-T0SOkEMYd07mCDaEcIX-VYLO92WrIqv2mM_s=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/15/1052072_417.jpg" title="گرانترین عروسی جهان" alt="گرانترین عروسی جهان" class="m_2009116199244193474img-responsive-news CToWUd a6T" height="500" width="500" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":r3" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="بارگیری" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div>&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;">&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><font color="#000000" face="Tahoma" style="line-height: 1.22em; font-size: 10pt;"><a href="post/1007.html" target="" title="alborz-pic"><img src="https://ci4.googleusercontent.com/proxy/u1J4jKr_6TSwH5cdLaBr3MNo1NxF1D20cCaY0GZFRcIE3rY57mgVDE0FTFaL4Wu6_R6YYIpIx_TUzyPyL3_0LJ_2LziJtUg01jWQqKn2qEloecCJQTQ=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/15/1052073_301.jpg" title="گرانترین عروسی جهان" alt="گرانترین عروسی جهان" class="m_2009116199244193474img-responsive-news CToWUd a6T" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":r0" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="بارگیری" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div></font>&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;">&nbsp;</div><div style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px; text-align: justify;"><div align="center" style="line-height: 1.22em;"><a href="post/1007.html" target="" title="alborz-pic"><img src="https://ci3.googleusercontent.com/proxy/zfkIAk5G_uRT8e-Yu114mWRTUCUurNYhl_FHZl0w4-nrqWWC40mq1I8cFL6h37Hi4VUW__Jv5SeudDmfZ1VedkYMOuh-P3W3fbr_HwcR2JROcqfc6eQ=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/8/15/1052074_293.jpg" title="گرانترین عروسی جهان" alt="گرانترین عروسی جهان" class="m_2009116199244193474img-responsive-news CToWUd a6T" height="454" width="550" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 1; left: 241px; top: 3351.33px;"><div id=":r1" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" role="button" tabindex="0" aria-label="بارگیری پیوست " data-tooltip-class="a1V" data-tooltip="بارگیری" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div></div></div>
+
+
+ </div>
+<br>
+<script>mihanblogPostLike('1007','like')</script><br>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">مرتبط با: <a href="../post/category/43.html">
+مطالب جالب و خواندنی</a> , <a href="../post/category/45.html">
+سرگرمی , تفریحی</a> , <a href="../post/category/1.html">
+گالری عکس</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">برچسب‌ها: <a href="../post/tag/گرانترین&#32;عروسی&#32;جهان.html">
+گرانترین عروسی جهان</a> , <a href="../post/tag/مراسم&#32;عروسی‌.html">
+مراسم عروسی‌</a> , <a href="../post/tag/لباس&#32;عروس.html">
+لباس عروس</a> , <a href="../post/tag/کیک&#32;9&#32;طبقه.html">
+کیک 9 طبقه</a> , <a href="../post/tag/انواع&#32;جواهرات.html">
+انواع جواهرات</a> , <a href="../post/tag/پرخرج‌ترین&#32;مراسم&#32;عروسی.html">
+پرخرج‌ترین مراسم عروسی</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+</div>
+</div>
+
+<div id="theme-designer-com-post-linksabet" style="margin:6px 0px 0px 0px;"><ul>
+<li><center><a href="../post/1007.html" ><span class="theme-designer-com_koli_hidden">لینک ثابت</span></a></center></li>
+</ul></div>
+
+<div class="theme-designer-com-post-footer"><div class="theme-designer-com-post-footer2">
+منتشر شده در تاریخ 1395/08/17 توسط alborz-pic alborz</div></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="theme-designer-com_menuright-border2">
+<div class="theme-designer-com_menuright-border4">
+<div class="theme-designer-com_menuright-border1">
+<div class="theme-designer-com_menuright-border3">
+<div class="theme-designer-com_menuright-post">
+
+<div class="theme-designer-com-comments-box">
+<div class="comments-icon"></div>
+<div class="comments-text"><a target="_self" href="../post/1006.html#commentlist">نظرات <script>setCommentCnt(1006)</script> </a></div>
+</div>
+<div class="theme-designer-com_koli_clear"></div>
+
+<div class="theme-designer-com_post-backtitle">
+<div class="theme-designer-com_post-title" align="right"><a href="../post/1006.html">تام و جری… دلچسب ترین کارتون دوران کودکی</a></div>
+</div>
+
+<div align="center">
+<div class="theme-designer-com_post-badane" align="right">
+<div class="theme-designer-com-post-text"><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">یکی از کارتون‌هایی که مورد پسند تمام چندین نسل از هواداران انیمیشن است تام و جری است. جالب است بدانید این موش و گربۀ محبوب که برایمان کلی خاطرۀ بامزه ساخته‌اند، سه ماه دیگر ۷۷ ساله می‌شوند!</font></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><a href="post/1006.html" target="" title="alborz-pic"><img src="https://ci6.googleusercontent.com/proxy/GtlvwbaUkuvWPRWtA9z_-K4m70Z2VzolhatavxcTk0GnBGcBBiiqU1E5ozqy3_emDCA2DEmyhXEjZ623Q3U_TgPW7LM-fil9=s0-d-e1-ft#http://persian-star.net/1395/8/17/Tom-Jerry/01.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></a></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><font face="Tahoma" color="#FF0000" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">–</font><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;">&nbsp;تام و جری سال ۱۹۴۰ توسط ویلیام هانا و جوزف باربرا خلق شدند. هانا و باربرا که نویسندگی و کارگردانی این کارتون را بر عهده داشتند، از شخصیت‌های مشهور و خلاق دنیای انیمیشن بودند.<br style="line-height: 1.22em;"></font><font face="Tahoma" color="#FF0000" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">–</font><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;">&nbsp;هانا و باربرا به خاطر تام و جری هفت اسکار بردند!<br style="line-height: 1.22em;"></font><font face="Tahoma" color="#FF0000" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">–&nbsp;</font><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;">بد نیست بدانید که تام و جری در اولین نمایش‌شان در سال ۱۹۴۰ به عنوان تام و جری شناخته نمی‌شدند! نام تام در ابتدا جاسپر بود و جری هم جینکس نامیده می‌شد.</font></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><a href="post/1006.html" target="" title="alborz-pic"><img src="https://ci6.googleusercontent.com/proxy/igNc9o3Qw1o_60B-F-bt00pTFhALi4RJGXLbkASXru6VRmgUMBbzMI2_zRanAx5Lm0--frKRhwnSVbmNdByR2VbM-LUDyKKI=s0-d-e1-ft#http://persian-star.net/1395/8/17/Tom-Jerry/02.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></a></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><font face="Tahoma" color="#FF0000" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">–&nbsp;</font><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;">در لندنِ قرن نوزدهم، تام و جری عبارتی رایج برای جوانک‌هایی بود که در رفتارهای آشوبگرانه افراط می‌کردند. با این حال به نظر نمی‌رسد که این عبارت قدیمی در انتخاب نام این کارتون نقشی داشته باشد.<br style="line-height: 1.22em;"></font><font face="Tahoma" color="#FF0000" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">–&nbsp;</font><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;">نام تام و جری به پیشنهاد انیماتوری به نام جان کار انتخاب شد. او برندۀ یک مسابقۀ استودیویی برای انتخاب نام دائمیِ این موش و گربه شد و ۵۰ دلار جایزه گرفت!<br style="line-height: 1.22em;"></font><font face="Tahoma" color="#FF0000" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">–&nbsp;</font><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;">تام و جری به دلیل استفادۀ زیاد از خشونت، همیشه مورد انتقاد قرار گرفته‌اند. اما واقعیت این است که در این کارتون‌ هیچ خبری از خون و خونریزی‌ نیست.</font></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><a href="post/1006.html" target="" title="alborz-pic"><img src="https://ci6.googleusercontent.com/proxy/rn6rb6zlHMZ97SzCfTCe9TgjyA5IwrbBhtMnvOhESBxHFxuI_EqSCx31LYwXCt_ah_LHL0uKot3t2YWchR5MyuKMYH3YdNDC=s0-d-e1-ft#http://persian-star.net/1395/8/17/Tom-Jerry/03.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></a></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><font face="Tahoma" color="#FF0000" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">–</font><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;">&nbsp;هر دو شخصیت تمایلات سادیستی از خود نشان می‌دهند و هر دو به یک اندازه از زجر دادن یکدیگر لذت می‌برند، گرچه این رفتارها اغلب در پاسخ به اقدامی تحریک‌کننده از سوی رقیب دیده می‌شود. با این حال هروقت به نظر می‌رسد که یکی از شخصیت‌ها در وضعیتی برنامه‌ریزی‌نشده گرفتار شده و یا به دلیل اقدامات یک شخص سوم در معرض خطر مرگبار است، دیگری وجدانش به درد می‌آید و رقیب‌اش را نجات می‌دهد.</font></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><a href="post/1006.html" target="" title="alborz-pic"><img src="https://ci6.googleusercontent.com/proxy/_a2j7LO-fi3NICzaJ18zYFNklo0So65YsbyLSKuZbhFdTNXwt2li6YS07H7K-mgViZY3cXCnJTQduQv5s0K80mjW6S9bR_2Y=s0-d-e1-ft#http://persian-star.net/1395/8/17/Tom-Jerry/04.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.net" class="CToWUd" style="line-height: 1.22em;"></a></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><font face="Tahoma" color="#FF0000" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">–&nbsp;</font><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;">در پایان هر قسمت معمولا جری پیروز می‌شود و تام بازنده. اما موارد نادری هم هست که تام برنده می‌شود. آن هم معمولا زمانی اتفاق می‌افتد که جری تبدیل به مهاجم می‌شود. تام در تلاش‌هایش برای گیر انداختن جری، اغلب باید با اسپایک مقابله کند؛ یک بولداگ خشمگین و بدذات اما بی‌نهایت کودن که هروقت گربه برای گرفتن موش، مخل آسایش او یا پسرش تایک می‌شود، به تام حمله می‌کند.</font></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><a href="post/1006.html" target="" title="alborz-pic"><img src="https://ci4.googleusercontent.com/proxy/wLNXXR_10SNNOX546UyKqlJjhg8HCqlFYVj00QG1YjCzFnATN0u-G-5O_WBs8bqtG5ANuD7azOywCSJQ0qqEGVTWua40fUL7=s0-d-e1-ft#http://persian-star.net/1395/8/17/Tom-Jerry/05.jpg" border="0" alt="گروه اینترنتی پرشیـن استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></a></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><font face="Tahoma" color="#FF0000" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">–&nbsp;</font><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;">تام و جری در زمان خودشان پرفروش‌ترین سری فیلم‌های انیمیشن کوتاه شدند و حتی گوی سبقت را از لونی تونز ربودند.<br style="line-height: 1.22em;"></font><font face="Tahoma" color="#FF0000" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">–&nbsp;</font><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;">گرچه بسیاری از شخصیت‌های کوچک و مکمل این کارتون‌ها حرف می‌زنند، اما خود تام و جری به ندرت کلمه‌ای بر زبان می‌آورند.</font></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><a href="post/1006.html" target="" title="alborz-pic"><img src="https://ci4.googleusercontent.com/proxy/fDSEiyayzpqWS-PpMahwV_szv5Ybd2290nLEXW79pSZIpWfC9vqwztw5kqilPV9yLe9_w4cTF3Wiby5oGHnXNbczH7sEUcPa=s0-d-e1-ft#http://persian-star.net/1395/8/17/Tom-Jerry/06.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></a></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><font face="Tahoma" color="#FF0000" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">–</font><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;">&nbsp;موسیقی نقش بسیار مهمی در این فیلم‌های کوتاه ایفا می‌کند؛ به اکشن قدرت می‌دهد، جای خالی جلوه‌های صوتی سنتی را پر می‌کند و احساسات زیادی به صحنه‌ها می‌بخشد. به لطف موسیقی است که گرچه تام و جری کلمه‌ای حرف نمی‌زنند، مخاطبِ کودک همه‌چیز را درک می‌کند.<br style="line-height: 1.22em;"></font><font face="Tahoma" color="#FF0000" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">–&nbsp;</font><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;">اسکات بردلیِ آهنگساز قطعات پیچیده‌ای برای این انیمیشن ساخته که ترکیبی از موسیقی جاز و کلاسیک و پاپ را شامل می‌شود. بردلی غالبا آهنگ‌های پاپ معاصر را بازسازی می‌کرد.</font></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><a href="post/1006.html" target="" title="alborz-pic"><img src="https://ci3.googleusercontent.com/proxy/Z3HQY9N1823fe46cyksa582bfCt6kj_-r5HoSTPpxBd264sZ4Opy_HhKLZYiv50BPsvxuzCVhVfB1L6I6U53km0CqNF3djDo=s0-d-e1-ft#http://persian-star.net/1395/8/17/Tom-Jerry/07.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></a></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><font face="Tahoma" color="#FF0000" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">–&nbsp;</font><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;">تام و جری سال ۱۹۷۵ در یک سری خیلی ویژه با هم رفیق شدند و آن‌ها را در حال سفر به دور دنیا و رقابت ورزشی و حل معما و … دیدیم. خوشبختانه این رفاقت ادامه پیدا کرد.<br style="line-height: 1.22em;"></font><font face="Tahoma" color="#FF0000" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">–&nbsp;</font><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;">در آخرین اپیزود تام و جری، هر دوی آن‌ها به زندگی خود خاتمه دادند. تام روی ریل راه‌آهن اقدام به خودکشی می‌کند و بعد جری به او می‌پیوندد.</font></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><a href="post/1006.html" target="" title="alborz-pic"><img src="https://ci3.googleusercontent.com/proxy/1BHiBQh9VRvhVKK62a7XQCywQSQUhOZRPFvuFbUZmzN3lbi4HUH1UhZ0EV49Pc2E7oxuLiKYa7kV87CH3Xhh6TfL2CnVXkQT=s0-d-e1-ft#http://persian-star.net/1395/8/17/Tom-Jerry/08.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd" style="line-height: 1.22em;"></a></p><p style="line-height: 1.22em; margin: 0px 0px 1em; color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;"><br style="line-height: 1.22em;"></font><font face="Tahoma" color="#FF0000" style="line-height: 1.22em; font-size: 10pt; font-weight: 700;">–</font><font face="Tahoma" color="#6C0000" style="line-height: 1.22em; font-size: 10pt;">&nbsp;در آرژانتین، ارمنستان، برزیل، کلمبیا، شیلی، مصر، هند، اندونزی، قزاقستان، لبنان، مکزیک، خاور میانه، پاکستان، برخی کشورهای جنوب شرقی آسیا، ونزوئلا، سایر کشورهای آمریکای لاتین، و کشورهای اروپای شرقی (مثل رومانی) شبکۀ کارتون هرروز کارتون تام و جری را پخش می‌کند.</font><b style="line-height: 1.22em;"><font face="Tahoma" color="#CC0000" size="3" style="line-height: 1.22em;"><br style="line-height: 1.22em;"></font></b></p>
+
+
+ </div>
+<br>
+<script>mihanblogPostLike('1006','like')</script><br>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">مرتبط با: <a href="../post/category/45.html">
+سرگرمی , تفریحی</a> , <a href="../post/category/43.html">
+مطالب جالب و خواندنی</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">برچسب‌ها: <a href="../post/tag/alborz-pic.html">
+alborz-pic</a> , <a href="../post/tag/تام&#32;و&#32;جری.html">
+تام و جری</a> , <a href="../post/tag/کارتون&#32;دوران&#32;کودکی.html">
+کارتون دوران کودکی</a> , <a href="../post/tag/انیمیشن.html">
+انیمیشن</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+</div>
+</div>
+
+<div id="theme-designer-com-post-linksabet" style="margin:6px 0px 0px 0px;"><ul>
+<li><center><a href="../post/1006.html" ><span class="theme-designer-com_koli_hidden">لینک ثابت</span></a></center></li>
+</ul></div>
+
+<div class="theme-designer-com-post-footer"><div class="theme-designer-com-post-footer2">
+منتشر شده در تاریخ 1395/08/17 توسط alborz-pic alborz</div></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ------------comment------------ -->
+<div style="margin:30px 15px 0px 0px;">
+</div>
+<!-- ------------/comment------------ -->
+
+
+<table border="0" width="100%" id="table3" cellspacing="0" cellpadding="0">
+<tr>
+<td width="30"></td>
+<td>
+<table border="0" width="100%" id="table4" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center">
+<p align="right">
+<div class="theme-designer-com-list-page">تعداد کل صفحات: 206 </div>
+<div class="pagenu"><a href="5.html"><i>...</i></a></div><div class="pagenu"><a href="6.html"><span>6</span></a></div><div class="pagenu"><a href="7.html"><span>7</span></a></div><div class="pagenu"><a href="8.html"><span>8</span></a></div><div class="pagenu"><a href="9.html"><b>9</b></a></div><div class="pagenu"><a href="10.html"><span>10</span></a></div><div class="pagenu"><a href="11.html"><span>11</span></a></div><div class="pagenu"><a href="12.html"><span>12</span></a></div><div class="pagenu"><a href="13.html"><i>...</i></a></div></td>
+</tr>
+</table>
+</td>
+<td width="30"></td>
+</tr>
+</table>
+<br>
+<br>
+
+</td>
+<td width="12" valign="top">&nbsp;</td>
+<td width="288" valign="top">
+
+<div class="search">
+<form method="Get" target="_blank" action="http://google.com/search" class=sch><input name="sitesearch" value="http://alborz-pic.mihanblog.com" type="hidden">
+<div style="height:26px; overflow:hidden; width:277px; overflow:hidden;">
+<input type="text" name="q" size="5" class=txt value="" onfocus="if (this.value == '') {this.value = '';}" onblur="if (this.value == '') {this.value = '';}"><input type="submit" value=" " class="but">
+</div>
+</form>
+</div>
+
+<div class="theme-designer-com_menuleft-border2">
+<div class="theme-designer-com_menuleft-border1">
+<div class="theme-designer-com_menuleft-border3">
+<div class="theme-designer-com_menuleft-border4">
+<div align="center">
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">درباره وبگاه</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="menuleft-text">
+<div align="center" style="padding:0px 0px 5px 0px;"><img src="http://static.mihanblog.com//public/user_data/web_photo/382/1145999.jpg?4316"  /></div>
+سایت تفریحی و سرگرمی</div>
+<div class="vmenu"><a target="_blank" href="../post/author/986785.html">alborz-pic alborz</a></div>
+</div>
+
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">موضوعات</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="vmenu"><a href="../post/category/45.html" title="450" >سرگرمی , تفریحی</a></div>
+<div class="vmenu"><a href="../post/category/43.html" title="549" >مطالب جالب و خواندنی</a></div>
+<div class="vmenu"><a href="../post/category/1.html" title="484" >گالری عکس</a></div>
+<div class="vmenu"><a href="../post/category/46.html" title="20" >تصاویر متحرک</a></div>
+<div class="vmenu"><a href="../post/category/37.html" title="5" >پس زمینه و والپیپر</a></div>
+<div class="vmenu"><a href="../post/category/36.html" title="18" >عکس های مذهبی</a></div>
+<div class="vmenu"><a href="../post/category/35.html" title="13" >عکسهای ورزشی</a></div>
+<div class="vmenu"><a href="../post/category/34.html" title="7" >عکسهای ناز کودکان</a></div>
+<div class="vmenu"><a href="../post/category/33.html" title="23" >عکسهای عاشقانه</a></div>
+<div class="vmenu"><a href="../post/category/23.html" title="60" >خواننده و بازیگر ایرانی</a></div>
+<div class="vmenu"><a href="../post/category/32.html" title="6" >عکس های فیلم و سریال</a></div>
+<div class="vmenu"><a href="../post/category/31.html" title="33" >عکس های خنده دار</a></div>
+<div class="vmenu"><a href="../post/category/30.html" title="23" >عکس های خبری</a></div>
+<div class="vmenu"><a href="../post/category/27.html" title="15" >عكس های هنری خلاقانه</a></div>
+<div class="vmenu"><a href="../post/category/29.html" title="11" >عکس های حیوانات</a></div>
+<div class="vmenu"><a href="../post/category/44.html" title="9" >دنیای  ماشین</a></div>
+<div class="vmenu"><a href="../post/category/28.html" title="6" >عکس های حوادث</a></div>
+<div class="vmenu"><a href="../post/category/26.html" title="2" >عكس های فانتزی</a></div>
+<div class="vmenu"><a href="../post/category/25.html" title="4" >عكس های طبیعت زیبا</a></div>
+<div class="vmenu"><a href="../post/category/24.html" title="3" >عكس های 3 بعدی</a></div>
+<div class="vmenu"><a href="../post/category/38.html" title="2" >كارت پستال مناسبت ها</a></div>
+<div class="vmenu"><a href="../post/category/42.html" title="4" >مدل کفش زنانه و پسرانه</a></div>
+<div class="vmenu"><a href="../post/category/41.html" title="1" >مدل مو دخترانه و پسرانه</a></div>
+<div class="vmenu"><a href="../post/category/40.html" title="24" >مدل لباس زنانه و مردانه</a></div>
+<div class="vmenu"><a href="../post/category/19.html" title="15" >موبایل</a></div>
+<div class="vmenu"><a href="../post/category/22.html" title="2" >کلیپ موبایل</a></div>
+<div class="vmenu"><a href="../post/category/20.html" title="21" >دانلود</a></div>
+<div class="vmenu"><a href="../post/category/18.html" title="15" >دانلود نرم افزار</a></div>
+<div class="vmenu"><a href="../post/category/17.html" title="2" >دانلود آهنگ جدید</a></div>
+<div class="vmenu"><a href="../post/category/9.html" title="64" >دانستنی ها</a></div>
+<div class="vmenu"><a href="../post/category/16.html" title="13" >آیا میدانید ؟</a></div>
+<div class="vmenu"><a href="../post/category/15.html" title="27" >دانستنی های تغذیه</a></div>
+<div class="vmenu"><a href="../post/category/14.html" title="13" >دانستنی های زندگی</a></div>
+<div class="vmenu"><a href="../post/category/12.html" title="17" >دانستنیهای روانشناسی</a></div>
+<div class="vmenu"><a href="../post/category/13.html" title="47" >دانستنی های سلامتی</a></div>
+<div class="vmenu"><a href="../post/category/11.html" title="16" >دانستنی های زناشویی</a></div>
+<div class="vmenu"><a href="../post/category/10.html" title="10" >داستان کوتاه و خواندنی</a></div>
+<div class="vmenu"><a href="../post/category/7.html" title="24" >اس ام اس</a></div>
+<div class="vmenu"><a href="../post/category/8.html" title="9" >اس ام اس عاشقانه</a></div>
+<div class="vmenu"><a href="../post/category/6.html" title="1" >اخبار ورزشی</a></div>
+<div class="vmenu"><a href="../post/category/5.html" title="9" >اخبار سینما</a></div>
+<div class="vmenu"><a href="../post/category/4.html" title="16" >اخبار حوادث</a></div>
+<div class="vmenu"><a href="../post/category/3.html" title="1" >کد آهنگ پیشواز</a></div>
+</div>
+
+
+		<form id="frm-16079132485fd6cf20ddf5f" method="post" action="http://alborz-pic.mihanblog.com/poll/new/fid/16079132485fd6cf20ddf5f/atrty/1607913248/avrvy/0/key/50e42796448aeae88654c8b4fb682d15/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="366055" id="data[pollid]" />		
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">نظر سنجی</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div align="center"><div class="menuleft-other">
+نظرتون در مورد این وبلاگ<br>
+<label><input type="checkbox"  name="data[v1]" id="v1" value="1" />خوب</label><br><label><input type="checkbox"  name="data[v2]" id="v2" value="1" />هی بد نیست</label><br><label><input type="checkbox"  name="data[v3]" id="v3" value="1" />بد</label><br><label><input type="checkbox"  name="data[v4]" id="v4" value="1" />غیر قابل تحمل</label><br><center><input type="submit" value="ثبت" style="height: 20; width:150; margin:10px 0px 0px 0px;"/></center>
+</div></div>
+</div>
+
+		<input type="hidden" name="frm-id" value="16079132485fd6cf20ddf5f" id="frm-id" /></form>
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">لینک دوستان</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="vmenu"><a target="_blank" href="http://www.seomastering.com/" title="" >Free SEO Tools</a></div><div class="vmenu"><a target="_blank" href="http://clockbiz.mihanblog.com" title="" >ساعت مچی</a></div><div class="vmenu"><a target="_blank" href="http://google.com" title="" >google</a></div><div class="vmenu"><a target="_blank" href="http://www.alexa.com" title="" >alexa</a></div><div class="vmenu"><a target="_blank" href="http://www.bestlastsecond.com/torkie/istanbul.html" >تور استانبول</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.bestlastsecond.com/torkie/antalya.html" >تور آنتالیا</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.bestlastsecond.com/kish.html" >تور کیش</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.bestlastsecond.com/mashhad.html" >تور مشهد</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.tbs.ir/mba" >دوره MBA</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.tbs.ir/dba" >دوره DBA</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.tbs.ir/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d9%81%d8%b1%d9%88%d8%b4/" >آموزش فروش</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.tbs.ir/%d9%85%d8%af%db%8c%d8%b1%db%8c%d8%aa-%da%a9%d8%b3%d8%a8-%d9%88-%da%a9%d8%a7%d8%b1/" >مدیریت کسب و کار</a></div>
+</div>
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">آرشیو مطالب</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="vmenu"><a href="../post/archive/1396/5/3.html" title="1"> هفته سوم مرداد 1396</a></div>
+<div class="vmenu"><a href="../post/archive/1395/9/2.html" title="4"> هفته دوم آذر 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/9/1.html" title="3"> هفته اول آذر 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/8/4.html" title="20"> هفته چهارم آبان 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/8/3.html" title="15"> هفته سوم آبان 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/8/2.html" title="5"> هفته دوم آبان 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/7/4.html" title="1"> هفته چهارم مهر 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/7/3.html" title="2"> هفته سوم مهر 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/7/2.html" title="5"> هفته دوم مهر 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/7/1.html" title="20"> هفته اول مهر 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/6/4.html" title="20"> هفته چهارم شهریور 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/6/3.html" title="1"> هفته سوم شهریور 1395</a></div>
+</div>
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">نویسندگان</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="vmenu"><a href="../post/author/986785.html" title="1028" >alborz-pic alborz</a></div></div>
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">برچسب ها</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div align="center"><div class="menuleft-other"><div align="right">
+<a href="../post/tag/البرز.html" style="font-size:1.21em">
+البرز</a> , <a href="../post/tag/alborz.html" style="font-size:1.59em">
+alborz</a> , <a href="../post/tag/عکس.html" style="font-size:1.18em">
+عکس</a> , <a href="../post/tag/زیبا.html" style="font-size:1em">
+زیبا</a> , <a href="../post/tag/alborz-pic.html" style="font-size:2em">
+alborz-pic</a> , <a href="../post/tag/البرز+پیک.html" style="font-size:1.49em">
+البرز پیک</a> , <a href="../post/tag/pic.html" style="font-size:1.14em">
+pic</a> , <a href="../post/tag/جالب.html" style="font-size:1.07em">
+جالب</a> , <a href="../post/tag/سایت+تفریحی+و+سرگرمی.html" style="font-size:1.63em">
+سایت تفریحی و سرگرمی</a> , <a href="../post/tag/alborzpic.html" style="font-size:1.07em">
+alborzpic</a> , </div></div></div>
+</div>
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">دیگر موارد</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div align="center"><div class="menuleft-other">
+<div align="right">
+تعداد مطالب : <script>getStatVar('total_post');</script><br>
+تعداد نویسندگان : <script>getStatVar('total_author');</script><br>
+آخرین بروز رسانی : <script>getStatVar('modify_date');</script><br>
+بازدید امروز : <script>getStatVar('today_view');</script><br>
+بازدید دیروز : <script>getStatVar('yesterday_view');</script><br>
+بازدید این ماه : <script>getStatVar('this_month_view');</script><br>
+بازدید ماه قبل : <script>getStatVar('last_month_view');</script><br>
+بازدید کل : <script>getStatVar('total_view');</script><br>
+آخرین بازدید : <script>getStatVar('last_view_date');</script><br><br>
+</div></div></div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</td>
+<td width="16" valign="top">&nbsp;</td>
+</tr>
+</table>
+</div>
+</div>
+
+<div align="center" dir="rtl">
+<div class="theme-designer-com-footer1">
+<div class="theme-designer-com-footer-w-h">
+<div class="theme-designer-com_footer_menu2">
+<a href="../index.html">صفحه ی نخست</a>|
+<a href="mailto:">پست الکترونیک</a>|
+<a href="javascript:messageForm()">تماس با ما</a>|
+<a href="../post/archive.html">آرشیو مطالب</a>|
+<a target="_blank" href="../post/rss/index.html">لینك rss</a>|
+<a target="_blank" href="http://alborz-pic.mihanblog.com/m/">نسخه موبایل</a>
+</div>
+<div class="theme-designer-com-footer-w-h2">
+<a class="footer_theme-designer-11" href="http://www.theme-designer.com"></a>
+<div class="theme-designer-com-footer-12" align="right">
+تمام حقوق متعلق به <a href="../index.html"> سایت تفریحی و سرگرمی* همه چی از همه جا * </a> می باشد
+&nbsp;|&nbsp;
+كد نویسی و گرافیک : <a target="_blank" title="قالب وبلاگ" href="http://www.theme-designer.com">تم دیزاینر</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'alborz-pic.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

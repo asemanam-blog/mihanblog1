@@ -1,0 +1,2218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://bojnourdswim.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1154620*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[16]='100';commentCnt[267]='0';commentCnt[268]='2';commentCnt[269]='3';commentCnt[270]='0';commentCnt[271]='0';commentCnt[272]='14';commentCnt[274]='0';commentCnt[275]='0';commentCnt[276]='1';commentCnt[277]='2';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[16]='0';
+mihanblogDisLikeArrCnt[16]='0';
+mihanblogLikeArrCnt[267]='0';
+mihanblogDisLikeArrCnt[267]='0';
+mihanblogLikeArrCnt[268]='0';
+mihanblogDisLikeArrCnt[268]='0';
+mihanblogLikeArrCnt[269]='0';
+mihanblogDisLikeArrCnt[269]='0';
+mihanblogLikeArrCnt[270]='0';
+mihanblogDisLikeArrCnt[270]='0';
+mihanblogLikeArrCnt[271]='0';
+mihanblogDisLikeArrCnt[271]='0';
+mihanblogLikeArrCnt[272]='0';
+mihanblogDisLikeArrCnt[272]='0';
+mihanblogLikeArrCnt[274]='0';
+mihanblogDisLikeArrCnt[274]='0';
+mihanblogLikeArrCnt[275]='0';
+mihanblogDisLikeArrCnt[275]='0';
+mihanblogLikeArrCnt[276]='0';
+mihanblogDisLikeArrCnt[276]='0';
+mihanblogLikeArrCnt[277]='0';
+mihanblogDisLikeArrCnt[277]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://bojnourdswim.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://bojnourdswim.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','255');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','دوشنبه 5 آبان 1393');
+	
+	setStatVar('today_view','9');
+	setStatVar('yesterday_view','15');
+	
+	setStatVar('this_month_view','500');
+	setStatVar('last_month_view','1505');
+
+	setStatVar('total_view','390239');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (06:41)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://bojnourdswim.mihanblog.com/statupdate/?data[refereruri]=http://kojabia2.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607829392&data[hash]=b0e5662f0f98f468bd95c393766ed40c&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://bojnourdswim.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://bojnourdswim.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://bojnourdswim.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://bojnourdswim.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://bojnourdswim.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://bojnourdswim.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://bojnourdswim.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://bojnourdswim.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://bojnourdswim.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://bojnourdswim.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://bojnourdswim.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://bojnourdswim.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://bojnourdswim.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://bojnourdswim.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://bojnourdswim.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://bojnourdswim.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<!-- Begin ParsToOls.com Hadith -->	<script language='JavaScript' type='text/javascript' src='http://www2.ParstoOls.com/text_day/shiayan-hadith.js'></script><div  style="display:none;"><a href="http://parstools.com"><h1>حدیث روز</h1></a></div>	<!-- End Hadith -->
+
+
+
+
+<head>
+<script type="text/JavaScript" language="javascript">
+msg = "بزرگترین و کاملترین وبلاگ آموزش شنا "; msg = "..." + msg;pos = 0;
+function scrollMSG() {
+document.title = msg.substring(pos, msg.length) + msg.substring(0, pos);
+pos++;
+if (pos  msg.length) pos = 0
+window.setTimeout("scrollMSG()",200);
+}
+scrollMSG();
+</script>
+
+<a href="index.html#" onClick="MyWindow=window.open('http://bojnourdswim.mihanblog.com/','MyWindow','toolbar=yes,location=yes,directories=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,width=600,height=400,left=50,top=50'); return false;"><a target="_blank" href="http://www.iranskin.com/games"><p align="center">
+<a href="index.html" target="_blank">
+<img border="0" src="شادی&#32;روح&#32;شهدا&#32;صلوات.html" alt="شادی روح شهدا صلوات"></a><div style="display:none"><a href="http://www.fina.org/H2O/">فینا</a></div></a>
+
+
+<a href="index.html#" onClick="MyWindow=window.open('http://bojnourdswim.mihanblog.com/','MyWindow','toolbar=yes,location=yes,directories=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,width=600,height=400,left=50,top=50'); return false;"><a target="_blank" href="http://www.iranskin.com/games"><p align="center">
+<a href="index.html" target="_blank">
+<img border="0" src="خوش&#32;آمدید.html" alt="خوش آمدید"></a><div style="display:none"><a href="http://www.fina.org/H2O/">خوش آمدید</a></div></a>
+
+
+
+<style type="text/css">.commenet{padding:4px;line-height:25px;-moz-border-radius:7px;-webkit-border-radius:7px;-khtml-border-radius:7px;border-radius:7px;direction:rtl;text-align:right;font-family:Tahoma;}.commenet input[type="text"]{font-family:Tahoma;direction:rtr;text-align:right;border:1px solid #000000;padding:4px;-moz-border-radius:7px;-webkit-border-radius:7px;-khtml-border-radius:7px;border-radius:7px;}.commenet input[type="text"]:hover{border:1px solid #000000;-moz-border-radius:3px;-webkit-border-radius:3px;-khtml-border-radius:3px;border-radius:3px;}.commenet textarea{font-family:Tahoma;direction:rtr;text-align:right;border:1px solid #000000;padding:4px;-moz-border-radius:7px;-webkit-border-radius:7px;-khtml-border-radius:7px;border-radius:7px;width:281px;}.commenet textarea:hover{border:1px solid #000000;-moz-border-radius:3px;-webkit-border-radius:3px;-khtml-border-radius:3px;border-radius:3px;}.comment_loop{background:#F4F4F4;border-right:5px solid #E5E5E5;border-left:1px solid #E5E5E5;border-top:1px solid #E5E5E5;border-bottom:1px solid #E5E5E5;margin-bottom:24px;padding:6px;-moz-border-radius:14px;-webkit-border-radius:14px;-khtml-border-radius:14px;border-radius:14px;font-size:12px;line-height:25px;}.comment_loop:hover{background:#FFF;}.comment_sender{padding:10px;color:#339900;font-weight:bold;font-size:13px;}.comment_sender a{color:#339900;text-decoration:none;font-size:13px;}.comment_sender a:visited{color:#339900;text-decoration:none;font-size:13px;}.comment_sender a:hover{color:#FF0000;text-decoration:none;}.comment_reply{margin-right:35px;margin-top:7px;margin-bottom:2px;margin-left:35px;color:#2D0016;padding:4px;border-top:1px solid #E5E5E5;-moz-border-radius:5px;-webkit-border-radius:5px;-khtml-border-radius:5px;border-radius:5px;background:#EFEFEF;}.comment_reply:hover{padding:6px;background:#FFFBFC;-moz-border-radius:7px;-webkit-border-radius:7px;-khtml-border-radius:7px;border-radius:7px;}.comment_sender_link{padding:10px;color:#FF0000;font-size:12px;text-align:left;direction:ltr;}.comment_sender_link a{color:#FF0000;text-decoration:none;font-size:12px;}.comment_sender_link a:visited{color:#FF0000;text-decoration:none;font-size:12px;}.comment_sender_link a:hover{color:#0033FF;text-decoration:none;}.comment_form{direction:rtl;padding:20px;background:#fff;-moz-border-radius:14px;-webkit-border-radius:14px;-khtml-border-radius:14px;border-radius:14px;border-right:5px solid #E5E5E5;border-left:1px solid #E5E5E5;border-top:1px solid #E5E5E5;border-bottom:1px solid #E5E5E5;margin-bottom:24px;}.comment_form label{text-align:left;font-size:11px;padding-left:10px;}.comment_form_row{margin:11px;}</style>
+  
+
+
+<LINK href="http://axgig.com/images/84713122816768000067.jpg" rel="SHORTCUT ICON"><div style="display:none"><a href=http://20tools.ir>وبلاگ</a><a href=http://20tools.ir/icon/>icon</a></div>
+
+
+
+
+<title> آموزش شنا</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Farsi">
+<meta name="geo.region" CONTENT="IR" />
+<meta name="googlebot" content="INDEX, follow" />
+<meta name="robots" content="index, follow">
+<meta name="description" content=" آموزش شنا - هرکه یک حــاجت بــــرادر مـومنش را روا کنـــــد  خــداونـد صــــــــد هــــــــزار حاجت او را در قیامت برآورد . ( امــام صــادق)&nbsp; -  آموزش شنا">
+<meta name="keywords" content=" آموزش شنا,Bojnourdswim, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title=" آموزش شنا" href="http://bojnourdswim.mihanblog.com/post/rss/">
+<link href="http://www.iranskin.com/template3/37/m37.css" type="text/css" rel="stylesheet">
+
+<style>#Header-IS{background:url('http://upload.tehran98.com/img1/al27arp2hfvcruub3sf7.png') no-repeat};</style>
+
+<style>#footer-IS{background:url('http://uploadiha.com/images/qdurubevmkrliuiwrqyp.jpg') no-repeat};</style>
+
+ 
+
+
+
+
+
+
+
+</head>
+
+
+
+
+<body>
+
+
+
+
+
+
+
+
+انسان به واسطه ضربان قلبش زنده نیست،حیات او به غذا وابسته نیست،او به لطف خدا زنده است <img src="http://s3.picofile.com/file/7494008709/kkk.gif" height="35" width="500"> 
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+
+<div align="center">
+<div class=Back-IS>
+
+	
+<table border="0" width="1000" cellspacing="0" cellpadding="0">		
+
+
+<tr><td colspan="3" id=Header-IS>	
+
+
+<div id=BlogTitle><br> آموزش شنا</div><div style="width:100%;height:23;float:right"></div>
+<div id=BlogDescription>هرکه یک حــاجت بــــرادر مـومنش را روا کنـــــد  خــداونـد صــــــــد هــــــــزار حاجت او را در قیامت برآورد . ( امــام صــادق)&nbsp;</div>
+	
+
+                 
+
+><p align="center"><span style="font-size:11pt">
+<marquee onmouseover="this.stop()" onmouseout="this.start()" direction=up width="500" height="95" style="direction: rtl; text-align: center; line-height: 150%" scrollamount="1" scrolldelay="70">
+<center>آموزش شنا خصوصی و100%تضمینی <center><hr 
+style="border: 1px dotted #8593a3" width="80%" size="1"><center>آموزش نجات غریق<center><hr 
+style="border: 1px dotted #8593a3" width="80%" size="1"><center>کلاس های آب درمانی و هیدروتراپی<center><hr 
+style="border: 1px dotted #8593a3" width="80%" size="1"><center>معرفی به مسابقات و حضور در مسابقات کشوری <center><hr 
+style="border: 1px dotted #8593a3" width="80%" size="1"><center>ما بهترین نیستیم اما بهترین ها ما را انتخاب می کنند <center><hr
+style="border: 1px dotted #8593a3" width="80%" size="1"></p><center>
+</marquee></span></td>
+</A><BR>
+</div>
+  
+
+
+</div>
+
+</td></tr>
+
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="120" height="120">
+  <param name="movie" value="http://askme.persiangig.com/video/min.swf" />
+  <param name="quality" value="high" />
+     <embed src="http://upload.tehran98.com/img1/m2rbpba6ztarxzyuiuii.swf"
+      quality="high"
+
+      type="application/x-shockwave-flash"
+      width="1000"
+      height="200"
+      pluginspage="http://www.macromedia.com/go/getflashplayer" />
+
+</object div class=TopMenu><div style="float:right;width:782;direction:rtl">
+<div style="width:30;height:20;float:right"></div>
+<a href="index.html">صفحه اصلی</a> |
+<a href="http://bojnourdswim.mihanblog.com/extrapage/list">آرشیو مطالب</a> |
+<a href="mailto:alihamidi4009@gmail.com">پست الکترونیک</a> |
+<a href="javascript:messageForm()" title="تماس با مدیران ">
+		  تماس با ما</a>|
+<a target="_blank" href="http://bojnourdswim.mihanblog.com/post/rss/">RSS 2.0</a
+
+<tr><td width="220" valign="top">
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>اخبار</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+
+
+
+
+
+
+
+<!-- www.amozande.ir --->
+<script type="text/javascript" src="http://amozande.ir/abzar/?text_color=000000&bg=0DEFFF&cat=1&count=20&thumb=thumb"></script>
+<!-- www.amozande.ir --->
+
+
+<a target="_blank" href="http://www.iranskin.com/games"><p align="center"><a href="http://bojnourdswim.mihanblog.com/post/58" target="_blank"><img src="http://ir2up.ir/up19/1bf13657871111.gif" alt="برای درج تبلیغات کلیک کنید" height="240" width="124" border="0"></a><div id="irc_mimg"><a data-ved="0CAUQjRw"
+
+<a target="_blank" href="http://www.iranskin.com/games"><p align="center"><a href="http://www.20tools.com/automatic-link/sendlink.php?id=5572" target="_blank"><img src="http://upload.tehran98.com/img1/exo2rbkx0lega54rxcmu.gif" alt="برای درج تبلیغات کلیک کنید" height="240" width="124" border="0"></a><div id="irc_mimg"><a data-ved="0CAUQjRw"
+
+
+<a target="_blank" href="http://www.iranskin.com/games"><p align="center"><a href="http://bojnourdswim.mihanblog.com/post/58" target="_blank"><img src="http://upload.tehran98.com/img1/d2p7nz3a3tfxt6epz8d.gif" alt="برای درج تبلیغات کلیک کنید" height="240" width="124" border="0"></a>
+
+
+
+<a href="http://irpopup.ir/index.php?page=register&refer=2321" target="_blank"><img src="http://irpopup.ir/Banners/IRPU120in240.gif" width="120" height="240"></a>
+
+
+</a></div> </p> </a></div></div>
+<div class=LowSid></div></div>
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>گروههای خبری</b></div></div>
+<div class=CenterSid><div class=li-Sid2><center>  
+
+<a target="_blank" href="http://www.iranskin.com/games"><p align="center">
+<a href="http://bojnourdswim.mihanblog.com/post/179" target="_blank">
+<img border="0" src="http://upload.tehran98.com/img1/ud0lhaxfjosi6hcna43.jpg" alt="فینا"></a><div style="display:none"><a href="http://www.fina.org/H2O/">فینا</a></div></a><div id="irc_mimg"><a data-ved="0CAUQjRw"
+
+<a target="_blank" href="http://www.iranskin.com/games"><p align="center">
+<a href="http://bojnourdswim.mihanblog.com/post/180" target="_blank">
+<img border="0" src="http://upload.tehran98.com/img1/ggtxmlcgkzgglmtxxato.jpg" alt="فینا"></a><div style="display:none"><a href="http://www.fina.org/H2O/">فینا</a></div>
+
+<a target="_blank" href="http://www.iranskin.com/games"><p align="center">
+<a href="http://bojnourdswim.mihanblog.com/post/181" target="_blank">
+<img border="0" src="http://upload.tehran98.com/img1/eh7gu20rs4t5tc4oj.jpg" alt="فینا"></a><div style="display:none"><a href="http://www.fina.org/H2O/">فینا</a></div>
+
+<a target="_blank" href="http://www.iranskin.com/games"><p align="center">
+<a href="http://bojnourdswim.mihanblog.com/post/182" target="_blank">
+<img border="0" src="http://upload.tehran98.com/img1/3loznw2myxaw5h4rc.jpg" alt="فینا"></a><div style="display:none"><a href="http://www.fina.org/H2O/">فینا</a></div>
+
+
+</center></div></div>
+<div class=LowSid></div></div>
+
+
+
+<cb:block_author>
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>نویسندگان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/author/994718">shena blog  255 </a></div></div>
+<div class=LowSid></div>
+<center><script language="javascript" src="http://www.iranskin.com/zekr/show.php?n=15"></script></center><div style='display:none'><h1><a title='قالب وبلاگ' href='http://www.iranskin.com'>قالب میهن بلاگ</a></h1></div>
+
+		 
+
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>			
+<b>لینک به روایت تصویر</b></div></div>
+<div class=CenterSid><div class=li-Sid2><center>  
+
+
+<a href="http://bojnourdswim.mihanblog.com/post/comment/31" target="_blank">
+<img border="0" src="http://upload.tehran98.com/img1/5wtgcq450hqlain3rl8m.gif" alt="فینا"></a><div style="display:none"><a href="http://www.fina.org/H2O/">فینا</a></div>
+
+
+
+
+
+
+
+
+
+<a href="http://mazhabibojnord.mihanblog.com/" target="_blank" ><embed src="http://upload.tehran98.com/img1/lg8ku140w837cfrrlep.swf"
+      quality="high"
+      type="application/x-shockwave-flash"
+      width="175"
+      height="142"
+       />
+
+
+
+<a href="http://tamiratmobile.mihanblog.com/" target="_blank">
+<img border="0" src="http://upload.tehran98.com/img1/d2p7nz3a3tfxt6epz8d.gif" alt="فینا"></a><div style="display:none"><a href="http://www.fina.org/H2O/">فینا</a></div>
+
+
+
+</center></div></div>
+<div class=LowSid></div></div>
+	
+
+
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>لینک دوستان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a target="_blank" href="http://www.iranskin.com">قالب میهن بلاگ</a></div><div class=li-Sid><a target="_blank" href="http://www.IranSkin.com" title="قالب بلاگفا">قالب بلاگفا</a></div><div class=li-Sid>
+<a target="_blank" href="http://mazhabibojnord.mihanblog.com/">وبلاگ‏ ‏مذهبی سیاسی‏ ‏شهرستان‏ ‏بجنورد</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.iranskin.com/games">بازی آنلاین</a></div></div>
+<div class=LowSid></div></div>
+
+
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>صفحات جانبی</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/extrapage/mobile1">تعمیرات موبایل</a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/extrapage/film">دانلود رایگان فیلم</a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/extrapage/rahbari">رهبری</a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/extrapage/antivirus">دانلود آنتی ویروس رایگان</a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/extrapage/list">آرشیو مطالب</a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/extrapage/mosabeghat">مسابقات شنا</a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/extrapage/4">آب درمانی</a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/extrapage/3">برنامه کلاس های آموزشی</a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/extrapage/2">خبری</a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/extrapage/1">مربیگری شنا</a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/extrapage/swim">گالری تصویر آموزش شنا</a></div><div class=LowSid></div></div>
+</div>
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>ابر برچسب ها</b></div></div>
+<div class=CenterSid><center>
+				<a href="http://bojnourdswim.mihanblog.com/post/tag/%D8%B4%D9%86%D8%A7%DB%8C+%D9%82%D9%88%D8%B1%D8%A8%D8%A7%D8%BA%D9%87" style="font-size:1em">
+		شنای قورباغه</a>   
+
+<center><script language="javascript" src="http://pichak.net/alexa/code.php?link=http://mehrangoli64.parsiblog.com/&bgi=9&global=1&country=1&links=1&bgc=FFFFFF&borderw=1&borderc=D6D2B4"></script></center><div style='display:none'><h2><a title='قالب وبلاگ ' href='http://pichak.net'>پیچک</a></h2></div>
+</div>
+
+
+
+</center><div class=LowSid></div></div>
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>بهترین لینک ها کلیک کن ضرر نداره</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a target="_blank" href="../www.esteva.mihanblog.com/index.html" title="لطفا این لینک را تایید کنید">استوا</a></div><div class=li-Sid>
+<a target="_blank" href="http://ponisha.ir/affiliate/nicoosokhan" title="هزاران نیروی متخصص در پونیشا آماده کار برای شما هستند
+برنامه نویسی، طراحی، ترجمه و بیشتر!
+
+لطفا از لینک زیر به سایت مراجعه کنید.
+http://ponisha.ir/affiliate/nicoosokhan
+
+پونیشا سایت برون سپاری پروژه ها است. هزاران فریلنسر در پونیشا آماده کار برای شما هستند. فقط پروژه‌ای که می‌خواهید انجام شود را بصورت آنلاین ثبت کنید تا یکی از فریلنسرهای پونیشا آن را با حداقل هزینه برای شما انجام دهد.
+
+اگر شما شغل آزاد دارید، یک استارتاپ هستید، یک شرکت کوچک یا متوسط دارید، و یا حتی یک شرکت شناخته شده بزرگ هستید، پونیشا می‌تواند در پائین آوردن هزینه‌ها به شما کمک کند.
+
+دلیل های بسیاری برای استفاده از پونیشا وجود دارد. پونیشا باعث رشد سریع شرکت و سود شما می شود. شما می توانید کار با کیفیت را با حداقل هزینه در حداقل زمان دریافت کنید و فقط زمانی پرداخت را انجام می دهید که از نتیجه کار 100% رضایت داشته باشید. کار با پونیشا سریع و ساده است و تیم پشتیبانی در هر زمان که نیاز باشد آماده پاسخ به سئوالات شما خواهد بود.">پونیشا چطور کار می کند؟</a></div><div class=li-Sid>
+<a target="_blank" href="../www.esteva.mihanblog.com/index.html" title="سلام . مطالب وبلاگتون رو دنبال میکنم
+
+لینکتون رو به این ادرس بفرستید
+http://esteva.mihanblog.com/linkdaily/new
+خیلی زود تایید میکنم
+
+شما هم این لینک رو تایید کنید">مجله اینترنتی استوا</a></div><div class=li-Sid>
+<a target="_blank" href="../esteva.mihanblog.com/post/2793.html" title="با این زیر می توانید تبلیغات بالای وبلاگتان (سمت چپ) را بلافاصله ببندید.
+
+ادامه مطلب در 
+http://esteva.mihanblog.com/post/2793
+
+لطفا این لینک را تایید کنید">حذف تبلیغات میهن بلاگ</a></div><div class=li-Sid>
+<a target="_blank" href="http://mrhs.blogfa.com/" title="به نام خدا
+
+به وبلاگ آسمان خوش آمدید
+
+این وبلاگ بیشتر جنبه تفریحی و فان داره و گاهی اوقات هم جنبه شخصی پیدا می کنه !
+
+برای استفاده از مطالب وبلاگ می تونید ازبخش  موضوعات،  موضوع مورد علاقه را پیدا کنید
+
+و اگر هم موافق با تبادل لینک بودید در همین پست و در قسمت نظرات بفرمایید
+
+همچین امیدوارم  همیشه دلتون مثل آسمان صاف و ساده باشه">سعی کن خودت باشی !</a></div><div class=li-Sid>
+<a target="_blank" href="https://cafebazaar.ir/app/ir.webposter.calculator/?l=fa" title="رسم نمودارهای ریاضی + ماشین حساب مهندسی
+در موبایلتان
+
+https://cafebazaar.ir/app/ir.webposter.calculator/?l=fa
+
+برای حمایت از ما این را تایید فرمایید">ماشین حسـاب گرافـــیکی</a></div><div class=li-Sid>
+<a target="_blank" href="../www.esteva.mihanblog.com/index.html" title="سلام . مطالب وبلاگتون رو دنبال میکنم
+لینکتون رو به این ادرس بفرستید
+http://esteva.mihanblog.com/linkdaily/new
+خیلی زود تایید میکنم
+
+شما هم این لینک رو تایید کنید">مجله اینترنتی استوا</a></div><div class=li-Sid>
+<a target="_blank" href="../www.esteva.mihanblog.com/index.html" title="انصافا وبلاگ زیبایی دارید .
+
+این لینک را تایید کنید  لطفا">استوا</a></div><div class=li-Sid>
+<a target="_blank" href="http://linkbox.mnti.ir" title="لینک باکس پربازدید | تبادل هوشمند">تبادل لینک هوشمند</a></div><div class=li-Sid>
+<a target="_blank" href="http://rangriz.ir/index.php" title="&amp;#1587;&amp;#1604;&amp;#1575;&amp;#1605; &amp;#1604;&amp;#1591;&amp;#1601;&amp;#1575; &amp;#1604;&amp;#1740;&amp;#1606;&amp;#1705; &amp;#1605;&amp;#1575;&amp;#1585;&amp;#1608; &amp;#1578;&amp;#1575;&amp;#1740;&amp;#1740;&amp;#1583; &amp;#1705;&amp;#1606;&amp;#1740;&amp;#1583;
+
+rangriz.ir">&amp;#1588;&amp;#1576;&amp;#1705;&amp;#1607; &amp;#1575;&amp;#1580;&amp;#1578;&amp;#1605;&amp;#1575;&amp;#1593;&amp;#1740; &amp;#1608; &amp;#1582;&amp;#1740;&amp;#1604;&amp;#1740; &amp;#1588;&amp;#1604;&amp;#1608;&amp;#1594; &amp;#1585;&amp;#1606;&amp;#1711;&amp;#1585;&amp;#1740;&amp;#1586; :)</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.iranskin.com" title="قالب میهن بلاگ">قالب میهن بلاگ</a></div></div>
+<div class=LowSid></div></div>
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>بهترین لینک ها کلیک کن ضرر نداره</b></div></div>
+<div class=CenterSid><cb:loop_linkdaily><div class=li-Sid>
+<div class=li-Sid><a href="http://cut-tan.ir">صرافی کات</a>
+</div>
+<div class=li-Sid><a title="ارسال پیامک" href="http://www.smsazin.com">ارسال پیامک</a>
+</div>
+<div class=li-Sid><a href="http://esarm.ir">فروشگاه اینترنتی</a>
+</div>
+<div class=li-Sid><a href="http://esfaraien-city.ir">شهر قشنگ</a>
+</div>
+<div class=li-Sid><a rel="follow" title="سامانه رایگان اس ام اس" href="http://www.behinpayam.com">سامانه رایگان اس ام اس</a>
+</div></div>
+<div class=LowSid></div></div>
+
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>امکانات وب</b></div></div>
+<div class=CenterSid><center>
+				
+<center><a href="http://www.persianskin.com/fal/hafez/fal.htm" target="_blank" ><img border="0" src="http://www.persianskin.com/fal/hafez/hafez2.gif" ><br  /><a target=_blank href="http://www.persianskin.com/fal/hafez/">فال حافظ</a></center>
+
+
+<br><script language="javascript" src="http://IranSkin.com/chat/cod.php?style=blue&title=بزرگترین وبلاگ آموزش شنا بجنورد"></script><div style='display:none'><ul><li><a href='http://IranSkin.com'>قالب وبلاگ</a></li><li><a title='چت روم' href='http://IranSkin.com/chat'>چت روم</a></li></ul></div><br>
+
+
+<br><p align="center"><a title="چت روم" href="http://rightelchat.com">
+<img src="http://up.sirtapiyaz.ir/uploads/1386300245091.gif" border="0" alt="چت روم"></a></p><br><a target="_blank" href=http://rightelchat.com/code.php/>کد ورود به چت روم</a>
+<p>
+
+
+ </div>
+</center><div class=LowSid></div></div>
+
+
+
+
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>امکانات وب</b></div></div>
+<div class=CenterSid><center>
+
+				
+
+
+<div id="aparat13680169162787798"></div><script type="text/JavaScript" src="http://www.aparat.com/video/video/scr/type/user/username/alijon4009/cnt/20/align/ver/bg/00CCCC/height/800/width/400/id/aparat13680169162787798"></script>
+
+
+ </div>
+</center><div class=LowSid></div></div>
+
+
+
+
+
+</div>			
+</td>
+
+
+<td width="563" valign="top">
+
+<div align="center">
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<embed type='application/x-shockwave-flash' id='vPlayer27577' name='vPlayer27577' src='http://farsi.khamenei.ir/flash/kh_vplayer_v3.swf' width='581' height='330' allowscriptaccess='always' allowfullscreen='true'                        flashvars='file=http://farsi.khamenei.ir/video-rss?id=27577&playlist=bottom&playlistsize=60&skin=http://farsi.khamenei.ir/flash/skins/kh_svplayer_v3.fkh'/>
+
+
+
+
+
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+					
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://bojnourdswim.mihanblog.com/post/16">انواع شنا</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2><font size="2"><span class="mw-headline" id=".D8.A7.D9.86.D9.88.D8.A7.D8.B9_.D8.B4.D9.86.D8.A7">انواع شنا</span></font> </h2><font size="2">
+</font><ul><li><font size="2"><a href="http://bojnourdswim.mihanblog.com/post/18" title="شنای قورباغه">شنای قورباغه</a></font></li><li><font size="2"><a href="http://bojnourdswim.mihanblog.com/post/17" title="شنای پروانه">شنای پروانه</a></font></li><li><font size="2"><a href="http://bojnourdswim.mihanblog.com/post/19" title="کرال پشت">کرال پشت</a></font></li><li><font size="2"><a href="http://bojnourdswim.mihanblog.com/post/20" title="کرال سینه">کرال سینه</a></font></li><li><font size="2"><a href="http://bojnourdswim.mihanblog.com/post/21" title="شنای سگی">شنای سگی</a></font></li><li><font size="2"><a href="http://bojnourdswim.mihanblog.com/post/22" title="شنای زیرآبی (صفحه وجود ندارد)" class="new">شنای زیرآبی</a></font></li><li><font size="2"><a href="http://bojnourdswim.mihanblog.com/post/23" title="شنای پهلو">شنای پهلو</a></font></li><li><a href="http://bojnourdswim.mihanblog.com/post/24" title="برگشت سالتو">برگشت سالتو</a></li><li><a href="http://bojnourdswim.mihanblog.com/post/25" title="شیرجه">شیرجه</a></li><li><a href="http://bojnourdswim.mihanblog.com/post/26" title="شیرجه">شیرجه</a> مقدماتی<br><br></li></ul><font size="2">
+
+
+</font>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+  <script language="javascript">
+document.write(unescape('%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%68%32%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%25%44%39%25%38%36%25%44%39%25%38%35%25%44%38%25%41%37%25%44%42%25%38%43%25%44%38%25%42%34%2D%25%44%39%25%38%36%25%44%38%25%42%38%25%44%38%25%42%31%25%44%38%25%41%37%25%44%38%25%41%41%2D%25%44%38%25%41%46%25%44%38%25%42%31%2D%25%44%38%25%41%37%25%44%38%25%41%46%25%44%38%25%41%37%25%44%39%25%38%35%25%44%39%25%38%37%2D%25%44%39%25%38%35%25%44%38%25%42%37%25%44%39%25%38%34%25%44%38%25%41%38%2D%25%44%39%25%38%35%25%44%42%25%38%43%25%44%39%25%38%37%25%44%39%25%38%36%2D%25%44%38%25%41%38%25%44%39%25%38%34%25%44%38%25%41%37%25%44%41%25%41%46%2D%25%44%38%25%41%38%25%44%38%25%41%37%2D%25%44%38%25%41%41%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%20میهن%20بلاگ%3C%2F%61%3E%3C%2F%68%32%3E%3C%2F%64%69%76%3E%0A%20'));
+</script>
+   
+
+
+	<br><br>									
+
+
+<a   target="_blank"  
+href="http://www.cloob.com/share/link/add?
+url=http://bojnourdswim.mihanblog.com//post/16&title=انواع شنا"> 
+<img alt="داغ کن - کلوب دات کام" src="http://static.cloob.com/public/images/icon/100c.gif" style='border: none; padding: 0px'/> 
+</a>
+
+
+
+
+				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ جمعه 18 اسفند 1391  ]  [ 02:02 ب.ظ  ]  [ <a href="http://bojnourdswim.mihanblog.com/post/author/994718">shena blog </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(16)">نظرات  <script>setCommentCnt(16)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://bojnourdswim.mihanblog.com/post/277">دانلود قسمت4 فصل پنجم سریال The Walking Dead</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+<p style="text-align: justify;"><br></p><h2 class="post_icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size="3">دانلود قسمت 4 فصل پنجم سریال The Walking Dead</font><br></h2>
+<p class="byek" style="text-align: center;"><strong>دانلود سریال</strong> پر از هیجان <span style="color: #0000ff;"><strong>مردگان متحرک </strong></span>( <span style="color: #0000ff;"><strong>The Walking Dead </strong></span>) <strong>فصل پنجم</strong> <strong>قسمت دوم</strong></p>
+<p class="byek" style="text-align: center;"><span style="color: #0000ff;">« <strong>دانلود رایگان با لینک مستقیم</strong> با تریلر بسیار زیبای فصل پنجم »</span></p>
+<p style="text-align: center;"><img alt="دانلود قسمت 2 فصل پنجم سریال The Walking Dead - دانلود با لینک مستقیم رایگان - قسمت 2 فصل پنجم سریال The Walking Dead" src="http://image.hastidownload.com/ali/film/The-Walking-Dead-5.jpg" style="width: 448px; height: 296px;" title="دانلود قسمت 2 فصل پنجم سریال The Walking Dead" height="296" width="448"></p>
+<p class="byek"><img alt="دانلود قسمت 2 فصل پنجم سریال The Walking Dead - دانلود با لینک مستقیم رایگان - قسمت 2 فصل پنجم سریال The Walking Dead" src="http://image.hastidownload.com/golden.jpg" style="margin: 0px; width: 16px; height: 17px;" title="دانلود قسمت 2 فصل پنجم سریال The Walking Dead" height="17" width="16"> <span style="color: #a52a2a;">برنده 31 جایزه و نامزد بهترین سریال تلویزیونی درام سال 2011 در Golden Globe</span></p>
+<p class="byek"><img alt="دانلود قسمت 2 فصل پنجم سریال The Walking Dead - دانلود با لینک مستقیم رایگان - قسمت 2 فصل پنجم سریال The Walking Dead" src="http://image.hastidownload.com/style/parentalguide/17.jpg" style="margin: 0px; width: 27px; height: 15px;" title="دانلود قسمت 2 فصل پنجم سریال The Walking Dead" height="15" width="27"> <span style="color: #ff0000;">تماشای این سریال به افراد زیر 17 سال توصیه نمی شود</span></p>
+<p><span style="color:#0000FF;">تاریخ انتشار در وبسایت : ساعت 6:12 صبح دوشنبه 28 مهر 1393</span></p>
+<p>ژانر : درام ، ترسناک ، هیجان انگیز</p>
+<p>زبان : انگلیسی</p>
+<p>امتیاز : 8.7/10</p>
+<p>کارگردان : Frank Darabont</p>
+<p>بازیگران : Andrew Lincoln, Jon Bernthal, Sarah Wayne Callies</p>
+<p style="text-align: justify;"><span style="color: #0000ff;">خلاصه داستان : </span>«
+ ریک » یک افسر پلیس است که بعد از گلوله خوردن در حین ماموریت، چندین ماه 
+در بیمارستان بیهوش بوده است. وقتی که او بیدار می شود، می فهمد که دنیای 
+اطرافش توسط زامبی ها ( مردگان متحرک ) تسخیر شده است، و به نظر میرسد که 
+او تنها شخص زنده است. او برای پیدا کردن خانواده اش به شهر آتلانتا می 
+رود، و در آنجا به گروهی از بازمانده ها بر می خورد که در خارج از شهر ساکن
+ شده اند. همسرش « لوری » و پسرش « کارل » و همینطور بهترین دوستش، « شین »
+ در میان بازمانده ها هستند. اکنون او به همراه دیگر بازمانده ها باید در 
+دنیایی که پر از مرده های متحرک است، راهی برای زنده ماندن پیدا کنند…</p><p style="text-align: justify;">دانلود بزودی<img src="data:image/jpeg;base64,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" alt="" height="64" width="115"></p>
+
+
+
+
+<br>
+
+  <script language="javascript">
+document.write(unescape('%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%68%32%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%25%44%39%25%38%36%25%44%39%25%38%35%25%44%38%25%41%37%25%44%42%25%38%43%25%44%38%25%42%34%2D%25%44%39%25%38%36%25%44%38%25%42%38%25%44%38%25%42%31%25%44%38%25%41%37%25%44%38%25%41%41%2D%25%44%38%25%41%46%25%44%38%25%42%31%2D%25%44%38%25%41%37%25%44%38%25%41%46%25%44%38%25%41%37%25%44%39%25%38%35%25%44%39%25%38%37%2D%25%44%39%25%38%35%25%44%38%25%42%37%25%44%39%25%38%34%25%44%38%25%41%38%2D%25%44%39%25%38%35%25%44%42%25%38%43%25%44%39%25%38%37%25%44%39%25%38%36%2D%25%44%38%25%41%38%25%44%39%25%38%34%25%44%38%25%41%37%25%44%41%25%41%46%2D%25%44%38%25%41%38%25%44%38%25%41%37%2D%25%44%38%25%41%41%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%20میهن%20بلاگ%3C%2F%61%3E%3C%2F%68%32%3E%3C%2F%64%69%76%3E%0A%20'));
+</script>
+   
+
+
+	<br><br>									
+
+
+<a   target="_blank"  
+href="http://www.cloob.com/share/link/add?
+url=http://bojnourdswim.mihanblog.com//post/277&title=دانلود قسمت4 فصل پنجم سریال The Walking Dead"> 
+<img alt="داغ کن - کلوب دات کام" src="http://static.cloob.com/public/images/icon/100c.gif" style='border: none; padding: 0px'/> 
+</a>
+
+
+
+
+				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ دوشنبه 5 آبان 1393  ]  [ 08:02 ب.ظ  ]  [ <a href="http://bojnourdswim.mihanblog.com/post/author/994718">shena blog </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(277)">نظرات  <script>setCommentCnt(277)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://bojnourdswim.mihanblog.com/post/276">       دانلود قسمت3 فصل پنجم سریال The Walking Dead</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+<h2 class="post_icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; دانلود قسمت 3 فصل پنجم سریال The Walking Dead<br></h2>
+<p class="byek" style="text-align: center;"><strong>دانلود سریال</strong> پر از هیجان <span style="color: #0000ff;"><strong>مردگان متحرک </strong></span>( <span style="color: #0000ff;"><strong>The Walking Dead </strong></span>) <strong>فصل پنجم</strong> <strong>قسمت دوم</strong></p>
+<p class="byek" style="text-align: center;"><span style="color: #0000ff;">« <strong>دانلود رایگان با لینک مستقیم</strong> با تریلر بسیار زیبای فصل پنجم »</span></p>
+<p style="text-align: center;"><img alt="دانلود قسمت 2 فصل پنجم سریال The Walking Dead - دانلود با لینک مستقیم رایگان - قسمت 2 فصل پنجم سریال The Walking Dead" src="http://image.hastidownload.com/ali/film/The-Walking-Dead-5.jpg" style="width: 448px; height: 296px;" title="دانلود قسمت 2 فصل پنجم سریال The Walking Dead" height="296" width="448"></p>
+<p class="byek"><img alt="دانلود قسمت 2 فصل پنجم سریال The Walking Dead - دانلود با لینک مستقیم رایگان - قسمت 2 فصل پنجم سریال The Walking Dead" src="http://image.hastidownload.com/golden.jpg" style="margin: 0px; width: 16px; height: 17px;" title="دانلود قسمت 2 فصل پنجم سریال The Walking Dead" height="17" width="16"> <span style="color: #a52a2a;">برنده 31 جایزه و نامزد بهترین سریال تلویزیونی درام سال 2011 در Golden Globe</span></p>
+<p class="byek"><img alt="دانلود قسمت 2 فصل پنجم سریال The Walking Dead - دانلود با لینک مستقیم رایگان - قسمت 2 فصل پنجم سریال The Walking Dead" src="http://image.hastidownload.com/style/parentalguide/17.jpg" style="margin: 0px; width: 27px; height: 15px;" title="دانلود قسمت 2 فصل پنجم سریال The Walking Dead" height="15" width="27"> <span style="color: #ff0000;">تماشای این سریال به افراد زیر 17 سال توصیه نمی شود</span></p>
+<p><span style="color:#0000FF;">تاریخ انتشار در وبسایت : ساعت 6:12 صبح دوشنبه 28 مهر 1393</span></p>
+<p>ژانر : درام ، ترسناک ، هیجان انگیز</p>
+<p>زبان : انگلیسی</p>
+<p>امتیاز : 8.7/10</p>
+<p>کارگردان : Frank Darabont</p>
+<p>بازیگران : Andrew Lincoln, Jon Bernthal, Sarah Wayne Callies</p>
+<p style="text-align: justify;"><span style="color: #0000ff;">خلاصه داستان : </span>«
+ ریک » یک افسر پلیس است که بعد از گلوله خوردن در حین ماموریت، چندین ماه 
+در بیمارستان بیهوش بوده است. وقتی که او بیدار می شود، می فهمد که دنیای 
+اطرافش توسط زامبی ها ( مردگان متحرک ) تسخیر شده است، و به نظر میرسد که 
+او تنها شخص زنده است. او برای پیدا کردن خانواده اش به شهر آتلانتا می 
+رود، و در آنجا به گروهی از بازمانده ها بر می خورد که در خارج از شهر ساکن
+ شده اند. همسرش « لوری » و پسرش « کارل » و همینطور بهترین دوستش، « شین »
+ در میان بازمانده ها هستند. اکنون او به همراه دیگر بازمانده ها باید در 
+دنیایی که پر از مرده های متحرک است، راهی برای زنده ماندن پیدا کنند…</p><p style="text-align: justify;"><br></p>
+
+<br><a href='http://bojnourdswim.mihanblog.com/post/276'>ادامه مطلب</a>
+
+  <script language="javascript">
+document.write(unescape('%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%68%32%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%25%44%39%25%38%36%25%44%39%25%38%35%25%44%38%25%41%37%25%44%42%25%38%43%25%44%38%25%42%34%2D%25%44%39%25%38%36%25%44%38%25%42%38%25%44%38%25%42%31%25%44%38%25%41%37%25%44%38%25%41%41%2D%25%44%38%25%41%46%25%44%38%25%42%31%2D%25%44%38%25%41%37%25%44%38%25%41%46%25%44%38%25%41%37%25%44%39%25%38%35%25%44%39%25%38%37%2D%25%44%39%25%38%35%25%44%38%25%42%37%25%44%39%25%38%34%25%44%38%25%41%38%2D%25%44%39%25%38%35%25%44%42%25%38%43%25%44%39%25%38%37%25%44%39%25%38%36%2D%25%44%38%25%41%38%25%44%39%25%38%34%25%44%38%25%41%37%25%44%41%25%41%46%2D%25%44%38%25%41%38%25%44%38%25%41%37%2D%25%44%38%25%41%41%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%20میهن%20بلاگ%3C%2F%61%3E%3C%2F%68%32%3E%3C%2F%64%69%76%3E%0A%20'));
+</script>
+   
+
+
+	<br><br>									
+
+
+<a   target="_blank"  
+href="http://www.cloob.com/share/link/add?
+url=http://bojnourdswim.mihanblog.com//post/276&title=       دانلود قسمت3 فصل پنجم سریال The Walking Dead"> 
+<img alt="داغ کن - کلوب دات کام" src="http://static.cloob.com/public/images/icon/100c.gif" style='border: none; padding: 0px'/> 
+</a>
+
+
+
+
+				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 29 مهر 1393  ]  [ 01:25 ق.ظ  ]  [ <a href="http://bojnourdswim.mihanblog.com/post/author/994718">shena blog </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(276)">نظرات  <script>setCommentCnt(276)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://bojnourdswim.mihanblog.com/post/275">دانلود قسمت 2 فصل پنجم سریال The Walking Dead</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div class="post_title">
+
+
+
+<div class="post_stat"><div class="text">تاریخ انتشار : یکشنبه , ۲۷ مهر ۱۳۹۳</div>
+<div class="text">آخرین بروزرسانی : ۲۸ مهر ۱۳۹۳ , ۱۴:۳۹</div>
+<div class="text"> ٣۶٠ نفر</div>
+</div>
+</div>
+
+<br>
+<h2 class="post_icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; دانلود قسمت 2 فصل پنجم سریال The Walking Dead<br></h2>
+<p class="byek" style="text-align: center;"><strong>دانلود سریال</strong> پر از هیجان <span style="color: #0000ff;"><strong>مردگان متحرک </strong></span>( <span style="color: #0000ff;"><strong>The Walking Dead </strong></span>) <strong>فصل پنجم</strong> <strong>قسمت دوم</strong></p>
+<p class="byek" style="text-align: center;"><span style="color: #0000ff;">« <strong>دانلود رایگان با لینک مستقیم</strong> با تریلر بسیار زیبای فصل پنجم »</span></p>
+<p style="text-align: center;"><img alt="دانلود قسمت 2 فصل پنجم سریال The Walking Dead - دانلود با لینک مستقیم رایگان - قسمت 2 فصل پنجم سریال The Walking Dead" src="http://image.hastidownload.com/ali/film/The-Walking-Dead-5.jpg" style="width: 448px; height: 296px;" title="دانلود قسمت 2 فصل پنجم سریال The Walking Dead" height="296" width="448"></p>
+<p class="byek"><img alt="دانلود قسمت 2 فصل پنجم سریال The Walking Dead - دانلود با لینک مستقیم رایگان - قسمت 2 فصل پنجم سریال The Walking Dead" src="http://image.hastidownload.com/golden.jpg" style="margin: 0px; width: 16px; height: 17px;" title="دانلود قسمت 2 فصل پنجم سریال The Walking Dead" height="17" width="16"> <span style="color: #a52a2a;">برنده 31 جایزه و نامزد بهترین سریال تلویزیونی درام سال 2011 در Golden Globe</span></p>
+<p class="byek"><img alt="دانلود قسمت 2 فصل پنجم سریال The Walking Dead - دانلود با لینک مستقیم رایگان - قسمت 2 فصل پنجم سریال The Walking Dead" src="http://image.hastidownload.com/style/parentalguide/17.jpg" style="margin: 0px; width: 27px; height: 15px;" title="دانلود قسمت 2 فصل پنجم سریال The Walking Dead" height="15" width="27"> <span style="color: #ff0000;">تماشای این سریال به افراد زیر 17 سال توصیه نمی شود</span></p>
+<p><span style="color:#0000FF;">تاریخ انتشار در وبسایت : ساعت 6:12 صبح دوشنبه 28 مهر 1393</span></p>
+<p>ژانر : درام ، ترسناک ، هیجان انگیز</p>
+<p>زبان : انگلیسی</p>
+<p>امتیاز : 8.7/10</p>
+<p>کارگردان : Frank Darabont</p>
+<p>بازیگران : Andrew Lincoln, Jon Bernthal, Sarah Wayne Callies</p>
+<p style="text-align: justify;"><span style="color: #0000ff;">خلاصه داستان : </span>«
+ ریک » یک افسر پلیس است که بعد از گلوله خوردن در حین ماموریت، چندین ماه 
+در بیمارستان بیهوش بوده است. وقتی که او بیدار می شود، می فهمد که دنیای 
+اطرافش توسط زامبی ها ( مردگان متحرک ) تسخیر شده است، و به نظر میرسد که 
+او تنها شخص زنده است. او برای پیدا کردن خانواده اش به شهر آتلانتا می 
+رود، و در آنجا به گروهی از بازمانده ها بر می خورد که در خارج از شهر ساکن
+ شده اند. همسرش « لوری » و پسرش « کارل » و همینطور بهترین دوستش، « شین »
+ در میان بازمانده ها هستند. اکنون او به همراه دیگر بازمانده ها باید در 
+دنیایی که پر از مرده های متحرک است، راهی برای زنده ماندن پیدا کنند…</p>
+
+
+
+<br><a href='http://bojnourdswim.mihanblog.com/post/275'>ادامه مطلب</a>
+
+  <script language="javascript">
+document.write(unescape('%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%68%32%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%25%44%39%25%38%36%25%44%39%25%38%35%25%44%38%25%41%37%25%44%42%25%38%43%25%44%38%25%42%34%2D%25%44%39%25%38%36%25%44%38%25%42%38%25%44%38%25%42%31%25%44%38%25%41%37%25%44%38%25%41%41%2D%25%44%38%25%41%46%25%44%38%25%42%31%2D%25%44%38%25%41%37%25%44%38%25%41%46%25%44%38%25%41%37%25%44%39%25%38%35%25%44%39%25%38%37%2D%25%44%39%25%38%35%25%44%38%25%42%37%25%44%39%25%38%34%25%44%38%25%41%38%2D%25%44%39%25%38%35%25%44%42%25%38%43%25%44%39%25%38%37%25%44%39%25%38%36%2D%25%44%38%25%41%38%25%44%39%25%38%34%25%44%38%25%41%37%25%44%41%25%41%46%2D%25%44%38%25%41%38%25%44%38%25%41%37%2D%25%44%38%25%41%41%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%20میهن%20بلاگ%3C%2F%61%3E%3C%2F%68%32%3E%3C%2F%64%69%76%3E%0A%20'));
+</script>
+   
+
+
+	<br><br>									
+
+
+<a   target="_blank"  
+href="http://www.cloob.com/share/link/add?
+url=http://bojnourdswim.mihanblog.com//post/275&title=دانلود قسمت 2 فصل پنجم سریال The Walking Dead"> 
+<img alt="داغ کن - کلوب دات کام" src="http://static.cloob.com/public/images/icon/100c.gif" style='border: none; padding: 0px'/> 
+</a>
+
+
+
+
+				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 29 مهر 1393  ]  [ 01:20 ق.ظ  ]  [ <a href="http://bojnourdswim.mihanblog.com/post/author/994718">shena blog </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(275)">نظرات  <script>setCommentCnt(275)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://bojnourdswim.mihanblog.com/post/274">دانلود قسمت 1 فصل پنجم سریال The Walking Dead</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+
+<div class="post_title">
+
+
+
+<div class="post_stat"><div class="text">تاریخ انتشار : دوشنبه , ۲۱ مهر ۱۳۹۳</div>
+<div class="text">آخرین بروزرسانی : ۲۷ مهر ۱۳۹۳ , ۲۲:۵۴</div>
+<div class="text"> ٣٨٣١ نفر</div>
+</div>
+</div>
+
+<br>
+<h4 style="text-align: center;">دانلود قسمت 1 فصل پنجم سریال The Walking Dead<br></h4>
+<p class="byek" style="text-align: center;"><strong>دانلود سریال</strong> پر از هیجان <span style="color: #0000ff;"><strong>مردگان متحرک </strong></span>( <span style="color: #0000ff;"><strong>The Walking Dead </strong></span>) <strong>فصل پنجم</strong> <strong>قسمت اول</strong></p>
+<p class="byek" style="text-align: center;"><span style="color: #0000ff;">« <strong>دانلود رایگان با لینک مستقیم</strong> با تریلر بسیار زیبای فصل پنجم »</span></p>
+<p style="text-align: center;"><img alt="دانلود قسمت 1 فصل پنجم سریال The Walking Dead - دانلود با لینک مستقیم رایگان - قسمت 1 فصل پنجم سریال The Walking Dead" src="http://image.hastidownload.com/ali/film/The-Walking-Dead-5.jpg" style="width: 448px; height: 296px;" title="دانلود قسمت 1 فصل پنجم سریال The Walking Dead" height="296" width="448"></p>
+<p class="byek"><img alt="دانلود قسمت 1 فصل پنجم سریال The Walking Dead - دانلود با لینک مستقیم رایگان - قسمت 1 فصل پنجم سریال The Walking Dead" src="http://image.hastidownload.com/golden.jpg" style="margin: 0px; width: 16px; height: 17px;" title="دانلود قسمت 1 فصل پنجم سریال The Walking Dead" height="17" width="16"> <span style="color: #a52a2a;">برنده 31 جایزه و نامزد بهترین سریال تلویزیونی درام سال 2011 در Golden Globe</span></p>
+<p class="byek"><img alt="دانلود قسمت 1 فصل پنجم سریال The Walking Dead - دانلود با لینک مستقیم رایگان - قسمت 1 فصل پنجم سریال The Walking Dead" src="http://image.hastidownload.com/style/parentalguide/17.jpg" style="margin: 0px; width: 27px; height: 15px;" title="دانلود قسمت 1 فصل پنجم سریال The Walking Dead" height="15" width="27"> <span style="color: #ff0000;">تماشای این سریال به افراد زیر 17 سال توصیه نمی شود</span></p>
+<p>تاریخ شروع پخش قسمت 1 فصل پنجم : <span dir="ltr">12 October 2014</span></p>
+<p>تاریخ انتشار در وبسایت : دوشنبه 21 مهر 1393</p>
+<p>تعداد قسمت های فصل پنجم : 16</p>
+<p>ژانر : درام ، ترسناک ، هیجان انگیز</p>
+<p>زبان : انگلیسی</p>
+<p>امتیاز : 8.7/10</p>
+<p>فرمت : MKV</p>
+<p>زمان : 43 دقیقه</p>
+<p>کیفیت اول : 480p HDTV Mini – 225 MB – خوب – <a href="http://s5.hastidownload.com/ali/film/The-Walking-Dead/The Walking Dead S05E01 480p.mkv.jpg" target="_blank">اسکرین شات</a></p>
+<p>کیفیت دوم : 720p HDTV Mini – 400 MB – عالی – <a href="http://s5.hastidownload.com/ali/film/The-Walking-Dead/The Walking Dead S05E01 720p.mkv.jpg" target="_blank">اسکرین شات</a></p>
+<p>زیرنویس فارسی : قرار گرفت</p>
+<p>زیرنویس انگلیسی : قرار گرفت</p>
+<p>کارگردان : Frank Darabont</p>
+<p>بازیگران : Andrew Lincoln, Jon Bernthal, Sarah Wayne Callies</p>
+<p style="text-align: justify;"><span style="color: #0000ff;">خلاصه داستان : </span>«
+ ریک » یک افسر پلیس است که بعد از گلوله خوردن در حین ماموریت، چندین ماه 
+در بیمارستان بیهوش بوده است. وقتی که او بیدار می شود، می فهمد که دنیای 
+اطرافش توسط زامبی ها ( مردگان متحرک ) تسخیر شده است، و به نظر میرسد که 
+او تنها شخص زنده است. او برای پیدا کردن خانواده اش به شهر آتلانتا می 
+رود، و در آنجا به گروهی از بازمانده ها بر می خورد که در خارج از شهر ساکن
+ شده اند. همسرش « لوری » و پسرش « کارل » و همینطور بهترین دوستش، « شین »
+ در میان بازمانده ها هستند. اکنون او به همراه دیگر بازمانده ها باید در 
+دنیایی که پر از مرده های متحرک است، راهی برای زنده ماندن پیدا کنند…</p>
+
+
+
+
+
+
+<br><a href='http://bojnourdswim.mihanblog.com/post/274'>ادامه مطلب</a>
+
+  <script language="javascript">
+document.write(unescape('%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%68%32%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%25%44%39%25%38%36%25%44%39%25%38%35%25%44%38%25%41%37%25%44%42%25%38%43%25%44%38%25%42%34%2D%25%44%39%25%38%36%25%44%38%25%42%38%25%44%38%25%42%31%25%44%38%25%41%37%25%44%38%25%41%41%2D%25%44%38%25%41%46%25%44%38%25%42%31%2D%25%44%38%25%41%37%25%44%38%25%41%46%25%44%38%25%41%37%25%44%39%25%38%35%25%44%39%25%38%37%2D%25%44%39%25%38%35%25%44%38%25%42%37%25%44%39%25%38%34%25%44%38%25%41%38%2D%25%44%39%25%38%35%25%44%42%25%38%43%25%44%39%25%38%37%25%44%39%25%38%36%2D%25%44%38%25%41%38%25%44%39%25%38%34%25%44%38%25%41%37%25%44%41%25%41%46%2D%25%44%38%25%41%38%25%44%38%25%41%37%2D%25%44%38%25%41%41%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%20میهن%20بلاگ%3C%2F%61%3E%3C%2F%68%32%3E%3C%2F%64%69%76%3E%0A%20'));
+</script>
+   
+
+
+	<br><br>									
+
+
+<a   target="_blank"  
+href="http://www.cloob.com/share/link/add?
+url=http://bojnourdswim.mihanblog.com//post/274&title=دانلود قسمت 1 فصل پنجم سریال The Walking Dead"> 
+<img alt="داغ کن - کلوب دات کام" src="http://static.cloob.com/public/images/icon/100c.gif" style='border: none; padding: 0px'/> 
+</a>
+
+
+
+
+				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 29 مهر 1393  ]  [ 01:07 ق.ظ  ]  [ <a href="http://bojnourdswim.mihanblog.com/post/author/994718">shena blog </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(274)">نظرات  <script>setCommentCnt(274)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://bojnourdswim.mihanblog.com/post/272">نحوه زدن پای دوچرخه در واترپلو و شنا بصورت ویدئویی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+[http://iranisport.ir/%D9%86%D8%AD%D9%88%D9%87-%D8%B2%D8%AF%D9%86-%D9%BE%D8%A7%DB%8C-%D8%AF%D9%88%DA%86%D8%B1%D8%AE%D9%87-%D8%AF%D8%B1-%D9%88%D8%A7%D8%AA%D8%B1%D9%BE%D9%84%D9%88-%D9%88-%D8%B4%D9%86%D8%A7/]
+
+
+<br>
+
+  <script language="javascript">
+document.write(unescape('%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%68%32%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%25%44%39%25%38%36%25%44%39%25%38%35%25%44%38%25%41%37%25%44%42%25%38%43%25%44%38%25%42%34%2D%25%44%39%25%38%36%25%44%38%25%42%38%25%44%38%25%42%31%25%44%38%25%41%37%25%44%38%25%41%41%2D%25%44%38%25%41%46%25%44%38%25%42%31%2D%25%44%38%25%41%37%25%44%38%25%41%46%25%44%38%25%41%37%25%44%39%25%38%35%25%44%39%25%38%37%2D%25%44%39%25%38%35%25%44%38%25%42%37%25%44%39%25%38%34%25%44%38%25%41%38%2D%25%44%39%25%38%35%25%44%42%25%38%43%25%44%39%25%38%37%25%44%39%25%38%36%2D%25%44%38%25%41%38%25%44%39%25%38%34%25%44%38%25%41%37%25%44%41%25%41%46%2D%25%44%38%25%41%38%25%44%38%25%41%37%2D%25%44%38%25%41%41%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%20میهن%20بلاگ%3C%2F%61%3E%3C%2F%68%32%3E%3C%2F%64%69%76%3E%0A%20'));
+</script>
+   
+
+
+	<br><br>									
+
+
+<a   target="_blank"  
+href="http://www.cloob.com/share/link/add?
+url=http://bojnourdswim.mihanblog.com//post/272&title=نحوه زدن پای دوچرخه در واترپلو و شنا بصورت ویدئویی"> 
+<img alt="داغ کن - کلوب دات کام" src="http://static.cloob.com/public/images/icon/100c.gif" style='border: none; padding: 0px'/> 
+</a>
+
+
+
+
+				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ شنبه 29 شهریور 1393  ]  [ 01:21 ب.ظ  ]  [ <a href="http://bojnourdswim.mihanblog.com/post/author/994718">shena blog </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(272)">نظرات  <script>setCommentCnt(272)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://bojnourdswim.mihanblog.com/post/271"> تیم ملی شنا عازم اینچئون شد</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+  
+							<div class="rutitr" style="text-align:center">
+</div>
+		 
+							
+						
+							 
+							 
+							<span style="font-family: Tahoma; font-size: 10pt;"></span><span id="ctl00_bodyHolder_newstextDetail_nwstxtBodyPane">
+
+<p class="rtejustify">
+		به گزارش <a href="http://asrahwaz.ir/" target="_blank" rel="nofollow" title=" فارس"> فارس</a>،
+ تیم ملی شنای ایران برای حضور پر قدرت در بازی‌های آسیایی اینچئون شب 
+گذشته به سمت دبی و از آنجا به سمت اینچئون، محل برگزاری بازی‌ها پرواز 
+کرد. تیم ملی شنا بعد از سه ساعت توقف در دبی ساعت ۳:۴۵ بامداد صبح امروز 
+به مقصد اینچئون حرکت کرد. کادر فنی و شناگران تیم ملی ساعت ۱۶:۴۵ وارد 
+کره‌جنوبی و دهکده بازی‌ها می‌شوند. از روز یکشنبه شناگران در بازی‌های 
+آسیایی به آب می‌زنند و بعد از اتمام مسابقات شنا در ششم مهر (۲۸ سپتامبر) 
+از دهکده بازی‌ها خارج می‌شوند. تیم ملی شنا در صبح روز دوشنبه (هفتم مهر) 
+وارد ایران می‌شود.</p></span>
+
+
+<br><a href='http://bojnourdswim.mihanblog.com/post/271'>ادامه مطلب</a>
+
+  <script language="javascript">
+document.write(unescape('%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%68%32%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%25%44%39%25%38%36%25%44%39%25%38%35%25%44%38%25%41%37%25%44%42%25%38%43%25%44%38%25%42%34%2D%25%44%39%25%38%36%25%44%38%25%42%38%25%44%38%25%42%31%25%44%38%25%41%37%25%44%38%25%41%41%2D%25%44%38%25%41%46%25%44%38%25%42%31%2D%25%44%38%25%41%37%25%44%38%25%41%46%25%44%38%25%41%37%25%44%39%25%38%35%25%44%39%25%38%37%2D%25%44%39%25%38%35%25%44%38%25%42%37%25%44%39%25%38%34%25%44%38%25%41%38%2D%25%44%39%25%38%35%25%44%42%25%38%43%25%44%39%25%38%37%25%44%39%25%38%36%2D%25%44%38%25%41%38%25%44%39%25%38%34%25%44%38%25%41%37%25%44%41%25%41%46%2D%25%44%38%25%41%38%25%44%38%25%41%37%2D%25%44%38%25%41%41%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%20میهن%20بلاگ%3C%2F%61%3E%3C%2F%68%32%3E%3C%2F%64%69%76%3E%0A%20'));
+</script>
+   
+
+
+	<br><br>									
+
+
+<a   target="_blank"  
+href="http://www.cloob.com/share/link/add?
+url=http://bojnourdswim.mihanblog.com//post/271&title= تیم ملی شنا عازم اینچئون شد"> 
+<img alt="داغ کن - کلوب دات کام" src="http://static.cloob.com/public/images/icon/100c.gif" style='border: none; padding: 0px'/> 
+</a>
+
+
+
+
+				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ جمعه 28 شهریور 1393  ]  [ 11:41 ب.ظ  ]  [ <a href="http://bojnourdswim.mihanblog.com/post/author/994718">shena blog </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(271)">نظرات  <script>setCommentCnt(271)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://bojnourdswim.mihanblog.com/post/protected/270">  مطلب رمز دار : ثبت نام در مسابقات شنا استانی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+این مطلب رمزدار است، جهت مشاهده باید کلمه رمز این مطلب را وارد کنید.<form id="frm-16077070135fd3a985b1f98" method="post" action="http://bojnourdswim.mihanblog.com/post/protected/270/fid/16077070135fd3a985b1f98/atrty/1607707013/avrvy/0/key/e2aba878f2b9e917a42647d7536f2bfb/" ><input type="password" name="data[post_pass]" id="post_pass" value="" class="english" /><input type="hidden" name="secfrdcodedvar" id="secfrdcodedvar" value="3e1c02f322bc56a3a75dd5162bea2e2b"><input type="submit" value="ارسال" class="btn" /><input type="hidden" name="frm-id" value="16077070135fd3a985b1f98" id="frm-id" /></form><br>
+
+  <script language="javascript">
+document.write(unescape('%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%68%32%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%25%44%39%25%38%36%25%44%39%25%38%35%25%44%38%25%41%37%25%44%42%25%38%43%25%44%38%25%42%34%2D%25%44%39%25%38%36%25%44%38%25%42%38%25%44%38%25%42%31%25%44%38%25%41%37%25%44%38%25%41%41%2D%25%44%38%25%41%46%25%44%38%25%42%31%2D%25%44%38%25%41%37%25%44%38%25%41%46%25%44%38%25%41%37%25%44%39%25%38%35%25%44%39%25%38%37%2D%25%44%39%25%38%35%25%44%38%25%42%37%25%44%39%25%38%34%25%44%38%25%41%38%2D%25%44%39%25%38%35%25%44%42%25%38%43%25%44%39%25%38%37%25%44%39%25%38%36%2D%25%44%38%25%41%38%25%44%39%25%38%34%25%44%38%25%41%37%25%44%41%25%41%46%2D%25%44%38%25%41%38%25%44%38%25%41%37%2D%25%44%38%25%41%41%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%20میهن%20بلاگ%3C%2F%61%3E%3C%2F%68%32%3E%3C%2F%64%69%76%3E%0A%20'));
+</script>
+   
+
+
+	<br><br>									
+
+
+<a   target="_blank"  
+href="http://www.cloob.com/share/link/add?
+url=http://bojnourdswim.mihanblog.com//post/protected/270&title=  مطلب رمز دار : ثبت نام در مسابقات شنا استانی"> 
+<img alt="داغ کن - کلوب دات کام" src="http://static.cloob.com/public/images/icon/100c.gif" style='border: none; padding: 0px'/> 
+</a>
+
+
+
+
+				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ یکشنبه 2 شهریور 1393  ]  [ 04:17 ب.ظ  ]  [ <a href="http://bojnourdswim.mihanblog.com/post/author/994718">shena blog </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(270)">نظرات  <script>setCommentCnt(270)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://bojnourdswim.mihanblog.com/post/269">ثبت نام شروع شد(تهران مدافعان حرم امام حسین ع)</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+		<!--AparatShow-->
+				<div style="display:none">[http://www.aparat.com/v/dVGlr]</div>
+                <div class="aparatFrame">
+                    <iframe frameborder=0  allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" width="435" height="290" src="http://www.aparat.com/video/video/embed/videohash/dVGlr/vt/frame"> </iframe>
+                </div>
+
+		<!--eoAparatShow-->
+				
+
+
+<br>
+
+  <script language="javascript">
+document.write(unescape('%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%68%32%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%25%44%39%25%38%36%25%44%39%25%38%35%25%44%38%25%41%37%25%44%42%25%38%43%25%44%38%25%42%34%2D%25%44%39%25%38%36%25%44%38%25%42%38%25%44%38%25%42%31%25%44%38%25%41%37%25%44%38%25%41%41%2D%25%44%38%25%41%46%25%44%38%25%42%31%2D%25%44%38%25%41%37%25%44%38%25%41%46%25%44%38%25%41%37%25%44%39%25%38%35%25%44%39%25%38%37%2D%25%44%39%25%38%35%25%44%38%25%42%37%25%44%39%25%38%34%25%44%38%25%41%38%2D%25%44%39%25%38%35%25%44%42%25%38%43%25%44%39%25%38%37%25%44%39%25%38%36%2D%25%44%38%25%41%38%25%44%39%25%38%34%25%44%38%25%41%37%25%44%41%25%41%46%2D%25%44%38%25%41%38%25%44%38%25%41%37%2D%25%44%38%25%41%41%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%20میهن%20بلاگ%3C%2F%61%3E%3C%2F%68%32%3E%3C%2F%64%69%76%3E%0A%20'));
+</script>
+   
+
+
+	<br><br>									
+
+
+<a   target="_blank"  
+href="http://www.cloob.com/share/link/add?
+url=http://bojnourdswim.mihanblog.com//post/269&title=ثبت نام شروع شد(تهران مدافعان حرم امام حسین ع)"> 
+<img alt="داغ کن - کلوب دات کام" src="http://static.cloob.com/public/images/icon/100c.gif" style='border: none; padding: 0px'/> 
+</a>
+
+
+
+
+				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ جمعه 6 تیر 1393  ]  [ 03:09 ب.ظ  ]  [ <a href="http://bojnourdswim.mihanblog.com/post/author/994718">shena blog </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(269)">نظرات  <script>setCommentCnt(269)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://bojnourdswim.mihanblog.com/post/268"> کلیپ زیبای ولادت امام حسین (ع) با کیفیت بالا </a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+		<!--AparatShow-->
+				<div style="display:none">[http://www.aparat.com/v/FfMKz]</div>
+                <div class="aparatFrame">
+                    <iframe frameborder=0  allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" width="435" height="290" src="http://www.aparat.com/video/video/embed/videohash/FfMKz/vt/frame"> </iframe>
+                </div>
+
+		<!--eoAparatShow-->
+				
+
+
+<br>
+
+  <script language="javascript">
+document.write(unescape('%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%68%32%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%25%44%39%25%38%36%25%44%39%25%38%35%25%44%38%25%41%37%25%44%42%25%38%43%25%44%38%25%42%34%2D%25%44%39%25%38%36%25%44%38%25%42%38%25%44%38%25%42%31%25%44%38%25%41%37%25%44%38%25%41%41%2D%25%44%38%25%41%46%25%44%38%25%42%31%2D%25%44%38%25%41%37%25%44%38%25%41%46%25%44%38%25%41%37%25%44%39%25%38%35%25%44%39%25%38%37%2D%25%44%39%25%38%35%25%44%38%25%42%37%25%44%39%25%38%34%25%44%38%25%41%38%2D%25%44%39%25%38%35%25%44%42%25%38%43%25%44%39%25%38%37%25%44%39%25%38%36%2D%25%44%38%25%41%38%25%44%39%25%38%34%25%44%38%25%41%37%25%44%41%25%41%46%2D%25%44%38%25%41%38%25%44%38%25%41%37%2D%25%44%38%25%41%41%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%20میهن%20بلاگ%3C%2F%61%3E%3C%2F%68%32%3E%3C%2F%64%69%76%3E%0A%20'));
+</script>
+   
+
+
+	<br><br>									
+
+
+<a   target="_blank"  
+href="http://www.cloob.com/share/link/add?
+url=http://bojnourdswim.mihanblog.com//post/268&title= کلیپ زیبای ولادت امام حسین (ع) با کیفیت بالا "> 
+<img alt="داغ کن - کلوب دات کام" src="http://static.cloob.com/public/images/icon/100c.gif" style='border: none; padding: 0px'/> 
+</a>
+
+
+
+
+				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ شنبه 10 خرداد 1393  ]  [ 07:14 ب.ظ  ]  [ <a href="http://bojnourdswim.mihanblog.com/post/author/994718">shena blog </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(268)">نظرات  <script>setCommentCnt(268)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://bojnourdswim.mihanblog.com/post/267"> ولادت امام حسین (ع) و روز پاسدار و حضرت ابوالفضل العباس (ع) </a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+		<!--AparatShow-->
+				<div style="display:none">[http://www.aparat.com/v/9HEp2]</div>
+                <div class="aparatFrame">
+                    <iframe frameborder=0  allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" width="435" height="290" src="http://www.aparat.com/video/video/embed/videohash/9HEp2/vt/frame"> </iframe>
+                </div>
+
+		<!--eoAparatShow-->
+				
+
+
+<br>
+
+  <script language="javascript">
+document.write(unescape('%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%68%32%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%25%44%39%25%38%36%25%44%39%25%38%35%25%44%38%25%41%37%25%44%42%25%38%43%25%44%38%25%42%34%2D%25%44%39%25%38%36%25%44%38%25%42%38%25%44%38%25%42%31%25%44%38%25%41%37%25%44%38%25%41%41%2D%25%44%38%25%41%46%25%44%38%25%42%31%2D%25%44%38%25%41%37%25%44%38%25%41%46%25%44%38%25%41%37%25%44%39%25%38%35%25%44%39%25%38%37%2D%25%44%39%25%38%35%25%44%38%25%42%37%25%44%39%25%38%34%25%44%38%25%41%38%2D%25%44%39%25%38%35%25%44%42%25%38%43%25%44%39%25%38%37%25%44%39%25%38%36%2D%25%44%38%25%41%38%25%44%39%25%38%34%25%44%38%25%41%37%25%44%41%25%41%46%2D%25%44%38%25%41%38%25%44%38%25%41%37%2D%25%44%38%25%41%41%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%20میهن%20بلاگ%3C%2F%61%3E%3C%2F%68%32%3E%3C%2F%64%69%76%3E%0A%20'));
+</script>
+   
+
+
+	<br><br>									
+
+
+<a   target="_blank"  
+href="http://www.cloob.com/share/link/add?
+url=http://bojnourdswim.mihanblog.com//post/267&title= ولادت امام حسین (ع) و روز پاسدار و حضرت ابوالفضل العباس (ع) "> 
+<img alt="داغ کن - کلوب دات کام" src="http://static.cloob.com/public/images/icon/100c.gif" style='border: none; padding: 0px'/> 
+</a>
+
+
+
+
+				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ شنبه 10 خرداد 1393  ]  [ 07:13 ب.ظ  ]  [ <a href="http://bojnourdswim.mihanblog.com/post/author/994718">shena blog </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(267)">نظرات  <script>setCommentCnt(267)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+
+<center><b><font color="#3f3f3f" size="1"></font></b><a target="_blank" href="http://www.iranskin.com"><span style="text-decoration: none">
+<font style="FONT-SIZE: 8pt" color="#666666"> </font><font style="FONT-SIZE: 9pt" color="#e1e1e1"> </font><b>
+<font class=text5 size="1"><font color="#666666"></font></span></a> </font><font color="#3f3f3f" size="1"></font>
+</b><font color="#FF9933"></a></font></center><br>	
+
+</div>
+
+<p align="center"><font face="Tahoma" style="font-size: 9pt">
+			تعداد کل صفحات : 26 ::     			<a href="http://bojnourdswim.mihanblog.com/page/1">
+			<b>1</b></a>  			<a href="http://bojnourdswim.mihanblog.com/page/2">
+			<span>2</span></a>  			<a href="http://bojnourdswim.mihanblog.com/page/3">
+			<span>3</span></a>  			<a href="http://bojnourdswim.mihanblog.com/page/4">
+			<span>4</span></a>  			<a href="http://bojnourdswim.mihanblog.com/page/5">
+			<span>5</span></a>  			<a href="http://bojnourdswim.mihanblog.com/page/6">
+			<span>6</span></a>  			<a href="http://bojnourdswim.mihanblog.com/page/7">
+			<span>7</span></a>  			<a href="http://bojnourdswim.mihanblog.com/page/8">
+			<i>...</i></a>  <br><br></div>			</font></p>
+                         
+                         
+<style type="text/css">//Ashoora.ir|Faraj Begins</style>
+<center><object classid="clsid:D27CDB6E-AE6D-11CF-96B8-444553540000" id="obj1" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" border="0" width="550" height="137">
+<param name="movie" value="http://www.ashoora.biz/mazhabi-projects/faraj/largewidth_faraj.swf">
+<param name="wmode" value="transparent">
+	<embed src="http://www.ashoora.biz/mazhabi-projects/faraj/largewidth_faraj.swf" wmode=transparent pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" name="obj1" width="550" height="137"></object>
+</center>
+<style type="text/css">a.ashoora_tool_link{display:none}</style><a href="http://www.ashoora.ir/" class="ashoora_tool_link">دعای فرج</a><style type="text/css">//Ashoora.ir|Faraj Ends</style>
+ 
+
+</td>
+
+<td width="220" valign="top">	
+
+		
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>			
+<b>درباره وبلاگ</b></div></div>
+<div class=CenterSid><div class=li-Sid2><center>  
+<img src="../static.mihanblog.com/public/user_data/web_photo/385/1154620.jpg@7177"  /><br>این وبلاگ رو راه اندازی کردم تا دوستان و علاقه مندان به شنا استفاده کنند ان شاالله ورزش شنای شهرمون ارتقاء پیدا کنه</center></div></div>
+<div class=LowSid></div></div>
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>تبلیغات</b></div></div>
+<div class=CenterSid><div class=li-Sid2><center>
+<a target="_blank" href="http://www.iranskin.com/games"><p align="center"><a href="http://bojnourdswim.mihanblog.com/post/58" target="_blank">
+<img src="http://ir2up.ir/up19/1bf13657871111.gif" alt="برای درج تبلیغات کلیک کنید" height="240" width="124" border="0"></a><div id="irc_mimg"><a data-ved="0CAUQjRw"
+
+
+href="http://bojnourdswim.mihanblog.com/post/58" target="_blank">
+<img src="http://upload.tehran98.com/img1/tun5np1h73bu3j4i98bk.gif" alt="برای درج تبلیغات کلیک کنید" height="240" width="124" border="0"></a><div id="irc_mimg"><a data-ved="0CAUQjRw"
+
+ href="http://tamiratmobile.mihanblog.com/"><img src="http://upload.tehran98.com/img1/d2p7nz3a3tfxt6epz8d.gif" border="0" alt="" /></a
+ width="124"></a></div> </p></center></div></div>
+<div class=LowSid></div></div>
+
+
+
+
+
+<!--- javantools.ir --->
+<script type="text/javascript" src="http://javantools.ir/tools/gallery/is.js"></script>
+<script type="text/javascript">
+viewer.add('http://upload.tehran98.com/img1/69djscpwu822yfvfzljg.jpg',' تصویر شماره یك');
+viewer.add('http://upload.tehran98.com/img1/yxe4oxtzrzutquzqfkc.jpg',' تصویر شماره دو');
+viewer.add('http://upload.tehran98.com/img1/sc67qxllsq5te8iywqja.jpg',' تصویر شماره سه');
+viewer.add('http://upload.tehran98.com/img1/1bf7beyhk6tmwdaiguk.jpg',' تصویر شماره چهار');
+viewer.add('http://upload.tehran98.com/img1/u0iecavjyaniwxj5tge.jpg',' تصویر شماره پنج');
+viewer.add('http://upload.tehran98.com/img1/5ztr4mzyxm3ls4ojvpo.jpg',' تصویر شماره شش');
+viewer.add('http://javantools.ir/tools/gallery/p3.jpg',' تصویر شماره سه');
+viewer.add('http://javantools.ir/tools/gallery/p3.jpg',' تصویر شماره سه');
+</script>
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آرشیو مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/archive/1393/8/1"> هفته اول آبان 1393 ، 1 </a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/archive/1393/7/4"> هفته چهارم مهر 1393 ، 3 </a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/archive/1393/6/4"> هفته چهارم شهریور 1393 ، 1 </a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/archive/1393/6/1"> هفته اول شهریور 1393 ، 1 </a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/archive/1393/4/1"> هفته اول تیر 1393 ، 1 </a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/archive/1393/3/2"> هفته دوم خرداد 1393 ، 3 </a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/archive/1393/3/1"> هفته اول خرداد 1393 ، 14 </a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/archive/1393/2/4"> هفته چهارم اردیبهشت 1393 ، 1 </a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/archive/1392/11/1"> هفته اول بهمن 1392 ، 1 </a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/archive/1392/8/3"> هفته سوم آبان 1392 ، 4 </a></div></div>
+<div class=LowSid></div></div>
+ 
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آخرین مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/277">دانلود قسمت4 فصل پنجم سریال The Walking Dead</a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/276">       دانلود قسمت3 فصل پنجم سریال The Walking Dead</a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/275">دانلود قسمت 2 فصل پنجم سریال The Walking Dead</a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/274">دانلود قسمت 1 فصل پنجم سریال The Walking Dead</a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/272">نحوه زدن پای دوچرخه در واترپلو و شنا بصورت ویدئویی</a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/271"> تیم ملی شنا عازم اینچئون شد</a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/270">ثبت نام در مسابقات شنا استانی</a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/269">ثبت نام شروع شد(تهران مدافعان حرم امام حسین ع)</a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/268"> کلیپ زیبای ولادت امام حسین (ع) با کیفیت بالا </a></div><div class=li-Sid>
+<a href="http://bojnourdswim.mihanblog.com/post/267"> ولادت امام حسین (ع) و روز پاسدار و حضرت ابوالفضل العباس (ع) </a></div><center><a href="http://bojnourdswim.mihanblog.com/extrapage/list"><b>لیست تمام مطالب</b></a></center></div>
+<div class=lowSid></div></div>
+
+
+
+<link rel="StyleSheet" href="http://danlod.20temp.com/category/css/dtree.css" type="text/css" />
+<script type="text/javascript" src="http://danlod.20temp.com/category/js/dtree.js"></script>						
+<div style="padding-right:10px; direction:rtl;">
+
+            <script type="text/javascript">
+
+d = new dTree('d', 'http://danlod.20temp.com/category/images/category/');
+
+d.add(0,-1, '...');
+
+d.add(1, 0, 'دانلود نرم افزار', '/software/', 'Software', '', 'http://danlod.20temp.com/category/images/category/program.png', 'http://danlod.20temp.com/category/images/category/program.png');
+d.add(11, 1, 'آنتی ویروس', 'http://bojnourdswim.mihanblog.com/extrapage/antivirus/', '---title---', '', '', '');
+d.add(12, 1, 'اینترنت','link/', '---title---', '', '', '');
+d.add(13, 1, 'چندرسانه ای', 'link/', '---title---', '', '', '');
+d.add(14, 1, 'ابزار دسکتاپ', 'link/', '---title---', '', '', '');
+d.add(15, 1, 'ابزار طراحی', 'link/', '---title---', '', '', '');
+d.add(16, 1, 'تبدیل کننده', 'link/', '---title---', '', '', '');
+d.add(17, 1, 'فرهنگ لغت', 'link/', '---title---', '', '', '');
+d.add(18, 1, 'متفرقه', 'link/', '---title---', '', '', '');
+
+
+d.add(2, 0, 'بازی', '/games/', 'Games', '', 'http://danlod.20temp.com/category/images/category/oyun.png', 'http://danlod.20temp.com/category/images/category/oyun.png');
+d.add(11, 2, '---name---', 'link/', '---title---', '', '', '');
+d.add(12, 2, '---name---', 'link/', '---title---', '', '', '');
+d.add(13, 2, '---name---', 'link/', '---title---', '', '', '');
+d.add(14, 2, '---name---', 'link/', '---title---', '', '', '');
+
+
+d.add(3, 0, 'فیلم', 'http://bojnourdswim.mihanblog.com/extrapage/film/',  '---Main---', '', 'http://danlod.20temp.com/category/images/category/film.png', 'http://danlod.20temp.com/category/images/category/film.png');
+d.add(11, 3, 'دانلود آموزش شنا ', 'http://bojnourdswim.mihanblog.com/post/30', '---title---', '', '', '');
+d.add(12, 3, '  آموزش شنا با حجم بالا', 'http://bojnourdswim.mihanblog.com/post/29', '---title---', '', '', '');
+d.add(13, 3, 'مسابقات روز اول المپیک ', 'http://bojnourdswim.mihanblog.com/extrapage/mosabeghat', '---title---', '', '', '');
+d.add(14, 3, 'مسابقه شنای راموس و کاکا', 'http://bojnourdswim.mihanblog.com/extrapage/mosabeghat/', '---title---', '', '', '');
+d.add(15, 3, ' قهرمان پاراالمپیک شنا ', 'http://bojnourdswim.mihanblog.com/extrapage/mosabeghat', '---title---', '', '', '');
+d.add(16, 3, '---name---', 'link/', '---title---', '', '', '');
+
+d.add(5, 0, 'اسکریپت', '/cms/', 'CMS', '', 'http://danlod.20temp.com/category/images/category/cms.png', 'http://danlod.20temp.com/category/images/category/cms.png');
+d.add(11, 5, 'مدیریت محتوا', 'link/', '---title---', '', '', '');
+d.add(12, 5, 'فروشگاه ساز', 'link/', '---title---', '', '', '');
+d.add(13, 5, 'انجمن ساز', 'link/', '---title---', '', '', '');
+d.add(14, 5, 'اسکریپت های کاربردی', 'link/', '---title---', '', '', '');
+d.add(15, 5, 'فلش', '/cms/#/', '---title---', '', '', '');
+
+
+d.add(11, 0, 'اخبار', 'http://bojnourdswim.mihanblog.com/extrapage/2/', '---Main---', '', 'http://danlod.20temp.com/category/images/category/operating_system.gif', 'http://danlod.20temp.com/category/images/category/operating_system.gif');
+d.add(12, 0, 'ورزشی', 'link/', '---Main---', '', 'http://danlod.20temp.com/category/images/category/tr.png', 'http://danlod.20temp.com/category/images/category/tr.png');
+d.add(13, 0, 'گالری عکس', 'http://bojnourdswim.mihanblog.com/extrapage/swim/', '---Main---', '', 'http://danlod.20temp.com/category/images/category/wallpaper.png', 'http://danlod.20temp.com/category/images/category/wallpaper.png');
+d.add(14, 0, 'دانستنی ها', 'link/', '---Main---', '', 'http://danlod.20temp.com/category/images/category/teknoloji.png', 'http://danlod.20temp.com/category/images/category/teknoloji.png');
+d.add(16, 0, 'سرگرمی و اس ام اس', 'link/', '---Main---', '', 'http://danlod.20temp.com/category/images/category/duyurular.png', 'http://danlod.20temp.com/category/images/category/duyurular.png');
+d.add(17, 0, 'متفرقه', 'link/', '---Main---', '', 'http://danlod.20temp.com/category/images/category/istek.png', 'http://danlod.20temp.com/category/images/category/istek.png');
+
+document.write(d);
+document.write('<div style="display:none;"><font face="tahoma" size="7"><a href="http://20temp.com" title="بیست تمپ | گرافیک " target="_blank">بیست تمپ</a></font></div></iframe>')
+
+</script></div>
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>لینک های مفید</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid><a href="http://garadagh-club.ir">شبکه اجتماعی</a>
+</div>
+<div class=li-Sid><a title="تیشرت لاغری مردانه" href="http://www.slimlift.ir/">تیشرت لاغری</a>
+</div>
+<div class=li-Sid><a title="خرید آنلاین, سفارش آنلاین" href="http://www.makhsos.com/">خرید آنلاین</a>
+</div>
+<div class=li-Sid><a href="http://windowsseven.ir">ویندوز سون</a>
+</div>
+<div class=li-Sid><a title="اخبار روز" href="http://news.facenama.com">اخبار روز</a> | <a title="آگهی رایگان" href="http://agahi.facenama.com">آگهی رایگان</a></div>
+<div class=li-Sid><a target="_blank" href="http://bahar-20.com" title="قالب وبلاگ">بهاربیست</a></div>
+</div>
+<div class=LowSid></div></div>
+		
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آمار سایت</b></div></div>
+<div class=CenterSid><div class=li-Sid2><center>  
+<font face="Tahoma" style="font-size: 8pt">
+
+
+<script type='text/javascript' >document.write ( "<scr"+"ipt type='text/javascript' src='http://ba"+"ha"+"r-"+"20."+"com/alexa/code.php?link=http://mehrangoli64.parsiblog.com/&bgi=4&global=1&country=1&links=1&bgc=FFFFFF&borderw=1&borderc=D6D2B4'> </s"+"cript>");</script><br></center>
+
+
+
+
+
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=2854067&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=2854067" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code -->
+</font></center></div></div>
+<div class=LowSid></div></div>	
+
+
+<cb:block_stat>
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>امکانات وب</b></div></div>
+<div class=CenterSid><div class=li-Sid2><center>  
+<font face="Tahoma" style="font-size: 8pt">
+
+ <center><script language="javascript" src="http://www.iranskin.com/oghat2/badge.php?mod=10&az=1&kadr=1&shahr=12-2"></script></center><div style='display:none'><h1><a title='قالب وبلاگ' href='http://www.iranskin.com'>قالب وبلاگ</a></h1></div>
+
+
+<!--start oqhat sharee cod-->
+<script src="http://blogers.ir/cod/extra-cods/oqhat-sharee/code.php?city=26" type=text/javascript></script>
+<div style="display:none"><a href="http://blogers.ir">وبلاگ</a><a href="http://blogers.ir/cod/extra-cods/oqhat-sharee/">کد اوقات شرعی</a><a href="http://blogers.ir/cod/extra-cods/oqhat-sharee/oghatcode.php?city=26">اوقات شرعی تهران</a></div>
+<!--end oqhat sharee cod-->
+
+
+
+<script type="text/javascript" src="http://www.iranskin.com/pagerank/icon/?n=44&url=bojnourdswim.mihanblog.com/"></script><div style="display:none"><h1><a href="http://www.iranskin.com/pagerank">رتبه سنج گوگل</a></h1><h1><a href="http://www.iranskin.com">رتبه سنج گوگل</a></h1></div>
+
+
+
+<br><script language="javascript" src="http://www.iranskin.com/translator/cod.php?width=130&bgcolor=36FFE4&bdcolor=1263DC"></script><div  style='display:none;'><h1><a href='http://www.iranskin.com/translator'>&#1605;&#1578;&#1585;&#1580;&#1605; &#1587;&#1575;&#1740;&#1578;</a></h1> <h1><a href='http://www.iranskin.com'>&#1605;&#1578;&#1585;&#1580;&#1605; &#1587;&#1575;&#1740;&#1578;</a></h1></div>
+<script src=http://rozup.ir/up/code-webyar/test_BMI/test_BMI.js></script>
+
+
+
+                                                                       <!-- Begin ParsTools.com Dictionary code --><script language="javascript"     src="http://www.Parstools.com/dic/code/?type=2"></script><noscript><h1><b><a  href="http://parstools.com/dic_fa/" target="_blank">دیکشنری</a></b></h1></noscript><!-- End ParsTOOLs.com Dictionary code-->
+
+
+
+<style type="text/css">//Ashoora.ir|Clock Begins</style><center><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/clock/saat.php?mod=20&width=150"></script></center><style type="text/css">//Ashoora.ir|Clock Ends</style>
+
+
+
+
+
+
+
+
+</font></right></div></div>
+<div class=LowSid></div></div>	
+
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>بازی آنلاین</b></div></div>
+<div class=CenterSid><div class=li-Sid2><center>  
+<font face="Tahoma" style="font-size: 8pt">
+
+
+<!-- www.bahar22.com --><p align="center"><a target="_blank" href="index.html"><font face="Tahoma" style="font-size: 8pt; text-decoration: none"><span lang="fa"></span></font></a></p><!-- www.bahar22.com --><p align="center"><script type="text/javascript" src="http://www.bahar22.com/ftp/other/10/games.js"></script><!-- www.bahar22.com --></p>
+	
+</font></center></div></div>
+<div class=LowSid></div></div>	
+
+
+	
+
+
+
+
+<cb:block_stat>
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>وصیت نامه شهداء</b></div></div>
+<div class=CenterSid><div class=li-Sid2><center>  
+<font face="Tahoma" style="font-size: 8pt">
+
+ <marquee
+scrollamount="1"
+scrolldelay="20"
+font-family: Tahoma;
+font-size: 15pt;
+color: #4080ff"
+direction="up"
+width="170"
+height="400"onmouseover="this.stop()"
+onmouseout="this.start()">
+<style type="text/css">//Ashoora.ir|Shohada Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/shohada/png.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/shohada/shohada.php?mod=9&cat=1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1&color3=FF0000&color2=663300&color1=000000&width=160"></script><style type="text/css">//Ashoora.ir|Shohada Ends</style>
+</marquee>
+
+</font></right></div>
+<div class=LowSid></div></div>	
+
+
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>			
+<b>لینک دوستان</b></div></div>
+<div class=CenterSid><div class=li-Sid2><center>  
+
+<!-- Begin 20Tools.com Automatic Link code -->
+<center><script type="text/javascript" src="http://www.20tools.com/automatic-link/code.php?id=5572"></script></center>
+<div style="display:none"><a href="http://www.20tools.com">سایت خدماتی بیست تولز</a><a href="http://www.20tools.com/automatic-link">ابزار تبادل لینک اتوماتیک</a></div>
+<!-- End 20Tools.com Automatic Link code --> 
+ 
+</center></div></div>
+<div class=LowSid></div></div>
+
+
+<script language="javascript" type="text/javascript" src="http://www.buxamin.ir/engine/source.php"></script>
+
+
+
+
+
+
+
+
+
+</a></marquee></span>
+
+
+
+</td></tr>
+
+<tr><td width="1000" colspan="3" id="footer-IS">
+
+	[   <a href="index.html"_blank">   تمام حقوق این وب سایت و مطالب آن متعلق به بزرگترین و کاملترین وبلاگ آموزش شنا می باشد .</a> ]  <a [ href="index.html"_blank">  </a>
+
+</td></tr></table>
+
+<!-- Begin - Online Users -->
+<script src="http://online.parstools.com/index.php?un=75178&skin=blue&pos=br"></script>
+<!-- End Online Users -->
+
+
+<style type="text/css">#code{height:30px;}</style>
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var i = 0;
+var pausecontent2=new Array() ;
+/*]]>*/
+</script>
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "/post/277";
+var b = "دوشنبه 5 آبان 1393";
+var c = "دانلود قسمت4 فصل پنجم سریال The Walking Dead";
+pausecontent2[ i ] = '<li><a href="http://bojnourdswim.mihanblog.com/'+a+'" title="نوشته شده در تاریخ: '+b+'">'+c+'</a></li>';
+i++;
+/*]]>*/
+</script><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "/post/276";
+var b = "سه شنبه 29 مهر 1393";
+var c = "       دانلود قسمت3 فصل پنجم سریال The Walking Dead";
+pausecontent2[ i ] = '<li><a href="http://bojnourdswim.mihanblog.com/'+a+'" title="نوشته شده در تاریخ: '+b+'">'+c+'</a></li>';
+i++;
+/*]]>*/
+</script><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "/post/275";
+var b = "سه شنبه 29 مهر 1393";
+var c = "دانلود قسمت 2 فصل پنجم سریال The Walking Dead";
+pausecontent2[ i ] = '<li><a href="http://bojnourdswim.mihanblog.com/'+a+'" title="نوشته شده در تاریخ: '+b+'">'+c+'</a></li>';
+i++;
+/*]]>*/
+</script><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "/post/274";
+var b = "سه شنبه 29 مهر 1393";
+var c = "دانلود قسمت 1 فصل پنجم سریال The Walking Dead";
+pausecontent2[ i ] = '<li><a href="http://bojnourdswim.mihanblog.com/'+a+'" title="نوشته شده در تاریخ: '+b+'">'+c+'</a></li>';
+i++;
+/*]]>*/
+</script><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "/post/272";
+var b = "شنبه 29 شهریور 1393";
+var c = "نحوه زدن پای دوچرخه در واترپلو و شنا بصورت ویدئویی";
+pausecontent2[ i ] = '<li><a href="http://bojnourdswim.mihanblog.com/'+a+'" title="نوشته شده در تاریخ: '+b+'">'+c+'</a></li>';
+i++;
+/*]]>*/
+</script><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "/post/271";
+var b = "جمعه 28 شهریور 1393";
+var c = " تیم ملی شنا عازم اینچئون شد";
+pausecontent2[ i ] = '<li><a href="http://bojnourdswim.mihanblog.com/'+a+'" title="نوشته شده در تاریخ: '+b+'">'+c+'</a></li>';
+i++;
+/*]]>*/
+</script><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "/post/270";
+var b = "یکشنبه 2 شهریور 1393";
+var c = "ثبت نام در مسابقات شنا استانی";
+pausecontent2[ i ] = '<li><a href="http://bojnourdswim.mihanblog.com/'+a+'" title="نوشته شده در تاریخ: '+b+'">'+c+'</a></li>';
+i++;
+/*]]>*/
+</script><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "/post/269";
+var b = "جمعه 6 تیر 1393";
+var c = "ثبت نام شروع شد(تهران مدافعان حرم امام حسین ع)";
+pausecontent2[ i ] = '<li><a href="http://bojnourdswim.mihanblog.com/'+a+'" title="نوشته شده در تاریخ: '+b+'">'+c+'</a></li>';
+i++;
+/*]]>*/
+</script><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "/post/268";
+var b = "شنبه 10 خرداد 1393";
+var c = " کلیپ زیبای ولادت امام حسین (ع) با کیفیت بالا ";
+pausecontent2[ i ] = '<li><a href="http://bojnourdswim.mihanblog.com/'+a+'" title="نوشته شده در تاریخ: '+b+'">'+c+'</a></li>';
+i++;
+/*]]>*/
+</script><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var a = "/post/267";
+var b = "شنبه 10 خرداد 1393";
+var c = " ولادت امام حسین (ع) و روز پاسدار و حضرت ابوالفضل العباس (ع) ";
+pausecontent2[ i ] = '<li><a href="http://bojnourdswim.mihanblog.com/'+a+'" title="نوشته شده در تاریخ: '+b+'">'+c+'</a></li>';
+i++;
+/*]]>*/
+</script>                <script language="JavaScript" type="text/javascript">
+                /*<![CDATA[*/
+var a = "/post/list";
+                pausecontent2[ i ] = '<li><a href="http://bojnourdswim.mihanblog.com/'+a+'" title="نمایش تمامی پست ها" >نمایش تمامی پست ها </a></li>';
+                i++;
+                pausecontent2[ i ] = '<li><a href="http://1code.ir/%D8%A7%D8%B3%DA%A9%D8%B1%D9%88%D9%84-%D8%B9%D9%86%D8%A7%D9%88%DB%8C%D9%86-%D8%A2%D8%AE%D8%B1%DB%8C%D9%86-%D9%85%D8%B7%D8%A7%D9%84%D8%A8/" title="کد اسکرول آخرین مطالب" >دریافت کد آخرین مطالب</a></li>';
+                /*]]>*/
+                </script>
+                <script type="text/javascript" src="http://1code.ir/wp-content/uploads/2012/06/list2.js"></script>
+<ul>
+<script type="text/javascript">new pausescroller(pausecontent2, "code", "m", 3000);</script>
+</ul>
+
+
+
+<marquee direction="right" bgcolor="#00a0c0" width="400" height="20" style="color: #0000FF; font-size: 12pt" scrollamount="10" behavior="alternate"><a target="_blank'" href="http://bojnourdswim.mihanblog.com/post/comment/31"><font color="#FFFFFF">آموزش تضمینی شنا</font></a></marquee>
+
+
+
+
+
+<script src="http://belink.ir/linkbox.js.php?id=3529"></script>
+<script src="http://logoha.ir/logo/link.js"></script>
+
+
+<script language="javascript" src="http://code.behtarinbox.ir/code-2.js"></script><center><a href="http://behtarinbox.ir" target="_blank">
+(بهترین لینک باکس)</a>
+</center>
+
+
+
+               
+
+</html>
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'bojnourdswim.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

@@ -1,0 +1,1610 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه بیست و هفتم آذر 1399');
+		/*1018751*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[225]='0';commentCnt[226]='0';commentCnt[228]='0';commentCnt[229]='0';commentCnt[242]='0';commentCnt[243]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[225]='0';
+mihanblogDisLikeArrCnt[225]='0';
+mihanblogLikeArrCnt[226]='0';
+mihanblogDisLikeArrCnt[226]='0';
+mihanblogLikeArrCnt[228]='0';
+mihanblogDisLikeArrCnt[228]='0';
+mihanblogLikeArrCnt[229]='0';
+mihanblogDisLikeArrCnt[229]='0';
+mihanblogLikeArrCnt[242]='0';
+mihanblogDisLikeArrCnt[242]='0';
+mihanblogLikeArrCnt[243]='0';
+mihanblogDisLikeArrCnt[243]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://banesh75blog.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://banesh75blog.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','156');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','شنبه یازدهم اردیبهشت 1395');
+	
+	setStatVar('today_view','4');
+	setStatVar('yesterday_view','7');
+	
+	setStatVar('this_month_view','745');
+	setStatVar('last_month_view','1059');
+
+	setStatVar('total_view','190592');
+	setStatVar('last_view_date','پنجشنبه بیست و هفتم آذر 1399 (08:23)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://banesh75blog.mihanblog.com/statupdate/?data[refereruri]=http://banesh75blog.mihanblog.com/post/author/867755&data[postid]=&data[requesturi]=/post/author/867755/page/4&data[sdate]=1608181771&data[hash]=03828c1c0aada6acebc8cc44bb79b893&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://banesh75blog.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://banesh75blog.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://banesh75blog.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://banesh75blog.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://banesh75blog.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://banesh75blog.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://banesh75blog.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://banesh75blog.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://banesh75blog.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://banesh75blog.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://banesh75blog.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://banesh75blog.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://banesh75blog.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://banesh75blog.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://banesh75blog.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Theme Designer" content="www.MyTheme.ir">
+
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="alternate" type="application/rss+xml" title=" روستای بانش" href="../../../rss/index.html" />
+    <link rel="alternate" type="application/atom+xml" title=" روستای بانش" href="../../../atom/index.html" />
+    <link href="http://mihanblog.com/public/public/user_data/template/2099922/style.css" type="text/css" rel="stylesheet">
+
+    <title> روستای بانش - مطالب اصغر صادقی راد</title>
+</head>
+
+<body>
+
+<div align="center">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;</td>
+<td class=div2 valign=top>
+<div class=div00>
+<div class=div1></div>
+
+<div class=div17>
+
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>درباره وبلاگ</font></div></div>
+
+        <div class=div341>
+            <div class=div31><center><br><br>
+                <font class=text1></center><br>
+                <b>مدیر وبلاگ :</b> <a href="../../867755.html">اصغر صادقی راد</a></font></div>
+        </div><div class=div30></div>
+    </div>
+
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text51>مطالب اخیر</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li><a href="../../../279.html">✳✳اینستاگرام روستای بانش راه اندتزی شد✳✳</a></li><li><a href="../../../277.html">شهدا شرمنده ایم...</a></li><li><a href="../../../276.html">سلام بر حسین</a></li><li><a href="../../../275.html">نماز</a></li><li><a href="../../../274.html">درد و دل با خدا</a></li><li><a href="../../../268.html">اخبار یمن</a></li><li><a href="../../../265.html">داستانی بسیار زیبا</a></li><li><a href="../../../264.html">حدیث</a></li><li><a href="../../../262.html">سلام دوستان با فعالسازی دوباره وبلاگ موافقید؟؟؟</a></li><li><a href="../../../261.html">**پیغام مدیر وبلاگ**</a></li>        </ul></font></div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text52>موضوعات</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li><a href="../../../category/15.html">سایبری (2)</a></li><li><a href="../../../category/13.html">ورزشی (2)</a></li><li><a href="../../../category/12.html">مذهبی (6)</a></li><li><a href="../../../category/11.html">خواندنی ها (11)</a></li><li><a href="../../../category/10.html">نرم افزار (6)</a></li><li><a href="../../../category/9.html">چندرسانه ای (12)</a></li><li><a href="../../../category/8.html">عمومی (27)</a></li><li><a href="../../../category/7.html">دهیاری  (8)</a></li><li><a href="../../../category/6.html">متفرقه (15)</a></li><li><a href="../../../category/5.html">تصاویر و مطالب جبهه وجنگ (15)</a></li><li><a href="../../../category/4.html"> ماه  محرم  (8)</a></li><li><a href="../../../category/2.html">شهدای روستا (8)</a></li><li><a href="../../../category/1.html">روستای بانش (28)</a></li>        </ul></font></div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>آرشیو وبلاگ</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li><a href="../../../archive/1395/2.html"> اردیبهشت 1395</a></li><li><a href="../../../archive/1394/12.html"> اسفند 1394</a></li><li><a href="../../../archive/1394/8.html"> آبان 1394</a></li><li><a href="../../../archive/1394/6.html"> شهریور 1394</a></li><li><a href="../../../archive/1393/8.html"> آبان 1393</a></li><li><a href="../../../archive/1393/7.html"> مهر 1393</a></li><li><a href="../../../archive/1393/6.html"> شهریور 1393</a></li><li><a href="../../../archive/1393/5.html"> مرداد 1393</a></li><li><a href="../../../archive/1393/4.html"> تیر 1393</a></li>            <li><b><a href="../../../archive.html">آرشیو كل مطالب</a></b></li>
+        </ul></font></div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text51>پیوندهای روزانه</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li><a href="http://WwW.GamePm.MihanBlog.CoM" title="سلام وبلاگ قشنگ و پرمحتوایی داری 
+
+یه سر بزن بازی موبایل و کامپیوتر - اندروید - جاوا و آیفون جدید گذاشتم دانلود رایگان 
+
+لینک منو تایید کن خبرشو بده اگه وقت کردی برو اینجا لینکتو بذار
+
+تبادل لینک سه طرفه میشه هم رنک شما بالا میره هم برا ما
+
+منتظرما
+
+--------------------------------------------
+
+تبادل لینک سه طرفه و هوشمند ستوده
+
+http://v3link.rozblog.com/
+
+--------------------------------------------" target="_blank">دانلود رایگان بازی </a></li><li><a href="http://zabanavaran.ir" title="آموزشگاه رایگان زبان آوران
+
+http://zabanavaran.ir" target="_blank">آموزشگاه زبان آوران</a></li><li><a href="http://rangriz.ir" title="وبلاگ خوبی داریا ولی حیف کسی نیست استفاده کنه
+
+میگم بد نیست از این به بعد توی شبکه اجتماعی رنگریز پست بزاری 
+
+این جوری حداقل بقیه میخونن یه نظری میزارن . هان؟
+
+rangriz.ir" target="_blank">شبکه اجتماعی رنگریز</a></li><li><a href="http://zabanavaran.ir" title="انجمن آموزشگاه زبان آوران راه اندازی شد
+
+خب این یعنی چی ؟
+
+یعنی هر موقع هر سوالی داشتید میتونید توی انجمن مطرح کنید و پاسخش رو بگیرید
+
+خوبه نه؟
+
+پشتیبانی از زبان آموزان یعنی این
+
+آموزشگاه زبان آوران" target="_blank">آموزشگاه زبان آوران</a></li><li><a href="http://zabanavaran.ir" title="فراگیری زبان را کجا شروع کنیم؟
+
+دوست داشتی این مطلب رو بخون" target="_blank">آموزشگاه زبان آوران</a></li><li><a href="http://rangriz.ir" title="برای حمایت از شبکه اجتماعی رنگریز
+کد زیر را در وبلاگ خود قرار دهید
+
+تا ابزاری ایرانی را جایگزین نمونه غربی آن کنید
+
+
+.cor_ban{background:url(&quot;http://www.xum.ir/images/2014/09/06/150x150corner.png&quot;) no-repeat;position: fixed;bottom: 0px;margin: 0;padding: 0;left: 0px;z-index: 1000;height: 150px;width: 150px;}" target="_blank">حمایت ایرانی</a></li><li><a href="http://zabanavaran.ir" title="رایگان و آسان زیان بیاموزید
+
+zabanavaran.ir" target="_blank">آموزشگاه زبان آوران</a></li><li><a href="http://esteva.mihanblog.com" title="سلام با وبلاگت خیلی حال کردم فقط یکم زود تر بروز کن
+
+اگر هم شد لینک منو تایید کن 
+خودت هم بیا لینکت رو بزار
+
+esteva.mihanblog.com" target="_blank">مجله اینترنتی استوا</a></li><li><a href="http://rangriz.ir" title="شبکه اجتماعی رنگریز 
+ rangriz.ir" target="_blank">شبکه اجتماعی ایرانی رنگریز</a></li><li><a href="http://www.powerhosting.ir/convert-blog-to-website/" title="با سلام....
+ 
+شما میتونید با کمترین هزینه وبلاگتون رو به یک وب سایت کامل تبدیل کنید.
+با راه اندازی رایگان
+
+هزینه ثبت دامنه : 6500 تومان
+هزینه هاست : 29000 تومان
+هزینه نصب و راه اندازی : رایگان
+
+تلفن : 44034256
+فکس : 44058951
+همراه : 09358277721
+پیامک : 5000203088888" target="_blank">تبدیل وبلاگ به سایت</a></li>            <li><b><a href="../../../../linkdaily/index.html">همه پیوندهای روزانه</a></b></li>
+            <li><b><a href="javascript:linkdailyForm()">ارسال پیوند روزانه</a></b></li>
+        </ul></font></div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text52>پیوندها</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li><a href="http://banesh.salehin.ir" title="یکی دیگر از سایتهای من" target="_blank">سایت پایگاه</a></li><li><a href="http://profishop.ir" title="فروشگاه ساز" target="_blank">فروشگاه ساز</a></li>            <li><a target="_blank" href="http://www.mytheme.ir">بهترین قالب های وبلاگ</a></li>
+            <li><b><a href="../../../../link/index.html">همه پیوندها</a></b></li>
+        </ul></font></div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>نویسندگان</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li><a href="../../867755.html">اصغر صادقی راد (156)</a></li>        </ul></font></div><div class=div30></div>
+    </div>
+    
+    
+		<form id="frm-16079601835fd7867721d1f" method="post" action="http://banesh75blog.mihanblog.com/poll/new/fid/16079601835fd7867721d1f/atrty/1607960183/avrvy/0/key/c1f794529c3f0f1e2c3308a18887c7ed/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="312190" id="data[pollid]" />		<div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text52>نظرسنجی</font></div></div>
+
+        <div class=div341>
+            <div class=div32><font class=text1>
+                                    به نظر شما بیشتر در این سایت چه بخشی فعالتر باشد؟<br>
+                        <label><input type="radio" name="data[answer]" value="v1">عکس</label><br><label><input type="radio" name="data[answer]" value="v2">اطلاعات روستا</label><br><label><input type="radio" name="data[answer]" value="v3">شهدا</label><br><label><input type="radio" name="data[answer]" value="v4">موقعیت جغرافیایی</label><br><label><input type="radio" name="data[answer]" value="v5">متفرقه</label><br>                        <div align="center"><br><input type="submit" value="ارسال نظر" style="font-family: Tahoma; font-size: 9pt"><br><br></div>
+                                                </font></div></div><div class=div30></div>
+    </div>
+		<input type="hidden" name="frm-id" value="16079601835fd7867721d1f" id="frm-id" /></form>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>برچسبها</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li><a href="../../../tag/banesh75.html">banesh75</a></li><li><a href="../../../tag/بانش75.html">بانش75</a></li><li><a href="../../../tag/شهرستان+بیضا.html">شهرستان بیضا</a></li><li><a href="../../../tag/banesh.html">banesh</a></li><li><a href="../../../tag/شهید.html">شهید</a></li><li><a href="../../../tag/شهدا.html">شهدا</a></li><li><a href="../../../tag/بانش.html">بانش</a></li><li><a href="../../../tag/اصغر+صادقی+راد.html">اصغر صادقی راد</a></li><li><a href="../../../tag/بیضا.html">بیضا</a></li><li><a href="../../../tag/روستای+بانش.html">روستای بانش</a></li>        </ul></font></div><div class=div30></div>
+    </div>
+    <form id="frm-16079601835fd7867721ebd" method="get" action="http://banesh75blog.mihanblog.com/post/search/fid/16079601835fd7867721ebd"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text51>جستجو</font></div></div>
+
+        <div class=div341>
+            <div class=div32><center><input type="text" name="search_text" size="15"><br>
+                <input type="submit" value="" style="font-family: Tahoma; font-size: 9pt"></center></div>
+        </div><div class=div30></div>
+    </div><input type="hidden" name="frm-id" value="16079601835fd7867721ebd" id="frm-id" /></form>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text52>آمار وبلاگ</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li>کل بازدید : <script>getStatVar('total_view');</script></li>
+            <li>بازدید امروز :<script>getStatVar('today_view');</script></li>
+            <li>بازدید دیروز : <script>getStatVar('yesterday_view');</script></li>
+            <li>بازدید این ماه : <script>getStatVar('this_month_view');</script></li>
+            <li>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></li>
+            <li>تعداد نویسندگان : <script>getStatVar('total_author');</script></li>
+            <li>تعداد کل پست ها : <script>getStatVar('total_post');</script></li>
+            <li>آخرین بازدید : <script>getStatVar('last_view_date');</script></li>
+            <li>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></li>
+        </ul></font></div><div class=div30></div>
+    </div>
+    <div class=div024><center>
+
+<center><script language="javascript" src="http://PicHaK.NeT/oghat/badge.php?mod=6&az=1&kadr=1&shahr=17-11"></script></center><div style='display:none'><h3><a href='http://PicHaK.NeT/oghat'>اوقات شرعی</a></h3></div>
+
+
+<SCRIPT
+ language=JavaScript type=text/javascript 
+src="http://www.jonbeshnet.ir/sites/default/files/logo/maroof/jonbeshnet_2.js"></SCRIPT>
+
+
+<style type="text/css">//Ashoora.ir|Live Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/png.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/live/live.php?mod=11&cat=1,1,1,1,1,1,1,1,1,1,1,1"></script><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1662;&#1582;&#1588; &#1586;&#1606;&#1583;&#1607; &#1581;&#1585;&#1605;</a><style type="text/css">//Ashoora.ir|Live Ends</style>
+
+
+<!-- Google Page Rank by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/page-rank/?url=banesh75blog.mihanblog.com&mod=10"></script><div style="display:none"><h2><a href="http://www.1abzar.com">&#1662;&#1740;&#1580; &#1585;&#1606;&#1705;</a></h2></div>
+<!-- Google Page Rank by www.1abzar.com --->
+
+
+<!-- Payam form by www.myghaleb.ir --->
+<script>window.onload=function() {alert("جهت تعجیل در فرج آقا امام زمان صلوات")}
+window.onunload=function() {alert("از بازدید شما متشکریم")}</script><div style="display:none"><h2><a href="http://www.myghaleb.ir">&#1575;&#1576;&#1586;&#1575;&#1585; &#1608;&#1576;&#1604;&#1575;&#1711;</a></h2></div>
+<!-- Payam form by www.myghaleb.ir ---></center>
+        <style>
+            .mihan_logo {
+                background: url("http://mihanblog.com/public/public/images/logo/poweredby.gif") no-repeat scroll center top transparent;
+                height: 131px;
+                margin-top: 10px;
+                text-align: center;
+            }
+        </style>
+        <div class="mihan_logo"></div>
+
+    </div>
+
+
+</div>
+
+<div class=div100></div>
+
+<div class=div20>
+
+    <div class=div60>
+        <div class=div101>
+            <div class=div10><font class=title> روستای بانش</font></div></div>
+        <div class=div11>
+            <div class=div12><font class=des></font></div><br><br><br><br></div>
+    </div>
+
+    		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="../../../243.html">وایبر فیلتر نمی‌شود!! </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;" lang="FA"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;">به گزارش <span style="font-size: 10pt; font-weight: bold;"><a style="font-weight: normal; font-style: normal; text-decoration: none; letter-spacing: 0px;" href="http://www.yjc.ir/fa/list/11/102"><span style="font-size: 10pt; color: rgb(255, 0, 0);">دریچه فناوری اطلاعات باشگاه خبرنگاران</span></a></span>؛ </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>شورای
+ عالی فضای مجازی در اولین نمایشگاه امنیت سایبری ایران، برنامه های ویژه 
+خود با هدف تامین امنیت ملی را معرفی کرد. دبیر شورای عالی فضای مجازی در 
+مراسم افتتاحیه نخستین نمایشگاه امنیت سایبری ایران، با اشاره به برنامه 
+های این شورا در زمینه امنیت فضای تبادل اطلاعات کشور گفت: با توجه به 
+ضرورت تامین امنیت در فضای سایبری کشور، شورای عالی فضای مجازی تدوین 
+"برنامه ملی امنیت سایبری" را با هدف شکوفایی صنعت افتا در دستور کار خود 
+قرار داده است.<br><br>محمدحسن انتظاری با بیان اینکه برنامه ملی امنیت 
+سایبری در مرحله آماده سازی است، افزود: پس از آماده سازی این برنامه به 
+تصویب شورای عالی فضای مجازی می رسد.<br><br></span><div align="center"><span style="font-size: 10pt;"><img style="border: medium none; width: 327px; height: 107px;" alt="" title="" src="http://cdn.yjc.ir/files/fa/news/1393/7/5/2624458_710.jpg"></span><br></div><span style="font-size: 10pt;"><br>انتظاری
+ با تاکید بر لزوم اصلاح نگاه فناورانه به امنیت فضای سایبری گفت: باید به 
+سمت نگاه انسان‌مدارانه حرکت کنیم و در این رابطه نیازمند مدیریت راهبردی 
+با تدوین قوانین و مقررات هستیم. او با بیان اینکه در حوزه امنیت فضای 
+مجازی نیز باید از تجهیزات داخلی استفاده شود، ادامه داد: در این مسیر 
+تاکید اصلی بر راه اندازی شبکه ملی اطلاعات است و ضرورت ملی در راه‌اندازی 
+سریعتر این شبکه است.<br><br>رئیس مرکز ملی فضای مجازی با تاکید براینکه 
+استفاده از تجهیزات بومی به معنای قطع ارتباط با فناوری بین المللی نیست، 
+خاطرنشان کرد: با توجه به ضرورت بومی بودن این شبکه، تجهیزات مورد استفاده 
+در آن نیز باید براساس توانمندی داخلی باشد تا مدیریت امنیت فضای مجازی 
+کشور در دستان خودمان باشد.<br><br></span><span style="font-size: 10pt;">آقای انتظامی دبیر شورای عالی فضای مجازی در حاشیه مراسم افتتاحیه گفت‌:</span><span style="font-size: 10pt;"> راه اندازی شبکه ملی اطلاعات ملی ضروری است و به زودی با استفاده از دانش داخلی این شبکه راه اندازی می‌شود.</span><br><br><div align="center"><span style="font-size: 10pt;"><img style="border: medium none; width: 293px; height: 129px;" alt="" title="" src="http://cdn.yjc.ir/files/fa/news/1393/7/5/2624477_581.jpg"></span><br></div><br><span style="font-size: 10pt;">وی
+ در مورد امنیت این شبکه افزود: توانمندی داخلی به حدی رسیده است که امنیت 
+اطلاعات را تضمین کند و از لحاظ امنیتی مشکلی احساس نمی‌شود.</span><span style="font-size: 10pt;"> وی در در مورد فیلتر شدن شبکه‌های اجتماعی تلفن همراه نظیر وایبر گفت:</span><span style="font-size: 10pt;"><br><span style="font-size: 10pt;">سیاست ما، فیلتر کردن نیست بلکه فرهنگ سازی است. اگر کاربران به درستی از شبکه های اجتماعی استفاده کنند، مشکلی پیش نمی آید.</span><span style="font-size: 10pt;">
+ مسئولینی هم که به فکر فیلتر کردن هستند، خطر را در بعد امنیتی می‌بینند. 
+اگر مردم اطلاعات مهم و شخصی خود را بر روی این شبکه ها به اشتراک نگذارند 
+خطری آنها را تهدید نمی‌کند.</span><span style="font-size: 10pt;"><br><br>وی در پایان گفت:</span><span style="font-size: 10pt;"> اگر قرار است که این شبکه های اجتماعی فیلتر شود، باید یک برنامه بومی جایگزین در نظر گرفته شود تا کاربران کمبودی احساس نکنند.</span><br><span style="font-size: 10pt;"><br>انتظاری ضمن ابراز خرسندی از برگزاری اولین نمایشگاه 
+امنیت سایبری ایران توسط سازمان نظام صنفی رایانه ای استان تهران گفت: 
+امیدواریم سازمان بتواند به عنوان نماینده بخش خصوصی در سال های آتی این 
+نمایشگاه را در ابعاد گسترده تری برگزار کند.</span><br><br>نمایشگاه امنیت سایبری در سالن حجاب مرکز آفرینش های هنری از 5 تا 8 مهرماه برگزار می‌باشد.<br></span><br><br><span style="font-weight: bold; font-size: 10pt;">گزارش از : اسدالله سعادت مقدسی</span>
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="../../../category/11.html" class=text4>خواندنی ها</a>،&nbsp;<a href="../../../category/9.html" class=text4>چندرسانه ای</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font><br><br>
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div58><font class=text7>یکشنبه ششم مهر 1393 :: نویسنده : <a href="../../867755.html">اصغر صادقی راد</a></font></div>
+            <div class=div27>
+                <font class=text8><a href="../../../243.html#commentlist">نظرات (<script>setCommentCnt(243)</script>)</a></font>
+
+                <div style="margin-top: -9px; margin-left: 20px; float: left;"><script>mihanblogPostLike('243','like')</script></div>
+
+
+            </div>
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 0px;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:605px; float:left; background:#e8dabf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 5px; padding:0 0 10px 0;}
+            .com1{ width:587px; float:left; background:#542e19; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:360px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:567px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:567px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:577px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="../../../242.html">کشف یک قرآن کهن </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+<span style="font-weight: bold;" lang="FA"><span style="font-weight: bold;" lang="FA"></span></span>پایگاه اطلاع‌رسانی «البدیل» نوشت: اسامه محمد محیی‌الدین الحسینی، معلم
+ دبیرستان «الاحمدیه» شهر «طنطا» مصر اعلام کرد: قرآنی دست‌نویس و 
+تذهیب‌کاری شده در اختیار دارد که از پدربزرگش مرحوم «احمد احمد 
+الهرمیل»(متوفی در سال 1970 میلادی) به وی ارث رسیده است.&nbsp;
+
+
+<p>
+	<br>
+	وی افزود: مرحوم احمد احمد الهرمیل نیز این قرآن را از پدرش که در سال 
+1900 میلادی در حین ادای فریضه حج وفات یافت، به ارث برده است.<br>
+	این معلم مصری تأکید کرد: این نسخه ارزشمند از قرآن، میراثی است که از جدم به ارث رسیده و با دست، کتابت و تذهیب‌کاری شده است.<br>
+	وی تصریح کرد: آیات حزب‌‌ها‌ و جزء‌های این قرآن شماره ندارد و تنها به نقش و نگار تذهیب، جای شماره‌ آیات و حزب‌ها اکتفا شده است.<br>
+	اسامه محمد محیی‌الدین الحسینی در پایان تصریح کرد: با وجود این که من از 
+این قرآن نگهداری می‌کنم، اما حفظ این میراث کهن نیازمند تخصص و فن است تا 
+در معرض نابودی قرار نگیرد.</p>
+<p>&nbsp;<br></p>
+
+
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font><br><br>
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div58><font class=text7>یکشنبه ششم مهر 1393 :: نویسنده : <a href="../../867755.html">اصغر صادقی راد</a></font></div>
+            <div class=div27>
+                <font class=text8><a href="../../../242.html#commentlist">نظرات (<script>setCommentCnt(242)</script>)</a></font>
+
+                <div style="margin-top: -9px; margin-left: 20px; float: left;"><script>mihanblogPostLike('242','like')</script></div>
+
+
+            </div>
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 0px;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:605px; float:left; background:#e8dabf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 5px; padding:0 0 10px 0;}
+            .com1{ width:587px; float:left; background:#542e19; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:360px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:567px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:567px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:577px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="../../../229.html">کارت شناسایی های آینده چه شکلی می شوند؟ +عکس </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+مهمترین کارتی که هر فردی در طول زندگی خود در اختیار داردف کارت شناسایی 
+یا کارت ملی اوست. این کارت ها معمولا دارای جنس خاصی هستند که جعل آن را 
+سخت می کند اما هنوز به طور کامل ایمن نشده اند.<br><br>گروهی از طراحان 
+کره ای کارت های شناسایی خاصی را طراحی کرده اند که قرار است ایمن ترین 
+کارت باشد. مکانیزم اصلی که امنیت این کارت هویت را تضمین می کند استفاده 
+از اثر انگشت هر فرد است.<br><br><img style="border: medium none; width: 472px; height: 549px;" alt="" title="" src="http://cdn.yjc.ir/files/fa/news/1393/7/5/2625678_485.jpg"><br><br><br>
+
+
+
+
+                <BlogExtendedPost><br><br><b><a href='../../../229.html'>ادامه مطلب</a></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="../../../category/11.html" class=text4>خواندنی ها</a>،&nbsp;<a href="../../../category/8.html" class=text4>عمومی</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font><br><br>
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div58><font class=text7>یکشنبه ششم مهر 1393 :: نویسنده : <a href="../../867755.html">اصغر صادقی راد</a></font></div>
+            <div class=div27>
+                <font class=text8><a href="../../../229.html#commentlist">نظرات (<script>setCommentCnt(229)</script>)</a></font>
+
+                <div style="margin-top: -9px; margin-left: 20px; float: left;"><script>mihanblogPostLike('229','like')</script></div>
+
+
+            </div>
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 0px;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:605px; float:left; background:#e8dabf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 5px; padding:0 0 10px 0;}
+            .com1{ width:587px; float:left; background:#542e19; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:360px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:567px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:567px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:577px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="../../../228.html">نسیم رحمت نسخه یک</a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><p id="ravan">نرم افزاری با عنوان نسیم رحمت  که ویژه ماه 
+		مبارک رمضان میباشد و کاری از گروه نرم افزاری شیعه ها می باشد. شما در این نرم افزار به موضوعاتی از قبیل:
+مقالات پیرامون ماه رمضان. مطالبی پیرامون روزه و احکام آن. دریافت تصاویر ویژه ماه رمضان. دریافت فایل های صوتی.
+و ...</p>
+        <blockquote>
+			<p style="line-height: 150%; text-align: right;" dir="ltr">
+			<a href="http://dl.aviny.com/download/software/religious/NasimeRahmat/NasimeRahmat.zip">
+			<img src="http://www.aviny.com/Download/image/download-logo.png" width="50" border="0" height="50"><img src="data:image/png;base64,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" alt=""></a></p>
+		</blockquote>
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="../../../category/10.html" class=text4>نرم افزار</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font><br><br>
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div58><font class=text7>شنبه پنجم مهر 1393 :: نویسنده : <a href="../../867755.html">اصغر صادقی راد</a></font></div>
+            <div class=div27>
+                <font class=text8><a href="../../../228.html#commentlist">نظرات (<script>setCommentCnt(228)</script>)</a></font>
+
+                <div style="margin-top: -9px; margin-left: 20px; float: left;"><script>mihanblogPostLike('228','like')</script></div>
+
+
+            </div>
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 0px;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:605px; float:left; background:#e8dabf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 5px; padding:0 0 10px 0;}
+            .com1{ width:587px; float:left; background:#542e19; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:360px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:567px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:567px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:577px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="../../../226.html">سکانس برتر معراجی ها-تاریخ ۲۵۰۰ سال-شهدای دفاع مقدس</a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+		<!--AparatShow-->
+				<div style="display:none">[http://www.aparat.com/v/Rfv2s]</div>
+                <div class="aparatFrame">
+                    <iframe frameborder=0  allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" width="435" height="290" src="http://www.aparat.com/video/video/embed/videohash/Rfv2s/vt/frame"> </iframe>
+                </div>
+
+		<!--eoAparatShow-->
+				
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="../../../category/9.html" class=text4>چندرسانه ای</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font><br><br>
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div58><font class=text7>شنبه پنجم مهر 1393 :: نویسنده : <a href="../../867755.html">اصغر صادقی راد</a></font></div>
+            <div class=div27>
+                <font class=text8><a href="../../../226.html#commentlist">نظرات (<script>setCommentCnt(226)</script>)</a></font>
+
+                <div style="margin-top: -9px; margin-left: 20px; float: left;"><script>mihanblogPostLike('226','like')</script></div>
+
+
+            </div>
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 0px;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:605px; float:left; background:#e8dabf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 5px; padding:0 0 10px 0;}
+            .com1{ width:587px; float:left; background:#542e19; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:360px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:567px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:567px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:577px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="../../../225.html">یک ضربه کاری+عکس </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>جاسم دلاوری ملی پوش دسته 91+ کیلوگرم بوکس ایران در نخستین مبارزه خود در بازی های آسیایی 2014 اینچئون حریف چینی را شکست داد.<br><img style="border: medium none;" alt="" title="" src="http://cdn.yjc.ir/files/fa/news/1393/7/5/2623663_404.jpg"><br><br><br>منبع عکس: <span style="color: rgb(0, 0, 205);">سایت کمیته ملی المپیک</span>
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="../../../category/13.html" class=text4>ورزشی</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font><br><br>
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div58><font class=text7>شنبه پنجم مهر 1393 :: نویسنده : <a href="../../867755.html">اصغر صادقی راد</a></font></div>
+            <div class=div27>
+                <font class=text8><a href="../../../225.html#commentlist">نظرات (<script>setCommentCnt(225)</script>)</a></font>
+
+                <div style="margin-top: -9px; margin-left: 20px; float: left;"><script>mihanblogPostLike('225','like')</script></div>
+
+
+            </div>
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 0px;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:605px; float:left; background:#e8dabf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 5px; padding:0 0 10px 0;}
+            .com1{ width:587px; float:left; background:#542e19; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:360px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:567px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:567px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:577px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div>
+    <div class=div29></div>
+    <div class=div28><font class=text9>
+                <br><br>
+        ( کل صفحات : 26 )&nbsp;&nbsp;&nbsp;
+            <a href="1.html" class=text4><span>1</span></a>&nbsp;&nbsp;&nbsp;<a href="2.html" class=text4><span>2</span></a>&nbsp;&nbsp;&nbsp;<a href="3.html" class=text4><span>3</span></a>&nbsp;&nbsp;&nbsp;<a href="4.html" class=text4><b>4</b></a>&nbsp;&nbsp;&nbsp;<a href="5.html" class=text4><span>5</span></a>&nbsp;&nbsp;&nbsp;<a href="6.html" class=text4><span>6</span></a>&nbsp;&nbsp;&nbsp;<a href="7.html" class=text4><span>7</span></a>&nbsp;&nbsp;&nbsp;<a href="8.html" class=text4><i>...</i></a>&nbsp;&nbsp;&nbsp;    </font>
+    </div>
+</div>
+</div>
+<div class=div06>
+    <div class=div6><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099922/mytheme.ir_02.gif" width="990" height="40"></div>
+    <div class=div7>
+        <a href="http://www.mytheme.ir" target="_blank">
+            <img src="http://mihanblog.com/public/public/user_data/template/2099922/blank.gif" border=0 width=182 height=35></a></div>
+</div>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<style>
+    img{
+        max-width : 550px;
+    }
+</style>
+</body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'banesh75blog.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

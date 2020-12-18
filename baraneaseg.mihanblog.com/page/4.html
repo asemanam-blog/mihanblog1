@@ -1,0 +1,1556 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc@rsd.html" />
+<script type="text/javascript" src="../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1033403*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[123]='2';commentCnt[124]='0';commentCnt[126]='1';commentCnt[127]='0';commentCnt[128]='3';commentCnt[129]='1';commentCnt[130]='1';commentCnt[131]='9';commentCnt[132]='9';commentCnt[133]='4';commentCnt[134]='9';commentCnt[135]='10';commentCnt[136]='2';commentCnt[137]='6';commentCnt[138]='7';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[127]='0';
+mihanblogDisLikeArrCnt[127]='0';
+mihanblogLikeArrCnt[138]='0';
+mihanblogDisLikeArrCnt[138]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://baraneaseg.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://baraneaseg.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','159');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','پنجشنبه 7 فروردین 1393');
+	
+	setStatVar('today_view','3');
+	setStatVar('yesterday_view','15');
+	
+	setStatVar('this_month_view','517');
+	setStatVar('last_month_view','389');
+
+	setStatVar('total_view','106545');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (06:46)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://baraneaseg.mihanblog.com/statupdate/?data[refereruri]=http://baraneaseg.mihanblog.com/&data[postid]=&data[requesturi]=/page/4&data[sdate]=1607830349&data[hash]=de5623e6e662d10f3e2b7d1c2df716b4&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://baraneaseg.mihanblog.com/page/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://baraneaseg.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://baraneaseg.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<script type="text/javascript">var ariotik_user_id = 792;</script>
+<script type="text/javascript" src="http://ariotik.ir/website/js"></script>
+<script type="text/javascript">var abarclick_user_id = 713;</script>
+<script type="text/javascript" src="http://abarclick.ir/website/js"></script>
+
+<script type="text/javascript">var ariotik_user_id = 792;</script>
+<script type="text/javascript" src="http://ariotik.ir/website/js"></script>
+
+<head><div id="first_p" style="text-align: center; margin-top: 5px;"><a onclick="document.getElementById('main_p').style.display = 'block';document.getElementById('first_p').style.display = 'none';" href="4.html#"><img src="http://nightnama.ir/codes/backgr/7.gif" border="0"></a></div><div id="main_p" style="display: none;">
+<a target="_blank" href="http://nightnama.ir/codes/backgr">دریافت کد صفحه ورودی</a><br>
+
+
+
+<title>باران عشق</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Farsi">
+<meta name="description" content="باران عشق - ♥♥بارانی باش تو هم مثل من♥♥ - باران عشق">
+<meta name="keywords" content="باران عشق,baraneaseg, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="باران عشق" href="../post/rss/index.html" />
+<link href="http://nightnama.ir/theme/21/style.css" type="text/css" rel="stylesheet">
+<style>
+#header{background:#3a3a3a url(http://nightnama.ir/theme/21/header.jpg) no-repeat top right;height:400;width:100%;color:#838383;font-size:8pt;text-align:right}
+</style>
+</head>
+
+<body>
+
+<div align=center><div style="width:1000">
+
+<div class=smz>
+
+<div id=header>
+<div class=top-BlogTitle></div>
+<div class=top-menu><div class=BlogTitle>باران عشق</div><div class=Description>♥♥بارانی باش تو هم مثل من♥♥</div></div>
+
+<div class=top-menu2>
+<div style="float:right;width:0px;direction:rtl; height:20px"></div>
+<div style="float:right;width:500">
+<a href="../index.html">صفحه اصلی</a> |
+<a rel="nofollow" href="mailto:">ایمیل مدیر</a> |
+<a rel="nofollow" href="javascript:messageForm()">تماس با من</a> |
+<a title="نایت نما" href="http://nightnama.ir" target="_blank" >قالب وبلاگ</a> |
+<a rel="nofollow" href="../post/rss/index.html" target="_blank" >عناوین مطالب</a>
+</div></div></div>
+
+<div id=main-back>
+
+<div class=Sid>
+<div id=Sidebar> 
+
+<div class="TopSid"><div class=TopSid2>نویسندگان</div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../post/author/881009.html">هستی   157 </a></div></div>
+<div class=LowSid></div>
+
+		
+<BlogLinksBlock>
+<div class=TopSid><div class=TopSid2>
+<b>لینک دوستان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a target="_blank" href="http://nightnama.ir">قالب وبلاگ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://sb13.ir/">::: بانک علوم :::</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.farsfunny.ir/">نمکستان</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.fbsff.blogfa.com/">کلبه من،کلبه غم/آسمون اینجا همیشه ابریست</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://email3.ir/">&quot;&quot;ارسال ایمیل تبلیغاتی&quot;&quot;</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../sheelman.mihanblog.com/index.html">چراغ خواب شلمن</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://nicerdicer-plus.rozblog.com/">&quot;&quot;خرد کن نایسر نایسر پلاس&quot;&quot;</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.idvb.ir/">دانلود کلیپ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../naasimehonar.mihanblog.com/index.html">هنر معماری</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../elm-city.mihanblog.com/index.html">... علمی مهندسی ...</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../tiraxtur-fifa.mihanblog.com/index.html">فوتبال - تراختور</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../hamidss1994.mihanblog.com/index.html">عکس آهنگ فیلم داستان و خبر داغ...</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.137213721372.blogfa.com/">رویای مهتاب</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../mirhashemi-2.mihanblog.com/index.html">هموطن</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../kaptanbloom.mihanblog.com/index.html">کاپتان بلوم</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../lovlygirl-justforu.mihanblog.com/index.html">دختری از جنس غم با لبخندی سردتر از یخ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../happygirl80.mihanblog.com/index.html">دنیای رنگی من</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../eshghess.mihanblog.com/index.html">پگاه استقلالی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../fab-friends.mihanblog.com/index.html">صدای پای عشق</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../hamidsss1994.mihanblog.com/index.html">داستان عاشقانه زیبا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../asheghane9.mihanblog.com/index.html">عاشقانه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../banke-etelaat.mihanblog.com/index.html">علوم آزمایشگاه دزفول</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../amd75.mihanblog.com/index.html">دلنوشته های یک مرد</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../tehwatchmens.mihanblog.com/index.html">ساعت مچی مردانه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../donyayzard.mihanblog.com/index.html">دنیای سرد</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://frbidden-love.blogfa.com/">عشق ممنوع</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../chashmemeygoon.mihanblog.com/index.html">چشم میگون</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../bazi-city.mihanblog.com/index.html">... دانلود بازی ...</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://musigi-city.mihanblog.com/">دانلود آهنگ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../furushgah-city.mihanblog.com/index.html">بهترین فروشگاه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../ax-women-ir.mihanblog.com/index.html">عكس بازیگران زن ایرانی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ddownloadd-city.mihanblog.com">... دانلودكده ....</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../asemone-asheghi.mihanblog.com/index.html">آسمون عاشقی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://takbilliards.ir/">بیلیارد</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../hrwriting.mihanblog.com/index.html">&quot; نوشته های همایون رقابی&quot;</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../aznooo.mihanblog.com/index.html">شهدای زنجانرود</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../khotbehsara.mihanblog.com/index.html">آنایوردم خطبه سرا نگین تالش</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../msaal.mihanblog.com/index.html">&quot;باز تابش امسال&quot;</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../ebimiri.mihanblog.com/index.html">پسر مشرقی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://nit.persianblog.ir/">تکنولوژی  جدید</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../weloveus.mihanblog.com/index.html">عشق &amp; نفرت</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ai-nafas.mihanblog.com/">مثل آب آرام باش....</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../30gar-qam.mihanblog.com/index.html">آخرین سیگار.......</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../baran360.mihanblog.com/index.html">حرف های بارانی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../cgirls.mihanblog.com/index.html">نوجوانان تیز هوش</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://hasty76.blogfa.com/">عمق احساس</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://pinkremembrance.blogfa.com/">دلــــنوشته هآیِ صـــــورتــیـــِ مـنــ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../buyglasses-biz.mihanblog.com/index.html">عینک آفتابی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../fereshteh9.mihanblog.com/index.html">فرشته</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../mortezamousazadeh.mihanblog.com/index.html">دیـــــــــــــــــــــــــــــرو</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://juik.blogsky.com/">لینک باکس</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://unique-boy.persianblog.ir/">غـــــــرور عاشـــــقانه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://royajooon94.blogfa.com/">به نــــــام عشق زیباترین دروغ دنیــــا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.manotosport.ir/">من و تو اسپورت</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://kolbehlove.persianblog.ir/">کلبه کوچک عاشقی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://pesarekhastee.blogfa.com/">حرفهای پسر خسته از زندگی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://myrayban.ir/page/link">تبادل لینک</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://buy-glasses.ir">خرید عینک آفتابی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../1hamotaghi.mihanblog.com/index.html">لیلی جونم</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../www.zemzemeh-baran.mihanblog.com/index.html">زمزمه بارون</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../ipromissu4ever.mihanblog.com/index.html">سکوت آبی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../amir-maleki.mihanblog.com/index.html">ورزش حرفه ای</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.fapma.blogfa.com/">اینجا همه چی دونیه!!!</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../naderkhan.mihanblog.com/index.html">لیمو ترش</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.lahzehayetanhaee.blogfa.com/">Lovely Web</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../rosezard.mihanblog.com/index.html">arose ghorbat</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../amir-maleki.mihanblog.com/index.html">ورزش حرفه ای</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://boxlink.loxblog.com/">افزایش آمار</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.sajad0206.loxblog.com/">کبوتری در تاریکی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://eshgh-bi-enteha.blogfa.com/">عشق بی انتها</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.productdesigner.ir">.:: پارک علم و فناوری ::.</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://melodylonely.blogfa.com/">اینجا همه چی در همه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://vahedmvp.lxb.ir/">شرافتهای مظلوم</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../kachoo.mihanblog.com/index.html">sarnevesht</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../www.yatoyabazamto.mihanblog.com/index.html">عاشقانه ها</a></div><div class=li-Sid>
+<a target="_blank" href="http://nightnama.ir">نایت نما</a></div>
+<div class=li-Sid>
+<a target="_blank" href="http://nightnama.ir">قالب میهن بلاگ</a></div></div>
+<div class=LowSid></div>
+</BlogLinksBlock>
+
+
+
+<div class=TopSid><div class=TopSid2>
+<b>پیوندهای روزانه</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://takparvar.ir/post/33" title="">ورمی کمپوست</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://womenclock.parsiablog.com" title="">ساعت زنانه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://bodyshaping.ir" title="">اسلیم لیفت</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.mahz.ir/" title="">صنایع الکترونیک مهزیار</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://glasses2013.ir" title="">خرید عینک آفتابی 2013</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://link98club.r98.ir" title="با سلام....
+ 
+لـــینکـدونـــی | سیستم تبادل لینـــک و بــــنر 
+
+تبادل لینـــک و بــــنر  |   بهترین راه محبوبیت سایت شما در گوگل 
+
+جدیدترین سیستم تبادل بنر و لینک
+
+ پس زود بیاید 
+http://link98club.rozblog.com">سیستم تبادل لینـــک و بــــنر هوشمند</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.hidecor.ir/" title="">برچسبهای دیواری</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.tikbuy.ir" title="با سلام فروشگاه تیک عرضه کننده محصولات متنوع از سراسر وب پس از هر خرید ,کارت شارژ رایگان هدیه میدهد محصولات ما شامل انواع عینک نرم افزار لوازم خانگی لوازم آرایشی لوازم پزشکی گردنبند و دستبند پوشاک لوازم الکترونیکی ادکلن ساعت کارتون مستند و... می باشد خرید شما افتخار ماستwww.tikbuy.ir (جهت تبادل لینک ابتدا ما رو لینک کنید بعد اطلاع بدید)">کارت شارژ رایگان هدیه بگیرید</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.link118.com/" title="">تبادل لینک</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://chargeha.com" title="">فروش اینترنتی کارت شارژ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://fabner.biz/products/buy-a-sunglasses/buy" title="">خرید عینک ریبن اصل</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.nightnama.ir">قالب وبلاگ</a></div>
+<div class=li-Sid>
+<a target="_blank" href="http://nightnama.ir">قالب های نایت نما</a></div></div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>نایت نما</div></div>
+<div class=CenterSid>
+
+
+
+
+<div class=li-Sid><center>
+<a target="_blank" title="طراحی سایت" href="http://www.hamkarweb.ir/">طراحی سایت</a> |
+<a target="_blank" title="اسکریپت دونی" href="http://www.script2ni.ir/">اسکریپت دونی</a> |
+<a target="_blank" title="گالری عکس" href="http://www.nightnama.ir/gallery">گالری عکس</a>
+</div>
+<br><div class=LowSid></div>
+
+</div>
+</div>
+
+<div class=main>
+
+<div class=post>
+
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/138">جملات زیبا برای تبریک چهارشنبه سوری ۹۰ </a></div></div>
+<div class=t-date>تاریخ : چهارشنبه 23 اسفند 1391  | 13:23  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+<p style="text-align: center;"><font color="#CC0000">آخرین چهارشنبه قبل از حلول سال جدید را 
+چهارشنبه سوری می گویند، که البته شب آن، یعنی غروب سه شنبه مهم است نه خود
+ چهار شنبه. جشن چهارشنبه سوری یکی از مراسم بسیار جذاب و مفرح ما ایرانیان
+ به شمار می آید. این جشن در قبل از تهاجم اعراب در بین نیاکان ما به جشن 
+سوری مرسوم بود. سور به معنی سرخ می باشد و چون این جشن با برپا کردن آتش 
+همراه است به این نام مرسوم گردید. آتش در بین ما ایرانیان مظهر نابودی 
+تاریکی و سیاهی است. این دو واژه همان پلیدی و اهریمن هستند و روشنایی آتش 
+پاکیزگی، طراوت، زندگی و سلامتی، سازندگی و پیشرفت را به همراه دارد. 
+همچنین با کمک آتش و نور که سمبل های خوبی هستند افراد امیدوارند که راه 
+خود را در آخرین شبهای تاریک سال پیدا کنند و به روزهای آغازین بهار برسند</font></p>
+<p style="text-align: center;">
+</p><p style="text-align: center;"><font color="#CC66CC"><img src="http://upload.tehran98.com/img1/y8szvbvilvxu494i9pd.gif" alt="" hspace="0" vspace="0" align="bottom" border="0"></font></p>
+<p style="text-align: center;"><font color="#CC66CC"><span style="color: #0000ff;">چهارشنبه سوری هر آتیشی که دیدی به یاد قلب منم باش آخه از دوریت بدجوری آتیش گرفته</span></font></p>
+<p style="text-align: center;">
+</p><p style="text-align: center;"><font color="#CC66CC"><span style="color: #ff0000;">چنین گفت زرتشت:</span><br><span style="color: #ff0000;"> ” که سوزانید بدی را درآتش ، تا ز آتش برون آید نیکی”</span></font>
+<font color="#CC66CC"><br><span style="color: #ff0000;"> پس تو نیز چنین کن.<span id="more-2527"></span></span></font>
+</p>
+<p style="text-align: center;"><font color="#CC66CC"><span style="color: #0000ff;">چهار شنبه سوری روز ملی مبارزه با آرامش اعصاب بر شما ترقه بازان گرامی مبارک باد.</span><br><span style="color: #0000ff;"> .</span></font>
+<font color="#CC66CC"><br><span style="color: #0000ff;"> .</span></font>
+<font color="#CC66CC"><br><span style="color: #0000ff;"> ستاد روانی شدگان چهار شنبه اخر سال</span></font>
+</p>
+<p style="text-align: center;"><font color="#CC66CC"><span style="color: #ff0000;">تام کروز ، 
+نیکلاس کیج ، جنیفر لوپز ، رابرت دنیرو ، یانی ، دیووید کاپرفیلد ، آنتونی 
+رابیز ، خود من و بقیه ی ستارگان جهان ازت خواهش میکنیم چهارشنبه سوری 
+مواظب خودت باشی</span></font></p>
+<p style="text-align: center;"><font color="#CC66CC"><span style="color: #0000ff;">سوختن غمهایت در آتش ۴شنبه سورى آرزوى من است،۴شنبه سوریت مبارک</span></font></p>
+<p style="text-align: center;"><font color="#CC66CC"><span style="color: #ff0000;">مواظب باش چهار شنبه سوری برق چشمات رو با آتیش اشتباه نگیرن</span></font></p>
+<p style="text-align: center;"><font color="#CC66CC"><span style="color: #0000ff;">با توجه به نزدیک شدن چهارشنبه سوری قبل از پریدن از روی آتش به موارد زیر توجه کنید:</span><br><span style="color: #0000ff;"> ۱ سایز خشتک</span></font>
+<font color="#CC66CC"><br><span style="color: #0000ff;"> ۲ زاویه پرش</span></font>
+<font color="#CC66CC"><br><span style="color: #0000ff;"> ۳ استفاده از شورت مامان دوز در زیر شلوار</span></font>
+<font color="#CC66CC"><br><span style="color: #0000ff;"> ۴ دوری از هر گونه هیجان و جو زدگی علی الخصوص جلوی دخترا</span></font>
+<font color="#CC66CC"><br><span style="color: #0000ff;"> ۵ فاصله مناسب تا شعله های آتش در هنگام پرش</span></font>
+<font color="#CC66CC"><br><span style="color: #0000ff;"> ۶ توکل به خدا ، آبروی شما آبروی ماست….</span></font>
+<font color="#CC66CC"><br><span style="color: #0000ff;"> ( ستاد پیشگیری از حوادث غیر مترقبه ! )</span></font>
+</p>
+<p style="text-align: center;"><font color="#CC66CC"><span style="color: #ff0000;">غضنفر زنگ میزنه به ۱۱۸ و می پرسه :</span><br><span style="color: #ff0000;"> امسال چارشنبه سوری چند شنبه میافته ؟!</span></font>
+</p>
+<p style="text-align: center;"><font color="#CC66CC"><span style="color: #0000ff;">سلامتیه اونایی که براشون مثل آتیش چهارشنبه سوری بودیم همه وجودمون تو آتیش عشقشون سوخت تا اونا با شادی از رومون بپرن و رد بشن</span></font></p>
+<p style="text-align: center;"><font color="#CC66CC"><span style="color: #ff0000;">سرخ میشوی، وقتی میشنوی: دوستت دارم</span><br><span style="color: #ff0000;"> زرد میشوم، وقتی میشنوم: دوستش داری</span></font>
+<font color="#CC66CC"><br><span style="color: #ff0000;"> چهارشنبه سوری راه انداختیم سرخی تو از من ، زردی من از تو همیشه من میسوزم و همیشه تو میپری . .</span></font>
+</p>
+<p style="text-align: center;"><font color="#CC66CC"><span style="color: #0000ff;">بشد «چارشنبه» هم از بامداد / بدان باغ که امروز باشیم شاد</span><br><span style="color: #0000ff;"> چهارشنبه سوری گرامی باد</span></font>
+</p>
+<p style="text-align: center;"><font color="#CC66CC"><span style="color: #ff0000;">چهارشنبه سوری در پیش روی ماست</span><br><span style="color: #ff0000;"> همه بدبختی ها در پشت</span></font>
+<font color="#CC66CC"><br><span style="color: #ff0000;"> روزای خوش همه در پیش</span></font>
+<font color="#CC66CC"><br><span style="color: #ff0000;"> چه غوغا میکنه آتیش !</span></font>
+<font color="#CC66CC"><br><span style="color: #ff0000;"> چهار شنبه سوری مبارک</span></font>
+</p>
+<p style="text-align: center;" align="center"><font color="#CC66CC"><span style="color: #0000ff;"><span style="font-family: Verdana,Arial,Helvetica,sans-serif; font-size: large;"><strong><span style="font-family: Tahoma,Arial,Helvetica,sans-serif; font-size: x-small;">بشد </span><span style="font-family: Tahoma,Arial,Helvetica,sans-serif; font-size: x-small; color: #0000ff;">«چارشنبه»</span><span style="font-family: Tahoma,Arial,Helvetica,sans-serif; font-size: x-small;"> هم از بامداد&nbsp;&nbsp;&nbsp; بدان&nbsp; باغ&nbsp; که&nbsp; امروز&nbsp; باشیم&nbsp; شاد</span></strong></span></span></font></p>
+<p style="text-align: center;" align="center"><font color="#CC66CC"><span style="color: #0000ff;"><span style="font-family: Verdana,Arial,Helvetica,sans-serif; font-size: large;"><strong><span style="font-family: Tahoma,Arial,Helvetica,sans-serif; font-size: x-small;">چهارشنبه سوری گرامی باد</span></strong></span></span></font></p>
+<p style="text-align: center;"><font color="#CC66CC"><span style="color: #000066;"><span style="color: #ff0000;">چون تیر رها گشتـه ز چلّـه شده ایم!</span><br>
+<span style="color: #ff0000;"> مهمان شمــا در شب چلّـه شده ایم!</span><br>
+<span style="color: #ff0000;"> از برکت ایـن سفــره ی الــوان شما</span><br>
+<span style="color: #ff0000;"> تا خرخره خورده،چاق و چلّـه شده ایم!</span><br>
+</span></font></p>
+<p style="text-align: center;"><font color="#CC66CC"><span style="color: #0000ff;">چهارشنبه سوری جایی قرار نذاری کار واجب باهات دارم</span><br><span style="color: #0000ff;"> آحه آتیش کم داریم آتیش پاره</span></font>
+</p>
+<p style="text-align: center;"><font color="#CC66CC"><span style="color: #ff0000;">سوختن غمهایت در آتش ۴شنبه سورى آرزوى من است،۴شنبه سوریت مبارک</span></font></p>
+<p style="text-align: center;"><font color="#CC66CC"><span style="color: #0000ff;">در پی اختلاف نظر در مورد اینکه شب چهارشنبه سوری ۲۲ است یا ۲۹٫ روز ۲۲ اسفند یوم الشک و از ۲۲ تا ۲۹ اسفند هفته ی وحشت اعلام شد</span></font></p>
+
+
+
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(138)">نظرات  <script>setCommentCnt(138)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/137">قتل دختر بعد از تعرض و رضایت اولیای‌ دم </a></div></div>
+<div class=t-date>تاریخ : سه شنبه 15 اسفند 1391  | 21:42  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+<p><font color="#993399" size="2">قتل دختر بعد از تعرض و رضایت اولیای دم<br></font></p><p><font color="#993399" size="2">سه مرد جوان که متهم هستند دختری را ربوده، مورد آزار قرار داده و به 
+قتل رسانده‌اند با اعلام رضایت اولیای‌دم برای محاکمه به لحاظ جنبه عمومی 
+جرم، پای میز محاکمه رفتند.</font></p>
+<p><font color="#993399" size="2">به گزارش خبرنگار ما، این سه جوان متهم هستند سال۸۷&nbsp; دختر جوانی به نام 
+«سحر» را در منطقه ملارد شهریار به قتل رسانده‌اند. این پرونده زمانی تشکیل
+ شد که ماموران پلیس از طریق پرستارانی در بیمارستان ملارد در جریان مرگ 
+دختری قرار گرفتند که به دلیل آزار جنسی و مسمومیت دارویی جانش را از دست 
+داده‌بود. پرستاران به پلیس گفتند سه پسر جوان این دختر را به بیمارستان 
+آوردند و هنوز هم بیرون ایستاده‌اند.</font></p>
+<p><font color="#993399" size="2">سه جوان که نیما، بابک و حامد نام دارند بازداشت شدند و مورد بازجویی 
+قرار گرفتند. نیما در تحقیقات گفت: من با سحر آشنا شدم و او را به باغی در 
+حوالی ملارد بردم. دو دوستم هم آنجا بودند. ما به دختر جوان مقدار زیادی 
+قرص خوراندیم و او را مورد آزار جنسی قرار دادیم. قصدمان این نبود، او را 
+بکشیم&nbsp; فقط می‌خواستیم با او رابطه داشته ‌باشیم. تحقیقات بعدی پلیس نشان 
+داد این دختر جوان، دانشجویی است که خانواده‌اش از مفقود شدن او 
+خبرداده‌بودند. او چندماه قبل با نیما آشنا شده بود و در این مدت با او 
+رابطه داشت اما دوستان نیما را نمی‌شناخت. بنا بر این اطلاعات، ماموران دو 
+متهم دیگر را هم مورد بازجویی قرار دادند. حامد متهم ردیف دوم تایید کرد با
+ مقتول رابطه داشت.</font></p>
+<p><font color="#993399" size="2">او گفت: «ما سه نفر ۱۸ ساعت این دختر را مورد آزار جنسی قرار دادیم و به
+ او دیازپام خوراندیم تا نتواند حرکت کند. بعد که بدحال شد ترسیدیم، بمیرد 
+به همین دلیل سریع او را به بیمارستان بردیم.»گزارش پزشکی قانونی گره دیگر 
+این پرونده را گشود و متخصصان اعلام کردند تجاوز به این دختر به عنف بوده 
+است. متخصصان همچنین عنوان کردند دختر جوان به دو دلیل مسمومیت دارویی و 
+تجاوزات پی‌درپی جان خود را از دست داده‌است. بنابراین پرونده تکمیل و برای
+ رسیدگی به دادگاه کیفری استان تهران فرستاده‌شد.</font></p>
+<p><font color="#993399" size="2">روز گذشته در ابتدای جلسه محاکمه بعد از اینکه کاکولی نماینده دادستان 
+تهران در جایگاه حاضر شد و گزارشی از پرونده ارایه کرد، اعلام کرد با توجه 
+به اعلام گذشت اولیای‌دم درخصوص قصاص، دادستانی درخواست مجازات متهمان به 
+لحاظ جنبه عمومی جرم را دارد. کاکولی گفت: بنابر اطلاعات و مدارکی که در 
+پرونده ‌است متهمان با کشاندن سحر دختر دانشجو به داخل باغی در ملارد 
+شهریار او را ساعات طولانی مورد آزار جنسی قرار دادند. آنها سپس با خوراندن
+ دارو به متهم او را مسموم کرده و به قتل رسانده‌اند. از آنجایی که 
+اولیای‌دم اعلام رضایت کرده‌اند و جنبه خصوصی جرم منتفی شده‌است به 
+نمایندگی از سوی دادستان بر اساس ماده ۶۱۲ قانون مجازات اسلامی و به دلیل 
+بیم‌تجری برای متهمان درخواست صدور حکم مجازات دارم.</font></p>
+<p><font color="#993399" size="2">در ادامه نیما متهم ردیف اول در جایگاه حاضر شد. او اتهام مشارکت در قتل
+ را رد کرد و گفت: من نقشی در قتل نداشتم. چندماهی می‌شد که یکی از دوستانم
+ شماره من را به سحر داده‌بود چندین بار او را دیدم و با هم رابطه 
+دوستانه‌ای برقرار کردیم بعد از طریق دوستم متوجه شدم سحر قصد ازدواج با من
+ را دارد. او به دوستم گفته‌بود می‌خواهد به من پیشنهاد ازدواج بدهد و خیلی
+ از من خوش‌اش می‌آید اما من چندان به او علاقه‌مند نبودم تا اینکه روز 
+حادثه پیشنهاد دادم به اتفاق سحر و دو دوستم حامد و بابک به باغی برویم در 
+آنجا به سحر پیشنهاد دادیم با او رابطه داشته ‌باشیم و سحر هم قبول کرد. او
+ خودش به این رابطه راضی بود. قرص‌های دیازپام را هم خودش خورد و ما هیچ 
+نقشی در خوراندن قرص‌ها نداشتیم به همین دلیل هم قتل سحر را قبول ندارم. هر
+ آنچه من و دوستانم در اداره پلیس گفتیم تحت فشار بوده‌است و این گفته‌ها 
+را قبول نداریم.</font></p>
+<p><font color="#993399" size="2">در ادامه متهم ردیف دوم در جایگاه حاضر شد او هم اتهامش را رد کرد و 
+گفت: قبول دارم بارها و بارها با سحر رابطه داشتم و ساعات طولانی در باغ 
+بودیم اما او خودش راضی به این کار بود و من اصلا نمی‌دانم چرا قرص‌های 
+دیازپام را می‌خورد. ما قصدی برای کشتن او نداشتیم و اگر می‌خواستیم سحر 
+بمیرد به جای اینکه او را به بیمارستان ببریم و سعی کنیم نجاتش دهیم، رهایش
+ می‌کردیم تا همانجا جان بدهد و بعد هم جسد را سر به نیست می‌کردیم. ما هیچ
+ قصدی برای قتل او نداشتیم. در ادامه متهم ردیف سوم در جایگاه حاضر شد. او 
+هم اتهام را رد کرد و گفته‌های دو متهم دیگر را مورد تایید قرار داد. سپس 
+وکلای متهمان در جایگاه حاضر شدند و دفاعیات خود را ارایه کردند. با پایان 
+یافتن جلسه محاکمه هیات قضات برای صدور رای دادگاه وارد شور شدند.</font></p>
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(137)">نظرات  <script>setCommentCnt(137)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/136">اینجوری از استاد نمره بگیرید! + عکس</a></div></div>
+<div class=t-date>تاریخ : سه شنبه 15 اسفند 1391  | 21:33  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><h2 style="text-align: center"><img src="http://upload.tehran98.com/img1/7tfulkqn9jy8no48j5yn.png" alt="" vspace="0" hspace="0" align="bottom" border="0"></h2><h2 style="text-align: center"><font color="#993399" size="3">اینجوری از استاد نمره بگیرید! + عکس</font></h2>
+<p style="text-align: center"><font color="#993399" size="3">داستان استاد و دانشجو از آن داستان های قدیمی است که همه از آن اطلاع داریم. در این میان از روش های متفاوتی برای گرفتن نمره استفاده می شود که ناشیانه ترین راه، همان درس خواندن است که هم کودکانه بوده و هم وقت گیر است و مخصوص بچه های لوس!</font></p>
+<p><font color="#993399" size="3">دانشجو اگر دانشجو باشد، همه تلاش خود را می کند تا در روز امتحان، با 
+استفاده از زور بازو (جهت در دست گرفتن خودکار) و توان ذهنی (جهت روانی طبع
+ و نوشتن بعضی موارد خاص!) نمره خودش را از استاد بگیرد و بی خودی درس 
+نخواند.در این بین روش های مختلفی برای کسب نمره وجود دارد که چند نمونه آن
+ در زیر نمایش داده می شود: روش نخست:آه و ناله و قسم دادن استاد</font></p>
+<p><font color="#993399" size="3">آموزش کسب نمره از استاد + عکس</font></p>
+<p><font color="#993399" size="3">مهندس این چهارمین بارِ که استاتیک می گیرم …………..در این روش که بیشتر 
+مورد استفاده آقاپسرهای دانشجو کاربرد دارد، باید عین شیر! سرتان را بالا 
+گرفته و عین مرد اقدام به التماس و خواه شو تمنا کنید تا مشکلت تان حل شود!
+ البته بعضی اساتید چندان دل رحم نیستند و دلشان نمی سوزد. لذا احتمال 
+موفقیت در این روش، کمتر از ۵۰ درصد است!</font></p>
+<p><font color="#993399" size="3">روش دوم:پاچه خاری</font></p>
+<p><font color="#993399" size="3">آموزش کسب نمره از استاد + عکس</font></p>
+<p><font color="#993399" size="3">در این روش می توانید به معجزه محبت پی ببرید!دانشجویان محترم دقت داشته
+ باشند به یک نکته بسیار مهم. ممکن است یادمان برود که جواب فلان سوال چیست
+ اما عمراً محبت کردن را فراموش کنیم! لذا کاری نداشته باشید که دیگران 
+ممکن است شما را به عنوان چاپلوس و پاچه خار خطاب کنند! همه جا آدم حسود 
+پیدا می شود زیاد به این حرف ها اعتنا نکنید اگر نمره می خواهید.</font></p>
+<p><font color="#993399" size="3">روش سوم: از همه داشته هایتان استفاده کنید</font></p>
+<p><font color="#993399" size="3">آموزش کسب نمره از استاد + عکس</font></p>
+<p><font color="#993399" size="3">در این روش به محض اطلاع از ندانستن جواب سوال، اول خونسردی خود را حفط 
+کنید دوم نبازید خودتان را و سوم هر چی به ذهن تان آمد بنویسید و آخرش سه 
+تا نقطه بگذارید و آخرش هم امیدوار باشید به اینکه استاد گول می خورد و 
+نمره کامل سوال را به شما می دهد.</font></p>
+<p><font color="#993399" size="3">روش چهارم: مجموعه سه روش قبلی</font></p>
+<p><font color="#993399" size="3">آموزش کسب نمره از استاد + عکس</font></p>
+<p><font color="#993399" size="3">اجرای این روش نیازمند تبحر خاصی است که از دانشجویان قدیمی و آنها که 
+۱۰ سال وقت نیاز دارن جهت گرفت یک فوق دیپلم برمی آید.در روش فوق هم باید 
+محبت کنید (دقت کنید محبت نه پاچه خاری) هم از تمام داشته هایتان استفاده 
+کنید. آه و ناله را هم به صورت مستتر و زیرپوستی انجام دهید تا اثرات منفی 
+احتمالی آن بر روی استاد را خنثی کرده باشید.</font></p>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(136)">نظرات  <script>setCommentCnt(136)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/135">پ نه پ های جدید و خنده دار</a></div></div>
+<div class=t-date>تاریخ : پنجشنبه 10 اسفند 1391  | 17:37  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><h1><p style="text-align: justify;"><span style="font-size: small;">داریم 10 نفری بازی شبکه ای میکنیم اومده میگه جدی حال میده؟ میگم پــ نه پــ اسکولیم! عذاب داره اما میخوایم تهذیب نفس کنیم!</span></p>
+</h1><h1><p style="text-align: center;"><span style="font-size: small;"><span style="color: rgb(240, 128, 128);">♦♦♦♦♦♦♦♦پ ن پ جدید♦♦♦♦♦♦♦♦♦</span></span></p></h1>
+<h1>
+<p style="text-align: justify;"><span style="font-size: small;">رفتیم غار علیصدر. به رفیقم خفاش نشون دادم. میگه وای خفاشه! پــ نه پـــ بتمن بود. اجاره خونه گرونه اینجا سکونت دارن فعلا!!!</span></p>
+<p style="text-align: center;"><span style="font-size: small;"><span style="color: rgb(240, 128, 128);">♦♦♦♦♦♦♦♦پ ن پ جدید♦♦♦♦♦♦♦♦♦</span></span></p>
+<p style="text-align: justify;"><span style="font-size: small;">به یارو راننده میگم: آقا اگه میشه یکم سریعتر. الان هواپیما میپره... میگه: بسلامتی مسافرین؟</span></p>
+<p style="text-align: justify;"><span style="font-size: small;">... پــ نه پـــ... فندک هواپیما دیشب دستم جامونده، میرم بدم به رانندش!</span></p>
+<p style="text-align: center;"><span style="font-size: small;"><span style="color: rgb(240, 128, 128);">♦♦♦♦♦♦♦♦پ ن پ جدید♦♦♦♦♦♦♦♦♦</span></span></p>
+<p style="text-align: justify;"><span style="font-size: small;">رفیقم میگه اگه با گوشی برم تو اینترنت از شارژم کم میشه؟ پـــ نه پـــ از ذخیره ارزی کشورهای عضو اپک کم میشه.</span></p>
+<p style="text-align: center;"><span style="font-size: small;"><span style="color: rgb(240, 128, 128);">♦♦♦♦♦♦♦♦پ ن پ جدید♦♦♦♦♦♦♦♦♦</span></span></p>
+<p style="text-align: justify;"><span style="font-size: small;">به دوستم میگم این لینک هایی که دادی همشون خرابه!! میگه یعنی باز نمیشه ؟<br>
+میگم پـَـَـ نــه پـَـَــــ روشون کَپَک زده باید بریزیمشون دور !</span></p>
+<p style="text-align: center;"><span style="font-size: small;"><span style="color: rgb(240, 128, 128);">♦♦♦♦♦♦♦♦پ ن پ جدید♦♦♦♦♦♦♦♦♦</span></span></p>
+<p style="text-align: justify;"><span style="font-size: small;">بهش میگم : دیگه می خوام ازت جدا شم !<br>
+میگه : این حرف آخرته ؟<br>
+پ ن پ این خلاصه ای بود از اخبار ایران و جهان ،<br>
+لطفأ به ادامه ی خبر توجه فرمایید !</span></p>
+<p style="text-align: center;"><span style="font-size: small;"><span style="color: rgb(240, 128, 128);">♦♦♦♦♦♦♦♦پ ن پ جدید♦♦♦♦♦♦♦♦♦</span></span></p>
+<p style="text-align: justify;"><span style="font-size: small;">حواسم نبود با صورت رفتم تو در، میگه ندیدیش؟ میگم پـــ نه پــــــ من دارکوبم می خوام با منقار یه سوراخ برا خودم باز کنم برم تو.</span></p>
+<p style="text-align: center;"><span style="font-size: small;"><span style="color: rgb(240, 128, 128);">♦♦♦♦♦♦♦♦پ ن پ جدید♦♦♦♦♦♦♦♦♦</span></span></p>
+<p style="text-align: justify;"><span style="font-size: small;">رفتم صندلی بخرم واسه کامپیوتر، یارو گفت: راحت باشه؟ پــــ نه پــــ خار داشته باشه...</span></p>
+<p style="text-align: center;"><span style="font-size: small;"><span style="color: rgb(240, 128, 128);">♦♦♦♦♦♦♦♦پ ن پ جدید♦♦♦♦♦♦♦♦♦</span></span></p>
+<p style="text-align: justify;"><span style="font-size: small;">دارم تو حیاطمون موتورمو تعمیر میکنم به مامانم میگم دستمال بیخودی داری؟ میگه میخوای موتورتو تمیز کنی؟</span></p>
+<p style="text-align: justify;"><span style="font-size: small;">پـــ نــه پــــــ میخوام هل هله کنان برم تو کوچه کردی برقصم.</span></p>
+<p style="text-align: center;"><span style="font-size: small;"><span style="color: rgb(240, 128, 128);">♦♦♦♦♦♦♦♦پ ن پ جدید♦♦♦♦♦♦♦♦♦</span></span></p>
+<p style="text-align: justify;"><span style="font-size: small;">طوطی گرفتم فامیلمون اومده میگه اااااااااااااااااااااااا طوطیه؟<br>
+پـــ نــه پــــــ یا کریمه یه کم با فتوشاپ تغییرش دادم!</span></p>
+<p style="text-align: center;"><span style="font-size: small;"><span style="color: rgb(240, 128, 128);">♦♦♦♦♦♦♦♦پ ن پ جدید♦♦♦♦♦♦♦♦♦</span></span></p>
+<p style="text-align: justify;"><span style="font-size: small;">دستمو بلند کردم از استاد سوال کنم. میگه شما سوال داری؟ پـــ نــه پــــــ خواستم خطوط کف دستمو بهت نشون بدم فالمو بگیری ...</span></p>
+<p style="text-align: center;"><span style="font-size: small;"><span style="color: rgb(240, 128, 128);">♦♦♦♦♦♦♦♦پ ن پ جدید♦♦♦♦♦♦♦♦♦</span></span></p>
+<p style="text-align: justify;"><span style="font-size: small;">یارو 
+عکسمو دیده میگه:اااا دماغ خودته   این؟ پــــ نه پـــــــ دماغ اجدادمه که
+ بینی به بینی، نسل به نسل منتقل   شده الان رسیده به من!!!!</span></p>
+<p style="text-align: center;"><span style="font-size: small;"><span style="color: rgb(240, 128, 128);">♦♦♦♦♦♦♦♦پ ن پ جدید♦♦♦♦♦♦♦♦♦</span></span></p>
+<p style="text-align: justify;"><span style="font-size: small;">زنگ زدم 115، میگه آمبولانس میخواین قربان؟ پـَـَـ نَ پـَـَــــ یه پلیس 110 میخوام, بقیش هم آدامس بدین!</span></p>
+<p style="text-align: center;"><span style="font-size: small;"><span style="color: rgb(240, 128, 128);">♦♦♦♦♦♦♦♦پ ن پ جدید♦♦♦♦♦♦♦♦♦</span></span></p>
+<p style="text-align: justify;"><span style="font-size: small;">رفتم 
+دکتر میگم:دو روزه بدنم خیلی درد   میکنه! بعد از 10 دقیقه معاینه میگه: 
+میخوای واست دارو بنویسم؟! پـَـَـ نَ   پـَـَــــ میخوای واسم دعا کن تا 
+خوب بشم!!!!</span></p>
+<p style="text-align: center;"><span style="font-size: small;"><span style="color: rgb(240, 128, 128);">♦♦♦♦♦♦♦♦پ ن پ جدید♦♦♦♦♦♦♦♦♦</span></span></p>
+<p style="text-align: justify;"><span style="font-size: small;">هفته پیش مریض شدم، رفتم آمپول بزنم... آمپولارو دادم به پرستاره...میگه آمپول بزنم؟ پ نه پ توش آب پر کن تفنگ بازی کنیم!</span></p>
+<p style="text-align: center;"><span style="font-size: small;"><span style="color: rgb(240, 128, 128);">♦♦♦♦♦♦♦♦پ ن پ جدید♦♦♦♦♦♦♦♦♦</span></span></p>
+<p style="text-align: justify;"><span style="font-size: small;">ماشینه 
+تا شیشه جمع شده... یه نفر اون بغل   افتاده پارچه سفید روش کشیدن... یارو 
+داره رد میشه... میگه مرده؟ پ نه پ   تصادف خستش کرده خوابیده!</span></p>
+<p style="text-align: center;"><span style="font-size: small;"><span style="color: rgb(240, 128, 128);">♦♦♦♦♦♦♦♦پ ن پ جدید♦♦♦♦♦♦♦♦♦</span></span></p>
+<div><span style="font-size: small;">سوار تاکسی شدم رسیدیم سر خیابون 
+گفتم  مرسی آقا... می گه پیاده می  شین؟ پ نه پ خواستم بین مسیر یه تشکر 
+ناغافلی  کرده باشم جو از سنگینی  درآد!</span></div></h1><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(135)">نظرات  <script>setCommentCnt(135)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/134">طنز نوشته های کوتاه جدید</a></div></div>
+<div class=t-date>تاریخ : سه شنبه 8 اسفند 1391  | 20:59  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><h1><div style="text-align: center;"><img src="http://upload.tehran98.com/img1/x23acpoj2138pg0v2n8.jpg" alt="" vspace="0" hspace="0" align="bottom" border="0"> <br></div>
+<div style="text-align: center;"><span style="font-size: small;">&nbsp;اینکه پدر پولداری نداری مقصر نیستی<br>
+ولی اگه پدر زن و پدر شوهر پولدار پیدا نکنی خودت مقصری !</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+میگم تا حالا دقت کردین تو خونه یه سری وسایل هست<br>
+که همیشه همه جا میبینیشون ؟ اما خدا اون روز رو نیاره که بهشون احتیاج پیدا کنی !<br>
+یعنی کلا از چرخه هستی محو میشن !</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+نمیدونم چه مواد شیمیایی داره قطرات بارون !<br>
+به محض رسیدن به زمین اکثر تاکسی ها تبدیل به تاکسی دربست میشوند </span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+آهای حسود ، دیگه نمی خوام کور بشی !<br>
+گناه داری<br>
+از خدا میخوام دو تا چشم اضافه بهِت بده که بیشتر بسوزی </span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+این که میگن خوشگلی وخوشتیپی دردسر داره ، واقعا حقیقت داره<br>
+خواستم تجربه شخصیم رو گفته باشم !</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+شارژ ایرانســــــل میگیرم باهاتـــــون تو بـــــارون قدم میــــزنم</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+دقت کردی هیچکس به سکوت آدم نمیرسه همه منتظرن به فریاد آدم برسن !؟</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+محبتت رو از کسی دریغ نکن ولی به قدری به کسی محبت کن<br>
+که بعدا مجبور نشی ثابت کنی که خر نبــودی !</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+تنها زمانی مشتری ها با لبخند وارد مغازه میشوند<br>
+که میخوان جنسی رو تعویض کنن یا پس بدن!!</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+این هــــــواى لعنتى هم مى بینه مــــــا یـــه نفریم<br>
+هى دو نفره میشه هـــــواای بیشعووور!!</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+بدترین چیز اینه که با کسی نباشی ولی همه فکر کنن با خیلیایی </span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br style="text-align: center;">
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+بچگیا تفریحمون این بود که وقتی جوراب می پوشیدیم<br>
+و پامو روی فرش می کشیدیم و به یه نفر دیگه دست میزدیم تا جرقه بزنه !</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+خواننده شدن دیگه مثل سابق صدا نمیخواد<br>
+فقط یه پدر و مادر میخواد که آدم باهاشون قهر کنه …</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+تا حالا دقت کردین اگه تو مترو الکی شروع به دویدن بکنید<br>
+ملت هم همینطوری دنبالتون میدوند…..!</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+شب تولدم ، شروع کردم به باز کردنِ کادوها<br>
+به کادوی بابام که رسیدم دیدم یه پاکته که درش بازه !!<br>
+توشو که نگاه کردم دیدم نوشته :<br>
+هشتاد هزار تومنی رو که سه ماهِ پیش گرفتی ، نمیخواد برگردونی !<br>
+تولدت مبــارک …!</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+من هنوز نفهمیدم فتوای این بچه کوچولوها<br>
+که دو سه نفری میان میگن آقا کمک به هیئت چیه !؟</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+اگه باتری موبایلت خوب شارژ نگه می‌داره<br>
+به جای اینکه به جون کارخونه سازنده دعا کنی یه فکری به حال تنهاییت بکن بدبخت!!</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+</span><span style="font-size: small;"><span style="color: rgb(0, 128, 128);">********جملات خنده دار********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+قدیما خانوما مینشستن سبزی پاک میکردن و غیبت میکردن<br>
+خوشبختانه الان این عادتشونو ترک کردن<br>
+&nbsp;البته فقط سبزی پاک کردنشو ترک کردن!</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+شما سر شهرام شبپره رو بگیر محکم نذار تکون بخوره<br>
+اگه تونست حرف بزنه !</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+خانمه ۲۰۶ رو زده به تیر برق ، ماشین نصف شده ! به افسر میگه یعنی اشتباه<br>
+از من بوده ؟ افسر : پـَـــ نــه پـَـــ علت حادثه خواب آلودگیه تیر چراغ بوده !</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+یک قانون نانوشته هست که می گه:<br>
+هر موقع نگاهت به زمین میفته<br>
+دقیقا همون نقطه ای که صد نفر اونجا تف کردنو می بینی !</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+حسرت به دل موندیم<br>
+کمربند ماشینو یه دستی با یه حرکت بکشیم ببندیم جاش !</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+هیچ انتظاری از کسی ندارم و این نشان دهنده ی قدرت من نیست !<br>
+مسئله خستگی از اعتمادهای شکسته است .</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+یکی از شاخص ترین مزیت های سیم کارت های اعتباری اینه که<br>
+می تونی به بعضیا که حوصله شونو نداری بگی : “شارژ ندارم”</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br style="text-align: center;">
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+یه زمانی نمیدونستم دلار چیه ! سکه چیه ! تورم چیه !<br>
+بزرگترین دغدغه ی زندگیم این بود که …<br>
+آدامس میخرم عکسش تکراری نباشه !<br>
+ایکاش میشد برگشت به اون زمان</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br style="text-align: center;">
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+اگه کثافت رو با خودکار معطر بنویسی هم<br>
+چیزی از معناش کم نمیشه !<br>
+درست مثه آدمهای گندی که<br>
+لباس و آرایش و موقعیت خوب دارن !</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+یه کیبرد جدید خریدم ولی زیاد باهاش حال نمیکنم<br>
+خیلی نرمه آدم اصن حس تایپ نمیگیره ، کیبردی که شق شق صدا نده کیبرد نیست !</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+خدایا به این ملت بیاموز یا انار رو دون کنید و پذیرایی کنید<br>
+یا در ظرف میوه قرار ندهید !</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+قدیما آیفون معمولی بود<br>
+می گفتیم کیه ؟ طرف می گفت منم<br>
+الان که تصویری شده<br>
+هرکی زنگ میزنه ژست میگیره بعد زل میزنه به افق</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+یه زمانـــــی حاشیه دور فرش , جاده اتومبیل رانیمون بود !</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+توی اول دبیرستان دوست احمقم ترک تحصیل کرد<br>
+ولی ما به سلامتی دانشجو شدیم…<br>
+خدارو شکر الان ایشان ماشین هیوندا جنسیس داره<br>
+بنده هم&nbsp; یک دستگاه ماشین حساب دارم</span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+ﻣﻦ ﺍﺯ ﻫﻤﯿﻦ ﺗﺮﯾﺒﻮﻥ ﺍﺯ ﻫﻤﻪ ﯼ ﻣﺎﻣﺎﻥ ﻫﺎ ﺩﺭﺧﻮﺍﺳﺖ ﻣﯽﮐﻨﻢ<br>
+ﯾﺎ ﺳﯿﺐ ﺯﻣﯿﻨﯽ ﺳﺮﺥ ﮐﺮﺩﻩ ﺟﻠﻮ ﻣﺎ ﺩﺭﺳﺖ ﻧﮑﻨﻦ<br>
+ﯾﺎ ﻭﻗﺘﯽ ﺩﺭﺳﺖ ﻣﯽ ﮐﻨﻦ ﺑﺬﺍﺭﻥ ﻣﺎ ﻧﺎﺧﻮﻧﮏ ﺑﺰﻧﯿﻢ<br>
+ﻭ ﺑﺎ ﮐﻔﮕﯿﺮ ﺗﻬﺪﯾﺪﻣﻮﻥ ﻧﮑنن </span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+<span style="color: rgb(51, 153, 102);">********جملات خنده دار</span><span style="color: rgb(51, 153, 102);">********</span></span></div>
+<div style="text-align: center;"><span style="font-size: small;"><br>
+آقا ما یه دوستی داریم مهندس کامپیوتر هستش<br>
+دیروز اومد پیش من گفت میخوام لپ تابم رو باز کنم<br>
+سوکت شارژش لغ شده ، قطع و وصل میشه هی<br>
+خلاصه بعد از ۱۲۰ دقیقه ، کامل بازش کردیم مادربردش رو نگاه کردیم<br>
+دیدیم سوکت شارژ سالمه !<br>
+فیش شارژر رو زدیم بهش ببینیم چه جوریه دیدم لغ بودن از سمت فیش شارژر هستش !<br>
+هیچی دیگه همونجا در دم بهش ایمان آوردم !<br>
+بعدش زنگ زدم به پت و مت آمادگی خودمون رو جهت جایگزینی اعلام کردم</span></div></h1>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(134)">نظرات  <script>setCommentCnt(134)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/133">بخون و بخند ...!! (طنز)</a></div></div>
+<div class=t-date>تاریخ : سه شنبه 8 اسفند 1391  | 20:57  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+<h1><p style="text-align: justify;"><font color="#CC33CC"><img src="http://upload.tehran98.com/img1/0bi0d85lsn2tal1tqkda.jpg" alt="" vspace="0" hspace="0" align="bottom" border="0"></font></p><p style="text-align: justify;"><font color="#CC33CC"><span style="font-size: small;">کچل 
+باشی، بری بالای شهر میگن مد روزه،   بری مرکز شهر میگن سربازی، بری پایین 
+شهر میگن زندانی بودی، این همه تفاوت   توی شعاع 20 کیلومتر...!!!</span></font></p>
+<p style="text-align: center;"><font color="#CC33CC"><span style="font-size: small;"><span style="color: rgb(255, 0, 0);">***********************</span></span></font></p>
+<p style="text-align: justify;"><font color="#CC33CC"><span style="font-size: small;">یعنی فقط کافیه تو خونتون بفهمن که امتحان دارین، اونوقت بخوای بری توالتم میگن کجا؟؟؟ مگه تو امتحان نداری؟؟؟</span></font></p>
+<p style="text-align: center;"><font color="#CC33CC"><span style="font-size: small;"><span style="color: rgb(255, 0, 0);">***********************</span></span></font></p>
+<p style="text-align: justify;"><font color="#CC33CC"><span style="font-size: small;">میازار موری که دانه کش است... در مورد مورچه ای که دانه همراه اش نیست چیزی صادر نشده می توانید بیازارید...!!!</span></font></p>
+<p style="text-align: center;"><font color="#CC33CC"><span style="font-size: small;"><span style="color: rgb(255, 0, 0);">***********************</span></span></font></p>
+<p style="text-align: justify;"><font color="#CC33CC"><span style="font-size: small;">تلویزیون
+ داره سیرک نشون میده که چهارتا   گاو میان از رو طناب میپرن و میرن! 
+مامانم یه نگاه به تلویزیون میندازه و   بعدش یه نگاه به من! میگه : اینا 
+گاو تربیت کردن ما هنوز تو تربیت تو   موندیم...!!!</span></font></p>
+<p style="text-align: center;"><font color="#CC33CC"><span style="font-size: small;"><span style="color: rgb(255, 0, 0);">***********************</span></span></font></p>
+<p style="text-align: justify;"><font color="#CC33CC"><span style="font-size: small;">جاتون 
+خالی دیشب رفته بودم شهر بازی و فقط   به یه نتیجه رسیدم: توی شهر بازی تو 
+بعضی از این وسایل بازیش باید یه  دکمه  ی "غلط کردم" هم بزارن...!!!</span></font></p>
+<p style="text-align: center;"><font color="#CC33CC"><span style="font-size: small;"><span style="color: rgb(255, 0, 0);">***********************</span></span></font></p>
+<p style="text-align: justify;"><font color="#CC33CC"><span style="font-size: small;">تا حالا دقت کردی وقتی کباب با برنج میخوریم 90% حواسمون به اینه که هردوتاش باهم تموم شه..!!!</span></font></p>
+<p style="text-align: center;"><font color="#CC33CC"><span style="font-size: small;"><span style="color: rgb(255, 0, 0);">***********************</span></span></font></p>
+<p style="text-align: justify;"><font color="#CC33CC"><span style="font-size: small;">تا حالا دقت کردین لذتی که در پرت کردن شلوار گوشه اتاق هست، تو زدنش به چوب لباسی‎ ‎نیست ...!!!</span></font></p>
+<p style="text-align: center;"><font color="#CC33CC"><span style="font-size: small;"><span style="color: rgb(255, 0, 0);">***********************</span></span></font></p>
+<div><font color="#CC33CC"><span style="font-size: small;">بابام اومده تو اتاقم میگه: اینترنت قطعه؟؟؟ میگم: نه چرا قطع باشه!؟ میگه: آخه دیدم داری درس میخونی...!!!</span></font></div></h1>
+
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(133)">نظرات  <script>setCommentCnt(133)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/132">خخخ ببینید بخندید</a></div></div>
+<div class=t-date>تاریخ : شنبه 5 اسفند 1391  | 00:35  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><font class="Apple-style-span" size="5" color="#cc33cc">سلام به کل دوستام &nbsp;بحث فتوشاپ تموم شد اگه &nbsp;که چند تا فیلم</font><div><font class="Apple-style-span" color="#cc33cc" size="5"><br></font><div><font class="Apple-style-span" size="5" color="#cc33cc">&nbsp;آموزشی دارم که میدم ببینید &nbsp;سوالی چیزی داشتید بگید</font><div><font class="Apple-style-span" size="5" color="#cc33cc"><br></font></div><div><font class="Apple-style-span" size="5" color="#cc33cc"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/61u392ax08jcd65uofhq.gif" alt=""></font></div></div></div><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(132)">نظرات  <script>setCommentCnt(132)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/131">احوالات دانشجویان در طول سال !! (طنز) </a></div></div>
+<div class=t-date>تاریخ : جمعه 4 اسفند 1391  | 17:46  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div><br></div><div><span class="Apple-style-span" style="font-size: 12px; "><p style="text-align: center; "><span style="font-size: small; ">در طول ترم:&nbsp;&nbsp;&nbsp;&nbsp;<img width="50" height="50" title="احوالات دانشجویان در طول سال !! (طنز) www.taknaz.ir " src="http://www.taknaz.ir/upload/71/0.048712001351330565_taknaz_ir.gif" alt="jazzaab.ir"><br>.</span></p><p style="text-align: center; "><span style="font-size: small; ">.<br>سه روز مانده به امتحان:&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="http://www.taknaz.ir/news_cats_242.html" style="text-decoration: none; color: rgb(8, 24, 32); "><span style="font-size: small; "><img width="60" height="50" src="http://www.taknaz.ir/upload/71/0.051433001351330565_taknaz_ir.gif" alt="احوالات دانشجویان در طول سال !! (طنز) www.taknaz.ir "></span></a><span style="font-size: small; "><br>.</span></p><p style="text-align: center; "><span style="font-size: small; ">.<br>دو روز مانده به امتحان:&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="http://www.taknaz.ir/news_cats_242.html" style="text-decoration: none; color: rgb(8, 24, 32); "><span style="font-size: small; "><img width="70" height="50" src="http://www.taknaz.ir/upload/71/0.053610001351330565_taknaz_ir.gif" alt="احوالات دانشجویان در طول سال !! (طنز) www.taknaz.ir "></span></a><span style="font-size: small; "><br>.</span></p><p style="text-align: center; "><span style="font-size: small; ">.<br>شب امتحان:&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="http://www.taknaz.ir/news_cats_242.html" style="text-decoration: none; color: rgb(8, 24, 32); "><span style="font-size: small; "><img width="60" height="48" src="http://www.taknaz.ir/upload/71/0.066687001351330565_taknaz_ir.gif" alt="احوالات دانشجویان در طول سال !! (طنز) www.taknaz.ir "></span></a></p><p style="text-align: center; "><span style="font-size: small; ">.</span></p><p style="text-align: center; "><span style="font-size: small; "><br>.<br>یک ساعت مانده به امتحان:&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="http://www.taknaz.ir/news_cats_242.html" style="text-decoration: none; color: rgb(8, 24, 32); "><span style="font-size: small; "><img width="48" height="48" src="http://www.taknaz.ir/upload/71/0.074278001351330565_taknaz_ir.gif" alt="احوالات دانشجویان در طول سال !! (طنز) www.taknaz.ir "></span></a><span style="font-size: small; "><br>.</span></p><p style="text-align: center; "><span style="font-size: small; ">.<br>سر جلسه امتحان:&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="http://www.taknaz.ir/news_cats_242.html" style="text-decoration: none; color: rgb(8, 24, 32); "><span style="font-size: small; "><img width="72" height="72" title="طنز و خنده " src="http://www.taknaz.ir/upload/71/0.079588001351330565_taknaz_ir.gif" alt="طنز و خنده "></span></a><span style="font-size: small; "><br>.</span></p><p style="text-align: center; "><span style="font-size: small; ">.<br>هنگام خروج از جلسه:&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="http://www.taknaz.ir/news_cats_242.html" style="text-decoration: none; color: rgb(8, 24, 32); "><span style="font-size: small; "><img width="72" height="72" src="http://www.taknaz.ir/upload/71/0.091895001351330565_taknaz_ir.gif" alt="احوالات دانشجویان در طول سال !! (طنز) www.taknaz.ir "></span></a><span style="font-size: small; "><br>.</span></p><p style="text-align: center; "><span style="font-size: small; ">.<br>یک هفته بعد از امتحان:&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="text-decoration: none; color: rgb(8, 24, 32); font-size: small; "><a href="http://www.taknaz.ir/news_cats_242.html" style="text-decoration: none; color: rgb(8, 24, 32); "><img width="50" height="50" src="http://www.taknaz.ir/upload/71/0.048712001351330565_taknaz_ir.gif" alt="احوالات دانشجویان در طول سال !! (طنز) www.taknaz.ir "></a></span></p><div><br></div></span></div><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(131)">نظرات  <script>setCommentCnt(131)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/130">خواستگاری در گذر زمان ! (طنز) </a></div></div>
+<div class=t-date>تاریخ : جمعه 4 اسفند 1391  | 17:35  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><span class="Apple-style-span" style="font-family: 'sans serif', tahoma, verdana, helvetica; font-size: 12px; line-height: 18px; "><p style="word-wrap: break-word; margin-top: 5px; margin-right: 0px; margin-bottom: 5px; margin-left: 0px; ">&nbsp;<img src="http://upload.tehran98.com/img1/m6jd4pvroftr9uud9nx1.jpg" data-ke-src="http://upload.tehran98.com/img1/m6jd4pvroftr9uud9nx1.jpg" alt="" style="border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; "></p><p style="word-wrap: break-word; margin-top: 5px; margin-right: 0px; margin-bottom: 5px; margin-left: 0px; ">​<br></p><div style="word-wrap: break-word; font: normal normal normal 12px/normal tahoma; "><span style="color: rgb(255, 0, 255); "><strong><span style="font-size: small; ">یك هفته پس از خلقت آدم:</span></strong></span></div><div style="word-wrap: break-word; font: normal normal normal 12px/normal tahoma; "><span style="font-size: small; "><br><span style="color: black; ">چون حوا بدون پدر و مادر بود آدم اصلا مشكلی نداشت و چای داغ را روی خودش نریخت.</span><br><br><span style="color: rgb(255, 0, 255); "><strong>پانصد سال پس از خلقت آدم:</strong></span></span></div><div style="word-wrap: break-word; font: normal normal normal 12px/normal tahoma; "><span style="font-size: small; "><br><span style="color: black; ">با یه دونه دامن از اون چینی خال پلنگی ها میری توی غار طرف.بلند داد می زنی:هاكومبازانومبا(یعنی من موقع زنمه(<br>بعد میری توی غار پدر و مادر دختره. با دامن چین چینی جلوت نشسته اند و می گن:از خودت غار داری؟دایناسور آخرین مدل داری؟بلدی كروكدیل شكار كنی؟خدمت جنگ علیه قبیله ادم خوارها رو انجام دادی؟بعد عروس خانم كه اون هم از این دامنای چین چینی پوشیده با ظرفی كه از جمجمه سر بچه دایناسور ساخته شده برات چای میاره و تو می ریزی روی خودت.</span><br><br><span style="color: rgb(255, 0, 255); "><strong>دو هزار و پانصد سال بعد از اختراع آدم:</strong></span><br><br><span style="color: black; ">انسان تازه كشاورزی را آموخته.وقتی داری توی مزرعه به عنوان شخم زدن زمین عمل می كنی با دیدن یه دختر متوجه میشی كه باید ازدواج كنی.برای همین با مقدار زیادی گندم به مزرعه پدر دختره میری .اونجا از تو می پرسند:جز خوت كه اومدی خواستگاری چند تا خر دیگه داری؟چند متر زمین داری؟چند تا خوشه گندم برداشت می كنی؟ آیا خدمت در لشگر پادشاه رو به انجام رسانده ای؟<br>بعد عروس خانم با كوزه چای وارد میشه و شما هم واسه اینكه نشون بدی خیلی هول شدید تمام كوزه رو روی سرتون خالی می كنید.</span><br><br><span style="color: rgb(255, 0, 255); "><strong>ده سال قبل:</strong></span><br><br><span style="color: black; ">شما پس از اتمام خدمت مقدس سربازی به این نتیجه می رسید كه باید ازدواج كنید و از مادرتان می خواهید كه دختری را برایتان انتخاب كند.در اینجا اصلا نیازی نیست كه شما دختر را بشناسید چون پس از ازدواج به اندازه كافی فرصت برای شناخت وجود دارد.در ضمن سنت چای ریزون كماكان پا بر جاست.</span><br><br><span style="color: rgb(255, 0, 255); "><strong>هم اكنون:</strong></span><br><br><span style="color: black; ">به دلیل پیشرفت تكنولوژی در حال حاضر شما به آخرین نسخه یاهو مسنجر احتیاج دارید.البته از"ام اس ان" یا "آی سی كیو"هم می توانید استفاده كنید ولی انها آیكنهای لازم برای خواستگاری را دارا نمی باشند . پس از نصب یاهو مسنجر به یك روم شلوغ رفته هر اسمی كه به نظرتان زیباست "اد" می كنید و با استفاده از آیكنهای مربوطه خواستگاری را انجام می دهید . البته یاهو قول داده كه نسخه جدید دارای امكانات ازدواج و زندگی مشترك نیز باشد.</span></span></div></span>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(130)">نظرات  <script>setCommentCnt(130)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/129">افکت فتوشاپی: تقسیم تصویر به قطعات کوچک </a></div></div>
+<div class=t-date>تاریخ : جمعه 4 اسفند 1391  | 08:30  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><span class="Apple-style-span" style="font-size: 12px; ">امروز می‌خواهیم به بررسی یکی از قابلیت‌های فتوشاپ بپردازیم:<p>همانطور که می‌دانید‌ Action‌ها بخشی از فتوشاپ هستند که می‌توانند دستورات به کار رفته در محیط برنامه را ضبط کنند تا&nbsp;دفعات بعد بتوان به راحتی بارها از آن‌ها استفاده کذد. در مقاله " ایجاد Action‌های سفارشی" با Action‌ها و نحوه ساخت آنها آشنا شده‌اید.</p><p>&nbsp;</p><p>تمرین امروز معرفی یک Action است که توسط شرکت panosfx تهیه شده است. کافی است تنها یک عکس ساده و دلخواه را در فتوشاپ باز کنید و از این اکشن استفاده کنید .این اکشن تصویر شما را بریده و بعد از تبدیل آن به قطعات مساوی آن‌ها را کنار یکدیگر به صورت سه بعدی می‌چیند. البته زیبایی اکشن بیشتر از توضیح بیان شده است.</p><p>برای استفاده از این اکشن ابتدا آن را دانلود کرده و از حالت فشرده خارج کنید، سپس فتوشاپ را باز کرده و از منوی windows پالت Actions را انتخاب نمایید.</p><p>&nbsp;روی دکمه اختیارات پالت کلیک کرده و گزینه Load Action را انتخاب&nbsp;نمایید.</p><p><br></p><p><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/c493dpwy7gtz4tzzi7t7.jpg" alt=""></p></span><span class="Apple-style-span" style="font-size: 12px; "><p>&nbsp;در پنجره Load به مسیر اکشنی که دانلود کرده‌اید رفته و بعد از انتخاب آن دکمه Load را بزنید. با این کار اکشن انتخاب شده در پالت Actions قرار می‌گیرد.‌&nbsp;این اکشن مجموعه‌ای به نام BnBig picture است که دارای 4 اکشن است.</p><p>اکشن اول، تصویر را به قطعات کوچک تر تقسیم کرده و اکشن‌های بعدی جلوه پرسپکتیو به آن می‌دهند.</p><p>برای استفاده از این اکشن یک تصویر Landscape مانند&nbsp;تصویر زیر&nbsp;(تصویری که پهنای افقی آن از پهنای عمودی آن بزرگتر باشد) باز کنید و اکشن The B&amp;Big picture را انتخاب کرده و دکمه Play selection را در پایین پالت Action بزنید.</p><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/gmruroe3re2kgpcu2s.jpg" alt=""></div></span><span class="Apple-style-span" style="font-size: 12px; "><p><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/phto025yn3kxqu65r.jpg" alt=""></p></span><span class="Apple-style-span" style="font-size: 12px; "><p>منتظر بمانید تا اکشن فوق تمامی مراحل را به صورت خودکار انجام دهد، این کار بسته به سرعت سیستم شما چند دقیقه‌ای طول خواهد کشید.</p><p>&nbsp;تصویری که بعد از اجرای اکشن در اختیار بوجود آمد:</p><p><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/dawoq42ru1iqfhx60zuo.jpg" alt=""></p><p><br></p></span><span class="Apple-style-span" style="font-size: 12px; ">این اکشن سه حالت مختلف (پرسپکتیو) در اختیار شما قرار می‌دهد، کافی است در انتهای لیست اکشن، Perspective&nbsp;1&nbsp; یا Perspective 2 و یا Perspective 3 را انتخاب کرده و سپس بر روی دکمه Play موجود در پالت Action کلیک&nbsp;نمایید.</span>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(129)">نظرات  <script>setCommentCnt(129)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/128">آموزش ساخت نوشته گداخته در فوتوشاپ </a></div></div>
+<div class=t-date>تاریخ : پنجشنبه 3 اسفند 1391  | 16:45  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><span class="Apple-style-span" style="font-size: 12px; ">آموزش ساخت&nbsp;<span class="highlight">نوشته</span>&nbsp;گداخته<br></span>
+
+
+<div><span class="Apple-style-span" style="font-size: 12px; "><br></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/z4e321tjb12s0apdl787.jpg" alt=""></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><br></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><br><br>1- برای شروع یک صفحه جدید در ابعاد دلخواه باز کنید(من از اندازه 400x300 استفاده کردم)</div><div><br></div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/4ev9r0nhj8woejtz7xuu.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><br>2- بروی Gradient Tool در منوی ابزارها کلیک کرده و آن را در حالت redial قرار داده (رنگ دلخواه است رنگ کار7E0100 fgcolor= و 000000bg color= ) و وسط صفحه کلیک کرده و در انتهای سمت راست یا چپ رها کنید<br><br>3- متن مورد نظر خود را مانند شکل در وسط صفحه قرار داده و آن را bold کنید.</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/2mzbpecgh02035q6cfcv.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><br>4- بر روی لایه متن خود 2بار کلیک کرده تا صفحه layer style باز شود و تنظیمات خود را مانند تصویر زیر انجام دهید.<br>رنگهای بکار رفته :&nbsp;<br>7A2100 = Inner Shadow<br>744A00 = Outer Glow&nbsp;<br>221300 ، FF8500 = Bevel and Emboos<br>از لیست رنگها copper انتخاب کنید = Storke</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/2mzbpecgh02035q6cfcv.jpg" alt=""></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/futk9o9fpigvfhi8wyoo.jpg" alt=""></div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/hbw6y3it1mkevdu0e1e.jpg" alt=""></div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/futk9o9fpigvfhi8wyoo.jpg" alt=""></div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/7nc191gyz91qpcxbie02.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><br>5- چندین دایره توسط ابزار brush در یک لایه جدید به صورت شکل زیر طرح کنید (</div><div style="font: normal normal normal 12px/normal tahoma; text-align: center; ">FFE401)</div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/35e4q8i5zrx406t21ij3.jpg" alt=""></div><div><br></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><br>6- Ctrl را گرفته و بر روی لایه متنتون کلیک کنید.<br>Ctrl+Shift+i را فشار دهید تا قسمتهای سلکت شده inverse شود<br>حال Delete را فشار دهید</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/xztu0dvotq53872nriel.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><br>7- حال بر روی لایه دایره ها 2بار کلیک کرده تا صفحه layer style باز شود و تنظیمات خود را مانند تصویر زیر انجام دهید.<br>رنگهای بکار رفته :&nbsp;<br>000000 = Inner Shadow<br>FFAB03 = Outer Glow</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/73w70l9sznvcwae8yib.jpg" alt=""></div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/6afsmh5c0ctrqpuljds.jpg" alt=""></div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/5gyrc4cgp2212207ptdj.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; ">8- حال در قسمت لایه ها ---&gt; لایه دایره ها ---&gt;layer mode را در حالت Liner Light قرار دهید و opacity آن را 50%کنید.</div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/d95z3dl6c7x4zzqaun7g.jpg" alt=""></div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/h7mdgqf2fs2nv9a820.jpg" alt=""></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><br>9- حال در منوی Layer در بالای صفحه Flatten Image را زده تا همه لایه ها با هم Merge شوند.<br>سپس بر روی لایه بدست آمده کلیک راست نموده و Duplicate layer را انتخاب کنید.<br>mode layer لایه بالایی را به Liner Light تغییر دهید.</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/5ydn2mx43iqpy55x639.jpg" alt=""></div></span><span class="Apple-style-span" style="font-size: 12px; "><div><br></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><br>10- حال یک لایه جدید ایجاد کرده و چندین دایره در اندازه های مختلف طرح کنید و layer style آن را مانند layer style متن خود تنظیم کنید و layer mode آن را Vivid Light و opacity آن را 40% قرار دهید.</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/bo8bown2fsdpf9151j.jpg" alt=""></div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/dasbbar7hd2jxc9041r.jpg" alt=""></div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/la3o014rvv3j4yz6cxo.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><br></div><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><br></div><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><br>11- حال لایه مورد نظر را Duplicate کنید و بر روی لایه کپی شده کلیک کنید و به منوی Filter--&gt; Blur --&gt;Radial Blur رفته و مانند شکل زیر تنظیم کنید و در آخر mode layer را به Liner Light تغییر دهید.</div><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><br></div><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/21xubvwc51vfnonra7.jpg" alt=""></div><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><br></div><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/9op3y5z2zpmwflejsh.jpg" alt=""></div><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><br></div><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/z4e321tjb12s0apdl787.jpg" alt=""></div></span><span class="Apple-style-span" style="font-size: 12px; "><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/h7mdgqf2fs2nv9a820.jpg" alt=""></div></span></div><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(128)">نظرات  <script>setCommentCnt(128)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/127">آموزش رنگی كردن چشمها در فتوشاپ Adobe Photoshop CS3</a></div></div>
+<div class=t-date>تاریخ : چهارشنبه 2 اسفند 1391  | 21:23  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+
+<div><font class="Apple-style-span" color="#993399"><br></font></div><div><span class="Apple-style-span" style="font-size: small; "><font class="Apple-style-span" color="#993399">این تكنیك بسیار جالب این روزها در آلبومها یا عكسهای خانوادگی و عروسی كاربرد بسیار زیادی دارد. استفاده از لنز در بسیاری از موارد موجب سرخ شدن چشم میشود و در عكسهای پرترهِ بسیار نزدیك، كاملاً مصنوعی به نظر میرسد. بنابراین بسیاری از عكاسان به سوژههای خود پیشنهاد میكنند بهجای استفاده از لنزهای رنگی، تنها رنگ مورد علاقه خود را سفارش دهند و عكسهای مورد نظرشان را انتخاب كنند. برای بسیاری از افراد این كار بسیار پیچیده به نظر میرسد، اما عكاسان برای چنین ترفندی چه میكنند؟&nbsp;<br></font></span></div><div><span class="Apple-style-span" style="font-size: small; "><font class="Apple-style-span" color="#993399"><br></font></span></div><div><span class="Apple-style-span" style="font-size: small; "><font class="Apple-style-span" color="#993399"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/s2v7s0euhnta4z1lhm4y.jpg" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: small; "><font class="Apple-style-span" color="#993399"><br></font></span></div><div><span class="Apple-style-span" style="font-size: small; "><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#993399"><font size="2">در همین ابتدای كار بهتر است بدانید كه استفاده از این تكنیك تنها روی عكسهای پرتره نزدیك كه بخش بزرگی از تصویر توسط صورت پوشانده میشود، مناسب است. اصولاً عكسهای قدیمی كیفیت پایینتری نسبت به عكسهای جدید دارند و رنگی شدن عنبیه روی آنها، چندان به چشم نمیآید. عكس مورد نظرتان را باز كنید و با فشردن دكمههای Ctrl+J یا كشیدن و رها كردن لایه Background روی آیكون Create New Lay در پالت لایهها، یك لایه از روی لایه اصلی عكس بسازید. با این كار فتوشاپ یك لایه جدید شبیه لایه اولیه ایجاد میكند و بدین ترتیب هر ویرایشی كه انجام دهید، روی لایه جدید اعمال میشود.&nbsp;</font><br><br><font size="2">تغییر رنگ چشمهای روشن چندان مشكل نیست؛ زیرا اصولاً چشمهای رنگی، پایه روشن دارند و به سادگی میتوانید مراحل اولیه این آموزش، یعنی بخش روشن كردن چشم را نادیده بگیرید، اما در اینجا فرض میكنیم كه در حال كار روی چشمهای مردم كشورهای شرقی كه عمدتاً قهوهای تیره هستند، كار میكنید. ابزار انتخاب بیضی شكل را برگزینید. این ابزار در حقیقت اولین ابزار در نوار ابزارهای فتوشاپ است و میتواند محدودهای را بهصورت دایرهای انتخاب كنید.&nbsp;</font><br></font></span></span></div><div><span class="Apple-style-span" style="font-size: small; "><span class="Apple-style-span" style="font-size: 12px; "><font size="2" color="#993399"><br></font></span></span></div><div><span class="Apple-style-span" style="font-size: small; "><span class="Apple-style-span" style="font-size: 12px; "><font size="2" color="#993399"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/1mfaflxd0z42j2qqmxat.jpg" alt=""></font></span></span></div><div><span class="Apple-style-span" style="font-size: small; "><span class="Apple-style-span" style="font-size: 12px; "><font size="2" color="#993399"><br></font></span></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#993399"><br><font size="2">بهمحض برگزیدن ابزار انتخاب بیضی، نوار تنظیمات آن هم در بالای پنجره فتوشاپ پدیدار میشود. (این مسأله در مورد تمام ابزارها صادق است. یعنی با انتخاب هر ابزار، نوار تنظیمات مربوط به آن را در بالای پنجره فتوشاپ میبینید.) گزینه Feather در نوار تنظیمات ابزارهای انتخاب نشاندهنده محدوده محوشدگی بخش انتخاب شده است. هرچه این مقدار كمتر باشد، محدوده انتخاب، لبههای تیزتری خواهد داشت. بنابراین بسته به عكسی كه روی آن كار میكنید، باید این مقدار را به گونهای تغییر دهید كه محدوده انتخاب لبههای تیز نداشته باشد. در اینجا مقدار Feather برابر پانزده پیكسل انتخاب شده است.&nbsp;</font><br><br><font size="2">حالا باید عنبیه چشم را انتخاب كنید. حتماً میدانید كه روش انتخاب چگونه است. كلیك میكنید، نگه میدارید، میكشید و رها میكنید، اما در اینجا دو نكته كمكی را نیز به شما میگویم: اول اینكه، ابزار انتخاب بیضی همانطور كه از اسم آن برمیآید، برای انتخاب به شكل بیضی به كار میرود. ما برای انتخاب عنبیه چشم به انتخاب دایرهای شكل احتیاج داریم. برای اینكه محدوده انتخاب دقیقاً دایرهای شكل باشد، در هنگام انتخاب دكمهShift را نگه دارید. دوم اینكه، ممكن است از محل نادرستی شروع به انتخاب كنید. مثلاً كمی بالاتر یا پایینتر از جایی كه لازم است، كلیك كنید و بكشید. برای اینكه بتوانید در همان زمان انتخاب كردن محدوده انتخاب را حركت دهید، میتوانید دكمه Space را نگه دارید و محدوده انتخاب را جابهجا كنید.&nbsp;</font><br><br><font size="2">بعد از انتخاب كردن نیز اگر نوك نشانگر ماوس را در داخل محدوده انتخاب ببرید، میبینید كه به یك نشانگر با یك علامت چهارگوش در كنارش تبدیل میشود. یعنی در این حالت میتوانید در داخل محدوده كلیك كنید، بكشید و محدوده را جابهجا نمایید. سوم این كه، هیچ دلیلی ندارد عنبیه هر كدام از چشمها را جداگانه انتخاب نمایید و روی آن كار كنید. می توانید پس از انتخاب یكی از آنها، دكمه Shift را نگه دارید و انتخاب محدوده دوم را آغاز كنید. هر دو نكته پیش درباره این محدوده انتخاب جدید نیز صادق است. فقط طوری انتخاب كنید كه فضای كافی در دور عنبیه چشم باقی بماند. پس از انتخاب هر دو عنبیه، دكمه Ctrl+C را فشار دهید تا محدوده در حافظه كپی شود.</font><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font size="2" color="#993399"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font size="2" color="#993399"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/q39r6j7zi5f80c32ose0.jpg" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font size="2" color="#993399"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#993399"><br><font size="2">دكمههای Ctrl+V را فشار دهید. محدوده انتخاب كه با خطوط متحرك نقطهچین نشان داده میشود، ناپدید میشود. در حقیقت شما محدوده انتخابی را كه در داخل حافظه كپی كرده بودید، در همان محدودهای كه انتخاب كرده بودید، یعنی در جای قبلی خود، روی یك لایه جدید Paste كردید (مجدداً روی آن كپی كردید). اگر به پالت لایهها نگاه كنید، میبینید دو دایره كوچك در لایه فعال وجود دارد. اگر میخواهید واقعاً بفهمید كه این دو لایه چگونهاند، دو لایه زیرین آن لایه را خاموش كنید (روی آیكون چشم كنار آنها كلیك كنید). قصد ما از اینكار این است كه تمام عملیات رنگی كردن را روی این لایه، كه تنها شامل عنبیه چشم است، انجام دهید. با این كار می توانید در پایان بنا به نظر مشتری خود (همان سوژه) رنگ چشم را به هر رنگی كه می خواهید، در آورید.&nbsp;</font><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font size="2" color="#993399"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font size="2" color="#993399"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/xxv616cq8ugig0m44c2.jpg" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font size="2" color="#993399"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#993399"><br><font size="2">در این مرحله میخواهیم رنگ چشم را روشن كنیم. اگر به پالت لایهها نگاهی بیندازید، میبینید كه در پایین پالت، یك سری آیكون قرار دارند. آیكون چهارم (از چپ یا راست فرقی نمیكند. چون هفت آیكون بیشتر ندارد!) یك دایره سیاه و سفید است. این دایره امكان استفاده از لایههای تنظیمكننده را به شما میدهد روی آن كلید كنید. در منویی كه باز میشود، گزینه Channel Mixer را انتخاب كنید.&nbsp;</font><br><br><font size="2">یك پنجره باز میشود كه در پایین سمت چپ آن گزینهای به نام Monochrome یا تكرنگ قرار دارد. آن را انتخاب كنید. حالا تصویر سیاه و سفید میشود. كنترلكنندهها Red ،Green و Blue در این حالت میتوانند مقادیر رنگهای قرمز، سبز و آبی تصویر را افزایش یا كاهش دهند. این موضوع كمی پیچیده است؛ زیرا مربوط به كانالهای رنگی و افزایش و كاهش كنتراست كانالهای رنگی هر یك از آنها در تركیب رنگی اصلی میشود. كافیاست بدانید كه با افزایش مقدار كنترلكننده قرمز و سبز، میتوانید موجب روشن شدن رنگ عنبیه شوید. بدون اینكه تأثیر چندانی روی رنگ مردمك چشم (كه بیشتر از كانال آبی تشكیل شده است،) بگذارید.میتوانید اعداد را با توجعه به تصویر زیر تغییر دهید.</font><br></font></span></div><div><font class="Apple-style-span" size="2" color="#993399"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/qkwa48yysmr16irqvy07.jpg" alt=""></font></div><div><font class="Apple-style-span" size="2" color="#993399"><br></font></div><div><font class="Apple-style-span" size="2" color="#993399"><span class="Apple-style-span" style="font-size: 12px; "><br><font size="2">مقدار تغییر كاملاً به تیرگی رنگ چشمی بستگی دارد كه روی آن كار میكنید. آرام آرام میبینید كه عنبیه چشم به رنگ طوسی درمیآید، اما مشكل اینجاست كه لایههای تنظیمكننده هنگامی كه ایجاد میشوند، روی تمام لایههای زیر خود تأثیر میگذارند. یعنی این تغییر رنگ نه فقط روی لایه چشمها، بلكه روی تمام لایههای زیرین نیز مؤثر است. برای اینكه فقط لایه چشمها (كه در زیر لایه تنظیمكننده قرار دارد) تغییر رنگ دهد، دكمههای Ctrl+Alt+G را فشار دهید. با این كار لایه تنظیمكننده به یك لایه برشدهنده (Clipping Layer) تبدیل میشود و یك علامت پیكان شكسته در كنار آن ظاهر میشود. حالا فقط لایه زیر آن طوسی شده است.لایههای زیرین را مجددا فعال کنید(علامت چشم مجددا ظاهر می شود).</font><br></span></font></div><div><font class="Apple-style-span" size="2"><span class="Apple-style-span" style="font-size: 12px; "><font size="2" color="#993399"><br></font></span></font></div><div><font class="Apple-style-span" size="2"><span class="Apple-style-span" style="font-size: 12px; "><font size="2" color="#993399"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/rxvd7ddxv1thoib338le.jpg" alt=""></font></span></font></div><div><font class="Apple-style-span" size="2"><span class="Apple-style-span" style="font-size: 12px; "><font size="2" color="#993399"><br></font></span></font></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#993399"><font size="2">سفیدی دور عنبیه به خاطر تغییرات شدید رنگ است. ابزار پاككن را بردارید. در نوار تنظیمات ابزار پاككن، روی مثلث كوچكی كه در سمت راست شماره نشاندهنده بزرگی نوك قلم قرار دارد، كلیك كنید. از منوی باز شده، كنترلكنندهHardness را به سمت چپ بكشید و روی صفر قرار دهید تا نوك قلم بسیار نرم و هموار شود. حالا لایه چشمها را انتخاب كنید. و دور عنبیه چشم را آرام آرام و با دقت زیاد پاك كنید. بطوریکه فقط عنبیه پاک نشده باشد .</font><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font size="2" color="#993399"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font size="2" color="#993399"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/5zywpk15m9rhv8xlo8rs.jpg" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font size="2" color="#993399"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#993399"><br><font size="2">ا</font><font size="2">گر احساس میكنید رنگ چشم به اندازه كافی روشن شده است، میتوانید لایه تنظیمكننده ChannelMixer و لایه چشمها را یكی كنید. كافیاست لایه تنظیمكننده را انتخاب كنید و دكمههای Ctrl+E را فشار دهید تا با لایه زیرین خود یكی شود. اگر هنوز رنگ لایه را كمرنگ یا پررنگ میبینید، روی لایه تنظیمكننده دوباره كلیك كنید تا پالت مربوط به آن دوباره باز شود و مجدداً كنترلكنندههای رنگی های سبز و قرمز را جابهجا كنید تا به رنگ مطلوب برسید. حالا عنبیه لایه چشمها كاملاً روشن شده است و خود به عنوان یك لایه منفرد دیده میشود.</font><br><br><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/amrju9rf8u5b4e1ai3ku.jpg" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#993399"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#993399"><br><font size="2">حالا وقت رنگدهی است. رنگدهی به لایههای تكرنگ در فتوشاپ روشهای مختلفی دارد. شخصاً برای این كار روش استفاده از لایه تنظیمكننده Hue/Saturation را ترجیح میدهم.برای این کار از منویImage گزینه Adjastment و بعد Hue/Saturation را انتخاب نمایید و یا از همان منوی لایههای تنظیمكننده كه در مراحل قبل گفتیم، گزینه Hue/Saturation را انتخاب كنید. پنجرهای باز میشود كه دارای سه میلهبار كنترلكننده است و در پایین راست آن گزینهای به نام Colorize دارد.&nbsp;</font><br><br><font size="2">این گزینه غیرفعال است و برای رنگدهی استفاده میشود. هنگامی كه آن را فعال میكنید، بلافاصله تمام تصویر تكرنگ میشود. همانطور كه گفتیم لایههای تنظیمكننده روی همه لایههای زیرین خود تأثیر میگذارند. با تغییر گزینه Hue میتوانید رنگهای مختلفی را امتحان كنید و گزینه Saturation نیز مخصوص تنظیم اشباع یا چگالی رنگ است. مثلاً انتخاب مقدار بیست برای Hue رنگ چشم را عسلی و مقدار نود، رنگ چشم سبز را میكند.</font><br><br><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/e2ltcje7rv8ki3gce0y1.jpg" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#993399"><br></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#993399"><br><font size="2">پ</font><font size="2">س از انتخاب رنگ، میتوانید به روش قبلی (Ctrl+Alt+G) این لایه تنظیمكننده را نیز به یك لایه برشدهنده تبدیل كنید تا فقط روی لایه چشمها تأثیر بگذارد. اما حُسن استفاده از این روش چیست؟ فرض كنید در این مرحله كار را تمام میكنید و فایل را با فرمت PSD ذخیره میكنید. لایه تنظیمكننده مذكور به همراه لایههای دیگر ذخیره میشود. حالا فرض كنید سوژه مذكور رنگی را كه شما انتخاب كردهاید، نپسندد. كافیاست عكس را در فتوشاپ باز كنید. روی لایه تنظیمكننده دوبار كلیك كنید تا پنجره آن باز شود. بعد كنترلكننده Hue را بكشید و مقدار آن را تغییر دهید. رنگ چشم به صورت زنده تغییر میكند و شخص مذكور میتواند هر رنگی را كه دوست داشت، انتخاب كند.</font><br><br><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/x5sg2tyqytm903aw0362.jpg" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><span class="Apple-style-span" style="font-size: 14px; "><strong><font class="Apple-style-span" color="#006600"><br>خدایا به من آرامشی ده تا قبول کنم آنچه را نمی توانم تغییر دهم و شهامتی تا تغییر دهم آنچه را می توانم و بینشی تا بدانم تفاوت آن دو را</font></strong></span></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><br></span></div><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(127)">نظرات  <script>setCommentCnt(127)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/126">مدهای رنگی گرافیکی فتوشاپ </a></div></div>
+<div class=t-date>تاریخ : سه شنبه 1 اسفند 1391  | 13:29  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+<h2 style="font-size: 12px; "><p><span style="font-size: small; "><font class="Apple-style-span" color="#993399">در دنیای گرافیك كامپیوتری ،سیستمهای متنوعی برای ساختن رنگ در اختیار داریم سیستم هایی نظیر RGB، CMYK ، HSB ، GRAYSCALE و ...</font></span></p></h2><p style="font-size: 12px; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399">&nbsp;</font></span></p><p style="font-size: 12px; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399"><strong><strong>1.&nbsp;Bitmap :</strong></strong>&nbsp;یك تصویر طرح بیتی (Bitmap) فقط شامل پیكسلهای سیاه و سفید است. تصویری كه دارای چنین حالت رنگی است از درجه وضوح كمتری برخوردار است و در این حالت نمی توان از رنگهای دیگر و نیز لایه ها و فیلترها استفاده كرد.</font></span></p><p style="font-size: 12px; "><span style="font-size: small; "><strong><font class="Apple-style-span" color="#993399">نكته: برای تبدیل مد رنگی Bitmap به یك فایل رنگی ابتدا باید تصویر را به حالت رنگ Grayscale تبدیل كنید.</font></strong></span></p><div class="GImg" style="font: normal normal normal 12px/normal tahoma; "><font class="Apple-style-span" size="2" color="#993399"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/d2e4iwl71c3pc6jhm0h.jpg" alt=""></font></div><p style="font-size: 12px; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399"><strong><strong>2.&nbsp;RGB:&nbsp;</strong></strong>در این نوع مد رنگی سه رنگ قرمز Red ، سبز Green و آبی Blue وجود دارد در صورتیكه از هر رنگ مقادیری را داشته باشیم می توانیم رنگهای بسیار زیادی به وجود آوریم از این نوع مد رنگی بیشتر برای كارهای تلویزیونی ورنگهای استاندارد مانیتور استفاده می شود به دلیل دارا بودن رنگهای بسیار درخشنده این سیستم رنگ به سیستم 24 بیتی (24 bit) كه دارای 16 میلیون رنگ می باشد معروف است.</font></span></p><p style="font-size: 12px; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399"><strong><strong>3.&nbsp;CMYK :&nbsp;</strong></strong>این نوع مد رنگی همان سیستم اصلی چاپ چهار رنگ می باشد یعنی شامل رنگهای آبی فیروزه ای Cyan ، سرخابی Magenta ، زرد Yellow ، سیاه Black می شود. از مد رنگی CMYK برای چاپ بر روی كاغذ استفاده می شود كه به سیستم 32 بیتی (32 bit) معروف است.</font></span></p><p style="font-size: 12px; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399"><strong><strong>4.&nbsp;Index Color :&nbsp;</strong></strong>این حالت رنگ برای تصاویری كه در برنامه های چند رسانه ای مورد استفاده واقع می شوند، بسیار مفید است یك تصویر با مد رنگی Index Color نمی تواند دارای چند لایه باشد، حتی نمی توان در این گونه تصاویر از فیلترها نیز استفاده كرد.</font></span></p><p style="font-size: 12px; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399"><strong><strong>5.&nbsp;HSB :</strong></strong>&nbsp;این نوع مد رنگی بر اساس (ارزش و مقدار رنگ (H=Hue (S=Saturation اشباع رنگ ) و ( روشنایی B=Brightness) سنجیده می شود.</font></span></p><p style="font-size: 12px; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399"><strong><strong>6.&nbsp;Lab :</strong></strong>&nbsp;این مد رنگی حالت مناسب برنامه Photoshop است .در مواردی كه لازم است ویرایش روشنایی و مقادیر رنگ, مستقل از هم صورت گیرند تصویر را می توان در این مد رنگی قرار داد همچنین برای ثابت نگه داشتن رنگ در زمانی كه تصاویر بین سیستمهای مختلف جابجا شده و یا بر روی چاپگرهایی از نوع PostScript Level2 چاپ می شوند مورد استفاده قرار می گیرند. رنگهای این مد رنگی بر روی مانیتورها و چاپگرهایی كه به صورت متفاوت كالیبره شده اند، تفاوتی نمی كند.</font></span></p><p style="font-size: 12px; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399"><strong><strong>7.&nbsp;GRAYSCALE :&nbsp;</strong></strong>این مد رنگی در حقیقت سیستم تصاویر در تلویزیونهای سیاه و سفید می باشد كه تركیبی از 256 سایه های مختلف رنگ خاكستری است.از این مد رنگی برای تبدیل تصاویر یا عكسهای رنگی به یك عكس سیاه و سفید با كیفیت بالا استفاده می شود.</font></span></p><p style="font-size: 12px; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399"><strong><strong>8.&nbsp;Duotone :</strong></strong>&nbsp;یك تصویر با این مد رنگی یك تصویر خاكستری است كه می بایست در یك تا چهار جوهر رنگی چاپ شود. با استفاده از این مد رنگی می توان به شدت رنگهای بیشتری دسترسی پیدا كرد این حالت معمولا برای افزایش محدوده خاكستری رنگ تصویر مورد استفاده قرار می گیرد.</font></span></p><div class="GeneralSooTitr" style="font-size: 12px; font: normal normal normal 12px/normal tahoma; "><div class="SooTitrContent" style="font: normal normal normal 12px/normal tahoma; "><p align="center"><span style="font-size: small; "><font class="Apple-style-span" color="#993399">یك تصویر با مد رنگی Index Color نمی تواند دارای چند لایه باشد، حتی</font></span></p><p align="center"><span style="font-size: small; "><font class="Apple-style-span" color="#993399">نمی توان در این گونه تصاویر از فیلترها نیز استفاده كرد</font></span></p></div></div><p style="font-size: 12px; "><span style="font-size: small; "><strong><strong><font class="Apple-style-span" color="#993399">كیفیت های مختلف تصاویر</font></strong></strong></span></p><p style="font-size: 12px; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399">&nbsp;</font></span></p><div class="GImg" style="font: normal normal normal 12px/normal tahoma; "><font class="Apple-style-span" size="2" color="#993399"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/dj1p7z96hag05gnucng.jpg" alt=""></font></div><span style="font-size: small; "><font class="Apple-style-span" color="#993399">سیستم طراحی با نرم افزار فتوشاپ از نوع نقش بیتی است یعنی تصویر هایی كه مورد ویرایش قرار می گیرند از تعداد زیادی نقطه در طول و عرض تشكیل شده اند . هر نقطه از تصویر می تواند دارای رنگی متفاوت نسبت به نقطة دیگر باشد به این نقاط ریز Pixel گفته می شود تفاوت رنگ پیكسلها باعث تشكیل تصویر و مشخص شدن جزئیات تصویر می شود .</font></span><p style="font-size: 12px; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399">برای ایجاد یك تصویر بر اساس سایزی كه نیاز داریم تعداد پیكسلها را تعیین می كنیم . در یك سایز ثابت هر چه تعداد نقاط بیشتر باشد آن نقاط كوچكتر خواهند شد و هر چه تعداد نقاط بیشتر باشد كیفیت و هموار بودن تصویر بیشتر است</font></span></p><font class="Apple-style-span" color="#993399"><span style="font-size: small; "><span><p><strong>اینك می خواهیم بدانیم چه تعداد پیكسل برای چه ابعادی براساس واحدهای استاندارد اندازه گیری مناسب&nbsp;<strong>می باشند؟</strong></strong></p></span></span><span style="font-size: 12px; "><p>&nbsp;</p></span></font><p style="font-size: 12px; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399">طبق تجربه در فایلهای رنگی ، اگر فایلها برای هر سانتیمتر فاصله ( در طول و عرض ) دارای تعداد 118 پیكسل باشند كیفیت مطلوب است این عدد می تواند بین 100-120 تغییر كند</font></span></p><p style="font-size: 12px; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399">در كارهای سیاه و سفید ، باید تعداد پیكسها بیشتر باشد تا كیفیت بهتری بدست آید مقدار این عدد می تواند بین 150-200 تغییر كند</font></span></p><p style="font-size: 12px; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399">دلیل این كه در كارهای رنگی تعداد نقاط كمتری مورد نیاز است این است كه سایه ای از رنگها همیشه در لابه لای شكستگی ها وجود دارد و در نتیجه شكل هموار تر به نظر می رسد به این خاصیت Anti Aliased یا ضد پلگی گفته می شود</font></span></p><p style="font-size: 12px; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399">در مبحث گرافیك به كیفیت های مختلف تصاویر Resolution گفته می شود و به تعداد نقطه در واحد اینچ (DPI) یا (Dot per inch) كه واحد اندازه گیری كیفیت نیز می باشد گفته می شود.</font></span></p><p style="font-size: 12px; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399">بهتر است بدانید 118 پیكسل در سانتیمتر برابر است با 300 پیكسل در اینچ</font></span></p><p style="font-size: 12px; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399">پس شما می توانید برای كیفیت بهتر تصاویر در هنگام چاپ در ابعاد متوسط و بزرگتر از عددی بین 300-1440 dpi استفاده كنید .</font></span></p><p style="font-size: 12px; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399">برای چاپ كردن یك فایل آماده شده در برنامه Photoshop بهترین كیفیت بین 300-600 dpi مد رنگی تصویر CMYK و فرمت فایل *.tif می تواند باشد.</font></span></p><div style="font-size: 12px; "><span style="font-size: small; "><br></span></div>
+
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(126)">نظرات  <script>setCommentCnt(126)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/124">نرم افزار فتوشاپ سری3 </a></div></div>
+<div class=t-date>تاریخ : سه شنبه 1 اسفند 1391  | 13:06  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><font class="Apple-style-span" color="#993399"><span class="Apple-style-span" style="font-size: 12px; "><h1>آموزش نرم افزار فتوشاپ 3</h1><h2>منوی Edite :</h2><p>این منوی همانگونه که از نامش معلوم است مربوط به ویرایشمی باشد البته فرمان های داخل این منو کمی خسته کننده می باشد ولی جزء اصلی کار است و نمی شود آن را فاکتور گرفت.</p><p><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/flxoyy17xhn6j7porx4p.jpg" alt=""></p></span><span class="Apple-style-span" style="font-size: 12px; "><p>اولین فرمان داخل این منو فرمانUndo می باشد که این فرمان آخرین عملیات انجام شده توسط شما در نرم افزار لغو می کند و معادل کلیدهای میانبر Ctrl+z می باشد. البته این فرمان تا یک مرحله از عملیات را لغو می سازد .</p><p>&nbsp;</p><p>&nbsp;</p><h2>Step for ward :</h2>به کمک این فرمان فرمان های لغو شده توسط فرمانStep back ward برگردانده می شود&nbsp; که معادل کلیدهای میانبرSnift +ctrl+z می باشد .<p>&nbsp;</p><p>&nbsp;</p><h2>Step back ward :</h2>به کمک این گزینه می توان به تعداد معینی از عملیات را لغو نمود. کلید میانبراین فرمان معادل Alt+ctrl+zمی باشد.<p>&nbsp;</p><p>&nbsp;</p><h2>Fade brush tool :</h2>به کمک این گزینه می توانید بعد از استفاده از ابزارBrush آن خط را از نظر میزان غلظت ونیز نوع مد آن تغییر دهید در آینده با مغولهMode بیشتر آشنا خواهیدشد.<p>&nbsp;</p><p>&nbsp;</p><h2>Cut :</h2>به کمک این فرمان می توانید یک قسمت را برش دهید و کلیدهای میانبر آن معادلCtrl+x می باشد البته این نکته را خاطرنشان کنم که باید حتما قسمتی به کمک ابزار انتخاب که در قسمت بعد با آن آشنا خواهید شد انتخاب شده باشد تا قابل بریدن باشد.<p>&nbsp;</p><p>&nbsp;</p><h2>Copy :</h2>به کمک این فرمان می توانید یک کپی از قسمت انتخاب شده توسط ابزار انتخاب را داشته باشید و کلیدهای میانبر آن معادلCtrl+c می باشد.<p>&nbsp;</p><p>&nbsp;</p><h2>Copy merged :</h2>به وسیله این فرمان می توانید از قسمت انتخابی کپی را داشته باشید با این تفاوت که زمانی که آن راPaste می نمایید آن کپی به صورت یک لایه جدید ایجاد میشود و برروی همان لایه اصلی باقی نمی ماند البته درباره لایه ها دردرس های آینده اطلاعات ارزنده ای را دریافت خواهید کرد و با آن آشنا خواهید شد .<p>&nbsp;</p><h2>Paste :</h2>زمانی که شما از گزینهCopy یاCut یاCopy merged استفاده می نمایید آن قسمت انتخابی برروی حافظه موقت ذخیره &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;می شود برای برگرداندن آن فایل ذخیره شده برروی حافظه موقت از فرمانPaste استفاده می کنیم که معادل کلیدهای میانبرCtrl+vمی باشد.</span></font><div><font class="Apple-style-span" color="#993399"><span class="Apple-style-span" style="font-size: 12px;"><br></span>
+
+
+</font><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#993399"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/2ertbacveyonl9nccegg.jpg" alt=""></font></span></div><div><span class="Apple-style-span" style="font-size: 12px; "><font class="Apple-style-span" color="#993399"><br></font></span></div><div><font class="Apple-style-span" color="#993399"><span class="Apple-style-span" style="font-size: 12px; "><div class="GImg" style="font: normal normal normal 12px/normal tahoma; "><h2>Paste in fo</h2>به کمک این فرمان قسمت Copy شده راPaste&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;می کنیم با این تفاوت که قسمت کپی شده به صورت یک لایه ماسک&nbsp; &nbsp;می شود و یک لایه ماسک برای ما ایجاد می کند(این مقوله را همین جا تمام می کنم تا در دروس بعدی مفصل به آن پرداخته شود)<p>&nbsp;</p><h2>Clear :</h2>به کمک این گزینه قسمت انتخابی را می توانید حذف نمایید.</div><div class="GImg" style="font: normal normal normal 12px/normal tahoma; "><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/i9xvvnh0bothzcptg36.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><h2>Check speilng</h2>به کمک این فرمان ما می توانیم از املای درست کلمه خود( البته به زبان انگلیسی ) مطلع شویم به این صورت که زمانی که کلمه ای را در نرم افزار می نویسیم این فرمان فعال می شود با زدن این فرمان پنجره ای کوچک باز می شود که در زیر به آن خواهیم پرداخت.<p>&nbsp;</p><h2>Not in dictionary :</h2>دراین قسمت کلمه ای وجود دارد که شما نوشته اید.<p>&nbsp;</p><h2>Chageto :</h2>در این قسمت نزدیک ترین کلمه را از حیث حروف به کلمه مورد نظر ما وجود دارد.<p>&nbsp;</p><h2>Suggestions :</h2>در این قسمت کلماتی که از نظر حروف به کلمه مورد نظر ما نزدیک است وجود دارد.<p>در قسمت زیر هم معیین شده که چه نوع زبانی به اینDictionary حاکم است ویک گزینه با نام Check all leyer وجود دارد که با فعال کردن آن این فرمان برتمامی لایه ها اعمال می شود.</p><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/xxb96ydkco1rjyj4uv8s.jpg" alt=""></div></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><h2>Find and rep lace text :</h2>به وسیله این فرمان می توان یک کلمه مورد نظر یا یک حرف مورد نظر را با حرف یا کلمه دیگر به صورت خودکار تغییرداد.</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/el9litmknfy2r7nkmor4.jpg" alt=""></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><div><br></div></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; ">به کمک این فرمان می توان به صورت تمام وکلی یک لایه یا صفحه را به یک رنگ یا یک شکل در آورد زمانی که این فرمان را&nbsp;&nbsp; &nbsp;می زنید پنجرهFill باز می شود در قسمت اول می توانید انتخاب کنید که از چه حالتی برای کل صفحه استفاده نمایید می توانید به صورت مشکی کنید یا به صورتBack ground color یا در پس زمینه از توالی عکس استفاده نمایید وغیره......<p>در قسمتBlending می توانید مشخص نمایید که نوع مخلوط کرده لایه انتخابی با لایه های دیگر به چگونه باشد با انتخاب مد مورد نظر می توانید از این خاصیت استفاده نمایید در قسمتOpacity هم&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; می توانید میزان غلظت رنگ یا تصویری که می خواهید به صفحه بگذارید تعیین نمایید.</p><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/nd772ivps205io5nqzx1.jpg" alt=""></div><div><br></div><div><h2>Stroke</h2>به کمک این فرمان می توانید در لایه انتخابی به دور تصویر یا خط کشیده شده &nbsp;یک خط با رنگ و اندازه دلخواه رسم نمایید. قسمتWidth&nbsp;میزان قطر خط می باشد. درColor box می توانید نوع رنگ را تعیین نمایید. در قسمتLoction می توانید نوع موقعیت خط را تعیین نمایید. که به سه صورتInside که در داخل خط را ترسیم می نمایدCenter که از وسط وبه صورت مساوی خط ترسیم شده در دور موضوع مورد نظر می کشد. و درآخر گزینهOutide که خط را به صورتOutline می کشد یعنی دقیقا بعد از تمام شدن موضوع خط را در دور شی می کشد. در قسمتBlending می توانید نوع مخلوط شدن خط با لایه های دیگر را در قسمتMode و میزان غلظت خط را به کمک گزینهOpacity تعیین نمایید.<p>&nbsp;</p><p>&nbsp;</p><h2>Free transform :</h2>به کمک این فرمان می توانید یک لایه یا یک تصویر انتخابی را به صورت آزادانه تغییر مکان دهید یعنی آن را بچرخانید یا آن را تغییر اندازه دهید. یا آن را برعکس نمایید بعد از اعمال تنظیمات برای ثابت کردن تنظیمات بازدن کلید تائید بالا یا دوبار پشت سرهم کلیک کردن می توانید تنظیمات را اعمال نمایید برای رد کردن تنظیمات هم از گزینه Cancel یا کلید میان برEsc می توانید استفاده نمایید کلیدهای میانبراین فرمان نیز معادلCtrl+t می باشد.<p>&nbsp;</p><p>&nbsp;</p><h2>Trans form :</h2>در این قسمت شما می توانید هر یک از فعالیت های چرخش تغییر مقیاس ایجاد پرسپکتیو کج وکوله کردن تصویر مورد نظر را به صورت جداگانه انجام دهید.</div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/lf0855pc9dpp9v1bsgld.jpg" alt=""></div><div><br></div></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><h2>Define brush</h2>به کمک این گزینه می توانید لایه یا تصویر یا قسمت انتخابی از هردوی آنها را به صورت یک سر قلم در بیاورید در درس آینده با قلم ها به خوبی آشنا خواهید شد در واقع شما می توانید یک سر قلم به صورت دلخواه ایجاد نمایید . این قابلیت بسیار قابلیت کارآمدی&nbsp; &nbsp;می باشد.<p>&nbsp;</p><p>&nbsp;</p><h2>Purge :</h2>به کمک این فرمان می توانید چند گزینه را خالی و تهی نمایید که در زیر تک تک آنها را توضیح خواهم داد.<p>&nbsp;</p><h2>Undo :</h2>یکی از قابلیت فرمانPurge&nbsp;پاک کردن مراحل انجام شده در نرم افزار می باشد به این صورت که دیگر امکان بازگشت به آنها به کمک فرمانUndo نیست.<p>&nbsp;</p><h2>Clip board :</h2>از دیگر قابلیت های این فرمان آن است کهCilp boardرا که همان حافظه موقت سیستم می باشد را پاک سازی می نمایید البته این پاک سازی مختص فعالیت های خود نرم افزار&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;می باشد و هیچ ارتباطی با نرم افزار های دیگر که بررویCli pboard فایلی دارند ندارند.<p>&nbsp;</p><h2>Histories :</h2>به کمک این فرمان می توانید تاریخچه یاهمان&nbsp;Histories را پاک نماییدHistories&nbsp;در واقع تاریخچه ای ازفعالیت های ما در نرم افزار می باشد که در دروس بعدی با آن به طور کامل آشنا خواهید شد.<p>&nbsp;</p><h2>All :</h2>به کمک این گزینه تمام سه مورد بالا را شما پاک می کنید.<p>&nbsp;</p><p>&nbsp;</p><h2>Color settings :</h2>در این قسمت شما می توانید نوع ومیزان بیت ها واطلاعات در تمام ترکیب های رنگی تغییر دهید و خاصیت آنها را عوض نمایید البته دراین رابطه در قسمت آنالیز ترکیب های رنگی مفصل بحث خواهیم نمود.</div><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/aishxjvx68scvzy9huy.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><h2>Preset manager</h2>در این قسمت شما می توانید نوع قرار گیری انوع سر قلمTexture یا انواع ترکیب های رنگی را در پالت های خود تغییر دهید بعضی آنها را به صورت دستی و دلخواه مرتب و ردیف نمایید وحتی می توانید آنها را حذف هم نمایید. بر روی هر یک از آنها بروید و باکشیدن آنها جای آنها را عوض نمایید و برای رفتن بهنوع ها ی دیگر از منوی کرکره ایPreset type استفاده نمایید.<p>&nbsp;</p><p>&nbsp;</p><h2>Preferences :</h2>به کمک این قسمت مزیت های این نرم افزار در دست شما است البته این بحث بسیار گسترده است ودراین قسمت نمی گنجد و ما آن را به جلسات بعدی موکول خواهیم کرد ولی به صورت کلی در رابطه با آن مطالبی را خواهم گفت تا با آن بیشتر آشنا شدید در این قسمت می توانید تنظیمات بعضی از ابزارها و پارامترهای مرتبط با نرم افزار را تغییر دهید البته این خاصیت در تمام نرم افزارها وجود دارد تا اینجا با منویEdit به طور کامل آشنا شدید در جلسه بعد با قسمتTools box یا جعبه ابزار آشنا خواهید شد وخواهید دید که فرمان های این منو چقدر مهم وکاربردی هستند گرچه کسل کننده هستند.</span></font></div></div><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(124)">نظرات  <script>setCommentCnt(124)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://baraneaseg.mihanblog.com/post/123">نرم افزار فتوشاپ سری2 </a></div></div>
+<div class=t-date>تاریخ : دوشنبه 30 بهمن 1391  | 12:14  | نویسنده : <a href="../post/author/881009.html">هستی  </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><font class="Apple-style-span" color="#993399"><span class="Apple-style-span" style="font-family: Tahoma; font-weight: bold; font-size: small; ">&nbsp;آموزش شماره 2 فتوشاپ</span><span class="Apple-style-span" style="font-size: 12px; "><h1><span style="font-family: Tahoma; "><span style="font-size: small; ">&nbsp;</span></span></h1></span></font><p style="font-size: 12px; "><span style="font-family: Tahoma; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399">در ادامه مطالب قبلی بقیه فرمانهای داخل منوی File را با هم بررسی خواهیم نمود.</font></span></span></p><h2 style="font-size: 12px; "><span style="font-family: Tahoma; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399">File info</font></span></span></h2><div><span style="font-family: Tahoma; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399"><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/3wn5t20fexfrt89lux3z.jpg" alt=""></font></span></span></div><div><span style="font-family: Tahoma; "><span style="font-size: small; "><font class="Apple-style-span" color="#993399"><br></font></span></span></div><div><font class="Apple-style-span" color="#993399"><span class="Apple-style-span" style="font-size: 12px; "><p>به كمك این گزینه می توانید اطلاعاتی را درباره فایل جاری (هم بدهید و هم بگیرید)</p><p>درقسمت قبلی ما درباره گزینهSave for web گذرا مطالبی را گفتیم در این قسمت جامع تر و بیشتر به این مقوله خواهیم پرداخت.</p><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/alh8eaay3pp8mnsvkgf.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><h2><span style="font-size: small; ">Save for web</span></h2><div><span style="font-size: small; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/vzh7bybddkwbmdovrg42.jpg" alt=""></span></div><div><span style="font-size: small; "><br></span></div></span><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; ">&nbsp;</div><div style="font: normal normal normal 12px/normal tahoma; text-align: center; ">&nbsp;گفتیم به كمك این گزینه فایل را می توان برای استفاده بر روی اینترنت استفاده نمود. زمانی كه این گزینه زده شود پنجره بزرگی در صفحه نمایان می شود كه این پنجره شامل چند قسمت از جمله پنجره كاری و قسمت پارامترها می باشد درست راست پنجره كاری شما می توانید به پارامترهای این پنجره دست پیدا كنید كه در زیر هریك از پارامترها را توضیح خواهم داد.</div><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/364gx6y8a3dgib2p3ogz.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><h2>قسمتSettings</h2><p>&nbsp;در این قسمت شما چند فیلد عددی و منوهای كركره آی در دست داری أتولین منوی كركره آی تعیین كنفضه نوع فرمت و میزان كیفت تصویر به صورت پیش فرض می باشد كه هر كدام از آنتا مقدار و فرمت خاص تستند و برأی سهول در كار در اختیار ما قرار ضاده شده آست.</p><p>قسمت بعدی نیر یكو منوی كركره آی می باشد در این قسمت فقط برأی تامین نوع فرمت&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (یا جنس) فآیل می باشد در زیر همین منوی كركره آی منوی دیگری قرار دارد كه بسته به نوع فرمت تعیین شده تنظیماتی را دارا می باشد .</p><p>&nbsp;</p><p>به عنوان مثال برأی فرمتJpeg چهار گزینه به شرح زیر دارا می باشد:</p><p>&nbsp;</p><h2>Low :</h2>كم كیفت<p>&nbsp;</p><h2>Medium :</h2>كیفت متوسط<p>&nbsp;</p><h2>High :</h2>كیفت خوب<p>&nbsp;</p><h2>Maximam :</h2>كیفت عالی<p>البته می توان میزان كیفت را به صورت دستی نیر انجام داد. این كار را می توان به كمك پارامترQuality انجام داد هرچه عدد بیشتر كیفت بهتر هر چه عدد كم كمتر كیفت بدتر.</p><p>&nbsp;</p><p>&nbsp;</p><h2>گزینهBlur :</h2><p>به كمك این گزینه می توان یكو صحنه را محو نمود.</p><p>&nbsp;</p><p>&nbsp;</p><h2>گزینهMatte :</h2><p>به كمك این گزینه می توان رنگ پشت زمینه اگر قسمتی از عكس وجود نداشته باشد و پشت زمینه معلوم باشد را تعیین نمود و رنگ آمیزی كرد.</p><p><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/tgha2pc35keeubx5o1fa.jpg" alt=""></p></span><span class="Apple-style-span" style="font-size: 12px; "><p>در پایین دو برگهColor table , Imagesize وجود دارد در پنجره اول شما می توانید در فرمتGifیكو پالت رنگ در اختیار داشته باشید . و در قسمت دوم می توانید اندازه تصویر را تغییر دهید زمانی كه اندازه مورد نظر خود را در فیلد عدد وارد نمودید دكمهApply روشن می شود بازدن این دكمه تنظیماتی كه تعیین نمودید اعمال می شود و عكس كوچك یا بزرگ می گردد.</p><p>حالا عكس شما آماده می باشد برأی ذخیره سازی و استفاده بر روی اینترنت این پنجره بعد از ذخیره سازی خود به خود بسته خواهد شد.</p><p>&nbsp;</p><p>به منوی فآیل بر می گردیم و از فرمان های باقی مانده گزینهRevert را بررسی می كنیم.</p><p><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/tgha2pc35keeubx5o1fa.jpg" alt=""></p><p><br></p></span><span class="Apple-style-span" style="font-size: 12px; "><h2>فرمانRevert</h2><p>به كمك این گزینه شما می توانید برروی عكس خود یا فآیل جاری هر تغییراتی را اعمال نمایید و زمانی كه دیدید این فعالیت ها مورد دلخواه شما نیست بازدن گزینهRevert عكس به صورت اولیه خود بر می گردد.</p><p>&nbsp;</p><p>به كمك این فرمان می توانید تنظیمات صفحه از جمله نوع قطع استفاده شده برأی خروجی گرفت به صورت پیرینت را مشاهده كنید یا تغییر دهید.</p><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/goy0a5ul74l30fs6rf0g.jpg" alt=""></div><div><br></div></span><span class="Apple-style-span" style="font-size: 12px; "><h2>Print with priview</h2><p>به كمك این فرمان شما می توانید یكو پیش نمایش از فآیل پیرینت گرفته شده را ببینید و همچنین تنظیماتی را اعمال نمایید زمانی كه این فرمان را می زنید پنجره آی باز می شود . این پنجره شامل تنظیمات زیر می باشد:</p><p>&nbsp;</p><p>&nbsp;</p><h2>Position :</h2><p>به كمك این قسمت می توانید موقعیت تصویر خود را برروی برگة تغییر دهید و موقعیت دیگری بر روی كاغذ پیدا كنید اگر تیك كنار عبارت Center image را بردارید می توانید موقعیت عكس را به صورت دستی تغییر دهید بغل فیلد های عددی بالا و چپ یكو منوی كركره آی وجود دارد كه تعیین كنفضه میزان واحد اندازه گیری می باشد.</p><p>&nbsp;</p><p>&nbsp;</p><h2>Scaled print size :</h2><p>دراین قسمت شما می توانید اندازه تصویر را بزرگ وكوچك كنید سه راه برأی تغییر اندازه تصویر وجود دارد كه در زیرشرح خواهم داد:</p><p>-1مسی -&nbsp;به كمك فیلد عددی (Scale) ، به كمك این فیلد می توانید برحسب درصد تصویر موجود را بزرگ و كوچك نمایید.</p><p>2-&nbsp;&nbsp;به كمك دو فیلد عددی(Height) و پهنا (Width) می توانید اندازه تصویر را تغییر دهید.</p><p>3-&nbsp; &nbsp;بالاخره روش سوم به این صورت می باشد كه با فعال كردن گزینهShow bounding box&nbsp;&nbsp;&nbsp;می توانید چند دستگیره بر دور تصویر خود داشته و با حركت دادن آنتا عكس را بزرگ وكوچك نمایید.</p><p>منوهای كركرهای روبروی فیلدهای عددی واحد اندازه گیری می باشد كه بسته به نیاز شما هر كدام را خواستید می توانید انتخاب نمایید.</p><p>و در آخر گزینهScale to fit media&nbsp;&nbsp;&nbsp;به كمك این گزینه می توانید تصویر موجود را به صورت خودكار اندازه برگة خود نمایید.</p><p>در قسمتOption شما می توانید تنظیماتی را برأی تصویر ایجاد نمایید. از جمله مارك های را برأی راهنمایی بهتر در صحنه ایجاد نماییم یا عكس را به صورت افقی برعكس نماییم یا عكس را از نظر رنگ برگردانیم ( نگاتیو) یا محدودهCrop را مشخص كنیم یا در امتداد لبه های عكس برأی راهنمایی بهتر بردارهای ترسیم كنیم . در قسمت پایین نیر منوی كركره آی وجود دارد نوع زبان مورد استفاده برأی چاپ گر را تعیین می كند.</p><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.tehran98.com/img1/bnj3mosa1v5jhq0ns955.jpg" alt=""></div><div><br></div></span></font><span class="Apple-style-span" style="font-size: 12px; "><div style="font: normal normal normal 12px/normal tahoma; text-align: center; "><div class="GImg" style="font: normal normal normal 12px/normal tahoma; "><font class="Apple-style-span" color="#993399">&nbsp;</font></div><div class="GImg" style="font: normal normal normal 12px/normal tahoma; "><h2><font class="Apple-style-span" color="#993399">فرمانJumpto</font></h2><p><font class="Apple-style-span" color="#993399">به كمك این فرمان می توان نرم افزاری های كه تحت فتوشاپ فعالیت می كنند را راه اندازی نمود از جمله این نرم افزارهاAdobe Image ready&nbsp; میباشد. به كمك این نرم افزار می توانید تصاویر متحرك را ایجاد نمود و تصاویر متحرك را ویرایش نمایید البته این جمله آی از فعالیت های این نرم افزار قدرتمند می باشد.</font></p><p><font class="Apple-style-span" color="#993399">و در آخر گزینهExit كه به كمك آن می توان از این نرم افزار خارج شد.</font></p><p><font class="Apple-style-span" color="#993399">در این قسمت می خواهم شما را باچند فرمت كاربردی كه می توان از فتوشاپ خروجی گرفت و همچنین چند فرمت كه می توان در فتوشاپ استفاده نمود آشنا كنم.</font></p><p><font class="Apple-style-span" color="#993399">1-&nbsp;Psd pdd : این فرمت ، فرمت خود نرم افزار فتوشاپ می باشد این فرمت تمامی تنظیمات صحنه را كه در فتوشاپ ایجاد نمودید به همان صورت ذخیره سازی می نماید.</font></p><p><font class="Apple-style-span" color="#993399">2-&nbsp;Bmp : در گرافیك كامپیوتر مشخصه سه حرفی نام فآیل برأی فایلی كه حاوی تصویر گرافیكیMap-Bit شده آست می باشد.</font></p><p><font class="Apple-style-span" color="#993399">3-&nbsp;Gif : قالب گرافیكی از یكو فآیل كه حاوی تصویرMap-Bit باشد می گویند یكو فرمت از نوع كه بیشتر برأی وب استفاده می شود.</font></p><p><font class="Apple-style-span" color="#993399">4-&nbsp;JPEG : یكو فرمت از نوعTure color با روش فشرده سازیLossyآست این فرمت از كانال آلفا در تصویر پشتیبانی ندارد.</font></p><p><font class="Apple-style-span" color="#993399">5-&nbsp;&nbsp;Epc : یكو نوع فرمت فآیل آست كه بیشتر برأی فایلهای برداری (مانند لوگوها ) استفاده &nbsp;می شود در عین حال امكان تعبیه تصاویر Bitmap را دارد.</font></p><p><font class="Apple-style-span" color="#993399">6-Tiff : یكو فرمت از نوعTrue color و غیر فشرده آست.</font></p><p><font class="Apple-style-span" color="#993399">7-&nbsp;16Tiff : یكو فرمت هایی كه می توان به داخل فتوشاپ آورد آشنا شدید در آینده با تمام این فرمت ها تحت مثال های به صورت عملی آشنا خواهید شد.</font></p><p><font class="Apple-style-span" color="#993399">البته این فرمت ها را نیر می توان به داخل س نیز وارد نمود.</font></p><div><br></div></div></div></span><span class="Apple-style-span" style="font-size: 12px; "><a href="http://www.taknaz.ir/" title=" نرم افزار فتوشاپ سری2 www.taknaz.ir" style="text-decoration: none; color: rgb(8, 24, 32); "></a></span><a href="http://www.taknaz.ir/" title=" نرم افزار فتوشاپ سری2 www.taknaz.ir" style="text-decoration: none; color: rgb(8, 24, 32); "></a><span class="Apple-style-span" style="font-size: 12px; "><a href="http://www.taknaz.ir/" title=" نرم افزار فتوشاپ سری2 www.taknaz.ir" style="text-decoration: none; color: rgb(8, 24, 32); "></a></span><a href="http://www.taknaz.ir/" title=" نرم افزار فتوشاپ سری2 www.taknaz.ir" style="text-decoration: none; color: rgb(8, 24, 32); "></a><span class="Apple-style-span" style="font-size: 12px; "><a href="http://www.taknaz.ir/" title=" نرم افزار فتوشاپ سری2 www.taknaz.ir" style="text-decoration: none; color: rgb(8, 24, 32); "></a></span><a href="http://www.taknaz.ir/" title=" نرم افزار فتوشاپ سری2 www.taknaz.ir" style="text-decoration: none; color: rgb(8, 24, 32); "></a></div><span class="Apple-style-span" style="font-size: 12px; "><a href="http://www.taknaz.ir/" title=" نرم افزار فتوشاپ سری2 www.taknaz.ir" style="text-decoration: none; color: rgb(8, 24, 32); "></a></span><a href="http://www.taknaz.ir/" title=" نرم افزار فتوشاپ سری2 www.taknaz.ir" style="text-decoration: none; color: rgb(8, 24, 32); "></a><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(123)">نظرات  <script>setCommentCnt(123)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+
+
+
+</div>
+<style>.pging {    direction:rtl;    font-size:1.2em;    height:30px;    margin:40px 0 0;    color:#c2a900;    padding-bottom: 20px;    text-align: center;}
+.pging a:link, .pging a:visited {border:1px solid #c2a900;    display:inline-block;    margin:0 3px;    padding:1px 5px;    text-decoration:none;}
+.pging a:hover, .pging a:active {    color:#c2a900;}.pging a.current:link, .pging a.current:visited {    background-color:#c2a900;    border:1px solid #c2a900;    color:red;    cursor:text;}</style> <div class=pging>
+<p align="center"><font face="Tahoma" style="font-size: 9pt">
+			تعداد کل صفحات : 11 ::     			<a href="1.html">
+			<font color="#c2a900"><span>1</span></font></a>  			<a href="2.html">
+			<font color="#c2a900"><span>2</span></font></a>  			<a href="3.html">
+			<font color="#c2a900"><span>3</span></font></a>  			<a href="4.html">
+			<font color="#c2a900"><b>4</b></font></a>  			<a href="5.html">
+			<font color="#c2a900"><span>5</span></font></a>  			<a href="6.html">
+			<font color="#c2a900"><span>6</span></font></a>  			<a href="7.html">
+			<font color="#c2a900"><span>7</span></font></a>  			<a href="8.html">
+			<font color="#c2a900"><i>...</i></font></a>  <br><br></div>
+</font></p></div></div>
+
+
+<div class=Sid>
+<div id=Sidebar>
+
+<div class=TopSid><div class=TopSid2>			
+<b>درباره وبلاگ</b></div></div>
+<div class=CenterSid><div class=li-Sid2>  <p align="center">
+<img src="../../static.mihanblog.com/public/user_data/web_photo/345/1033403.jpg@8100"  /><br></p></div></div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آرشیو مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../post/archive/1393/1/1.html"> هفته اول فروردین 1393 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/11/1.html"> هفته اول بهمن 1392 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/10/4.html"> هفته چهارم دی 1392 ، 2 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/10/3.html"> هفته سوم دی 1392 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/10/2.html"> هفته دوم دی 1392 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/10/1.html"> هفته اول دی 1392 ، 2 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/9/3.html"> هفته سوم آذر 1392 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/9/1.html"> هفته اول آذر 1392 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/8/2.html"> هفته دوم آبان 1392 ، 2 </a></div><div class=li-Sid>
+<a href="../post/archive/1392/8/1.html"> هفته اول آبان 1392 ، 1 </a></div></div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آخرین مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../post/205.html">سلام</a></div><div class=li-Sid>
+<a href="../post/202.html">خانه خدا</a></div><div class=li-Sid>
+<a href="../post/204.html">مادر مهربان</a></div><div class=li-Sid>
+<a href="../post/203.html">امضاء شناسی</a></div><div class=li-Sid>
+<a href="../post/1.html">خاطرات یک دفتر</a></div><div class=li-Sid>
+<a href="../post/199.html">نا خواسته مسافر شدم...</a></div><div class=li-Sid>
+<a href="../post/198.html">خسته ام از زندگی</a></div><div class=li-Sid>
+<a href="../post/197.html">باران</a></div><div class=li-Sid>
+<a href="../post/194.html">یلدا</a></div><div class=li-Sid>
+<a href="../post/191.html">تصاویری طنز از اثرات استفاده اینترنت (طنز جالب) </a></div><div class=li-Sid>
+<a href="../post/186.html">دلنوشته های دلنشین  </a></div><div class=li-Sid>
+<a href="../post/185.html">10 سال عشق یک جفت مارمولک به جفتش!! </a></div><div class=li-Sid>
+<a href="../post/183.html">محرم</a></div><div class=li-Sid>
+<a href="../post/182.html">تقدیم به اونایی دلتنگ هستن</a></div><div class=li-Sid>
+<a href="../post/181.html">یکی بود یکی نبود</a></div><center><a href="../post/list.html"><b>لیست آخرین مطالب</b></a></center></div>
+<div class=LowSid></div>
+
+
+
+<div class=TopSid><div class=TopSid2>
+<b>آمار سایت</b></div></div>
+<div class=CenterSid>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right></div>
+<div class=LowSid></div>	
+
+<div class="TopSid"><div class=TopSid2>امکانات وب</div></div>
+<div class=CenterSid>
+<div class=About>
+<div style="text-align:center">
+<!-- Music player by www.1abzar.com ---><center>
+<script language="javascript" src="http://1abzaar.ir/tools/player/?pl=1&file=http://javanup.ir/upload/r5152m1wqrse2lmizfck.mp3&start=1"></script><div style="display:none"><h2><a href="http://www.1abzar.com" rel="nofollow" >کد آهنگ</a></h2></div>
+
+
+<a href="http://ariotik.ir/ref:792"><img src="http://ariotik.ir/template/site/images/banner3.gif" alt="کسب درآمد"></a>
+
+
+<center><br><br><a href="http://blog2i.com" target="_blank"><img 
+border="0" src="http://blog2i.com/rank.php?url=http://baraneaseg.mihanblog.com/&s=4" title="وبلاگ"></a><br><br>
+
+<!-- mihantools.net --->
+<a href="http://mihantools.net/tools/contact/e.php?email=hastigarib@yahoo.com" target="_blank">تماس با مدیر وبلاگ</a><div style="display:none"><h1><a href="http://mihantools.net">فرم تماس</a></h1></div>
+<!-- mihantools.net --->
+
+
+
+<div align="center"><a href="http://etransteam.com/blog/" target="_blank" title="بلاگ گروه مترجمین ایران زمین - ترجمه متون تخصصی">بلاگ گروه مترجمین ایران زمین</a></div>
+<!-- End Susa Web Tools - Love Meter -->
+<!-- Begin Susa Web Tools - Fal Hafez -->
+<script src="http://susawebtools.ir/services/fal/hafez/index.php?skin=14"></script>
+<div style="margin-right:25%; margin-top:-3%"><a href="http://susawebtools.ir/?p=61">دریافت کد فال حافظ</a></div>
+<!-- End Susa Web Tools - Fal Hafez -->
+<!-- start logo cod off http://melodylonely.blogfa.com/ -->
+<p align="center"><p align="center"><a href="http://melodylonely.blogfa.com/" target="_blank"><img border="0" src="http://s1.picofile.com/file/7509444080/2.gif" width="160" height="200" alt="love :: life"></a></p>
+<!--finish logo cod off http://melodylonely.blogfa.com/ -->
+<p align="center"><a href="http://www.yazdmusic98.vcp.ir" target="_blank"><img border="0" 
+
+<!----www.bahar22.com----><center><script type="text/javascript" src="http://bahar22.com/ftp/other/17/004-2.js"></script></center><!----www.bahar22.com----><p align="center"><font face="Tahoma" style="font-size: 7pt"><a target="_blank" href="http://www.bahar22.com"><span style="text-decoration: none"><font color="#999999">كد تقویم</font></span></a></font></p>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+
+  {lang: 'fa'}
+
+</script>
+
+<p style="text-align: center;">
+
+<div style="width:225px; height:20px; position:fixed;left:5px; bottom:10px;z-index:1000;">
+
+<div style="width:225px;height:20px; background:#b3def2; position:fixed; -webkit-border-radius: 5px; z-index:1000;-moz-border-radius: 10px;border-radius: 5px;background-color: rgba(0, 174, 255, 0.3);color:#005780; border:solid 2px #00AEFF;position: absolute;left:15px;bottom:10px;direction:rtl;padding:10px 5px;">
+
+<span style="font-family:tahoma;font-size:11px;">این سایت را در گوگل محبوب کنید:</span>
+
+<div style="float:left">
+
+<g:plusone size="small" href="http://www.ketabline.com/"></g:plusone>
+<p><a href="http://ketabline.com"><font size="1">by:Ketabline</font></a></p>
+
+</div></div></div>
+<br><script language="javascript" src="http://pichak.net/blogcod/dictionary/dic/cod.php?width=1&border=FF0000&bgcolor=DFDFDF&tcolor=000BA4"></script><div  style='display:none;'
+
+<!-- Started code by varoone.ir ---- YahooID: davod_v2008  -->
+<script type="text/JavaScript" language="javascript">
+msg = "بارن عشق "; msg = "..." + msg;pos = 0;
+function scrollMSG() {
+document.title = msg.substring(pos, msg.length) + msg.substring(0, pos);
+pos++;
+if (pos > msg.length) pos = 0
+window.setTimeout("scrollMSG()",200);
+}
+scrollMSG();
+</script>
+<p>
+<a target="_blank" href="http://varoone.ir/post/17">کد متحرک کردن عنوان وب</a></p>
+<!-- Ended code by varoone.ir ---- YahooID: davod_v2008  -->
+
+
+<style>
+img:hover{
+opacity:0.8;filter:alpha(opacity=80);
+-webkit-transform: rotate(-2deg);
+-moz-transform: rotate(-2deg);
+
+}
+img:out{
+opacity:1;filter:alpha(opacity=100);
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+
+}
+</style>
+<P><A
+href="http://mahsaei-codes.blogfa.com" target=_blank><SPAN 
+
+style="FONT-WEIGHT: 700; TEXT-DECORATION: none"><FONT 
+color=#ff99cc>کــد کــَج شــُدَنِ تَصــآویر
+</FONT></SPAN></A></P>
+<br>
+</div>
+</div>
+</div>
+<div class=LowSid></div>
+
+
+</div></div></div><div class=footer><div class=Fo2>Design By</a>  <b></b>  <a title="قالب وبلاگ" href="http://nightnama.ir" target="_blank">Nightnama.ir</a> </div></div></div></div>
+
+
+</body>
+
+<script type="text/javascript">var ariotik_user_id = 792;</script>
+<script type="text/javascript" src="http://ariotik.ir/website/js"></script>
+<script type="text/javascript">var abarclick_user_id = 713;</script>
+<script type="text/javascript" src="http://abarclick.ir/website/js"></script>
+
+</html>
+
+
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'baraneaseg.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

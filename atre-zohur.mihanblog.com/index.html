@@ -1,0 +1,1557 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://atre-zohur.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1293736*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','82');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','شنبه 25 دی 1395');
+	
+	setStatVar('today_view','45');
+	setStatVar('yesterday_view','9');
+	
+	setStatVar('this_month_view','416');
+	setStatVar('last_month_view','316');
+
+	setStatVar('total_view','90679');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (15:39)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://atre-zohur.mihanblog.com/statupdate/?data[refereruri]=http://delshad-st.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607779429&data[hash]=284f2c56ee90d2348fe496a697a9dfd5&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[16]='315';commentCnt[67]='383';commentCnt[124]='8';commentCnt[125]='5';commentCnt[126]='3';commentCnt[127]='8';commentCnt[128]='10';commentCnt[129]='7';commentCnt[130]='3';commentCnt[131]='5';commentCnt[132]='17';commentCnt[133]='13';commentCnt[134]='10';commentCnt[135]='8';commentCnt[136]='20';commentCnt[137]='7';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[16]='0';
+mihanblogDisLikeArrCnt[16]='0';
+mihanblogLikeArrCnt[67]='2';
+mihanblogDisLikeArrCnt[67]='0';
+mihanblogLikeArrCnt[124]='0';
+mihanblogDisLikeArrCnt[124]='0';
+mihanblogLikeArrCnt[125]='0';
+mihanblogDisLikeArrCnt[125]='0';
+mihanblogLikeArrCnt[126]='0';
+mihanblogDisLikeArrCnt[126]='0';
+mihanblogLikeArrCnt[127]='0';
+mihanblogDisLikeArrCnt[127]='0';
+mihanblogLikeArrCnt[128]='0';
+mihanblogDisLikeArrCnt[128]='0';
+mihanblogLikeArrCnt[129]='0';
+mihanblogDisLikeArrCnt[129]='0';
+mihanblogLikeArrCnt[130]='0';
+mihanblogDisLikeArrCnt[130]='0';
+mihanblogLikeArrCnt[131]='0';
+mihanblogDisLikeArrCnt[131]='0';
+mihanblogLikeArrCnt[132]='0';
+mihanblogDisLikeArrCnt[132]='0';
+mihanblogLikeArrCnt[133]='0';
+mihanblogDisLikeArrCnt[133]='0';
+mihanblogLikeArrCnt[134]='0';
+mihanblogDisLikeArrCnt[134]='0';
+mihanblogLikeArrCnt[135]='0';
+mihanblogDisLikeArrCnt[135]='0';
+mihanblogLikeArrCnt[136]='0';
+mihanblogDisLikeArrCnt[136]='0';
+mihanblogLikeArrCnt[137]='0';
+mihanblogDisLikeArrCnt[137]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://atre-zohur.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://atre-zohur.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://atre-zohur.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://atre-zohur.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://atre-zohur.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://atre-zohur.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://atre-zohur.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://atre-zohur.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://atre-zohur.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://atre-zohur.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://atre-zohur.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://atre-zohur.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://atre-zohur.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://atre-zohur.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://atre-zohur.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://atre-zohur.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://atre-zohur.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META NAME="description" CONTENT="اللهم عجل لولیک الفرج
+کشتی نسازای نوح طوفان نخواهدآمد
+برشوره زاردلهاباران نخواهدآمد
+رفتی کلاس اول این جمله راعوض کن
+آن مردتانیایدباران نخواهدآمد
+سلام
+به وبلاگ خودتون خوش آمدید
+امیدوارم مطالب موردپسندشماقراربگیره
+بانظرات ارزشمندتون من اداره هرچه بهتروبلاگ یاری فرمایید
+یاعلی
+التماس دعای فرج">
+<META NAME="keywords" CONTENT="امام زمان,ظهور,عطر ظهور,اخرالزمان,امام مهدی,انتظار,منتظر,صاحب الزمان,نشانه,حدیث,مسافر جمعه,">
+<META NAME="DesignerUrl" CONTENT="http://salehon.ir">
+<META NAME="Designer" CONTENT="salehon">
+<link rel="alternate" type="application/rss+xml" title="عطر ظهور" href="http://atre-zohur.mihanblog.com/post/rss/" />
+<title>عطر ظهور</title>
+<link href="http://www.salehon.ir/wp-content/uploads/2013/12/e-s-stayl.css" type="text/css" rel="stylesheet">
+</style>
+
+</head>
+
+<body>
+<!--Design By : salehon.ir-->
+<div align =center>
+<table border="0" width="1000" cellspacing="0" cellpadding="0" class="Avazak">
+<tr><td colspan="3" class="page" dir="rtl" >
+<div  class ="header" >
+<h1>عطر ظهور</h1></a>
+<p class="subtitle">اللهم عجل لولیک الفرج</a>
+<p class="menu"><a href="index.html">صفحه اصلی</a> | 
+<a href="http://atre-zohur.mihanblog.com/post/list">عناوین مطالب</a> | 
+<a href="javascript:messageForm()">تماس با من</a> |
+<a title="قالب رایگان میهن بلاگ" href="http://www.salehon.ir">طراح قالب</a>
+</div>
+</td></tr>
+	<!-- end header -->
+<!--Design By : salehon.ir-->
+<td width="200" valign="top" dir="rtl" >
+<div class="sidebar-l">
+
+<h1>آخرین مطالب</h1>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/67">
+	حدیث هفته</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/137">
+	مالک دو چیز</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/136">
+	بسته ی فرهنگی کلام خوبان</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/135">
+	یا رفیق من لا رفیق له</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/134">
+	ذکر نجات از فشار های آخرالزمان</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/133">
+	عرش رحمان</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/132">
+	باز محرم رسید ماه عزای حسین.......</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/131">
+	با این شیطان چه کنم؟؟</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/130">
+	از خودت نجات پیدا کن</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/129">
+	زرنگی....</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/128">
+	مواظب اعمالمان باشیم</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/127">
+	همه مشکلات از من است</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/126">
+	کمی به سمت خدا برویم...</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/125">
+	سه رفیق</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/124">
+	چهار چیز در چهار چیز</a></div>
+<div class="FooterSid"></div>
+
+<h1>نویسندگان</h1>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/author/1099826">سعید آصفی</a></div>
+<br>
+<div class="FooterSid"></div>
+<!--Design By : salehon.ir-->
+<h1>لینک دوستان</h1>
+<div class="Link"><a href="http://seyed-ebrahim-aryahi.blogfa.com" target="_blank" title="" >
+	منتظران ظهور</a></div>
+<div class="Link"><a href="http://madareesadat.mihanblog.com" target="_blank" title="" >
+	ام المهدی(عج)</a></div>
+<div class="Link"><a href="http://yasekabod92.blogfa.com" target="_blank" title="" >
+	یا مهدی(عج)ادرکنی</a></div>
+<div class="Link"><a href="http://www.kkjnf.blogfa.com" target="_blank" title="" >
+	امام زمان(عج)</a></div>
+<div class="Link"><a href="http://minamaryam.blogfa.com" target="_blank" title="" >
+	جانم به قربانت ولی حالا چرا</a></div>
+<div class="Link"><a href="http://www.1gole.blogfa.com" target="_blank" title="" >
+	مهدی موعود</a></div>
+<div class="Link"><a href="http://mahdiyon.blogfa.com" target="_blank" title="" >
+	هیئت مهدویون کرمانشاه</a></div>
+<div class="Link"><a href="http://sabaii1355.blogfa.com" target="_blank" title="" >
+	هرچه از دوست رسد نیکوست</a></div>
+<div class="Link"><a href="http://arefanehayebandegi.blogfa.com" target="_blank" title="" >
+	عارفانه های نماز</a></div>
+<div class="Link"><a href="http://yaranenegar.blogfa.com" target="_blank" title="" >
+	موسسه یاران نگار</a></div>
+<div class="Link"><a href="http://manobaran313.blogfa.com" target="_blank" title="" >
+	منتظر آقا</a></div>
+<div class="Link"><a href="http://jamande314.blogfa.com" target="_blank" title="" >
+	جامانده</a></div>
+<div class="Link"><a href="http://amadegidefaei201.blogfa.com/" target="_blank" title="" >
+	بسم رب الشهدا</a></div>
+<div class="Link"><a href="http://www.khalegh80.blogfa.com" target="_blank" title="" >
+	خدا منتظر من است</a></div>
+<div class="Link"><a href="http://www.danehaye-tasbih.blogfa.com" target="_blank" title="" >
+	دانه های تسبیح</a></div>
+<div class="Link"><a href="http://www.ayatolahbahjat.blogfa.com" target="_blank" title="" >
+	سری از عشق</a></div>
+<div class="Link"><a href="http://www.feryferyfery.blogfa.com" target="_blank" title="" >
+	فرشته</a></div>
+<div class="Link"><a href="http://feraghe-yar.mihanblog.com" target="_blank" title="" >
+	فراق یار</a></div>
+<div class="Link"><a href="http://www.fadayian133.blogfa.com" target="_blank" title="" >
+	میعاد گاه عشق</a></div>
+<div class="Link"><a href="http://ff582f.blogfa.com/#" target="_blank" title="" >
+	ستاره های گمنام درآسمان بهشت</a></div>
+<div class="Link"><a href="http://engelabi24.blogfa.com" target="_blank" title="" >
+	ازتو به یک اشاره،ازمابه سر دویدن</a></div>
+<div class="Link"><a href="http://barghaye-sepid.blogfa.com" target="_blank" title="" >
+	برگ های سپید</a></div>
+<div class="Link"><a href="http://sobh1.mihanblog.com/" target="_blank" title="" >
+	صبح امید</a></div>
+<div class="Link"><a href="http://mohebroghayeh.blogfa.com/" target="_blank" title="" >
+	چشم انتظاران مهدی (عج)</a></div>
+<div class="Link"><a href="http://www.eli1998.blogfa.com" target="_blank" title="" >
+	نذرلبخنداو</a></div>
+<div class="Link"><a href="http://http://saghar18.blogfa.com/" target="_blank" title="" >
+	تنهاترین تنها</a></div>
+<div class="Link"><a href="http://www.aalmahdi-313.blogfa.com" target="_blank" title="" >
+	انصارالمهدی313</a></div>
+<div class="Link"><a href="http://zohor313yar.blogfa.com" target="_blank" title="" >
+	وبلاگ بزرگ یاران امام زمان(عج)</a></div>
+<div class="Link"><a href="http://www.takroo110.blogfa.com" target="_blank" title="" >
+	منتظران فرج</a></div>
+<div class="Link"><a href="http://www.mohebaan.ir" target="_blank" title="" >
+	محبان حضرت مهدی(عج)</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/linkdaily/">آرشیو پیوندهای روزانه</a></div>
+<div class="FooterSid"></div>
+<!--Design By : salehon.ir-->
+
+<h1>پیوندها</h1>
+<div class="Link"><a href="http://mashghe-akhlagh.mihanblog.com" title="" target="_blank" >
+	مشق اخلاق</a></div>
+<div class="Link"><a href="../omideakharinefatemeh.mihanblog.com/index.html" title="" target="_blank" >
+	امید آخرین فاطمه</a></div>
+<div class="Link"><a href="http://sadshekanan.mihanblog.com" title="" target="_blank" >
+	پلاک نقره ای</a></div>
+<div class="Link"><a href="http://nayebeh-bar-hagh.blogfa.com" title="" target="_blank" >
+	طلبه امام خامنه ای(حفظه الله)</a></div>
+<div class="Link"><a href="http://talabeh71.blogfa.com" title="" target="_blank" >
+	خاطرات یک طلبه</a></div>
+<div class="Link"><a href="../shahid-alirezahojati.mihanblog.com/index.html" title="" target="_blank" >
+	پرواز تا خدا</a></div>
+<div class="Link"><a href="http://rahianasemani.blogfa.com" title="" target="_blank" >
+	راهیان آسمانی</a></div>
+<div class="Link"><a href="http://yabnalhasan1.blogfa.com" title="" target="_blank" >
+	قرارمون تو آسمون،یا ابن الحسن(عج)</a></div>
+<div class="Link"><a href="http://alirezam74.mihanblog.com" title="" target="_blank" >
+	فدائیان امام خامنه ای(مدظله)</a></div>
+<div class="Link"><a href="http://www.chafievapelak.blogfa.com" title="" target="_blank" >
+	چفیه و پلاک</a></div>
+<div class="Link"><a href="http://mahboobedelha2.blogfa.com" title="" target="_blank" >
+	محبوب دلها2</a></div>
+<div class="Link"><a href="http://www.omeabiha1390.blogfa.com" title="" target="_blank" >
+	جهاد در جهاد</a></div>
+<div class="Link"><a href="http://tohid-m.blogfa.com" title="" target="_blank" >
+	تا آسمان راهی نیست</a></div>
+<div class="Link"><a href="http://mahboobedelha3.blogfa.com" title="" target="_blank" >
+	محبوب دلها3</a></div>
+<div class="Link"><a href="http://eqtedar.blogfa.com" title="" target="_blank" >
+	معراج شیعیان</a></div>
+<div class="Link"><a href="http://ojeparvaz.blog.ir" title="" target="_blank" >
+	اوج پرواز</a></div>
+<div class="Link"><a href="http://dabestanbandegi.mihanblog.com" title="" target="_blank" >
+	دبستان بندگی</a></div>
+<div class="Link"><a href="http://khademeh.mihanblog.com" title="" target="_blank" >
+	العبد</a></div>
+<div class="Link"><a href="http://alamdaranemontazer.blogfa.com" title="" target="_blank" >
+	مسجد ابوالفضل(ع)پل سه تیر</a></div>
+<div class="Link"><a href="http://sadeghi19.mihanblog.com" title="" target="_blank" >
+	پیرو رهبر</a></div>
+<div class="Link"><a href="http://montazer309.blogfa.com" title="" target="_blank" >
+	منتظر</a></div>
+<div class="Link"><a href="http://mahboobeh1374.blogfa.com" title="" target="_blank" >
+	محبوب دلها</a></div>
+<div class="Link"><a href="http://ansare72.blogfa.com" title="" target="_blank" >
+	انصار الحسین</a></div>
+<div class="Link"><a href="http://www.mohebaan.ir" title="" target="_blank" >
+	محبان حضرت مهدی(عج)</a></div>
+<div class="Link"><a href="http://golenarges2014.mihanblog.com" title="" target="_blank" >
+	یوسف زهرا</a></div>
+<div class="Link"><a href="http://fatehekheybar1432.blogfa.com" title="" target="_blank" >
+	آیین زندگی</a></div>
+<div class="Link"><a href="http://www.mohamadmahdi.blogfa.com" title="" target="_blank" >
+	ظهور امام مهدی</a></div>
+<div class="Link"><a href="http://zahraaairani.blogfa.com" title="" target="_blank" >
+	دختری از جنس انقلاب</a></div>
+<div class="Link"><a href="http://labkhandgod.blogfa.com" title="" target="_blank" >
+	لبخند خدا</a></div>
+<div class="Link"><a href="http://mahdiyezahra.blogfa.com" title="" target="_blank" >
+	بدون مهدی فاطمه</a></div>
+<div class="Link"><a href="http://mina-aaaa.blogfa.com" title="" target="_blank" >
+	دختری از جنس شهامت</a></div>
+<div class="Link"><a href="http://m-t-1376.blogfa.com" title="" target="_blank" >
+	معبر دل</a></div>
+<div class="Link"><a href="http://mahdaviat-14.blogfa.com" title="" target="_blank" >
+	این صاحب یوم الفتح</a></div>
+<div class="Link"><a href="http://montazeran-7.blogfa.com" title="" target="_blank" >
+	چشمه انتظار</a></div>
+<div class="Link"><a href="http://rasmeasheghei.blogfa.com" title="" target="_blank" >
+	معراج شهدا</a></div>
+<div class="Link"><a href="http://www.feryferyfery.blogfa.com" title="" target="_blank" >
+	فرشته</a></div>
+<div class="Link"><a href="http://rahil313.blogfa.com" title="" target="_blank" >
+	راحیل313</a></div>
+<div class="Link"><a href="http://radaramer.blogfa.com" title="" target="_blank" >
+	دیده بان آمر</a></div>
+<div class="Link"><a href="http://abbase-aziz.blogfa.com" title="" target="_blank" >
+	عباس عزیز</a></div>
+<div class="Link"><a href="http://sibsorkh1367.blogfa.com" title="" target="_blank" >
+	سیب سرخ</a></div>
+<div class="Link"><a href="http://barghaye-sepid.blogfa.com" title="" target="_blank" >
+	برگ های سپید</a></div>
+<div class="Link"><a href="http://reza-tavakolfard.blogfa.com/" title="" target="_blank" >
+	به نام خدا،به یادخدا،برای خدا</a></div>
+<div class="Link"><a href="http://khademolmahdi1391.blogfa.com" title="" target="_blank" >
+	انتظار</a></div>
+<div class="Link"><a href="http://www.aalmahdi-313.blogfa.com" title="" target="_blank" >
+	انصارالمهدی313</a></div>
+<div class="Link"><a href="http://mohebroghayeh.blogfa.com" title="" target="_blank" >
+	چشم انتظاران مهدی (عج)</a></div>
+<div class="Link"><a target="_blank" href="http://salehon.ir">قالب مذهبی وبلاگ</a></div>
+<div class="FooterSid"></div>
+
+<!--Design By : salehon.ir-->
+<!--Design By : salehon.ir-->
+<h1>برچسب ها</h1>
+<span dir="ltr">
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A7%D8%AE%D9%84%D8%A7%D9%82">اخلاق</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A2%DB%8C%D8%AA+%D8%A7%D9%84%D9%84%D9%87+%D8%A8%D9%87%D8%A7%D9%84%D8%AF%DB%8C%D9%86%DB%8C">آیت الله بهالدینی</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A2%DB%8C%D8%AA+%D8%A7%D9%84%D9%84%D9%87+%D9%85%D8%AC%D8%AA%D9%87%D8%AF%DB%8C">آیت الله مجتهدی</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/tag/%D9%86%D9%85%D8%A7%D8%B2+%D8%A7%D9%88%D9%84+%D9%88%D9%82%D8%AA">نماز اول وقت</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/tag/%D9%85%D9%88%D8%B9%D8%B8%D9%87+%D8%AE%D9%88%D8%A8%D8%A7%D9%86">موعظه خوبان</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/tag/%D9%85%D9%88%D8%B9%D8%B8%D9%87">موعظه</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A2%DB%8C%D8%AA+%D8%A7%D9%84%D9%84%D9%87+%D8%A8%D9%87%D8%AC%D8%AA">آیت الله بهجت</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85+%D8%AE%D8%A7%D9%85%D9%86%D9%87+%D8%A7%DB%8C">امام خامنه ای</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/tag/%D9%85%D8%A7%D9%84%DA%A9+%D8%AF%D9%88+%DA%86%DB%8C%D8%B2">مالک دو چیز</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/tag/%D8%B4%D8%B1%D8%AD+%D8%AD%D8%AF%DB%8C%D8%AB">شرح حدیث</a></div>
+<div class="FooterSid"></div>
+<!--Design By : salehon.ir-->
+<h1>سایت های کاربردی</h1>
+<div class="Link">
+	<a title="خرید ظروف نانو,خرید ظروف نانو نگهدارنده غذا,فروش ظروف نانو" target="_blank" href="http://shia-art.ir">
+	شیعه آرت</a>|<a target="_blank" title="آگهی رایگان" href="http://www.aliabad-new.ir">اخبار</a>|<a target="_blank" title="اخبار روز" href="http://www.salehon.ir">صالحون</a>|<a title="چت روم" target="_blank" href="http://www.anaammar.ir">پاتوق 
+	عمارها</a></div><br>
+<p align="center"><a href="http://salehon.ir"><span style="font-size: small;">
+<img alt="" src="http://www.salehon.ir/wp-content/uploads/2013/03/logo-salehon.gif" border="0" height="60" width="120"></span></a><br><div class="FooterSid"></div>
+<!--Design By : salehon.ir-->
+<h1>طراح قالب</h1>
+<div style="text-align: Center"  >
+[ <a title="قالب های صالحون" href="http://www.salehon.ir">طراح قالب: </a>
+<a tite="ابزار وبلاگ نویسی" href="http://www.salehon.ir">صالحون</a> ]<br>
+<div class="FooterSid"></div>
+</td>
+	<!-- end sidebar-l -->
+<!--Design By : salehon.ir-->
+<td width="550" valign="top" dir="rtl" >
+<div class="bodyposts">
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="post">
+<a name="16"></a>
+<div class="Title">کلام وحی(پست ثابت)</a></div>
+<div class="Content"><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+
+
+
+<font size="4"><img src="http://img1.tebyan.net/Big/1392/08/27210108144184542206156212145188363206145.jpg" alt="" border="0" align="bottom" height="294" hspace="0" vspace="0" width="516"><br>ای اهل ایمان اگرخداترس پرهیزکارشویدخدابه شما فرقان می بخشد(<font size="3">یعنی دیده بصرتی می دهدتابه نورباطن حق را ازباطل فرق گذاریدو راه سعادت راازراه شقاوت تشخیص دهید<font size="4">)وگناهان شمارابپوشاندو شمارابیامرزد که خدادارای فضل ورحمت بی منتهاست<font size="3">(سوره مبارکه انفال آیه29)</font></font></font><br></font>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br></p>
+</div>
+<div class ="date">[ جمعه 22 آذر 1392 ] [ 10:02 ب.ظ ] [ 
+	سعید آصفی ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(16)">[ 
+	منتظر(<script>setCommentCnt(16)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="67"></a>
+<div class="Title">حدیث هفته</a></div>
+<div class="Content">
+
+
+
+
+
+
+
+
+
+
+<font size="3"><span class="ON">امام صادق علیه السلام :</span> اَلا اُحَدِّثُكَ بِمَكارِمِ الاَْخْلاقِ؟<br><br>&nbsp;الصَّفْحُ عَنِ النّاسِ وَ مُواساةُ الرَّجُلِاَخاهُ فى مالِهِ وَ ذِكْرُ اللّه ِ كَثیرا؛</font><div class="farsi"><p><font size="2">آیا به شما بگویم كه مكارم اخلاق چیست؟ گذشت كردن از مردم،</font></p><p><font size="2"> كمك مالى به برادر (دینى) خود و بسیار به یاد خدا بودن.</font><font size="1"> <span><a class="with-tooltip" href="http://www.hadith.net/post/742/%DA%86%D9%87%D9%84-%D8%AD%D8%AF%D9%8A%D8%AB-%D8%A7%D8%AE%D9%84%D8%A7%D9%82-%D9%BE%D8%B3%D9%86%D8%AF%D9%8A%D8%AF%D9%87/#" id="foot" title="معانى الأخبار، ص 191، ح 2">[معانى الأخبار، ص ۱۹۱، ح ۲]</a></span></font></p></div><br><span style="color: rgb(128, 128, 255);"></span><span id="bodyHolder_newstextDetail_nwstxtBodyPane"></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br></p>
+<br><br>
+	طبقه بندی: <a href="http://atre-zohur.mihanblog.com/post/category/1">
+	حدیث</a>، <br></div>
+<div class ="date">[ شنبه 25 دی 1395 ] [ 02:31 ب.ظ ] [ 
+	سعید آصفی ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(67)">[ 
+	منتظر(<script>setCommentCnt(67)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="137"></a>
+<div class="Title">مالک دو چیز</a></div>
+<div class="Content"><div align="center">&nbsp;<img src="http://bineshjoo.ir/Images/Content/4659803422_350138_OEBkbii4.jpg?preset=normalgray,larg" alt="" border="0" align="bottom" height="282" hspace="0" vspace="0" width="400"><br><br><div align="right"><span id="ctl01_ctl00_ctl00_lblItemViewTemplate"><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify">
+							<font color="#800000" face="Tahoma" size="2"><b>مالک دو چیز!</b></font></p>
+						<p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify">
+							<font face="Tahoma" size="2">&nbsp;خدای تبارک و تعالی به ملائکه خطاب 
+می کند که : ما می خواهیم در زمین نماینده و خلیفة الهی قرار دهیم، <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">موجودی 
+که نماینده حق باشد ... این خلیفه را چه کسی باید بسازد؟... <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">فقط خدا می 
+تواند این چنین موجودی را تربیت کند. اگر لطف حق نباشد، نمی توانید یک 
+فرزند صالح تربیت کنید</font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">، هر چند مراقب او باشید، ... خلیفه الله کسی است که 
+به حسب اسلام و ارحام ، طیّب و طاهر باشد، <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">آبا و امهات و اجداد او به 
+آلودگیهای دنیا آلودگی پیدا نکرده باشند.</font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2"> خلیفه الله کسی است که مثل عیسی 
+بن مریم علیه السلام در طفولیت می گوید:</font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2"> «انّی عَبدُالله ءاتانی الکتاب وَ 
+جَعَلَنی نَبیّاً » من بنده خدا هستم، مطیع خدا هستم،</font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2"> مطیع هوی و هوس 
+نیستم. ... خلیفه الله این چنین نماینده ای است.</font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2"> باید مالک هوی و هوس خود و
+ مالک نفس خود باشد. <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">مالکیّتی که موسی علیه السلام می گوید. « لا أَمْلِکُ 
+إِلاَّ نَفْسی وَ أَخی »</font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2"> از همه جمعیّت بنی اسرائیل فقط مالک دو چیز شدم: 
+مالک نفس خودم و مالک برادرم. </font></p>
+						<p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="left">
+							<font color="#FF0000" face="Tahoma" size="2">[ نردبان آسمان ، آیت الله بهاءالدینی رحمه الله علیه ، چاپ دوازدهم ، انتشارات قدسیان ،1389 ، ص 90 تا 94]</font></p></span></div></div>
+
+
+<br><br></p>
+<br><br>
+	طبقه بندی: <a href="http://atre-zohur.mihanblog.com/post/category/6">
+	مذهبی</a>، <br>	برچسب ها:<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A2%DB%8C%D8%AA%20%D8%A7%D9%84%D9%84%D9%87%20%D8%A8%D9%87%D8%A7%D9%84%D8%AF%DB%8C%D9%86%DB%8C" >آیت الله بهالدینی</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D9%85%D8%A7%D9%84%DA%A9%20%D8%AF%D9%88%20%DA%86%DB%8C%D8%B2" >مالک دو چیز</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D9%85%D9%88%D8%B9%D8%B8%D9%87" >موعظه</a>، 
+<br></div>
+<div class ="date">[ شنبه 25 دی 1395 ] [ 02:26 ب.ظ ] [ 
+	سعید آصفی ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(137)">[ 
+	منتظر(<script>setCommentCnt(137)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="136"></a>
+<div class="Title">بسته ی فرهنگی کلام خوبان</a></div>
+<div class="Content">
+<div align="center"><img src="http://www.fetan.ir/home/wp-content/uploads/2014/06/481.jpg" alt="" align="bottom" border="0" height="432" hspace="0" vspace="0" width="558"><br><br><font size="2">با سلام و خیر مقدم خدمت دوستان عزیز<br><br>در این بسته تعدادی از کلام کوتاه علما و مراجع بزرگوار جمع آوری شده که خدمت شما<br><br>تقدیم می گردد.از شما خواهشمندیم ضمن خواندن و تفکر در این جملات پر معنا و ان شاءالله عمل به آن<br><br>در نشر آنها با پیامک و یا هر وسیله ی ممکن کوشا باشید.در ادامه مطلب در خدمت شما هستیم.<br><br>و من الله توفیق<br><br>یاعلی<br></font></div>
+
+
+
+
+
+
+
+<br><a href='http://atre-zohur.mihanblog.com/post/136'>ادامه مطلب</a><br></p>
+<br><br>
+	طبقه بندی: <a href="http://atre-zohur.mihanblog.com/post/category/6">
+	مذهبی</a>، <br></div>
+<div class ="date">[ سه شنبه 31 فروردین 1395 ] [ 01:04 ب.ظ ] [ 
+	سعید آصفی ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(136)">[ 
+	منتظر(<script>setCommentCnt(136)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="135"></a>
+<div class="Title">یا رفیق من لا رفیق له</a></div>
+<div class="Content">
+<div align="center"><img src="http://www.bultannews.com/files/fa/news/1394/8/6/428647_224.jpg" alt="" align="bottom" border="0" height="354" hspace="0" vspace="0" width="485"><br><br><span id="ctl01_ctl00_ctl00_lblItemViewTemplate"><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify">
+							&nbsp;</p>
+						<p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify">
+							<font color="#800000" face="Tahoma" size="2"><b>یا رفیقَ لِمَنْ لا رَفیقَ لَه</b></font></p>
+						<p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify">
+							<font face="Tahoma" size="2">&nbsp;انسان باید با خدا رفیق باشد ( یا 
+رفیقَ لِمَنْ لا رَفیقَ لَه... ) خداوند سریع الرضاست ،‌ <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">زود می‌بخشد و زود
+ آشتی می‌كند. به كسی غیر خودش نگو، ‌ <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">در میان شب دو ركعت نماز بخوان از 
+خدا عذر خواهی كن، ‌توبه كن. <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">تمام گناهانت را نابود می‌كند بلكه گناهان را 
+تبدیل به حسنه می‌كند.</font></p>
+						<p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="left">
+							<font color="#FF0000" face="Tahoma" size="2">( آیت الله ناصری ، شیفته یار ، مجموعه دوم نشر لوح نگار ،1391 ، ص 16 )</font></p></span><br></div>
+
+
+
+
+<br><br></p>
+<br><br>
+	طبقه بندی: <a href="http://atre-zohur.mihanblog.com/post/category/6">
+	مذهبی</a>، <br>	برچسب ها:<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A2%DB%8C%D8%AA%20%D8%A7%D9%84%D9%84%D9%87%20%D9%86%D8%A7%D8%B5%D8%B1%DB%8C" >آیت الله ناصری</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A7%D8%AE%D9%84%D8%A7%D9%82" >اخلاق</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%AE%D8%AF%D8%A7" >خدا</a>، 
+<br></div>
+<div class ="date">[ سه شنبه 17 فروردین 1395 ] [ 11:35 ق.ظ ] [ 
+	سعید آصفی ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(135)">[ 
+	منتظر(<script>setCommentCnt(135)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="134"></a>
+<div class="Title">ذکر نجات از فشار های آخرالزمان</a></div>
+<div class="Content">
+<div align="center"><img src="http://www.up.98ia.com/images/3a0o07502tvoanq8n2ms.png" alt="" align="bottom" border="0" height="278" hspace="0" vspace="0" width="547"><br><br><div align="right"><span id="ctl01_ctl00_ctl00_lblItemViewTemplate"><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify">
+							<font face="Tahoma" color="#800000" size="2"><b>ذکر نجات از فشارهای آخرالزمان </b></font></p>
+						<p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify">
+							<font face="Tahoma" size="2">&nbsp;ائمه ی ما علیهم السلام خودشان به ما فرموده اند که در این فشارهای آخرالزمان بگویید <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">: <font color="#008000">یا الله یا رَحمنُ یا رَحیم یا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِی عَلَی دِینِكَ </font>(
+ بحار الانوار ، ج 52 ، ص 148)</font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2"> ولی چه کنیم که به جای دوا، به سوی داء می 
+رویم! معنای "یا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِی عَلَی دِینِكَ " <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">این
+ است که : خدا یا ! همان مرتبه ای را که مطلوب تو است، ما را به همان درجه 
+برسان و بر آن نگهدار.</font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2"> صراط از همین جا شروع می شود، اگر یک ذرّه انحراف 
+پیدا کنیم، خدا می داند در کجا پرت می شویم. <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">کسی که کارش خراب است ، یا جلو
+ رفته و (یا) عقب مانده است و در هر حال اعتدال را رعایت نکرده است. </font></p></span></div></div>
+
+
+
+
+<br><br></p>
+<br><br>
+	طبقه بندی: <a href="http://atre-zohur.mihanblog.com/post/category/6">
+	مذهبی</a>، <a href="http://atre-zohur.mihanblog.com/post/category/1">
+	حدیث</a>، <br>	برچسب ها:<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A2%DB%8C%D8%AA%20%D8%A7%D9%84%D9%84%D9%87%20%D8%A8%D9%87%D8%AC%D8%AA" >آیت الله بهجت</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%B0%DA%A9%D8%B1" >ذکر</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A2%D8%AE%D8%B1%D8%A7%D9%84%D8%B2%D9%85%D8%A7%D9%86" >آخرالزمان</a>، 
+<br></div>
+<div class ="date">[ شنبه 5 دی 1394 ] [ 09:46 ق.ظ ] [ 
+	سعید آصفی ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(134)">[ 
+	منتظر(<script>setCommentCnt(134)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="133"></a>
+<div class="Title">عرش رحمان</a></div>
+<div class="Content">
+<div align="center"><img src="http://img7.irna.ir/1394/13940410/81667708/81667708-70008879.jpg" alt="" align="bottom" border="0" height="319" hspace="0" vspace="0" width="300"><br><br><div align="right"><font size="2">دل جایگاه خداوند رحمان بوده و متعلق به او و به صورت امانت در دست انسان است.<br><br>از این رو انسان باید تلاش کند تا حضور خداوند را در آن حفظ نماید.اگر صفات رذیله و تمنیات<br><br>نفسانی به دل راه نیابد دل منزلگاه خداوند شده و عرش خدای رحمان در آن جای می گیرد.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ((قلب المؤمن عرش الرحمن))<br><br>آنان که راه منتهی به لقای الهی را طی کرده و به هدف و مطلوب نهایی رسیده اند<br><br>توانسته انددنیا و تمنیات آن را از دل بیرون کرده و در عوض جایگاه پروردگار را در دل خود حفظ کنند<br><br>و در حقیقت هیچ شریک و همسایه ای در خانه ی دل برای صاحب اصلی آن ایجاد نکنند.<br><br>حتی ذهن ایشان لحظه ای از یاد خدا غافل نشده و همواره در دریای نورانی یاد و نام <br><br>محبوب خویش غوطه ور می باشند تا اینکه سراسر وجود آنان یک وجود خدایی شده و به مقام<br><br>خلیفة الهی دست می یابند.</font><br><br><br><font size="2"><span style="background-color: rgb(204, 0, 0);">پ ن</span>:دوستان عزیز سنگر مشق اخلاق در قسمت پیوند ها سنگر تخصصی مباحث اخلاقی آیت الله<br>مظاهری است.تشریف بیاورید و نظر یادتون نره.<br>یاعلی</font><br></div></div>
+
+
+
+
+<br><br></p>
+<br><br>
+	طبقه بندی: <a href="http://atre-zohur.mihanblog.com/post/category/6">
+	مذهبی</a>، <br>	برچسب ها:<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A2%DB%8C%D8%AA%20%D8%A7%D9%84%D9%84%D9%87%20%D9%85%D8%B8%D8%A7%D9%87%D8%B1%DB%8C" >آیت الله مظاهری</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A7%D8%AE%D9%84%D8%A7%D9%82" >اخلاق</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A7%D9%86%D8%B3%D8%A7%D9%86" >انسان</a>، 
+<br></div>
+<div class ="date">[ سه شنبه 12 آبان 1394 ] [ 01:01 ب.ظ ] [ 
+	سعید آصفی ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(133)">[ 
+	منتظر(<script>setCommentCnt(133)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="132"></a>
+<div class="Title">باز محرم رسید ماه عزای حسین.......</a></div>
+<div class="Content"><div align="center"><img src="http://www.beytoote.com/images/stories/housekeeping/hou5509.jpg" alt="" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><div align="right">سلام علیکم<br><br>فرا رسیدن ماه عزا داری سید و سالار شهیدان حضرت ابا عبدالله علیه اسلام را تسلیت عرض می کنم.<br><br>دوستان ان شاءالله با حضور در مراسم عزاداری و توسل به اهل بیت قلب نازنین آقا امام زمان(عج)<br><br>را خشنود فرمایید.<br><br>آیت الله بهجت می فرمایند:گریه بر سید الشهدا از نماز شب بالاتر است<br><br>التماس دعا<br></div></div>
+
+
+<br><br></p>
+<br><br>
+	طبقه بندی: <a href="http://atre-zohur.mihanblog.com/post/category/6">
+	مذهبی</a>، <br>	برچسب ها:<a href="http://atre-zohur.mihanblog.com/post/tag/%D9%85%D8%AD%D8%B1%D9%85" >محرم</a>، 
+<br></div>
+<div class ="date">[ چهارشنبه 22 مهر 1394 ] [ 11:39 ق.ظ ] [ 
+	سعید آصفی ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(132)">[ 
+	منتظر(<script>setCommentCnt(132)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="131"></a>
+<div class="Title">با این شیطان چه کنم؟؟</a></div>
+<div class="Content"><div align="center"><img src="http://akhlagh.tahzib-howzeh.ir/uploads/%D9%85%D8%B1%D8%AA%D8%B6%DB%8C_%D8%B2%D9%87%D8%AF@_180517.jpg" alt="" align="bottom" border="0" height="399" hspace="0" vspace="0" width="339"><span id="ctl01_ctl00_ctl00_lblItemViewTemplate"><font size="2" face="Tahoma"><br><br><br></font></span><div align="right"><span id="ctl01_ctl00_ctl00_lblItemViewTemplate"><font size="2" face="Tahoma">یک
+ شب شیخ مرتضی زاهد در نماز چند جا اشتباه در رکعت ها داشته معلوم بوده که 
+حواسش جای دیگر است </font></span><br><span id="ctl01_ctl00_ctl00_lblItemViewTemplate"><font size="2" face="Tahoma">انگار که چیزی فکر او را به هم ریخته. سه چهار روز این 
+طور بوده. </font></span><br><span id="ctl01_ctl00_ctl00_lblItemViewTemplate"><font size="2" face="Tahoma">تا اینکه عده ای از دوستان میرسند خدمت شیخ. حاج آقا تقی 
+کرمانشاهی از شیخ می پرسد:</font></span><br><span id="ctl01_ctl00_ctl00_lblItemViewTemplate"><font size="2" face="Tahoma">&nbsp;آقا شما حواس پرتی پیدا کردید.؟ ما نگران حال 
+شماییم. او با آن حال زارش فرمود: </font></span><br><span id="ctl01_ctl00_ctl00_lblItemViewTemplate"><font size="2" face="Tahoma">راستش چند شب قبل حدیثی خواندم. حدیثی از
+ رسول اکرم صلوات الله علیه. </font></span><br><span id="ctl01_ctl00_ctl00_lblItemViewTemplate"><font size="2" face="Tahoma">شیخ گفت: در آن حدیث پیامبر به امیر المومنین 
+(ع) می فرماید:</font></span><br><span id="ctl01_ctl00_ctl00_lblItemViewTemplate"><font size="2" face="Tahoma">&nbsp;«یا علی به اندازه ای که تو با خوبیها و راههای هدایت آشنا 
+هستی،</font></span><br><span id="ctl01_ctl00_ctl00_lblItemViewTemplate"><font size="2" face="Tahoma">&nbsp;شیطان نیز به همان اندازه با همه بدیها و راههای گمراهی در زمین و 
+آسمان آشنایی دارد ...» </font></span><br><span id="ctl01_ctl00_ctl00_lblItemViewTemplate"><font size="2" face="Tahoma">وسپس شیخ آرام زیر لب میگفت: من با این شیطان چه 
+کنم؟!&nbsp;&nbsp; <font color="#FF0000"> [ حکایت خوبان ، شیخ مرتضی زاهد - ص153]</font></font></span><br></div><div align="right"><br></div></div>
+
+
+<br><br></p>
+<br><br>
+	طبقه بندی: <a href="http://atre-zohur.mihanblog.com/post/category/6">
+	مذهبی</a>، <br>	برچسب ها:<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%B4%DB%8C%D8%AE%20%D9%85%D8%B1%D8%AA%D8%B6%DB%8C%20%D8%B2%D8%A7%D9%87%D8%AF" >شیخ مرتضی زاهد</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D9%85%D9%88%D8%B9%D8%B8%D9%87%20%D8%AE%D9%88%D8%A8%D8%A7%D9%86" >موعظه خوبان</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%B4%DB%8C%D8%B7%D8%A7%D9%86" >شیطان</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%AF%D9%88%D8%B1%DB%8C%20%D8%A7%D8%B2%20%DA%AF%D9%86%D8%A7%D9%87" >دوری از گناه</a>، 
+<br></div>
+<div class ="date">[ دوشنبه 13 مهر 1394 ] [ 12:55 ب.ظ ] [ 
+	سعید آصفی ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(131)">[ 
+	منتظر(<script>setCommentCnt(131)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="130"></a>
+<div class="Title">از خودت نجات پیدا کن</a></div>
+<div class="Content"><div align="center"><img src="http://kiosknews.ir/wp-content/uploads/2014/03/81086314-5567158.jpg" alt="" align="bottom" border="0" height="311" hspace="0" vspace="0" width="481"><br><span id="ctl01_ctl00_ctl00_lblItemViewTemplate"><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify">&nbsp;
+							<font size="2" face="Tahoma">مرحوم آیت الله حاج شیخ محمد تقى 
+آملى یك وقت مى فرمود: <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font size="2" face="Tahoma">در خواب دیدم دشمنى به من حمله كرد من با آن دشمن 
+درگیر و گلاویز شدم این دشمن مرا رها نمى كرد <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font size="2" face="Tahoma">من براى اینكه از شرّ او رها 
+شوم دست او را به شدت گاز گرفتم كه بلكه مرا رها كند <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font size="2" face="Tahoma">و در این حال از خواب 
+بیدار شدم. دیدم دستم در دهان خود من است <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font size="2" face="Tahoma">و به شدّت دست خودم را گاز گرفته 
+ام؛ در همان عالم خواب به من فهمانیدند <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font size="2" face="Tahoma">كه دشمن تو كسى نیست جز خودت پس از 
+خودت نجات پیدا كن .</font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font size="2" face="Tahoma">این گونه خوابهاى خوب را هم خدا نصیب هر كسى نمى 
+كند.</font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font size="2" face="Tahoma">ائمه علیهم السلام فرموده اند: بنده اى كه مورد عنایت خداوندى شد <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font size="2" face="Tahoma">( 
+یُبَصِّرُهُ عُیُوبَ الدُّنْیَا وَ دَاءَهَا وَ دَوَاءَهَا) خداوند عیب و 
+بدى دنیا را نشان او مى دهد و راه علاج را نیز نشان او دهد. </font></p>
+						<p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="left">
+							<font color="#FF0000" size="2" face="Tahoma">(اسرار عبادات تالیف آیت الله جوادى آملى ص 146)</font></p></span><br><div align="right"><br></div></div>
+
+
+<br><br></p>
+<br><br>
+	طبقه بندی: <a href="http://atre-zohur.mihanblog.com/post/category/6">
+	مذهبی</a>، <br>	برچسب ها:<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A2%DB%8C%D8%AA%20%D8%A7%D9%84%D9%84%D9%87%20%D8%AC%D9%88%D8%A7%D8%AF%DB%8C" >آیت الله جوادی</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D9%86%D8%AC%D8%A7%D8%AA" >نجات</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D9%85%D9%88%D8%B9%D8%B8%D9%87%20%D8%AE%D9%88%D8%A8%D8%A7%D9%86" >موعظه خوبان</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A7%D8%B3%D8%B1%D8%A7%D8%B1%20%D8%B9%D8%A8%D8%A7%D8%AF%D8%A7%D8%AA" >اسرار عبادات</a>، 
+<br></div>
+<div class ="date">[ سه شنبه 7 مهر 1394 ] [ 01:25 ب.ظ ] [ 
+	سعید آصفی ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(130)">[ 
+	منتظر(<script>setCommentCnt(130)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="129"></a>
+<div class="Title">زرنگی....</a></div>
+<div class="Content"><img src="http://axgig.com/images/88929322205029107408.jpg" alt="" border="0" align="bottom" height="513" hspace="0" vspace="0" width="634"><br><br><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify">
+							<font color="#800000" face="Tahoma" size="2"><b>زرنگی های ما، همه نا زرنگی است !</b></font></p>
+						<p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify">
+							<font face="Tahoma" size="2">&nbsp;روز قیامت نیکی هایمان را به محبوب 
+ترین فرد زندگیمان نخواهیم داد.اما مجبور می شویم <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">آنها را به کسی بدهیم که 
+از او متنفّر بودیم و غیبتش را کردیم.گناه، مخصوصاً حقّ النّاس، <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">اوج حماقت 
+است، نه زرنگی!ُ زرنگی، بندگی خداست. زرنگی های ما، همه نا زرنگی است. <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">کسی 
+که می گوید: سر فلانی کلاه گذاشتم، اشتباه می کند، بلکه فلانی سرش کلاه 
+گذاشته است؛</font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2"> چون حــق بر گردن او پیدا کرده است.</font></p>
+						<p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="left">
+							<font color="#FF0000" face="Tahoma" size="2">[ شمیم یاس - خرداد 1386، شماره 51 - بهشت پارسایی/یادی از استاد کامل حضرت آیت الله بهاء الدینی «ره» ] </font></p>
+						<p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="left">
+							</p><br><br>
+
+
+
+
+
+<br><br></p>
+<br><br>
+	طبقه بندی: <a href="http://atre-zohur.mihanblog.com/post/category/6">
+	مذهبی</a>، <br>	برچسب ها:<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A2%DB%8C%D8%AA%20%D8%A7%D9%84%D9%84%D9%87%20%D8%A8%D9%87%D8%A7%20%D8%A7%D9%84%D8%AF%DB%8C%D9%86%DB%8C" >آیت الله بها الدینی</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%B2%D8%B1%D9%86%DA%AF%DB%8C" >زرنگی</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%BA%DB%8C%D8%A8%D8%AA" >غیبت</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%AD%D9%82%20%D8%A7%D9%84%D9%86%D8%A7%D8%B3" >حق الناس</a>، 
+<br></div>
+<div class ="date">[ پنجشنبه 19 شهریور 1394 ] [ 11:35 ق.ظ ] [ 
+	سعید آصفی ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(129)">[ 
+	منتظر(<script>setCommentCnt(129)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="128"></a>
+<div class="Title">مواظب اعمالمان باشیم</a></div>
+<div class="Content"><img src="http://media.farsnews.com/media/Uploaded/Files/Images/1391/03/14/13910314145144842_PhotoL.jpg" alt="" border="0" align="bottom" hspace="0" vspace="0"><br><span id="ctl01_ctl00_ctl00_lblItemViewTemplate"><p style="line-height:200%; margin-left:15px; margin-right:15px" align="justify">
+							<font color="#800000" face="Tahoma" size="2"><b>چطور نسبت به عذابِ الهی مراقبت نمی کنید؟!</b></font></p>
+						<p style="line-height:200%; margin-left:15px; margin-right:15px" align="justify">
+							<font color="#008000" face="Tahoma" size="2">پیامبر(ص) فرمودند: 
+عَجِبْتُ لِمَنْ یَحْتَمِی مِنَ الطَّعَامِ مَخَافَةَ الدَّاءِ كَیْفَ لَا 
+یَحْتَمِی <br></font></p><p style="line-height:200%; margin-left:15px; margin-right:15px" align="justify"><font color="#008000" face="Tahoma" size="2">مِنَ الذُّنُوبِ مَخَافَةَ النَّار ! </font> <font color="#FF0000" face="Tahoma" size="2">(شیخ صدوق ، من لایحضره الفقیه، ج3ص359 - امالی ص 247)</font></p>
+						<p style="line-height:200%; margin-left:15px; margin-right:15px" align="justify">
+							<font face="Tahoma" size="2">شرح حدیث از حضرت آیت ا.. العظمی امام خامنه ای (مدظلّه العالی)</font></p>
+						<p style="line-height:200%; margin-left:15px; margin-right:15px" align="justify">
+							<font face="Tahoma" size="2">&nbsp;در شگفتم از کسى که از بیم مرض از 
+غذا پرهیز مى‌کند</font></p><p style="line-height:200%; margin-left:15px; margin-right:15px" align="justify"><font face="Tahoma" size="2"> ( مثلاً غذایی که برای سرما خوردگی ضرر دارد یا احتمال 
+ضرر می دهد نمی خورد)</font></p><p style="line-height:200%; margin-left:15px; margin-right:15px" align="justify"><font face="Tahoma" size="2"> چگونه از ترس عذاب الهی و آتش جهنم ، از گناهان پرهیز
+ نمى‌کند؟! <br></font></p><p style="line-height:200%; margin-left:15px; margin-right:15px" align="justify"><font face="Tahoma" size="2">شما که در مورد جسم تان این قدر مراقبید ، مواظبید ، پرهیز می 
+کنید <br></font></p><p style="line-height:200%; margin-left:15px; margin-right:15px" align="justify"><font face="Tahoma" size="2">چطور نسبت به آن آینده دشوار و سختِ عذاب الهی مراقبت نمی کنید؟! از 
+گناه چرا پرهیز نمی کنید؟!</font></p><p style="line-height:200%; margin-left:15px; margin-right:15px" align="justify"><font face="Tahoma" size="2"> البته که این غفلت و بی مبالاتی ناشی از ضعف 
+اعتقاد به قیامت است. <br></font></p><p style="line-height:200%; margin-left:15px; margin-right:15px" align="justify"><font face="Tahoma" size="2">برخی بزرگان در تعریف برخی از اشخاص مومن و پرهیزگار 
+می گفتند که واقعا به قیامت معتقد است . <br></font></p><p style="line-height:200%; margin-left:15px; margin-right:15px" align="justify"><font face="Tahoma" size="2">همه مان به قیامت معتقدیم ولی 
+(اعتقاد آنها) معنایش این است که باور قلبی در او آنچنان است که <br></font></p><p style="line-height:200%; margin-left:15px; margin-right:15px" align="justify"><font face="Tahoma" size="2">او را به 
+حرکت و عمل وادار می کند.آن باوری اثر گذار است که در اعماق دلِ انسان ریشه
+ دوانده باشد <br></font></p><p style="line-height:200%; margin-left:15px; margin-right:15px" align="justify"><font face="Tahoma" size="2">و انسان به معنای حقیقیِ کلمه از بُن دندان آن را قبول کرده 
+باشد. لذا در آن خطبه همّام ، <br></font></p><p style="line-height:200%; margin-left:15px; margin-right:15px" align="justify"><font face="Tahoma" size="2">وقتی حضرت می فرمایند: کَیفَ اَصبَحتُ؟ او می
+ گوید من کانّه ناله و استغاثه اهل جهنم را با گوشم می شنوم !</font></p><p style="line-height:200%; margin-left:15px; margin-right:15px" align="justify"><font face="Tahoma" size="2"> یقینِ واقعی 
+این است . باید سعی کرد این را در خودمان ایجاد کنیم. <br></font></p><p style="line-height:200%; margin-left:15px; margin-right:15px" align="justify"><font face="Tahoma" size="2">این هم با توسل و 
+توجّه و تدبّر در آیات قیامت در قرآن حاصل می شود.&nbsp; <font color="#FF0000">( 12 /11/ 1393 )</font></font></p></span><br><br><br>
+
+
+<br><br></p>
+<br><br>
+	طبقه بندی: <a href="http://atre-zohur.mihanblog.com/post/category/6">
+	مذهبی</a>، <a href="http://atre-zohur.mihanblog.com/post/category/1">
+	حدیث</a>، <br>	برچسب ها:<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%AE%D8%A7%D9%85%D9%86%D9%87%20%D8%A7%DB%8C" >امام خامنه ای</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%B4%D8%B1%D8%AD%20%D8%AD%D8%AF%DB%8C%D8%AB" >شرح حدیث</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D9%85%D9%88%D8%B9%D8%B8%D9%87%20%D8%AE%D9%88%D8%A8%D8%A7%D9%86" >موعظه خوبان</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D9%82%DB%8C%D8%A7%D9%85%D8%AA" >قیامت</a>، 
+<br></div>
+<div class ="date">[ یکشنبه 18 مرداد 1394 ] [ 11:20 ق.ظ ] [ 
+	سعید آصفی ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(128)">[ 
+	منتظر(<script>setCommentCnt(128)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="127"></a>
+<div class="Title">همه مشکلات از من است</a></div>
+<div class="Content"><div align="center"><br><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="left">
+							</p><img src="http://img1.tebyan.net/big/1389/07/2092431252502235486612109669713414214101.jpg" alt="" border="0" align="bottom" height="529" hspace="0" vspace="0" width="396"><br><br><div align="right"><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify">
+							<font color="#800000" face="Tahoma" size="2"><b>همه مشكل تو از همین «من» است!</b></font></p>
+						<p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify">
+							<font face="Tahoma" size="2">&nbsp;حاج میرزا جواد آقا میفرمودند : یك 
+روز در نجف ، پیش استادم آمدم و به او گفتم : <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">درس را خوب یاد نمى‏گیرم ، 
+مغزم هم كم ندارد ، خیلى حافظه و گیرندگى من خوب است ، <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">اما این درس‏هایى را
+ كه شما مى‏گویید- حكمت الهى ، عرفان یا فقه - خوب یاد نمى‏گیرم، <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">نشاطى هم 
+ندارم. سر درس دوست ندارم كه گوش بدهم، كسل هستم. مشكل دارم؟ مشکل کجاست؟ <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">استادم گفت: اهل كجا هستى؟ گفتم: تبریز. گفت: چند وقت است كه به نجف 
+آمده‏ اى؟ <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">گفتم: چهار سال است. گفت: در نجف قوم و خویش دارى؟ گفتم: بله. 
+گفت: كیست؟</font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2"> گفتم: خاله زاده‏ ام هست. گفت: چه كار مى‏كند؟ گفتم: او هم طلبه 
+است. <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">گفت: میانه‏ ات با او صاف نیست؟ گفتم: نه، صاف نیست. <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">بالاخره حسادت، 
+غرور و كبر در قوم و خویش‏ها هست.</font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2"> گفت: مى‏خواهى درس متوجه شوى و قلبت را 
+روشن كنم؟ گفتم بله . <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">گفت باید از خود بگذرى. درس كه تمام شد، زودتر مى‏روى
+ و كفش پسر خاله‏ات را جفت مى‏كنى.</font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2"> گفتم: من؟! گفت : بله، همه مشكل تو از 
+همین «من» است ! </font></p>
+						<p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="left">
+							<font face="Tahoma" size="2">&nbsp;<font color="#FF0000">( استاد شیخ حسین انصاریان ، سخنرانی مکتوب ، پایگاه عرفان )</font></font></p>
+						<p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="left">
+							</p></div></div>
+
+
+<br><br></p>
+<br><br>
+	طبقه بندی: <a href="http://atre-zohur.mihanblog.com/post/category/6">
+	مذهبی</a>، <br>	برچسب ها:<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A2%DB%8C%D8%AA%20%D8%A7%D9%84%D9%84%D9%87%20%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2%DB%8C" >آیت الله تبریزی</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%A7%D9%86%D8%B5%D8%A7%D8%B1%DB%8C%D8%A7%D9%86" >استاد انصاریان</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D9%85%D8%B4%DA%A9%D9%84%D8%A7%D8%AA%20%D8%A7%D8%B2%20%D9%85%D9%86%20%D8%A7%D8%B3%D8%AA" >مشکلات از من است</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D9%85%D9%88%D8%B9%D8%B8%D9%87%20%D8%AE%D9%88%D8%A8%D8%A7%D9%86" >موعظه خوبان</a>، 
+<br></div>
+<div class ="date">[ سه شنبه 9 تیر 1394 ] [ 10:30 ق.ظ ] [ 
+	سعید آصفی ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(127)">[ 
+	منتظر(<script>setCommentCnt(127)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="126"></a>
+<div class="Title">کمی به سمت خدا برویم...</a></div>
+<div class="Content"><div align="center"><img src="http://images.persianblog.ir/386729_Ju4KaEk8.jpg" alt="" border="0" align="bottom" hspace="0" vspace="0"><br></div><br><br><p style="line-height:200%; margin-left:15px; margin-right:15px" align="justify">
+							<font color="#800000" face="Tahoma" size="2"><b>اگر انسان کمی به سمت خدا برود، خدا دست او را می گیرد </b> </font></p>
+						<p style="text-align: justify; line-height:200%; margin-left:15px; margin-right:15px">
+							<font face="Tahoma" size="2">&nbsp;زلیخا تصمیم گرفته بود که حضرت یوسف 
+(ع) را فریب دهد،اما مقام عصمت حضرت یوسف (ع)مانع شد.</font></p><p style="text-align: justify; line-height:200%; margin-left:15px; margin-right:15px"><font face="Tahoma" size="2">حال، حضرت یوسف پیامبر
+ معصوم خدا می گوید: إِنَّ النَّفْسَ لأَمَّارَةٌ بِالسُّوءِ إِلاَّ مَا 
+رَحِمَ رَبِّیَ إِنَّ رَبِّی غَفُورٌ ؛ <br></font></p><p style="text-align: justify; line-height:200%; margin-left:15px; margin-right:15px"><font face="Tahoma" size="2">نفس سرکش، بسیار به بدی ها امر می 
+کند مگر آنچه را پروردگارم رحم کند که پروردگارم آمرزنده و مهربان است. <br></font></p><p style="text-align: justify; line-height:200%; margin-left:15px; margin-right:15px"><font face="Tahoma" size="2">...
+ در این آیه چهار تاکید آمده برای اینکه بگوید: نفس خیلی خیلی خیلی خیلی 
+انسان را به کار زشت امر می کند</font></p><p style="text-align: justify; line-height:200%; margin-left:15px; margin-right:15px"><font face="Tahoma" size="2">. به زن نامحرم نگاه کن، دروغ بگو، غیبت 
+بکن... پس باید به حرف نفس گوش نداد. <br></font></p><p style="text-align: justify; line-height:200%; margin-left:15px; margin-right:15px"><font face="Tahoma" size="2">بعد از نماز صبح به خداوند بگویید: 
+خدایا من میخواهم خوب بشوم... <br></font></p><p style="text-align: justify; line-height:200%; margin-left:15px; margin-right:15px"><font face="Tahoma" size="2">خداوند در حدیث قدسی می فرماید: بنده من ! تو
+ اگر یک وجب به سوی من بیایی ، <br></font></p><p style="text-align: justify; line-height:200%; margin-left:15px; margin-right:15px"><font face="Tahoma" size="2">من یک قدم به سوی تو می آیم. تو اگر یک قدم 
+به سویم برداری، من هَروَله کنان بسویت می آیم. <br></font></p><p style="text-align: justify; line-height:200%; margin-left:15px; margin-right:15px"><font face="Tahoma" size="2">اگر انسان کمی به سمت خدا 
+برود، خدا دست او را می گیرد ولی اگر بی خیال باشد ، نفس او را از راه بدر 
+می کند: </font></p>
+						<p style="line-height:200%; margin-left:15px; margin-right:15px" align="justify">
+							<font face="Tahoma" size="2">زدست دیده و دل هر دو فریاد&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; که هرچه دیده بیند دل کند یاد </font></p>
+						<p style="line-height:200%; margin-left:15px; margin-right:15px" align="left">
+							<font color="#FF0000" face="Tahoma" size="2">[ منبع کتاب در محضر مجتهدی ج2 ، ص 45]</font></p>
+						<p style="line-height:200%; margin-left:15px; margin-right:15px" align="left">
+							</p><br><br>
+
+
+<br><br></p>
+<br><br>
+	طبقه بندی: <a href="http://atre-zohur.mihanblog.com/post/category/6">
+	مذهبی</a>، <br>	برچسب ها:<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A2%DB%8C%D8%AA%20%D8%A7%D9%84%D9%84%D9%87%20%D9%85%D8%AC%D8%AA%D9%87%D8%AF%DB%8C" >آیت الله مجتهدی</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%B3%D9%85%D8%AA%20%D8%AE%D8%AF%D8%A7" >سمت خدا</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%AD%D8%AF%DB%8C%D8%AB%20%D9%82%D8%AF%D8%B3%DB%8C" >حدیث قدسی</a>، 
+<br></div>
+<div class ="date">[ سه شنبه 26 خرداد 1394 ] [ 11:30 ق.ظ ] [ 
+	سعید آصفی ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(126)">[ 
+	منتظر(<script>setCommentCnt(126)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="125"></a>
+<div class="Title">سه رفیق</a></div>
+<div class="Content"><div align="center"><font size="3"><font size="2">جلسه شرح حدیث مقام معظم رهبری حضرت امام خامنه ای(حفظه الله)</font></font><br></div><font size="3"><font size="2"><br></font></font><div align="center"><img src="http://esmaeily.persiangig.com/image/9%20Dey/Demo%20Imam%20Khamenei%202.jpg" alt="" border="0" align="bottom" height="309" hspace="0" vspace="0" width="458"><br><br><span id="ctl01_ctl00_ctl00_lblItemViewTemplate"><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify">
+       <font color="#008000" face="Tahoma" size="2">قال علی علیه السلام :
+ إنَّ لِلمَرءِ المسلمِ ثلاثةُ أخِلاّءَ : فَخَلِیلٌ یقولُ لَهُ :</font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font color="#008000" face="Tahoma" size="2"> أنا 
+مَعكَ حیّا و مَیِّتا و هُو عَمَلُهُ ، و خلیلٌ یقولُ لَهُ: أنا مَعَكَ 
+حتّى تَموتَ و هُو مالُهُ <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font color="#008000" face="Tahoma" size="2">، فإذا ماتَ صارَ لِلوَرَثَةِ ، و خلیلٌ یقولُ 
+لَهُ : أنا معكَ إلى بابِ قَبرِكَ ثُمّ اُخَلِّیكَ و هُو وَلَدُهُ .&nbsp;&nbsp;&nbsp; ( 
+امالی، ص 170 )</font></p>
+      <p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify">
+       <font face="Tahoma" size="2">شما سه رفیق دارید ، بعضی از این 
+رفیقها ، رفیق دائمی اند و بعضی ها نیمه راهند .</font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2"> یک رفیق به شما می گوید که
+ من در حیات و ممات در کنار تو هستم ؛ این رفیق کیست؟ <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">این رفیق عمل شماست. 
+عمل خوب هم در دنیا به درد شما می خورد و هم در آخرت . <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">رفیق دیگر که این 
+رفیق نیمه راه است ، می گوید من تا هنگام مرگ با شما هستم . <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">وقتی مردی از 
+تو جدا می شوم این مال شماست. <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">این مال تا زنده اید اگر تلف نشود با شماست 
+بعد که از دنیا رفتید این اموال مال ورثه شماست، <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">به شما هیچ ربطی ندارد . 
+رفیق دیگر از این قبلی یک قدری بهتر است ، تا هنگام مرگ رفیق نیست <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">، تا 
+ورودی قبر رفیقِ شماست، از آنجا به بعد از ما جدا می شود؛ <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">این فرزندان و 
+کسان انسانند که اینها هم در دنیا با انسان دوستند ، همراهند ، <br></font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2">اما بعد از 
+مرگ فقط تا ورودیِ قبر با ما هستند و از آنجا به بعد ما را تنها می گذارند ،</font></p><p style="line-height: 200%; margin-left: 15px; margin-right: 15px" align="justify"><font face="Tahoma" size="2"> ماییم و عملمان.... آنچه بدرد من و شما می خورد عمل است. که اِنَّ خیرَ 
+الزادَ التَقوی </font></p></span><br><font size="3">
+
+
+</font></div><br><br></p>
+<br><br>
+	طبقه بندی: <a href="http://atre-zohur.mihanblog.com/post/category/6">
+	مذهبی</a>، <a href="http://atre-zohur.mihanblog.com/post/category/1">
+	حدیث</a>، <br>	برچسب ها:<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%B3%D9%87%20%D8%B1%D9%81%DB%8C%D9%82" >سه رفیق</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%AE%D8%A7%D9%85%D9%86%D9%87%20%D8%A7%DB%8C" >امام خامنه ای</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%B4%D8%B1%D8%AD%20%D8%AD%D8%AF%DB%8C%D8%AB" >شرح حدیث</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C(%D8%B9)" >امام علی(ع)</a>، 
+<br></div>
+<div class ="date">[ سه شنبه 8 اردیبهشت 1394 ] [ 11:30 ق.ظ ] [ 
+	سعید آصفی ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(125)">[ 
+	منتظر(<script>setCommentCnt(125)</script>) ]</a></div></div>
+<br>
+<div class="post">
+<a name="124"></a>
+<div class="Title">چهار چیز در چهار چیز</a></div>
+<div class="Content">
+<div align="center"><span id="ctl01_ctl00_ctl00_lblItemViewTemplate"></span><img src="http://www.ammarname.ir/sites/default/files/news/picture/1393/04/12/1724835445.jpg" alt="" border="0" align="bottom" height="451" hspace="0" vspace="0" width="357"><br><div align="right"><br><br><span id="ctl01_ctl00_ctl00_lblItemViewTemplate"><p style="text-align: justify; line-height:200%; margin-left:15px; margin-right:15px">
+							<font color="#800000" face="Tahoma" size="2"><b>چهار چیز در چهار چیز </b></font></p>
+						<p style="text-align: justify; line-height:200%; margin-left:15px; margin-right:15px">
+							<font face="Tahoma" size="2">پیامبر خدا (صلی الله علیه وآله) 
+فرمودند : خداوند چهار چیز را در چهار چیز قرار داده است <br></font></p><p style="text-align: justify; line-height:200%; margin-left:15px; margin-right:15px"><font face="Tahoma" size="2">: اول ، برکت علم 
+را در تعظیم استاد قرار داده است. شاگرد باید استادش را تعظیم کند <br></font></p><p style="text-align: justify; line-height:200%; margin-left:15px; margin-right:15px"><font face="Tahoma" size="2">و به او 
+احترام بگذارد. ...من هرشب برای آشیخ مرتضی زاهد (ره) یک سوره قرآن می 
+خوانم. <br></font></p><p style="text-align: justify; line-height:200%; margin-left:15px; margin-right:15px"><font face="Tahoma" size="2">اینها در برکت علم تاثیر دارد.دوم : بقای ایمان در تعظیم خداست. اگر
+ خدا را بزرگ بشماری</font></p><p style="text-align: justify; line-height:200%; margin-left:15px; margin-right:15px"><font face="Tahoma" size="2"> ایمانت باقی می ماند. خواندن نماز در اول وقت تعظیم 
+الله است. <br></font></p><p style="text-align: justify; line-height:200%; margin-left:15px; margin-right:15px"><font face="Tahoma" size="2">سوم: اگر کسی می خواهد در دنیا شاد باشد و دست به هر چه می زند 
+طلا بشود</font></p><p style="text-align: justify; line-height:200%; margin-left:15px; margin-right:15px"><font face="Tahoma" size="2"> می بایست به پدر و مادرش نیکی کند.چهارم : اگر می خواهی که از آتش
+ دوزخ رهایی یابی <br></font></p><p style="text-align: justify; line-height:200%; margin-left:15px; margin-right:15px"><font face="Tahoma" size="2">، مردم را از خود نرنجان و آنها را اذیت نکن. </font></p>
+						<p style="text-align: left; line-height:200%; margin-left:15px; margin-right:15px">
+							<font color="#FF0000" face="Tahoma" size="2">( از فرمایشات آیت ا... مجتهدی تهرانی – ره )</font></p>
+						<p style="text-align: justify; line-height:200%; margin-left:15px; margin-right:15px">&nbsp;
+							<br></p></span><br></div><br><div align="right"><br></div></div>
+
+
+
+
+<br><br></p>
+<br><br>
+	طبقه بندی: <a href="http://atre-zohur.mihanblog.com/post/category/6">
+	مذهبی</a>، <br>	برچسب ها:<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%A2%DB%8C%D8%AA%20%D8%A7%D9%84%D9%84%D9%87%20%D9%85%D8%AC%D8%AA%D9%87%D8%AF%DB%8C" >آیت الله مجتهدی</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%D8%AD%D8%AF%DB%8C%D8%AB" >حدیث</a>، 
+<a href="http://atre-zohur.mihanblog.com/post/tag/%DA%86%D9%87%D8%A7%D8%B1%20%DA%86%DB%8C%D8%B2%20%D8%AF%D8%B1%20%DA%86%D9%87%D8%A7%D8%B1%20%DA%86%DB%8C%D8%B2" >چهار چیز در چهار چیز</a>، 
+<br></div>
+<div class ="date">[ پنجشنبه 20 فروردین 1394 ] [ 11:02 ق.ظ ] [ 
+	سعید آصفی ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(124)">[ 
+	منتظر(<script>setCommentCnt(124)</script>) ]</a></div></div>
+<br>
+<p align="center"><font face="Tahoma" style="font-size: 9pt">
+.: تعداد کل صفحات 6 :. <a href="http://atre-zohur.mihanblog.com/page/1"> [ <b>1</b> ]</a> <a href="http://atre-zohur.mihanblog.com/page/2"> [ <span>2</span> ]</a> <a href="http://atre-zohur.mihanblog.com/page/3"> [ <span>3</span> ]</a> <a href="http://atre-zohur.mihanblog.com/page/4"> [ <span>4</span> ]</a> <a href="http://atre-zohur.mihanblog.com/page/5"> [ <span>5</span> ]</a> <a href="http://atre-zohur.mihanblog.com/page/6"> [ <span>6</span> ]</a> <br>
+</p></div></td>
+	<!-- end post -->
+<!--Design By : salehon.ir-->
+<td width="200" valign="top" dir="rtl" >
+<div class="sidebar-r">
+<!--Design By : salehon.ir-->
+<h1>درباره وبلاگ</h1>
+<div class="About">
+<div style="text-align: justify"  >
+<img src="../static.mihanblog.com/public/user_data/web_photo/432/1293736.jpg@1342"  /><div align=center >   </div>
+اللهم عجل لولیک الفرج<br />
+کشتی نسازای نوح طوفان نخواهدآمد<br />
+برشوره زاردلهاباران نخواهدآمد<br />
+رفتی کلاس اول این جمله راعوض کن<br />
+آن مردتانیایدباران نخواهدآمد<br />
+سلام<br />
+به وبلاگ خودتون خوش آمدید<br />
+امیدوارم مطالب موردپسندشماقراربگیره<br />
+بانظرات ارزشمندتون من را دراداره هرچه بهتروبلاگ یاری فرمایید<br />
+یاعلی<br />
+التماس دعای فرج</div> </div> 
+<div class="FooterSid"></div>
+<!--Design By : salehon.ir-->
+<h1>آرشیو ماهانه</h1>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/archive/1395/10"> دی 1395</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/archive/1395/1"> فروردین 1395</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/archive/1394/10"> دی 1394</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/archive/1394/8"> آبان 1394</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/archive/1394/7"> مهر 1394</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/archive/1394/6"> شهریور 1394</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/archive/1394/5"> مرداد 1394</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/archive/1394/4"> تیر 1394</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/archive/1394/3"> خرداد 1394</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/archive/1394/2"> اردیبهشت 1394</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/archive/1394/1"> فروردین 1394</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/archive/1393/12"> اسفند 1393</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/archive">لیست آرشیوها</a></div>
+<div class="FooterSid"></div>
+<!--Design By : salehon.ir-->
+<h1>آرشیو موضوعی</h1>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/category/6">مذهبی - 
+	48</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/category/1">حدیث - 
+	16</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/category/5">وظایف منتظرین - 
+	4</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/category/3">ولایت فقیه - 
+	2</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/category/2">شهدا - 
+	12</a></div>
+<div class="Link"><a href="http://atre-zohur.mihanblog.com/post/category/4">دشمن شناسی - 
+	4</a></div>
+<div class="FooterSid"></div>
+<!--Design By : salehon.ir-->
+
+		<!--Design By : salehon.ir-->
+<h1>آمار وبلاگ</h1>
+<div style="text-align: Right" >
+<div class="Link">بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class="Link">بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class="Link">كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class="Link">بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class="Link">بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class="Link">تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class="Link">كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center></div>
+<div class="FooterSid"></div>	
+<!--Design By : salehon.ir-->
+
+<head>
+<meta http-equiv="Content-Language" content="fa">
+</head>
+
+<h1>حما&#1740;تــ</h1>
+<div class="Link">
+	<a target="_blank" href="http://www.afsaran.ir/user/profile/radioafsaran">
+	<img src="http://www.salehon.ir/wp-content/uploads/2013/10/radio-afsaran-amodi.gif" alt="جهت در&#1740;افت برنامه ها&#1740; راد&#1740;و افسران کل&#1740;ک کن&#1740;د" border="0" height="155" width="140"></a></div>
+<div class="FooterSid"></div>
+<!--Design By : salehon.ir-->
+<div class="custom">
+<h1>دیگر امکانات</h1>
+<div align="center"><p align="center"><a href="http://zohor313yar.blogfa.com" target="_blank"><img border="0" src="http://up.pnu-club.com/images/lsn2kr9z6ta76s1g9fwx.gif" width="100" alt="یاران امام زمان (عج)" height="160"></a><br><input onclick="this.select()" type="text" width="356" name="T1" size="15" value='<!-- start logo cod off http://zohor313yar.blogfa.com --><p align="center"><p align="center"><a href="http://zohor313yar.blogfa.com" target="_blank"><img border="0" src="http://up.pnu-club.com/images/lsn2kr9z6ta76s1g9fwx.gif" width="100" height="160" alt="یاران امام زمان (عج)"></a></p><!--finish logo cod off http://zohor313yar.blogfa.com -->' dir="ltr" ></p><div style="display:none"><a href="http://blogers.ir">وبلاگ</a>-<a href="http://blogers.ir/cod/make-logo-banner-cod/">کد لوگو و بنر</a></div>
+<script type="text/javascript" src="http://www.bachehayeghalam.ir/sitefiles/bgh_sound_player.php"></script>
+<!-- start logo cod off http://majnonl-abas315.blogfa.com/ --><p align="center"><p align="center"><a href="http://majnonl-abas315.blogfa.com/" target="_blank"><img border="0" src="http://upload7.ir/images/63820808170845567308.jpg"  width="180" height="200" alt="عطرکربلا"></a></p><!--finish logo cod off http://majnonl-abas315.blogfa.com/ -->
+
+<style type="text/css">//Ashoora.ir|Shohada Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/png.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/shohada/shohada.php?mod=9&cat=1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1&color3=FF0000&color2=663300&color1=000000&width=160"></script><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1608;&#1589;&#1740;&#1578; &#1588;&#1607;&#1583;&#1575;</a><style type="text/css">//Ashoora.ir|Shohada Ends</style>
+
+-<!-- start logo cod off http://www.mohebaan.ir/ --><p align="center"><p align="center"><a href="http://www.mohebaan.ir/" target="_blank"><img border="0" src="http://s1.picofile.com/file/7611810963/%D9%85%D8%AD.gif%22" width="140" height="180" alt="محبان حضرت مهدی (عج)"></a></p><!--finish logo cod off http://www.mohebaan.ir/ -->
+
+*<p align="center"><a href="http://www.ansare72.blogfa.com/" target="_blank"><img border="0" src="http://www.uplooder.net/img/image/60/5c1c46397e6c441ad6685d5e003fc076/Hossein-.jpg" width="165" alt="فرهنگی مذهبی انصا الحسین" height="250"></a><br><input onclick="this.select()" type="text" width="356" name="T1" size="15" value='<!-- start logo cod off http://www.ansare72.blogfa.com/ --><p align="center"><p align="center"><a href="http://www.ansare72.blogfa.com/" target="_blank"><img border="0" src="http://www.uplooder.net/img/image/60/5c1c46397e6c441ad6685d5e003fc076/Hossein-.jpg" width="165" height="250" alt="فرهنگی مذهبی انصا الحسین"></a></p><!--finish logo cod off http://www.ansare72.blogfa.com/ -->' dir="ltr" ></p><div style="display:none"><a href="http://blogers.ir" rel="nofollow" >وبلاگ</a>-<a href="http://blogers.ir/cod/make-logo-banner-cod/" rel="nofollow" >کد لوگو و بنر</a></div>
+
+
+<!-- start logo cod off http://TOHID-M.BLOGFA.COM --><p align="center"><p align="center"><a href="http://TOHID-M.BLOGFA.COM" target="_blank"><img border="0" src="http://s5.picofile.com/file/8126607018/%D9%84%D9%88%DA%AF%D9%88_%DB%8C_%D9%88%D8%A8%D9%84%D8%A7%DA%AF.gif"  width="100" height="100" alt="تا آسمان راهی نیست "></a></p><!--finish logo cod off http://TOHID-M.BLOGFA.COM -->
+
+
+<p align="center"><p align="center"><a href="index.html" target="_blank"><img border="0" src="http://s5.picofile.com/file/8128139268/%D9%84%D9%88%DA%AF%D9%88%DB%8C_%D9%88%D8%A8%D9%84%D8%A7%DA%AF_%D8%B9%D8%B7%D8%B1_%D8%AD%D8%B6%D9%88%D8%B11.gif"  width="150" height="120" alt="عطـــــــــــــــــــــــــــر ظهـــــــــــــور"></a></p>
+
+<div style="border-width: 0px; z-index: 1000; position: fixed;right : 0px; top: 0px;">
+<a href="http://emammhr.blogfa.com/" target="_blank" rel="nofollow" ><img src="
+http://s5.picofile.com/file/8159450426/ko6n_emam_zaman_ziba_gifs_tk_13.gif
+" />
+</div></div></div>
+<div class="FooterSid"></div>
+</td></tr>
+</div></div>
+	<!-- end sidebar-r -->
+<!--Design By : salehon.ir-->
+<tr><td width="1000" colspan="3" class="Footer" dir="rtl">
+[ <a title="قالب وبلاگ" href="http://www.salehon.ir">طراح قالب: </a>
+<a tite="قالب وبلاگ" href="http://www.salehon.ir">صالحون</a> | 
+<a title="قالب وبلاگ" href="http://www.salehon.ir">Theme By salehon.ir</a> 
+| <a title="قالب وبلاگ رایگان" href="http://www.salehon.ir/?feed=rss2&cat=517">rss</a> ]<br>
+</td></tr></table></div></div>
+<!-- end Footer -->
+<!--Design By : salehon.ir-->
+<div style="display:none;">
+	<a title="مجله اینترنتی دانستنی ها" href="http://www.salehon.ir">صالحون</a> ، 
+	<a title="عکس عاشقانه جدید" href="http://www.anaammar.ir">پاتوق عمارها</a> ، 
+	<a title="اس ام اس های عاشقانه" href="http://www.aliabad-new.ir">اخبار</a></div>
+</body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'atre-zohur.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

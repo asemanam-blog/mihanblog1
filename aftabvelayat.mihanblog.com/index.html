@@ -1,0 +1,2067 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://aftabvelayat.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1124588*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[439]='0';commentCnt[440]='0';commentCnt[441]='0';commentCnt[443]='0';commentCnt[444]='0';commentCnt[445]='8';commentCnt[446]='0';commentCnt[447]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[439]='16';
+mihanblogDisLikeArrCnt[439]='1';
+mihanblogLikeArrCnt[440]='14';
+mihanblogDisLikeArrCnt[440]='0';
+mihanblogLikeArrCnt[441]='14';
+mihanblogDisLikeArrCnt[441]='0';
+mihanblogLikeArrCnt[443]='15';
+mihanblogDisLikeArrCnt[443]='0';
+mihanblogLikeArrCnt[444]='12';
+mihanblogDisLikeArrCnt[444]='0';
+mihanblogLikeArrCnt[445]='15';
+mihanblogDisLikeArrCnt[445]='0';
+mihanblogLikeArrCnt[446]='6';
+mihanblogDisLikeArrCnt[446]='0';
+mihanblogLikeArrCnt[447]='4';
+mihanblogDisLikeArrCnt[447]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://aftabvelayat.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://aftabvelayat.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','357');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','یکشنبه 4 مهر 1395');
+	
+	setStatVar('today_view','65');
+	setStatVar('yesterday_view','37');
+	
+	setStatVar('this_month_view','2541');
+	setStatVar('last_month_view','1277');
+
+	setStatVar('total_view','412883');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (16:40)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://aftabvelayat.mihanblog.com/statupdate/?data[refereruri]=http://namaz-adian.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607779244&data[hash]=2d6257da9c43f9908cfa8e9b9eb76f6b&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://aftabvelayat.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://aftabvelayat.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://aftabvelayat.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://aftabvelayat.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://aftabvelayat.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://aftabvelayat.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://aftabvelayat.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://aftabvelayat.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://aftabvelayat.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://aftabvelayat.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://aftabvelayat.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://aftabvelayat.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://aftabvelayat.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://aftabvelayat.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://aftabvelayat.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://aftabvelayat.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+</script>
+<title>آفتاب ولایت ☫پایگاه مقاومت بسیج شهید صیاد شیرازی ساری ☫  لبیک یا امام خامنه ای </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Farsi">
+<meta name="geo.region" CONTENT="IR" />
+<meta name="googlebot" content="INDEX, follow" />
+<meta name="robots" content="index, follow">
+<meta name="description" content="آفتاب ولایت ☫پایگاه مقاومت بسیج شهید صیاد شیرازی ساری ☫  لبیک یا امام خامنه ای  - ☫آفتاب ولایت☫ مازندران - آفتاب ولایت ☫پایگاه مقاومت بسیج شهید صیاد شیرازی ساری ☫  لبیک یا امام خامنه ای ">
+<meta name="keywords" content="آفتاب ولایت ☫پایگاه مقاومت بسیج شهید صیاد شیرازی ساری ☫  لبیک یا امام خامنه ای ,aftabvelayat, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<meta name="sakht ghaleb : " content="salehon.ir">
+<link rel="alternate" type="application/rss+xml" title="آفتاب ولایت ☫پایگاه مقاومت بسیج شهید صیاد شیرازی ساری ☫  لبیک یا امام خامنه ای " href="http://aftabvelayat.mihanblog.com/post/rss/">
+<link href="http://mts69.persiangig.com/aftabvelayat11.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+<div align="center">
+<div class=Back-WS>
+
+
+
+<table border="0" width="1000" cellspacing="0" cellpadding="0">		
+
+
+
+
+<tr><td colspan="3" id=Header-WS>
+			
+
+
+
+
+
+<div id=BlogTitle><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </div><div style="width:100%;height:23;float:right"></div>
+<div id=BlogDescription>&nbsp;</div>
+	
+ 
+
+<div class=TopMenu><div style="float:right;width:782;direction:rtl">
+<div style="width:10;height:20;float:right"></div><a href="index.html"><img border="0" src="http://www.weblogskin.com/themes/085/blank.gif" width="80" height="32" hspace="1"></a>
+<a href="http://aftabvelayat.mihanblog.com/post/list"><img border="0" src="http://www.weblogskin.com/themes/085/blank.gif" width="80" height="32" hspace="1"></a>
+<a href="javascript:messageForm()"><img border="0" src="http://www.weblogskin.com/themes/085/blank.gif" width="80" height="32" hspace="1"></a>
+<a target="_blank" href="http://www.salehon.ir"><img alt="قالب وبلاگ" border="0" src="http://www.weblogskin.com/themes/085/blank.gif" width="80" height="32" hspace="1"></a>
+<a target="_blank" href="http://aftabvelayat.mihanblog.com/post/rss/"><img border="0" src="http://www.weblogskin.com/themes/085/blank.gif" width="70" height="32" hspace="1"></a>
+
+<marquee>
+السلام علیک یا بقیة الله یا حجة الله ........ ;كانال تلگرام آفتاب ولایت @aftabvelayat
+</marquee>
+
+</div>
+
+
+</div>    
+
+
+</td></tr>
+
+<tr><td width="220" valign="top">
+
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آمار سایت</b></div></div>
+<div class=CenterSid>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> نفر</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right></div>
+<div class=LowSid></div></div>	
+
+
+
+
+		<form id="frm-16077306715fd405ef6710c" method="post" action="http://aftabvelayat.mihanblog.com/poll/new/fid/16077306715fd405ef6710c/atrty/1607730671/avrvy/0/key/3c099acc30f4f08d514abbbf8c1ace6e/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="227191" id="data[pollid]" />		
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>چشم انتظار ظهور</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+برای سلامتی و ظهور قائم آل محمّد(عج)صلوات بفرستید.((اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ و آلِ مُحَمَّدٍ و عَجِّلْ فَرَجَهُمْ ))<br><label><input type="checkbox"  name="data[v1]" id="v1" value="1" />1صلوات</label><br><label><input type="checkbox"  name="data[v2]" id="v2" value="1" />5 صلوات</label><br><label><input type="checkbox"  name="data[v3]" id="v3" value="1" />14 صلوات</label><br><label><input type="checkbox"  name="data[v4]" id="v4" value="1" />69 صلوات</label><br><label><input type="checkbox"  name="data[v5]" id="v5" value="1" />110 صلوات</label><br><label><input type="checkbox"  name="data[v6]" id="v6" value="1" />313 صلوات</label><br><label><input type="checkbox"  name="data[v7]" id="v7" value="1" />1000 صلوات</label><br><br><input type="submit" value="میفرستم"></div></div>
+<div class=LowSid></div></div>
+</cb:block_blog_category>
+
+
+
+
+
+
+<div id=rightmenu>
+<div class=TopSid>
+<div class=TopSid2>
+<b>موضوعات</b></div></div>			
+<div class=CenterSid><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/37">بیانات رهبری  
+6 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/20">بیانات رهبری  
+50 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/30">مهمانی خدا 
+13 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/36">بسیج 
+9 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/31">فرهنگی 
+35 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/34">ائمه معصومین(ع) 
+32 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/33">جنگ نرم 
+9 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/28">خواندنی 
+54 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/32">شهدا 
+26 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/15">حجاب 
+5 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/17">مهدویت 
+7 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/35">احادیث 
+19 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/19">انتخابات 
+22 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/21">راهیان نور 
+5 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/23">قرآن 
+13 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/16">نماز 
+9 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/27">مناسبت ها 
+46 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/22">حماسه سیاسی 
+6 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/18">فاطمیه 
+11 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/2"> نرم افزار اسلامی 
+12 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/14">موبایل اسلامی+ لینک دانلود 
+7 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/1">بیانات رهبری (1391) 
+14 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/10">امام خمینی (ره) 
+9 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/25">امام خامنه ای 
+18 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/7"> شهدای مازندران 
+22 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/24">پوستر 
+57 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/29">امر به معروف و نهی از منکر 
+8 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/12"> مسابقه عکس دهه فجر 91 
+2 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/11">دهه فجر 91 
+10 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/26">شهید صیاد شیرازی 
+6 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/9">خاطرات جبهه 
+30 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/8">زندگی نامه شهیدان 
+16 </a></div><div class=li-Sid>				
+<a href="http://aftabvelayat.mihanblog.com/post/category/5">اطلاعیه 
+12 </a></div></div>			
+<div class=LowSid></div></div>
+
+
+
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آخرین مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/447">محرم آمده، حواست كه هست؟</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/446">به استقبال غدیر می‌رویم ...</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/445"> آخرین گلوله صیاد</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/444">ما هم کلی ذوق میکنیم که آقا دارد روشن گری میکند?</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/443"> سالی که بهارش قدم فاطمه باشد</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/441"> اقتصاد مقاومتی ، اقدام و عمل</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/440">كانال تلگرام آفتاب ولایت</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/439"> اینجا ایران،امن ترین کشور حال حاضر منطقه</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/438">یا علی گفتیم و عشق آغاز شد</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/430">غزه پیروز این میدان است، و رژیم منفور بازنده</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/429">سفری در راه است ...</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/428">آفتاب ولایت</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/427">جاده جوانی ...</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/423">رحلت امام خمینی (ره)، وصال یار، فراق یاران</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/422">شیعیان عیدتان مبارک.</a></div><center><a href="http://aftabvelayat.mihanblog.com/post/list"><b>لیست آخرین مطالب</b></a></center></div>
+<div class=LowSid></div></div>	
+
+
+
+
+
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>نویسندگان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/author/967804">صیاد دل ها 357 </a></div></div>
+<div class=LowSid></div></div>
+
+
+
+<div id=rightmenu>
+<div class=TopSid>
+<div class=TopSid2>
+<b>لوگو آفتاب ولایت</b></div></div>			
+<div class=CenterSid><div class=li-Sid>
+
+
+<p align="center"><a href="index.html" target="_blank"><img border="0" src="http://mts69.persiangig.com/logo2.JPG"  width="110" alt="آفتاب ولایت "  height="150"></a><br><input onclick="this.select()" type="text" width="356" name="T1" size="15" value='<!-- start logo cod off http://aftabvelayat.mihanblog.com/ --><p align="center"><p align="center"><a href="http://aftabvelayat.mihanblog.com/" target="_blank"><img border="0" src="http://mts69.persiangig.com/logo2.JPG"  width="110" height="150" alt="آفتاب ولایت "></a></p><!--finish logo cod off http://aftabvelayat.mihanblog.com/ -->' dir="ltr" ></p><div style="display:none"><a href="http://blogers.ir">وبلاگ</a>-<a href="http://blogers.ir/cod/make-logo-banner-cod/">کد لوگو و بنر</a></div>
+
+
+<p align="center"><a href="index.html" target="_blank"><img border="0" src="../static.mihanblog.com/public/user_data/user_files/375/1124588/logoaftabvelayat.jpg"  width="170" alt="آفتاب ولایت ساری"  height="81"></a><br><input onclick="this.select()" type="text" width="356" name="T1" size="15" value='<!-- start logo cod off http://aftabvelayat.mihanblog.com/ --><p align="center"><p align="center"><a href="http://aftabvelayat.mihanblog.com/" target="_blank"><img border="0" src="http://static.mihanblog.com//public/user_data/user_files/375/1124588/logoaftabvelayat.jpg"  width="170" height="81" alt="آفتاب ولایت ساری"></a></p><!--finish logo cod off http://aftabvelayat.mihanblog.com/ -->' dir="ltr" ></p><div style="display:none"><a href="http://blogers.ir">وبلاگ</a>-<a href="http://blogers.ir/cod/make-logo-banner-cod/">کد لوگو و بنر</a></div>
+
+
+12 </a></div></div>
+<div class=LowSid></div></div>
+</cb:block_blog_categ
+
+		<input type="hidden" name="frm-id" value="16077306715fd405ef6710c" id="frm-id" /></form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<span lang="fa"><b>همسنگران</b></span></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a target="_blank" href="http://www.salehon.ir">صالحون</a></div><div class=li-Sid>
+<a target="_blank" href="http://mbmontazerim.blogfa.com/">زینت یار</a></div><div class=li-Sid>
+<a target="_blank" href="http://mmn01.blogfa.com/">ولی امر</a></div><div class=li-Sid>
+<a target="_blank" href="http://sayberi-313.mihanblog.com/">معبر سایبری فکه</a></div><div class=li-Sid>
+<a target="_blank" href="http://wherever-you-are.mihanblog.com/">حرف هایی برای نگفتن</a></div><div class=li-Sid>
+<a target="_blank" href="index.html">بلاگ اجتماعی همسنگری</a></div><div class=li-Sid>
+<a target="_blank" href="http://eshghevatan140.blogfa.com/">پایگاه فرهنگی عشق وطن</a></div><div class=li-Sid>
+<a target="_blank" href="http://raze-reza.blogfa.com/">این روزها خیلی دلم گرفته</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.khademerahbar.dde.ir/">معبر سایبری شهید اطهری</a></div><div class=li-Sid>
+<a target="_blank" href="http://faday92.blogfa.com/">فدایی امام خامنه ای(حفظه الله)</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.religion5556.blogfa.com/">جدید ترین مطالب دینی و مذهبی</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.p-shahsavani.blogfa.com/">پایگاه مقاومت بسیج شهید شاهسونی</a></div><div class=li-Sid>
+<a target="_blank" href="http://basijefarhangi.blogfa.com/">پایگاه شهید هاشمی نژاد-حوزه رضوی</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.varesin-alhosein.blogfa.com/">هیئت وارثین الحسین(ع)مشهدالرضا</a></div><div class=li-Sid>
+<a target="_blank" href="http://mohebroghayeh.blogfa.com/">چشــم انتــظاران مهـــدی (عج)</a></div><div class=li-Sid>
+<a target="_blank" href="../oshagholhasan.mihanblog.com/index.html">عشّاق الحسن ( پیروان ولایت )</a></div><div class=li-Sid>
+<a target="_blank" href="http://ghoranamoozan.com/">دارالقرآن مسجد بعثت افسریه</a></div><div class=li-Sid>
+<a target="_blank" href="http://nasimeharam.mihanblog.com/">نام زهرا به تو بانو چقدر می آید</a></div><div class=li-Sid>
+<a target="_blank" href="http://tntsajad.blogfa.com/">رهبر ما مولای ماست کوهبنان</a></div><div class=li-Sid>
+<a target="_blank" href="http://seyedhossein13788.blogfa.com/">سبکبالان عاشق کوهبنان</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.msh313.com/">قرارگاه منتظران شهادت</a></div><div class=li-Sid>
+<a target="_blank" href="http://golzare-shohada.blogfa.com/">شهید قلب تاریخ است</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.si-technews.blogfa.com/">طرح با تو حرف میزند</a></div><div class=li-Sid>
+<a target="_blank" href="http://shahidzeinodin.mihanblog.com/">دوست داران شهدا</a></div><div class=li-Sid>
+<a target="_blank" href="http://shohada-sharmandeh.mihanblog.com/">شهدا شرمنده ایم</a></div><div class=li-Sid>
+<a target="_blank" href="http://velayat313fagih.blogfa.com/">با ولایت تا شهادت</a></div><div class=li-Sid>
+<a target="_blank" href="http://mano2stamkhoda.blogfa.com/">طرح صالحین خاتم</a></div><div class=li-Sid>
+<a target="_blank" href="http://sayyedali313.blogfa.com/">سید خراسانی</a></div><div class=li-Sid>
+<a target="_blank" href="http://hejab-va-efaf89.blogfa.com/">حجاب و عفاف</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.hoseineasr.blogfa.com/">سالک ولایت</a></div><div class=li-Sid>
+<a target="_blank" href="http://tabibedelha.blogfa.com/">طبیب دلها</a></div><div class=li-Sid>
+<a target="_blank" href="http://hosseinyha.blogfa.com/">حسینی ها</a></div><div class=li-Sid>
+<a target="_blank" href="http://rahrovankothar.mihanblog.com/">رهروان کوثر</a></div><div class=li-Sid>
+<a target="_blank" href="http://torkaman.blogsky.com/">در اتنظار یار</a></div><div class=li-Sid>
+<a target="_blank" href="http://mahfel8.blogfa.com/">محفل 8</a></div><div class=li-Sid>
+<a target="_blank" href="http://mighaat.mihanblog.com/">وعده گاه</a></div><div class=li-Sid>
+<a target="_blank" href="http://alemohammadi.blogfa.com/">مداحی</a></div><div class=li-Sid>
+<a target="_blank" href="http://neynava68.blogfa.com/">نینوا</a></div><div class=li-Sid>
+<a target="_blank" href="http://aflakyan.mihanblog.com/">افلاکیان</a></div><div class=li-Sid>
+<a target="_blank" href="http://shohada186.blogfa.com/">یاد شهدا</a></div><div class=li-Sid>
+<a target="_blank" href="http://ammarnameh58.mihanblog.com/">عمار نامه</a></div><div class=li-Sid>
+<a target="_blank" href="http://alagal.blogfa.com/">عصر ظهور</a></div><div class=li-Sid>
+<a target="_blank" href="http://mahdishahri.blogfa.com/">ظهور آفتاب</a></div><div class=li-Sid>
+<a target="_blank" href="http://welaiat.mihanblog.com/">ولایت فقیه</a></div><div class=li-Sid>
+<a target="_blank" href="http://shohada-gomnam111.blogfa.com/">شهید گمنام</a></div><div class=li-Sid>
+<a target="_blank" href="http://cherikgraphic.com/">گراف(چریک)</a></div><div class=li-Sid>
+<a target="_blank" href="http://mahdialajal.blogfa.com/">یا مهدی العجل</a></div><div class=li-Sid>
+<a target="_blank" href="http://montazeranhazrat.mihanblog.com/">منتظران حضرت</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.velayatkhamenei.blogfa.com">ولایت سیّد علی</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.montasar.ir">حضرت مهدی (عج)</a></div><div class=li-Sid>
+<a target="_blank" href="http://persian-sayberi.persianblog.ir/">معبر سایبری پرشین</a></div><div class=li-Sid>
+<a target="_blank" href="http://misag.mihanblog.com/">معبر سایبری میثاق</a></div><div class=li-Sid>
+<a target="_blank" href="http://sayberi174.persianblog.ir/">معبر سایبری فندرسک</a></div><div class=li-Sid>
+<a target="_blank" href="http://mehrkho.blogfa.com/">سیــــــــدتی یارقـــــیه (س)</a></div><div class=li-Sid>
+<a target="_blank" href="http://hero67.blogfa.com/">قهرمان &quot;شهید حسین املاکی&quot;</a></div><div class=li-Sid>
+<a target="_blank" href="http://basijramian.blogfa.com/">شهدازنده اند_شهرستان رامیان</a></div><div class=li-Sid>
+<a target="_blank" href="http://kanon14masom.blogfa.com">کانون فرهنگی چهارده معصوم(ع)</a></div><div class=li-Sid>
+<a target="_blank" href="http://jahan-fly.mihanblog.com/">کانون فرهنگی شهید صیاد شیرازی</a></div><div class=li-Sid>
+<a target="_blank" href="http://labbaik-ya-hosein.blogfa.com/">طراحی پوسترهای فرهنگی-مذهبی</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.shamimkarbala.blogfa.com/">پایگاه هیئت انصار الحسین&quot;ع&quot;-کردکلا</a></div><div class=li-Sid>
+<a target="_blank" href="http://kanoonpajuhesh.blogfa.com/">واحد پژوهش مدرسة الزهرا(س)-ری</a></div><div class=li-Sid>
+<a target="_blank" href="http://aleefbaa.blogfa.com/">شناخت خدا,یاد خدا,محبت خدا</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.hmer.ir/">هیئت محبین امام رضا(ع) اراک</a></div><div class=li-Sid>
+<a target="_blank" href="http://boronsy.ir/">شهید عبدالحسین برونسی</a></div><div class=li-Sid>
+<a target="_blank" href="http://armyleader.blogfa.com/">پایگاه مقاومت نجف اشرف</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.ansardvm.blogfa.com/">جمجمه ات را بخدا بسپار</a></div><div class=li-Sid>
+<a target="_blank" href="http://basiratiha.ir/">وبلاگ ارزشی بصیرتیها</a></div><div class=li-Sid>
+<a target="_blank" href="http://sayberikalale.mihanblog.com/">پایگاه سایبری کلاله</a></div><div class=li-Sid>
+<a target="_blank" href="../namaz-adian.mihanblog.com/index.html">آثار و برکات نماز</a></div><div class=li-Sid>
+<a target="_blank" href="http://gh-softwar.blogfa.com/">قرارگاه جنگ نرم</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.mazloum.ir">مقتدر مظلوم</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.islamdownload.org/">اسلام دانلود</a></div><div class=li-Sid>
+<a target="_blank" href="http://yazahra-shahadat.blogfa.com/">محب خوبان</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.asr-entezar.ir">عصر انتظار</a></div><div class=li-Sid>
+<a target="_blank" href="http://fake91.blogfa.com/">فکه 91</a></div><div class=li-Sid>
+<a target="_blank" href="http://ahmad111450.blogfa.com/">دوستان</a></div><div class=li-Sid>
+<a target="_blank" href="http://classmate.parsiblog.com">همکلاس</a></div><div class=li-Sid>
+<a target="_blank" href="http://kamran113.blogfa.com/">شمیم ولایت</a></div><div class=li-Sid>
+<a target="_blank" href="http://golestanblog.ir/">گلستان بلاگ</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.namaz-sotonedin.blogfa.com/">فرشته منتظر</a></div><div class=li-Sid>
+<a target="_blank" href="http://sookhteafagh.mihanblog.com/">علمدار عشق</a></div><div class=li-Sid>
+<a target="_blank" href="http://rahgozar1400.blogfa.com/">رهگذران اینترنت</a></div><div class=li-Sid>
+<a target="_blank" href="http://seddighin110.ir">صدیقین</a></div></div>
+<div class=LowSid></div></div>
+
+
+
+
+
+
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>ابر برچسب ها</b></div></div>
+<div class=CenterSid>
+	<p align="center">
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/shia" style="font-size:1.02em">
+		<font size="1">shia</font></a><font size="1"> </font> 
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/%D9%85%D8%AD%D8%B1%D9%85" style="font-size:1.02em">
+		<font size="1">محرم</font></a><font size="1"> </font> 
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF+%D9%85%D9%82%D8%A7%D9%88%D9%85%D8%AA%DB%8C" style="font-size:1em">
+		<font size="1">اقتصاد مقاومتی</font></a><font size="1"> </font> 
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/%D9%81%D8%A7%D8%B7%D9%85%DB%8C%D9%87" style="font-size:1.02em">
+		<font size="1">فاطمیه</font></a><font size="1"> </font> 
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A8%DB%8C%D8%A7%D9%86%D8%A7%D8%AA+%D8%B1%D9%87%D8%A8%D8%B1%DB%8C" style="font-size:1.28em">
+		<font size="1">بیانات رهبری</font></a><font size="1"> </font> 
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D8%A7%D8%AA" style="font-size:1.06em">
+		<font size="1">انتخابات</font></a><font size="1"> </font> 
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A7%D9%81%D8%AA%D8%A7%D8%A8+%D9%88%D9%84%D8%A7%DB%8C%D8%AA" style="font-size:1.1em">
+		<font size="1">افتاب ولایت</font></a><font size="1"> </font> 
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%B4%D9%87%D8%A7%D8%AF%D8%AA" style="font-size:1.02em">
+		<font size="1">شهادت</font></a><font size="1"> </font> 
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%B4%D9%87%D8%AF%D8%A7%DB%8C+%D9%85%D8%A7%D8%B2%D9%86%D8%AF%D8%B1%D8%A7%D9%86" style="font-size:1.03em">
+		<font size="1">شهدای مازندران</font></a><font size="1"> </font> 
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%B9%D8%A7%D8%B4%D9%88%D8%B1%D8%A7" style="font-size:1.02em">
+		<font size="1">عاشورا</font></a><font size="1"> </font> 
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85+%D8%AE%D8%A7%D9%85%D9%86%D9%87+%D8%A7%DB%8C" style="font-size:1.15em">
+		<font size="1">امام خامنه ای</font></a><font size="1"> </font> 
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/%D9%84%D8%B4%DA%A9%D8%B1+25+%DA%A9%D8%B1%D8%A8%D9%84%D8%A7" style="font-size:1.02em">
+		<font size="1">لشکر 25 کربلا</font></a><font size="1"> </font> 
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/ashura" style="font-size:1.06em">
+		<font size="1">ashura</font></a><font size="1"> </font> 
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/%D9%88%D9%84%D8%A7%DB%8C%D8%AA" style="font-size:1.03em">
+		<font size="1">ولایت</font></a><font size="1"> </font> 
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%B1%D8%A7%D9%87%DB%8C%D8%A7%D9%86+%D9%86%D9%88%D8%B1" style="font-size:1.03em">
+		<font size="1">راهیان نور</font></a><font size="1"> </font> 
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%AF%D9%87%D9%87+%D9%81%D8%AC%D8%B1" style="font-size:1.03em">
+		<font size="1">دهه فجر</font></a><font size="1"> </font> 
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%B4%D9%87%D8%AF%D8%A7" style="font-size:1.07em">
+		<font size="1">شهدا</font></a><font size="1"> </font> 
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%AD%D8%B6%D8%B1%D8%AA+%D8%B2%D9%87%D8%B1%D8%A7+%28%D8%B3%29" style="font-size:1.03em">
+		<font size="1">حضرت زهرا (س)</font></a><font size="1"> </font> 
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A2%D9%81%D8%AA%D8%A7%D8%A8+%D9%88%D9%84%D8%A7%DB%8C%D8%AA" style="font-size:2em">
+		<font size="1">آفتاب ولایت</font></a><font size="1"> </font> 
+				<a href="http://aftabvelayat.mihanblog.com/post/tag/%D9%86%D9%85%D8%A7%D8%B2" style="font-size:1.02em">
+		<font size="1">نماز</font></a><font size="1"> </font> 
+</div>
+</center><div class=LowSid></div></div>
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>پیوندهای روزانه</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a target="_blank" href="http://www.boronsy.loxblog.com/" title="سلام
+شهید برونسی
+اگه دوست داشتید ما رو به پیوندهاتون اضافه کنید.
+تعجیل در فرج و شادی روح شهید برونسی 3 صلوات بفرستید.">
+شهید برونسی</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.leader.ir/" title="">
+پایگاه اطلاع رسانی دفتر مقام معظم رهبری</a></div><div class=li-Sid>
+<a target="_blank" href="http://n-tabarsi.ir/" title="">
+پایگاه اطلاع رسانی آیت الله طبرسی</a></div><div class=li-Sid>
+
+</a></div></div>
+<div class=LowSid></div></div>
+	
+
+<div id=rightmenu>
+
+
+
+
+
+<div id=rightmenu>
+<div class=TopSid>
+<div class=TopSid2>
+<b>همسنگران</b></div></div>			
+<div class=CenterSid><div class=li-Sid>	
+
+
+
+   
+<a href="http://montasar.ir/" target="_blank"><img src="http://montasar.persiangig.com/logo/logo5.gif" alt="حضرت مهدی" height="60" width="75"></a>
+
+<a href="http://wherearewe.mihanblog.com/" target="_blank"><img src="http://www.8pic.ir/images/24673890617193796023.png" alt="نرم می جنگیم" height="60" width="75"></a>
+
+<a href="http://alagal.blogfa.com/" target="_blank"><img src="http://www.blogfa.com/photo/a/alagal.jpg" alt="عصر ظهور" height="60" width="75"></a>
+
+<a href="http://basiratiha.mihanblog.com/" target="_blank"><img src="http://www.samentheme.ir/tem/e/basiratiha/logo.jpg" alt="بصیرتی ها" height="60" width="75"></a>
+
+<a href="http://misag.mihanblog.com/" target="_blank"><img src="http://8pic.ir/images/64257929566924969824.gif" alt="معبر سایبری میثاق" height="60" width="75"></a>
+
+
+<a href="http://sayberi174.persianblog.ir/" target="_blank"><img src="http://sayberi174.ir/logo/Logo-mabarsayberi.jpg" alt="معبر سایبری فندرسک" height="60" width="75"></a>
+
+
+<a href="http://pmvf.ir/" target="_blank"><img src="http://upch.ir/uploads/1/137587341476551.png" alt="ولایت فقیه" height="60" width="75"></a>
+
+
+<a href="http://mahdialajal.blogfa.com/" target="_blank"><img src="http://upcity.ir/images2/50536015291419857465.jpg" alt="یا مهدی العجل" height="60" width="75"></a>
+
+
+<a href="http://mehrkho.blogfa.com/" target="_blank"><img src="http://www.askquran.ir/gallery/images/5405/1_Image-5.gif" alt="سیدتی یا رقیه" height="60" width="75"></a>
+
+<a href="http://torkaman.blogsky.com/" target="_blank"><img src="http://omidomidi.persiangig.com/Logos/0588/DarEntezareYar.jpg" alt="در انتظار یار" height="60" width="75"></a>
+
+<a href="http://hejab-va-efaf89.blogfa.com/" target="_blank"><img src="http://8pic.ir/images/99615257328323235153.jpg" alt="حجاب و عفاف" height="60" width="75"></a>
+
+<a href="http://rozekhob.mihanblog.com/" target="_blank"><img src="../static.mihanblog.com/public/user_data/web_photo/409/1224330.jpg@6835" alt="راه شهدا" height="60" width="75"></a>
+
+
+<a href="http://alirezahabiby.blogfa.com/" target="_blank"><img src="http://www.wisgoon.com/media/pin/images/o/2013/9/1379701519340249.jpg" alt="العجل العجل یا مولی یاصاحب الزمان" height="60" width="75"></a>
+    </marquee>
+
+<a href="http://nasimeharam.mihanblog.com/" target="_blank"><img src="http://s3.picofile.com/file/7953610000/logo_for_asmani.gif" alt="نام زهرا به تو بانو چقدر " height="60" width="75"></a>
+    </marquee>
+
+<a href="http://www.varesin-alhosein.blogfa.com/" target="_blank"><img src="http://www.uplooder.net/img/image/52/dd967106fe64c5337f98d08b2493456f/_________.png" alt="هیئت وارثین الحسین ع مشهدالرضا" height="60" width="75"></a>
+    </marquee>
+
+
+<a href="http://www.basijramian.blogfa.com/" target="_blank"><img src="http://www.blogfa.com/photo/b/basijramian.jpg" alt="وصیت نامه شهدا" height="60" width="75"></a>
+    </marquee>
+
+<a href="http://hosseinyha.blogfa.com/" target="_blank"><img src="http://s1.picofile.com/file/7978434294/Hoseyniha.gif" alt="حسینی ها" height="60" width="75"></a>
+    </marquee>
+
+<a href="http://www.khamenei1391.tk/" target="_blank"><img src="http://up.khamenei1391.tk/up/emam-khamenei/Pictures/emam943163808246.png" alt="پایگاه فرهنگی امام خامنه ای" height="60" width="75"></a>
+    </marquee>
+
+<a href="../jaberebnhayan-sch.mihanblog.com/index.html" target="_blank"><img src="http://axgig.com/images/86632273718332055683.jpg" alt="جابربن حیان" height="60" width="75"></a>
+    </marquee>
+
+<a href="http://www.sari-reza.blogfa.com/" target="_blank"><img src="http://axgig.com/images/54920802626596385978.jpg" alt="رزمندگان مهدی عج" height="60" width="75"></a>
+    </marquee>
+
+<a href="http://www.amarion.ir/" target="_blank"><img src="http://www.amarion.ir/wp-content/uploads/2014/01/Neda.jpg" alt="عماریون" height="60" width="75"></a>
+    </marquee>
+
+<a href="../oshagholhasan.mihanblog.com/index.html" target="_blank"><img src="http://www.uploadax.com/images/76314958446281420571.jpg" alt="عشاق الحسن" height="60" width="75"></a>
+    </marquee>
+
+
+
+<a href="http://fight313.blogfa.com/" target="_blank"><img src="http://uploadazad.com/uploads/pc2b_327lw4%D8%B7%D8%B7%D8%B7avun4e407s2k5a.gif" alt="جنگ نرم و دشمن شناسی" height="60" width="75"></a>
+    </marquee>
+
+<a href="http://p-shahsavani.blogfa.com/" target="_blank"><img src="http://8pic.ir/images/23337740674116131133.gif" alt="
+پایگاه مقاومت بسیج شهید شاهسونی " height="60" width="75"></a>
+    </marquee>
+
+<a href="http://bachehaye20.blogfa.com/" target="_blank"><img src="http://8pic.ir/images/77504016099456765310.jpg" alt="در انتظار او" height="60" width="75"></a>
+    </marquee>
+
+<a href="http://www.religion5556.blogfa.com/" target="_blank"><img src="http://www.xum.ir/images/2014/02/05/gyfhghfh.gif" alt="جدیدترین مطالب دینی و مذهبی" height="60" width="75"></a>
+    </marquee>
+
+<a href="http://www.si-technews.blogfa.com/" target="_blank"><img src="http://www.blogfa.com/photo/s/si-technews.jpg" alt="طرح با تو حرف میزند" height="60" width="75"></a>
+    </marquee>
+
+<a href="http://yaraneyar313.rzb.ir/" target="_blank"><img src="http://gigpars.com/upload/rw4k_%D8%A8%D8%B3%DB%8C%D8%AC%DB%8C%D8%A7%D9%86_%D8%B9%D8%A7%D8%B4%D9%88%D8%B1%D8%A7%D8%A6%DB%8C_%D9%81%D8%AF%D8%A7%D8%A6%DB%8C%D8%A7%D9%86_%D9%88%D9%84%D8%A7%DB%8C%D8%AA.jpg" alt="بسیجیان عاشورایی" height="60" width="75"></a>
+    </marquee>
+
+<a href="http://sayberi-313.mihanblog.com/" target="_blank"><img src="http://s5.picofile.com/file/8118678784/fertgerg.gif" alt="معبر سایبری فکه" height="60" width="75"></a>
+    </marquee>
+<a href="http://tcp-24.mihanblog.com/" target="_blank"><img src="http://cdn2.arioo.com/file/pic/photo/2014/04/7130033bea8b923d11c51bd4632e41dd_500.jpg" alt=" تیم سایبری پلارک" height="60" width="75"></a>
+    </marquee>
+
+<a href="http://www.sayyed313.blogfa.com/" target="_blank"><img src="http://www.blogfa.com/photo/s/sayyed313.jpg" alt="گوهر بقیع" height="60" width="75"></a>
+    </marquee>
+
+<a href="http://mmn01.blogfa.com/" target="_blank"><img src="http://khamenei313.persiangig.com/image/mazhabi/2.gif" alt="ولی امر" height="60" width="75"></a>
+    </marquee>
+
+<a href="http://mbmontazerim.blogfa.com/" target="_blank"><img src="http://www.uplooder.net/img/image/37/ce0af9fdc015aea11896d63d8d194e08/hjyy.PNG" alt="زینت یار" height="60" width="75"></a>
+    </marquee>
+
+<a href="index.html#" target="_blank"><img src="http://samentheme.ir/uploads/120x60.jpg" alt="محل لوگوی شما" height="60" width="75"></a>
+    </marquee>
+
+
+</center></marquee></body>
+</html>
+
+
+12 </a></div></div>
+<div class=LowSid></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<span lang="fa"><b><a href="http://www.salehon.ir"><font color="#000000">  طراح اولیه قالب
+</font></a></b></span></div></div>
+<div class=CenterSid>
+<p align="center">
+<script type="text/javascript" src="http://dlsalehon.persiangig.com/logo/logosalehon.js"></script></p></div>
+<div class=LowSid></div></div>
+			
+</td>
+
+
+<td width="563" valign="top">
+
+<div align="center">
+
+
+
+
+
+			
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+					
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://aftabvelayat.mihanblog.com/post/447">محرم آمده، حواست كه هست؟</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+<div align="right"><div align="center"><img src="../file.mihanblog.com/public/user_data/user_files/375/1124588/95/moharan95.JPG" alt="" width="446" vspace="0" border="0" align="bottom" hspace="0" height="327"></div><font size="3" face="Mihan-Nassim"><font color="#FF0000"><br><font size="4"><b>محرم</b></font></font><font size="4"><b> نزدیك است، حواست كه هست؟</b></font><br><b>حواست كه هست؟ محرم دگری آمد و <font color="#FF0000">صدای قافله ی عشق میآید...</font></b><br><b>محرم نزدیك است ...</b><br><font color="#003300"><b>ماهی كه شراب خوار به احترامش ترك شراب میكند! <br>&nbsp;زناكار به احترامش ترك گناه!</b></font><br><b><font color="#CC0000">ای&nbsp; كاش <font color="#330000">كل یوم عاشورا</font> شود برایمان تا&nbsp; تمام سال برایمان محرم شود و گناه حرام .</font></b><br></font></div><p align="right"><b><font size="3" face="Mihan-Nassim">پترس از روزی که جناب حضرت عزراعیل با تو رو در رو شود.</font></b></p><div align="right"><b><font size="3" face="Mihan-Nassim">
+</font></b></div><p align="right"><b><font size="3" face="Mihan-Nassim">پس<font color="#FF0000"> مومن شو</font> و میدانم که مومنی پس میگویم 
+<font color="#FF0000">هوشیار شو</font> که ابلیس لعین قسم گمراهیت را خورده است . <br></font></b></p><p align="right"><b><font size="3" face="Mihan-Nassim"><font color="#006600"><font color="#FF0000">بیدار شو</font> </font>و چشمهایت را
+ باز کن و ببین چه کسی دشمنت و چه ذات مقدسی (خدا) یار توست .</font></b></p><div align="right"><b><font size="3" face="Mihan-Nassim">
+<br>خدا می فرماید من توبه کنندگان را بسیار&nbsp;دوست میدارم و از گناهان آنها چشم پوشی&nbsp; میکنم. <br><font size="4" color="#CC0000">پس یك بسم الله و یا علی گوی و هوشیار شو .&nbsp; </font></font></b><font size="3" face="Mihan-Nassim"><b><br>بیاییم امسال<font color="#006600"> <font color="#CC0000">شعور محرم</font></font> را&nbsp; در كنار شور آن پر رنگ كنیم و مطالعه كنیم تاریخ كربلا را ،&nbsp; زندگی آزادگانی&nbsp; همانند حر را&nbsp; تا یك شیعه با دانش باشیم .<br>یه وقتایی فرصت و عزم برای توبه فراهمه&nbsp; و محرم یكی از بارزترین این زمان هاست . <br>بیاییم توبه كنیم نه فقط یك ماه محرم.<br>توبه كنیم تا كل روزامون بشه عاشورا تا نام مان در تاریخ جاودانه بشه .<br><font color="#CC0000">اگر حر توبه نمیكرد و به راه حق نمیرفت ، آیا اسمی ازش در تاریخ می موند؟</font><br><font color="#006600">انتخاب كنیم ...</font><br><font color="#003300">آزاده بودن<br>مومن بودن<br>خدایی بودن<br></font></b><font color="#33FF33"><b><font color="#003300">و حتی بهتر از حر بودن را</font><br><br></b></font><font color="#CC0000"><b>پی نوشت:</b></font><br><font size="2">دعا کن كه از دعای خیر امام زمان&nbsp; بوده که تو امدی و این 
+مطلبو خوندی تا به خدایت بیشتر فكر كنی . بعد واسه همه دعا کن و در آخر برا بنده
+ ی حقیر سر تا پاه تقسیر و گناه هم دعا کن تا آنچه را نوشته ام اول خودم 
+بتوانم اجرایش کنم . و احیانا اگر در حال اجرایش هستم خدا توفیق همیشه 
+انجام اعمالم را بر من عطا فرماید&nbsp;. ان شا الله.<br></font></font><font size="2" face="Mihan-Nassim"><font color="#666666"><b>صیاد دلها - 04/07/1395</b></font></font><font size="3" face="Mihan-Nassim"><span style="font-size:12px; "><span style="box-sizing: border-box; color: rgb(255, 0, 0); "><span style="box-sizing: border-box; "><br></span></span></span></font><div align="center"><font color="#006600"><b><font size="3" face="Mihan-Nassim"><span style="font-size:12px; "><span style="box-sizing: border-box;"><span style="box-sizing: border-box; ">*صلوات*</span></span></span></font></b></font><br><font size="3" face="Mihan-Nassim"><span style="font-size:12px; "><span style="box-sizing: border-box; color: rgb(255, 0, 0); "><span style="box-sizing: border-box; "></span></span></span></font></div><div align="center"><p style="text-align: center;"><strong><span style="line-height: 115%; font-size: 8pt; " lang="FA">* این پست تقدیم به روح آسمانی و پر آوازه شهدای مدافع حرم&nbsp; به ویژه <span style="COLOR: rgb(255,0,0)">شهید</span>&nbsp;<span style="COLOR: rgb(0,153,0)"> </span></span></strong><strong><span style="line-height: 115%; font-size: 8pt; " lang="FA"><span style="COLOR: rgb(0,153,0)">رحیم كابلی</span>*</span></strong></p></div><div align="center"><font color="#FF0000"><span style="background-color: rgb(255, 255, 204);"><b>كانال تلگرام آفتاب ولایت @ <font size="3" face="times new roman,times,serif">AftabVelayat</font><br></b></span></font></div><br></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+	<br><br>			طبقه بندی: <a href="http://aftabvelayat.mihanblog.com/post/category/30">
+			مهمانی خدا</a>، <a href="http://aftabvelayat.mihanblog.com/post/category/34">
+			ائمه معصومین(ع)</a>، <a href="http://aftabvelayat.mihanblog.com/post/category/28">
+			خواندنی</a>، <a href="http://aftabvelayat.mihanblog.com/post/category/23">
+			قرآن</a>، <br>										برچسب ها:
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D9%85%D8%AD%D8%B1%D9%85" >محرم</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/moharam" >moharam</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/lpvl" >lpvl</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A2%D9%81%D8%AA%D8%A7%D8%A8%20%D9%88%D9%84%D8%A7%DB%8C%D8%AA" >آفتاب ولایت</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%AD%D8%B3%DB%8C%D9%86" >امام حسین</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%AD%D8%B1" >حر</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/Moharam95" >Moharam95</a>، 
+												  <!--start with themeviews.ir like code --->
+					<br><div><script>mihanblogPostLike('447','like')</script></div>
+                <style>
+                    .text100 , .text100 a{color:#FFF; font-size:11pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                    .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                    .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                    .com{ width:570px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px auto; padding:0 0 10px 0;}
+                    .com1{ width:552px; float:left; background:#474747; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                    .com3{ width:315px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                    .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                    .com4{ width:532px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:15px;}
+                    .com5{ width:532px; float:left; background:#f5f0e7; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:14px;}
+                    .com6{ width:542px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                    .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+                    .comment_form .comment_form_msg {background: none repeat scroll 0 0 #F6F6F6;border: 1px solid #E6E6E6; margin: 5px;    padding: 5px;}
+                </style>
+									
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ یکشنبه 4 مهر 1395 ] [ 12:35 ] [ <a href="http://aftabvelayat.mihanblog.com/post/author/967804">
+	صیاد دل ها </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(447)">
+	نظرات <script>setCommentCnt(447)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://aftabvelayat.mihanblog.com/post/446">به استقبال غدیر می‌رویم ...</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+
+
+<br><div align="center"><img src="../file.mihanblog.com/public/user_data/user_files/375/1124588/kLkOjKhWCdKdtrePqATiVDKbmppoII2kqOSvSctJXdwdlgQwY7UyIw.jpg" alt="" height="753" align="bottom" border="0" hspace="0" vspace="0" width="409"></div><br><br><font face="Mihan-Nassim" size="4"><font color="#990000"><b>شهید سید مرتضی آوینی</b></font><br>
+<br>
+یزیدیان می‌پنداشتند که ندای <font color="#FF0000">«هل من ناصر»</font> سیدالشهدا (علیه السلام) در 
+صحرای کربلا مدفون خواهد شد، غافل که حیات تاریخی انسان از خون شهید است و 
+خداوند خمیره‌ی <font color="#FF0000">وجود مؤ‌منین را از خاک کربلا </font>و خون شهدایش سرشته است و تا 
+شب و روز باقی است، این پیوند تاریخی که مؤ‌منین را به عاشورا پیوند می‌دهد
+ در عمق فطرت‌ها بیدار خواهد ماند.<br>
+<font color="#009900">برخیز برادر...</font><br>&nbsp;برخیز ، قافله‌ی <font color="#CC0000">کربلا</font> روانه است <br>&nbsp;آواز جرس که از باطن ملکوتی
+ انسان بر می‌آید، <font color="#FF0000">عشاق حرم را فرا می‌خواند</font>. <br>اما برادر، می‌دانی؟ <br><font color="#FF0000"><b>حُب حسین
+ در دلی بیدار می‌شود که از خود و آنچه دوست دارد در راه خدا گذشته باشد.</b></font><br><br></font><p style="text-align: center;"><span style="color: #339966;"><strong>سری سبز و زبانی سرخ دارم</strong></span><br><span style="color: #339966;"><strong>قلم باشد به کف چون ذوالفقارم</strong></span></p>
+
+<p style="text-align: center;"><strong>به نفس ارم به عشق ناب مولا</strong><br><strong>زنم دم از تولی و تبری</strong></p>
+
+<p style="text-align: center;"><span style="color: #339966;"><strong>علی سر نهان و اشکار است</strong></span><br><span style="color: #339966;"><strong>خدایی ناز شست کردگار است</strong></span></p>
+
+<p style="text-align: center;"><strong>علی تسبیح و تکبیر و قیام است</strong><br><strong>علی هم رکعتین و هم سلام است</strong></p><p style="text-align: center;"><font size="2"><b>فقط حیـــــــ♥ـــــدر امیرالمومنین است</b></font></p><p style="text-align: center;"><strong><br></strong></p><div align="right"><font color="#FF0000" size="2"><b>پی نوشت:</b></font><font face="Mihan-Nassim" size="2"><font color="#FF0000"><b><font size="3">&nbsp;</font></b></font> متنی كه از شهید آوینی در بالا خواندید برگرفته از&nbsp;<font color="#FF6600"><b> </b></font></font><font face="Mihan-Nassim" size="4"><font size="2"><font color="#FF6600"><b>
+کتاب گنجینه آسمانی ص 39 </b></font>می باشد.<br></font></font><font color="#FF0000"><span style="background-color: rgb(255, 255, 204);"><b>كانال تلگرام آفتاب ولایت @aftabvelayat</b></span></font><br><br></div><p style="text-align: center;"><strong><span style="line-height: 115%; font-size: 8pt; " lang="FA">* این پست تقدیم به روح آسمانی و پر آوازه شهدای مدافع حرم&nbsp; به ویژه <span style="COLOR: rgb(255,0,0)">شهید</span>&nbsp;<span style="COLOR: rgb(0,153,0)"> </span></span></strong><strong><span style="line-height: 115%; font-size: 8pt; " lang="FA"><span style="COLOR: rgb(0,153,0)">حسین مشتاقی</span>*</span></strong></p><br>
+
+
+
+
+
+
+
+
+<br>
+	<br><br>			طبقه بندی: <a href="http://aftabvelayat.mihanblog.com/post/category/36">
+			بسیج</a>، <a href="http://aftabvelayat.mihanblog.com/post/category/34">
+			ائمه معصومین(ع)</a>، <a href="http://aftabvelayat.mihanblog.com/post/category/33">
+			جنگ نرم</a>، <a href="http://aftabvelayat.mihanblog.com/post/category/28">
+			خواندنی</a>، <a href="http://aftabvelayat.mihanblog.com/post/category/32">
+			شهدا</a>، <a href="http://aftabvelayat.mihanblog.com/post/category/27">
+			مناسبت ها</a>، <br>										برچسب ها:
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%B9%DB%8C%D8%AF%20%D8%BA%D8%AF%DB%8C%D8%B1" >عید غدیر</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%B9%D8%A7%D8%B4%D9%88%D8%B1%D8%A7" >عاشورا</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/ashura" >ashura</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/shie" >shie</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A2%D9%81%D8%AA%D8%A7%D8%A8%20%D9%88%D9%84%D8%A7%DB%8C%D8%AA" >آفتاب ولایت</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D9%BE%D8%A7%DB%8C%DA%AF%D8%A7%D9%87%20%D8%A8%D8%B3%DB%8C%D8%AC%20%D8%B3%D8%A7%D8%B1%DB%8C" >پایگاه بسیج ساری</a>، 
+												  <!--start with themeviews.ir like code --->
+					<br><div><script>mihanblogPostLike('446','like')</script></div>
+                <style>
+                    .text100 , .text100 a{color:#FFF; font-size:11pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                    .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                    .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                    .com{ width:570px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px auto; padding:0 0 10px 0;}
+                    .com1{ width:552px; float:left; background:#474747; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                    .com3{ width:315px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                    .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                    .com4{ width:532px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:15px;}
+                    .com5{ width:532px; float:left; background:#f5f0e7; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:14px;}
+                    .com6{ width:542px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                    .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+                    .comment_form .comment_form_msg {background: none repeat scroll 0 0 #F6F6F6;border: 1px solid #E6E6E6; margin: 5px;    padding: 5px;}
+                </style>
+									
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ پنجشنبه 25 شهریور 1395 ] [ 08:22 ] [ <a href="http://aftabvelayat.mihanblog.com/post/author/967804">
+	صیاد دل ها </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(446)">
+	نظرات <script>setCommentCnt(446)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://aftabvelayat.mihanblog.com/post/445"> آخرین گلوله صیاد</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+
+
+<div align="center"><img src="../file.mihanblog.com/public/user_data/user_files/375/1124588/95/5.jpg" alt="" height="157" vspace="0" width="410" align="bottom" border="0" hspace="0"></div><font face="Mihan-Nassim" size="3"><br><font size="2">ناگهان سیاهی  ای از روی بامی بلند شد،راکت 
+انداز به  دوش و انگشت روی ماشه.صیاد امانش ندادو شلیک کرد.مرد نعره کشید و
+ در حال  سقوط به کف کوچه انگشتش روی ماشه رفت و موشک آر.پی .چی به دیوار 
+خانه ای  برخورد کرد و گرد وغبار بلند شد.در یک آن صیاد دید که دهها ضد 
+انقلاب از  روی بام ها به سویشان نشانه رفته اند.نعره صیاد بلند شد:پخش 
+شوید به هیچکس  امان ندهید.<br>صیاد از گوشی بی سیم شنید که پیشروی در سه محور  دیگر به کندی اما به 
+دقت در حال انجام است.نیروهای ایرانی عرصه را بر ضد  انقلاب تنگ کرده 
+بودند.هنوز آفتاب در مغرب به خواب نرفته بود که فریاد  تکبیر و درود بر 
+خمینی از جای جای شهر بلند شد.</font></font><font size="3"><b><font face="Mihan-Nassim"> سنندج آزاد شد.</font></b></font><br><font face="Mihan-Nassim" size="3"><br><font size="2">اولین ماه سال ۷۸ می رفت تا روزهای پایانی خود را به سر انجام برساند اما
+ به یکباره خبری ناگوار،گوارایی سال جدید را از کام همگان گرفت ؛ «صبح 
+امروز </font><font size="2" color="#CC0000">امیر سپهبد علی صیاد شیرازی</font><font size="2">، در مقابل منزل خود و در برابر چشمان 
+فرزندش، مورد اصابت گلوله منافقین قرار گرفت و به درجه رفیع </font><font size="2" color="#990000">شهادت </font><font size="2">نائل آمد
+ .»</font><font size="2"><br></font><br></font><div align="center"><font face="Mihan-Nassim" size="3">امیر سرافراز ایران زمین<br style="box-sizing: border-box; ">
+		سوار خطر نوش <font color="#CC0000">فتح المبین</font><br style="box-sizing: border-box; ">
+		عقاب سفر کرده خاکیان<br style="box-sizing: border-box; ">
+		پرستوی نه بام افلاکیان<br style="box-sizing: border-box; ">
+		ملائک تو را تا خدا برده اند<br style="box-sizing: border-box; ">
+		ز غربت سوی آشنا برده اند<br style="box-sizing: border-box; ">
+		شقایق سرشت و شقایق تبار<br style="box-sizing: border-box; "><font color="#CC0000">
+		حماسی ترین مرد این روزگار</font><br></font></div><p><font face="Mihan-Nassim" size="3">صیاد شیرازی آن زمان که فرمانده نیروی زمینی بود با آن زمان که ستوانی 
+گمنام در لشکر تبریز بود، آن زمان در ستاد کل نیروهای مسلح حضور داشت، هیچ 
+تفاوتی نداشت .<font size="4"><b><font color="#CC0000"> <br></font></b></font></font></p><p align="center"><font face="Mihan-Nassim" size="3"><font size="4"><b><font color="#CC0000">مردی خاكی از جنس آسمان</font></b></font><br></font></p><font face="Mihan-Nassim" size="2"><b><font size="3" color="#CC0000">پی نوشت :</font></b><br>تاکنون ندیدمش اما گاهی اوقات دلم برایش تنگ می شود… .<br>متنی كه در ابتدای پست خواندید&nbsp; قسمتی از <b>کتاب آخرین گلوله صیاد</b> نوشته داوود امیریان بود .<br>و همچنین شعر هم از سروده های <b>آقای پرویز بیگی حبیب‌آبادی</b> بود كه مورد استفاده قرار گرفت .<br><br><font color="#666666"><b>صیاد دلها - 21/1/1395</b></font></font><font face="Mihan-Nassim" size="3"><span style="font-size:12px; "><span style="box-sizing: border-box; color: rgb(255, 0, 0); "><span style="box-sizing: border-box; "><br></span></span></span></font><p style="box-sizing: border-box; margin: 0px 0px 18px; text-align: justify; ">
+		<font face="Mihan-Nassim" size="3"><span style="font-size:12px; "><span style="box-sizing: border-box; color: rgb(255, 0, 0); "><span style="box-sizing: border-box; "><br></span></span></span></font></p><br><p align="center"><strong><span style="line-height: 115%; font-size: 8pt; " lang="FA">* این پست تقدیم به روح آسمانی و پر آوازه شهدا به ویژه <span style="COLOR: rgb(255,0,0)">شهید</span>&nbsp;<span style="COLOR: rgb(0,153,0)"> امیر سپهبد علی صیاد شیرازی</span>*</span></strong></p>
+
+
+
+
+
+
+
+
+<br>
+	<br><br>			طبقه بندی: <a href="http://aftabvelayat.mihanblog.com/post/category/30">
+			مهمانی خدا</a>، <a href="http://aftabvelayat.mihanblog.com/post/category/36">
+			بسیج</a>، <a href="http://aftabvelayat.mihanblog.com/post/category/31">
+			فرهنگی</a>، <a href="http://aftabvelayat.mihanblog.com/post/category/28">
+			خواندنی</a>، <a href="http://aftabvelayat.mihanblog.com/post/category/32">
+			شهدا</a>، <a href="http://aftabvelayat.mihanblog.com/post/category/26">
+			شهید صیاد شیرازی</a>، <a href="http://aftabvelayat.mihanblog.com/post/category/9">
+			خاطرات جبهه</a>، <a href="http://aftabvelayat.mihanblog.com/post/category/8">
+			زندگی نامه شهیدان</a>، <br>										برچسب ها:
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%B4%D9%87%DB%8C%D8%AF%20%D8%B5%DB%8C%D8%A7%D8%AF%20%D8%B4%DB%8C%D8%B1%D8%A7%D8%B2%DB%8C" >شهید صیاد شیرازی</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%B5%DB%8C%D8%A7%D8%AF%20%D8%AF%D9%84%D9%87%D8%A7" >صیاد دلها</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A2%D9%81%D8%AA%D8%A7%D8%A8%20%D9%88%D9%84%D8%A7%DB%8C%D8%AA" >آفتاب ولایت</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A7%D9%81%D8%AA%D8%A7%D8%A8%20%D9%88%D9%84%D8%A7%DB%8C%D8%AA" >افتاب ولایت</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87%20%D8%A7%DB%8C%20%D8%A8%D8%B1%D8%A7%DB%8C%20%D8%B5%DB%8C%D8%A7%D8%AF%20%D8%AF%D9%84%D9%87%D8%A7" >دلنوشته ای برای صیاد دلها</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/htjhf" >htjhf</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/ghdj" >ghdj</a>، 
+												  <!--start with themeviews.ir like code --->
+					<br><div><script>mihanblogPostLike('445','like')</script></div>
+                <style>
+                    .text100 , .text100 a{color:#FFF; font-size:11pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                    .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                    .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                    .com{ width:570px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px auto; padding:0 0 10px 0;}
+                    .com1{ width:552px; float:left; background:#474747; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                    .com3{ width:315px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                    .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                    .com4{ width:532px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:15px;}
+                    .com5{ width:532px; float:left; background:#f5f0e7; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:14px;}
+                    .com6{ width:542px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                    .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+                    .comment_form .comment_form_msg {background: none repeat scroll 0 0 #F6F6F6;border: 1px solid #E6E6E6; margin: 5px;    padding: 5px;}
+                </style>
+									
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ شنبه 21 فروردین 1395 ] [ 16:10 ] [ <a href="http://aftabvelayat.mihanblog.com/post/author/967804">
+	صیاد دل ها </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(445)">
+	نظرات <script>setCommentCnt(445)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://aftabvelayat.mihanblog.com/post/444">ما هم کلی ذوق میکنیم که آقا دارد روشن گری میکند?</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+
+<font face="Mihan-Nassim" size="4"><span style="font-size: medium; color: #ff0000; "><font size="5"><b>پلان اول:</b></font> </span></font><font face="Mihan-Nassim" size="4"><span style="font-size: medium; color: #ff0000; "><img src="../file.mihanblog.com/public/user_data/user_files/375/1124588/95/4.jpg" alt="" height="115" vspace="0" width="467" align="bottom" border="0" hspace="0"></span></font><br><p><font face="Mihan-Nassim" size="2">مختار: میخواهم فرماندهی سپاه را در جنگ با زبیریان خود بر عهدیه بگیرم.<br>کیان: این کار را نکنید امیر<br>مختار: برای چه؟<br>کیان:
+ چون وقتی شما وارد عرصه ی نبرد شوید، دشمن میفهمد که ما برای مقابله با او
+ با تمام قوا به میدان آمده ایم و این روحیه آنها را بالا میبرد[و ضعف ما 
+را نشان میدهد]</font><font face="Mihan-Nassim" size="4"><br></font></p><p><font face="Mihan-Nassim" size="4"><span style="font-size: medium; color: #ff0000; "><b><font size="5">پلان دو:</font></b>&nbsp; <img src="../file.mihanblog.com/public/user_data/user_files/375/1124588/95/2.jpg" alt="" height="118" vspace="0" width="463" align="bottom" border="0" hspace="0"></span></font><br><font face="Mihan-Nassim" size="2">عمار در میانه های جنگ صفین به شهادت میروسد....<br>علی علیه اسلام تنها شده....<br>در میان لشکریان قدم میزند....اشک میریزد و ندا میدهد:«أین عمار؟......أین عمار؟»<br>عمار کجاست؟<br>عمار کجاست تا تنهایی علی را در بین این همه حیله و نیرنگ معاویه و عمروعاص از بین ببرد.....تا وقتی عمار بود، با خطبه ها و روشنگری هایش راه را بر گزافه گویی های سپاه نفاق میبست....<br>اما حالا....</font><font face="Mihan-Nassim" size="4"><br></font><font face="Mihan-Nassim" size="4"><br><span style="font-size: medium; color: #ff0000; "><font size="5"><b>پلان سه:</b></font>&nbsp; </span></font><font face="Mihan-Nassim" size="4"><span style="font-size: medium; color: #ff0000; "><img src="../file.mihanblog.com/public/user_data/user_files/375/1124588/95/3.jpg" alt="" height="146" vspace="0" width="471" align="bottom" border="0" hspace="0"></span></font><font face="Mihan-Nassim" size="4"><br></font><font face="Mihan-Nassim" size="2">چند سال قبل حضرت آقا حمله دشمن را اعلام میکنند....<br>حمله فرهنگی...<br>ناتو فرهنگی...<br>شبیخون فرهنگی....<br>همه را میگوید اما ما فقط نگاه میکنیم.....</font><font face="Mihan-Nassim" size="4"><br><font color="#CC0000"><span style="font-size: medium; ">کار به جایی میرسد که ندای«أین عمار» اش به آسمان میرود....اما باز هم فقط نگاه میکنیم</span></font><br></font><font face="Mihan-Nassim" size="2">حالا خودش یک تنه به میدان میآید.....<br>حرف های اشتباه همه&nbsp; را بیان میکند و پاسخ میدهد....<br>برجام دو و سه و چهار........<br>دنیای گفتمان......<br>همه را رد میکند....</font><font face="Mihan-Nassim" size="4"><br><font color="#990000"><span style="font-size: medium; ">ما هم کلی ذوق میکنیم که آقا دارد روشن گری میکند</span></font><br><span style="font-size: medium; ">اما حواسمان نیست</span><br><span style="font-size: medium; "><b><font color="#990000">حواسمان
+ نیست که وقتی «ولی» خودش به میدان آمده یعنی دیگر از وجود «عمار» در بین 
+ما ناامید شده</font></b>.....تنها شده....&nbsp; خودش یک تنه به جنگ میرود.....</span><br><span style="font-size: medium; "><font color="#990000">کاش
+ به جای خوشحالی از حرف های این چند روزه ی حضرت آقا، کمی گریه میکردیم</font> که 
+به خاطر بی حالی و بی عرضگی ما و تنها شدن رهبر، دیگر خودش مجبور است جواب 
+اراجیف نااهلان را بدهد<span style="color: #ff0000; ">....</span></span><br>.<br></font><font face="Mihan-Nassim" size="2">فریاد حسین را شنیدیم همه<br>از کوفه به سوی او دویدیم همه<br>رفتیم به کربلا ولی برگشتیم<br>از شمر امن نامه گرفتیم همه</font><font face="Mihan-Nassim" size="4"><br><br><font color="#CC0000"><span style="font-size: medium; ">بسیجیان و محبان ولایت نگاه و چشم امید رهبری به شماست...</span><br><span style="font-size: medium; ">این عمار..؟؟</span><br><span style="font-size: medium; ">لبیک یاخامنه ای...✌️</span></font></font></p><div align="center"><font face="Mihan-Nassim" size="4">
+
+
+</font></div>
+
+
+
+
+
+<br>
+	<br><br>			طبقه بندی: <a href="http://aftabvelayat.mihanblog.com/post/category/31">
+			فرهنگی</a>، <a href="http://aftabvelayat.mihanblog.com/post/category/33">
+			جنگ نرم</a>، <a href="http://aftabvelayat.mihanblog.com/post/category/28">
+			خواندنی</a>، <a href="http://aftabvelayat.mihanblog.com/post/category/25">
+			امام خامنه ای</a>، <br>										برچسب ها:
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A7%DB%8C%D9%86%20%D8%B9%D9%85%D8%A7%D8%B1" >این عمار</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A2%D9%81%D8%AA%D8%A7%D8%A8%20%D9%88%D9%84%D8%A7%DB%8C%D8%AA" >آفتاب ولایت</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A7%D9%81%D8%AA%D8%A7%D8%A8%20%D9%88%D9%84%D8%A7%DB%8C%D8%AA" >افتاب ولایت</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%B1%D9%87%D8%A8%D8%B1%DB%8C%20%D8%AA%D9%86%D9%87%D8%A7" >رهبری تنها</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D9%85%D8%AE%D8%AA%D8%A7%D8%B1" >مختار</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%AD%D9%85%D9%84%D9%87%20%D9%81%D8%B1%D9%87%D9%86%DA%AF%DB%8C_____%7C(dot)%7C__________%7C(dot)%7C__________%7C(dot)%7C_____%20%D9%86%D8%A7%D8%AA%D9%88%20%D9%81%D8%B1%D9%87%D9%86%DA%AF%DB%8C_____%7C(dot)%7C__________%7C(dot)%7C__________%7C(dot)%7C_____%20%D8%B4%D8%A8%DB%8C%D8%AE%D9%88%D9%86%20%D9%81%D8%B1%D9%87%D9%86%DA%AF%DB%8C" >حمله فرهنگی... ناتو فرهنگی... شبیخون فرهنگی</a>، 
+												  <!--start with themeviews.ir like code --->
+					<br><div><script>mihanblogPostLike('444','like')</script></div>
+                <style>
+                    .text100 , .text100 a{color:#FFF; font-size:11pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                    .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                    .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                    .com{ width:570px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px auto; padding:0 0 10px 0;}
+                    .com1{ width:552px; float:left; background:#474747; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                    .com3{ width:315px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                    .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                    .com4{ width:532px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:15px;}
+                    .com5{ width:532px; float:left; background:#f5f0e7; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:14px;}
+                    .com6{ width:542px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                    .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+                    .comment_form .comment_form_msg {background: none repeat scroll 0 0 #F6F6F6;border: 1px solid #E6E6E6; margin: 5px;    padding: 5px;}
+                </style>
+									
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ پنجشنبه 19 فروردین 1395 ] [ 18:01 ] [ <a href="http://aftabvelayat.mihanblog.com/post/author/967804">
+	صیاد دل ها </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(444)">
+	نظرات <script>setCommentCnt(444)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://aftabvelayat.mihanblog.com/post/443"> سالی که بهارش قدم فاطمه باشد</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+<div align="center"><img src="../file.mihanblog.com/public/user_data/user_files/375/1124588/madar1.jpg" alt="" align="bottom" border="0" height="233" hspace="0" vspace="0" width="407"></div><font size="3" face="Mihan-Nassim"><br>بیستم جمادی الثانی سال پنجم بعثت نور وجود دختری آسمانی، شهر مکه و عالم خلقت را نورباران کرد‎..‏.<br>
+دختری که به گفته حق برای پدر خیر کثیر شد‎…‏<br>
+دختری که آنقدر زیبا دختری کرد که ام ابیها (مادر پدر‏)‏ نام گرفت‎.‏..<br>
+<br>پیامبر مهربانی ها می فرمایند : اگر در نماز مستحبی پدرت تو را خواند ، نماز را قطع نکن و اگر مادرت صدا زد نماز را قطع کن و پاسخ بده.<br><font color="#666666" size="2">
+مستدرک الوسائل و مستنبط المسائل، ج‌15، ص: 181‌</font><br><br></font><div align="center"><font color="#990000"><b><font size="3" face="Mihan-Nassim">می بوسم امشب دست مادر خود را &nbsp;&nbsp; *** &nbsp; به نیابت دست حضرت زهرا(س)<br><br></font></b></font><div align="right"><font color="#666666" size="2"><font face="Mihan-Nassim">صیاد دلها ، 11/1/95</font></font><br></div></div>
+
+<br>
+	<br><br>			طبقه بندی: <a href="http://aftabvelayat.mihanblog.com/post/category/27">
+			مناسبت ها</a>، <a href="http://aftabvelayat.mihanblog.com/post/category/24">
+			پوستر</a>، <br>				<div><script>mihanblogPostLike('443','like')</script></div>
+                <style>
+                    .text100 , .text100 a{color:#FFF; font-size:11pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                    .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                    .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                    .com{ width:570px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px auto; padding:0 0 10px 0;}
+                    .com1{ width:552px; float:left; background:#474747; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                    .com3{ width:315px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                    .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                    .com4{ width:532px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:15px;}
+                    .com5{ width:532px; float:left; background:#f5f0e7; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:14px;}
+                    .com6{ width:542px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                    .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+                    .comment_form .comment_form_msg {background: none repeat scroll 0 0 #F6F6F6;border: 1px solid #E6E6E6; margin: 5px;    padding: 5px;}
+                </style>
+									
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ چهارشنبه 11 فروردین 1395 ] [ 16:25 ] [ <a href="http://aftabvelayat.mihanblog.com/post/author/967804">
+	صیاد دل ها </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(443)">
+	نظرات <script>setCommentCnt(443)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://aftabvelayat.mihanblog.com/post/441"> اقتصاد مقاومتی ، اقدام و عمل</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+
+
+
+
+<div align="center"><img src="../file.mihanblog.com/public/user_data/user_files/375/1124588/sal95.JPG" alt="" align="bottom" border="0" height="145" hspace="0" vspace="0" width="500"><br><br><div align="center"><div align="right"><font size="3" face="Mihan-Nassim"><b>با تبریك فرا رسیدن سال نو خدمت شما همراهان همیشگی آفتاب ولایت </b><br>بار دیگر نام گذاری سال توسط رهبر انقلاب&nbsp; با رنگ و بوی اقتصاد،&nbsp;<font color="#CC0000"> اقتصاد مقاومتی ، اقدام و عمل</font><br>واقعیت این است که <font color="#CC0000">اقتصاد امروز مساله اصلی کشور بوده</font> و اگر اوضاع 
+اقتصادی کشور مناسب باشد، حوزه‌های سیاسی، فرهنگی، اجتماعی و حتی مسائل 
+بین‌المللی نیز سر و سامان خواهد یافت.<br><font color="#009900">مخاطب اقتصاد مقاومتی</font> نه فقط دولت و نه فقط حکومت و قوای سه گانه و ارکان و
+ نهادهای نظام که <font color="#009900">تمام موجودیت ملی و همه مردم</font> و تمام ایرانیان را شامل می 
+گردد.<br><font color="#990000">&nbsp;هر ایرانی</font> در هر کجا که باشد و دارای هر نقش 
+اجتماعی وهر سمت اجرایی که باشد و از نظر سیاسی هر دیدگاه و سلیقه ای که 
+داشته باشد؛ مخاطب اقتصاد مقاومتی و<font color="#990000"> مجری بخشی از اقتصاد مقاومتی</font> شناخته می
+ شود . <br>فرق ایران اسلامی مان&nbsp; با كشورهای&nbsp; لائیک این است که <font color="#CC0000">ما وصل به یک منبع انرژی و روحیه قوی 
+معنوی هستیم</font> <br>و همین روحیه&nbsp; در دوران های مختلف همچون جنگ، علیرغم نداشتن امکانات دشمن،
+ روحیه انقلابی و الهی، توانست کشور را نجات دهد،<br>&nbsp;هم اکنون نیز باید با 
+تکیه بر چنین روحیه‌ای، سیاستهای اقتصاد مقاومتی را پیاده سازی کرد.<br></font><div align="right"><font color="#999999"><b><font size="3" face="Mihan-Nassim">راه ما راه علی تحت فرمان ولی </font><br></b></font></div><div align="right"><font color="#FF6600"><font color="#999999"><b><font size="3" face="Mihan-Nassim">پس بیاییم و از خود شروع كنیم و قدم برداریم در راه اجرای عملی فرمان رهبر و ولی امرمان </font></b></font><br></font></div><font size="3" face="Mihan-Nassim"><font color="#333333" size="2">صیاد دلها - آفتاب ولایت&nbsp; 95/01/02</font><br></font></div><br><br></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+	<br><br>										برچسب ها:
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%20%D9%85%D9%82%D8%A7%D9%88%D9%85%D8%AA%DB%8C" >اقتصاد مقاومتی</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A7%D9%82%D8%AF%D8%A7%D9%85%20%D9%88%20%D8%B9%D9%85%D9%84" >اقدام و عمل</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%B3%D8%A7%D9%84%2095" >سال 95</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A2%D9%81%D8%AA%D8%A7%D8%AA%D8%A8%20%D9%88%D9%84%D8%A7%DB%8C%D8%AA" >آفتاتب ولایت</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A7%D9%81%D8%AA%D8%A7%D8%A8%20%D9%88%D9%84%D8%A7%DB%8C%D8%AA" >افتاب ولایت</a>، 
+												  <!--start with themeviews.ir like code --->
+					<br><div><script>mihanblogPostLike('441','like')</script></div>
+                <style>
+                    .text100 , .text100 a{color:#FFF; font-size:11pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                    .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                    .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                    .com{ width:570px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px auto; padding:0 0 10px 0;}
+                    .com1{ width:552px; float:left; background:#474747; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                    .com3{ width:315px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                    .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                    .com4{ width:532px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:15px;}
+                    .com5{ width:532px; float:left; background:#f5f0e7; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:14px;}
+                    .com6{ width:542px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                    .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+                    .comment_form .comment_form_msg {background: none repeat scroll 0 0 #F6F6F6;border: 1px solid #E6E6E6; margin: 5px;    padding: 5px;}
+                </style>
+									
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ دوشنبه 2 فروردین 1395 ] [ 17:06 ] [ <a href="http://aftabvelayat.mihanblog.com/post/author/967804">
+	صیاد دل ها </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(441)">
+	نظرات <script>setCommentCnt(441)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://aftabvelayat.mihanblog.com/post/440">كانال تلگرام آفتاب ولایت</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+<div align="center"><img src="../file.mihanblog.com/public/user_data/user_files/375/1124588/telegram.jpg" alt="" align="bottom" border="0" height="234" hspace="0" vspace="0" width="410"></div><font size="3" face="Mihan-Nassim"><br></font><div align="center"><br><font size="3" face="Mihan-Nassim"><font size="4">كانال تلگرام آفتاب ولایت </font><br><font size="6" face="wingdings"><b>aftab<font color="#666666">velayat</font>@</b></font><br></font></div><br>
+
+
+
+
+<br>
+	<br><br>										برچسب ها:
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D9%83%D8%A7%D9%86%D8%A7%D9%84%20%D8%AA%D9%84%DA%AF%D8%B1%D8%A7%D9%85%20%D8%A7%D9%81%D8%AA%D8%A7%D8%A8%20%D9%88%D9%84%D8%A7%DB%8C%D8%AA" >كانال تلگرام افتاب ولایت</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A8%D9%87%20%D9%83%D8%A7%D9%86%D8%A7%D9%84%20%D8%AA%D9%84%DA%AF%D8%B1%D8%A7%D9%85%DB%8C%20%D9%85%D8%A7%20%D8%A8%D9%BE%DB%8C%D9%88%D9%86%D8%AF%DB%8C%D8%AF" >به كانال تلگرامی ما بپیوندید</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A2%D9%81%D8%AA%D8%A7%D8%A8%20%D9%88%D9%84%D8%A7%DB%8C%D8%AA" >آفتاب ولایت</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D9%88%D9%84%D8%A7%DB%8C%D8%AA" >ولایت</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A7%D9%81%D8%AA%D8%A7%D8%A8%20%D9%88%D9%84%D8%A7%DB%8C%D8%AA" >افتاب ولایت</a>، 
+												  <!--start with themeviews.ir like code --->
+					<br><div><script>mihanblogPostLike('440','like')</script></div>
+                <style>
+                    .text100 , .text100 a{color:#FFF; font-size:11pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                    .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                    .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                    .com{ width:570px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px auto; padding:0 0 10px 0;}
+                    .com1{ width:552px; float:left; background:#474747; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                    .com3{ width:315px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                    .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                    .com4{ width:532px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:15px;}
+                    .com5{ width:532px; float:left; background:#f5f0e7; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:14px;}
+                    .com6{ width:542px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                    .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+                    .comment_form .comment_form_msg {background: none repeat scroll 0 0 #F6F6F6;border: 1px solid #E6E6E6; margin: 5px;    padding: 5px;}
+                </style>
+									
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ شنبه 29 اسفند 1394 ] [ 09:24 ] [ <a href="http://aftabvelayat.mihanblog.com/post/author/967804">
+	صیاد دل ها </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(440)">
+	نظرات <script>setCommentCnt(440)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://aftabvelayat.mihanblog.com/post/439"> اینجا ایران،امن ترین کشور حال حاضر منطقه</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+
+
+
+<div align="center"><font size="3" face="Mihan-Nassim">
+
+</font><img src="../file.mihanblog.com/public/user_data/user_files/375/1124588/amniyat.JPG" alt="" align="bottom" border="0" height="416" hspace="0" vspace="0" width="358"></div><font size="3" face="Mihan-Nassim"><br>اینجا ایران است،<font color="#CC0000">امن ترین کشور</font> منطقه<br>کشوری چهارفصل با منابع طبیعی و جاذبه های گردشگری فراوان که چشم هر میهمانی را خیره میکند.<br>حال باید به دو سو بنگریم <br>&nbsp;حفظ<font color="#CC0000"> آرمان های انقلاب</font> و شهدا&nbsp; <br>&nbsp;توجه و هشیاری نسبت به <font color="#CC0000">توطئه دشمنان</font> و بدخواهان ایران اسلامی مان<br>حالا كه نیمی از راه اقتدار ایران را كه<font color="#CC0000"> امنیت</font> و آرامش و قدرت دفاع كشور است با صلابت پیموده ایم و همچنان ادامه خواهیم داد<br>حالا باید&nbsp; قدمها را&nbsp; در راه پیشرفت &nbsp;<font color="#CC0000"> اقتصاد</font> ، فن آوری و توسعه كشور با توجه به فرامین رهبر فرزانه&nbsp; بلند تر و استوار تر سازیم <br>تا اثبات كنیم جوانان امروز این مرز و بوم همان رزمندگان جبهه های جنگ اند ،&nbsp; اینبار در سنگر اقتصاد و فن آوری و توسعه كشور <br><font size="2">صیاد دلها - وبلاگ آفتاب ولایت</font><br><br><font color="#CC0000"><b>پی نوشت :</b></font><br>در زیر لینك&nbsp; ویدیویی زیبا از&nbsp; خبرگزاری تسنیم با عنوان <a href="http://www.aparat.com/v/doCO8" target="_blank" title="">مهمترین جملات رهبر انقلاب در سال 1394</a> قرار میدم، امیدوارم استفاده ببرید. </font><br><font size="3"><font face="Mihan-Nassim">برای مشاهده ویدئو&nbsp; <font color="#990000" size="4"><b><a href="http://www.aparat.com/v/doCO8" target="_blank" title="">اینجا </a></b></font>كلیك كنید. <br></font></font><div align="right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.aparat.com/v/doCO8" target="_blank" title=""><img src="../file.mihanblog.com/public/user_data/user_files/375/1124588/film.JPG" alt="" align="bottom" border="0" height="51" hspace="0" vspace="0" width="51"></a></div> <br>
+
+
+
+<br>
+	<br><br>										برچسب ها:
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A7%D9%81%D8%AA%D8%A7%D8%A8%20%D9%88%D9%84%D8%A7%DB%8C%D8%AA" >افتاب ولایت</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%20%D9%85%D9%82%D8%A7%D9%88%D9%85%D8%AA%DB%8C" >اقتصاد مقاومتی</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A7%D9%85%D9%86%DB%8C%D8%AA%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86" >امنیت ایران</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A2%D9%81%D8%AA%D8%A7%D8%A8%20%D9%88%D9%84%D8%A7%DB%8C%D8%AA%20%D8%B3%D8%A7%D8%B1%DB%8C" >آفتاب ولایت ساری</a>، 
+													<a href="http://aftabvelayat.mihanblog.com/post/tag/%D8%A7%D9%85%D9%86%20%D8%AA%D8%B1%DB%8C%D9%86%20%DA%A9%D8%B4%D9%88%D8%B1%20%D9%85%D9%86%D8%B7%D9%82%D9%87" >امن ترین کشور منطقه</a>، 
+												  <!--start with themeviews.ir like code --->
+					<br><div><script>mihanblogPostLike('439','like')</script></div>
+                <style>
+                    .text100 , .text100 a{color:#FFF; font-size:11pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                    .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                    .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                    .com{ width:570px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px auto; padding:0 0 10px 0;}
+                    .com1{ width:552px; float:left; background:#474747; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                    .com3{ width:315px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                    .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                    .com4{ width:532px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:15px;}
+                    .com5{ width:532px; float:left; background:#f5f0e7; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:14px;}
+                    .com6{ width:542px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                    .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+                    .comment_form .comment_form_msg {background: none repeat scroll 0 0 #F6F6F6;border: 1px solid #E6E6E6; margin: 5px;    padding: 5px;}
+                </style>
+									
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ چهارشنبه 26 اسفند 1394 ] [ 20:58 ] [ <a href="http://aftabvelayat.mihanblog.com/post/author/967804">
+	صیاد دل ها </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(439)">
+	نظرات <script>setCommentCnt(439)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+
+			
+<center><b><font color="#3f3f3f" size="1">.:</font></b><span style="text-decoration: none"><a target="_blank" href="http://www.salehon.ir">
+
+<font style="FONT-SIZE: 8pt" color="#666666"> Weblog Themes By</font>
+
+<b>
+
+<font class=text5 size="1"><font color="#B81B1F">Saleho</font><font color="#666666">n.ir</font></font></b></a></span><font class=text5 size="1"> </font><b><font color="#3f3f3f" size="1">
+:.</font></b><p dir="rtl"><a href="http://salehon.ir/">
+<font size="1" color="#0F79C8"><b>هرگونه تغیر در قالب و حذف لوگو و لینک سازنده 
+قالب از نظر قانونی ممنوع و از نظر شرعی حرام می باشد!</b></font><font color="#0F79C8"><b><font size="1">
+</font>
+
+</b><font size="1"></a></font></font></a></p>
+</center>
+
+<marquee>
+تمامی حقوق مطالب برای آفتاب ولایت محفوظ می باشد   
+</marquee>
+
+<a href="index.html" target="_blank"><img src="http://s1.picofile.com/file/7310925585/4.gif" alt="محل لوگوی شما" </a>
+    </marquee>
+
+
+
+</div>
+<style>.pging {    direction:rtl;    font-size:1.2em;    height:30px;    margin:40px 0 0;    color:#000000;    padding-bottom: 20px;    text-align: center;}
+.pging a:link, .pging a:visited {border:1px solid #666666;  color:#B81B1F;  display:inline-block;    margin:0 3px;    padding:1px 5px;    text-decoration:none;}
+.pging a:hover, .pging a:active {    color:#000000;}.pging a.current:link, .pging a.current:visited {    background-color:#000000;    border:1px solid #666666;    color:red;    cursor:text;}</style> <div class=pging>
+<p align="center"><font face="Tahoma" style="font-size: 9pt">
+			تعداد کل صفحات : 45 ::     			<a href="http://aftabvelayat.mihanblog.com/page/1">
+			<b>1</b></a>  			<a href="http://aftabvelayat.mihanblog.com/page/2">
+			<span>2</span></a>  			<a href="http://aftabvelayat.mihanblog.com/page/3">
+			<span>3</span></a>  			<a href="http://aftabvelayat.mihanblog.com/page/4">
+			<span>4</span></a>  			<a href="http://aftabvelayat.mihanblog.com/page/5">
+			<span>5</span></a>  			<a href="http://aftabvelayat.mihanblog.com/page/6">
+			<span>6</span></a>  			<a href="http://aftabvelayat.mihanblog.com/page/7">
+			<span>7</span></a>  			<a href="http://aftabvelayat.mihanblog.com/page/8">
+			<i>...</i></a>  <br><br></div>
+</font></p></div></td>
+
+<td width="220" valign="top">	
+
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>			
+<b>درباره پایگاه</b></div></div>
+<div class=CenterSid><div class=li-Sid2>  <p align="center">
+<img src="../static.mihanblog.com/public/user_data/web_photo/375/1124588.jpg@9815"  /><br>فرازی از وصیت نامه شهید صیاد شیرازی :<br />
+پروردگارا رفتن در دست توست ، من نمی دانم چه موقع خواهم رفت ولی میدانم که از تو باید بخواهم مرا در رکاب امام زمانم قرار بدهی و آن قدر با دشمنان قسم خورده دینت بجنگم تا به فیض شهادت برسم.<br />
+.....................☫.........................<br />
+این وبلاگ با همت شورای فاوا  و بسیجیان  پایگاه مقاومت بسیج شهید امیر سپهبد علی صیاد شیرازی شهرستان ساری در راستای ارتقاء سطح فرهنگی با توجه به فرامین مقام معظم رهبری با نگرش مهندسی فرهنگی در جهت مقابله با عملیات روانی و جنگ نرم گام برداشته ،  امید است موجب رضایت خداوند منان و ولی عصر امام زمان (عج) و همه عاشقان ولایت قرار بگیرد. <br />
+  ......................☫........................<br />
+توجه : درج نام وبلاگها در لیست پیوندهای وبلاگ لزوما به منزله تایید محتوای آن نیست.<br />
+.........................☫.....................<br />
+این وبلاگ در تاریخ 1391/10/15 به خیل همسنگران جنگ نرم پیوسته است . <br />
+.........................☫.....................<br />
+آفتاب ولایت آماده تبادل لینک و لوگو با سایت ها و وبلاگ های مذهبی می باشد . برای تبادل لینک در قسمت (تماس با ما) پیام بگذارید . <br />
+.........................☫.....................<br />
+در ضمن ، هرگونه اظهار نظر و یا مطلبى ضد نظام جمهوری اسلامی ایران ، ولایت فقیه ، حضرت امام خامنه اى و ... ،هیچ ارتباطی به این وبلاگ ندارد و  قطعا ً توطئه ى دشمن میباشد.<br />
+.........................☫.....................<br />
+با تشکر از حضورتان ؛ با نظرات و انتقادات سازنده  ما را در هر چه پویا تر کردن آفتاب ولایت یاری نمایید .<br />
+.........................☫.....................<br />
+             یا علی علیه اسلام </p></div></div>
+<div class=LowSid></div></div>
+
+
+
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آرشیو مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1395/7"> مهر 1395 ، 
+1 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1395/6"> شهریور 1395 ، 
+1 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1395/1"> فروردین 1395 ، 
+4 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1394/12"> اسفند 1394 ، 
+3 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1393/5"> مرداد 1393 ، 
+1 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1393/3"> خرداد 1393 ، 
+10 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1393/2"> اردیبهشت 1393 ، 
+12 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1393/1"> فروردین 1393 ، 
+12 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1392/12"> اسفند 1392 ، 
+7 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1392/11"> بهمن 1392 ، 
+11 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1392/10"> دی 1392 ، 
+15 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1392/9"> آذر 1392 ، 
+5 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1392/8"> آبان 1392 ، 
+9 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1392/7"> مهر 1392 ، 
+13 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1392/6"> شهریور 1392 ، 
+8 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1392/5"> مرداد 1392 ، 
+16 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1392/4"> تیر 1392 ، 
+16 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1392/3"> خرداد 1392 ، 
+32 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1392/2"> اردیبهشت 1392 ، 
+35 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1392/1"> فروردین 1392 ، 
+46 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1391/12"> اسفند 1391 ، 
+39 </a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/post/archive/1391/11"> بهمن 1391 ، 
+24 </a></div></div>
+<div class=LowSid></div></div>
+
+
+
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>صفحات جانبی</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/extrapage/15">توصیه های مقام معظم رهبری به وبلاگ نویسان</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/extrapage/34">صیاد شیرازی از نگاه دیگران</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/extrapage/35">آلبوم تصاویر شهید صیاد شیرازی</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/extrapage/32">دانلود کتاب شهید صیاد شیرازی</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/extrapage/33">ماجرای ازدواج شهید صیاد شیرازی</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/extrapage/36">یادداشت شهید صیاد در بعد از رحلت امام</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/extrapage/11">شهید امیر سپهبد علی صیاد شیرازی + تصاویر</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/extrapage/10">زندگی نامه شهید امیر سپهبد علی صیاد شیرازی</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/extrapage/37">پیام حضرت‌آیت‌الله خامنه‌ای در شهادت سپهبد صیاد‌شیرازی</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/extrapage/38">کتاب در کمین گل سرخ، زندگی امیر شهید علی صیاد شیرازی + دانلود</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/extrapage/7">بصیرت + شعر بسیار زیبا</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/extrapage/41">تصاویر مذهبی زیبا سازی وبلاگ</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/extrapage/12">بیانات رهبر انقلاب در دیدار جمعى از بسیجیان و فعالان طرح شجره‌ى طیبه‌ى «صالحین»</a></div><div class=li-Sid>
+<a href="http://aftabvelayat.mihanblog.com/extrapage/40">عکس های منتخب ارسالی به مسابقه عکس حماسه حضور ویژه دهه فجر 91</a></div></div>
+<div class=LowSid></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>امکانات وب</b></div></div>
+
+<div class=CenterSid>
+<center>
+
+<!-- BEGINNING OF sayberi174.ir -->
+<center><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="170" height="189"><param name="movie" value="http://sayberi174.ir/flash/Gordan/play/Gordan.swf"><param name="quality" value="high"><param name="bgcolor" value="#ffffff">
+<embed src="http://sayberi174.ir/flash/Gordan/play/Gordan.swf"  quality="high" type="application/x-shockwave-flash" width="170" height="189"
+bgcolor="#ffffff"></embed></object></center>
+<!-- BEGINNING OF sayberi174.ir  -->
+
+
+<font face="Tahoma" style="font-size: 8pt" color="#666666"><center>
+<marquee>
+  پایگاه مقاومت شهید صیاد شیرازی شهرستان ساری
+</marquee> 
+
+
+
+<!--------تماس با ما  --------------->
+
+<!--------تماس با ما  --------------->
+
+<!----------هدایت به بالا  --------------->
+<!-- Goto Top by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/top-page/jquery.min.js"></script><script>var abzar = "<img src=http://1abzar.ir/abzar/tools/top-page/top10.png />";</script><script type="text/javascript" src="http://1abzar.ir/abzar/tools/top-page/scrolltopcontrol.js"></script><div style="display:none"><h1><a href="http://www.1abzar.com">ابزار هدایت به بالای صفحه</a></h1></div>
+<!-- Goto Top by www.1abzar.com --->
+<!----------هدایت به بالا  --------------->
+
+
+<!-- Begin ParSToOls.com Counter --><script language="javascript" src="http://www.parSToolS.com/counter/?type=0&url=آدرس وبلاگ شما"></script><!-- End Counter -->
+
+
+
+<!---------- کد بارش --------------->
+
+
+<!---------- کد بارش --------------->
+
+<!---------- نوای وبلاگ --------------->
+
+<!---------- نوای وبلاگ --------------->
+
+<!---------- پیج رنک --------------->
+
+<!---------- پیج رنک --------------->
+<!---------- کد موس --------------->
+
+<!---------- کد موس --------------->
+<P align=center><EMBED
+src=http://flashmanavi.persiangig.com/shomareshgar/gheybat1.swf
+width=150 height=250 type=application/x-shockwave-flash
+wmode="transparent"></P>
+
+
+
+
+
+
+<P align=center><EMBED
+src=http://flashmanavi.persiangig.com/clock2/yasaheb.swf
+width=145 height=145 type=application/x-shockwave-flash
+wmode="transparent"></P>
+
+
+</center></font></div>
+<div class=LowSid></div></div>
+
+
+
+
+
+
+
+<div id=rightmenu>
+<div class=TopSid>
+<div class=TopSid2>
+<b>شهدای پایگاه</b></div></div>			
+<div class=CenterSid><cb:loop_blog_category><div class=li-Sid>	
+
+
+<a href="index.html#" target="_blank"><img src="../static.mihanblog.com/public/user_data/user_files/375/1124588/paygagsohada/sahidsadegi.jpg" alt="شهید صادقی " height="250" width="165"></a>
+    </marquee>
+
+
+<a href="index.html#" target="_blank"><img src="../static.mihanblog.com/public/user_data/user_files/375/1124588/paygagsohada/4.jpg" alt="شهید محمد مهدی آبیان" height="250" width="165"></a>
+    </marquee>
+
+<a href="index.html#" target="_blank"><img src="../static.mihanblog.com/public/user_data/user_files/375/1124588/paygagsohada/5.jpg" alt="شهید حامد سروی" height="250" width="165"></a>
+    </marquee>
+
+<a href="index.html#" target="_blank"><img src="../static.mihanblog.com/public/user_data/user_files/375/1124588/paygagsohada/6.jpg" alt="شهید صفری" height="250" width="165"></a>
+    </marquee>
+
+<a href="index.html#" target="_blank"><img src="../static.mihanblog.com/public/user_data/user_files/375/1124588/paygagsohada/7.jpg" alt="شهید نصرا... آبیان" height="250" width="165"></a>
+    </marquee>
+
+<a href="index.html#" target="_blank"><img src="../static.mihanblog.com/public/user_data/user_files/375/1124588/paygagsohada/8.jpg" alt="شهید عابد سروی" height="250" width="165"></a>
+    </marquee>
+
+<a href="index.html#" target="_blank"><img src="../static.mihanblog.com/public/user_data/user_files/375/1124588/paygagsohada/sahidizadtalab.jpg" alt="شهید ایزدطلب" height="250" width="165"></a>
+    </marquee>
+
+</center></marquee></body>
+</html>
+
+
+[cb:blog_category_post_count] </a></div></cb:loop_blog_category></div>
+<div class=LowSid></div></div>
+</cb:block_blog_category>
+
+
+
+<div id=rightmenu>
+<div class=TopSid>
+<div class=TopSid2>
+<b>نماز حاجت</b></div></div>			
+<div class=CenterSid><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+6 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+50 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+13 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+9 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+35 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+32 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+9 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+54 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+26 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+5 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+7 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+19 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+22 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+5 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+13 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+9 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+46 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+6 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+11 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+12 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+7 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+14 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+9 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+18 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+22 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+57 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+8 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+2 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+10 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+6 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+30 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+16 </a></div><div class=li-Sid>				
+<center><a target="_blank" href="http://ishia.blogfa.com/page/namazehajat" ><img alt="نماز حاجت" src="http://ishia.persiangig.com/image/2a/postit.jpg" width="170" height="250" border="0px"></a></center>
+
+12 </a></div></div>			
+<div class=LowSid></div></div>
+
+
+
+
+
+</td></tr>
+
+<tr><td width="1000" colspan="3" id="footer-WS">
+[    <a href="http://www.weblogskin.com"target="_blank">فالب وبلاگ</a> : 
+<a target="_blank" href="http://www.salehon.ir">صالحون</a>] [  
+<a target="_blank" href="http://www.salehon.ir">Weblog Themes By :
+<font color="#800000">salehon.ir</font> </a>]  	
+</td></tr></table></div>
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'aftabvelayat.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

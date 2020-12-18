@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://ahmad-miri.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('بیست و دوم آذر 99');
+		/*1127951*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[140]='7';commentCnt[141]='4';commentCnt[143]='1';commentCnt[144]='4';commentCnt[145]='2';commentCnt[146]='0';commentCnt[147]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[140]='31';
+mihanblogDisLikeArrCnt[140]='1';
+mihanblogLikeArrCnt[141]='18';
+mihanblogDisLikeArrCnt[141]='2';
+mihanblogLikeArrCnt[143]='9';
+mihanblogDisLikeArrCnt[143]='6';
+mihanblogLikeArrCnt[144]='21';
+mihanblogDisLikeArrCnt[144]='3';
+mihanblogLikeArrCnt[145]='18';
+mihanblogDisLikeArrCnt[145]='3';
+mihanblogLikeArrCnt[146]='7';
+mihanblogDisLikeArrCnt[146]='2';
+mihanblogLikeArrCnt[147]='110';
+mihanblogDisLikeArrCnt[147]='14';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://ahmad-miri.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://ahmad-miri.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','126');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','بیست و سوم تیر 95');
+	
+	setStatVar('today_view','121');
+	setStatVar('yesterday_view','207');
+	
+	setStatVar('this_month_view','5676');
+	setStatVar('last_month_view','8296');
+
+	setStatVar('total_view','1921144');
+	setStatVar('last_view_date','بیست و دوم آذر 99 (14:45)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://ahmad-miri.mihanblog.com/statupdate/?data[refereruri]=http://revaagh.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607772716&data[hash]=f3b28dce8c17986e0f9b00d258741c77&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://ahmad-miri.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://ahmad-miri.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://ahmad-miri.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://ahmad-miri.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://ahmad-miri.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://ahmad-miri.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://ahmad-miri.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://ahmad-miri.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://ahmad-miri.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://ahmad-miri.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://ahmad-miri.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://ahmad-miri.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://ahmad-miri.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://ahmad-miri.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://ahmad-miri.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://ahmad-miri.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+
+<html><head>
+<meta name="google-site-verification" content="njIhHe_pEF1utk-jKp-kkfVU-SNtZoPjGvlpDPdMLkM" />
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>وبلاگ شخصی احمد میری</title>
+<h2><meta name="description" content="احمد میری،احمدمیری،ahmad miri،ahmadmiri،نرم افزار،software،آموزش نرم افزار،learn software،یادگیری آسان نرم افزار،learn easy software،دانلود آخرین نسخه نرم افزار،دانلود نرم افزار،download software،download new version software،یادگیری آسان کامپیوتر"></h2>
+<h3><meta name="keywords" content="وبلاگ شخصی احمد میری،احمد میری،ahmad miri"></h3>
+<meta content="fa" http-equiv="Content-Language">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Language" content="fa-IR">
+<meta http-equiv="Cache-Control" content="PUBLIC">
+<meta http-equiv="expires" content="never">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="1 days">
+<meta name="geography" content="Iran">
+<meta name="city" content="estahban,استهبان">
+<meta name="language" content="Farsi">
+<meta name="distribution" content="Global">
+<meta name="country" content="Iran">
+<meta name="resource-type" content="document">
+<meta name="author" content="احمد . مــ">
+<link rel="alternate" type="application/rss+xml" title="وبلاگ شخصی احمد میری" href="http://ahmad-miri.mihanblog.com/post/rss/" />
+<link rel="alternate" type="application/atom+xml" title="وبلاگ شخصی احمد میری"  href="http://ahmad-miri.mihanblog.com/post/atom/" />
+<link rel="alternate" type="application/sitemap+xml" title="وبلاگ شخصی احمد میری" href="http://ahmad-miri.mihanblog.com/sitemap.xml" />
+
+<style>
+div[style="border:1px solid #888;position:fixed;left:0px;top:0px;width:120;z-index:9999;background:#FFF;cursor:pointer"]{display:none;}
+*{padding:0px;margin:0px;}
+.header{border-bottom:20px solid #2e4d90;direction:rtl;text-align:right;padding:15px 0px;}
+.header h1{font:150% Mihan-Nassim;color:#2e4d90;margin-right:50px;padding-bottom:10px;display:inline-block;}
+.header a{font:150% Mihan-Nassim;color:#2e4d90;}
+.header a:hover{font:150% Mihan-Nassim;color:#2e4d90;}
+.header h2{font:16px Mihan-Nassim;color:#2e4d90;margin-right:50px;}
+.page{width:990px;margin:0px auto;direction:rtl;text-align:right;background-image:url(../static.mihanblog.com/public/user_data/user_files/376/1127951/theme/middle_bg.png);background-position:center top;background-repeat:repeat-y;font:11px tahoma;}
+.cpost{width:630px;float:right;}
+.topside{height:13px;margin:0px;background-image:url(../static.mihanblog.com/public/user_data/user_files/376/1127951/theme/sidebar_bg.png);background-position:top center;background-repeat:no-repeat;}
+.cside{width:300px;float:right;margin-right:35px;background-color:#2e4d90;padding:10px 5px;}
+.description h4{font:11px tahoma;text-align:justify;color:#fff;line-height:25px;padding:10px 5px;}
+.tside{font:130% Mihan-Nassim;color:#FFF;padding:5px 8px;border-bottom:1px dotted  #fff;margin:20px 0px 15px 0px;}
+.oside1{font:11px tahoma;color:#FFF;padding:7px 25px;background-image:url(../static.mihanblog.com/public/user_data/user_files/376/1127951/theme/line.png);background-position:bottom center;background-repeat:no-repeat;}
+.oside2{font:11px tahoma;color:#FFF;background-image:url(../static.mihanblog.com/public/user_data/user_files/376/1127951/theme/line.png);background-position:bottom center;background-repeat:no-repeat;}
+.oside2:hover{transition:0.3s;background-color:#213d7a;border-radius:5px;}
+.oside3{background-image:url(../static.mihanblog.com/public/user_data/user_files/376/1127951/theme/bullet.png);background-position:right center;background-repeat:no-repeat;padding:7px 10px 7px 7px;margin-right:7px;}
+.oside3 a {color:#fff;text-decoration:none;}
+.oside3 a:hover {color:#fff;text-decoration:none;}
+.oside4{float:left;margin-left:10px;}
+.tagcloud{background-image:url(../static.mihanblog.com/public/user_data/user_files/376/1127951/theme/bg_tag.png);background-repeat:repeat-x;background-position:center;padding:4px 5px;margin:5px 2px;border-radius:1px;color:#666;float:right;box-shadow: 0px 1px 3px -1px rgba(0,0,0,0.75);}
+.tagcloud h3{font:11px tahoma;}
+.tagcloud a {color:#333;text-decoration:none;}
+.tagcloud a:hover {color:#333;text-decoration:none;}
+.bottomside{height:13px;background-image:url(../static.mihanblog.com/public/user_data/user_files/376/1127951/theme/sidebar_bg.png);background-position:bottom center;background-repeat:no-repeat;clear:both;}
+.tpost h2{margin:10px 5px 20px 5px;font:160% Mihan-Nassim;color:#2e4d90;display:inline-block;}
+.post{color:#333;font:11px tahoma;line-height:25px;}
+.post img{max-width:98%;border:1px solid #ccc;margin:0px 10px 5px 10px;padding:1px;}
+.post a {color:#333;text-decoration:none;}
+.post a:hover {transition:.3s;color:#0183E5;}
+.bpost{border-top:1px solid #e3e5ea;border-bottom:1px solid #e3e5ea;font:11px tahoma;color:#666;padding:3px 10px;margin:15px auto;color:#666;}
+.brpost{float:right;padding-top:3px;}
+.blpost{float:left;}
+.plus{border-right:1px solid #e3e5ea;float:right;padding:3px 5px;}
+.rate-up{background: url(../static.mihanblog.com/public/user_data/user_files/376/1127951/theme/icons.png) no-repeat center;height:18px;vertical-align:middle;background-position: 0 -60px;float:right;padding:0px 3px 0px 18px;}
+.rate-down{background: url(../static.mihanblog.com/public/user_data/user_files/376/1127951/theme/icons.png) no-repeat center;height:18px;vertical-align:middle;background-position: 0 -81px;float:right;padding:0px 3px 0px 18px;}
+.date{border-right:1px solid #e3e5ea;float:right;padding:3px 25px 3px 10px;background:url(../static.mihanblog.com/public/user_data/user_files/376/1127951/theme/icons.png) right 3px no-repeat;}
+.comment{border-right:1px solid #e3e5ea;float:right;padding:3px 25px 3px 10px;background:url(../static.mihanblog.com/public/user_data/user_files/376/1127951/theme/icons.png) right -16px no-repeat;}
+.comment a {color:#666;text-decoration:none;}
+.comment a:hover {transition:.3s;color:#333;}
+.cpn{margin:15px auto;display:table;}
+.pn{font:11px Tahoma;padding:5px 10px;margin:5px;color:#666;border:1px solid #e3e5ea;border-radius:3px;float:right;}
+.pn:hover{transition:.3s;background-color:#2e4d90;border:1px solid #2e4d91;color:#fff;}
+.footer{background-color:#2e4d90; padding:10px 20px;font:11px tahoma;color:#fff;direction:rtl;text-align:right;clear:both;}
+.tagmore{margin-top:5px;padding-right:25px;background:url(../static.mihanblog.com/public/user_data/user_files/376/1127951/theme/icons.png)  right -103px no-repeat;}
+.otagmore{float:right;border-right:1px dashed #aaa;padding:2px 7px;margin-bottom:5px;}
+.otagmore h3,a,a:hover{text-decoration:none;font:11px tahoma;color:#666;}
+.mortabet{direction:rtl;	font:11px tahoma;color:#444;text-align:right;line-height:10px;background:#f7f6f0;margin-bottom:5px;padding:10px 10px 10px 11px;border: 1px solid #B7BECC;border-radius: 4px;}
+.tmortabet{font:27px Mihan-Nassim;margin-right:10px;color:#444;padding:10px 25px;background:url(../static.mihanblog.com/public/user_data/user_files/376/1127951/theme/icons.png)  right -204px no-repeat;}
+.gozine{background:#f7f6f0;font:11px tahoma;color:#444;text-align:right;border-radius:4px;padding:7px 20px 7px 10px;	margin:4px;display:block;border: 1px solid #f7f6f1;background:url(../static.mihanblog.com/public/user_data/user_files/376/1127951/theme/icons.png)  right -324px no-repeat;}
+.gozine:hover{background-color:#FFF;border: 1px solid #CCC;color:#444;transition:0.3s;}
+.ctcmt{direction:rtl;font:23px Mihan-Nassim;color:#444;text-align:center;background:#f7f6f0;margin:10px auto;padding:15px 10px;border: 1px solid #B7BECC;border-radius: 4px;}
+.ccmtform{direction:rtl;font:11px tahoma;color:#333;text-align:center;background:#f7f6f0;margin:10px auto;border: 1px solid #B7BECC;border-radius: 4px;}
+.ccmtform form{margin:20px auto;}
+.question{background-color:#f7f7f7;direction:rtl;font:11px tahoma;color:#000;text-align:justify;border:1px solid #B7BECC;border-radius:4px;line-height:20px;margin:10px auto;overflow:hidden;}
+.tquestion{color:#666;background-color:#f0f0f0;padding:5px;line-height:15px;border-bottom:1px solid #ccc;}
+.tquestion a{text-decoration:none;color:#666;}
+.tquestion a:hover{text-decoration:none;color:#333;}
+.reply{background-color:#e5f7ff;direction:rtl;font:11px tahoma;color:#006699;text-align:justify;border:1px solid #87cbff;border-radius:4px;line-height:20px;padding:10px;margin:10px auto;}
+input[type=button], input[type=text], input[type=password], input[type=submit], button, textarea, select, .inputBox, input.text, a.btn, a.btn:hover, a.btn:visited {background-color: white;color: #333;font-size: 1em;padding: 4px;border: 1px solid #CCC;border-radius: 3px;}
+input[type=submit]:hover, input[type=button]:hover, input[type=reset]:hover,a.btn:hover{border-color: #a0a0a0;}
+input[type=submit][disabled], input[type=button][disabled]{border-color: #ddd;color: #888;cursor: default;}
+input[id="private"]{display:none;}
+.comment_form{	direction:rtl;text-align:right;}
+.comment_form_row{padding:5px 70px 5px 0px;}
+#full_name,#email,#web,#body{width:300px;}
+.btn{cursor:pointer;border:1px solid #CCC;color:#444;text-shadow:0 1px 0 #F5F5F5;background:#EEF0F2;padding:5px 25px 6px 25px;margin:1px;}
+.mihanblog_like_border {border: 1px solid #666667;}
+
+
+@media only screen and (max-width:820px) {
+.header{border-bottom:20px solid #2e4d90;text-align:center;}
+.header h1{font:150% Mihan-Nassim;color:#2e4d90;margin-right:0px;padding-bottom:10px;display:inline-block;}
+.header h2{font:16px Mihan-Nassim;color:#2e4d90;margin-right:0px;}
+.page{width:100%;background-image:none;}
+.topside{display:none;}
+.cpost{width:98%;float:none;margin:3px auto}
+#post1 img{width:100%;border:1px solid #ccc;margin:5px auto;padding:1px;display:block;}
+.post img{margin:5px auto;}
+.cside{float:none;width:100%;margin-right:0px;}
+.bottomside{display:none;}
+.date{display:none;}
+.comment{display:none;}
+.plus{border-right:0px solid #e3e5ea;float:right;padding:3px 5px;}
+.mihanblog_like_wrapper{margin:5px auto;display:block;}
+#nazar{display:block;margin:5px auto;width:100%;}
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<a href="index.html"><h1>وبلاگ شخصی احمد میری</h1></a>
+<h2>یادگیری آسان کامپیوتر و نرم افزار های کامپیوتری</h2>
+</div>
+
+<div class="page">
+<div class="topside"></div>
+<div class="cpost">
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="tpost"><a href="http://ahmad-miri.mihanblog.com/post/147" title="کرک کردن نود 32 و آپدیت دائمی و رایگان"><h2>کرک کردن نود 32 و آپدیت دائمی و رایگان</h2></a></div>
+<div class="post">
+<div id="post1">
+<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div align="justify"><img src="../file.mihanblog.com/public/user_data/user_files/376/1127951/picture/Node32.jpg" alt="آپدیت رایگان نود32_کرک نود32" align="left" border="0" height="176" hspace="0" vspace="0" width="192"><a href="http://ahmad-miri.mihanblog.com/post/147" target="_blank" title="دانلود کرک نود 32 - آپدیت دائمی و همیشگی نود 32">بروزرسانی</a> یا <a href="http://ahmad-miri.mihanblog.com/post/147" target="_blank" title="دانلود کرک نود 32 - آپدیت دائمی و همیشگی نود 32">آپدیت رایگان</a> <a href="http://ahmad-miri.mihanblog.com/post/147" target="_blank" title="دانلود کرک نود 32 - آپدیت دائمی و همیشگی نود 32">Node32</a> قطعا یکی از بزرگ ترین مشکلاتی هست که کاربران این <a href="http://ahmad-miri.mihanblog.com/post/147" target="_blank" title="دانلود کرک نود 32 - آپدیت دائمی و همیشگی نود 32">آنتی ویروس</a> با آن مواجه اند. احتمالا اکثر کاربران مجبورند برای update رایگان آن یا مدام بدنبال <a href="http://ahmad-miri.mihanblog.com/post/147" target="_blank" title="دانلود کرک نود 32 - آپدیت دائمی و همیشگی نود 32">یوزرنیم و پسورد</a> های رایگان باشند و یا از سرورهای بروزرسانی ایرانی که امکان <a href="http://ahmad-miri.mihanblog.com/post/147" target="_blank" title="دانلود کرک نود 32 - آپدیت دائمی و همیشگی نود 32">آپدیت نود 32</a> را با هزینه ای اندک فراهم می کنند استفاده کنند. در این مطلب قصد داریم با کرک کردن آنتی ویرویس نود 32 امکان بروز رسانی دائمی و رایگان این آنتی ویروس را فراهم کنیم تا بتوانیم بدون هیچ مشکلی بصورت روزانه آنتی ویروس را توسط سرورهای اصلی شرکت <a href="http://ahmad-miri.mihanblog.com/post/147" target="_blank" title="دانلود کرک نود 32 - آپدیت دائمی و همیشگی نود 32">ESET</a> بروزرسانی کنیم ...<br></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<br><a href="http://ahmad-miri.mihanblog.com/post/147" title="کرک کردن نود 32 و آپدیت دائمی و رایگان">ادامه مطلب ...</a>
+<div style="clear:both;"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bpost">
+<div class="brpost">توسط احمد میری</div>
+
+
+<div class="blpost">
+	<div class="date">بیست و دوم تیر 95 ، 06:40 ب.ظ</div>
+
+	<div class="plus">
+
+		<a onclick="mihanblogUpdateLike(147,'like')" class="rate-button" title="موافق">
+		<div class="rate-up">	
+		<script>document.write(mihanblogLikeArrCnt[147]);</script>
+		</div>
+		</a>
+
+		<a onclick="mihanblogUpdateLike(147,'dislike')" class="rate-button" title="مخالف">
+		<div class="rate-down">	
+		<script>document.write(mihanblogDisLikeArrCnt[147]);</script>
+		</div>
+		</a>
+
+	</div>
+
+
+	<div class="comment">
+	<a href="http://ahmad-miri.mihanblog.com/post/147#comment"><script>setCommentCnt(147)</script> دیدگاه</a>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+
+
+<div style="clear:both;"></div>
+</div>
+<div class="tpost"><a href="http://ahmad-miri.mihanblog.com/post/146" title="دانلود آهنگ پرده در پرده سالار عقیلی"><h2>دانلود آهنگ پرده در پرده سالار عقیلی</h2></a></div>
+<div class="post">
+<div id="post1">
+
+
+
+
+
+
+<div align="justify"><img src="../file.mihanblog.com/public/user_data/user_files/376/1127951/picture/Serre_Hezar_Sale.jpg" alt="آهنگ پرده در پرده سالار عقیلی _ آلبوم سر هزار ساله" align="left" border="0" height="170" hspace="0" vspace="0" width="192">این بار آهنگ <a href="http://ahmad-miri.mihanblog.com/post/146" target="_blank" title="آهنگ پرده در پرده سالار عقیلی _ آلبوم سر هزار ساله">پرده در پرده</a> از آلبوم سر هزار ساله <a href="http://ahmad-miri.mihanblog.com/post/146" target="_blank" title="آهنگ پرده در پرده سالار عقیلی _ آلبوم سر هزار ساله">سالار عقیلی</a> با نوازندگی کیوان کیانیان رو برای شما قرار دادم، سراینده این شعر زیبا مولانا هست. در ادامه هم میتونید این آهنگ رو با کیفیت 128kbps دانلود کنید و هم متن این آهنگ زیبا و تصاویر کاور مربوط به این آهنگ رو ببنید. در ضمن این آهنگ بصورت اورجینال و بدون هیچگونه تغییری در کاور و دیگر مشخصات قرار داده شده ...<br></div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<br><a href="http://ahmad-miri.mihanblog.com/post/146" title="دانلود آهنگ پرده در پرده سالار عقیلی">ادامه مطلب ...</a>
+<div style="clear:both;"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bpost">
+<div class="brpost">توسط احمد میری</div>
+
+
+<div class="blpost">
+	<div class="date">سیزدهم بهمن 94 ، 08:04 ق.ظ</div>
+
+	<div class="plus">
+
+		<a onclick="mihanblogUpdateLike(146,'like')" class="rate-button" title="موافق">
+		<div class="rate-up">	
+		<script>document.write(mihanblogLikeArrCnt[146]);</script>
+		</div>
+		</a>
+
+		<a onclick="mihanblogUpdateLike(146,'dislike')" class="rate-button" title="مخالف">
+		<div class="rate-down">	
+		<script>document.write(mihanblogDisLikeArrCnt[146]);</script>
+		</div>
+		</a>
+
+	</div>
+
+
+	<div class="comment">
+	<a href="http://ahmad-miri.mihanblog.com/post/146#comment"><script>setCommentCnt(146)</script> دیدگاه</a>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+
+
+<div style="clear:both;"></div>
+</div>
+<div class="tpost"><a href="http://ahmad-miri.mihanblog.com/post/145" title="رفع مشکل پیغام fake serial Number دانلود منیجر"><h2>رفع مشکل پیغام fake serial Number دانلود منیجر</h2></a></div>
+<div class="post">
+<div id="post1">
+
+
+
+
+
+
+<div align="justify"><img src="../file.mihanblog.com/public/user_data/user_files/376/1127951/picture/Internet_Download_Manager_fake_serial_Number.jpg" alt="حل مشکل شماره سریال تقلبی،Internet Download Manager fake serial Number" align="left" border="0" hspace="0" height="186" vspace="0" width="186">اگه شما هم از طرفداران برنامه مدیریت <a href="http://ahmad-miri.mihanblog.com/post/category/2" target="_blank" title="دانلود نرم افزار">دانلودِ</a> IDM یا همون <a href="http://ahmad-miri.mihanblog.com/post/category/6" target="_blank" title="آموزش مقدماتی مباحث مربوط به اینترنت">اینترنت</a> دانلود منیجر (Internet Download Manager) هستید و از اون استفاده می کنید، احتمالا با پیغام های پی در پی این برنامه مبنی بر ثبت برنامه با شماره سریال جعلی و تقلبی یا Internet Download Manager has been registered with a <a href="http://ahmad-miri.mihanblog.com/post/145" target="_blank" title="مشکل شماره سریال جعلی">fake serial Number</a> روبرو شدید. در ادامه مطلب نحوه خلاص شدن از دست این پیغام رو آموزش میدم ...<br></div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<br><a href="http://ahmad-miri.mihanblog.com/post/145" title="رفع مشکل پیغام fake serial Number دانلود منیجر">ادامه مطلب ...</a>
+<div style="clear:both;"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bpost">
+<div class="brpost">توسط احمد میری</div>
+
+
+<div class="blpost">
+	<div class="date">بیست و سوم آذر 94 ، 04:12 ب.ظ</div>
+
+	<div class="plus">
+
+		<a onclick="mihanblogUpdateLike(145,'like')" class="rate-button" title="موافق">
+		<div class="rate-up">	
+		<script>document.write(mihanblogLikeArrCnt[145]);</script>
+		</div>
+		</a>
+
+		<a onclick="mihanblogUpdateLike(145,'dislike')" class="rate-button" title="مخالف">
+		<div class="rate-down">	
+		<script>document.write(mihanblogDisLikeArrCnt[145]);</script>
+		</div>
+		</a>
+
+	</div>
+
+
+	<div class="comment">
+	<a href="http://ahmad-miri.mihanblog.com/post/145#comment"><script>setCommentCnt(145)</script> دیدگاه</a>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+
+
+<div style="clear:both;"></div>
+</div>
+<div class="tpost"><a href="http://ahmad-miri.mihanblog.com/post/144" title="غیر فعال کردن آپدیت خودکار ویندوز 10"><h2>غیر فعال کردن آپدیت خودکار ویندوز 10</h2></a></div>
+<div class="post">
+<div id="post1">
+
+
+<div align="justify"><img src="../static.mihanblog.com/public/user_data/user_files/376/1127951/picture/windows10_logo.png" alt="windows 10،ویندوز 10،ویندوز،ماکروسافت" align="left" height="178" hspace="0" border="0" vspace="0" width="178">با انتشار ویندوز 10 کاربران زیادی به سمت این <a href="http://ahmad-miri.mihanblog.com/post/category/3" target="_blank" title="آموزش ویندوز">ویندوز</a> متمایل شدند و این ویندوز رو نصب کردند. اما یکی از دردسرهایی که ویندوز 10 برای اکثر کاربران ایجاد کرده آپدیت خودکار هست، که حدود یک گیگابایتی از حجم اینترنت کاربران رو مصرف میکنه و این مورد میتونه برای اکثریت کاربران حداقل با توجه به اوضاع <a href="http://ahmad-miri.mihanblog.com/post/category/6" target="_blank" title="آموزش اینترنت">اینترنت</a> و هزینه های اون خوشایند نباشه. اما در این پست تصمیم دارم تا روشی رو بیان کنم که طی چند لحظه این مشکل رو حل کنید ...<br></div>
+
+
+
+
+
+
+</div>
+<br><a href="http://ahmad-miri.mihanblog.com/post/144" title="غیر فعال کردن آپدیت خودکار ویندوز 10">ادامه مطلب ...</a>
+<div style="clear:both;"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bpost">
+<div class="brpost">توسط احمد میری</div>
+
+
+<div class="blpost">
+	<div class="date">بیست و نهم مرداد 94 ، 08:42 ق.ظ</div>
+
+	<div class="plus">
+
+		<a onclick="mihanblogUpdateLike(144,'like')" class="rate-button" title="موافق">
+		<div class="rate-up">	
+		<script>document.write(mihanblogLikeArrCnt[144]);</script>
+		</div>
+		</a>
+
+		<a onclick="mihanblogUpdateLike(144,'dislike')" class="rate-button" title="مخالف">
+		<div class="rate-down">	
+		<script>document.write(mihanblogDisLikeArrCnt[144]);</script>
+		</div>
+		</a>
+
+	</div>
+
+
+	<div class="comment">
+	<a href="http://ahmad-miri.mihanblog.com/post/144#comment"><script>setCommentCnt(144)</script> دیدگاه</a>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+
+
+<div style="clear:both;"></div>
+</div>
+<div class="tpost"><a href="http://ahmad-miri.mihanblog.com/post/143" title="چت روم حرفه ای برای وبلاگ"><h2>چت روم حرفه ای برای وبلاگ</h2></a></div>
+<div class="post">
+<div id="post1">
+
+
+
+
+<div align="justify"><img src="../static.mihanblog.com/public/user_data/user_files/376/1127951/picture/chat_widget1.jpg" alt="کد چتروم حرفه ای برای وبلاگ - chat widget for blog" align="left" height="193" hspace="0" border="0" vspace="0" width="193">شاید داشتن یک <a href="http://ahmad-miri.mihanblog.com/post/143" target="_blank" title="چت روم حرفه ای برای وبلاگ">چت روم</a> حرفه ای برای <a href="http://ahmad-miri.mihanblog.com/post/50" target="_blank" title=" خبردار کردن موتور های جستجو از آپدیت وبلاگ ما">وبلاگ</a>، آرزوی خیلی از وبلاگنویسان باشه؛ اینبار قصد معرفی سایتی برای طراحی یک چت روم بسیار حرفه ای و زیبا مختص وبلاگ، وردپرس، جوملا و ... رو دارم. این چت روم به حالت یک ویجت (widget) بر روی وبلاگ&nbsp; یا سایت های وردپرسی و ... نصب میشه و بصورت آجاکس در گوشه وبلاگ نمایش داده میشه و از امکانات بسیار زیادی هم برخورداره ...<br></div>
+
+
+
+
+
+
+
+</div>
+<br><a href="http://ahmad-miri.mihanblog.com/post/143" title="چت روم حرفه ای برای وبلاگ">ادامه مطلب ...</a>
+<div style="clear:both;"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bpost">
+<div class="brpost">توسط احمد میری</div>
+
+
+<div class="blpost">
+	<div class="date">هفدهم مرداد 94 ، 03:53 ب.ظ</div>
+
+	<div class="plus">
+
+		<a onclick="mihanblogUpdateLike(143,'like')" class="rate-button" title="موافق">
+		<div class="rate-up">	
+		<script>document.write(mihanblogLikeArrCnt[143]);</script>
+		</div>
+		</a>
+
+		<a onclick="mihanblogUpdateLike(143,'dislike')" class="rate-button" title="مخالف">
+		<div class="rate-down">	
+		<script>document.write(mihanblogDisLikeArrCnt[143]);</script>
+		</div>
+		</a>
+
+	</div>
+
+
+	<div class="comment">
+	<a href="http://ahmad-miri.mihanblog.com/post/143#comment"><script>setCommentCnt(143)</script> دیدگاه</a>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+
+
+<div style="clear:both;"></div>
+</div>
+<div class="tpost"><a href="http://ahmad-miri.mihanblog.com/post/141" title="ضد ویروس ایرانی پادویش"><h2>ضد ویروس ایرانی پادویش</h2></a></div>
+<div class="post">
+<div id="post1">
+
+<p style="text-align: justify; " dir="rtl" align="justify"><img src="../static.mihanblog.com/public/user_data/user_files/376/1127951/picture/padvish_antivirus.jpg" alt="ضد ویروس پادویش - آنتی ویروس پادویش - padvish antivirus" align="left" border="0" height="184" hspace="0" vspace="0" width="184">پادویش 
+(Padvish) با سرمایه گذاری شرکت نرم‌افزاری امن‌پرداز طراحی شده و یک ضدویروس کاملا بومی و ایرانی هست که تمام 
+مراحل طراحی و پیاده­ سازی اون به دست تیم مجرب داخلی صورت گرفته و 
+قابلیت شناسایی و مقابله با بدافزارهای رایج رو داره. پادویش به کمک
+ تکنولوژی شبکه ابر کاربران و تیم تحلیل بدافزار قوی، امکان شناسایی 
+جدیدترین بدافزارها در کمترین زمان ممکن رو داره. برای آشنایی بیشتر با این برنامه با ما همراه باشید ...<br></p>
+
+
+
+
+</div>
+<br><a href="http://ahmad-miri.mihanblog.com/post/141" title="ضد ویروس ایرانی پادویش">ادامه مطلب ...</a>
+<div style="clear:both;"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bpost">
+<div class="brpost">توسط احمد میری</div>
+
+
+<div class="blpost">
+	<div class="date">بیست و پنجم خرداد 94 ، 07:06 ق.ظ</div>
+
+	<div class="plus">
+
+		<a onclick="mihanblogUpdateLike(141,'like')" class="rate-button" title="موافق">
+		<div class="rate-up">	
+		<script>document.write(mihanblogLikeArrCnt[141]);</script>
+		</div>
+		</a>
+
+		<a onclick="mihanblogUpdateLike(141,'dislike')" class="rate-button" title="مخالف">
+		<div class="rate-down">	
+		<script>document.write(mihanblogDisLikeArrCnt[141]);</script>
+		</div>
+		</a>
+
+	</div>
+
+
+	<div class="comment">
+	<a href="http://ahmad-miri.mihanblog.com/post/141#comment"><script>setCommentCnt(141)</script> دیدگاه</a>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+
+
+<div style="clear:both;"></div>
+</div>
+<div class="tpost"><a href="http://ahmad-miri.mihanblog.com/post/140" title="دستور Xcopy و سوئیچ های آن + فیلم آموزشی"><h2>دستور Xcopy و سوئیچ های آن + فیلم آموزشی</h2></a></div>
+<div class="post">
+<div id="post1">
+
+
+
+
+<div align="justify"><img src="../static.mihanblog.com/public/user_data/user_files/376/1127951/picture/xcopy.jpg" alt="آموزش دستور xcopy و سوئیچ های آن" align="left" height="207" hspace="0" vspace="0" width="207" border="0">دستور <a href="http://ahmad-miri.mihanblog.com/post/140" target="_blank" title="آموزش دستور xcopy و سوئیچ های آن">Xcopy</a> یکی از موارد پرکاربرد در <a href="http://ahmad-miri.mihanblog.com/post/140" target="_blank" title="آموزش دستور xcopy و سوئیچ های آن">خط فرمان</a> هست. آیا تاحالا خواستید اطلاعات سیستم یکی رو بدون اجازه شخص کپی کنید؟! یا مثلا تا حالا پیش اومده که لازم باشه یه سری فایل ها رو به مسیر خاصی از سیستم دوستتون منتقل کنید و بخواید که دوستتون با یک کلیک بتونه بدون هیچگونه دخالتی این کار رو انجام بده؟! در این فیلم آموزشی نحوه استفاده از فرمان Xcopy و استفاده از سوئیچ های اون به طور کامل توضیح داده شده ...<br></div>
+
+
+
+
+
+
+
+
+
+
+</div>
+<br><a href="http://ahmad-miri.mihanblog.com/post/140" title="دستور Xcopy و سوئیچ های آن + فیلم آموزشی">ادامه مطلب ...</a>
+<div style="clear:both;"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bpost">
+<div class="brpost">توسط احمد میری</div>
+
+
+<div class="blpost">
+	<div class="date">هفتم اسفند 93 ، 03:01 ب.ظ</div>
+
+	<div class="plus">
+
+		<a onclick="mihanblogUpdateLike(140,'like')" class="rate-button" title="موافق">
+		<div class="rate-up">	
+		<script>document.write(mihanblogLikeArrCnt[140]);</script>
+		</div>
+		</a>
+
+		<a onclick="mihanblogUpdateLike(140,'dislike')" class="rate-button" title="مخالف">
+		<div class="rate-down">	
+		<script>document.write(mihanblogDisLikeArrCnt[140]);</script>
+		</div>
+		</a>
+
+	</div>
+
+
+	<div class="comment">
+	<a href="http://ahmad-miri.mihanblog.com/post/140#comment"><script>setCommentCnt(140)</script> دیدگاه</a>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+
+
+<div style="clear:both;"></div>
+</div>
+
+
+<div class="cpn">
+<a href="index.html"><div class="pn">صفحه نخست</div></a>
+<a href="http://ahmad-miri.mihanblog.com/page/1"><div class="pn"><b>1</b></div></a>
+<a href="http://ahmad-miri.mihanblog.com/page/2"><div class="pn"><span>2</span></div></a>
+<a href="http://ahmad-miri.mihanblog.com/page/3"><div class="pn"><span>3</span></div></a>
+<a href="http://ahmad-miri.mihanblog.com/page/4"><div class="pn"><span>4</span></div></a>
+<a href="http://ahmad-miri.mihanblog.com/page/5"><div class="pn"><span>5</span></div></a>
+<a href="http://ahmad-miri.mihanblog.com/page/6"><div class="pn"><span>6</span></div></a>
+<a href="http://ahmad-miri.mihanblog.com/page/7"><div class="pn"><span>7</span></div></a>
+<a href="http://ahmad-miri.mihanblog.com/page/8"><div class="pn"><i>...</i></div></a>
+<div style="clear:both;"></div>
+</div>
+
+</div>
+
+
+<div class="cside">
+
+
+<div class="description">
+<div style="margin:5px auto 10px auto;display:table;">
+<div class="tagcloud">
+<a href="index.html">صفحه اصلی</a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/m/">نسخه موبایل</a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/rss/">آر اس اس</a>
+</div>
+<div class="tagcloud">
+<a href="javascript:messageForm()">تماس با ما</a>
+</div>
+<div style="clear:both;"></div>
+</div>
+<h4>به وبلاگ شخصی احمد میری خـوش آمـدیـد. در ایـنـجا به معرفی و آموزش نرم افزار های رایانه ای و بـحث و گفتگو در رابطه با آنها می پردازیم. در صورتی که هرگونه پیشنهاد، انتقاد و سؤالی داشتید میتوانید از قسمت تماس با ما استفاده کنید.</h4>
+</div>
+
+
+
+<div class="tside">خلاصه آمار</div>
+<div class="oside1">تاریخ امروز<div class="oside4"><script>setTodayDate()</script></div></div>
+<div class="oside1">مجموع نمایش‌ها<div class="oside4"><script>getStatVar('total_view');</script></div></div>
+<div class="oside1">نمایش‌های امروز<div class="oside4"><script>getStatVar('today_view');</script></div></div>
+<div class="oside1">نمایش‌های دیروز<div class="oside4"><script>getStatVar('yesterday_view');</script></div></div>
+<div class="oside1">نمایش‌های این ماه<div class="oside4"><script>getStatVar('this_month_view');</script></div></div>
+<div class="oside1">مجموع مطالب<div class="oside4"><script>getStatVar('total_post');</script></div></div>
+
+
+
+<div class="tside">موضوعات مطالب</div>
+<div class="oside2"><div class="oside3">
+<a title="21" href="http://ahmad-miri.mihanblog.com/post/category/3">ویندوز    </a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a title="16" href="http://ahmad-miri.mihanblog.com/post/category/1">آنتی ویروس </a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a title="11" href="http://ahmad-miri.mihanblog.com/post/category/13">هک و امنیت</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a title="45" href="http://ahmad-miri.mihanblog.com/post/category/2">دانلود    </a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a title="45" href="http://ahmad-miri.mihanblog.com/post/category/6">اینترنت</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a title="6" href="http://ahmad-miri.mihanblog.com/post/category/9">گـرافـیـک</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a title="35" href="http://ahmad-miri.mihanblog.com/post/category/10">مطالب آموزشی</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a title="12" href="http://ahmad-miri.mihanblog.com/post/category/11">معرفی سایت</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a title="7" href="http://ahmad-miri.mihanblog.com/post/category/12">صـدا هـا</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a title="1" href="http://ahmad-miri.mihanblog.com/post/category/5">بازی کامپیوتر</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a title="30" href="http://ahmad-miri.mihanblog.com/post/category/7">تـرفـنـد</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a title="6" href="http://ahmad-miri.mihanblog.com/post/category/8">اخبار</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a title="5" href="http://ahmad-miri.mihanblog.com/post/category/4">دیگر موارد</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a title="1" href="http://ahmad-miri.mihanblog.com/post/category/14">قالب های وبلاگ</a>
+</div></div>
+
+
+
+
+<div class="tside">آخرین مطالب</div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/147">کرک کردن نود 32 و آپدیت دائمی و رایگان</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/146">دانلود آهنگ پرده در پرده سالار عقیلی</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/145">رفع مشکل پیغام fake serial Number دانلود منیجر</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/144">غیر فعال کردن آپدیت خودکار ویندوز 10</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/143">چت روم حرفه ای برای وبلاگ</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/141">ضد ویروس ایرانی پادویش</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/140">دستور Xcopy و سوئیچ های آن + فیلم آموزشی</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/139">چگونه با مرورگر فایرفاکس چت صوتی و تصویری کنیم ؟!</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/138">آیا واقعا نصب کامل برنامه های آفیس لازم هست ؟!</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/137">دانلود نرم افزار ریکاوری قوی</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/136">تغییر نام و رمز مودم وایرلس و افزایش امنیت مودم</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/134">حل مشکل بالا نیامدن سیستم بعد از اکتیو کردن ویندوز</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/132">قالب ساده، کم حجم و زیبا برای وبلاگ - شماره یک</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/131">نحوه تنظیم کردن مودم های بی سیم TP-Link + فیلم آموزشی</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/130">نحوه تنظیم کردن مودم های D-Link + فیلم آموزشی</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/129">دانلود آهنگ زیبای یامولا دلم تنگ اومده</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/128">نحوه جدا کردن تصاویر از پس زمینه آنها در فتوشاپ</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/127">باز کردن همه فایل های صوتی و تصویری</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/125">یک نکته امنیتی در رابطه با سرویس ایمیل موقت</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/124">مخفی کردن فایل و فولدر ها توسط دستور Attrib</a>
+</div></div>
+
+
+
+<div class="tside">بایگانی</div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/archive/1395/4"> تیر 1395</a> (1)
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/archive/1394/11"> بهمن 1394</a> (1)
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/archive/1394/9"> آذر 1394</a> (1)
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/archive/1394/5"> مرداد 1394</a> (2)
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/archive/1394/3"> خرداد 1394</a> (1)
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/archive/1393/12"> اسفند 1393</a> (1)
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/archive/1393/10"> دی 1393</a> (2)
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/archive/1393/7"> مهر 1393</a> (1)
+</div></div>
+<div class="oside2"><div class="oside3">
+<a href="http://ahmad-miri.mihanblog.com/post/archive/1393/6"> شهریور 1393</a> (1)
+</div></div>
+
+
+<div class="tside">پیوندها</div>
+<div class="oside2"><div class="oside3">
+<a title="رواق ِ منظر ِ چشم ِ من، آشیانه ی توست 
+کَرَم نما و فرودآ که خانه، خانه ی توست" href="../revaagh.mihanblog.com/index.html">رواق</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a title="تا شهادت با ولایت ما رهسپاریم" href="http://shalimanagement.mihanblog.com/">تا شهادت با ولایت رهسپاریم</a>
+</div></div>
+<div class="oside2"><div class="oside3">
+<a title="اخبار باشگاه پرسپولیس" href="../perspolis-7.mihanblog.com/index.html">مرجع خبری باشگاه پرسپولیس</a>
+</div></div>
+
+
+
+<div class="tside">کلمات کلیدی</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/8"><h3>8</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D8%AA%D8%B5%D8%A7%D9%88%DB%8C%D8%B1"><h3>تصاویر</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D8%A8%D9%87%DB%8C%D9%86%D9%87+%D8%B3%D8%A7%D8%B2%DB%8C"><h3>بهینه سازی</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D9%81%D9%84%D8%B4+%D9%85%D9%85%D9%88%D8%B1%DB%8C"><h3>فلش مموری</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/eset"><h3>eset</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D9%81%D8%A7%DB%8C%D8%B1+%D9%81%D8%A7%DA%A9%D8%B3"><h3>فایر فاکس</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D8%AC%D8%AF%DB%8C%D8%AF"><h3>جدید</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%DA%A9%D8%B1%DA%A9"><h3>کرک</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF+%D8%A2%D9%87%D9%86%DA%AF"><h3>دانلود آهنگ</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D8%A2%DB%8C%DA%A9%D9%88%D9%86"><h3>آیکون</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D9%86%D8%B3%D8%AE%D9%87"><h3>نسخه</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4"><h3>آموزش</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D9%87%D8%B4%D8%AA"><h3>هشت</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D9%85%D8%A7%DA%A9%D8%B1%D9%88%D8%B3%D8%A7%D9%81%D8%AA"><h3>ماکروسافت</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86+%D9%88%D8%A8%D9%84%D8%A7%DA%AF%D8%AF%D9%87%DB%8C"><h3>بهترین وبلاگدهی</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D8%AD%D9%84+%D9%85%D8%B4%DA%A9%D9%84"><h3>حل مشکل</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF"><h3>دانلود</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D8%B9%DA%A9%D8%B3"><h3>عکس</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D8%AA%D8%B5%D9%88%DB%8C%D8%B1"><h3>تصویر</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%DA%A9%D9%84%DB%8C%D8%AF"><h3>کلید</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86"><h3>ایران</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D9%88%DB%8C%DA%98%DA%AF%DB%8C"><h3>ویژگی</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D9%84%DB%8C%D9%86%DA%A9+%DA%86%DB%8C%D8%B3%D8%AA"><h3>لینک چیست</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D8%A2%D9%BE%D8%AF%DB%8C%D8%AA"><h3>آپدیت</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D8%A7%D9%81%D8%B2%D8%A7%DB%8C%D8%B4+%D8%B3%D8%B1%D8%B9%D8%AA"><h3>افزایش سرعت</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D8%A2%D8%AE%D8%B1%DB%8C%D9%86+%D9%86%D8%B3%D8%AE%D9%87"><h3>آخرین نسخه</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D9%88%DB%8C%D9%86%D8%AF%D9%88%D8%B2"><h3>ویندوز</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D9%86%D8%B1%D9%85+%D8%A7%D9%81%D8%B2%D8%A7%D8%B1"><h3>نرم افزار</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/nod32"><h3>nod32</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D9%81%D8%A7%D8%B1%D8%B3%DB%8C"><h3>فارسی</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF+%D8%A2%D9%87%D9%86%DA%AF+%D8%B3%D9%86%D8%AA%DB%8C"><h3>دانلود آهنگ سنتی</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D8%A2%D8%AE%D8%B1%DB%8C%D9%86"><h3>آخرین</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D9%86%D9%88%D8%AF32"><h3>نود32</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D9%BE%D8%B3%D9%88%D8%B1%D8%AF"><h3>پسورد</h3></a>
+</div>
+<div class="tagcloud">
+<a href="http://ahmad-miri.mihanblog.com/post/tag/%D9%86%D9%88%D8%AF"><h3>نود</h3></a>
+</div>
+
+<div style="clear:both;"></div>
+</div>
+
+
+<div class="bottomside"></div>
+</div>
+
+
+
+
+<div class="footer">
+ تمام حقوق این وب سایت و مطالب آن متعلق به احمد میری می باشد . 
+</div>
+
+</body>
+</html>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'ahmad-miri.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

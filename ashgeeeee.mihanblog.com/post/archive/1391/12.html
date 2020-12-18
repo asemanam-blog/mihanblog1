@@ -1,0 +1,1776 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc@rsd.html" />
+<script type="text/javascript" src="../../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*813189*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[454]='3';commentCnt[455]='1';commentCnt[456]='3';commentCnt[457]='1';commentCnt[458]='3';commentCnt[459]='0';commentCnt[460]='1';commentCnt[461]='1';commentCnt[462]='2';commentCnt[463]='2';commentCnt[464]='1';commentCnt[465]='3';commentCnt[466]='8';commentCnt[467]='13';commentCnt[468]='6';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[454]='0';
+mihanblogDisLikeArrCnt[454]='0';
+mihanblogLikeArrCnt[455]='0';
+mihanblogDisLikeArrCnt[455]='0';
+mihanblogLikeArrCnt[456]='0';
+mihanblogDisLikeArrCnt[456]='0';
+mihanblogLikeArrCnt[458]='0';
+mihanblogDisLikeArrCnt[458]='0';
+mihanblogLikeArrCnt[459]='0';
+mihanblogDisLikeArrCnt[459]='0';
+mihanblogLikeArrCnt[460]='0';
+mihanblogDisLikeArrCnt[460]='0';
+mihanblogLikeArrCnt[461]='0';
+mihanblogDisLikeArrCnt[461]='0';
+mihanblogLikeArrCnt[462]='0';
+mihanblogDisLikeArrCnt[462]='0';
+mihanblogLikeArrCnt[463]='0';
+mihanblogDisLikeArrCnt[463]='0';
+mihanblogLikeArrCnt[464]='0';
+mihanblogDisLikeArrCnt[464]='0';
+mihanblogLikeArrCnt[465]='0';
+mihanblogDisLikeArrCnt[465]='0';
+mihanblogLikeArrCnt[466]='0';
+mihanblogDisLikeArrCnt[466]='0';
+mihanblogLikeArrCnt[467]='0';
+mihanblogDisLikeArrCnt[467]='0';
+mihanblogLikeArrCnt[468]='0';
+mihanblogDisLikeArrCnt[468]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://ashgeeeee.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://ashgeeeee.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','517');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','دوشنبه 6 دی 1395');
+	
+	setStatVar('today_view','30');
+	setStatVar('yesterday_view','18');
+	
+	setStatVar('this_month_view','1849');
+	setStatVar('last_month_view','462');
+
+	setStatVar('total_view','188014');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (05:32)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://ashgeeeee.mihanblog.com/statupdate/?data[refereruri]=http://ashgeeeee.mihanblog.com/&data[postid]=&data[requesturi]=/post/archive/1391/12&data[sdate]=1607830744&data[hash]=b8506e5b9ff8699ffd922b5e83ce98e5&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://ashgeeeee.mihanblog.com/post/archive/1391/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Theme Designer" content="www.MyTheme.ir">
+
+    <meta name="description" content="عشقی"/>
+    <meta name="keywords" content="عشق"/>
+    <link rel="alternate" type="application/rss+xml" title="عشق" href="../../rss/index.html" />
+    <link rel="alternate" type="application/atom+xml" title="عشق" href="../../atom/index.html" />
+    <link href="http://mihanblog.com/public/public/user_data/template/2099039/style.css" type="text/css" rel="stylesheet">
+
+    <title>عشق - مطالب  اسفند 1391</title>
+
+</head>
+
+<body>
+
+<div class="">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td class=div2 valign=top>
+
+<div class=div60></div>
+
+<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>درباره وبلاگ</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div31><center></center><br>
+            <font class=text1>چون گوش شنوایی نیافتم حرفایم رو مینویسم<br>
+                مدیر وبلاگ : <a href="../../author/590544.html"> محمد نوریزاده</a></font></div>
+    </div><div class=div30></div>
+</div>
+
+<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>مطالب اخیر</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div32><font class=text1><a href="../../533.html">بعد از چند سال</a></font></div><div class=div32><font class=text1><a href="../../532.html">m13</a></font></div><div class=div32><font class=text1><a href="../../531.html">++دخترا تـــــرســــونیستن++</a></font></div><div class=div32><font class=text1><a href="../../530.html">aks</a></font></div><div class=div32><font class=text1><a href="../../529.html">aks</a></font></div><div class=div32><font class=text1><a href="../../528.html">الهی چه دختر نازیه.......</a></font></div><div class=div32><font class=text1><a href="../../527.html">دوستت دارم . . .</a></font></div><div class=div32><font class=text1><a href="../../526.html">کودکی</a></font></div><div class=div32><font class=text1><a href="../../525.html">شب</a></font></div><div class=div32><font class=text1><a href="../../524.html">چرا نیستی کنارم؟؟؟؟؟؟؟؟</a></font></div><div class=div32><font class=text1><a href="../../523.html">عشق</a></font></div><div class=div32><font class=text1><a href="../../522.html">اگر جمله ی دوستت دارم</a></font></div><div class=div32><font class=text1><a href="../../521.html">عاشقیم!</a></font></div><div class=div32><font class=text1><a href="../../520.html">داستان عاشقی جدید اردیبهشت 92 واقعی(داستان خودم نیست من هیچ وقت حرف دلم رو به کسی نمیزنم)</a></font></div><div class=div32><font class=text1><a href="../../519.html">تنها راه رسیدن</a></font></div>    </div><div class=div30></div>
+</div>
+<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>موضوعات</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div32><font class=text1><a href="../../category/6.html">داستان عاشقانه و زیبا (13)</a></font></div><div class=div32><font class=text1><a href="../../category/5.html">شعر های عاشقانه (9)</a></font></div><div class=div32><font class=text1><a href="../../category/4.html">عشق و تنهایی....! (40)</a></font></div><div class=div32><font class=text1><a href="../../category/3.html">اس ام اس عاشقانه (10)</a></font></div><div class=div32><font class=text1><a href="../../category/2.html">عشق (68)</a></font></div><div class=div32><font class=text1><a href="../../category/1.html">جملات عاشقانه (237)</a></font></div>    </div><div class=div30></div>
+</div>
+<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>آرشیو وبلاگ</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div32><font class=text1><a href="../1395/10.html"> دی 1395</a></font></div><div class=div32><font class=text1><a href="../1392/12.html"> اسفند 1392</a></font></div><div class=div32><font class=text1><a href="../1392/8.html"> آبان 1392</a></font></div><div class=div32><font class=text1><a href="../1392/7.html"> مهر 1392</a></font></div><div class=div32><font class=text1><a href="../1392/6.html"> شهریور 1392</a></font></div><div class=div32><font class=text1><a href="../1392/5.html"> مرداد 1392</a></font></div><div class=div32><font class=text1><a href="../1392/3.html"> خرداد 1392</a></font></div><div class=div32><font class=text1><a href="../1392/2.html"> اردیبهشت 1392</a></font></div><div class=div32><font class=text1><a href="12.html"> اسفند 1391</a></font></div><div class=div32><font class=text1><a href="10.html"> دی 1391</a></font></div><div class=div32><font class=text1><a href="7.html"> مهر 1391</a></font></div><div class=div32><font class=text1><a href="6.html"> شهریور 1391</a></font></div>        <div class=div32><font class=text1><a href="../../archive.html">آرشیو كل مطالب</a></font></div>
+    </div><div class=div30></div>
+</div>
+<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>پیوندهای روزانه</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div32><font class=text1><a href="http://shopglasses.ir/post/1" title="" target="_blank">عینک آفتابی مردانه</a></font></div><div class=div32><font class=text1><a href="../../../../pandababy.mihanblog.com/index.html" title="" target="_blank">**❤**❤**❤**gaty paty **❤**❤**❤**</a></font></div><div class=div32><font class=text1><a href="http://www.khorshidgroup.org" title="" target="_blank">گروه اینترنتی خورشید</a></font></div><div class=div32><font class=text1><a href="http://group.sunbow.ir/" title="بهترین لحظات و بهترین  سرگرمی ها" target="_blank">شادترین گروه دختر و پسرای ایرونی</a></font></div><div class=div32><font class=text1><a href="http://www.khorshidgroup.org" title="" target="_blank">گروه اینترنتی خورشید</a></font></div><div class=div32><font class=text1><a href="http://es32.ir" title="آپدیت روزانه آنتی ویروس شما با قویترین سرور آپدیت در ایران تحویل آنی اکانتها بعد از پرداخت آنلاین اکانت یک ماهه فقط و فقط یک هزار تومان اکانت یکساله ده هزار تومان و انواع اکانتهای 2 و 3 و 6 و 9 ماهه" target="_blank">اکانت اختصاصی آپدیت نود 32</a></font></div><div class=div32><font class=text1><a href="http://www.namadownload.com" title="سلام،حال شما؟خسته نباشید.بنده آیناز حسن پور هستم.قصد دارم سایتم رو هرچه سریعتر به رتبه ی بالا برسونم.راستش وضع مالیم چندان مناسب نبود واسه همین میخوام به من کمک کنید تا مطالب بیشتری آپلود کنم.و یا در بهتر کردن سایتم و بخش های مختلف اون از جمله فروشگاه و یا انجمن سایت منو یاری کنید.ضمنا سعی میکنم در سود و درآمد آینده ی سایتم شما رو هم سهیم کنم.اونقدا هم بیمعرفت نیستم که لطف عزیزی مثل شما رو فراموش کنم.اگه موافق بودید که همکاری کنید شما رو به عنوان یکی از نویسندگان سایتم و مدیران ارشد سایتم قرارتون میدم.مطمئنم میتونیم با کمک همدیگه به یه درآمد عالی برسیم.این درآمد رو واسه خرج زندگیم میخوام.آخه من تمام خونوادم رو توی یه حادثه از دست دادم.به هر حال لطفتون رو فراموش نمیکنم.پاسختون رو در بخش نظرات سایتم ارسال کنید لطفا.خوشحال شدم.فعلا
+http://www.namadownload.com" target="_blank">آیناز افشار پور</a></font></div><div class=div32><font class=text1><a href="http://www.top700.com" title="گاهی شانس فقط یک بار به آدم رو میاره پس باید قدرش رو دونست بهترین فرصت زندگی شما برای ثروتمند شدن مجموعه ای بی نظیر برای اولین بار در ایران برای کسانی که می خواهند بهتر زندگی کنند و از کمترین وقت و هزینه بیشترین سود را ببرند.برای آگاهی از جزییات بیشتر به لینک زیر مراجعه کنید.
+http://www.top700.com" target="_blank">$سایت تخصصی کسب درآمد از اینترنت$</a></font></div><div class=div32><font class=text1><a href="http://1o2.ir/c6p87" title="سامانه تبلیغاتی ایران پاپ آپ در نظر دارد تا محیط و بستری مناسب و حرفه ای برای وبمستران عزیز فراهم کند تا بتوانند از بازدیدکنندگان خود به درآمد برسند.
+در این سیستم به ازای هر پاپ آپ که در سایت شما باز شود ، مبلغ 20 ریال تعلق می گیرد و پس از رسیدن به حد نصاب ( 100 هزار ریال ) می توانید درخواست واریز آن را بدهید.
+این سامانه مجهز به سیستم ضد تقلب بوده و در هر 24 ساعت برای هر آی پی منحصر به فرد ، یک بار پاپ آپ محاسبه خواهد شد.
+.
+از طریق این لینک میتوانید ثبت نام نمایید:
+http://1o2.ir/c6p87
+.
+.
+.
+.
+تی شارژ:
+http://oto.tbooks.xzn.ir
+تی بوکز:
+http://tbooks.ir" target="_blank">کسب درآمد آنی از اینترنت</a></font></div><div class=div32><font class=text1><a href="http://idehhost.com" title="تبدیل وبلاگ به سایت فقط با 20 تومان برای 1سال 
+هزینه سال های بعد 14.000تومان :هاست دامنه ملی(ir)
+آموزشه کار رایگان 
+راه اندازی رایگان
+راهنمایی و کمک رایگان
+09193198330
+تمامی مراحله نصب و کانفیگ رایگان
+ایده هاست ارزان ترین در ایران!
+ارزان و با کیفیت
+09193198330
+درصورت بروز هرگونه مشکل با پشتیبان در ارتباط باشید" target="_blank">امیرعلی</a></font></div>        <div class=div32><font class=text1><a href="../../../linkdaily/index.html">همه پیوندهای روزانه</a></font></div>
+        <div class=div32><font class=text1><a href="javascript:linkdailyForm()">ارسال پیوند روزانه</a></font></div>
+    </div><div class=div30></div>
+</div>
+<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>پیوندها</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div32><font class=text1><a href="../../../../fereshte97.mihanblog.com/index.html" title="" target="_blank">fereshteye pak</a></font></div><div class=div32><font class=text1><a href="http://www.dokhtaraketanhaaa.blogfa.com/" title="" target="_blank">دخترک تنها</a></font></div><div class=div32><font class=text1><a href="http://buy-glasses.ir" title="" target="_blank">خرید عینک آفتابی</a></font></div><div class=div32><font class=text1><a href="http://karizmacell.com/" title="بزرگترین فروشگاه اینترنتی کشور" target="_blank">فروشگاه اینترنتی کاریزماسل</a></font></div><div class=div32><font class=text1><a href="http://music74sk.mihanblog.com/" title="" target="_blank">نگین</a></font></div><div class=div32><font class=text1><a href="http://delbakhteh.loxblog.com/" title="" target="_blank">پایان عشق</a></font></div><div class=div32><font class=text1><a href="http://blackloves.loxblog.com/cat.php?cat=1" title="" target="_blank">ღღحـریــم عشـــق ღღ</a></font></div><div class=div32><font class=text1><a href="http://love-sole.blogfa.com/" title="" target="_blank">غزل</a></font></div><div class=div32><font class=text1><a href="http://raha3074.blogfa.com/" title="" target="_blank">رها.....!$!</a></font></div><div class=div32><font class=text1><a href="../../../../eshghooolanehayeman.mihanblog.com/index.html" title="" target="_blank">ღ♥love♥ღ</a></font></div><div class=div32><font class=text1><a href="http://www.sinahooti.blogfa.com/" title="" target="_blank">دل عاشق سیناهوتی</a></font></div><div class=div32><font class=text1><a href="http://1ghatreashk.blogfa.com/" title="" target="_blank">سهم من از عشق</a></font></div><div class=div32><font class=text1><a href="http://agahidan9.rozblog.com " title="" target="_blank">تبادل لینک اتوماتیک و رایگان</a></font></div><div class=div32><font class=text1><a href="http://alishmastanha.blogfa.com/" title="" target="_blank">دوست داشتنی</a></font></div><div class=div32><font class=text1><a href="http://www.tanha-211.blogfa.com/" title="" target="_blank">صداقت گمشده ... !!!</a></font></div>        <div class=div32><font class=text1><a target="_blank" href="http://www.mytheme.ir">بهترین قالب های وبلاگ</a></font></div>
+        <div class=div32><font class=text1><a href="../../../link/index.html">همه پیوندها</a></font></div>
+    </div><div class=div30></div>
+</div>
+<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>نویسندگان</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div32><font class=text1><a href="../../author/590544.html"> محمد نوریزاده (517)</a></font></div>    </div><div class=div30></div>
+</div>
+
+
+		<form id="frm-16076702105fd319c28c6b0" method="post" action="http://ashgeeeee.mihanblog.com/poll/new/fid/16076702105fd319c28c6b0/atrty/1607670210/avrvy/0/key/e43cf34b050b006544a9bc4910b24987/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="160330" id="data[pollid]" />		<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>نظرسنجی</font></div></div>
+    <div class=div342></div>
+    <div class=div341>        <div class=div32><font class=text1>ایا تا به حال عاشق شدید<br>
+            <label><input type="radio" name="data[answer]" value="v1">بله</label><br><label><input type="radio" name="data[answer]" value="v2">خیر</label><br><label><input type="radio" name="data[answer]" value="v3">عاشق بودم</label><br><label><input type="radio" name="data[answer]" value="v4">عاشق هستم</label><br><label><input type="radio" name="data[answer]" value="v5">بدم میاد</label><br></font>
+            <div align="center"><br><input type="submit" value="ثبت" style="font-family: Tahoma; font-size: 9pt"><br><br></div></div>    </div><div class=div30></div>
+</div>
+		<input type="hidden" name="frm-id" value="16076702105fd319c28c6b0" id="frm-id" /></form>
+<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>برچسبها</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div32><font class=text1><a href="../../tag/عاشق.html">عاشق</a></font></div><div class=div32><font class=text1><a href="../../tag/معشوق.html">معشوق</a></font></div><div class=div32><font class=text1><a href="../../tag/دختر.html">دختر</a></font></div><div class=div32><font class=text1><a href="../../tag/شماره+دختر.html">شماره دختر</a></font></div><div class=div32><font class=text1><a href="../../tag/عاشقانه.html">عاشقانه</a></font></div><div class=div32><font class=text1><a href="../../tag/عشق+بد.html">عشق بد</a></font></div><div class=div32><font class=text1><a href="../../tag/عشقی.html">عشقی</a></font></div><div class=div32><font class=text1><a href="../../tag/شعر+عاشقانه.html">شعر عاشقانه</a></font></div><div class=div32><font class=text1><a href="../../tag/دوستت+دارم.html">دوستت دارم</a></font></div><div class=div32><font class=text1><a href="../../tag/عشق.html">عشق</a></font></div>    </div><div class=div30></div>
+</div>
+<form id="frm-16076702105fd319c28d26d" method="get" action="http://ashgeeeee.mihanblog.com/post/search/fid/16076702105fd319c28d26d"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> <div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>جستجو</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div32><center><input type="text" name="search_text"><br>
+            <input type="submit" value="جستجو" style="font-family: Tahoma; font-size: 9pt"></center></div>
+    </div><div class=div30></div>
+</div><input type="hidden" name="frm-id" value="16076702105fd319c28d26d" id="frm-id" /></form>
+<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>آمار وبلاگ</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div32><font class=text1>کل بازدید : <script>getStatVar('total_view');</script></font></div>
+        <div class=div32><font class=text1>بازدید امروز :<script>getStatVar('today_view');</script></font></div>
+        <div class=div32><font class=text1>بازدید دیروز : <script>getStatVar('yesterday_view');</script></font></div>
+        <div class=div32><font class=text1>بازدید این ماه : <script>getStatVar('this_month_view');</script></font></div>
+        <div class=div32><font class=text1>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></font></div>
+        <div class=div32><font class=text1>تعداد نویسندگان : <script>getStatVar('total_author');</script></font></div>
+        <div class=div32><font class=text1>تعداد کل پست ها : <script>getStatVar('total_post');</script></font></div>
+        <div class=div32><font class=text1>آخرین بازدید : <script>getStatVar('last_view_date');</script></font></div>
+        <div class=div32><font class=text1>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></font></div>
+    </div><div class=div30></div>
+</div>
+<div class=div24>
+
+    <style>
+
+
+
+        .clearfix {display: inline-block;}
+        .clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+
+
+
+        .cblike{
+            margin:4px 0 4px 35px;
+        }
+        .cblike a {
+            float:left;
+            padding:3px;
+            text-align:center;
+            font-size:12px;
+            color:#FFF;
+            display:block;
+            line-height:15px;
+            text-decoration: none;
+        }
+
+
+
+
+        .cblike a.clike_plus {
+            background-color:#009900 ; /*green #039B03*/
+
+            border-radius: 5px ;
+
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+
+            /*border:1px solid green;
+            border-right:0px;*/
+        }
+        .cblike a.clike_minus {
+            background-color:#CC0000;
+            border-radius: 5px ;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+
+            /*border:1px solid red;
+            border-left:0px;*/
+        }
+        .cblike a.clike_minus:hover {
+            background-color:red;
+            text-decoration: none;
+        }
+        .cblike a.clike_plus:hover {
+            background-color:green;
+            text-decoration: none;
+        }
+        .cblike a span{
+            font-weight:bold;
+            font-size:13px;
+
+            color:#fff;
+        }
+
+
+
+        .mihan_logo {
+            background: url("http://mihanblog.com/public/public/images/logo/poweredby.gif") no-repeat scroll center top transparent;
+            height: 131px;
+            margin-top: 10px;
+            text-align: center;
+        }</style>
+    <div class="mihan_logo"></div>
+
+    <center><!-- start logo cod off http://moshavereee.mihanblog.com/ --><p align="center"><p align="center"><a href="../../../../moshavereee.mihanblog.com/index.html" target="_blank"><img border="0" src="http://www.astroupload.com/uploads/1380014399711.gif" width="150" height="200" alt="محمد نوریزاده"></a></p><!--finish logo cod off http://moshavereee.mihanblog.com/ -->
+
+
+
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=3040205&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=3040205" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code -->
+
+
+
+
+
+
+<p align="center"><a href="../../../../mohamadrasoolallah.mihanblog.com/index.html" target="_blank"><img border="0" src="http://upload7.ir/images/67403464696329409987.gif" width="120" alt="محمد رسول الله" height="240"></a><br><input onclick="this.select()" type="text" width="356" name="T1" size="15" value='<!-- start logo cod off http://mohamadrasoolallah.mihanblog.com --><p align="center"><p align="center"><a href="http://mohamadrasoolallah.mihanblog.com" target="_blank"><img border="0" src="http://upload7.ir/images/67403464696329409987.gif" width="120" height="240" alt="محمد رسول الله"></a></p><!--finish logo cod off http://mohamadrasoolallah.mihanblog.com -->' dir="ltr" ></p><div style="display:none"><a href="http://blogers.ir">وبلاگ</a>-<a href="http://blogers.ir/cod/make-logo-banner-cod/">کد لوگو و بنر</a></div>
+
+
+
+
+
+ <script language="javascript" src="http://blogskins.ir/tools/player/?pl=1&file=http://up.winplay.ir/91/tir/Ali_Abdolmaleki_-_Engari_Marizam_%5B128%5D.mp3&start=1&random=1&vol=90"></script><br><a href="../../../../codejadidmusic.mihanblog.com/index.html"target="_blank" >کد اهنگ جدید برای وبلاگ </a><br></center></div>
+
+</td>
+
+<td class=div1 valign=top>
+
+    <div class=div61>
+        <div class=div10><font class=title>عشق</font></div>
+        <div class=div12><font class=des>زندگی بدون عشق هیچ معنایی ندارد</font></div>
+    </div>
+
+    		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/468">با عشق زندگی کن </a></font></div>
+            <div class=div58><font class=text7>سه شنبه 29 اسفند 1391 :: نویسنده : <a href="../../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div style="text-align: right;"><font color="#cc33cc"><span style="line-height: 17px;"><b><br></b></span></font></div><div style="text-align: right;"><span style="line-height: 17px;"><b><font color="#cc33cc">شخصی بود که تمام زندگی‌اش را با عشق و محبت پشت سر گذاشته بود و وقتی از دنیا رفت همه می‌گفتند به بهشت رفته‌است. آدم مهربانی مثل او حتماً به بهشت می‌رفت. در آن زمان بهشت هنوز به مرحله کیفیت فراگیر نرسیده بود. استقبال از او باتشریفات مناسب انجام نشد دختری که باید او را راه می‌داد نگاه سریعی به لیست انداخت و وقتی نام او را نیافت، او را به دوزخ فرستاد. در دوزخ هیچ کس از آدم دعوت‌نامه یا کارت شناسایی نمی‌خواهد، هرکس به آن‌جا برسد می‌تواند وارد شود.</font></b></span></div><div style="text-align: right;"><span style="line-height: 17px;"><b><font color="#cc33cc"><br></font></b></span></div><div style="text-align: right;"><span style="line-height: 17px;"><b><font color="#cc33cc">آن شخص وارد شد و آن‌جا ماند. چند روز بعد، ابلیس با خشم به دروازه بهشت رفت و یقه پطرس قدیس را گرفت پطرس که نمی‌دانست ماجرا از چه قرار است پرسید چه شده است؟ ابلیس که از خشم قرمز شده بود گفت: آن شخص را که به دوزخ فرستاده‌اید آمده و کار و زندگی ما را به هم زده‌است؛ از وقتی که رسیده نشسته و به حرف‌های دیگران گوش می‌دهد، در چشم‌هایشان نگاه می‌کند و به درد و دلشان می‌رسد حالا همه دارند در دوزخ با هم گفت وگو می‌کنند، یکدیگر را در آغوش می‌کشند و می‌بوسند. دوزخ جای این کارهانیست! بیایید و این مرد را پس بگیرید.</font></b></span></div><div style="text-align: right;"><span style="line-height: 17px;"><b><font color="#cc33cc"><br></font></b></span></div><div style="text-align: right;"><span style="line-height: 17px;"><b><font color="#cc33cc">وقتی راوی قصه‌اش را تمام کرد با مهربانی به من نگریست و گفت:</font></b></span></div><div style="text-align: right;"><span style="line-height: 17px;"><b><font color="#cc33cc">«با چنان عشقی زندگی کن که حتی اگر بنا به تصادف به دوزخ افتادی،</font></b></span></div><div style="text-align: right;"><span style="line-height: 17px;"><b><font color="#cc33cc">خود شیطان تو را به بهشت بازگرداند»</font></b></span></div><div style="text-align: right;"><br></div>
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="../../category/6.html" class=text4>داستان عاشقانه و زیبا</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                                <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/468#commentlist">نظرات (<script>setCommentCnt(468)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('468','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/467">دوست داشتن</a></font></div>
+            <div class=div58><font class=text7>پنجشنبه 10 اسفند 1391 :: نویسنده : <a href="../../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><div style="text-align: center;"><b><font size="3" color="#cc33cc">وقتی یکیو دوس داری که نباس بشینی نگا کنی آیا بیاد آیا نیاد آیا فلان آیا کی قاپشو بدزده که</font></b></div><div style="text-align: center;"><b><font size="3" color="#cc33cc"><br></font></b></div><div style="text-align: center;"><b><font size="3" color="#cc33cc"><br></font></b></div><div style="text-align: center;"><b><font size="3" color="#cc33cc">وقتی یکیو دوس داری باس بدوئی بری بش بگی که عاشقشی جوریکه مادر بگرید</font></b></div>
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                                <br><font color="#8b0542">برچسب ها :</font>
+                                <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/467#commentlist">نظرات (<script>setCommentCnt(467)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('467','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/466">عشق</a></font></div>
+            <div class=div58><font class=text7>چهارشنبه 9 اسفند 1391 :: نویسنده : <a href="../../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+<font color="#FF0000"><font style="FONT-SIZE: 14pt"><font color="#FFFFFF"><font style="FONT-SIZE: 8pt"><div id="posttitle"><a href="http://www.daryayeeshge.blogfa.com/post-16.aspx"></a></div>
+<div id="postbody"><font color="#00ff33" size="3"></font><a href="../../../index.html" target="_blank" title="عشق">&nbsp; &nbsp;<p></p>
+<p align="center"><font color="#00ff33" size="3"></font></p>
+<p align="center"><font color="#00ff33" size="3"></font>&nbsp;&nbsp;<img alt="تصاویر زیباسازی ، كد موسیقی ، قالب وبلاگ ، خدمات وبلاگ نویسان ، تصاویر یاهو ، پیچك دات نت www.pichak.net" src="http://pichak.net/blogcod/zibasazi/01/image/www.Pichak.net2.gif" border="0" height="170" width="275"></p>
+<p><font color="#00ff33" size="3"></font>&nbsp;</p>
+</a><p><font color="#00ff33" size="3">به کودکی گفتند : عشق چیست؟ گفت : بازی.
+ به نوجوانی گفتند : عشق چیست؟ گفت : رفیق بازی. به جوانی گفتند : عشق 
+چیست؟ گفت : پول و ثروت. به پیرمردی گفتند : عشق چیست؟ گفت :عمر. به عاشقی 
+گفتند : عشق چیست؟ چیزی نگفت.آهی کشید و سخت گریست</font> <br></p>
+<center>
+<p style="MARGIN-LEFT: -100px; MARGIN-RIGHT: -100px" align="center">&nbsp;</p><a href="../../../index.html" target="_blank" title="عشق">
+<p style="MARGIN-LEFT: -100px; MARGIN-RIGHT: -100px" align="center">&nbsp;<img src="http://s1.picofile.com/file/7601847090/lovley_pic.jpg"></p>
+<p style="MARGIN-LEFT: -100px; MARGIN-RIGHT: -100px" align="center">&nbsp;&nbsp;</p>
+<p style="MARGIN-LEFT: -100px; MARGIN-RIGHT: -100px" align="center">&nbsp;<img style="WIDTH: 496px; HEIGHT: 385px" src="http://www.dordone.com/user_files/image/image5/0.132081001308511080_dordone_com.jpg" height="379" width="486"></p>
+<p style="MARGIN-LEFT: -100px; MARGIN-RIGHT: -100px" align="center">&nbsp;<img src="http://arman5300.persiangig.com/estefade%20shode/ilove%20yuo%20ziba%20sazi/ailav%20yo%20zibasazi%20xedcrtftftftftftfgbuyhctrfgb.jpg"></p>
+<p style="MARGIN-LEFT: -100px; MARGIN-RIGHT: -100px" align="center">&nbsp;</p>
+<p style="MARGIN-LEFT: -100px; MARGIN-RIGHT: -100px" align="center"><span class="messageBody"><font size="2"><font color="#3300ff"><img alt="عکس زیبا و عاشقانه" src="http://eshgh-entezar-melina.persiangig.com/ax-2/asheghaneha%20%281%29.jpg" align="bottom" border="0" hspace="0"></font></font></span></p>
+<p style="MARGIN-LEFT: -100px; MARGIN-RIGHT: -100px" align="center">&nbsp;</p>
+<p align="center"><strong><font color="#0000ff"><img alt="عاشقانه" src="http://eshgh-entezar-melina.persiangig.com/ax/31.gif" align="bottom" border="0" hspace="0"></font></strong></p></a></center></div></font></font></font></font>
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="../../category/2.html" class=text4>عشق</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                <a href="../../tag/عشق.html" class=text4>عشق</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AD%D8%B1%D9%81%D8%A7%DB%8C%D9%87%20%DB%8C%D9%87%20%D9%BE%D8%B3%D8%B1%D9%87%20%D8%AA%D9%86%D9%87%D8%A7" class=text4>حرفایه یه پسره تنها</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AD%D8%B1%D9%81%20%D9%87%D8%A7%DB%8C%20%DB%8C%D9%87%20%D8%AF%D8%AE%D8%AA%D8%B1%20%D8%AA%D9%86%D9%87%D8%A7" class=text4>حرف های یه دختر تنها</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%B9%D8%B4%D9%82%20%D8%AF%D8%B1%D9%88%D9%86" class=text4>عشق درون</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%B1%D9%88%D8%B4%20%D9%85%D8%AE%20%DA%A9%D8%B1%D8%AF%D9%86%20%D8%AF%D8%AE%D8%AA%D8%B1" class=text4>روش مخ کردن دختر</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AF%DB%8C%D9%88%D9%86%D9%87" class=text4>دیونه</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D9%85%D8%B1%DA%AF" class=text4>مرگ</a>،                 <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/466#commentlist">نظرات (<script>setCommentCnt(466)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('466','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/465">بوسه عاشق</a></font></div>
+            <div class=div58><font class=text7>چهارشنبه 9 اسفند 1391 :: نویسنده : <a href="../../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+<font color="#FF0000"><font style="FONT-SIZE: 14pt"><font color="#FFFFFF"><font style="FONT-SIZE: 8pt"><p align="center"><a href="../../../index.html" target="_blank" title="عشق"><p align="center"><img alt="تصاویر زیباسازی ، كد موسیقی ، قالب وبلاگ ، خدمات وبلاگ نویسان ، تصاویر یاهو ، پیچك دات نت www.pichak.net" src="http://pichak.net/blogcod/zibasazi/01/image/www.Pichak.net2.gif" border="0" height="170" width="275"></p>
+<p align="center">&nbsp;<img alt="http://s1.picofile.com/file/7574758816/Booseh_min_Booseh_ghasedakiHa_blogfa.jpg" src="http://s1.picofile.com/file/7574758816/Booseh_min_Booseh_ghasedakiHa_blogfa.jpg"></p>
+<p>&nbsp;</p></a></p>
+<p>&nbsp;</p>
+<div></div>
+<div align="center">
+<p><font color="#00ff00" size="3">کاش می شد بچه بودم غمی نداشتم<br>شبا راحت چشامو رو هم می ذاشتم<br>می خوابیدم خوابای ساده می دیدم<br>آدما رو ، همه آزاده می دیدم<br>توی دنیای قشنگم ، نه غمی بود و نه دردی<br>نه دل تنگی و نه خونه ی سردی<br>واسه من دیدنی بودن شاپرک ها<br>وقتی که پر می کشیدن سوی گل ها<br>سوار اسب خیالم تا دل ابرا می تاختم<br>میون ستاره ها خونه می ساختم<br>می شدم همسایه ی خورشید زیبا<br>از تو آسمون می رفتم توی دریا<br>مثل ماهی توی آب سفر می کردم<br>از تموم دریاها گذر می کردم<br>خبر از جنگ بزرگترا نداشتم<br>توی سینه ها گل امید می کاشتم<br>رو لبام ترانه ی مهر و وفا بود<br>دل کوچیکم پر از عشق ِخدا بود</font></p></div></font></font></font></font>
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                                <br><font color="#8b0542">برچسب ها :</font>
+                <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AA%D8%B5%D8%A7%D9%88%DB%8C%D8%B1%20%D8%B2%DB%8C%D8%A8%D8%A7%D8%B3%D8%A7%D8%B2%DB%8C" class=text4>تصاویر زیباسازی</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D9%83%D8%AF%20%D9%85%D9%88%D8%B3%DB%8C%D9%82%DB%8C" class=text4>كد موسیقی</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF" class=text4>قالب وبلاگ</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%D9%86%D9%88%DB%8C%D8%B3%D8%A7%D9%86" class=text4>خدمات وبلاگ نویسان</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AA%D8%B5%D8%A7%D9%88%DB%8C%D8%B1%20%DB%8C%D8%A7%D9%87%D9%88" class=text4>تصاویر یاهو</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D9%BE%DB%8C%DA%86%D9%83%20%D8%AF%D8%A7%D8%AA%20%D9%86%D8%AA%20www_____%7C(dot)%7C_____pichak_____%7C(dot)%7C_____net%20%20%20http://s1_____%7C(dot)%7C_____picofile_____%7C(dot)%7C_____com/file/7574758816/Booseh_min_Booseh_ghasedakiHa_blogfa_____%7C(dot)%7C_____jpg%20%20%20%20%20%20%20%20%DA%A9%D8%A7%D8%B4%20%D9%85%DB%8C%20%D8%B4%D8%AF%20%D8%A8%DA%86%D9%87%20%D8%A8%D9%88%D8%AF%D9%85%20%D8%BA%D9%85%DB%8C%20%D9%86%D8%AF%D8%A7%D8%B4%D8%AA%D9%85%20%D8%B4%D8%A8%D8%A7%20%D8%B1%D8%A7%D8%AD%D8%AA%20%DA%86%D8%B4%D8%A7%D9%85%D9%88%20%D8%B1%D9%88%20%D9%87%D9%85%20%D9%85%DB%8C%20%D8%B0%D8%A7%D8%B4%D8%AA%D9%85%20%D9%85%DB%8C%20%D8%AE%D9%88%D8%A7%D8%A8%DB%8C%D8%AF%D9%85%20%D8%AE%D9%88%D8%A7%D8%A8%D8%A7%DB%8C%20%D8%B3%D8%A7%D8%AF%D9%87%20%D9%85%DB%8C%20%D8%AF%DB%8C%D8%AF%D9%85%20%D8%A2%D8%AF%D9%85%D8%A7%20%D8%B1%D9%88" class=text4>پیچك دات نت www.pichak.net   http://s1.picofile.com/file/7574758816/Booseh_min_Booseh_ghasedakiHa_blogfa.jpg        کاش می شد بچه بودم غمی نداشتم شبا راحت چشامو رو هم می ذاشتم می خوابیدم خوابای ساده می دیدم آدما رو</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D9%87%D9%85%D9%87%20%D8%A2%D8%B2%D8%A7%D8%AF%D9%87%20%D9%85%DB%8C%20%D8%AF%DB%8C%D8%AF%D9%85%20%D8%AA%D9%88%DB%8C%20%D8%AF%D9%86%DB%8C%D8%A7%DB%8C%20%D9%82%D8%B4%D9%86%DA%AF%D9%85" class=text4>همه آزاده می دیدم توی دنیای قشنگم</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D9%86%D9%87%20%D8%BA%D9%85%DB%8C%20%D8%A8%D9%88%D8%AF%20%D9%88%20%D9%86%D9%87%20%D8%AF%D8%B1%D8%AF%DB%8C%20%D9%86%D9%87%20%D8%AF%D9%84%20%D8%AA%D9%86%DA%AF%DB%8C%20%D9%88%20%D9%86%D9%87%20%D8%AE%D9%88%D9%86%D9%87%20%DB%8C%20%D8%B3%D8%B1%D8%AF%DB%8C%20%D9%88%D8%A7%D8%B3%D9%87%20%D9%85%D9%86%20%D8%AF%DB%8C%D8%AF%D9%86%DB%8C%20%D8%A8%D9%88%D8%AF%D9%86%20%D8%B4%D8%A7%D9%BE%D8%B1%DA%A9%20%D9%87%D8%A7%20%D9%88%D9%82%D8%AA%DB%8C%20%DA%A9%D9%87%20%D9%BE%D8%B1%20%D9%85%DB%8C%20%DA%A9%D8%B4%DB%8C%D8%AF%D9%86%20%D8%B3%D9%88%DB%8C%20%DA%AF%D9%84%20%D9%87%D8%A7%20%D8%B3%D9%88%D8%A7%D8%B1%20%D8%A7%D8%B3%D8%A8%20%D8%AE%DB%8C%D8%A7%D9%84%D9%85%20%D8%AA%D8%A7%20%D8%AF%D9%84%20%D8%A7%D8%A8%D8%B1%D8%A7%20%D9%85%DB%8C%20%D8%AA%D8%A7%D8%AE%D8%AA%D9%85%20%D9%85%DB%8C%D9%88%D9%86%20%D8%B3%D8%AA%D8%A7%D8%B1%D9%87%20%D9%87%D8%A7%20%D8%AE%D9%88%D9%86%D9%87%20%D9%85%DB%8C%20%D8%B3%D8%A7%D8%AE%D8%AA%D9%85%20%D9%85%DB%8C%20%D8%B4%D8%AF%D9%85%20%D9%87%D9%85%D8%B3%D8%A7%DB%8C%D9%87%20%DB%8C%20%D8%AE%D9%88%D8%B1%D8%B4%DB%8C%D8%AF%20%D8%B2%DB%8C%D8%A8%D8%A7%20%D8%A7%D8%B2%20%D8%AA%D9%88%20%D8%A2%D8%B3%D9%85%D9%88%D9%86%20%D9%85%DB%8C%20%D8%B1%D9%81%D8%AA%D9%85%20%D8%AA%D9%88%DB%8C%20%D8%AF%D8%B1%DB%8C%D8%A7%20%D9%85%D8%AB%D9%84%20%D9%85%D8%A7%D9%87%DB%8C%20%D8%AA%D9%88%DB%8C%20%D8%A2%D8%A8%20%D8%B3%D9%81%D8%B1%20%D9%85%DB%8C%20%DA%A9%D8%B1%D8%AF%D9%85%20%D8%A7%D8%B2%20%D8%AA%D9%85%D9%88%D9%85%20%D8%AF%D8%B1%DB%8C%D8%A7%D9%87%D8%A7%20%DA%AF%D8%B0%D8%B1%20%D9%85%DB%8C%20%DA%A9%D8%B1%D8%AF%D9%85%20%D8%AE%D8%A8%D8%B1%20%D8%A7%D8%B2%20%D8%AC%D9%86%DA%AF%20%D8%A8%D8%B2%D8%B1%DA%AF%D8%AA%D8%B1%D8%A7%20%D9%86%D8%AF%D8%A7%D8%B4%D8%AA%D9%85%20%D8%AA%D9%88%DB%8C%20%D8%B3%DB%8C%D9%86%D9%87%20%D9%87%D8%A7%20%DA%AF%D9%84%20%D8%A7%D9%85%DB%8C%D8%AF%20%D9%85%DB%8C%20%DA%A9%D8%A7%D8%B4%D8%AA%D9%85%20%D8%B1%D9%88%20%D9%84%D8%A8%D8%A7%D9%85%20%D8%AA%D8%B1%D8%A7%D9%86%D9%87%20%DB%8C%20%D9%85%D9%87%D8%B1%20%D9%88%20%D9%88%D9%81%D8%A7%20%D8%A8%D9%88%D8%AF%20%D8%AF%D9%84%20%DA%A9%D9%88%DA%86%DB%8C%DA%A9%D9%85%20%D9%BE%D8%B1%20%D8%A7%D8%B2%20%D8%B9%D8%B4%D9%82%20%D9%90%D8%AE%D8%AF%D8%A7%20%D8%A8%D9%88%D8%AF" class=text4>نه غمی بود و نه دردی نه دل تنگی و نه خونه ی سردی واسه من دیدنی بودن شاپرک ها وقتی که پر می کشیدن سوی گل ها سوار اسب خیالم تا دل ابرا می تاختم میون ستاره ها خونه می ساختم می شدم همسایه ی خورشید زیبا از تو آسمون می رفتم توی دریا مثل ماهی توی آب سفر می کردم از تموم دریاها گذر می کردم خبر از جنگ بزرگترا نداشتم توی سینه ها گل امید می کاشتم رو لبام ترانه ی مهر و وفا بود دل کوچیکم پر از عشق ِخدا بود</a>،                 <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/465#commentlist">نظرات (<script>setCommentCnt(465)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('465','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/464">قلبم فقط مال اوست </a></font></div>
+            <div class=div58><font class=text7>چهارشنبه 9 اسفند 1391 :: نویسنده : <a href="../../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span style="FONT-SIZE: 16pt; COLOR: red; LINE-HEIGHT: 150%; mso-bidi-language: FA" lang="FA"><font color="#ff0000" face="Times New Roman" size="4"><strong>دوستدار شما&nbsp;تنهای همیشه تنها </strong></font></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><a href="../../../index.html" target="_blank" title="عشق"><img alt="" src="http://i19.tinypic.com/33f3o7n.gif" align="bottom" border="1" hspace="1" vspace="1"></a></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span style="FONT-SIZE: 16pt; COLOR: red; LINE-HEIGHT: 150%; mso-bidi-language: FA" lang="FA"><font color="#ff0000" face="Times New Roman" size="4"><strong></strong></font></span>&nbsp;</p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span style="FONT-SIZE: 16pt; COLOR: red; LINE-HEIGHT: 150%; mso-bidi-language: FA" lang="FA"><font color="#ff0000" face="Times New Roman" size="4"><strong></strong></font></span>&nbsp;</p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span style="FONT-SIZE: 16pt; COLOR: red; LINE-HEIGHT: 150%; mso-bidi-language: FA" lang="FA"><font color="#ff0000" face="Times New Roman" size="4"><strong></strong></font></span>&nbsp;</p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span style="FONT-SIZE: 16pt; COLOR: red; LINE-HEIGHT: 150%; mso-bidi-language: FA" lang="FA"><font color="#ff0000" face="Times New Roman" size="4"><strong>عاشق&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;عاشق تر</strong></font></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span style="FONT-SIZE: 16pt; COLOR: red; LINE-HEIGHT: 150%; mso-bidi-language: FA" lang="FA"><strong><font face="Times New Roman" size="4"></font></strong></span><font color="#ff0000">&nbsp;</font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span style="FONT-SIZE: 16pt; COLOR: red; LINE-HEIGHT: 150%; mso-bidi-language: FA" lang="FA"><font face="Times New Roman"><strong><font size="4">نبود در تار و پودش&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; دیدی گفت عاشقه عاشق<o:p></o:p></font></strong></font></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><font face="Times New Roman"><strong><font color="#ff0000" size="4">@@@@@@@&nbsp;&nbsp;&nbsp;نبودش&nbsp; @@@@@@@@@</font></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><font face="Times New Roman"><strong><font size="4"><font color="#ff0000">امشب همه جا حرف <span dir="ltr"></span>&nbsp;از آسمون و مهتابه<span dir="ltr"></span>&nbsp;<span dir="rtl"></span> ،<span dir="ltr"></span> <span dir="rtl"></span>&nbsp;تموم خونه دیدار این خونه<o:p></o:p></font></font></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><font face="Times New Roman"><strong><font size="4"><font color="#ff0000">فقط&nbsp; خوابه ، تو که رفتی هوای &nbsp;خونه تب داره<span dir="ltr"></span> <span dir="rtl"></span>&nbsp;،<span dir="ltr"></span> <span dir="rtl"></span>&nbsp;داره&nbsp; از درو دیوارش غم<o:p></o:p></font></font></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><font face="Times New Roman"><strong><font size="4"><font color="#ff0000">عشق تو می باره ، دارم می میرم از بس غصه خوردم<span dir="ltr"></span> <span dir="rtl"></span>،<span dir="ltr"></span> <span dir="rtl"></span>&nbsp;بیا بر گرد تا ازعشقت<o:p></o:p></font></font></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><font face="Times New Roman"><strong><font size="4"><font color="#ff0000">نمردم، همون که فکر نمی کردی نمونده پیشت، دیدی رفت ودل ما<span dir="ltr"></span> رو<span dir="ltr"></span> سوزوندش<o:p></o:p></font></font></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><font face="Times New Roman"><strong><font size="4"><font color="#ff0000">حیات خونه دل می گه درخت ها همه خاموشن، به جای کفتر و<span dir="ltr"></span> <span dir="rtl"></span>&nbsp;گنجشک<span dir="ltr"></span> <span dir="rtl"></span>&nbsp;کلاغای<o:p></o:p></font></font></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><font face="Times New Roman"><strong><font size="4"><font color="#ff0000">سیاه پوشن ،&nbsp; چراغ&nbsp; خونه<span dir="ltr"></span> <span dir="rtl"></span>&nbsp;خوابیده &nbsp;توی<span dir="ltr"></span> <span dir="rtl"></span>&nbsp;دنیای خاموشی&nbsp; ، <span dir="ltr"></span>&nbsp;<span dir="rtl"></span>&nbsp;دیگه<span dir="ltr"></span> <span dir="rtl"></span>&nbsp;ساعت رو<o:p></o:p></font></font></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><font face="Times New Roman"><strong><font size="4"><font color="#ff0000">طاقچه شده کارش فراموشی <span dir="ltr"></span>&nbsp;<span dir="rtl"></span>،&nbsp; شده کارش فراموشی <span dir="ltr"></span>&nbsp;<span dir="rtl"></span>،<span dir="ltr"></span> <span dir="rtl"></span>&nbsp;دیگه<span dir="ltr"></span> <span dir="rtl"></span>&nbsp;بارون&nbsp; نمی<o:p></o:p></font></font></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><font face="Times New Roman"><strong><font size="4"><font color="#ff0000">باره<span dir="ltr"></span> <span dir="rtl"></span>&nbsp;اگر چه <span dir="ltr"></span>&nbsp;ابر سیاه<span dir="ltr"></span> <span dir="rtl"></span>&nbsp;،<span dir="ltr"></span> <span dir="rtl"></span>&nbsp;تو که&nbsp; نیستی &nbsp;توی<span dir="ltr"></span> <span dir="rtl"></span>&nbsp;این خونه ،<span dir="ltr"></span>&nbsp; <span dir="rtl"></span>&nbsp;دیگه <span dir="ltr"></span>&nbsp;آشفته<o:p></o:p></font></font></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><font face="Times New Roman"><strong><font size="4"><font color="#ff0000">بازاریست &nbsp;، &nbsp;تموم <span dir="ltr"></span>&nbsp;گل ها&nbsp; خشکیدن مثل خار بیابون ها ،<span dir="ltr"></span> <span dir="rtl"></span>&nbsp;دیگه<span dir="ltr"></span> <span dir="rtl"></span>&nbsp;از<o:p></o:p></font></font></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><font face="Times New Roman"><strong><font size="4"><font color="#ff0000">رنگ&nbsp; و رو رفته ، کوچه و خیابون ها ،،، من گفتم و یارم گفت<o:p></o:p></font></font></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><font face="Times New Roman"><strong><font size="4"><font color="#ff0000">گفتیم و سفر کردیم،از دشت شقایق ها،با عشق گذرکردیم<o:p></o:p></font></font></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><font face="Times New Roman"><strong><font size="4"><font color="#ff0000">گفتم اگه من مردم ، چقدر به من وفاداری، عشقو<o:p></o:p></font></font></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><font face="Times New Roman"><strong><font size="4"><font color="#ff0000">به فراموشی ،چند روزه تو می سپاری<o:p></o:p></font></font></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><font face="Times New Roman"><strong><font size="4"><font color="#ff0000">گفتم که تو می دونی،سرخاک<o:p></o:p></font></font></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><font face="Times New Roman"><strong><font size="4"><font color="#ff0000">تو می میرم ، ولی<o:p></o:p></font></font></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><font face="Times New Roman"><strong><font size="4"><font color="#ff0000">تا لحظه مردن<o:p></o:p></font></font></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><font face="Times New Roman"><strong><font size="4"><font color="#ff0000">نمی گیرم<o:p></o:p></font></font></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><font face="Times New Roman"><strong><font size="4"><font color="#ff0000">دل از<o:p></o:p></font></font></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: center" align="right"><font face="Times New Roman"><strong><font color="#000000" size="4"><span style="FONT-SIZE: 16pt; COLOR: #999999; LINE-HEIGHT: 150%; mso-bidi-language: FA" lang="FA"><font color="#ff0000">&nbsp;تو</font></span></font></strong></font></p>
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="../../category/1.html" class=text4>جملات عاشقانه</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                <a href="http://ashgeeeee.mihanblog.com/post/tag/%D9%82%D9%84%D8%A8%D9%85%20%D9%81%D9%82%D8%B7%20%D9%85%D8%A7%D9%84%20%D8%A7%D9%88%D8%B3%D8%AA" class=text4>قلبم فقط مال اوست</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D9%82%D9%84%D8%A8%D9%85" class=text4>قلبم</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D9%82%D9%84%D8%A8%D8%AA" class=text4>قلبت</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D9%82%D9%84%D8%A8%D8%B4" class=text4>قلبش</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AF%D9%88%D8%B3%D8%AA%D8%AA%20%D8%AF%D8%A7%D8%B1%D9%85%20%D8%B2%D9%86%D8%AF%DA%AF%DB%8C%20%D9%85%D9%86" class=text4>دوستت دارم زندگی من</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AF%D8%AE%D8%AA%D8%B1%20%D8%AC%DB%8C%DA%AF%D8%B1" class=text4>دختر جیگر</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%DA%86%D9%87%20%DA%A9%D8%A7%D8%B1%DB%8C%20%D8%A8%D9%88%D8%AF%20%DA%A9%D9%87%20%D9%85%D9%86%20%DA%A9%D8%B1%D8%AF%D9%85" class=text4>چه کاری بود که من کردم</a>،                 <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/464#commentlist">نظرات (<script>setCommentCnt(464)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('464','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/463">و اما عاشقی من و پایان ان که با مرگم برابر است</a></font></div>
+            <div class=div58><font class=text7>چهارشنبه 9 اسفند 1391 :: نویسنده : <a href="../../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><a href="../../../index.html" target="_blank" title="عشق"><img style="WIDTH: 493px; HEIGHT: 346px" alt="" src="http://i26.tinypic.com/2mwxfmu.jpg" align="bottom" border="0" height="357" hspace="0" width="441"></a><br><p></p>
+<p>&nbsp;&nbsp;&nbsp;<font size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">&nbsp;ای کسانی که مامور دفنم هستید به وصیتم گوش دهید:</font></font></p>
+<p><font color="#ff0000" size="4">&nbsp; هنگامی که مردم مرا در تابوت سیاهی بگذارید تا مردم بدانند هر چه سیاهی بود من کشیده ام .</font></p>
+<p><font color="#ff0000" size="4">چشمانم را در تا بوت باز بگذارید تا مردم بدانند چشم انتظار از این دنیا رفته ام&nbsp; .</font></p>
+<p><font color="#ff0000" size="4">دستهایم را در تابیرون بیاورید تا مردم بدانند دست خالی از این دنیا رفته ام .</font></p>
+<p><font color="#ff0000" size="4">عکس معشوقه ام را بر تابوتم بگذارید تا مردم بدانند عاشق از این دنیا رفته ام .</font></p>
+<p><font color="#ff0000" size="4">هرگاه تکه یخی را به شکل صلیب دیدید بر مزارم بگذارید تا با </font></p>
+<p><font color="#ff0000" size="4">طلوع گرم خورشیداب شود و بجای</font></p>
+<p><font color="#ff0000" size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; معشوقه ی بی وفایم بر مزارم اشک بریزد</font></p>
+<p><font color="#ff0000" size="5">بر سنگ مزارم بنویسید:</font></p>
+<p><font color="#ff0000" size="5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "اشفته دلی خفته در این </font></p>
+<p><font color="#ff0000" size="5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; خلوت خاموش"&nbsp; </font></p>
+<p><font color="#ff0000">&nbsp;</font></p>
+<p><font color="#ff0000">&nbsp;&nbsp;&nbsp;<font size="4">&nbsp;&nbsp;&nbsp;&nbsp; چشم انتظارم </font></font></p>
+<p><font color="#ff0000" size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ای کاش برگردی</font></p>
+<p><font color="#ff0000" size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; بیا بر سر مزارم</font></p>
+
+
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="../../category/2.html" class=text4>عشق</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                <a href="http://ashgeeeee.mihanblog.com/post/tag/%D9%88%20%D8%A7%D9%85%D8%A7%20%D8%B9%D8%A7%D8%B4%D9%82%DB%8C%20%D9%85%D9%86%20%D9%88%20%D9%BE%D8%A7%DB%8C%D8%A7%D9%86%20%D8%A7%D9%86%20%DA%A9%D9%87%20%D8%A8%D8%A7%20%D9%85%D8%B1%DA%AF%D9%85%20%D8%A8%D8%B1%D8%A7%D8%A8%D8%B1%20%D8%A7%D8%B3%D8%AA" class=text4>و اما عاشقی من و پایان ان که با مرگم برابر است</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%B2%D9%86%D8%AF%DA%AF%DB%8C%20%D9%BE%D8%A7%DA%A9" class=text4>زندگی پاک</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%A8%D8%AF%20%D8%A8%D8%AE%D8%AA%DB%8C%20%DB%8C%D9%87%20%D8%AF%D8%AE%D8%AA%D8%B1%20%D8%AA%D9%86%D9%87%D8%A7" class=text4>بد بختی یه دختر تنها</a>، <a href="../../tag/دختر.html" class=text4>دختر</a>، <a href="../../tag/عشق.html" class=text4>عشق</a>، <a href="../../tag/عاشق.html" class=text4>عاشق</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AC%DB%8C%DA%AF%D8%B1" class=text4>جیگر</a>،                 <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/463#commentlist">نظرات (<script>setCommentCnt(463)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('463','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/462">یک پنجره برای دیدن</a></font></div>
+            <div class=div58><font class=text7>چهارشنبه 9 اسفند 1391 :: نویسنده : <a href="../../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+<div class="postbody"><p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">یک پنجره برای دیدن</font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000"></font></div>
+<p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">یک پنجره برای شنیــــــــــــــــــدن</font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000"></font></div>
+<p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">یک پنجره که مثل حلقه ی چاهــــــــــــــــــــــــی</font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000"></font></div>
+<p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">در انتهای خود به قلب زمین می رســـــــــــــــــــــــــــــــــــــد</font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000"></font></div>
+<p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">و باز می شود به سوی وسعت این مهربانی مکرر آبی رنـــــــــــــــــــــــگ</font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000"></font></div>
+<p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">یک پنجره که دست های کوچک تنهایــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــی را</font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000"></font></div>
+<p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">از بخشش شبانه ی عطر ستاره های کریــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــم</font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000"></font></div>
+<p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">سرشار
+ می 
+کنـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــد</font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000"></font></div>
+<p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">و
+ می شود از 
+آنجـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــا</font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000"></font></div>
+<p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">خورشید را به غربت گل های شمعدانی مهمان کــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــرد</font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000"></font></div>
+<p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">یک پنجره برای من کافیســــــــ*ـ*ـ*ـ*ــــــــ*ـ*ـ*ـ*ــــــــــــــــــــــــــــــــــــــــــــــــــــت</font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000"></font></div>
+<p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">*ـــــــــــــــــــــــــــــــــــ*ـــ ـــــ ــــــ ـــــ ـــــ ــــ ـــــ*ــــــــــــــــــــــــــــــــــــــــ* </font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000"></font></div>
+<p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">*ــــــــــــــــــــــــــــــ*ــــــ ـــــ ــــ ـــــ ــــ ـــ*ــــــــــــــــــــــــــــــــــــ*</font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000"></font></div>
+<p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">*ـــــــــــــــــــــــــ *ــــ ـــ ــــ ــــ ـــ*ــــــــــــــــــــــــــــــــ*</font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000"></font></div>
+<p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">*ـــــــــــــــــــــــــ*ــ ـــ ـــ ـ*ـــــــــــــــــــــــــــــ*</font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000"></font></div>
+<p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">*ــــــــــــــــــــــ*ـ ـ*ـــــــــــــــــــــــ*</font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000"></font></div>
+<p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">*ـــــــــــــــــــــ*ــــــــــــــــــــ*</font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000"></font></div>
+<p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">*ـــــــــــــــــــــــــــــ*</font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000"></font></div>
+<p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">*ــــــــــــــــ*</font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000"></font></div>
+<p class="postM" style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000">*ــــــ*</font></p>
+<div style="COLOR: rgb(255,255,255); TEXT-ALIGN: center"><font color="#ff0000" face="Arial (Arabic)">
+<p class="postM" align="center">*</p></font></div></div>
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="../../category/4.html" class=text4>عشق و تنهایی....!</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                <a href="http://ashgeeeee.mihanblog.com/post/tag/%DB%8C%DA%A9%20%D9%BE%D9%86%D8%AC%D8%B1%D9%87%20%D8%A8%D8%B1%D8%A7%DB%8C%20%D8%AF%DB%8C%D8%AF%D9%86" class=text4>یک پنجره برای دیدن</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AF%D9%88%D8%B3%D8%AA%D8%AA%20%D8%AF%D8%A7%D8%B1%D9%85" class=text4>دوستت دارم</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AF%D8%AE%D8%AA%D8%B1%DA%A9%20%D8%AA%D9%86%D9%87%D8%A7" class=text4>دخترک تنها</a>، <a href="../../tag/دختر.html" class=text4>دختر</a>، <a href="../../tag/عاشق.html" class=text4>عاشق</a>، <a href="../../tag/معشوق.html" class=text4>معشوق</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AF%D9%84%20%D8%B4%D8%B3%D8%AA%D9%87" class=text4>دل شسته</a>،                 <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/462#commentlist">نظرات (<script>setCommentCnt(462)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('462','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/461">ای خدا....</a></font></div>
+            <div class=div58><font class=text7>چهارشنبه 9 اسفند 1391 :: نویسنده : <a href="../../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><p dir="rtl"></p>
+<p dir="rtl"><font color="#ff0033">لحظه ای به من بنگر ، رحمی کن .</font></p>
+<p dir="rtl"><font color="#ff0033">اگر تو بخواهی ، تا صب</font></p>
+<p dir="rtl"><font color="#ff0033">ای خدا میدانم ، هرگاه که کار بدی 
+انجام دهم ، توفیق همنشینی و هم کلامی با تو از من گرفته میشود .یا اگرهم 
+با تو حرف بزنم ،قلبم آنگونه که باید ،سخن نمیگوید . </font></p>
+<p dir="rtl"><font color="#ff0033">چه باید کرد ؟</font></p>
+<p dir="rtl"><font color="#ff0033">آیا مرا رها میکنی ؟آیا مرا،با سیاهی قلبم تنها میگذاری؟</font></p>
+<p dir="rtl"><font color="#ff0033">نه نه،من تمام امیدم به سوی توست و آنچه از تو سراغ دارم غیر از این .</font></p>
+<p dir="rtl"><font color="#ff0033">ببین رو سیاه شدم </font></p>
+<p dir="rtl"><font color="#ff0033">ببین غرق گناه شدم ح صدایت میزنم : ای خدا&nbsp; ای خدا&nbsp; ای خدا&nbsp; ای خدا&nbsp; ای . . .</font></p>
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="../../category/2.html" class=text4>عشق</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%A7%DB%8C%20%D8%AE%D8%AF%D8%A7_____%7C(dot)%7C__________%7C(dot)%7C__________%7C(dot)%7C__________%7C(dot)%7C_____" class=text4>ای خدا....</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AE%D8%AF%D8%A7%DB%8C%D8%A7%20%DA%A9%D9%85%DA%A9%D9%85%20%DA%A9%D9%86" class=text4>خدایا کمکم کن</a>، <a href="../../tag/عشق.html" class=text4>عشق</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AF%D9%84%20%D8%B4%DA%A9%D8%B3%D8%AA%D9%87" class=text4>دل شکسته</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%B4%D8%B9%D8%B1%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" class=text4>شعر عاشقانه</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%B2%D9%86%D8%AF%DA%AF%DB%8C%20%D8%A8%D8%AF%D9%88%D9%86%20%D8%AF%D8%B1%D8%AF" class=text4>زندگی بدون درد</a>، <a href="../../tag/دختر.html" class=text4>دختر</a>،                 <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/461#commentlist">نظرات (<script>setCommentCnt(461)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('461','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/460">حواسم...</a></font></div>
+            <div class=div58><font class=text7>چهارشنبه 9 اسفند 1391 :: نویسنده : <a href="../../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+<div id="postbody"><font style="font-size: 10pt;" color="#000000" face="Tahoma"><font style="font-size: 8pt;" color="#000000" face="Tahoma">
+<p><a href="../../../index.html" target="_blank" title="عشق"><img src="http://naghmehsara.ir/wp-content/uploads/2012/08/naghmehsara.ir3511.jpg" title="خودم را به شادیِ تو فروختم  و حواسم نبود که حواست به بهایِ من نیست حال خیالت را می فروشم تا خودم را پس بگیرم" class="aligncenter size-full wp-image-241" height="301" width="450"></a></p><p>دم را به شادیِ تو فروختم</p><p>و حواسم نبود که</p>
+<p>حواست به بهایِ من نیست</p>
+<p>حال</p>
+<p>خیالت را می فروشم تا</p>
+<p>خودم را پس بگیرم</p>
+</font></font></div>
+
+<p></p>
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="../../category/1.html" class=text4>جملات عاشقانه</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AD%D9%88%D8%A7%D8%B3%D9%85_____%7C(dot)%7C__________%7C(dot)%7C__________%7C(dot)%7C_____" class=text4>حواسم...</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AC%D9%88%D9%86%D9%85" class=text4>جونم</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%B9%D8%B4%D9%82%D9%85" class=text4>عشقم</a>، <a href="../../tag/دخترم.html" class=text4>دخترم</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%B2%D9%86%D8%AF%DA%AF%DB%8C%D9%85" class=text4>زندگیم</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AF%D9%84%D9%85%20%D8%A8%D8%A7%D8%AE%D8%AA%D9%87%20%D8%AA%D9%88%20%D8%A7%D9%85" class=text4>دلم باخته تو ام</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AF%D9%88%D8%B3%D8%AA%D8%AA%20%D8%AF%D8%A7%D8%B1%D9%85" class=text4>دوستت دارم</a>،                 <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/460#commentlist">نظرات (<script>setCommentCnt(460)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('460','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/459">امشب داغونتر از همیشه ام</a></font></div>
+            <div class=div58><font class=text7>سه شنبه 8 اسفند 1391 :: نویسنده : <a href="../../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+<div class="aboveUnitContent" style="margin-bottom: 15px; margin-top: 15px; text-align: right;"><div class="userContentWrapper"><div class="_wk"><div style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 18px; text-align: center;"><span style="color: rgb(255, 0, 0); font-size: medium;">امشب داغونتر از همیشه ام</span></div><span class="userContent"><div style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 18px; text-align: center;"><span style="color: rgb(255, 0, 0); font-size: medium;">کاش می شد گوشه ای نوشت:</span></div><font size="3" color="#ff0000" style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 18px;"><div style="text-align: center;">خدایا!امشب خیلی خسته ام فردا بیدارم نکن.....</div></font><div style="text-align: center;"><font face="lucida grande, tahoma, verdana, arial, sans-serif"><span style="line-height: 18px;"><br></span></font></div></span></div></div></div><div class="photoUnit clearfix" style="zoom: 1; overflow: hidden; margin: 0px -15px; position: relative; color: rgb(51, 51, 51); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 14px; text-align: right;"><div class="_53s uiScaledThumb photo photoWidth1" data-cropped="1" data-gt="{&quot;fbid&quot;:&quot;468466473208552&quot;}" style="position: relative; overflow: hidden; float: right;"><div class="uiScaledImageContainer photoWrap" style="cursor: pointer; color: rgb(59, 89, 152); text-decoration: none; text-align: center; position: relative; overflow: hidden; margin-right: 3px; height: 287px; width: 403px;"><a class="_6i9" href="http://www.facebook.com/photo.php?fbid=468466473208552&amp;set=a.402518629803337.95313.402514873137046&amp;type=1&amp;relevant_count=1" rel="theater" ajaxify="http://www.facebook.com/photo.php?fbid=468466473208552&amp;set=a.402518629803337.95313.402514873137046&amp;type=1&amp;relevant_count=1&amp;src=http%3A%2F%2Fsphotos-b.xx.fbcdn.net%2Fhphotos-ash4%2F420190_468466473208552_500511885_n.jpg&amp;size=349%2C248&amp;theater" style="cursor: pointer; color: rgb(59, 89, 152); text-decoration: none;"><a href="../../../index.html" target="_blank" title="عشق"><img class="img" src="http://sphotos-b.xx.fbcdn.net/hphotos-ash4/c0.0.349.349/p403x403/420190_468466473208552_500511885_n.jpg" alt="نگاره: ‏امشب داغونتر از همیشه ام
+کاش می شد گوشه ای نوشت:
+خدایا!امشب خیلی خسته ام فردا بیدارم نکن.....
+siroos♥♥♥‏" width="403" height="287" style="border: 0px; height: 287px; min-height: 100%; position: relative;"></a></a></div></div></div>
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="../../category/2.html" class=text4>عشق</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                <a href="http://ashgeeeee.mihanblog.com/post/tag/ur" class=text4>ur</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/uar" class=text4>uar</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/uhar" class=text4>uhar</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/tds&#32;f" class=text4>tds f</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/;" class=text4>;</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/nd" class=text4>nd</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/ki" class=text4>ki</a>،                 <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/459#commentlist">نظرات (<script>setCommentCnt(459)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('459','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/458">کاش میشد گریه کنم</a></font></div>
+            <div class=div58><font class=text7>سه شنبه 8 اسفند 1391 :: نویسنده : <a href="../../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+<div style="text-align: center;"><div class="aboveUnitContent" style="margin-bottom: 15px; margin-top: 15px; color: rgb(51, 51, 51); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 14px; text-align: right;"><div class="userContentWrapper"><div class="_wk" style="font-size: 13px; line-height: 18px;"><span class="userContent">برایـ بعضــ ـــیـ دردـهــ ـآ نهــ میتوانـ گریــــــهـ کَـ ـــرد .<br>:.. نهــ میتوانـ فریــ ــــــآد زد ..:<br>:برایـ بعضـــیـ دردـهـ ـآ:<br>. ..فقـــ ــط میتوانـ .. .<br>::نگــــآهـ کَـ ـرد و ::<br>: .. بی صـــــ ــدا شـکستـ .. :<br></span></div></div></div><div class="photoUnit clearfix" style="zoom: 1; overflow: hidden; margin: 0px -15px; position: relative; color: rgb(51, 51, 51); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 14px; text-align: right;"><div class="_53s uiScaledThumb photo photoWidth1" data-cropped="1" data-gt="{&quot;fbid&quot;:&quot;468469543208245&quot;}" style="position: relative; overflow: hidden; float: right;"><div class="uiScaledImageContainer photoWrap" style="cursor: pointer; color: rgb(59, 89, 152); text-decoration: none; position: relative; overflow: hidden; margin-right: 3px; height: 376px; width: 403px;"><a class="_6i9" href="http://www.facebook.com/photo.php?fbid=468469543208245&amp;set=a.402518629803337.95313.402514873137046&amp;type=1&amp;relevant_count=1" rel="theater" ajaxify="http://www.facebook.com/photo.php?fbid=468469543208245&amp;set=a.402518629803337.95313.402514873137046&amp;type=1&amp;relevant_count=1&amp;src=http%3A%2F%2Fsphotos-a.xx.fbcdn.net%2Fhphotos-ash3%2F13215_468469543208245_1946031616_n.jpg&amp;size=355%2C331&amp;theater" style="cursor: pointer; color: rgb(59, 89, 152); text-decoration: none;"><a href="../../../index.html" target="_blank" title="عشق"><img class="img" src="http://sphotos-a.xx.fbcdn.net/hphotos-ash3/c0.0.355.355/p403x403/13215_468469543208245_1946031616_n.jpg" alt="نگاره: ‏برایـ بعضــ ـــیـ دردـهــ ـآ نهــ میتوانـ گریــــــهـ کَـ ـــرد .
+:.. نهــ میتوانـ فریــ ــــــآد زد ..:
+:برایـ بعضـــیـ دردـهـ ـآ:
+. ..فقـــ ــط میتوانـ .. .
+::نگــــآهـ کَـ ـرد و ::
+: .. بی صـــــ ــدا شـکستـ .. :
+
+siroos ♥♥♥♥‏" width="403" height="376" style="border: 0px; height: 376px; min-height: 100%; position: relative;"></a></a></div></div></div></div>
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="../../category/1.html" class=text4>جملات عاشقانه</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%A8%D8%B1%D8%A7%DB%8C%D9%80%20%D8%A8%D8%B9%D8%B6%D9%80%D9%80%20%D9%80%D9%80%D9%80%DB%8C%D9%80%20%D8%AF%D8%B1%D8%AF%D9%80%D9%87%D9%80%D9%80%20%D9%80%D8%A2%20%D9%86%D9%87%D9%80%D9%80%20%D9%85%DB%8C%D8%AA%D9%88%D8%A7%D9%86%D9%80%20%DA%AF%D8%B1%DB%8C%D9%80%D9%80%D9%80%D9%80%D9%80%D9%80%D9%87%D9%80%20%DA%A9%D9%8E%D9%80%20%D9%80%D9%80%D9%80%D8%B1%D8%AF%20_____%7C(dot)%7C_____%20:_____%7C(dot)%7C__________%7C(dot)%7C_____%20%D9%86%D9%87%D9%80%D9%80%20%D9%85%DB%8C%D8%AA%D9%88%D8%A7%D9%86%D9%80%20%D9%81%D8%B1%DB%8C%D9%80%D9%80%20%D9%80%D9%80%D9%80%D9%80%D9%80%D9%80%D8%A2%D8%AF%20%D8%B2%D8%AF%20_____%7C(dot)%7C__________%7C(dot)%7C_____:%20:%D8%A8%D8%B1%D8%A7%DB%8C%D9%80%20%D8%A8%D8%B9%D8%B6%D9%80%D9%80%D9%80%DB%8C%D9%80%20%D8%AF%D8%B1%D8%AF%D9%80%D9%87%D9%80%20%D9%80%D8%A2:%20_____%7C(dot)%7C_____%20_____%7C(dot)%7C__________%7C(dot)%7C_____%D9%81%D9%82%D9%80%D9%80%D9%80%20%D9%80%D9%80%D8%B7%20%D9%85%DB%8C%D8%AA%D9%88%D8%A7%D9%86%D9%80%20_____%7C(dot)%7C__________%7C(dot)%7C_____%20_____%7C(dot)%7C_____%20::%D9%86%DA%AF%D9%80%D9%80%D9%80%D9%80%D8%A2%D9%87%D9%80%20%DA%A9%D9%8E%D9%80%20%D9%80%D8%B1%D8%AF%20%D9%88%20::%20:%20_____%7C(dot)%7C__________%7C(dot)%7C_____%20%D8%A8%DB%8C%20%D8%B5%D9%80%D9%80%D9%80%D9%80%D9%80%20%D9%80%D9%80%D8%AF%D8%A7%20%D8%B4%D9%80%DA%A9%D8%B3%D8%AA%D9%80%20_____%7C(dot)%7C__________%7C(dot)%7C_____%20:%20%20siroos%20%E2%99%A5%E2%99%A5%E2%99%A5%E2%99%A5" class=text4>برایـ بعضــ ـــیـ دردـهــ ـآ نهــ میتوانـ گریــــــهـ کَـ ـــرد . :.. نهــ میتوانـ فریــ ــــــآد زد ..: :برایـ بعضـــیـ دردـهـ ـآ: . ..فقـــ ــط میتوانـ .. . ::نگــــآهـ کَـ ـرد و :: : .. بی صـــــ ــدا شـکستـ .. :  siroos ♥♥♥♥</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%B9%D8%B4%D9%82%20%D8%AF%D8%B1%D9%88%D9%86" class=text4>عشق درون</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AF%D9%88%D8%B3%D8%AA%D8%AA%20%D8%AF%D8%A7%D8%B1%D9%85" class=text4>دوستت دارم</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%B2%D9%86%D8%AF%DA%AF%DB%8C%20%D9%85%D9%86%20%D8%A8%D9%88%D8%AF%D9%86%20%D8%AA%D9%88%20%D9%87%DB%8C%DA%86%20%D8%A7%D8%B3%D8%AA" class=text4>زندگی من بودن تو هیچ است</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%DA%86%D9%82%D8%AF%D8%B1%20%D8%A8%D8%A7%DB%8C%D8%AF%20%D8%A8%D8%AF%20%D8%A8%D8%AE%D8%AA%DB%8C%20%D8%A8%DA%A9%D8%B4%D9%85" class=text4>چقدر باید بد بختی بکشم</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AE%D8%B3%D8%AA%D9%87%20%D8%B4%D8%AF%D9%85%20%D8%A7%D8%B2%20%D8%B9%D8%B4%D9%82" class=text4>خسته شدم از عشق</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AF%D9%84%D9%85%20%DA%AF%D8%B1%D9%81%D8%AA%D9%87" class=text4>دلم گرفته</a>،                 <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/458#commentlist">نظرات (<script>setCommentCnt(458)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('458','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/457">گاهی وقت ها . . .</a></font></div>
+            <div class=div58><font class=text7>سه شنبه 8 اسفند 1391 :: نویسنده : <a href="../../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+<div class="aboveUnitContent" style="margin-bottom: 15px; margin-top: 15px; color: rgb(51, 51, 51); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 14px; text-align: right;"><div class="userContentWrapper"><div class="_wk" style="font-size: 13px; line-height: 18px;"><span class="userContent">گاهی حرف‌هایی‌ هست<br><br>که معنی‌‌شان را خیلی‌ دیر می‌‌فهمیم<br><br>خیلی‌ دیر . .</span></div></div></div><div class="photoUnit clearfix" style="zoom: 1; overflow: hidden; margin: 0px -15px; position: relative; color: rgb(51, 51, 51); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 14px; text-align: right;"><div class="_53s uiScaledThumb photo photoWidth1" data-cropped="1" data-gt="{&quot;fbid&quot;:&quot;468471079874758&quot;}" style="position: relative; overflow: hidden; float: right;"><div class="uiScaledImageContainer photoWrap" style="cursor: pointer; color: rgb(59, 89, 152); text-decoration: none; position: relative; overflow: hidden; margin-right: 3px; height: 377px; width: 403px;"><a href="../../../index.html" target="_blank" title="عشق"><img class="img" src="http://sphotos-b.xx.fbcdn.net/hphotos-snc6/c0.0.374.374/p403x403/734970_468471079874758_336913617_n.jpg" alt="نگاره: ‏گاهی حرف‌هایی‌ هست
+
+که معنی‌‌شان را خیلی‌ دیر می‌‌فهمیم
+
+خیلی‌ دیر . .‏" width="403" height="377" style="border: 0px; height: 377px; min-height: 100%; position: relative;"></a></div></div></div>
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="../../category/2.html" class=text4>عشق</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                <a href="http://ashgeeeee.mihanblog.com/post/tag/%DA%AF%D8%A7%D9%87%DB%8C%20%D8%AD%D8%B1%D9%81%E2%80%8C%D9%87%D8%A7%DB%8C%DB%8C%E2%80%8C%20%D9%87%D8%B3%D8%AA%20%20%DA%A9%D9%87%20%D9%85%D8%B9%D9%86%DB%8C%E2%80%8C%E2%80%8C%D8%B4%D8%A7%D9%86%20%D8%B1%D8%A7%20%D8%AE%DB%8C%D9%84%DB%8C%E2%80%8C%20%D8%AF%DB%8C%D8%B1%20%D9%85%DB%8C%E2%80%8C%E2%80%8C%D9%81%D9%87%D9%85%DB%8C%D9%85%20%20%D8%AE%DB%8C%D9%84%DB%8C%E2%80%8C%20%D8%AF%DB%8C%D8%B1%20_____%7C(dot)%7C_____%20_____%7C(dot)%7C_____" class=text4>گاهی حرف‌هایی‌ هست  که معنی‌‌شان را خیلی‌ دیر می‌‌فهمیم  خیلی‌ دیر . .</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AF%D9%88%D8%B3%D8%AA%D8%AA%20%D8%AF%D8%A7%D8%B1%D9%85%20%D8%B9%D8%B4%D9%82%D9%85" class=text4>دوستت دارم عشقم</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AF%D9%88%D8%B3%D8%AA%D8%AA%20%D8%AF%D8%A7%D8%B1%D9%85" class=text4>دوستت دارم</a>، <a href="../../tag/عشق.html" class=text4>عشق</a>، <a href="../../tag/عاشق.html" class=text4>عاشق</a>، <a href="../../tag/دختر.html" class=text4>دختر</a>، <a href="../../tag/شماره&#32;دختر.html" class=text4>شماره دختر</a>،                 <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/457#commentlist">نظرات (<script>setCommentCnt(457)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('457','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/456">کاشــ گاهـے وقتـآ،</a></font></div>
+            <div class=div58><font class=text7>سه شنبه 8 اسفند 1391 :: نویسنده : <a href="../../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><div class="aboveUnitContent" style="margin-bottom: 15px; margin-top: 15px; color: rgb(51, 51, 51); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 14px; text-align: right;"><div class="userContentWrapper"><div class="_wk" style="font-size: 13px; line-height: 18px;"><span class="userContent">کاشــ گاهـے وقتـآ،<br>خدا از پشتـہ<br>اون ابـرآ میآومد بیرونــ..<br>و داد میـزد:<br>آهآآآآآآآے دُخ ــتَر<br>بگیر بشیـنــ سر ِ جـاتــ..<br><span class="text_exposed_show" style="display: inline;">اینقـد ِ غـُر نـزنــ..<br>همینہ کہ هســ.<br>.<br>بـعد یہ چشمکــ میــزدُ،<br>آروم توے گوشمــ مےگفتــ:<br>همہ چـے درست میشـ ـ ـ ـه<br><br></span></span></div></div></div><div class="photoUnit clearfix" style="zoom: 1; overflow: hidden; margin: 0px -15px; position: relative; color: rgb(51, 51, 51); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 14px; text-align: right;"><div class="_53s uiScaledThumb photo photoWidth1" data-cropped="1" data-gt="{&quot;fbid&quot;:&quot;468471629874703&quot;}" style="position: relative; overflow: hidden; float: right;"><a class="_6i9" href="http://www.facebook.com/photo.php?fbid=468471629874703&amp;set=a.402518629803337.95313.402514873137046&amp;type=1&amp;relevant_count=1" rel="theater" ajaxify="http://www.facebook.com/photo.php?fbid=468471629874703&amp;set=a.402518629803337.95313.402514873137046&amp;type=1&amp;relevant_count=1&amp;src=http%3A%2F%2Fsphotos-a.xx.fbcdn.net%2Fhphotos-ash3%2F563166_468471629874703_1037478010_n.jpg&amp;size=506%2C337&amp;theater" style="cursor: pointer; color: rgb(59, 89, 152); text-decoration: none;"><div class="uiScaledImageContainer photoWrap" style="position: relative; overflow: hidden; margin-right: 3px; height: 337px; width: 403px;"><img class="img" src="http://sphotos-a.xx.fbcdn.net/hphotos-ash3/c51.0.403.403/p403x403/563166_468471629874703_1037478010_n.jpg" alt="نگاره: ‏کاشــ گاهـے وقتـآ،
+خدا از پشتـہ
+اون ابـرآ میآومد بیرونــ..
+و داد میـزد:
+آهآآآآآآآے دُخ ــتَر
+بگیر بشیـنــ سر ِ جـاتــ..
+اینقـد ِ غـُر نـزنــ..
+همینہ کہ هســ.
+.
+بـعد یہ چشمکــ میــزدُ،
+آروم توے گوشمــ مےگفتــ:
+همہ چـے درست میشـ ـ ـ ـه
+
+
+siroos♥♥‏" width="403" height="337" style="border: 0px; height: 337px; min-height: 100%; position: relative;"></div></a></div></div>
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="../../category/2.html" class=text4>عشق</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                <a href="http://ashgeeeee.mihanblog.com/post/tag/%DA%A9%D8%A7%D8%B4%D9%80%D9%80%20%DA%AF%D8%A7%D9%87%D9%80%DB%92%20%D9%88%D9%82%D8%AA%D9%80%D8%A2" class=text4>کاشــ گاهـے وقتـآ</a>، <a href="../../tag/عشق.html" class=text4>عشق</a>، <a href="../../tag/دختر.html" class=text4>دختر</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%B2%D9%86%20%D8%A8%D8%AF" class=text4>زن بد</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AF%D8%AE%D8%AA%D8%B1%20%D8%A8%D8%AF" class=text4>دختر بد</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AF%D8%AE%D8%AA%D8%B1%DA%A9%20%D8%B9%D8%A7%D8%B4%D9%82" class=text4>دخترک عاشق</a>، <a href="../../tag/عاشق.html" class=text4>عاشق</a>،                 <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/456#commentlist">نظرات (<script>setCommentCnt(456)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('456','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/455">دلتــــنـگی یعنـــــی؛</a></font></div>
+            <div class=div58><font class=text7>سه شنبه 8 اسفند 1391 :: نویسنده : <a href="../../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+<div style="text-align: center;"><div class="aboveUnitContent" style="margin-bottom: 15px; margin-top: 15px; color: rgb(51, 51, 51); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 14px; text-align: right;"><div class="userContentWrapper"><div class="_wk" style="font-size: 13px; line-height: 18px;"><span class="userContent">دلتــــنـگی یعنـــــی؛<br><br>یعنـــــی؛<br><br>دم به دقیـــقـه گوشیـــــــــت چک کنــــــــی؛<br><br><span class="text_exposed_show" style="display: inline;">ولـی وانـمــود کنی داری ساعـــت میبــــــینـی!!!!!<br><br>♥♥♥♥</span></span></div></div></div><div class="photoUnit clearfix" style="zoom: 1; overflow: hidden; margin: 0px -15px; position: relative; color: rgb(51, 51, 51); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 14px; text-align: right;"><div class="_53s uiScaledThumb photo photoWidth1" data-cropped="1" data-gt="{&quot;fbid&quot;:&quot;468471943208005&quot;}" style="position: relative; overflow: hidden; float: right;"><div class="uiScaledImageContainer photoWrap" style="cursor: pointer; color: rgb(59, 89, 152); text-decoration: none; position: relative; overflow: hidden; margin-right: 3px; height: 403px; width: 403px;"><a class="_6i9" href="http://www.facebook.com/photo.php?fbid=468471943208005&amp;set=a.402518629803337.95313.402514873137046&amp;type=1&amp;relevant_count=1" rel="theater" ajaxify="http://www.facebook.com/photo.php?fbid=468471943208005&amp;set=a.402518629803337.95313.402514873137046&amp;type=1&amp;relevant_count=1&amp;src=http%3A%2F%2Fsphotos-a.xx.fbcdn.net%2Fhphotos-prn1%2F31463_468471943208005_1197395700_n.jpg&amp;size=278%2C347&amp;theater" style="cursor: pointer; color: rgb(59, 89, 152); text-decoration: none;"><a href="../../../index.html" target="_blank" title="عشق"><img class="scaledImageFitWidth img" src="http://sphotos-a.xx.fbcdn.net/hphotos-prn1/c0.0.278.278/p403x403/31463_468471943208005_1197395700_n.jpg" alt="نگاره: ‏دلتــــنـگی یعنـــــی؛
+
+ یعنـــــی؛
+
+دم به دقیـــقـه گوشیـــــــــت چک کنــــــــی؛
+
+ولـی وانـمــود کنی داری ساعـــت میبــــــینـی!!!!!
+
+siroos ♥♥♥♥‏" width="403" height="403" style="border: 0px; height: auto; min-height: 100%; position: relative; width: 403px;"></a></a></div></div></div></div>
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                                <br><font color="#8b0542">برچسب ها :</font>
+                <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AF%D9%84%D8%AA%D9%80%D9%80%D9%80%D9%80%D9%86%D9%80%DA%AF%DB%8C%20%DB%8C%D8%B9%D9%86%D9%80%D9%80%D9%80%D9%80%D9%80%DB%8C" class=text4>دلتــــنـگی یعنـــــی</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AF%D9%84%D9%85%20%D8%AA%D9%86%DA%AF%D8%B4%20%D8%B4%D8%AF%D9%87" class=text4>دلم تنگش شده</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%B9%D8%A7%D8%B4%D9%82%20%D8%AC%DA%AF%DB%8C%D8%B1%D8%B4%D9%85" class=text4>عاشق جگیرشم</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%B9%D8%B4%D9%82%20%D9%85%D9%86%20%D8%AA%D9%88%D9%85%DB%8C%DB%8C" class=text4>عشق من تومیی</a>، <a href="../../tag/دختر.html" class=text4>دختر</a>، <a href="../../tag/عشق.html" class=text4>عشق</a>، <a href="../../tag/عاشق.html" class=text4>عاشق</a>،                 <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/455#commentlist">نظرات (<script>setCommentCnt(455)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('455','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/454">قدر زندگی خودت رو بدون</a></font></div>
+            <div class=div58><font class=text7>سه شنبه 8 اسفند 1391 :: نویسنده : <a href="../../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><div style="text-align: center;"><img src="http://sphotos-a.xx.fbcdn.net/hphotos-ash4/c0.0.335.335/p403x403/734850_520487524670519_557940398_n.jpg" alt="عکس"></div>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="../../category/4.html" class=text4>عشق و تنهایی....!</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                <a href="http://ashgeeeee.mihanblog.com/post/tag/%D9%82%D8%AF%D8%B1%20%D8%B2%D9%86%D8%AF%DA%AF%DB%8C%20%D8%AE%D9%88%D8%AF%D8%AA%20%D8%B1%D9%88%20%D8%A8%D8%AF%D9%88%D9%86" class=text4>قدر زندگی خودت رو بدون</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%B2%D9%86%D8%AF%DA%AF%DB%8C%20%D8%B4%DB%8C%D8%B1%DB%8C%D9%86%20%D8%A7%D8%B3%D8%AA%20%D9%BE%D8%B3%20%D8%AE%D8%B1%D8%A7%D8%A8%D8%B4%20%D9%86%DA%A9%D9%86" class=text4>زندگی شیرین است پس خرابش نکن</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%B2%D9%86%D8%AF%DA%AF%DB%8C%20%D8%B9%D8%A7%D9%84%DB%8C%D8%B3%D8%AA%20%D9%88%D9%84%DB%8C%20%D8%AA%D9%88%20%D8%AE%D8%B1%D8%A7%D8%A8%D8%B4%20%D9%85%DB%8C%DA%A9%D9%86%DB%8C" class=text4>زندگی عالیست ولی تو خرابش میکنی</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%DA%A9%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A8%D8%AF%D9%87%20%D9%88%D9%84%DB%8C" class=text4>کارات بده ولی</a>، <a href="../../tag/عشق.html" class=text4>عشق</a>، <a href="../../tag/دختر.html" class=text4>دختر</a>،                 <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/454#commentlist">نظرات (<script>setCommentCnt(454)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('454','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div>
+    <div class=div29></div>
+    <div class=div28><font class=text4>
+                <br><br>
+        ( کل صفحات : 6 )&nbsp;&nbsp;&nbsp;
+            <a href="http://ashgeeeee.mihanblog.com/post/archive/1391/12/page/1" class=text4><b>1</b></a>&nbsp;&nbsp;&nbsp;<a href="http://ashgeeeee.mihanblog.com/post/archive/1391/12/page/2" class=text4><span>2</span></a>&nbsp;&nbsp;&nbsp;<a href="http://ashgeeeee.mihanblog.com/post/archive/1391/12/page/3" class=text4><span>3</span></a>&nbsp;&nbsp;&nbsp;<a href="http://ashgeeeee.mihanblog.com/post/archive/1391/12/page/4" class=text4><span>4</span></a>&nbsp;&nbsp;&nbsp;<a href="http://ashgeeeee.mihanblog.com/post/archive/1391/12/page/5" class=text4><span>5</span></a>&nbsp;&nbsp;&nbsp;<a href="http://ashgeeeee.mihanblog.com/post/archive/1391/12/page/6" class=text4><span>6</span></a>&nbsp;&nbsp;&nbsp;    </font>
+    </div>
+
+</td>
+<td class=div0>&nbsp;</td>
+<td class=div3>&nbsp;</td>
+</tr>
+<tr>
+    <td class=div2 valign=top>&nbsp;
+
+    </td>
+
+    <td class=div01 valign=top>
+        <div class=div6></div>
+        <div class=div7>
+            <a href="http://www.mytheme.ir" target="_blank">
+                <img src="http://mihanblog.com/public/public/user_data/template/2099039/blank.gif" border=0 width=189 height=35></a></div></td>
+    <td class=div0>&nbsp;</td>
+    <td class=div3>&nbsp;</td>
+</tr>
+</table>
+</div>
+<style>
+    img{
+        max-width : 425px;
+    }
+</style>
+</body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'ashgeeeee.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

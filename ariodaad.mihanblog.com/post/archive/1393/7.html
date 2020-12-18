@@ -1,0 +1,2370 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc@rsd" />
+<script type="text/javascript" src="../../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1455866*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[61]='13';commentCnt[62]='3';commentCnt[63]='1';commentCnt[64]='4';commentCnt[65]='7';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[61]='2';
+mihanblogDisLikeArrCnt[61]='0';
+mihanblogLikeArrCnt[62]='0';
+mihanblogDisLikeArrCnt[62]='0';
+mihanblogLikeArrCnt[63]='0';
+mihanblogDisLikeArrCnt[63]='0';
+mihanblogLikeArrCnt[64]='1';
+mihanblogDisLikeArrCnt[64]='0';
+mihanblogLikeArrCnt[65]='0';
+mihanblogDisLikeArrCnt[65]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://ariodaad.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://ariodaad.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','662');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','پنجشنبه 13 آذر 1399');
+	
+	setStatVar('today_view','141');
+	setStatVar('yesterday_view','91');
+	
+	setStatVar('this_month_view','4428');
+	setStatVar('last_month_view','9942');
+
+	setStatVar('total_view','560703');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (14:28)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://ariodaad.mihanblog.com/statupdate/?data[refereruri]=http://ariodaad.mihanblog.com/&data[postid]=&data[requesturi]=/post/archive/1393/7&data[sdate]=1607772535&data[hash]=1b21a30e9ed1b27008da4cf9fde5b17d&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://ariodaad.mihanblog.com/post/archive/1393/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://ariodaad.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://ariodaad.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://ariodaad.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://ariodaad.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://ariodaad.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://ariodaad.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://ariodaad.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://ariodaad.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://ariodaad.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://ariodaad.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://ariodaad.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://ariodaad.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://ariodaad.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://ariodaad.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://ariodaad.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html lang="fa" dir="rtl">
+<head>
+<meta name="google-site-verification" content="cPP_y93kTP9AFK4vRzc1cslN9LeS7dq3jj8ht6wXPI4" />
+<meta name='yandex-verification' content='76b4f18565cf0b19' />
+<meta name="msvalidate.01" content="E6BFDF7C84259F0A39D4ABEDCBDBE31E" />
+<meta name="google-site-verification" content="cPP_y93kTP9AFK4vRzc1cslN9LeS7dq3jj8ht6wXPI4" />
+<meta name="msvalidate.01" content="E6BFDF7C84259F0A39D4ABEDCBDBE31E" />
+<link href="http://blue-up.persiangig.com/icon/new-ariodaad-favicon.ico" rel="icon" type="image/x-icon" />
+<link rel="shortcut icon" href="http://blue-up.persiangig.com/icon/new-ariodaad-favicon.ico" type="image/vnd.microsoft.icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Farsi">
+<meta http-equiv="Content-Language" content="fa">
+<meta http-equiv="Content-Language" content="en">
+<meta name="author" content="اسماعیل محمدنژاد |  Esmaeil MohamadNezhad">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text html">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1.0">
+    <meta name="description" content="وبلاگ شخصی اسماعیل محمدنژاد - Personl Weblog,Written By : Esma'eil Mohammad-Nezhad
+حاوی روزنوشت ها و خاطرات، مطالب عاشقانه، اجتماعی، ورزشی، پادکست، مطالب سرگرم کننده مانند پیامک و دانلود موسیقی و نرم افزارهای متن باز خواهد بود.( Esma'eil Mohammad-Nezhad ; Esmaeil Mohammad Nezhad ; Esmaeil Mohammad nejad ; Esmaeil MohammadNezhad )" />
+    <meta name="keywords" content="وبلاگ فارسی ، اسماعیل محمدنژاد ، عاشقانه ، خاطرات ، روز نوشت ، پیامک ، عکس عاشقانه ، اوبونتو ، گنو/لینوکس ، شعر عاشقانه ، عشق ، جملات زیبا ، رضا روح‌پور ، موسیقی ، ورزشی ، دانلود ، Esmaeil Mohammad Nezhad , Esmaeil Mohammad nejad , Download , SMS , Esma'eil Mohammad-Nezhad ; Esmaeil Mohammad Nezhad ; Esmaeil MohammadNezhad , Ariodaad , Iran,Farsi Blog,English" />
+    <title>آریــــــــــــوداد - مطالب  مهر 1393</title>
+    <link rel="stylesheet" href="../../../../file.mihanblog.com/public/user_data/user_files/649/1944575/css/global.css">
+    <link rel="stylesheet" href="../../../../file.mihanblog.com/public/user_data/user_files/649/1944575/theme21/css/style.css">
+    <link rel="stylesheet" href="../../../../file.mihanblog.com/public/user_data/user_files/649/1944575/css/mihanblog_theme_icons.css">
+
+
+    <style>
+body {
+            
+            color: #000000;
+          font-family: url(../../../../file.mihanblog.com/public/user_data/user_files/486/1455866/Fonts/IranNastaliq_1.ttf), tahoma, arial!important;
+        }
+.header-container{
+            display: table;
+            width: 100%;
+            height: 502px;
+            background-image: url(../../../../file.mihanblog.com/public/user_data/user_files/486/1455866/Ghaleb/cyrus_cylinder_nyc.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            background-position: center center;
+        }
+.footer-section{
+            font-size: 13px;
+            position: relative;
+            background-image: url(../../../../file.mihanblog.com/public/user_data/user_files/486/1455866/Ghaleb/just_live.jpg);
+            color: #eaeaea;
+            min-height: 570px;
+            overflow: hidden;
+            background-position: center top;
+            padding-top: 85px;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            max-height: 640px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+<div class="page-container" id="pageContainer">
+    <div class="menu-sidbar" id="menuSidbar">
+        <div class="logo-media">
+            <img src="../../../../static.mihanblog.com/public/user_data/web_photo/486/1455866.jpg@4178"  />        </div>
+
+
+        <div class="menu-wrapper">
+            <ul class="sm-item">
+                <li><a class="sid-menu-item" href="../../../index.html">صفحه اصلی</a></li>
+                <li><a class="sid-menu-item" href="mailto:Ariodaad@gmail.com"> پست الکترونیک</a></li>
+                <li><a class="sid-menu-item" href="javascript:messageForm()">تماس با ما</a></li>
+                <li><a class="sid-menu-item" href="../../rss/index.html">RSS</a></li>
+<li><!-- Music player by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzaar.ir/abzar/tools/player/?pl=1&start=1&color=EA5B2F"></script>
+<script>var listmusic1abzar=[];listmusic1abzar[0] = {title:"لبخند - داریوش",url: "http://bayanbox.ir/view/5382426574736888645/00-Dariush-Labkhand.mp3"};listmusic1abzar[1] = {title:"این بود زندگی - محسن چاوشی | شاعر: زنده‌یاد حسین پناهی",url: "http://bayanbox.ir/view/4438695438691868924/Mohsen-Chavoshi-In-Bood-Zendegi-128.mp3"};</script><div style="display:none"><h2><a href="http://www.1abzar.com/abzar/music.php">&#1605;&#1608;&#1586;&#1740;&#1705; &#1662;&#1604;&#1740;&#1585;</a></h2></div>
+<!-- Music player by www.1abzar.com ---></li>
+            </ul>
+            <ul class="menu-social-network">
+                <li class="social-networks-icons">
+                    <a href="7.html"><i class="icon icon-facebook"></i></a>
+                </li>
+                <li class="social-networks-icons">
+                    <a href="7.html"><i class="icon icon-twitter"></i></a>
+                </li>
+                <li class="social-networks-icons">
+                    <a href="7.html"><i class="icon icon-instagram"></i></a>
+                </li>
+                <li class="social-networks-icons">
+                    <a href="7.html"><i class="icon icon-gplus"></i></a>
+                <li class="social-networks-icons">
+                    <a href="7.html"><i class="icon icon-telegram"></i></a>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="wrap" id="Wrapper">
+        <div class="sidemenu">
+            <div class="exit-rot" onclick="exitMenu()" id="exitRot"></div>
+            <div id="js--rot-menu-icon" class="rot-menu-icon" onclick="openSiteMenu()">
+                <span class="menu-name" id="mName"> منوی اصلی </span>
+                <span class="m-line m-line1" id="mLine1"></span>
+                <span class="m-line m-line2" id="mLine2"></span>
+                <span class="m-line m-line3" id="mLine3"></span>
+            </div>
+
+            <span class="blog-logo">
+                <img src="../../../../static.mihanblog.com/public/user_data/web_photo/486/1455866.jpg@4216"  />            </span>
+
+
+            <div class="header-field container clearfix">
+
+                <button onclick="openSiteMenu()" class="menu-button">
+                    <span class="icon-barss"></span>
+                    <span class="icon-barss"></span>
+                    <span class="icon-barss"></span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="opac" id="pageBd" onclick="exitMenu()"></div>
+
+
+        <div class="header-section">
+            <div class="header-container">
+                <div class="header-wrapper">
+                    <div class="header-content">
+                        <div class="site-title">
+                            آریــــــــــــوداد                        </div>
+                        <div class="blog-slogan">
+                            آریوداد در ایران باستان به معنای داده و فرزند ایران بوده است                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="page-section">
+            <div class="gotop" id="goTop" onclick="moveToTop()">
+                <div class="gotop-org"></div>
+                <div class="gotop-hov"></div>
+            </div>
+
+
+            <div class="page clearfix">
+
+
+                <div class="post-column">
+
+                                            <div class="post-field clearfix">
+                            <ul>
+                                
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		                                    <li id="65" class="post container clearfix">
+                                        <div class="post-content">
+
+                                            <div class="title clearfix">
+                                                <h2 class="post-header">
+                                                    <a href="http://ariodaad.mihanblog.com/post/65">روباه دروغگو!</a>
+                                                </h2>
+                                            </div>
+
+
+
+
+
+                                            <div>
+
+
+                                                <div class="name-and-date">
+                                                    <span class="author-name"><i class="icon icon-user"></i><a href="../../../extrapage/biography.html">اسماعیل محمدنژاد |  Esmaeil MohamadNezhad</a></span>
+                                                    <span class="date"><i class="icon icon-calendar"></i> سه شنبه 29 مهر 1393 18:25</span>
+                                                    <a class="comment-number" target="_self" href="http://ariodaad.mihanblog.com/post/65#commentlist"><i class="icon icon-comments"></i> نظرات (<script>setCommentCnt(65)</script>) </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <div class="content">
+                                                <div class="content-body">
+                                                    <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div style="direction: rtl; " align="center"><img src="http://s5.picofile.com/file/8147080168/Fox.jpg" alt="روباه دروغگو! - آریوداد" align="bottom" border="0" hspace="0" vspace="0"><br><br><div align="right">خیلی اتفاقی به یک مطلبی بر خوردم که واقعاً جالب بود. این مطلب رو براتون میذارم تا بخونید و اگر دوست داشتید لینک منبع در انتهای همین پست آورده شده بهش سر بزنید.<br><br><b>پرستوی سرزمین موجهای زلال</b> - یکی از کانالها یه برنامه مستند حیات وحش رو پخش میکرد. نشون میداد یه گروه محقق یه سری لاشه مرغ رو داخل یه توری گذاشته بودن و چند گودال به فاصله های 10-20 متر از هم حفر کرده بودن!<br>بعد از مدتی یه روباه اومد و کمی بو کشید و یه مقدار این لاشه مرغا رو جابجا کرد و رفت؛ کارشناس تیم رو به دوربین کرد و گفت این الان میره و بقیه گله و دوستاش رو میاره؛ و با استفاده از یه ربات جرثقیل توری رو جابجا کردن و اوردن تو گودال دوم و استتارش کردن و با یه مایعی که اسپری کردن اثر بو رو از مسیر از بین بردن!<br>تقریبا نیم ساعت بعد روباه و 7-8 تا روباه دیگه اومدن سر گودال اول و هرچی گشتند مرغها رو پیدا نکردن هر چی زمین رو بو کردن فایده نداشت و اون 7-8 تا رفتن و این روباه اولی دوباره شروع به گشتن کرد! جالبیش اینجا بود که هی با سرعت میگشت و بعد سرشو بالا میاورد و به دوستاش که داشتن دور میشدن نگاه میکرد دوباره بو میکشید!<br>اینها با استفاده از سیم کمی روی گودال دوم رو باز کردن تا حدی که روباه دید مرغا رو!<br>این دفعه خیلی جالب بود! روباه یکی از مرغا رو با دندون گرفت و با خودش برد!<br>این تیم کارشناس اومدن و دوباره همون کار رو تکرار کردن و توری رو به گودال سوم بردند!<br>روباهها وقتی رسیدن هرچی گودالها رو گشتن و هر چی زمین رو بو کشیدن چیزی نبود و دوباره رفتن!<br>روباه اول رو نشون داد که این بار دیگه جست و جو نکرد و رفت داخل گودال دوم دراز کشید و به حالت خوابیده موند یه چند دقیقه صبر کردن و دیدن خبری نیست نزدیکش رفتند و چک کردنش دیدن کاملا مرده!!<br>جالب این بود که لاشه روباه رو به مرکز دامپزشکی بردن و کلی ازمایش کردن دیدن دقیقا عکسها و ازمایشات نشون میده این حیوون براثر یک شوک عصبی سکته کرده و مرده!! و....<br><br>&nbsp;داشتم فکر میکردم وقتی قرآن میگه: "اولئک کلانعام بل هم اضل!"<br>روباه که نماد مکر و حیله گری در حیوانات هست وقتی احساس میکنه صداقتش بین دوستاش از بین رفته سکته میزنه و میمیره!! ار خجالت میمیره!!!<br>ولی بعضی آدما هستن روزی هزاران دروغ به زبون میارن؛ پشت تریبون، سر کلاس، بین دوستاشون و ... بعد جالبیش اینه حتی وقتی دروغاشون اشکار میشه راست راست میگردن و اصلا و ابدا هم خم به ابرو نمیارن و اسفناک تر اینکه باز هم تکرار تکرار تکرار!!!<br>چقدر زشته که انسان به جایی برسه که حیوانات ازش در کرامت اخلاقی پیشی بگیرن!!!<br></div></div>
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="read-more">
+                                                                                            </div>
+                                        </div>
+
+
+                                        <div class="bottom-post-side clearfix">
+                                            <div class="clearfix btmpost">
+<p/>
+<!-- Bazdid by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat4.php?amar=ariodaad.mihanblog.com/post/65&color=E63917&font=9"></script>
+<!-- Bazdid by www.1abzar.com --->
+<br/>
+
+                                                <span class="last-edit"><i class="icon icon-edit"></i>  آخرین ویرایش: سه شنبه 29 مهر 1393 18:36 </span>
+                                            </div>
+
+                                                                                            <div class="post-tag">
+                                                    <!--<span class="">برچسب ها:</span>-->
+                                                    <ul>
+                                                        <i class="icon icon-tags"></i>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://ariodaad.mihanblog.com/post/tag/%D8%A7%D8%AE%D9%84%D8%A7%D9%82">
+                                                                    اخلاق                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://ariodaad.mihanblog.com/post/tag/%D8%B1%D9%88%D8%A8%D8%A7%D9%87">
+                                                                    روباه                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://ariodaad.mihanblog.com/post/tag/%D8%AD%DB%8C%D9%84%D9%87">
+                                                                    حیله                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://ariodaad.mihanblog.com/post/tag/%D9%82%D8%B1%D8%A2%D9%86">
+                                                                    قرآن                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="../../tag/دروغ.html">
+                                                                    دروغ                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://ariodaad.mihanblog.com/post/tag/%D9%85%D8%B3%D8%AA%D9%86%D8%AF">
+                                                                    مستند                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="../../tag/زندگی.html">
+                                                                    زندگی                                                                </a>
+                                                            </li>
+                                                                                                            </ul>
+                                                </div>
+                                            
+                                                                                            <div class="post-related-links">
+                                                    <ul>
+                                                        <span><i class="icon icon-link" aria-hidden="true"></i>لینک های مرتبط:</span>
+                                                                                                                    <li class="related-links">
+                                                                <a href="http://ashianeparastoo.blogfa.com/post/141" target="_blank">
+                                                                    لینک منبع - وبلاگ پرستوی سرزمین موجهای زلال                                                                </a>
+                                                            </li>
+                                                                                                            </ul>
+                                                </div>
+                                            
+
+                                                                                            <ul class="post-category">
+                                                    <i class="icon icon-folder-open"></i>
+                                                                                                            <li class="post-category-floor"><a href="../../category/3.html">روز نوشت</a></li>
+                                                                                                            <li class="post-category-floor"><a href="../../category/1.html">اجتماعی</a></li>
+                                                                                                    </ul>
+                                            
+
+                                            <a class="send-comment" target="_self" href="http://ariodaad.mihanblog.com/post/65#commentform"><span> <i class="icon icon-comment"></i> ارسال دیدگاه </span> </a>
+
+
+                                            <div class="post-like clearfix">
+                                                <script>mihanblogPostLike('65','like')</script>                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+
+                                                                                                        <li id="64" class="post container clearfix">
+                                        <div class="post-content">
+
+                                            <div class="title clearfix">
+                                                <h2 class="post-header">
+                                                    <a href="http://ariodaad.mihanblog.com/post/64">زیر باران باید رفت</a>
+                                                </h2>
+                                            </div>
+
+
+
+
+
+                                            <div>
+
+
+                                                <div class="name-and-date">
+                                                    <span class="author-name"><i class="icon icon-user"></i><a href="../../../extrapage/biography.html">اسماعیل محمدنژاد |  Esmaeil MohamadNezhad</a></span>
+                                                    <span class="date"><i class="icon icon-calendar"></i> سه شنبه 29 مهر 1393 16:27</span>
+                                                    <a class="comment-number" target="_self" href="http://ariodaad.mihanblog.com/post/64#commentlist"><i class="icon icon-comments"></i> نظرات (<script>setCommentCnt(64)</script>) </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <div class="content">
+                                                <div class="content-body">
+                                                    
+<div align="center"><img src="http://s5.picofile.com/file/8147060242/%D9%BE%D8%A7%DB%8C%DB%8C%D8%B2_%D9%88_%DB%8C%DA%A9_%D9%81%D9%86%D8%AC%D8%A7%D9%86_%D9%82%D9%87%D9%88%D9%87.jpg" alt="پاییز و نوشیدن یک فنجان قهوه! - آریوداد" align="bottom" border="0" hspace="0" vspace="0"></div><br>نمی‌دونم چرا بعضی ها از خیس شدن زیر بارون می‌ترسن!! امروز برای دومین روز متوالی بود که بارون زیبایی توی تهران بارید و البته کمی تا قسمتی پراکنده ، شدت بارون کم و زیاد میشد. حین قدم زدن به دور و برم که نگاه می‌کردم اکثراً یه چتر گرفته بودن دستشون! آخه این بارون که سالی یه بار میباره حیف نیست زیرش خیس نشی و چتر بگیری دستت؟؟<br>پاییزه و لذت پیاده‌روی زیر بارون و بعدش برگشتن به خونه و خوردن یه قهوه و یا نسکافه..!<br>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="read-more">
+                                                                                            </div>
+                                        </div>
+
+
+                                        <div class="bottom-post-side clearfix">
+                                            <div class="clearfix btmpost">
+<p/>
+<!-- Bazdid by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat4.php?amar=ariodaad.mihanblog.com/post/64&color=E63917&font=9"></script>
+<!-- Bazdid by www.1abzar.com --->
+<br/>
+
+                                                <span class="last-edit"><i class="icon icon-edit"></i>  آخرین ویرایش: سه شنبه 29 مهر 1393 16:29 </span>
+                                            </div>
+
+                                                                                            <div class="post-tag">
+                                                    <!--<span class="">برچسب ها:</span>-->
+                                                    <ul>
+                                                        <i class="icon icon-tags"></i>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="../../tag/باران.html">
+                                                                    باران                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="../../tag/پاییز.html">
+                                                                    پاییز                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://ariodaad.mihanblog.com/post/tag/%D9%82%D9%87%D9%88%D9%87">
+                                                                    قهوه                                                                </a>
+                                                            </li>
+                                                                                                            </ul>
+                                                </div>
+                                            
+                                            
+
+                                                                                            <ul class="post-category">
+                                                    <i class="icon icon-folder-open"></i>
+                                                                                                            <li class="post-category-floor"><a href="../../category/3.html">روز نوشت</a></li>
+                                                                                                            <li class="post-category-floor"><a href="../../category/2.html">عاشقانه</a></li>
+                                                                                                            <li class="post-category-floor"><a href="../../category/5.html">خاطرات شخصی</a></li>
+                                                                                                    </ul>
+                                            
+
+                                            <a class="send-comment" target="_self" href="http://ariodaad.mihanblog.com/post/64#commentform"><span> <i class="icon icon-comment"></i> ارسال دیدگاه </span> </a>
+
+
+                                            <div class="post-like clearfix">
+                                                <script>mihanblogPostLike('64','like')</script>                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+
+                                                                                                        <li id="63" class="post container clearfix">
+                                        <div class="post-content">
+
+                                            <div class="title clearfix">
+                                                <h2 class="post-header">
+                                                    <a href="http://ariodaad.mihanblog.com/post/63">عطر بارون ، بوی آتش ، بوی سیگار</a>
+                                                </h2>
+                                            </div>
+
+
+
+
+
+                                            <div>
+
+
+                                                <div class="name-and-date">
+                                                    <span class="author-name"><i class="icon icon-user"></i><a href="../../../extrapage/biography.html">اسماعیل محمدنژاد |  Esmaeil MohamadNezhad</a></span>
+                                                    <span class="date"><i class="icon icon-calendar"></i> دوشنبه 28 مهر 1393 20:00</span>
+                                                    <a class="comment-number" target="_self" href="http://ariodaad.mihanblog.com/post/63#commentlist"><i class="icon icon-comments"></i> نظرات (<script>setCommentCnt(63)</script>) </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <div class="content">
+                                                <div class="content-body">
+                                                    <div align="center"><img src="http://s5.picofile.com/file/8147053292/Love_017.jpg" alt="قدم زدن زیر باران تهران - آریوداد" align="bottom" border="0" hspace="0" vspace="0"><br><br></div>امروز بارون زیبایی توی تهران بارید و من و همسرجان توی این بارون قدم می‌زدیم و لذت می‌بردیم. شاید بعد از مدت‌ها بود که یک سری صحنه‌های عاشقانه و رمانتیک رو توی تهران می‌دیدم!! زن و شوهرها یا دوستان با هم قدم می‌زدن ، توی پارک می‌نشستن و صبحت میکردن و بارون با بارش نم‌نمش براشون موسیقی لایت اجرا می‌کرد!!<br>به جرأت می‌تونم بگم که خیلی وقت بود این صحنه‌ها رو ندیده بودم و به جاش یک سری صحنه‌های عجیب و قریب می‌دیدم!! چون همتون می‌دونین چجور صحنه‌هایی از گفتنش صرف نظر می‌کنم!! اما به هر حال راحت می‌شد فهمید که اون سبک رابطه‌ها انتهای عاشقانه‌ای نخواهد داشت و حتماً منجر به ازدواج نمیشه!!<br>بگذریم. به هر حال ما داشتیم از این قدم زدن لذت میبردیم و کمی هم توی پارک نشستیم و صحبت کردیم. اما تصور کن چه چیزی میتونست این لذت رو خراب کنه؟؟! وقتی زیر نم نم بارون قدم می‌زدیم و هوا کاملاً دو نفره شده بود(!) گهگاهی آدمهایی از کنارمون رد می‌شدن که ظاهراً هنوز برای گازسوز شدن به سازمان مربوطه مراجعه نکرده بودن و شدیداً از خودشون تولید دود و دم از نوع سیگار می‌کردن!! من از سیگار و بو و دودش متنفرم بخصوص زمانی که مجبورم پشت سر کسی توی پیاده رو راه برم که یه سیگار توی دستشه و بدون اهمیت دادن به اینکه یک نفر داره پشت سرش از این دود خفه میشه ، دود سیگارش رو میده بیرون. توی بعضی کشورها اگر توی مکان‌های عمومی سیگار بکشی جریمه‌ی نقدی میشی! اما اینجا چی؟ هیچی!<br>
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="read-more">
+                                                <a href='http://ariodaad.mihanblog.com/post/63'>ادامه‌ی مطلب</a>                                            </div>
+                                        </div>
+
+
+                                        <div class="bottom-post-side clearfix">
+                                            <div class="clearfix btmpost">
+<p/>
+<!-- Bazdid by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat4.php?amar=ariodaad.mihanblog.com/post/63&color=E63917&font=9"></script>
+<!-- Bazdid by www.1abzar.com --->
+<br/>
+
+                                                <span class="last-edit"><i class="icon icon-edit"></i>  آخرین ویرایش: سه شنبه 29 مهر 1393 15:49 </span>
+                                            </div>
+
+                                                                                            <div class="post-tag">
+                                                    <!--<span class="">برچسب ها:</span>-->
+                                                    <ul>
+                                                        <i class="icon icon-tags"></i>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="../../tag/باران.html">
+                                                                    باران                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="../../tag/پاییز.html">
+                                                                    پاییز                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://ariodaad.mihanblog.com/post/tag/%D8%B4%D9%87%D8%A7%D8%A8%20%D9%85%D8%B1%D8%A7%D8%AF%DB%8C">
+                                                                    شهاب مرادی                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://ariodaad.mihanblog.com/post/tag/%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C%DB%8C%20%D9%88%20%D8%B1%D8%A7%D9%86%D9%86%D8%AF%DA%AF%DB%8C">
+                                                                    قانون راهنمایی و رانندگی                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://ariodaad.mihanblog.com/post/tag/%D8%AE%D8%B7%20%D8%B9%D8%A8%D9%88%D8%B1%20%D8%B9%D8%A7%D8%A8%D8%B1%20%D9%BE%DB%8C%D8%A7%D8%AF%D9%87">
+                                                                    خط عبور عابر پیاده                                                                </a>
+                                                            </li>
+                                                                                                            </ul>
+                                                </div>
+                                            
+                                            
+
+                                                                                            <ul class="post-category">
+                                                    <i class="icon icon-folder-open"></i>
+                                                                                                            <li class="post-category-floor"><a href="../../category/3.html">روز نوشت</a></li>
+                                                                                                            <li class="post-category-floor"><a href="../../category/1.html">اجتماعی</a></li>
+                                                                                                            <li class="post-category-floor"><a href="../../category/2.html">عاشقانه</a></li>
+                                                                                                            <li class="post-category-floor"><a href="../../category/5.html">خاطرات شخصی</a></li>
+                                                                                                    </ul>
+                                            
+
+                                            <a class="send-comment" target="_self" href="http://ariodaad.mihanblog.com/post/63#commentform"><span> <i class="icon icon-comment"></i> ارسال دیدگاه </span> </a>
+
+
+                                            <div class="post-like clearfix">
+                                                <script>mihanblogPostLike('63','like')</script>                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+
+                                                                                                        <li id="62" class="post container clearfix">
+                                        <div class="post-content">
+
+                                            <div class="title clearfix">
+                                                <h2 class="post-header">
+                                                    <a href="http://ariodaad.mihanblog.com/post/62">just Smile!</a>
+                                                </h2>
+                                            </div>
+
+
+
+
+
+                                            <div>
+
+
+                                                <div class="name-and-date">
+                                                    <span class="author-name"><i class="icon icon-user"></i><a href="../../../extrapage/biography.html">اسماعیل محمدنژاد |  Esmaeil MohamadNezhad</a></span>
+                                                    <span class="date"><i class="icon icon-calendar"></i> یکشنبه 27 مهر 1393 19:33</span>
+                                                    <a class="comment-number" target="_self" href="http://ariodaad.mihanblog.com/post/62#commentlist"><i class="icon icon-comments"></i> نظرات (<script>setCommentCnt(62)</script>) </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <div class="content">
+                                                <div class="content-body">
+                                                    
+طبق معمول یکشنبه‌ها ، رفتم دانشگاه و کلاس برگزار نشد و دست از پا درازتر برگشتم! توی مترو موقع برگشت یه آقای جوونی نقاشی کشیدنش گُل کرد! حالا منم که چند دقیقه قبلش توی ایستگاه به یه کاریکاتوری که شرکت مترو در همین رابطه به دیوار نصب کرده بود فکر میکردم ، این بنده خدا رو که میدیدم یاد اون کاریکاتوره میفتادم!!<br>توی کاریکاتور یکی بود که شکل آدمهای عصر حجر بود و داشت روی بدنه‌ی واگن قطارهای مترو با سنگ و یه تیزی به شکل خط میخی یادگاری می‌نوشت! اونهایی که از متروی تهران استفاده می‌کنند می‌دونند که من کدوم کاریکاتور رو میگم! تو حاشیش هم متنی به طنز نوشته شده بود با این مضمون که درسته انسان موجودیه که علاقمند به جاوانگی و موندگار شدنه و همیشه دوست داشته یادگاری از خودش به جای بذاره و... خلاصه تهش اینکه آقا مترو جای یادگاری نوشتن و حکاکی نیست!<br>من به این بنده خدا نگاه میکردم به شکل همون کاریکاتوره میدیدمش! یه ضربدر و نقطه ، یه نیم دایره به شکل دهان زیرش ، یه دندون و یه زبون کل چیزی بود که اون بنده خدا کشیده بود روی بدنه‌ی قطار! زیرش هم نوشت Just Smile! بعدم با گوشیش یه عکس از هنری که به خرج داده بود گرفت و احتمالاً توی یکی از شبکه‌های اجتماعی Share میکنه و زیرش می‌نویسه همین الان یهویی!! <img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"><br><br><hr><br>عجب بالا و پایین داره دنیا!! زمانی که من توی دانشگاه قبول شدم اعلام کردند که دانشگاه یک ساختمان جدید خریده و دانشجوهای جدیدالورود باید برن اونجا. حالا کجا؟ به نقشه‌ی تهران که نگاه کنی اون بالای بالا گوشه‌ی سمت راست می‌بینیش!! بعد من می‌گفتم شانس رو بیین دانشگاه بغل گوشمون بود آوردن اینجا! 4 ترم رو اونجا گذروندم و توی این چهار ترم اگر مشکلی داشتم و یا باید به چیزی اعتراض می‌کردم ، به دلیل شاغل بودن و هم اینکه امور اداری همگی در دانشگاه پایین انجام می‌شد به کلی از خیرش می‌گذشتم. سایت دانشگاه هم از همین پایین اداره می‌شد و اخبار برگزاری و عدم برگزاری کلاس‌ها انقدر دیر روی سایت میومد که معمولاً خودم میرسیدم دانشگاه زودتر از سایت از برگزاری یا عدم برگزاری کلاس‌ها و نشست‌ها و... با خبر می‌شدم!!!<br>از ترم چهارم به بعد در حرکتی یهویی (!) اعلام کردند که گروه رباتیک از این به بعد کلاس‌هاش توی دانشگاه پایین برگزار میشه و منم کلی خوشحال بودم!! اما یه مدت که گذشت فهمیدم نخیر!! همون جریان کنار دریا و (گلاب به روی مبارکتان) آفتابه بردن اینجا هم صادقه!! کلیه‌ی امور اداری به دانشگاه بالا انتقال داده شد و سایت هم از بالا بروز میشه و حالا که تقریباً یک ماهی از آغاز سال تحصیلی جدید میگذره اصلاً نمیدونیم کدوم کلاس برگزار میشه و کدوم کلاس برگزار نمیشه! کسی هم نیست که بهش اعتراض کنیم!! کی حوصله داره بره دانشگاه بالا..؟!!<br>
+
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="read-more">
+                                                                                            </div>
+                                        </div>
+
+
+                                        <div class="bottom-post-side clearfix">
+                                            <div class="clearfix btmpost">
+<p/>
+<!-- Bazdid by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat4.php?amar=ariodaad.mihanblog.com/post/62&color=E63917&font=9"></script>
+<!-- Bazdid by www.1abzar.com --->
+<br/>
+
+                                                <span class="last-edit"><i class="icon icon-edit"></i>  آخرین ویرایش: یکشنبه 27 مهر 1393 22:01 </span>
+                                            </div>
+
+                                                                                            <div class="post-tag">
+                                                    <!--<span class="">برچسب ها:</span>-->
+                                                    <ul>
+                                                        <i class="icon icon-tags"></i>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://ariodaad.mihanblog.com/post/tag/%D8%B4%D8%A8%DA%A9%D9%87%20%D9%87%D8%A7%DB%8C%20%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%DB%8C">
+                                                                    شبکه های اجتماعی                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="../../tag/مترو.html">
+                                                                    مترو                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://ariodaad.mihanblog.com/post/tag/%D9%85%D9%87%D8%B1%20%D9%85%D8%A7%D9%87">
+                                                                    مهر ماه                                                                </a>
+                                                            </li>
+                                                                                                            </ul>
+                                                </div>
+                                            
+                                            
+
+                                                                                            <ul class="post-category">
+                                                    <i class="icon icon-folder-open"></i>
+                                                                                                            <li class="post-category-floor"><a href="../../category/3.html">روز نوشت</a></li>
+                                                                                                            <li class="post-category-floor"><a href="../../category/5.html">خاطرات شخصی</a></li>
+                                                                                                            <li class="post-category-floor"><a href="../../category/13.html">دانشگاه</a></li>
+                                                                                                    </ul>
+                                            
+
+                                            <a class="send-comment" target="_self" href="http://ariodaad.mihanblog.com/post/62#commentform"><span> <i class="icon icon-comment"></i> ارسال دیدگاه </span> </a>
+
+
+                                            <div class="post-like clearfix">
+                                                <script>mihanblogPostLike('62','like')</script>                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+
+                                                                                                        <li id="61" class="post container clearfix">
+                                        <div class="post-content">
+
+                                            <div class="title clearfix">
+                                                <h2 class="post-header">
+                                                    <a href="../../61.html">توهم نویسندگی با داستان کوتاه تصمیم</a>
+                                                </h2>
+                                            </div>
+
+
+
+
+
+                                            <div>
+
+
+                                                <div class="name-and-date">
+                                                    <span class="author-name"><i class="icon icon-user"></i><a href="../../../extrapage/biography.html">اسماعیل محمدنژاد |  Esmaeil MohamadNezhad</a></span>
+                                                    <span class="date"><i class="icon icon-calendar"></i> شنبه 26 مهر 1393 22:43</span>
+                                                    <a class="comment-number" target="_self" href="../../61.html#commentlist"><i class="icon icon-comments"></i> نظرات (<script>setCommentCnt(61)</script>) </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <div class="content">
+                                                <div class="content-body">
+                                                    
+
+<div align="center"><img src="http://s5.picofile.com/file/8146616000/Tasmim_001.jpg" alt="داستان کوتاه تصمیم - آریوداد" align="bottom" border="0" hspace="0" vspace="0"></div><br>مدت ها بود که دلم میخواست یک داستان کوتاه بنویسم اما ایده ای به ذهنم نمی رسید. از اونجا که نویسنده هم نیستم ، گاهی چند سطری می نوشتم و بدون اینکه ادامه بدم کنار میگذاشتم. البته گاهی هم یک چیزهایی می نوشتم اما خب خوشم نمیومد و یا منو راضی نمی کرد و بنابراین به زباله دانی معرفی می شد! در واقع ارزش فکر کردن رو نداشت!<br>اما چند وقت پیش یک ایده ای به ذهنم رسید که شروع کردم به نوشتن! با اینکه داستان 20 صفحه است ولی بجز ابتدای داستان که یک صفحه بیشتر نبود تو این مدت 3 بار داستان رو به شکل های مختلف ادامه دادم و تموم کردم!! اما یه جورایی حس میکردم خوشم نمیاد. حس تکراری بودن بهم دست میداد. فقط از خوندن دوباره ی آخری حس خوبی داشتم. بعد خواستم توی وبلاگم بنویسم اما گفتم بذار کمی خودم رو تحویل بگیرم و سر و شکلی بهش بدم! ویرایش کردم ، پاراگراف بندیش کردم و... تا شد اینی که می بینید. البته تو پیشگفتار نوشتم که دوست دارم بازخوردها رو ببینم ؛ اما اولین بازخوردها اینقدر تو ذوقم زد که حتی منصرف شدم از انتشارش توی وبلاگم!!<br>با این حال وقتی الان نگاهش کردم بخاطر وقتی که براش گذاشتم دلم گرفت گفتم بذارم توی وبلاگم. نمیکشنم که!! فوقش میگن چقدر بد بود یا یکمی سانسوری تر از این! <img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"><br>اگر خوشتون اومد که تعریف کنید ازم خوشحال شم! <img src="http://mihanblog.com/public/public/rte/images_new/smiles/1.gif"><br>اگرم خوشتون نیومد نظر واقعیتون رو بی تعارف بگید! من که خورد تو ذوقم قشنگ کورش کنید راحت بشید!! <img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"> <br>من اصلا نویسنده نیستم که ناراحت بشم! <img src="http://mihanblog.com/public/public/rte/images_new/smiles/10.gif"><br>اینم که رو جلد جلوی نویسنده اسمم رو نوشتم برای قُمپُز در کردنه فقط <img src="http://mihanblog.com/public/public/rte/images_new/smiles/5.gif"><br>مثل سری قبل فقط از همین لینک برای دانلود استفاده کنید. این کتاب هم در دو قالب <b>PDF </b>و <b>EPUB</b> هستش. <br><br><div style="direction: rtl;" align="center"><b><span style="background-color: rgb(255, 102, 102);">رمز خارج کردن فایل از حالت فشرده :</span></b><br><br><div style="direction: ltr;" align="center"><font color="#FF0000"><span style="background-color: rgb(255, 255, 0);"><b><font color="#000099">Password:</font> Ariodaad.MihanBlog.Com</b></span></font><br></div><br><div align="center"><a href="http://s5.picofile.com/file/8146615084/Tasmim.rar.html" target="_blank" title="برای دانلود کلیک نمایید - آریوداد"><img src="http://www.picofile.com/content/images/generate_button.gif" alt="جهت دانلود کلیک نمایید - آریوداد" align="bottom" border="0" hspace="0" vspace="0"></a></div></div>
+
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="read-more">
+                                                                                            </div>
+                                        </div>
+
+
+                                        <div class="bottom-post-side clearfix">
+                                            <div class="clearfix btmpost">
+<p/>
+<!-- Bazdid by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat4.php?amar=ariodaad.mihanblog.com/post/61&color=E63917&font=9"></script>
+<!-- Bazdid by www.1abzar.com --->
+<br/>
+
+                                                <span class="last-edit"><i class="icon icon-edit"></i>  آخرین ویرایش: یکشنبه 27 مهر 1393 01:39 </span>
+                                            </div>
+
+                                                                                            <div class="post-tag">
+                                                    <!--<span class="">برچسب ها:</span>-->
+                                                    <ul>
+                                                        <i class="icon icon-tags"></i>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://ariodaad.mihanblog.com/post/tag/%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%20%DA%A9%D9%88%D8%AA%D8%A7%D9%87">
+                                                                    داستان کوتاه                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://ariodaad.mihanblog.com/post/tag/epub">
+                                                                    epub                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://ariodaad.mihanblog.com/post/tag/pdf">
+                                                                    pdf                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://ariodaad.mihanblog.com/post/tag/free&#32;Ebook">
+                                                                    free Ebook                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://ariodaad.mihanblog.com/post/tag/%D8%A7%D8%B3%D9%85%D8%A7%D8%B9%DB%8C%D9%84%20%D9%85%D8%AD%D9%85%D8%AF%D9%86%DA%98%D8%A7%D8%AF">
+                                                                    اسماعیل محمدنژاد                                                                </a>
+                                                            </li>
+                                                                                                            </ul>
+                                                </div>
+                                            
+                                                                                            <div class="post-related-links">
+                                                    <ul>
+                                                        <span><i class="icon icon-link" aria-hidden="true"></i>لینک های مرتبط:</span>
+                                                                                                                    <li class="related-links">
+                                                                <a href="../../../extrapage/ebooks.html" target="_blank">
+                                                                    کتابخانه ی الکترونیکی آریوداد                                                                </a>
+                                                            </li>
+                                                                                                            </ul>
+                                                </div>
+                                            
+
+                                                                                            <ul class="post-category">
+                                                    <i class="icon icon-folder-open"></i>
+                                                                                                            <li class="post-category-floor"><a href="../../category/2.html">عاشقانه</a></li>
+                                                                                                            <li class="post-category-floor"><a href="../../category/16.html">كتاب</a></li>
+                                                                                                            <li class="post-category-floor"><a href="../../category/10.html">دانلود - Download</a></li>
+                                                                                                    </ul>
+                                            
+
+                                            <a class="send-comment" target="_self" href="../../61.html#commentform"><span> <i class="icon icon-comment"></i> ارسال دیدگاه </span> </a>
+
+
+                                            <div class="post-like clearfix">
+                                                <script>mihanblogPostLike('61','like')</script>                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+
+                                                                                                </ul>
+                        </div>
+
+
+                        
+                    
+
+                                            <div class="page-count container">
+                            <span class="page-total"> تعداد  صفحات : 6</span>
+                                                            <a href="http://ariodaad.mihanblog.com/post/archive/1393/7/page/1"> <b>1</b></a>
+                                                            <a href="http://ariodaad.mihanblog.com/post/archive/1393/7/page/2"> <span>2</span></a>
+                                                            <a href="http://ariodaad.mihanblog.com/post/archive/1393/7/page/3"> <span>3</span></a>
+                                                            <a href="http://ariodaad.mihanblog.com/post/archive/1393/7/page/4"> <span>4</span></a>
+                                                            <a href="http://ariodaad.mihanblog.com/post/archive/1393/7/page/5"> <span>5</span></a>
+                                                            <a href="http://ariodaad.mihanblog.com/post/archive/1393/7/page/6"> <span>6</span></a>
+                                                    </div>
+                    
+
+                </div>
+
+
+                <div class="left-sidebar container">
+                    <div class="inside-sidebar">
+
+                        <form id="frm-16077622585fd4815271ce7" method="get" action="http://ariodaad.mihanblog.com/post/search/fid/16077622585fd4815271ce7"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+                            <div class="search brpdbottom">
+                                <input class="search-input" type="text" name="search_text" placeholder="جستجو">
+                                <button class="search-button" type="submit" value="از اینجا جستجو کن...">
+                                    <i class="icon icon-search"></i>
+                                </button>
+                            </div>
+                        <input type="hidden" name="frm-id" value="16077622585fd4815271ce7" id="frm-id" /></form>
+
+
+                          <a class="twitter-timeline"  href="https://twitter.com/Ariodaad" data-widget-id="429360850688684032">توییت‌های @Ariodaad</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          
+          
+          
+
+
+
+                                                    <div class="inside-border">
+                                <div class="title-sidebar">ابر برچسب ها</div>
+                                <ul class="s-tags">
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/دوستت+دارم.html">
+                                                دوستت دارم                                                <span>(5)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/امید.html">
+                                                امید                                                <span>(5)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/زندگی.html">
+                                                زندگی                                                <span>(84)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/عکس+عاشقانه.html">
+                                                عکس عاشقانه                                                <span>(15)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/شهیار+قنبری.html">
+                                                شهیار قنبری                                                <span>(5)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/باران.html">
+                                                باران                                                <span>(15)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/شبکه+های+اجتماعی.html">
+                                                شبکه های اجتماعی                                                <span>(8)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/پاییز.html">
+                                                پاییز                                                <span>(8)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/دوست.html">
+                                                دوست                                                <span>(4)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/شعر.html">
+                                                شعر                                                <span>(13)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/بلاگستان+فارسی.html">
+                                                بلاگستان فارسی                                                <span>(5)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/تصویر+عاشقانه.html">
+                                                تصویر عاشقانه                                                <span>(12)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/انتخابات.html">
+                                                انتخابات                                                <span>(5)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/مترو.html">
+                                                مترو                                                <span>(7)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/فرهنگ.html">
+                                                فرهنگ                                                <span>(5)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/دروغ.html">
+                                                دروغ                                                <span>(6)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/میرا+راد.html">
+                                                میرا راد                                                <span>(5)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/کتاب.html">
+                                                کتاب                                                <span>(6)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/جوادیه.html">
+                                                جوادیه                                                <span>(11)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/ازدواج.html">
+                                                ازدواج                                                <span>(21)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/سینما.html">
+                                                سینما                                                <span>(6)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/بیکاری.html">
+                                                بیکاری                                                <span>(5)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/ایران.html">
+                                                ایران                                                <span>(40)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/شعر+عاشقانه.html">
+                                                شعر عاشقانه                                                <span>(62)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/فوتبال.html">
+                                                فوتبال                                                <span>(5)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/سیستم+عامل+اوبونتو.html">
+                                                سیستم عامل اوبونتو                                                <span>(8)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/تهران.html">
+                                                تهران                                                <span>(8)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/دعا.html">
+                                                دعا                                                <span>(5)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/وبلاگستان+فارسی.html">
+                                                وبلاگستان فارسی                                                <span>(8)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/اوبونتو.html">
+                                                اوبونتو                                                <span>(7)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/دل.html">
+                                                دل                                                <span>(15)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/دانشگاه.html">
+                                                دانشگاه                                                <span>(4)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/کار.html">
+                                                کار                                                <span>(13)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/مهراد.html">
+                                                مهراد                                                <span>(6)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/خدا.html">
+                                                خدا                                                <span>(19)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/دلتنگی.html">
+                                                دلتنگی                                                <span>(5)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/لینوکس.html">
+                                                لینوکس                                                <span>(6)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/امتحان.html">
+                                                امتحان                                                <span>(9)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/عاشقانه.html">
+                                                عاشقانه                                                <span>(9)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/رضا+روح+پور.html">
+                                                رضا روح پور                                                <span>(6)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/دل+نوشته.html">
+                                                دل نوشته                                                <span>(5)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/فنز+پرشین+بلاگ.html">
+                                                فنز پرشین بلاگ                                                <span>(4)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/پرشین+بلاگ.html">
+                                                پرشین بلاگ                                                <span>(21)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/تنهایی.html">
+                                                تنهایی                                                <span>(10)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/وبلاگ.html">
+                                                وبلاگ                                                <span>(18)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/عشق.html">
+                                                عشق                                                <span>(77)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/اینترنت.html">
+                                                اینترنت                                                <span>(7)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/وبلاگ+نویسی.html">
+                                                وبلاگ نویسی                                                <span>(23)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/میهن+بلاگ.html">
+                                                میهن بلاگ                                                <span>(8)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="../../tag/قلب.html">
+                                                قلب                                                <span>(5)</span>
+                                            </a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                        
+
+                                                    <div class="title-sidebar">آرشیو موضوعی</div>
+                            <div class="inside-border">
+                                <ul>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-19" href="../../category/19.html">
+                                                ساخت ایران - تولید ملی                                                <span class="sidebar-dez">
+
+                                        6                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-6" href="../../category/6.html">
+                                                اسماعیل محمدنژاد                                                <span class="sidebar-dez">
+
+                                        73                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-3" href="../../category/3.html">
+                                                روز نوشت                                                <span class="sidebar-dez">
+
+                                        358                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-1" href="../../category/1.html">
+                                                اجتماعی                                                <span class="sidebar-dez">
+
+                                        173                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-2" href="../../category/2.html">
+                                                عاشقانه                                                <span class="sidebar-dez">
+
+                                        236                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-5" href="../../category/5.html">
+                                                خاطرات شخصی                                                <span class="sidebar-dez">
+
+                                        181                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-17" href="../../category/17.html">
+                                                پادکست                                                <span class="sidebar-dez">
+
+                                        2                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-13" href="../../category/13.html">
+                                                دانشگاه                                                <span class="sidebar-dez">
+
+                                        22                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-18" href="../../category/18.html">
+                                                ورزشی                                                <span class="sidebar-dez">
+
+                                        8                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-16" href="../../category/16.html">
+                                                كتاب                                                <span class="sidebar-dez">
+
+                                        15                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-14" href="../../category/14.html">
+                                                نرم افزارهای متن باز - Open Source Softwares                                                <span class="sidebar-dez">
+
+                                        20                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-8" href="../../category/8.html">
+                                                جملات زیبا                                                <span class="sidebar-dez">
+
+                                        77                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-4" href="../../category/4.html">
+                                                پیامک - اس ام اس - SMS                                                <span class="sidebar-dez">
+
+                                        75                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-12" href="../../category/12.html">
+                                                رایانه و اینترنت                                                <span class="sidebar-dez">
+
+                                        64                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-10" href="../../category/10.html">
+                                                دانلود - Download                                                <span class="sidebar-dez">
+
+                                        43                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-15" href="../../category/15.html">
+                                                فیلم و سریال                                                <span class="sidebar-dez">
+
+                                        29                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-11" href="../../category/11.html">
+                                                موسیقی                                                <span class="sidebar-dez">
+
+                                        37                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-7" href="../../category/7.html">
+                                                طنز                                                <span class="sidebar-dez">
+
+                                        15                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                        
+
+                                                    <div class="title-sidebar">آخرین پست ها</div>
+                            <div class="inside-border">
+                                <ul>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../717.html">
+                                                <span class="last-posts-asp">وداع با میهن‌بلاگ و آدرس وبلاگ جدید</span>
+                                                <span class="last-posts-dez">پنجشنبه 13 آذر 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../716.html">
+                                                <span class="last-posts-asp">اندر حکایت بسته شدن سایت میهن‌بلاگ</span>
+                                                <span class="last-posts-dez">دوشنبه 10 آذر 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../714.html">
+                                                <span class="last-posts-asp">پوشه آیکون‌ها در اوبونتو</span>
+                                                <span class="last-posts-dez">دوشنبه 26 آبان 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../713.html">
+                                                <span class="last-posts-asp">تسلیت به نگار نیک‌نفس</span>
+                                                <span class="last-posts-dez">جمعه 23 آبان 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../711.html">
+                                                <span class="last-posts-asp">کوچ از میهن بلاگ</span>
+                                                <span class="last-posts-dez">پنجشنبه 22 آبان 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../710.html">
+                                                <span class="last-posts-asp">سیستم آموزش مجازی</span>
+                                                <span class="last-posts-dez">پنجشنبه 22 آبان 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../709.html">
+                                                <span class="last-posts-asp">شروع دوران جدید تحصیلی</span>
+                                                <span class="last-posts-dez">چهارشنبه 21 آبان 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../715.html">
+                                                <span class="last-posts-asp">مشکلات در میهن‌بلاگ</span>
+                                                <span class="last-posts-dez">یکشنبه 18 آبان 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../712.html">
+                                                <span class="last-posts-asp">برد شیرین استقلال پس از چهار فصل در اولین مسابقه</span>
+                                                <span class="last-posts-dez">یکشنبه 18 آبان 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../707.html">
+                                                <span class="last-posts-asp">عاقبت وبلاگستان فارسی</span>
+                                                <span class="last-posts-dez">شنبه 17 آبان 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../708.html">
+                                                <span class="last-posts-asp">ترامپ یا بایدن</span>
+                                                <span class="last-posts-dez">پنجشنبه 15 آبان 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../706.html">
+                                                <span class="last-posts-asp">و در نهایت... روانکاو - The Mentalist</span>
+                                                <span class="last-posts-dez">پنجشنبه 15 آبان 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../705.html">
+                                                <span class="last-posts-asp">و بعد از سالها... علت مرگ رابین ویلیامز در مستند آرزوی رابین</span>
+                                                <span class="last-posts-dez">پنجشنبه 3 مهر 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../704.html">
+                                                <span class="last-posts-asp">امن‌ترین پیام‌رسان دنیا</span>
+                                                <span class="last-posts-dez">دوشنبه 3 شهریور 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../703.html">
+                                                <span class="last-posts-asp">راه برون‌رفت کشور از اوضاع نابسامان تورم همزمان با رکود و جلب رضایت مردم و جامعه کارگری</span>
+                                                <span class="last-posts-dez">شنبه 13 اردیبهشت 1399</span>
+                                            </a>
+                                        </li>
+                                                                        <li class="link-in-sidebar">
+                                        <a class="clearfix" href="../../list.html">لیست پست ها</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        
+                                                    <div class="title-sidebar">نویسندگان</div>
+                            <div class="inside-border block-author">
+                                <ul>
+                                                                            <li>
+                                            <div class="block-author-photo">
+                                                <i class="icon icon-user"></i>
+                                                <a href="../../author/998945.html"><img src="../../../../static.mihanblog.com/public/user_data/user_photo/333/998945.jpg" style="width:16px;" /></a>                                            </div>
+                                            <a href="../../author/998945.html">
+                                                <div>اسماعیل محمدنژاد |  Esmaeil MohamadNezhad</div><div>مطالب ارسالی: (662)</div>
+                                            </a>
+                                            <div style="clear: both">درباره نویسنده :دانشجوی مهندسی رباتیک، دارای مدرک حسابداری،آشنا با نرم‌افزارهای هلو-رافع و...دارای مدرک بین‌المللی MSP از جهاد دانشگاهی، دانشجوی</div>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                        
+
+                                                    <div class="title-sidebar">لینکدونی</div>
+                            <div class="inside-border clearfix">
+                                <ul>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../../../ghalbe-ghoraan.mihanblog.com/post/11.html" title="ﺧﺪاوﻧﺪ ﻣﺘﻌﺎل در ﻗﺮآن ﻛﺮﻳﻢ ﺑﻪ وﻳﮋه در ﺳﻮره مبارکه یاسین مومنان را به انفاق آنچه را که در اﺧﺘﻴﺎرﺷﺎن دارﻧﺪ ﺗﻮﺻﻴﻪ و اﻣﺮ ﻓﺮﻣﻮده اﺳﺖ.
+روﺷﻦ اﺳﺖ ﻋﻤﻞ ﺑﻪ دﺳﺘﻮر اﻟﻬﻰ و اﻧﻔﺎق در راه ﺧﺪا آﺛﺎر ﺗﺮﺑﻴﺘﻰ و اﺟﺘﻤﺎﻋﻰ ﻓﺮاواﻧﻰ را در ﺑﺮدارد.ﻛﻪ ﻣﻰﺗﻮان ﺑﻪ رﺷﺪ اﻧﺴﺎن و ﺗﻌﺎﻟﻰ او در ﻧـﺰد ﺧﺪا و ﻣﺮدم اﺷﺎره‌اى داﺷﺖ و ﻫﻢ ﭼﻨﻴﻦ رﻓﻊ ﻧﻴﺎز اﻗﺘﺼﺎدى ﻧﻴﺎزﻣﻨﺪان و ﻣﺤﺮوﻣﺎن در ﺟﺎﻣﻌﻪ اﺳﻼﻣﻰ را از آﺛﺎر آن ﺑﻪ ﺣﺴﺎب آورد." target="_blank">
+                                                عوامل باز دارنده از انفاق در سوره یس                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../../../robotic.mihanblog.com/post/57.html" title="در این جزوه می‌آموزید:
+- مکانیزم‌ها
+- درجه آزادی مکانیزم‌ها
+- تحلیل سینماتیکی مکانیزم‌های صفحه‌ای
+- بادامک‌ها
+- مجموعه چرخ دنده‌ها
+  و ..." target="_blank">
+                                                دانلود رایگان جزوه درس دینامیک ماشین دکتر جهانبخش حامدی                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../../../ghalbe-ghoraan.mihanblog.com/post/15.html" title="علامه طباطبایی (ره) در تفسیر شریف المیزان می فرمایند:
+غرض این سوره بیان اصول سه گانه دین است، چیزى که هست نخست از مسئله نبوت شروع کرده، حال مردم را در قبول و رد دعوت انبیا بیان مى کند، و مى‌فرماید که:
+نتیجه دعوت حق انبیاء، احیاى مردم است ، و اینکه آنان در راه سعادت واقع شوند و حجت را بر مخالفین تمام کند، و به عبارت دیگر تکمیل هر دو دسته مردم است، عدّه اى را در طریق سعادت، و جمعى را در طریق شقاوت." target="_blank">
+                                                جایگاه والای سوره یاسین در قرآن و روایات                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../../../robotic.mihanblog.com/post/53.html" title="این کتاب بر اساس کتاب اندیشه ی اسلامی 2 به تألیف سبحانی - محمد رضایی که منبع این درس در دانشگاه پیام نور می باشد تهیه شده و حاوی خلاصه ی درس و نکات مهم و تستی آن می باشد ." target="_blank">
+                                                دانلود خلاصه کتاب و نکات تستی اندیشه اسلامی 2 پیام نور                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../../../ghalbe-ghoraan.mihanblog.com/post/14.html" title="ماجرای لیلة المبیت از این قرار است كه وقتی خبر پیمان پیامبر(ص) با مردم یثرب به منظور تشكیل حكومت اسلامی به مشركان مكه می‌رسد، آنان به منظور جلوگیری از عزیمت پیامبر(ص) به این شهر، در «دارالندوه»، جمع می­شوند و تصمیم می­گیرند كه افرادی از خانواده های قریش، به اتفاق و در یك شب، به كشتن ایشان اقدام كنند. آنان در شب هجرت، بیرون خانه پیامبر(ص) اجتماع و آن خانه را محاصره می كنند." target="_blank">
+                                                ماجرای لیلة‌المبیت و سوره‌ی مبارکه‌ی یس                                            </a>
+                                        </li>
+                                                                        <li class="link-in-sidebar">
+                                        <a class="clearfix" href="../../../linkdaily/index.html">همه لینکها</a>
+                                    </li>
+                                    <a class="button-cc" href="javascript:linkdailyForm()">ارسال لینک</a>
+                                </ul>
+                            </div>
+                        
+
+                                                    <div class="title-sidebar">لینکستان</div>
+                            <div class="inside-border">
+                                <ul>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://sapp.ir/Radio.Baran" title="دانلود رایگان قالب اپلیکیشن ایرانی سروش در رنگ‌بندی‌های محتلف برای تمام سلایق"  target="_blank">
+                                                دانلود رایگان تم برای پیام‌رسان ایرانی سروش                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../../../ghalbe-ghoraan.mihanblog.com/index.html" title="وبلاگی در رابطه با سوره‌ی مبارکه‌ی «یــٰـس»"  target="_blank">
+                                                قلب قرآن                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://terrorism.persianblog.ir/" title="حرکت فعالین رسانه های مجازی در محکومیت تروریسم"  target="_blank">
+                                                محکومیت تروریسم                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../../../paradise-fruits.mihanblog.com/index.html" title="عاشقانه ها و خاطرات انار بانو و آقای سیب"  target="_blank">
+                                                میوه های بهشتی                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://mahso.persianblog.ir/" title="عاشق اسمم می شوم وقتی تو صدایم می کنی...
+مه سو"  target="_blank">
+                                                واژه واژه ، سطر سطر زندگی (مه‌سو)                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://azinghabil.blogfa.com/" title="1. می‌نویسم چون مجبورم، می‌فهمی دوست عزیز؟ مجبورم! ننویسم چه کنم؟
+2. حتی یک نظر هم که بدهید وبلاگتان لینک خواهد شد، البته شاید هم نشود
+3. با آب شدن کل یخ‌های قطب جنوب سطح اقیانوس‌ها چه میزان بالا می‌آید؟
+4. همه‌ی گزینه‌ها"  target="_blank">
+                                                از این قبیل (امین)                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://web.archive.org/" title="پیدا کردن یک نسخه قدیمی از وبلاگ"  target="_blank">
+                                                آرشیو وب                                            </a>
+                                        </li>
+                                                                        <li class="link-in-sidebar">
+                                        <a class="clearfix" href="../../../link/index.html"> همه اینک ها </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        
+
+                                                    <div class="block-extrapage inside-border">
+                                <div class="title-sidebar">صفحات جانبی</div>
+                                <ul>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../../extrapage/biography.html">درباره‌ی من - About Me</a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../../extrapage/rss_atom_feed_reader_download.html">چرا و چگونه در خوراک وبلاگ مشترک شویم؟</a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../../extrapage/ebooks.html">کتابخانه ی الکترونیکی آریوداد</a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../../../extrapage/bisphone.html">BisPhone Messenger For Android , iOS &amp; web</a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                        
+
+                        
+		
+
+                        <div class="block-user-script">
+                            <center><form style="width:140px;font-size:9pt;font-family:Vazir;text-align:center;border:1px dotted #bbbbbb;padding:5px;direction:rtl" target="_new" method=get action=http://www.google.com/search><img border=0 src="http://www.pichak.net/blogcod/google/google-1.png"><input name=q size=12 style="border:1px solid #999999;background:#efefef;font-family:Vazir"><br><br><input type="submit" name="btnG" value="جستجو" style="font-family:Tahoma"><br><input value="http://ariodaad.mihanblog.com/" type=radio name=sitesearch checked>در این وب<br><input type=radio name=sitesearch value="">در كل اینترنت<input type=hidden name=ie value=UTF-8><input type=hidden name=oe value=UTF-8><br></form></center><div style="display:none;"></div>
+
+<hr/>
+
+
+
+
+
+<a target="_blank" href="../../29.html"><img src="http://s5.picofile.com/file/8137836900/Dokhtari_Ke_Harf_Nemizad_EBook_Persian_Romance.jpg" width="160" height="250" alt="دانلود رایگان کتاب الکترونیکی فارسی دختری كه حرف نمی‌زد از میرا راد + اسماعیل محمدنژاد" border="0"></a>
+<p/>
+<a target="_blank" href="../../61.html"><img src="http://s5.picofile.com/file/8146616000/Tasmim_001.jpg" width="160" height="250" alt="دانلود رایگان کتاب الکترونیکی فارسی تصمیم از اسماعیل محمدنژاد + داستان کوتاه " border="0"></a>
+<p/>
+
+
+
+
+<center><!-- Alexa Rank by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/alexa/graf2.php?url=ariodaad.mihanblog.com/&sh1=1&sh2=1&sh3=1"></script><div style="display:none"><h3><a href="http://www.1abzar.com/abzar/alexa.php">&#1575;&#1604;&#1705;&#1587;&#1575;</a></h3></div>
+<!--  Alexa Rank by www.1abzar.com --->
+
+<!-- Google Page Rank by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/page-rank/?url=ariodaad.mihanblog.com/&mod=3"></script><div style="display:none"><h2><a href="http://www.1abzar.com">&#1662;&#1740;&#1580; &#1585;&#1606;&#1705;</a></h2></div>
+<!-- Google Page Rank by www.1abzar.com --->
+
+<a target="_blank" href="../../../../www.mihanblog.com/index.html"><img src="../../../../file.mihanblog.com/public/user_data/user_files/486/1455866/Pics/Powered_by_MihanBlog_Logo.jpg" width="160" height="250" alt="This Weblog is Created By MihanBlog.Com" border="0"></a>
+<p/>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <div class="footer container">
+                <div class="bottombar clearfix">
+
+                    <div class="blog-statistics inside-bottombar">
+                                                    <div class="title-bottombar">آمار وبلاگ</div>
+                            <ul>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('total_view');</script></span><span class="stat-subs">کل بازدید : </span></li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"> <script>getStatVar('today_view');</script></span><span class="stat-subs">بازدید امروز : </span></li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('yesterday_view');</script></span><span class="stat-subs"> بازدید دیروز : </span></li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('this_month_view');</script></span><span class="stat-subs"> بازدید این ماه : </span> </li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('last_month_view');</script></span><span class="stat-subs">بازدید ماه قبل : </span> </li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"> <script>getStatVar('total_author');</script></span><span class="stat-subs">تعداد نویسندگان : </span></li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('total_post');</script></span><span class="stat-subs">تعداد کل مطالب : </span> </li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('last_view_date');</script></span><span class="stat-subs">آخرین بازدید : </span></li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('modify_date');</script></span><span class="stat-subs">آخرین بروز رسانی : </span> </li>
+                            </ul>
+<hr/>
+
+
+                                            </div>
+
+                    <div class="inside-bottombar insbtm-archive">
+                                                    <div class="title-bottombar">آرشیو</div>
+                            <ul><li class="link-in-bottombar"><a href="../../archive.html"><b>لیست کامل آرشیو زمانی از ۱۳۸۶ تاکنون</b></a></li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1399/9.html">
+                                             آذر 1399 <span class="bottombar-dez"> 2 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1399/8.html">
+                                             آبان 1399 <span class="bottombar-dez"> 8 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1399/7.html">
+                                             مهر 1399 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1399/6.html">
+                                             شهریور 1399 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1399/2.html">
+                                             اردیبهشت 1399 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1398/12.html">
+                                             اسفند 1398 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1398/8.html">
+                                             آبان 1398 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1398/7.html">
+                                             مهر 1398 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1398/4.html">
+                                             تیر 1398 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1398/3.html">
+                                             خرداد 1398 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1397/8.html">
+                                             آبان 1397 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1397/6.html">
+                                             شهریور 1397 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1397/5.html">
+                                             مرداد 1397 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1396/11.html">
+                                             بهمن 1396 <span class="bottombar-dez"> 2 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1396/10.html">
+                                             دی 1396 <span class="bottombar-dez"> 2 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1396/9.html">
+                                             آذر 1396 <span class="bottombar-dez"> 3 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1396/8.html">
+                                             آبان 1396 <span class="bottombar-dez"> 2 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1396/7.html">
+                                             مهر 1396 <span class="bottombar-dez"> 4 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1396/6.html">
+                                             شهریور 1396 <span class="bottombar-dez"> 2 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1396/5.html">
+                                             مرداد 1396 <span class="bottombar-dez"> 6 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1396/4.html">
+                                             تیر 1396 <span class="bottombar-dez"> 4 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1396/3.html">
+                                             خرداد 1396 <span class="bottombar-dez"> 4 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1396/2.html">
+                                             اردیبهشت 1396 <span class="bottombar-dez"> 3 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1396/1.html">
+                                             فروردین 1396 <span class="bottombar-dez"> 6 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1395/12.html">
+                                             اسفند 1395 <span class="bottombar-dez"> 2 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1395/11.html">
+                                             بهمن 1395 <span class="bottombar-dez"> 10 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1395/10.html">
+                                             دی 1395 <span class="bottombar-dez"> 8 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1395/9.html">
+                                             آذر 1395 <span class="bottombar-dez"> 7 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1395/8.html">
+                                             آبان 1395 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1395/7.html">
+                                             مهر 1395 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1395/5.html">
+                                             مرداد 1395 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1395/2.html">
+                                             اردیبهشت 1395 <span class="bottombar-dez"> 2 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1395/1.html">
+                                             فروردین 1395 <span class="bottombar-dez"> 4 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1394/12.html">
+                                             اسفند 1394 <span class="bottombar-dez"> 3 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1394/11.html">
+                                             بهمن 1394 <span class="bottombar-dez"> 3 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1394/10.html">
+                                             دی 1394 <span class="bottombar-dez"> 6 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1394/9.html">
+                                             آذر 1394 <span class="bottombar-dez"> 7 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1394/8.html">
+                                             آبان 1394 <span class="bottombar-dez"> 4 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1394/7.html">
+                                             مهر 1394 <span class="bottombar-dez"> 3 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1394/6.html">
+                                             شهریور 1394 <span class="bottombar-dez"> 8 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1394/5.html">
+                                             مرداد 1394 <span class="bottombar-dez"> 2 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1394/4.html">
+                                             تیر 1394 <span class="bottombar-dez"> 6 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1394/3.html">
+                                             خرداد 1394 <span class="bottombar-dez"> 3 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1394/2.html">
+                                             اردیبهشت 1394 <span class="bottombar-dez"> 4 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1394/1.html">
+                                             فروردین 1394 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="12.html">
+                                             اسفند 1393 <span class="bottombar-dez"> 4 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="11.html">
+                                             بهمن 1393 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="10.html">
+                                             دی 1393 <span class="bottombar-dez"> 8 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="9.html">
+                                             آذر 1393 <span class="bottombar-dez"> 16 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="8.html">
+                                             آبان 1393 <span class="bottombar-dez"> 12 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="7.html">
+                                             مهر 1393 <span class="bottombar-dez"> 26 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="6.html">
+                                             شهریور 1393 <span class="bottombar-dez"> 12 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="5.html">
+                                             مرداد 1393 <span class="bottombar-dez"> 15 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="4.html">
+                                             تیر 1393 <span class="bottombar-dez"> 17 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="3.html">
+                                             خرداد 1393 <span class="bottombar-dez"> 10 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="2.html">
+                                             اردیبهشت 1393 <span class="bottombar-dez"> 11 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="1.html">
+                                             فروردین 1393 <span class="bottombar-dez"> 16 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1392/12.html">
+                                             اسفند 1392 <span class="bottombar-dez"> 25 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="../1392/11.html">
+                                             بهمن 1392 <span class="bottombar-dez"> 21 پست </span>
+                                        </a>
+                                    </li>
+                                                                <li class="link-in-bottombar">
+                                    <a class="clearfix" href="../../archive.html"><span>همه آرشیوها</span></a>
+                                </li>
+                            </ul>
+                                            </div>
+
+                    <div class="inside-bottombar">
+                        <div class="about-blog">
+                            <div class="blog-creator">ایجاد شده توسط:
+                                <a href="../../../extrapage/biography.html">اسماعیل محمدنژاد |  Esmaeil MohamadNezhad</a>
+                            </div>
+                            <div class="blog-desc">پرواز کن آنگونه که می‌خواهی ...<br />
+وگرنه پروازت می‌دهند آنگونه که می‌خواهند ...<br />
+------------------------------<br />
+این شعاری بود که سالها توی وبلاگم نوشته بودم ... از هواداران و اعضای پیشین باشگاه هواداران پرشین‌بلاگ هستم. بعد از چند سال وبلاگ نویسی مداوم به دلایلی کوچ کردم به این وبلاگ جدید ... وبلاگی جدید در محیط و سرویسی جدید ... همچون بهاری که همراه عشق به زندگیم پای گذاشت بهاری جدید را در زندگی مجازیم تجربه خواهم نمود... این بار اما از گذشته ها گذشته ام(!) و به حال رسیده ام و به فردایی بهتر برای ''ما&quot; می اندیشم...<br />
+-----------------------------<br />
+چه تقدیری از این بهتر..؟<br />
+من از عشق تــــــو می میرم..!<br />
+-----------------------------<br />
+اسماعیل محمدنژاد<br />
+Esma'eil Mohammad-Nezhad</div>
+                        
+                        <div class="social-networks-footer">
+                            <ul class="icons">
+                                <li class="social-networks-icons">
+                                    <a href="https://www.facebook.com/"><i class="icon icon-facebook"></i></a>
+                                </li>
+                                <li class="social-networks-icons">
+                                    <a href="https://www.pinterest.com/"><i class="icon icon-pinterest"></i></a>
+                                </li>
+                                <li class="social-networks-icons">
+                                    <a href="https://twitter.com/"><i class="icon icon-twitter"></i></a>
+                                </li>
+                                <li class="social-networks-icons">
+                                    <a href="https://www.instagram.com/"><i class="icon icon-instagram"></i></a>
+                                </li>
+                                <li class="social-networks-icons">
+                                    <a href="https://plus.google.com/"><i class="icon icon-gplus"></i></a>
+                                </li>
+                                <li class="social-networks-icons">
+                                    <a href="https://web.telegram.org"><i class="icon icon-telegram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div></div></div></div>
+
+
+
+                <div class="footer-copyright">
+                    <div class="footer-text">
+ <a href="../../../extrapage/biography.html">
+بهینه سازی قالب توسط : <b> اسماعیل محمدنژاد </b></a> - 
+                        قدرت گرفته با
+                        <!--<span class="heart">♥</span>-->
+                        <i class="icon icon-heart"></i>
+                        از
+                        <a href="../../../../www.mihanblog.com/index.html">
+                            MihanBlog.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    function openSiteMenu() {
+        document.getElementById("pageContainer").className += " menu-active";
+    }
+
+    function exitMenu() {
+        document.getElementById("pageContainer").classList.remove("menu-active");
+    }
+
+
+        window.onscroll = function() {
+
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                document.getElementById("goTop").style.display = 'block';
+            }
+            else {
+                document.getElementById("goTop").style.display = 'none';
+            }
+
+        };
+
+    function moveToTop() {
+        $('html,body').animate({ scrollTop: 0 }, 'slow');
+    };
+
+</script>
+
+
+
+
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'ariodaad.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

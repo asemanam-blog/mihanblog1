@@ -1,0 +1,2288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://bachegonjeshk.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*936891*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[3218]='7';commentCnt[3219]='3';commentCnt[3220]='1';commentCnt[3222]='0';commentCnt[3223]='1';commentCnt[3224]='0';commentCnt[3225]='2';commentCnt[3226]='0';commentCnt[3227]='0';commentCnt[3228]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[3218]='3';
+mihanblogDisLikeArrCnt[3218]='0';
+mihanblogLikeArrCnt[3219]='1';
+mihanblogDisLikeArrCnt[3219]='0';
+mihanblogLikeArrCnt[3220]='1';
+mihanblogDisLikeArrCnt[3220]='0';
+mihanblogLikeArrCnt[3222]='1';
+mihanblogDisLikeArrCnt[3222]='0';
+mihanblogLikeArrCnt[3223]='1';
+mihanblogDisLikeArrCnt[3223]='0';
+mihanblogLikeArrCnt[3224]='1';
+mihanblogDisLikeArrCnt[3224]='0';
+mihanblogLikeArrCnt[3225]='4';
+mihanblogDisLikeArrCnt[3225]='0';
+mihanblogLikeArrCnt[3227]='1';
+mihanblogDisLikeArrCnt[3227]='0';
+mihanblogLikeArrCnt[3228]='1';
+mihanblogDisLikeArrCnt[3228]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://bachegonjeshk.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://bachegonjeshk.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','2038');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','یکشنبه 22 تیر 1399');
+	
+	setStatVar('today_view','50');
+	setStatVar('yesterday_view','2092');
+	
+	setStatVar('this_month_view','4016');
+	setStatVar('last_month_view','2415');
+
+	setStatVar('total_view','1290530');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (14:51)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://bachegonjeshk.mihanblog.com/statupdate/?data[refereruri]=http://setareyelara23.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607773898&data[hash]=7a4799392d7cefdb3ec4ee8a68e8a0e5&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://bachegonjeshk.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://bachegonjeshk.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://bachegonjeshk.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://bachegonjeshk.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<style>
+
+    /*
+    Theme Name: Cubismo
+    Theme URI: http://colorlightstudio.com
+    Description: Free WP Theme by Igor Penjivrag
+    Version: 1.0
+    Author: Igor Penjivrag
+    Author URI: http://www.colorlightstudio.com/
+    */
+
+html, body {
+    background: url(http://mihanblog.com/http://mihanblog.com/public/public/user_data/template/17/images/bg.gif);
+    font-family: tahoma;
+    border: 0;
+}
+
+body, p, h1, h2, h3, h4, ul, ol, li, form, blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #559AD3;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+    /* Header */
+
+#header {
+    width: 100%;
+    height: 4.25em;
+    padding-top: 10px;
+    text-align:right;
+}
+
+#header h2 {
+    color:#FFFFFF;
+    direction:rtl;
+    font-family:Georgia;
+    font-size:30px;
+    font-weight:normal;
+    overflow:hidden;
+    padding-top:12px;
+    white-space:nowrap;
+    width:777px;
+}
+
+#header h2 a {
+    color: #fff;
+    overflow:hidden;
+}
+
+#header h2 a:hover {
+    color: #ADE166;
+    text-decoration: none;
+}
+
+#header p {
+    padding-top: 1px;
+    color: #fff;
+    font-size: 13px;
+    color: #8F8F8F;
+}
+
+    /* Wrap */
+
+#wrap {
+    width: 781px;
+    margin: 0 auto;
+}
+
+#menu {
+    width: 100%;
+    font-size: 12px;
+    position: relative;
+}
+
+#menu ul {
+    width: 100%;
+}
+
+#menu li {
+    display: block;
+    line-height: 2.5em;
+    float: right;
+    margin-left: 10px;
+    background: url(http://mihanblog.com/http://mihanblog.com/public/public/user_data/template/17/images/menu_left_bg.gif) no-repeat left;
+    font-weight: bolder;
+}
+
+#menu li a {
+    line-height: 2.5em;
+    display: block;
+    background: url(http://mihanblog.com/http://mihanblog.com/public/public/user_data/template/17/images/menu_bg_right.jpg) repeat-x right;
+    margin-left: 1px;
+    color: #fff;
+    padding-left: 19px;
+    padding-right: 20px;
+}
+
+* html #menu li a {
+    width: 1%;
+}
+
+#menu li.current_page_item, #menu li.current_page_item a {
+    background: #fff;
+    color: #559AD3;
+}
+
+#menu li.current_page_item a:hover {
+    text-decoration: none;
+}
+
+
+    /* Page Description */
+
+#page_desc {
+    width: 100%;
+    height: 3.1em;
+    font-size: 14px;
+    padding-bottom: 10px;
+    background: #EEEEEE;
+    text-align:right;
+}
+
+#page_desc #text {
+    padding-right: 20px;
+    height: 3.1em;
+    float:right;
+    width: 499px;
+    background: #fff;
+}
+
+#page_desc p {
+    padding: 12px 0px;
+}
+
+    /* Search */
+
+#search_top {
+    float: left;
+    width: 262px;
+    height: 3.1em;
+    background: #fff;
+
+}
+
+#search_top #searchform {
+    margin-top: 0.65em;
+    position: relative;
+}
+
+#search_top input.sfield {
+    background: #fff;
+    border: #B8C7DA 1px solid;
+    width: 159px;
+    height: 21px;
+    font-size: 13px;
+    padding: 3px 2px 0 3px;
+    text-align:right;
+
+}
+
+#search_top input.sbutton {
+    position: absolute;
+    top:0px;
+    right: 168px;
+}
+.btn
+{
+    background:url(http://mihanblog.com/http://mihanblog.com/public/public/user_data/template/17/images/search_button.gif);
+    -x-system-font:none;
+    color:#000;
+    cursor:pointer;
+    float:none;
+    font-family:Tahoma;
+    font-size:12px;
+    font-size-adjust:none;
+    font-stretch:normal;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    height:27px;
+    line-height:normal;
+    text-align:center;
+    width:92px;
+    border:1px solid #81C227;
+
+}
+
+    /* Content */
+
+#content_wrap {
+    background: #EEEEEE url(http://mihanblog.com/http://mihanblog.com/public/public/user_data/template/17/images/content_wrap_bg.gif) repeat-y;
+    padding: 0 16px;
+    width: 749px;
+    text-align:right;
+    direction:rtl;
+}
+
+#content {
+    width: 486px;
+    float: left;
+}
+
+#content h2 {
+    font-size: 15px;
+}
+
+#content p {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 10px 0 0;
+}
+
+#content ul, #content ol {
+    padding: 0.5em 2.5em;
+    font-size: 13px;
+}
+
+#content ul li {
+    background: url(http://mihanblog.com/http://mihanblog.com/public/public/user_data/template/17/images/bullet.gif) no-repeat 0 0.6em;
+    line-height: 20px;
+    padding-left: 25px;
+    list-style: none;
+}
+
+#content ol {
+    margin-left: 1.4em;
+}
+
+#content ol li {
+    background: none;
+    padding-left: 7px;
+    line-height: 20px;
+}
+
+#content blockquote {
+    background: #F9F9F9;
+    border-bottom: #EEEEEE 1px solid;
+    border-left: 1px solid #EEEEEE;
+    font-size: 13px;
+    color: #737373;
+    padding: 0 10px;
+    width: 87%;
+    margin: 10px auto;
+    line-height: 20px;
+}
+
+    /* Caption */
+
+#caption {
+    width: 100%;
+    height: 1.9em;
+    background: #fff;
+}
+
+#caption h2 {
+    width: 250px;
+    float: left;
+    line-height: 1.9em;
+    padding-left: 18px;
+}
+
+#m_post {
+    width: 200px;
+    float: right;
+    height: 31px;
+    position: relative;
+    background: url(http://mihanblog.com/http://mihanblog.com/public/public/user_data/template/17/images/caption_m_posts.gif) no-repeat 130px 8px;
+}
+
+#m_post span {
+    display: none;
+}
+
+#m_post .o_entries a {
+    position: absolute;
+    right: 53px;
+    top: 8px;
+    display: block;
+    width: 17px;
+    height: 15px;
+    background: url(http://mihanblog.com/http://mihanblog.com/public/public/user_data/template/17/images/caption_o_entries.gif) no-repeat;
+}
+
+#m_post .r_entries a {
+    position: absolute;
+    right: 21px;
+    top: 8px;
+    display: block;
+    width: 17px;
+    height: 15px;
+    background: url(http://mihanblog.com/http://mihanblog.com/public/public/user_data/template/17/images/caption_r_entries.gif) no-repeat;
+}
+
+#m_post a:hover {
+    background-position: 0 -15px;
+    text-decoration: none;
+}
+
+#m_post a:hover span {
+    display: block;
+    font-size: 11px;
+    color: #2E2E2E;
+    position: absolute;
+    top: 0;
+}
+
+#m_post .o_entries a:hover span {
+    left: -100px;
+}
+
+#m_post .r_entries a:hover span {
+    left: -130px;
+}
+
+    /* Post */
+
+.post {
+    background: #fff;
+    padding: 5px 15px 15px 15px;
+    width:455px;
+    overflow:hidden;
+}
+.post #post_cat{
+    font-size:10px;
+}
+
+#page_post {
+    margin-top: 0px;
+}
+
+#page_post h2 {
+    color: #A52A2A;
+}
+
+.post h2 {
+    padding: 10px 0;
+}
+
+.post h2 a {
+    color: #A52A2A;
+}
+
+.post p a {
+    text-decoration: none;
+}
+
+.post p a:hover {
+    text-decoration: none;
+}
+
+.post_details {
+    padding: 0 15px 5px;
+    background: #fff;
+    margin-bottom: 15px;
+    width:455px;
+    margin-top:1px;
+    line-height:19px;
+}
+
+.post_details p {
+    padding: 5px 0;
+    margin-top: 1px;
+    font-size: 11px !important;
+}
+
+.post_details p a {
+    text-decoration: none;
+}
+
+.post_details p a:hover {
+    text-decoration: underline;
+}
+
+.post_details span{
+    font-size:11px;
+
+
+}
+    /* More Posts */
+
+#more_posts {
+    background: #fff;
+    padding: 10px 15px;
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+
+img{
+    max-width : 445px;
+}
+
+
+#content form {
+    background: #FAFAFA;
+    width: 445px;
+    border: #EDEDED 1px solid;
+    padding: 15px 0 15px 15px;
+    margin: 0 auto;
+}
+
+#content form p {
+    padding: 0px 0 5px 0;
+    line-height: 20px;
+}
+
+#content input {
+    border: #EEEEEE 1px solid;
+    background: #fff;
+    padding: 5px;
+    font-size: 15px;
+    font-family: Georgia;
+}
+
+#content input.data {
+    width: 184px;
+}
+
+#content textarea {
+    border: #EEEEEE 1px solid;
+    width: 415px;
+    height: 170px;
+    padding: 3px;
+    font-size: 15px;
+    font-family: Georgia;
+}
+
+#content input.sbutton {
+    margin-top: 3px;
+}
+
+    /* Sidebar */
+
+
+#sidebar {
+    width: 216px;
+    float: right;
+    padding: 5px;
+}
+
+#sidebar h2 {
+    font-size: 13px;
+    color: #75A546;
+    padding: 10px 0;
+    line-height: 18px;
+}
+
+#sidebar p, #sidebar li {
+    font-size: 12px;
+    display:block;
+}
+
+#sidebar p {
+    padding: 10px 0;
+    line-height: 20px;
+}
+
+#sidebar ul {
+    list-style: none;
+}
+
+#sidebar ul ul {
+    padding: 10px 0;
+    list-style: none;
+}
+
+#sidebar ul ul ul {
+    padding: 0;
+}
+
+#sidebar ul li ul li {
+    background: url(http://mihanblog.com/http://mihanblog.com/public/public/user_data/template/17/images/bullet.gif) no-repeat 100% 9px;
+    padding-right: 23px;
+    line-height: 23px;
+}
+
+#sidebar ul li .simple li {
+    background: none;
+    padding-right: 23px;
+    line-height: 23px;
+    padding:5px 2px;
+}
+
+
+#sidebar ul li .rss_atom  li{
+    background:none;
+    text-align:center;
+    padding:0px;
+    margin:0px;
+}
+#sidebar ul li .rss_atom  #rss
+{
+    background: url(http://mihanblog.com/http://mihanblog.com/public/public/user_data/template/17/images/rss.gif) no-repeat 50% 0;
+}
+
+#sidebar ul li .rss_atom  #atom
+{
+    background: url(http://mihanblog.com/http://mihanblog.com/public/public/user_data/template/17/images/atom.gif) no-repeat 50% 0 ;
+    width:35px;
+}
+
+#sidebar ul li .stat li {
+    line-height: 15px;
+}
+
+#sidebar ul li .stat li span{
+    color:#BA5E05;
+}
+
+#sidebar ul li .cloud li {
+    float:right;
+}
+#sidebar .about_box  p{text-align:right;color:#559AD3;padding:0px;margin-bottom:2px;}
+#sidebar .about_box  img{width:150px;height:150px;border:2px solid #eee;}
+
+
+    /* Footer */
+
+#footer {
+    background: #fff;
+    height: 3.7em;
+    border-top: #EEEEEE 15px solid;
+    border-bottom: #EEEEEE 15px solid;
+    clear: both;
+    text-align:center;
+    direction:rtl;
+}
+#footer li a {
+    display: block;
+    float: left;
+    line-height: 24px;
+    font-size: 12px;
+    padding: 0 6px;
+    margin-right: 19px;
+    color: #2E2E2E;
+}
+
+#footer p {
+    font-size: 11px;
+    line-height: 2.5em;
+}
+#footer strong{font-size: 9px;}
+#footer p a {
+    color: #000;
+}
+
+
+    /* Copyright */
+
+#copyright {
+    width: 781px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 11px;
+    padding: 15px 0 25px 0;
+    color: #8F8F8F;
+}
+
+#copyright p {
+    line-height: 19px;
+}
+
+
+
+
+    /* Fix */
+
+#menu:after,
+#menu ul:after,
+#content_wrap:after,
+#footer:after,
+#leave_a_comment_wrap:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.author_photo{
+    margin:5px 5px 5px 17px;
+    color:#fff;
+    float:right;
+}
+.author_photo img{
+    border:none;
+}
+    /* ***************************************************************************** CLEAR FIX  */
+.clearfix {display: inline-block;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+    /* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+    /* End hide from IE-mac */
+    /* ************************************************************************** EO CLEAR FIX   */
+.mihan_logo{
+    background: url(http://mihanblog.com/http://mihanblog.com/public/public/images/logo/poweredby.gif) no-repeat top center;
+    text-align:center;
+    height:131px;
+    margin-top:10px;
+}
+
+#content .page_box ul{
+    direction:rtl;
+    height:17px;
+    margin:3px auto;
+    max-width:440px;
+    text-align:left;
+    width:440px;
+    list-style:none;
+}
+#content .page_box ul{
+    height:17px;
+}
+#content .page_box li{
+    float:right;
+    margin-right:5px;
+    list-style:none;
+    background:none;
+    padding:0px;
+
+}
+#content .page_box a{
+    border:1px solid #CCCCCC;
+    display:block;
+    line-height:17px;
+    text-align:center;
+    width:17px;
+}
+#content .page_box a b{
+    color:#fff;
+    background:#639BD6  none repeat scroll 0 0;
+
+    display:block;
+    line-height:17px;
+    text-align:center;
+    width:17px;
+    color:#fff;
+}
+#parentheses p{
+    float:right;
+    padding:0px 1px;
+    margin:0px;
+    direction:rtl;
+    text-align:right;
+}
+#parentheses p a:hover,#parentheses p:hover{
+    text-decoration:underline;
+}
+img{border:none;}
+.cb_general{
+    line-height:22px;
+    padding-right:40px;
+    font-size:12px;
+}
+
+
+.cb_share{
+    text-align:left;
+}
+.cb_share a{
+    font-size:11px;
+    text-decoration:none
+}
+#content .cb_share a img{
+    padding:0 0 0 5px;
+}
+
+
+
+.cblike{
+    margin:4px 0px;
+}
+.cblike a {
+    float:left;
+    padding:3px;
+    text-align:center;
+    font-size:12px;
+    color:#FFF;
+    display:block;
+    line-height:15px;
+    text-decoration: none;
+}
+
+
+
+
+.cblike a.clike_plus {
+    background-color:#009900 ; /*green #039B03*/
+
+    border-radius: 5px ;
+
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    /*border:1px solid green;
+             border-right:0px;*/
+}
+.cblike a.clike_minus {
+    background-color:#CC0000;
+    border-radius: 5px ;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+    /*border:1px solid red;
+             border-left:0px;*/
+}
+.cblike a.clike_minus:hover {
+    background-color:red;
+    text-decoration: none;
+}
+.cblike a.clike_plus:hover {
+    background-color:green;
+    text-decoration: none;
+}
+.cblike a span{
+    font-weight:bold;
+    font-size:13px;
+
+    color:#fff;
+}
+
+</style>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="لحظه هایی اززندگی" />
+    <meta name="keywords" content="لحظه هایی از زندگی" />
+
+    <link rel="alternate" type="application/rss+xml" title="بچه گنجشک" href="http://bachegonjeshk.mihanblog.com/post/rss/" />
+    <link rel="alternate" type="application/atom+xml" title="بچه گنجشک" href="http://bachegonjeshk.mihanblog.com/post/atom/" />
+
+    <title>بچه گنجشک</title>
+
+
+
+<body>
+
+<div id="wrap">
+<div id="header">
+    <h2><a href="index.html">بچه گنجشک</a></h2>
+    <p>عشق اگر چه حرف ربط نیست ربط می دهد مرا به تو</p>
+</div>
+
+<div id="menu">
+    <ul>
+        <li class="page_item current_page_item"><a href="index.html">وبلاگ&nbsp;من</a></li>
+        <li class="page_item page-item-2"><a href="mailto:staha165@yahoo.com" >پست&nbsp;الکترونیک</a></li>
+        <li class="page_item page-item-3"><a href="javascript:messageForm()">تماس&nbsp;با&nbsp;ما</a></li>
+
+    </ul>
+</div>
+
+<div id="page_desc">
+
+    <div id="text">
+        <p>امروز: <script>setTodayDate()</script></p>
+    </div>
+    <form id="frm-16076168535fd249553e5f6" method="get" action="http://bachegonjeshk.mihanblog.com/post/search/fid/16076168535fd249553e5f6"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+        <div id="search_top">
+            <div method="get" id="searchform" action="/index.php">
+                <div>
+                    <input type="text" value="" name="search_text" id="s" class="sfield" />
+                    <input type="submit"  class="sbutton btn" id="searchsubmit" value="جستجو"/>
+                </div>
+            </div>
+        </div>
+    <input type="hidden" name="frm-id" value="16076168535fd249553e5f6" id="frm-id" /></form></div>
+
+<div id="content_wrap">
+
+<div id="content">
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		    <div class="post clearfix">
+        <blockquote><h2><a href="http://bachegonjeshk.mihanblog.com/post/3228">پست شماره ۵۲۰ خداخدا کردم.</a></h2></blockquote>
+                <div class="author_photo"></div>
+
+
+
+        <p><p><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>..<div><br></div><div><br></div><div>&nbsp;اولا بگم که تو محله ما هیچکس زباله تو کوچه یا دم در خونه نمیذاره و همه زباله ها رو میبرند سر خیابون. جالبه که این موضوع رو همه قبول دارند و رعایت می کنند و حتی اگه همسایه جدیدی بیاد خیلی زود از این قانون نانوشته پیروی می کنه. 
+دو شب پیش طرف های ساعت یازده خاله اعظم زنگ زد:
+-امشب بابای طه زباله ها رو برده؟
+:نه هنوز. چطور؟
+-خب اگه مجبور نیستین الان دیگه دیره بهش بگو نره. آخه چند تا سگ بزرگ و گوشتالو تو پارک جلوی خونه خاله زهرا هستند و اینجور که همسایه ها میگن دیشب دیروقت یکی شون دنبال یه بچه کرده که سوار دوچرخه بوده و پاشو گاز گرفته. احتمالا زباله می برده سر خیابون و سگ ها بوی گوشتی چیزی فهمیدند رفتند طرفش. تو این کرونایی همین رو کم داریم که یه سگ هم آدم رو گاز بگیره و حالا بخواهی بری واکسن هاری بزنی و هر روز بخواهی بری پانسمان عوض کنی...
+گفتم: باشه خاطرت جمع امشب دیگه نمیره....
+
+امروز خاله باز زنگ زده. حال و احوال پرسیده و میگه:
+الحمدلله دیگه خبری از سگ ها نیست انگار.
+میگم: پریشب که حرفش شد بابای طه می گفت ابنها به خاطر گرما به این فضای سبز پناه آوردند و کار به کسی ندارند.
+میگه: اینها رو بعضی ها میگفتند اصفهان آورده اینجا رها کرده. من کسی نیستم که از سگ بترسم ولی اینها هم اینکه چهار پنج تا با هم بودند هم بزرگ و گوشتالو بودند آخر شب اگه ادم بهشون برمی خورد وحشت می کرد و  اگه خدا نکرده به کسی حمله می کردند مصیبتی بود. پریشب یه دل می گفتم خوبه زنگ بزنم به شهرداری بگم یه فکری براشون بکنید یه دل می ترسیدم حریف سگها نشن و بلایی سرشون بیارن و خدانکرده خونشون به گردن ما بیفته. دیگه این دو شب هی خداخدا کردم که خودشون از اینجا برن ...
+
+@bache_gonjeshk
+
+
+</div></p></p>
+
+        <p><br>
+        </p>
+    </div>
+    <div class="post_details  clearfix">
+        <p>نوشته شده در : یکشنبه 22 تیر 1399&nbsp;&nbsp;توسط : <a href="http://bachegonjeshk.mihanblog.com/post/author/792694" >آدینه </a>.&nbsp;&nbsp;&nbsp; <a target="_self" href="http://bachegonjeshk.mihanblog.com/post/3228#commentlist" class="comment-link">نظرات(<script>setCommentCnt(3228)</script>)</a>&nbsp;.
+
+            <div style="margin-top: -22px;"><script>mihanblogPostLike('3228','like')</script></div>
+
+
+        </p>
+		<span>
+						
+
+					</span>
+
+        <div style="margin-top: 17px;" class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://bachegonjeshk.mihanblog.com/post/3228&amp;title=پست شماره ۵۲۰ خداخدا کردم.">
+                ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+    </div>
+
+    <div class="post clearfix">
+        <blockquote><h2><a href="http://bachegonjeshk.mihanblog.com/post/3227">یه فرود نورانی</a></h2></blockquote>
+                <div class="author_photo"></div>
+
+
+
+        <p><p>پست شماره ۳۰۸&nbsp;<div><br></div><div>&nbsp;این شعر رو یکی از همکارانم گذاشت تو گروه:&nbsp;</div><div><br></div><div>با من بمان و سایه 
+مهر از سرم مگیر</div><div>&nbsp;من زنده‌ام به مهر تو 
+ای مهربان من...
+
+ "حسین منزوی"</div><div><br></div><div>&nbsp;براش نوشتم:&nbsp;</div><div>اگه بابامسلم بود می گفت:&nbsp;</div><div>من زنده ام به مهر تو
+یا مرتضی علی</div><div><br></div><div>&nbsp;@bache_gonjeshk
+
+
+</div></p></p>
+
+        <p><br>
+        </p>
+    </div>
+    <div class="post_details  clearfix">
+        <p>نوشته شده در : جمعه 6 تیر 1399&nbsp;&nbsp;توسط : <a href="http://bachegonjeshk.mihanblog.com/post/author/792694" >آدینه </a>.&nbsp;&nbsp;&nbsp; <a target="_self" href="http://bachegonjeshk.mihanblog.com/post/3227#commentlist" class="comment-link">نظرات(<script>setCommentCnt(3227)</script>)</a>&nbsp;.
+
+            <div style="margin-top: -22px;"><script>mihanblogPostLike('3227','like')</script></div>
+
+
+        </p>
+		<span>
+						
+
+					</span>
+
+        <div style="margin-top: 17px;" class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://bachegonjeshk.mihanblog.com/post/3227&amp;title=یه فرود نورانی">
+                ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+    </div>
+
+    <div class="post clearfix">
+        <blockquote><h2><a href="http://bachegonjeshk.mihanblog.com/post/3226">آب بخور</a></h2></blockquote>
+                <div class="author_photo"></div>
+
+
+
+        <p><p>ست شماره ۳۰۹<div><br></div><div><br></div><div>دوستم میگه دکتر قلب بهم گفته هروقت کسی ناراحتت کرد، آب بخور.&nbsp;</div><div><br></div><div>بعد میگه:&nbsp;</div><div>دکتر راست میگه، واقعا آب جواب میده ولی کمیتش بستگی داره طرف چی گفته باشه؟ مثلا من یه بار یکی ناراحتم کرده بود، انقدر آب خورده بودم که اگه خم می شدم، آب از گلوم می اومد بیرون و می ریخت زمین.
+
+
+</div></p></p>
+
+        <p><br>
+        </p>
+    </div>
+    <div class="post_details  clearfix">
+        <p>نوشته شده در : جمعه 6 تیر 1399&nbsp;&nbsp;توسط : <a href="http://bachegonjeshk.mihanblog.com/post/author/792694" >آدینه </a>.&nbsp;&nbsp;&nbsp; <a target="_self" href="http://bachegonjeshk.mihanblog.com/post/3226#commentlist" class="comment-link">نظرات(<script>setCommentCnt(3226)</script>)</a>&nbsp;.
+
+            <div style="margin-top: -22px;"><script>mihanblogPostLike('3226','like')</script></div>
+
+
+        </p>
+		<span>
+						
+
+					</span>
+
+        <div style="margin-top: 17px;" class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://bachegonjeshk.mihanblog.com/post/3226&amp;title=آب بخور">
+                ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+    </div>
+
+    <div class="post clearfix">
+        <blockquote><h2><a href="http://bachegonjeshk.mihanblog.com/post/3225">و ضاقت الارض</a></h2></blockquote>
+                <div class="author_photo"></div>
+
+
+
+        <p><p>
+
+
+<div><br></div><div><br></div><div><br></div><div>هر کار می کنم یه ذره دلمو خوش کنم نمی تونم.&nbsp;</div><div>واقعا نمیشه.</div><div><br></div><div>چقد آدم تاب و تحمل داره مگه؟</div><div>وضع مردم اینجوری&nbsp;</div><div>وضع مسئولان اونجوری</div><div>یه عده م که دارن خون ملتو می مکند...</div><div><br></div><div>و ضاقت الارض....</div></p></p>
+
+        <p><br>
+        </p>
+    </div>
+    <div class="post_details  clearfix">
+        <p>نوشته شده در : چهارشنبه 13 آذر 1398&nbsp;&nbsp;توسط : <a href="http://bachegonjeshk.mihanblog.com/post/author/792694" >آدینه </a>.&nbsp;&nbsp;&nbsp; <a target="_self" href="http://bachegonjeshk.mihanblog.com/post/3225#commentlist" class="comment-link">نظرات(<script>setCommentCnt(3225)</script>)</a>&nbsp;.
+
+            <div style="margin-top: -22px;"><script>mihanblogPostLike('3225','like')</script></div>
+
+
+        </p>
+		<span>
+			<b>برچسب ها:</b>
+                                    <a href="http://bachegonjeshk.mihanblog.com/post/tag/%D9%88%20%D8%B6%D8%A7%D9%82%D8%AA%20%D8%A7%D9%84%D8%A7%D8%B1%D8%B6" >و ضاقت الارض</a>&nbsp;،
+                <br>
+            			
+
+					</span>
+
+        <div style="margin-top: 17px;" class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://bachegonjeshk.mihanblog.com/post/3225&amp;title=و ضاقت الارض">
+                ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+    </div>
+
+    <div class="post clearfix">
+        <blockquote><h2><a href="http://bachegonjeshk.mihanblog.com/post/3224">و تواصوا بالمرحمه...</a></h2></blockquote>
+                <div class="author_photo"></div>
+
+
+
+        <p><p>تفسیر 90. البلد آیة 17<div><br></div><div>مهربونی مهربونی مهربون!<img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"></div><div>&nbsp;بِسْمِ اللّهِ الرَّحْمـَنِ الرَّحِیم
+
+ثُمَّ كَانَ مِنَ الَّذِینَ آمَنُوا وَتَوَاصَوْا بِالصَّبْرِ وَتَوَاصَوْا بِالْمَرْحَمَةِ&nbsp;۱۷&nbsp;
+
+سپس از کسانی باشد که ایمان آورده و یکدیگر را به شکیبایی و رحمت توصیه می‌کنند!
+
+ترجمه
+سپس از كسانى باشد كه ایمان آورده و همدیگر را به شكیبایى و مهربانى سفارش كرده‏اند.&nbsp;
+آنان اصحاب یمین هستند.&nbsp;
+و كسانى كه به آیات ما كفر ورزیدند اصحاب شومى و شقاوت هستند.&nbsp;
+بر آنان آتشى سرپوشیده و فراگیر احاطه دارد.&nbsp;
+نکته ها
+عبارت «ثمّ كان من الّذین آمنوا» دو گونه معنا شده است:
+&nbsp;الف: كارهاى خیر مثل آزاد كردن برده و سیر كردن گرسنه، بسترى براى گرایش به ایمان و سفارش دیگران به كارهاى نیك است.
+ب: مقام و ارزش ایمان، بالاتر از سیر كردن گرسنه و آزادى برده است، لذا با كلمه «ثمّ» فاصله شده است.(62)
+«میمنة» از یمن و یمین به معناى میمنت و مباركى است و اصحاب میمنة یعنى كسانى كه بركت دائمى، ملازم و مصاحب آنان است.
+
+ گویا اصحاب میمنه همان كسانى باشند كه نامه عملشان به دست راستشان داده مى‏شود.
+
+«مشئمة» از شوم به معناى نامبارك است و كلمه «مؤصدة» از «ایصاد» به معناى بستن درب و محكم كردن آن است.
+
+
+در قرآن، چهار بار كلمه «تواصوا» به كار رفته است: یك بار «تواصوا بالحق»، دو بار «تواصوا بالصبر» ویك بار «تواصوا بالمرحمة».
+
+
+تكرار كلمه «تواصوا» در یك آیه، یا براى تأكید است و یا براى آنكه هر یك از صبر و مرحمت، یك تكلیف مستقل هستند و با ترك یكى زمینه دیگرى از بین نمى‏رود.(63)
+
+
+هیچكس بى‏نیاز از سفارش و تشویق نیست. كلمه «تواصوا» كه در قالب باب تفاعل آمده، به معناى آن است كه سفارش به نیكى‏ها باید طرفینى و به صورت یك جریان عمومى باشد نه یك طرفه.
+
+
+در آیات قبل سفارش شد كه به یتیم و مسكین رسیدگى كنیم، در این آیه مى‏فرماید: دیگران را هم به رسیدگى و رحم كردن سفارش كنیم.
+
+ «تواصوا بالمرحمة» با اینكه معمولاً در كنار «آمنوا»، «عملوا الصالحات» به كار مى‏رود، ولى در اینجا به جاى «عملوا الصالحات»، «تواصوا بالصبر و تواصوا بالمرحمة» آمده است گویى این دو سفارش، خود عمل صالح است.&nbsp;
+
+اسلام، علاوه بر كار نیك، به عقائد و انگیزه‏ هاى افراد نیز توجه كامل دارد یعنى فرد علاوه بر آزاد كردن برده و اطعام بینوایان باید اهل ایمان نیز باشد. چه بسیارند كسانى كه حاضرند كمك‏هاى مالى و خدمات انسان دوستانه ارائه دهند ولى حاضر نیستند مكتب و راه و استدلال حق را بپذیرند! اینگونه افراد نیز واماندگانند و از عقبه‏ ها و گردنه‏ ها عبور نكرده‏ اند، لذا قرآن مى‏فرماید: شرط عبور از گردنه، خدمات و كمك‏هاى مالى به اسیر و مسكین و یتیم است به شرط آنكه همراه با روحیه حق پذیرى و ایمان باشد. «ثم كان من الّذین آمنوا»
+
+شاید مراد از دوزخ سرپوشیده، همان باشد كه در آیه‏اى دیگر مى‏فرماید: «لهم من جهنّم مهاد و من فوقهم غواش»(64&nbsp;</div><div><br></div><div>سلام!</div><div>&nbsp;اول صبحی اینو خوندم حیفم اومد براتون نیارم و نخونین.
+مهربون باشیم و دعوت به مهربونی کنیم.<img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"><div><br></div><div>&nbsp;تقدیم با احترام.</div></div></p></p>
+
+        <p><br>
+        </p>
+    </div>
+    <div class="post_details  clearfix">
+        <p>نوشته شده در : یکشنبه 3 آذر 1398&nbsp;&nbsp;توسط : <a href="http://bachegonjeshk.mihanblog.com/post/author/792694" >آدینه </a>.&nbsp;&nbsp;&nbsp; <a target="_self" href="http://bachegonjeshk.mihanblog.com/post/3224#commentlist" class="comment-link">نظرات(<script>setCommentCnt(3224)</script>)</a>&nbsp;.
+
+            <div style="margin-top: -22px;"><script>mihanblogPostLike('3224','like')</script></div>
+
+
+        </p>
+		<span>
+			<b>برچسب ها:</b>
+                                    <a href="http://bachegonjeshk.mihanblog.com/post/tag/%D9%88%20%D8%AA%D9%88%D8%A7%D8%B5%D9%88%D8%A7%20%D8%A8%D8%A7%D9%84%D9%85%D8%B1%D8%AD%D9%85%D9%87_____%7C(dot)%7C__________%7C(dot)%7C__________%7C(dot)%7C_____" >و تواصوا بالمرحمه...</a>&nbsp;،
+                <br>
+            			
+
+					</span>
+
+        <div style="margin-top: 17px;" class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://bachegonjeshk.mihanblog.com/post/3224&amp;title=و تواصوا بالمرحمه...">
+                ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+    </div>
+
+    <div class="post clearfix">
+        <blockquote><h2><a href="http://bachegonjeshk.mihanblog.com/post/3223">تلگرام قطع شده</a></h2></blockquote>
+                <div class="author_photo"></div>
+
+
+
+        <p><p>
+
+
+<div><br></div><div><br></div><div>الان سه شنبه ست تازه شب شده و من به این فکر می کنم از شنبه شب که تلگرام و واتساپ قطع شده زندگی م چه تغییراتی کرده؟</div><div><br></div><div><br></div><div>شب اول و روز بعدش ارتباطم کلا با همه آدمایی که تو تلگرام ارتباط داشتم قطع بود شب دوم بعضی از دوستان شروع کردند به زنگ زدن و پیامک زدن منم یکی دو بار زنگ زدم به یکی از دوستان که دخترک سه ساله ش بستری بود و حال بچه شو پرسیدم.</div><div><br></div><div>آخرین بار دیشب زنگ زدم و گفت مرخص شده و کلی خوشحال شدم.</div><div><br></div><div><br></div><div>بقیه دوستان اون گروه رفتند پیام رسان "ایتا" و برای منم لینک فرستادند که برم پیششون.</div><div><br></div><div><br></div><div>یکی از دوستان تا دیشب هیچ خبری ازش نشده بود دیشب تو پیامک یه بیت شعر برام فرستاد شعری که برای هردوی ما خاطره انگیز بود:</div><div>هر که بی او زندگانی می کند&nbsp;</div><div>گرنمی میرد گرانی می کند</div><div><br></div><div>منم بیت دوم شعر رو براش فرستادم:</div><div>ماجرای دل نمی گفتم به خلق</div><div>آب چشمم ترجمانی می کند</div><div><br></div><div>امروز من براش یه پیامک کوتاه فرستادم که البته محبت آمیز بود حدود یه ساعت بعد برام نوشت:</div><div>سلامت باشید...</div><div><br></div><div><br></div><div>نمی دونم اما روزای خاصی رو پشت سر میذاریم...</div><div><br></div><div><br></div><div><br></div></p></p>
+
+        <p><br>
+        </p>
+    </div>
+    <div class="post_details  clearfix">
+        <p>نوشته شده در : سه شنبه 28 آبان 1398&nbsp;&nbsp;توسط : <a href="http://bachegonjeshk.mihanblog.com/post/author/792694" >آدینه </a>.&nbsp;&nbsp;&nbsp; <a target="_self" href="http://bachegonjeshk.mihanblog.com/post/3223#commentlist" class="comment-link">نظرات(<script>setCommentCnt(3223)</script>)</a>&nbsp;.
+
+            <div style="margin-top: -22px;"><script>mihanblogPostLike('3223','like')</script></div>
+
+
+        </p>
+		<span>
+			<b>برچسب ها:</b>
+                                    <a href="http://bachegonjeshk.mihanblog.com/post/tag/%D8%AA%D9%84%DA%AF%D8%B1%D8%A7%D9%85%20%D9%82%D8%B7%D8%B9%20%D8%B4%D8%AF%D9%87" >تلگرام قطع شده</a>&nbsp;،
+                <br>
+            			
+
+					</span>
+
+        <div style="margin-top: 17px;" class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://bachegonjeshk.mihanblog.com/post/3223&amp;title=تلگرام قطع شده">
+                ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+    </div>
+
+    <div class="post clearfix">
+        <blockquote><h2><a href="http://bachegonjeshk.mihanblog.com/post/3222">چرا برف اومده؟</a></h2></blockquote>
+                <div class="author_photo"></div>
+
+
+
+        <p><p>
+
+
+<div><br></div><div><br></div><div><br></div><div>حالا که تلگرام بسته ست اومدم یه سری به این خونه بزنم.</div><div>دیشب خاله اعظم زنگ زده بود می گفت:</div><div>نمی دونم چرا مردم اینجوری شدند؟ قدیم برف که می اومد مردا می رفتند برف پشت بوم خونه خودشونو می روفتند</div><div>&nbsp;بعد اگه همسایه پیرزن یا پیرمرد و از کارافتاده داشتند برف پشت بوم اونو هم می روفتند</div><div>&nbsp;بعد می رفتند تو کوچه ها راهو باز می کردند</div><div>همه اینا که تموم می شد می رفتند اگه مسجد حسینیه یا زیارتگاهی نزدیک خونه شون بود برف اونجا رو هم می روفتند</div><div>حالا تلویزیون نشون می داد همه تو ماشیناشون نشسته ن میگن راهو باز کنین برفا رو بروبین ما فقط پشت فرمون تو ماشین نشسته باشیم بخاری مونم روشن باشه راه بریم.</div><div>یکی شون می گفت چرا شهرداری اخبار هواشناسی رو گوش نمیده چرا جلوتر نمیاد همه جا نمک بریزه؟&nbsp; یکی نیست بهش بگه آخه مرد حسابی! مگه یه خیابون و دو خیابونه که نمک بریزن؟ بک نمی کنی این همه نمک چه بر سر آسفالت ها میاره؟ بعدم همه ش میره تو زمین و قاطی آب های زیرزمینی&nbsp; میشه ینی انقد شاکی بود که نزدیک بود بگه اصن چرا برف اومده؟...</div><div><br></div><div><br></div><div><br></div></p></p>
+
+        <p><br>
+        </p>
+    </div>
+    <div class="post_details  clearfix">
+        <p>نوشته شده در : دوشنبه 27 آبان 1398&nbsp;&nbsp;توسط : <a href="http://bachegonjeshk.mihanblog.com/post/author/792694" >آدینه </a>.&nbsp;&nbsp;&nbsp; <a target="_self" href="http://bachegonjeshk.mihanblog.com/post/3222#commentlist" class="comment-link">نظرات(<script>setCommentCnt(3222)</script>)</a>&nbsp;.
+
+            <div style="margin-top: -22px;"><script>mihanblogPostLike('3222','like')</script></div>
+
+
+        </p>
+		<span>
+			<b>برچسب ها:</b>
+                                    <a href="http://bachegonjeshk.mihanblog.com/post/tag/%DA%86%D8%B1%D8%A7%20%D8%A8%D8%B1%D9%81%20%D8%A7%D9%88%D9%85%D8%AF%D9%87%D8%9F" >چرا برف اومده؟</a>&nbsp;،
+                <br>
+            			
+
+					</span>
+
+        <div style="margin-top: 17px;" class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://bachegonjeshk.mihanblog.com/post/3222&amp;title=چرا برف اومده؟">
+                ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+    </div>
+
+    <div class="post clearfix">
+        <blockquote><h2><a href="http://bachegonjeshk.mihanblog.com/post/3220">همه بودند علما شهدا شهدای خودمون...</a></h2></blockquote>
+                <div class="author_photo"></div>
+
+
+
+        <p><p>شماره ۱۴۲
+همه بودند؛ علما؛ شهدا؛ شهدای خودمون...<div><br></div><div><br></div><div><br></div><div>&nbsp;یست سال پیش میرزا مریض میشه
+
+بیمارستان ودکتر و آزمایش و...
+
+دکترا میگن باید آندوسکوپی بشه
+
+دامادشون که برادرزاده شم هست پیشش بوده
+
+میگه:
+میرزا گفت دکترا چی میگن
+
+گفتم:
+ میگن باید یه شیلنگ مخصوص از تو دهنت ببریم تو دل و روده هات ببینیم چته
+
+گفت:
+ بهشون بگو شیلنگتونو نگه دارین برا خودتون؛
+منو مرخص کنین برم خونه.
+
+
+
+با اصرار میرزا مرخصش می کنن. بعد میرزا تعریف می کنه که چی دیده؟
+
+خودش می گه:
+
+خواب نبودا
+تو بیداری
+شهید بهشتی رو دیدم 
+تو یه باغ
+بهم گفت من بهشتی هستم 
+این باغو هم خودم ساختم
+اونا بمب گذاشتند که اسم من ورافته 
+اما من این باغو ساختم
+
+بعد گفت تو امروز مهمون من هستی بگو چی دوست داری بخوری؟
+
+گفتم من دندون مصنوعی مو دراورده ن 
+دندون ندارم که چیزی بخورم
+خندید و گفت:
+این حرفا مال اون ور بود اینجا دندون نیاز نداریم هر چی دوست داریم اراده می کنیم تو دسترسمون قرار می گیره 
+
+بعد گفت میخوام ازت پذیرایی کنم. دست دراز کرد از درخت برام میوه چید گفت بذار تو دهنت؛ آب میشه و راحت میخوری.
+خوردم. خوش طعم بود. 
+دو سه تا میوه دیگه هم داد خوردم بعد گفت: اونجا رو نگاه کن.
+نگاه کردم دیدم علما؛ شهدا؛ شهدای خودمون؛ همه هستند.
+گفت:
+این طرفم نگاه کن
+نگاه کردم دیدم چند نفر مشغول خیاطی هستند
+گفتم:
+اینا کی هستند؟ چی می دوزند؟
+گفت:
+مامورند برای تو یه دست لباس می دوزند که وقتی بپوشی قشنگ اندازه ته نه برات بزرگه نه کوچیک.
+
+بعد گفت:
+اما حالا نه. به وقتش. حالا باید بری وقتش که شد میای اینجا. جات محفوظه...
+
+
+....
+
+
+میرزا بعد داستانو برای برادرش حاج شیخ حبیب الله(خدا رحمتش کنه) تعریف می کنه شیخ با خنده بهش می گه:
+جا به این خوبی! همونجا می موندی. چرا اومدی بیرون؟
+میرزا هم می خنده و میگه:
+من نیومدم بیرون. ببرونم کردند اما گفتند به وقتش میای...</div><div><br></div><div><br></div><div>@bache_gonjeshk
+
+@ramazani135
+
+
+</div></p></p>
+
+        <p><br>
+        </p>
+    </div>
+    <div class="post_details  clearfix">
+        <p>نوشته شده در : پنجشنبه 2 آبان 1398&nbsp;&nbsp;توسط : <a href="http://bachegonjeshk.mihanblog.com/post/author/792694" >آدینه </a>.&nbsp;&nbsp;&nbsp; <a target="_self" href="http://bachegonjeshk.mihanblog.com/post/3220#commentlist" class="comment-link">نظرات(<script>setCommentCnt(3220)</script>)</a>&nbsp;.
+
+            <div style="margin-top: -22px;"><script>mihanblogPostLike('3220','like')</script></div>
+
+
+        </p>
+		<span>
+						
+
+					</span>
+
+        <div style="margin-top: 17px;" class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://bachegonjeshk.mihanblog.com/post/3220&amp;title=همه بودند علما شهدا شهدای خودمون...">
+                ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+    </div>
+
+    <div class="post clearfix">
+        <blockquote><h2><a href="http://bachegonjeshk.mihanblog.com/post/3219">یر به یر</a></h2></blockquote>
+                <div class="author_photo"></div>
+
+
+
+        <p><p>
+
+
+<div><br></div><div><br></div><div>شماره ۱۱۹
+
+یر به یر</div><div><br></div><div><br></div><div>&nbsp;وارد کلاس که شد، همه ی نگاه ها بهش ماسید: سرش از پیشونی به بالا کامل باندپیچی شده بود. رنگش بدجوری پریده بود و چهره ش یه جوری بی رمق و پژمرده شده بود که انگار یهو چند سال پیرتر شده.
+ روی صندلی نشست، نگاهی به ما کرد لبخند بی جونی زد و گفت:
+_همیشه دوست داشتم وقتی میام کلاس؛ ازم در باره ادبیات سؤال کنید، امروز خوشحالم که میبینم همه تون با نگاه ازم می پرسین آقا! چی شدین؟ کله رو کجا شکستین؟
+
+ما که خیلی براش احترام قائل بودیم، حرفی نزدیم. نه شوخی نه جدی اما خودش انگار اصرارداشت بگه چی شده. 
+نمیگم بهترین معلمم بود اما معلمی بود که از رفتارش خوشم می اومد و واقعا دوست داشتم حرف بزنه تا بیشتر با شخصیتش آشنا بشم.
+
+اون روز با همون سر و کله باندپیچی شده رو کرد به ما و گفت:&nbsp;</div><div>_"بچه ها! من یه عمر سر کلاسا درس دادم ولی دیروز خودم سر یه کلاس دیگه بودم و یکی دیگه بهم درس داد! این کله لابد باید می شکست... شاید ندونین که من چندین سال مدیر بودم، البته مدیر دبستان، اون وقتا برفای سنگینی این طرفا میبارید. 
+زمستونا یکی از گرفتاریای من همین برف بود و بچه هایی که روزای برفی زودتر از همیشه می اومدند مدرسه، فقط به عشق برف بازی اما اگه اتفاقی براشون می افتاد من باید جواب خونواده ها رو می دادم.
+
+یه روز برف سنگینی اومده بود و من دیدم حدود بیست دانش آموز بازم به حرفام گوش نکردند و سر صبحی پا شدند اومدند مدرسه و تو حیاط هیاهو به پا کرده ند و دارند گوله برفی به سمت هم پرتاب می کنند! از کوره در رفتم و چوب به دست رفتم طرفشون!&nbsp;
+همه پا گذاشتند به فرار و فقط یکی شون موند منم عصبلنی تا می خورد زدمش به عبارتی دق همه رو سر همین یکی خالی کردم.
+من اون لحظه انقد عصبانی بودم که حتی از خودم نپرسیدم چطور همه فرار کردند و این یکی مونده؟
+
+وقتی به خودم اومدم دیدم ولو شده کف حیاط و انگار نمیتونه از جاش بلند بشه. خدایا! من یه طفل علیل رو انقد وحشتناک زده بودم...
+
+
+با این همه غرورم اجازه نمی داد خم شم دستشو بگیرم از زمین بلندش کنم و مثلا ببرمش تو دفتر یه ابجوش بهش بدم که حالش کمی بهتر بشه.
+همونجا ولش کردم و رفتم تو دفتر . می دونستم چه اشتباهی کرده م با نگرانی از پشت پنجره نگاش کردم. به سختی خودشو جمع و جور کرد و بلند شد وقتی راه افتاد حس کردم یه پاش که کوتاه تر بود انگار کوتاه تر هم شده. حالا موقع راه رفتن بدجوری لنگ می زد و می شنیدم که از درد ناله می کنه یه دل می گفتم برم پیشش و بگم که نگران سلامتی اون و دوستانش بوده م و واقعا نمی خواستم اذیتش کنم یه دل می گفتم اگه این کارو کنم فردا باز همین آش و همین کاسه ست و دیگه حریفشون نمی شم...
+
+سالها از این قصه گذشت‌ و دیروز داشتم از صحرا برمی گشتم لابد می دونین که من در کنار معلمی یه خرده کشاورزی هم می کنم. ساعت طرف سه بعد از ظهر بود و خیابون ها خلوت و من با موتور می رفتم طرف خونه که نفهمیدم اون موتوری از کجا پیداش شد و چی شد که زد بهم و پرتم کرد کف خیابون...
+
+
+تو اون لحظه من هیچ نفهمیدم که سرم شکسته و   ... اما تا به هوش بودم، تونستم به چهره ش نگاه کنم. خودش بود،  همون بچه ای که یه پاش می لنگید اما حالا بزرگ شده بود و اونطور که بعد باباش بهم گفت بی خبر سوییچ موتور باباشو برمی داره  و قاچاقی از خونه می زنه بیرون...
+
+معلم مکثی کرد و گفت: 
+حالا خدا خدا می کنم این کله شکسته تقاص اون کتکی باشه که اون سال به این بچه علیل زدم!
+خدا خدا می کنم الان دیگه یر به یر شده باشیم...&nbsp;</div><div><br></div><div><br></div><div>&nbsp;@bache_gonjeshk
+
+@ramazani135</div></p></p>
+
+        <p><br>
+        </p>
+    </div>
+    <div class="post_details  clearfix">
+        <p>نوشته شده در : چهارشنبه 17 مهر 1398&nbsp;&nbsp;توسط : <a href="http://bachegonjeshk.mihanblog.com/post/author/792694" >آدینه </a>.&nbsp;&nbsp;&nbsp; <a target="_self" href="http://bachegonjeshk.mihanblog.com/post/3219#commentlist" class="comment-link">نظرات(<script>setCommentCnt(3219)</script>)</a>&nbsp;.
+
+            <div style="margin-top: -22px;"><script>mihanblogPostLike('3219','like')</script></div>
+
+
+        </p>
+		<span>
+			<b>برچسب ها:</b>
+                                    <a href="http://bachegonjeshk.mihanblog.com/post/tag/%DB%8C%D8%B1%20%D8%A8%D9%87%20%DB%8C%D8%B1" >یر به یر</a>&nbsp;،
+                <br>
+            			
+
+					</span>
+
+        <div style="margin-top: 17px;" class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://bachegonjeshk.mihanblog.com/post/3219&amp;title=یر به یر">
+                ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+    </div>
+
+    <div class="post clearfix">
+        <blockquote><h2><a href="http://bachegonjeshk.mihanblog.com/post/3218">من چیزی م نشده...</a></h2></blockquote>
+                <div class="author_photo"></div>
+
+
+
+        <p><p><div><br></div><div><br></div><div><br></div><div><br></div>حرف اون سالها شد که عراق به کشورمون حمله کرده بود.
+می گفت:
+من اون زمان یه دانش آموز دبیرستانی بودم. تو کلاسمون ۳۶ نفر بودیم‌. یکی دو تا از همکلاسی هامون داوطلبانه رفتند غرب کشور و جنازه شون اومد. ما سی و چهار نفر همه با هم داوطلبانه رفتیم جبهه.
+
+بچه ها تو اون هشت سال زحمت ها کشیدند و مظلومیت ها تحمل کردند و به مرور از اون کلاس سی و شش نفره بیست و شش نفر شهید شدند؛&nbsp; دو نفر قطع نخاع و&nbsp; فقط چند نفر ماها موندیم.
+&nbsp;<div><br></div><div><br></div><div>ازش پرسیدند:
+شما چند بار و چه جوری مجروح شدین؟
+لبخندی زد و گفت:
+من؟ چیزی م نشده فقط دو سه تا گلوله به یه طرف سرم خورده یه چند تا تیر و ترکش به پام خورده یه چنتا ترکش هم به پشت کتفم... یکی دو بار هم تو منطقه بودیم که عراق بمباران شیمیایی کرد و یه نسیمی از این مواد به منم خورد که البته اینها در مقابل شهادت بهترین دوستان و همکلاسی هام چیزی به حساب نمیاد...
+
+
+پ.ن: حاج علی اکبر احسن زاده/ فرمانده گردان امام محمد باقر (ع) در دوران دفاع مقدس/ یکی از دانش آموزان دبیرستان شهیدان&nbsp;عبداللهی آران و بیدگل
+
+
+@bache_gonjeshk</div></p></p>
+
+        <p><br>
+        </p>
+    </div>
+    <div class="post_details  clearfix">
+        <p>نوشته شده در : سه شنبه 9 مهر 1398&nbsp;&nbsp;توسط : <a href="http://bachegonjeshk.mihanblog.com/post/author/792694" >آدینه </a>.&nbsp;&nbsp;&nbsp; <a target="_self" href="http://bachegonjeshk.mihanblog.com/post/3218#commentlist" class="comment-link">نظرات(<script>setCommentCnt(3218)</script>)</a>&nbsp;.
+
+            <div style="margin-top: -22px;"><script>mihanblogPostLike('3218','like')</script></div>
+
+
+        </p>
+		<span>
+			<b>برچسب ها:</b>
+                                    <a href="http://bachegonjeshk.mihanblog.com/post/tag/%D9%85%D9%86%20%DA%86%DB%8C%D8%B2%DB%8C%20%D9%85%20%D9%86%D8%B4%D8%AF%D9%87" >من چیزی م نشده</a>&nbsp;،
+                <br>
+            			
+
+					</span>
+
+        <div style="margin-top: 17px;" class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://bachegonjeshk.mihanblog.com/post/3218&amp;title=من چیزی م نشده...">
+                ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+    </div>
+
+<!-- Comment -->
+
+
+<div class="comment_full" id="comment_full">
+
+    <style>
+
+            /*** COMMENT BODY***/
+        .comment_full{
+
+
+        }
+
+        .comment_body{
+            background: #DDDCD2;
+            margin:10px;
+            border-radius: 5px;
+            border-right:5px solid #c9c7b3;
+            overflow:hidden
+        }
+
+
+        .comment .comment_reply {
+            background: #A19B88;
+            border-right: 5px solid #76705d;
+            border-radius: 5px;
+            font-size: 12px;
+            width: 350px;
+            margin-top:10px;overflow:hidden
+        }
+
+
+        .comment .name {
+            font-weight: 600;
+            color: #4E3E09;
+            padding-right: 5px;
+            text-align: right;
+            line-height: 26px;
+            float: right;
+        }
+
+
+        .comment .date {
+            font-size: 10px;
+            padding: 5px;
+            color: #7E7E7E;
+            float: left;
+        }
+
+
+        .comment .comemnt_web {
+            padding: 5px 0 5px 15px; color: #999; direction: ltr; text-align: left;
+
+        }
+
+
+        .comment .comemnt_web a {
+            color: #554c3d;
+            text-decoration: underline;
+        }
+
+        .comment .comemnt_text {
+            text-align: justify;
+            line-height: 1.5em;
+            padding: 2px 5px;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .comment_det{
+            border-bottom:1px solid #CCC;
+
+        }
+
+        .comment .name,.date,.comemnt_text,.comment_reply{
+            margin-right:3px;
+            padding-right:3px;
+
+        }
+
+            /**** COMMENT FORM ****/
+        #comment_full .comment_form input.btn
+        {
+            background:url(http://mihanblog.com/http://mihanblog.com/public/public/user_data/template/17/images/search_button.gif);
+            -x-system-font:none;
+            color:#000;
+            cursor:pointer;
+            float:none;
+            font-family:Tahoma;
+            font-size:12px;
+            font-size-adjust:none;
+            font-stretch:normal;
+            font-style:normal;
+            font-variant:normal;
+            font-weight:normal;
+            height:27px;
+            line-height:normal;
+            text-align:center;
+            width:92px;
+            border:1px solid #81C227;
+
+        }
+
+        .comment_form {
+            background: none repeat scroll 0 0 #c5c3af;
+            border-radius: 5px 5px 5px 5px;
+            border-right: 5px solid #a7a485;
+            direction: rtl;
+            margin: 10px;
+            padding: 20px;
+        }
+
+        .comment_form label {
+            width: 100px;
+            display: block;
+            float: right;
+            text-align: left;
+            font-size: 10px;
+            color: #555;
+            padding-left: 10px;
+        }
+
+
+        .comment_form .comment_form_row {
+            margin: 3px 0;
+        }
+
+
+        #imageCodeWrapper .imageCode_input #imgstr {
+            font-size: 25px;
+            height: 34px;
+            width: 70px;
+        }
+
+
+        .comment_form_textbox {
+            width:220px;
+
+        }
+        .comment_form_textarea{
+            width:220px !important;
+        }
+
+        .comment_form .comment_form_textarea, .comment_form .comment_form_textbox {
+            border: 1px solid #C5C5C5;
+        }
+
+
+
+
+    </style>
+
+    </div>
+<!-- End Comment-->
+
+
+
+
+    <div align="center" id="more_posts" class="page_box clearfix">
+        <ul>
+            <li>تعداد کل صفحات :204</li>
+                            <li><a href="http://bachegonjeshk.mihanblog.com/page/1"><b>1</b></a>&nbsp;&nbsp;</li>
+                            <li><a href="http://bachegonjeshk.mihanblog.com/page/2"><span>2</span></a>&nbsp;&nbsp;</li>
+                            <li><a href="http://bachegonjeshk.mihanblog.com/page/3"><span>3</span></a>&nbsp;&nbsp;</li>
+                            <li><a href="http://bachegonjeshk.mihanblog.com/page/4"><span>4</span></a>&nbsp;&nbsp;</li>
+                            <li><a href="http://bachegonjeshk.mihanblog.com/page/5"><span>5</span></a>&nbsp;&nbsp;</li>
+                            <li><a href="http://bachegonjeshk.mihanblog.com/page/6"><span>6</span></a>&nbsp;&nbsp;</li>
+                            <li><a href="http://bachegonjeshk.mihanblog.com/page/7"><span>7</span></a>&nbsp;&nbsp;</li>
+                            <li><a href="http://bachegonjeshk.mihanblog.com/page/8"><i>...</i></a>&nbsp;&nbsp;</li>
+                    </ul>
+    </div>
+
+
+
+
+</div>
+
+<div id="sidebar">
+    <ul>
+
+        <li class="about_box">
+            <div align="center"></div>
+            <p></p>
+            <a href="http://bachegonjeshk.mihanblog.com/post/author/792694"><b>آدینه </b></a>
+        </li>
+
+
+
+                    <li>
+                <h2>آخرین پستها</h2>
+                <ul>
+                                            <li><a  href="http://bachegonjeshk.mihanblog.com/post/3228">پست شماره ۵۲۰ خداخدا کردم.</a></li>
+                                            <li><a  href="http://bachegonjeshk.mihanblog.com/post/3227">یه فرود نورانی</a></li>
+                                            <li><a  href="http://bachegonjeshk.mihanblog.com/post/3226">آب بخور</a></li>
+                                            <li><a  href="http://bachegonjeshk.mihanblog.com/post/3225">و ضاقت الارض</a></li>
+                                            <li><a  href="http://bachegonjeshk.mihanblog.com/post/3224">و تواصوا بالمرحمه...</a></li>
+                                        <b><li><a  href="http://bachegonjeshk.mihanblog.com/post/list">همه پستها</a></li></b>
+                </ul>
+            </li>
+        
+        
+
+
+                    <li>
+                <h2>آرشیو</h2>
+                <ul>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1399/4' title=' تیر 1399(3)'> تیر 1399</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1398/9' title=' آذر 1398(2)'> آذر 1398</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1398/8' title=' آبان 1398(3)'> آبان 1398</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1398/7' title=' مهر 1398(3)'> مهر 1398</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1398/6' title=' شهریور 1398(6)'> شهریور 1398</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1398/5' title=' مرداد 1398(8)'> مرداد 1398</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1398/4' title=' تیر 1398(17)'> تیر 1398</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1398/3' title=' خرداد 1398(11)'> خرداد 1398</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1398/2' title=' اردیبهشت 1398(44)'> اردیبهشت 1398</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1398/1' title=' فروردین 1398(10)'> فروردین 1398</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1397/12' title=' اسفند 1397(11)'> اسفند 1397</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1397/11' title=' بهمن 1397(4)'> بهمن 1397</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1397/10' title=' دی 1397(3)'> دی 1397</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1397/9' title=' آذر 1397(7)'> آذر 1397</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1397/8' title=' آبان 1397(4)'> آبان 1397</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1397/7' title=' مهر 1397(6)'> مهر 1397</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1397/6' title=' شهریور 1397(4)'> شهریور 1397</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1397/5' title=' مرداد 1397(11)'> مرداد 1397</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1397/4' title=' تیر 1397(7)'> تیر 1397</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1397/3' title=' خرداد 1397(13)'> خرداد 1397</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1397/2' title=' اردیبهشت 1397(7)'> اردیبهشت 1397</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1397/1' title=' فروردین 1397(9)'> فروردین 1397</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1396/12' title=' اسفند 1396(8)'> اسفند 1396</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1396/11' title=' بهمن 1396(12)'> بهمن 1396</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1396/10' title=' دی 1396(10)'> دی 1396</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1396/9' title=' آذر 1396(12)'> آذر 1396</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1396/8' title=' آبان 1396(10)'> آبان 1396</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1396/7' title=' مهر 1396(17)'> مهر 1396</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1396/6' title=' شهریور 1396(6)'> شهریور 1396</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1396/5' title=' مرداد 1396(4)'> مرداد 1396</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1396/4' title=' تیر 1396(13)'> تیر 1396</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1396/3' title=' خرداد 1396(15)'> خرداد 1396</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1396/2' title=' اردیبهشت 1396(8)'> اردیبهشت 1396</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1396/1' title=' فروردین 1396(9)'> فروردین 1396</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1395/12' title=' اسفند 1395(14)'> اسفند 1395</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1395/11' title=' بهمن 1395(15)'> بهمن 1395</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1395/10' title=' دی 1395(8)'> دی 1395</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1395/9' title=' آذر 1395(7)'> آذر 1395</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1395/8' title=' آبان 1395(16)'> آبان 1395</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1395/7' title=' مهر 1395(7)'> مهر 1395</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1395/6' title=' شهریور 1395(12)'> شهریور 1395</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1395/5' title=' مرداد 1395(15)'> مرداد 1395</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1395/4' title=' تیر 1395(24)'> تیر 1395</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1395/3' title=' خرداد 1395(13)'> خرداد 1395</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1395/2' title=' اردیبهشت 1395(12)'> اردیبهشت 1395</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1395/1' title=' فروردین 1395(14)'> فروردین 1395</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1394/12' title=' اسفند 1394(21)'> اسفند 1394</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1394/11' title=' بهمن 1394(19)'> بهمن 1394</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1394/10' title=' دی 1394(20)'> دی 1394</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1394/9' title=' آذر 1394(21)'> آذر 1394</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1394/8' title=' آبان 1394(18)'> آبان 1394</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1394/7' title=' مهر 1394(13)'> مهر 1394</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1394/6' title=' شهریور 1394(10)'> شهریور 1394</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1394/5' title=' مرداد 1394(34)'> مرداد 1394</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1394/4' title=' تیر 1394(32)'> تیر 1394</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1394/3' title=' خرداد 1394(16)'> خرداد 1394</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1394/2' title=' اردیبهشت 1394(25)'> اردیبهشت 1394</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1394/1' title=' فروردین 1394(17)'> فروردین 1394</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1393/12' title=' اسفند 1393(29)'> اسفند 1393</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1393/11' title=' بهمن 1393(12)'> بهمن 1393</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1393/10' title=' دی 1393(16)'> دی 1393</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1393/9' title=' آذر 1393(26)'> آذر 1393</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1393/8' title=' آبان 1393(13)'> آبان 1393</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1393/7' title=' مهر 1393(23)'> مهر 1393</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1393/6' title=' شهریور 1393(23)'> شهریور 1393</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1393/5' title=' مرداد 1393(34)'> مرداد 1393</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1393/4' title=' تیر 1393(32)'> تیر 1393</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1393/3' title=' خرداد 1393(28)'> خرداد 1393</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1393/2' title=' اردیبهشت 1393(32)'> اردیبهشت 1393</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1393/1' title=' فروردین 1393(30)'> فروردین 1393</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1392/12' title=' اسفند 1392(35)'> اسفند 1392</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1392/11' title=' بهمن 1392(39)'> بهمن 1392</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1392/10' title=' دی 1392(35)'> دی 1392</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1392/9' title=' آذر 1392(29)'> آذر 1392</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1392/8' title=' آبان 1392(14)'> آبان 1392</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1392/7' title=' مهر 1392(19)'> مهر 1392</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1392/6' title=' شهریور 1392(20)'> شهریور 1392</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1392/5' title=' مرداد 1392(23)'> مرداد 1392</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1392/4' title=' تیر 1392(33)'> تیر 1392</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1392/3' title=' خرداد 1392(49)'> خرداد 1392</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1392/2' title=' اردیبهشت 1392(61)'> اردیبهشت 1392</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1392/1' title=' فروردین 1392(56)'> فروردین 1392</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1391/12' title=' اسفند 1391(60)'> اسفند 1391</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1391/11' title=' بهمن 1391(49)'> بهمن 1391</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1391/10' title=' دی 1391(43)'> دی 1391</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1391/9' title=' آذر 1391(63)'> آذر 1391</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1391/8' title=' آبان 1391(53)'> آبان 1391</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1391/7' title=' مهر 1391(33)'> مهر 1391</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1391/6' title=' شهریور 1391(29)'> شهریور 1391</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1391/5' title=' مرداد 1391(-3)'> مرداد 1391</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1391/4' title=' تیر 1391(9)'> تیر 1391</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1391/3' title=' خرداد 1391(27)'> خرداد 1391</a></li>
+                                            <li><a href='http://bachegonjeshk.mihanblog.com/post/archive/1391/2' title=' اردیبهشت 1391(6)'> اردیبهشت 1391</a></li>
+                                        <li><b><a href="http://bachegonjeshk.mihanblog.com/post/archive">همه آرشیوها</a></b></li>
+                </ul>
+            </li>
+        
+                    <li>
+                <h2>نویسندگان</h2>
+                <ul>
+                                            <li  class="clearfix" id="parentheses"><p><a href="http://bachegonjeshk.mihanblog.com/post/author/792694"><img src="../static.mihanblog.com/public/user_data/user_photo/265/792694.jpg" style="width:16px;" /></a></p><a href="http://bachegonjeshk.mihanblog.com/post/author/792694"><p>آدینه </p><p>(2038)</p></a></li>
+                                    </ul>
+            </li>
+        
+        
+                    <li>
+                <h2>لینکستان</h2>
+                <ul>
+                                            <li><a href="http://box.alvandblog.ir/new.php" title=""  target="_blank">باکس الوندبلاگ</a></li>
+                                            <li><a href="http://Pasazto.blog.ir" title=""  target="_blank">پس از تو</a></li>
+                                            <li><a href="http://amelie.blog.ir" title=""  target="_blank">امیلی</a></li>
+                                            <li><a href="http://Sha1st.blog.ir" title=""  target="_blank">شایسته</a></li>
+                                            <li><a href="http://fatemeh-ot.blog.ir" title=""  target="_blank">جوجوانه</a></li>
+                                            <li><a href="http://tajalietaha.rozblog.com/" title=""  target="_blank">تجلی طه</a></li>
+                                        <li><b><b><a href="http://bachegonjeshk.mihanblog.com/link/">همه لینکها</a></b></b></li>
+                </ul>
+            </li>
+        
+        
+        
+		
+
+
+                    <li>
+                <h2>اَبر برچسبها</span></h2>
+                <div class="clearfix">
+                    <ul class="cloud simple">
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D9%85%D8%B4%D9%87%D8%AF" style="font-size:1em">مشهد</a>&nbsp;</li>
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D9%86%D9%86%D9%87+%D8%B9%D8%B0%D8%B1%D8%A7" style="font-size:2em">ننه عذرا</a>&nbsp;</li>
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D8%AF%D9%84" style="font-size:1.23em">دل</a>&nbsp;</li>
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D8%AF%D9%88%D8%B3%D8%AA" style="font-size:1.39em">دوست</a>&nbsp;</li>
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D8%A2%D8%B1%D8%B2%D9%88" style="font-size:1.06em">آرزو</a>&nbsp;</li>
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D8%A8%D8%A7%D8%A8%D8%A7%D9%85%D8%B3%D9%84%D9%85" style="font-size:1.39em">بابامسلم</a>&nbsp;</li>
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D8%AF%D9%84%D8%AA%D9%86%DA%AF%DB%8C" style="font-size:1em">دلتنگی</a>&nbsp;</li>
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D9%85%D8%AF%D8%B1%D8%B3%D9%87" style="font-size:1em">مدرسه</a>&nbsp;</li>
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D9%85%D8%AD%D8%B1%D9%85" style="font-size:1em">محرم</a>&nbsp;</li>
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D8%AE%D8%A8%D8%B1" style="font-size:1.06em">خبر</a>&nbsp;</li>
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D8%AE%D9%88%D8%A7%D8%A8" style="font-size:1.12em">خواب</a>&nbsp;</li>
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D9%87%D9%85%D8%B3%D8%A7%DB%8C%D9%87" style="font-size:1em">همسایه</a>&nbsp;</li>
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D8%B9%D8%A7%D8%B4%D9%82" style="font-size:1.23em">عاشق</a>&nbsp;</li>
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D8%AF%D8%B1%D9%88%D8%BA" style="font-size:1em">دروغ</a>&nbsp;</li>
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D9%BE%D9%88%D9%84" style="font-size:1.06em">پول</a>&nbsp;</li>
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D8%B2%D9%84%D8%B2%D9%84%D9%87" style="font-size:1em">زلزله</a>&nbsp;</li>
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D9%85%D8%A7%D8%AF%D8%B1" style="font-size:1.45em">مادر</a>&nbsp;</li>
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D8%B9%D8%B4%D9%82" style="font-size:1.17em">عشق</a>&nbsp;</li>
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D8%A8%DA%86%D9%87" style="font-size:1.06em">بچه</a>&nbsp;</li>
+                                                    <li><a href="http://bachegonjeshk.mihanblog.com/post/tag/%D8%B9%DA%A9%D8%B3" style="font-size:1.12em">عکس</a>&nbsp;</li>
+                                            </ul>
+            </li>
+        
+                    <li>
+                <h2>آمار وبلاگ</h2>
+                <ul class="clearfix simple stat">
+                    <li>کل بازدید : <span><script>getStatVar('total_view');</script></span></li>
+                    <li>بازدید امروز : <span><script>getStatVar('today_view');</script></span></li>
+                    <li>بازدید دیروز : <span><script>getStatVar('yesterday_view');</script></span></li>
+                    <li>بازدید این ماه : <span><script>getStatVar('this_month_view');</script></span></li>
+                    <li>بازدید ماه قبل : <span><script>getStatVar('last_month_view');</script></span></li>
+                    <li>تعداد نویسندگان : <span><script>getStatVar('total_author');</script></span></li>
+                    <li>تعداد کل پست ها : <span><script>getStatVar('total_post');</script></span></li>
+                    <li>آخرین بازدید : <span><script>getStatVar('last_view_date');</script></span></li>
+                    <li>آخرین بروز رسانی : <span><script>getStatVar('modify_date');</script></span></li>
+
+                </ul>
+            </li>
+        
+        <li>
+            <ul class="rss_atom">
+                <li><a id='rss' href="http://bachegonjeshk.mihanblog.com/post/rss/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li><a id='atom' href="http://bachegonjeshk.mihanblog.com/post/atom/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+            </ul>
+        </li>
+
+    </ul>
+
+    <div  align="center" class="clearfix"></div>
+    <div align="center" class="mihan_logo"></div>
+
+
+</div>
+
+<div dir="rtl" id="footer">
+    <p><strong>&nbsp;&nbsp;POWERED BY <a href="../www.mihanblog.com/index.html"><font color="#FF0000" size="2px">M</font>IHAN<font color="#FF0000" size="2px">B</font>LOG.COM</a></strong><br /></p>
+    <p>Design by <a>www.colorlightstudio.com</a>. Background by <a >www.squidfingers.com</a></p>
+</div>
+
+</div>
+</div>
+
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'bachegonjeshk.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

@@ -1,0 +1,2397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://alanaq.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1355877*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[48]='10';commentCnt[120]='1';commentCnt[121]='0';commentCnt[124]='0';commentCnt[125]='0';commentCnt[126]='1';commentCnt[127]='3';commentCnt[128]='1';commentCnt[129]='0';commentCnt[131]='0';commentCnt[133]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[48]='49';
+mihanblogDisLikeArrCnt[48]='12';
+mihanblogLikeArrCnt[120]='4';
+mihanblogDisLikeArrCnt[120]='0';
+mihanblogLikeArrCnt[121]='5';
+mihanblogDisLikeArrCnt[121]='0';
+mihanblogLikeArrCnt[124]='4';
+mihanblogDisLikeArrCnt[124]='0';
+mihanblogLikeArrCnt[125]='6';
+mihanblogDisLikeArrCnt[125]='0';
+mihanblogLikeArrCnt[126]='1';
+mihanblogDisLikeArrCnt[126]='0';
+mihanblogLikeArrCnt[127]='4';
+mihanblogDisLikeArrCnt[127]='0';
+mihanblogLikeArrCnt[128]='2';
+mihanblogDisLikeArrCnt[128]='0';
+mihanblogLikeArrCnt[129]='5';
+mihanblogDisLikeArrCnt[129]='0';
+mihanblogLikeArrCnt[131]='0';
+mihanblogDisLikeArrCnt[131]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://alanaq.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://alanaq.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','58');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','شنبه 15 آذر 1399');
+	
+	setStatVar('today_view','355');
+	setStatVar('yesterday_view','502');
+	
+	setStatVar('this_month_view','16334');
+	setStatVar('last_month_view','26819');
+
+	setStatVar('total_view','788149');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (17:27)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://alanaq.mihanblog.com/statupdate/?data[refereruri]=http://banozk.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607781566&data[hash]=ba2b3f034f0c638555c9d06f48025d3d&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://alanaq.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://alanaq.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://alanaq.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://alanaq.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://alanaq.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://alanaq.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://alanaq.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://alanaq.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://alanaq.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://alanaq.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://alanaq.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://alanaq.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://alanaq.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://alanaq.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://alanaq.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://alanaq.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Theme Designer" content="www.MyTheme.ir">
+
+    <meta name="description" content="آلانق یکی از روستاهای آذربایجان شرقی بوده و در شهرستان بستان‌آباد بخش مرکزی دهستان قوری گل واقع شده.
+گفته شده که از آن‌جا که این مکان، مکانی بزرگ و وسیع و خورشید گیری بوده که در اصطلاح به چنین مکانی آران می‌گویند."/>
+    <meta name="keywords" content="آلانق.روستای آلانق.الانق.alanaq.alana"/>
+    <link rel="alternate" type="application/rss+xml" title="آلانق" href="http://alanaq.mihanblog.com/post/rss/" />
+    <link rel="alternate" type="application/atom+xml" title="آلانق" href="http://alanaq.mihanblog.com/post/atom/" />
+    <link href="http://mihanblog.com/public/public/user_data/template/2099932/style.css" type="text/css" rel="stylesheet">
+
+    <title>آلانق</title>
+
+<link rel="shortcut icon" href="http://cld.persiangig.com/dl/1Wn6C/5SPVXHrjOx/favicon.ico">
+</head>
+
+<body>
+
+<div align="center">
+<table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;</td>
+<td class=div2>
+<div class=div00>
+
+<div class=div60>
+    <div class=div101>
+        <div class=div10><font class=title>آلانق</font></div></div>
+    <div class=div11>
+        <div class=div12><font class=des>سایت آلانق</font></div></div>
+</div>
+
+<div class=ss>
+    <div class=s1><form id="frm-16077136185fd3c35228522" method="get" action="http://alanaq.ir/post/search/fid/16077136185fd3c35228522"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+        <div class=s2>
+            <input type="text" name="search_text" size="20" style="border: 0px none; background: none; font-family:Tahoma; font-size:9pt; direction:ltr"></div>
+        <div class=s3><input type="image" src="http://mihanblog.com/public/public/user_data/template/2099932/blank.gif" width=22 height=21 value="جستجو"></div>
+    <input type="hidden" name="frm-id" value="16077136185fd3c35228522" id="frm-id" /></form></div>
+
+    <div class=s4>
+        <div class=s5><font class=text10>
+            <a href="index.html">صفحه نخست</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:messageForm()">تماس با مدیر</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="mailto:afazli.software@gmail.com">پست الکترونیک</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://alanaq.mihanblog.com/post/rss/">RSS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://alanaq.mihanblog.com/post/atom/">ATOM</a></font></div></div>
+</div>
+
+<div class=mdiv17></div>
+
+<div class=mdiv170>
+
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>درباره وبلاگ</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341>
+            <div class=mdiv31><font class=text1><center><img src="../static.mihanblog.com/public/user_data/web_photo/452/1355877.jpg@1100"  /><br><br>
+                مرا گویی که رایی من چه دانم<br />
+چنین مجنون چرایی من چه دانم<br />
+<br />
+مرا گویی بدین زاری که هستی<br />
+به عشقم چون برآیی من چه دانم<br />
+<br />
+منم در موج دریاهای عشقت<br />
+مرا گویی کجایی من چه دانم<br />
+<br />
+مرا گویی به قربانگاه جان‌ها<br />
+نمی‌ترسی که آیی من چه دانم<br />
+<br />
+مرا گویی اگر کشته خدایی<br />
+چه داری از خدایی من چه دانم</center><br>
+                <b>مدیر وبلاگ :</b> <a href="http://alanaq.mihanblog.com/post/author/1149125">ابوالفضل فضلی</a></font></div>
+        </div><div class=mdiv30></div>
+    </div>
+
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>مطالب اخیر</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341><font class=text1><ul>
+            <li><a href="http://alanaq.mihanblog.com/post/133">درد بی درمان کرونا</a></li><li><a href="http://alanaq.mihanblog.com/post/131">معادل فارسی گیاهان در زبان محلی آلانق</a></li><li><a href="http://alanaq.mihanblog.com/post/129">کتاب گزیده اشعار حاج ابوالقاسم فضلی آلانق</a></li><li><a href="http://alanaq.mihanblog.com/post/128">شعر احوالات بشر</a></li><li><a href="http://alanaq.mihanblog.com/post/127">شعر طنز خانم و آقا دعواسی</a></li><li><a href="http://alanaq.mihanblog.com/post/126">کتابهایی که خوانده ام (سری دوم)</a></li><li><a href="http://alanaq.mihanblog.com/post/125">رادیو آلانق (قسمت پنجم فصل اول - داستان پادشاه یمن)</a></li><li><a href="http://alanaq.mihanblog.com/post/124">کتاب بیشعوری نوشته دکتر خاویر کرمنت</a></li><li><a href="http://alanaq.mihanblog.com/post/121">شعر حیدربابایه سلام اثر استاد شهریار با ترجمه فارسی (1)</a></li><li><a href="http://alanaq.mihanblog.com/post/120">شعر میلاد امام زمان (عج)</a></li>        </ul></font></div><div class=mdiv30></div>
+    </div>
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>آرشیو وبلاگ</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341><font class=text1><ul>
+            <li><a href="http://alanaq.mihanblog.com/post/archive/1399/9"> آذر 1399</a></li><li><a href="http://alanaq.mihanblog.com/post/archive/1398/8"> آبان 1398</a></li><li><a href="http://alanaq.mihanblog.com/post/archive/1398/7"> مهر 1398</a></li><li><a href="http://alanaq.mihanblog.com/post/archive/1398/2"> اردیبهشت 1398</a></li><li><a href="http://alanaq.mihanblog.com/post/archive/1398/1"> فروردین 1398</a></li><li><a href="http://alanaq.mihanblog.com/post/archive/1397/12"> اسفند 1397</a></li><li><a href="http://alanaq.mihanblog.com/post/archive/1397/11"> بهمن 1397</a></li><li><a href="http://alanaq.mihanblog.com/post/archive/1397/10"> دی 1397</a></li>            <li><b><a href="http://alanaq.mihanblog.com/post/archive">آرشیو كل مطالب</a></b></li>
+        </ul></font></div><div class=mdiv30></div>
+    </div>
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>نویسندگان</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341><font class=text1><ul>
+            <li><a href="http://alanaq.mihanblog.com/post/author/1149125">ابوالفضل فضلی (58)</a></li>        </ul></font></div><div class=mdiv30></div>
+    </div>
+    
+		<form id="frm-16077136185fd3c35228cf2" method="post" action="http://alanaq.ir/poll/new/fid/16077136185fd3c35228cf2/atrty/1607713618/avrvy/0/key/6e6bbf6d834ae79958dcd384e02170a6/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="377305" id="data[pollid]" />		<div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>نظرسنجی</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341>
+            <div class=mdiv32><font class=text1>
+                کدامیک از کتابها را خوانده اید؟<br>
+                <label><input type="checkbox"  name="data[v1]" id="v1" value="1" />انسان کامل</label><br><label><input type="checkbox"  name="data[v2]" id="v2" value="1" />حماسه حسینی</label><br><label><input type="checkbox"  name="data[v3]" id="v3" value="1" />دالان بهشت</label><br><label><input type="checkbox"  name="data[v4]" id="v4" value="1" />صد سال تنهایی</label><br><label><input type="checkbox"  name="data[v5]" id="v5" value="1" />شازده کوچولو</label><br><label><input type="checkbox"  name="data[v6]" id="v6" value="1" />آس و پاس های پاریس و لندن</label><br><label><input type="checkbox"  name="data[v7]" id="v7" value="1" />بیشعوری</label><br><label><input type="checkbox"  name="data[v8]" id="v8" value="1" />انسان و سرنوشت</label><br><label><input type="checkbox"  name="data[v9]" id="v9" value="1" />دختری که رهایش کردی</label><br><label><input type="checkbox"  name="data[v10]" id="v10" value="1" />ملت عشق</label><br>                <div align="center"><br><input type="submit" value="ثبت" style="font-family: Tahoma; font-size: 9pt"><br><br></div>
+            </font></div></div><div class=mdiv30></div>
+    </div>
+		<input type="hidden" name="frm-id" value="16077136185fd3c35228cf2" id="frm-id" /></form>
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>برچسبها</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341><font class=text1><ul>
+            <li><a href="http://alanaq.mihanblog.com/post/tag/%D9%BE%D8%A7%D8%AF%DA%A9%D8%B3%D8%AA">پادکست</a></li><li><a href="http://alanaq.mihanblog.com/post/tag/%D8%B4%D9%87%D8%B1%DB%8C%D8%A7%D8%B1+%D8%A2%D9%84%D8%A7%D9%86%D9%82">شهریار آلانق</a></li><li><a href="http://alanaq.mihanblog.com/post/tag/%D8%B1%D8%A7%D8%AF%DB%8C%D9%88+%D8%A2%D9%84%D8%A7%D9%86%D9%82">رادیو آلانق</a></li><li><a href="http://alanaq.mihanblog.com/post/tag/%D8%B4%D8%B9%D8%B1">شعر</a></li><li><a href="http://alanaq.mihanblog.com/post/tag/%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86">داستان</a></li><li><a href="http://alanaq.mihanblog.com/post/tag/%D8%A2%D9%84%D8%A7%D9%86%D9%82">آلانق</a></li><li><a href="http://alanaq.mihanblog.com/post/tag/%D9%82%D9%88%D8%B1%DB%8C+%DA%AF%D9%84">قوری گل</a></li><li><a href="http://alanaq.mihanblog.com/post/tag/%D8%A7%D8%A8%D9%88%D8%A7%D9%84%D9%82%D8%A7%D8%B3%D9%85+%D9%81%D8%B6%D9%84%DB%8C">ابوالقاسم فضلی</a></li><li><a href="http://alanaq.mihanblog.com/post/tag/%D8%A8%D8%B3%D8%AA%D8%A7%D9%86+%D8%A2%D8%A8%D8%A7%D8%AF">بستان آباد</a></li><li><a href="http://alanaq.mihanblog.com/post/tag/%D9%86%D9%88%D8%AD%D9%87">نوحه</a></li>        </ul></font></div><div class=mdiv30></div>
+    </div>
+</div>
+
+<div class=div20>
+
+    		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://alanaq.mihanblog.com/post/48">آلانق</a></font></div>
+            <div class=div58><font class=text7>سه شنبه 1 آبان 1397 :: نویسنده : <a href="http://alanaq.mihanblog.com/post/author/1149125">ابوالفضل فضلی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="TEXT-ALIGN: center"><font face="Mihan-Iransans"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12426.56223256578!2d46.716247!3d38.01263!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x401989bc2b7e4c2b:0x387b77f24f0a2502!2sAlanaq,+Iran!5e1!3m2!1sen!2sus!4v1513924349317" width="400" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe></font></div> <div> <p style="text-align: center; font-size: 13px;" data-mce-style="text-align: right;"><font face="Mihan-Iransans"><br></font></p> <p style="TEXT-ALIGN: right" data-mce-style="text-align: right;"></p> <div style="text-align: justify; font-size: 13px;"><font face="Mihan-Iransans"><a href="https://www.vajehyab.com/?q=آلانق" target="_blank" title="آلانق" style="font-size: 11px;"><b style=""><font color="#6600cc">آلانق</font></b></a><span style="font-size: small;">&nbsp;یکی از روستاهای بزرگ استان آذربایجان شرقی بوده و در شهرستان&nbsp;</span><a href="http://alanaq.mihanblog.com/post/29" target="_blank" title="بستان آباد (اوجان)"><b style=""><font color="#6600cc">بستان‌آباد</font></b></a><span style="font-size: small;">، بخش مرکزی، دهستان&nbsp;</span><a href="http://alanaq.mihanblog.com/post/13" target="_blank" title="تالاب بین المللی قوریگل"><b style=""><font color="#6600cc">قوری گل</font></b></a><span style="font-size: small;">&nbsp;واقع شده است.</span></font></div> <div style="TEXT-ALIGN: justify"><font size="2" face="Mihan-Iransans"><br></font></div><font face="Mihan-Iransans"><span style="font-size: small;" data-mce-style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif;" data-mce-mark="1"> <div style="TEXT-ALIGN: justify">این روستا از جاده تهران - تبریز حدود 20 کیلومتر فاصله دارد. از جمله روستاهای مجاور می‌توان به&nbsp;<span data-mce-style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif;" data-mce-mark="1">الوار (علی آباد)،&nbsp;</span>کر، ترکداری،&nbsp;<span data-mce-style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif;" data-mce-mark="1">خیره مسجد و</span>&nbsp;زین كش (تقریبا خالی از سكنه) اشاره کرد. از نظر جغرافیایی در موقعیت کوهستانی قرار گرفته و آب و هوای فصل تابستان آن بسیار مطبوع و دلنشین و زمستان سرد و طاقت فرسایی دارد. این روستا در کنار یک رودخانه قرار گرفته‌ که سرچشمه آن کوههای شیبلی (تكالتی) می‌باشد و در نهایت به رودخانه آجی چای(تلخه رود) متصل می‌شود. روستای آلانق دارای زمین‌های بسیار حاصل خیزی است که در صورت فراوانی آب از لحاظ کشاورزی بسیار پر رونق خواهد بود. به دلیل داشتن مراتع فراوان دامداری نیز رونق بسیار زیادی دارد.</div></span> </font><div style="TEXT-ALIGN: justify"><font face="Mihan-Iransans"><br></font></div><font face="Mihan-Iransans"><span style="font-size: small;" data-mce-style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif;" data-mce-mark="1"> <div style="TEXT-ALIGN: justify">از آنجا که این روستا، مکانی بزرگ و وسیع و خورشیدگیری بوده است و چون در<font color="#6600cc"><b>&nbsp;<a href="https://fa.wikipedia.org/wiki/زبان_تاتی_ایران" target="_blank" title="زبان تاتی"><font color="#6600cc">زبان تاتی</font></a></b></font>&nbsp;به چنین مکانی "<a href="https://www.vajehyab.com/?q=آران&amp;f=name" target="_blank" title="معنی آران"><font color="#6600cc"><b>آران</b></font></a>" می‌گویند، به همین دلیل در گذشته نام این مکان "آرانگ" بوده و با گذشت زمان به کلمه "آلانق" (Alanaq) تغییر گویش یافته است.</div></span> </font><div style="TEXT-ALIGN: justify"><font face="Mihan-Iransans"><br></font></div><font face="Mihan-Iransans"><span style="font-size: small;" data-mce-style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif;" data-mce-mark="1"> <div style="TEXT-ALIGN: justify"><span data-mce-style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif;" data-mce-mark="1">از محصولات کشاورزی روستای آلانق می توان به گندم، جو و</span>&nbsp;حبوبات و&nbsp;<span data-mce-style="font-size: small; font-family: tahoma, arial, helvetica, sans-serif;" data-mce-mark="1">نیز علوفه دامی و ... اشاره کرد. یکی دیگر از منابع درآمد ساکنین آلانق قالی بافی می‌باشد که در انواع مختلف آن (ابریشم، مرینوس، فرش تبریز، هریس، الوار و ...) بافت می گردد. از نقاط دیدنی این روستا زیارت گاه یکی از نوادگان امام حسن مجتبی (ع) (<a href="http://alanaq.mihanblog.com/post/45" target="_blank" title="امام زاده عبدا..."><b><font color="#6600cc">امامزاده عبدا...</font></b></a>) می‌باشد که در بالای کوهی مشرف بر روستا (جنوب) واقع شده‌ است. &nbsp;</span>&nbsp;</div></span></font><font face="Mihan-Iransans"> </font><p></p> <p style="text-align: justify; font-size: 13px;" data-mce-style="text-align: right;"><span style="font-size: small;"><font face="Mihan-Iransans">پیش شماره تلفن روستای آلانق: <b>---<font color="#ff0000"><u>43302-041</u></font></b></font></span></p> <p class="MsoNormal" style="text-align: justify; font-size: 13px;" dir="rtl" data-mce-style="text-align: right;"><font face="Mihan-Iransans"><span style="font-size: small;" data-mce-style="font-family: tahoma, arial, helvetica, sans-serif; font-size: small;"><span data-mce-style="font-family: tahoma, arial, helvetica, sans-serif; font-size: small;">اگر مطلب، عکس و یا فیلمی در رابطه با روستای&nbsp;<strong>آلانق&nbsp;</strong>دارید و دوست دارید دیگران نیز از آن مطلع شوند، به شماره زیر ارسال نمایید، تا به اسم خودتان در سایت قرار گیرد.&nbsp;</span></span><span style="font-size: small; text-align: center;">همچنین میتوانید انتقادات و پیشنهادهای خود را با ما در میان بگذارید.</span></font></p> <p class="MsoNormal" style="text-align: center; font-size: 13px;" dir="rtl" data-mce-style="text-align: center;"><span style="font-size: small;" data-mce-style="font-family: tahoma, arial, helvetica, sans-serif; font-size: small;"><span style="COLOR: rgb(255,0,0)" data-mce-style="color: #ff0000;"><b style=""><font face="Mihan-Iransans" style=""><u>09355978663</u></font></b></span></span></p></div><div align="center"><font face="Mihan-Iransans"><a title="پشتیبانی آنلاین" href="https://telegram.me/afazlia" target="_blank"><img align="bottom" alt="پشتیبانی آنلاین" src="../file.mihanblog.com/public/user_data/user_files/452/1355877/TelegramOnline.png" border="0" vspace="0" hspace="0"></a></font></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://alanaq.mihanblog.com/post/category/2" class=text4>اخبار</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://alanaq.mihanblog.com/post/48#commentlist">نظرات (<script>setCommentCnt(48)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('48','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://alanaq.mihanblog.com/post/133">درد بی درمان کرونا</a></font></div>
+            <div class=div58><font class=text7>شنبه 15 آذر 1399 :: نویسنده : <a href="http://alanaq.mihanblog.com/post/author/1149125">ابوالفضل فضلی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><div id="4987639193"><script type="text/JavaScript" src="https://www.aparat.com/embed/Jitlw?data[rnddiv]=4987639193&amp;data[responsive]=yes&amp;&amp;recom=self"></script></div>
+
+
+<div id="2372930150"><script type="text/JavaScript" src="https://www.aparat.com/embed/rHfnN?data[rnddiv]=2372930150&amp;data[responsive]=yes&amp;&amp;recom=none"></script></div><div id="7642618097"><script type="text/JavaScript" src="https://www.aparat.com/embed/a1kjS?data[rnddiv]=7642618097&amp;data[responsive]=yes&amp;&amp;recom=none"></script></div>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://alanaq.mihanblog.com/post/category/4" class=text4>کلیپ</a>،&nbsp;<a href="http://alanaq.mihanblog.com/post/category/9" class=text4>شعر</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://alanaq.mihanblog.com/post/tag/%DA%A9%D8%B1%D9%88%D9%86%D8%A7" class=text4>کرونا</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://alanaq.mihanblog.com/post/133#commentlist">نظرات (<script>setCommentCnt(133)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('133','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://alanaq.mihanblog.com/post/131">معادل فارسی گیاهان در زبان محلی آلانق</a></font></div>
+            <div class=div58><font class=text7>چهارشنبه 21 خرداد 1399 :: نویسنده : <a href="http://alanaq.mihanblog.com/post/author/1149125">ابوالفضل فضلی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+
+
+
+
+<div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="../file.mihanblog.com/public/user_data/user_files/452/1355877/Herb.jpg" alt="گیاهان دارویی"></div><div style="text-align: center;"><br></div>
+<font face="Mihan-Iransans" size="2">1. کهلیک اوتی&nbsp;=&nbsp;آویشن</font><div><font face="Mihan-Iransans" size="2">2. بوز آلاخ = پولک</font></div><div><font face="Mihan-Iransans" size="2">3. چای گولی = چای کوهی</font></div><div><font face="Mihan-Iransans" size="2">4. یارپیز = پونه</font></div><div><font face="Mihan-Iransans" size="2">5. بیزوشا = بارهنگ</font></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://alanaq.mihanblog.com/post/category/2" class=text4>اخبار</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://alanaq.mihanblog.com/post/tag/%DA%AF%DB%8C%D8%A7%D9%87%20%D8%AF%D8%A7%D8%B1%D9%88%DB%8C%DB%8C" class=text4>گیاه دارویی</a>، <a href="http://alanaq.mihanblog.com/post/tag/%DA%AF%DB%8C%D8%A7%D9%87" class=text4>گیاه</a>، <a href="http://alanaq.mihanblog.com/post/tag/%D8%A2%D8%B0%D8%B1%DB%8C" class=text4>آذری</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://alanaq.mihanblog.com/post/131#commentlist">نظرات (<script>setCommentCnt(131)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('131','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://alanaq.mihanblog.com/post/129">کتاب گزیده اشعار حاج ابوالقاسم فضلی آلانق</a></font></div>
+            <div class=div58><font class=text7>چهارشنبه 6 آذر 1398 :: نویسنده : <a href="http://alanaq.mihanblog.com/post/author/1149125">ابوالفضل فضلی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+
+
+
+
+
+<div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="../file.mihanblog.com/public/user_data/user_files/452/1355877/AxSher1.jpg" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;"><p class="MsoNormal" dir="RTL" style="text-align:justify;line-height:normal;
+direction:rtl;unicode-bidi:embed"><span lang="AR-SA" style=""><font face="Mihan-Iransans" style="" size="2">حاج ابوالقاسم فضلی در زمستان سال 1318 چشم به جهان
+گشود، وی که در یک خانواده روستایی به دنیا آمده بود، از همان عنفوان
+کودکی سختی کار کردن را به تن کشیده و بزرگ شد، در سن 20 سالگی به خدمت سربازی
+رفته و به مدت دو سال بدون حتی یک بار آمدن به خانه در مرز ایران و ترکیه و عراق
+دوران سربازی را سپری کرد. پس از بازگشت از خدمت ازدواج
+کرد. که ثمره زندگی آنها 8 فرزند (چهار پسر و چهار دختر) است. حاج ابوالقاسم فضلی
+از همان دوران جوانی دلباخته اهل بیت (ع) بوده و در ایام محرم به خواندن نوحه در
+هیئت محل همت می گماشت. در حال حاضر نیز با وجود داشتن 80 سال سن، باز هم نوای
+نوحه ایشان زینت بخش مجالس عزاداری محرم است.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:justify;line-height:normal;
+direction:rtl;unicode-bidi:embed"><span lang="AR-SA" style=""><font face="Mihan-Iransans" style="" size="2">وی سرودن شعر را از سن 40 سالگی آغاز کرده، و در
+موضوعاتی چون مذهبی، عمومی، طنز و عرفان اشعاری از ایشان وجود دارد.</font></span><span dir="LTR" style="font-size:12.0pt;mso-bidi-font-family:&quot;B Nazanin&quot;"><o:p></o:p></span></p><p class="MsoNormal" dir="RTL" style="text-align: center; line-height: normal; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="3"><b style="">دانلود رایگان کتاب</b></font></p></div><div style="text-align: center;"><a href="http://file.mihanblog.com//public/user_data/user_files/452/1355877/Books/AbolghasemFazli_Sher1.pdf" target="_blank" title="کتاب گزیده اشعار حاج ابوالقاسم فضلی"><img hspace="0" border="0" align="baseline" vspace="0" src="../file.mihanblog.com/public/user_data/user_files/452/1355877/download.png" alt=""></a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://alanaq.mihanblog.com/post/category/9" class=text4>شعر</a>،&nbsp;<a href="http://alanaq.mihanblog.com/post/category/13" class=text4>معرفی کتاب</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://alanaq.mihanblog.com/post/129#commentlist">نظرات (<script>setCommentCnt(129)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('129','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://alanaq.mihanblog.com/post/128">شعر احوالات بشر</a></font></div>
+            <div class=div58><font class=text7>جمعه 10 آبان 1398 :: نویسنده : <a href="http://alanaq.mihanblog.com/post/author/1149125">ابوالفضل فضلی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><style>.h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/6npba/vt/frame" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>
+
+
+<font face="Mihan-Iransans" size="2"><br></font><div><p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style=""><font face="Mihan-Iransans" size="2">ای بشر فکر ایلع بیر اوولوی آخروی<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style=""><font face="Mihan-Iransans" size="2">دولانیر چرخ زمان گردش دورانوا باخ<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style=""><o:p><font face="Mihan-Iransans" size="2">&nbsp;</font></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style=""><font face="Mihan-Iransans" size="2">دیمعکی من کمکم، فخر ایلع مع دوروونان<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style=""><font face="Mihan-Iransans" size="2">قبر اووین یادوا سال، تکجه قالان حالوا باخ<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style=""><o:p><font face="Mihan-Iransans" size="2">&nbsp;</font></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style=""><font face="Mihan-Iransans" size="2">هیچ کیمع ظلم ایلع مع، ظلمون اولماز ثمری<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style=""><font face="Mihan-Iransans" size="2">خیر ایشع سبقت ایلع، ویردیگون احسانوا باخ<o:p></o:p></font></span></p><br></div>                <BlogExtendedPost><br><br><b><a href='http://alanaq.mihanblog.com/post/128'>ادامه مطلب</a></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://alanaq.mihanblog.com/post/category/9" class=text4>شعر</a>،&nbsp;<a href="http://alanaq.mihanblog.com/post/category/4" class=text4>کلیپ</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://alanaq.mihanblog.com/post/tag/%D8%A7%D8%AD%D9%88%D8%A7%D9%84%D8%A7%D8%AA%20%D8%A8%D8%B4%D8%B1" class=text4>احوالات بشر</a>، <a href="http://alanaq.mihanblog.com/post/tag/%D8%A7%D8%A8%D9%88%D8%A7%D9%84%D9%82%D8%A7%D8%B3%D9%85%20%D9%81%D8%B6%D9%84%DB%8C" class=text4>ابوالقاسم فضلی</a>، <a href="http://alanaq.mihanblog.com/post/tag/%D8%A2%D9%84%D8%A7%D9%86%D9%82" class=text4>آلانق</a>، <a href="http://alanaq.mihanblog.com/post/tag/%D8%B4%D8%B9%D8%B1" class=text4>شعر</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://alanaq.mihanblog.com/post/128#commentlist">نظرات (<script>setCommentCnt(128)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('128','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://alanaq.mihanblog.com/post/127">شعر طنز خانم و آقا دعواسی</a></font></div>
+            <div class=div58><font class=text7>چهارشنبه 8 آبان 1398 :: نویسنده : <a href="http://alanaq.mihanblog.com/post/author/1149125">ابوالفضل فضلی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+<style>.h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/sX7Q8/vt/frame" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>
+
+
+
+
+<br><div><br></div><div><p class="MsoNormal" dir="RTL" style="margin-right: 0.25in; text-align: right; line-height: normal; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA"><font face="Mihan-Iransans" size="2">کیشینین یوخدی ایشی، اودع بیکار بیکار گزیر<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="margin-right: 0.25in; text-align: right; line-height: normal; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA"><font face="Mihan-Iransans" size="2">گدیری ایشدن اووع، آخشام الی بوش گلیری<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="margin-right: 0.25in; text-align: right; line-height: normal; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA"><font face="Mihan-Iransans" size="2">دور قاپینی آش گلیری، دور قاپینی آش گلیری<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-align: right; line-height: normal; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA"><font face="Mihan-Iransans" size="2">&nbsp;</font></span></p><p class="MsoNormal" dir="RTL" style="margin-right: 0.25in; text-align: right; line-height: normal; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA"><font face="Mihan-Iransans" size="2">خانم دگیر داش باشوا، کیشی یتیشدون 60 یاشوا<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="margin-right: 0.25in; text-align: right; line-height: normal; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA"><font face="Mihan-Iransans" size="2">باخ کیشی بیر یولداشوا، الیندع لواش گلیری<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="margin-right: 0.25in; text-align: right; line-height: normal; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA"><font face="Mihan-Iransans" size="2">دور قاپینی آش گلیری، دور قاپینی آش گلیری</font></span></p></div>                <BlogExtendedPost><br><br><b><a href='http://alanaq.mihanblog.com/post/127'>ادامه مطلب</a></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://alanaq.mihanblog.com/post/category/4" class=text4>کلیپ</a>،&nbsp;<a href="http://alanaq.mihanblog.com/post/category/9" class=text4>شعر</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://alanaq.mihanblog.com/post/tag/%D8%B4%D8%B9%D8%B1%20%D8%B7%D9%86%D8%B2" class=text4>شعر طنز</a>، <a href="http://alanaq.mihanblog.com/post/tag/%D8%B4%D9%87%D8%B1%DB%8C%D8%A7%D8%B1%20%D8%A2%D9%84%D8%A7%D9%86%D9%82" class=text4>شهریار آلانق</a>، <a href="http://alanaq.mihanblog.com/post/tag/%D8%AF%D8%B9%D9%88%D8%A7%DB%8C%20%D8%AE%D8%A7%D9%86%D9%85%20%D9%88%20%D8%A2%D9%82%D8%A7" class=text4>دعوای خانم و آقا</a>، <a href="http://alanaq.mihanblog.com/post/tag/%D8%AF%D8%B9%D9%88%D8%A7%DB%8C%20%D8%B2%D9%86%20%D9%88%20%D8%B4%D9%88%D9%87%D8%B1%DB%8C" class=text4>دعوای زن و شوهری</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://alanaq.mihanblog.com/post/127#commentlist">نظرات (<script>setCommentCnt(127)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('127','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://alanaq.mihanblog.com/post/126">کتابهایی که خوانده ام (سری دوم)</a></font></div>
+            <div class=div58><font class=text7>یکشنبه 28 مهر 1398 :: نویسنده : <a href="http://alanaq.mihanblog.com/post/author/1149125">ابوالفضل فضلی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+
+
+<font face="Mihan-Iransans" size="2">
+1. بیگانه - آلبر کامو - جلال آل احمد - انتشارات ملینا</font><div><font face="Mihan-Iransans" size="2">2. بوف کور - صادق هدایت - انتشارات صادق هدایت</font></div><div><font face="Mihan-Iransans" size="2">3. طاعون - آلبر کامو - پرویز شهدی - انتشارات مجید</font></div><div><font face="Mihan-Iransans" size="2">4. کشتی پهلو گرفته - سید مهدی شجاعی - انتشارات نیستان</font></div>
+
+
+
+
+
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://alanaq.mihanblog.com/post/category/13" class=text4>معرفی کتاب</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://alanaq.mihanblog.com/post/126#commentlist">نظرات (<script>setCommentCnt(126)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('126','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://alanaq.mihanblog.com/post/125">رادیو آلانق (قسمت پنجم فصل اول - داستان پادشاه یمن)</a></font></div>
+            <div class=div58><font class=text7>جمعه 13 اردیبهشت 1398 :: نویسنده : <a href="http://alanaq.mihanblog.com/post/author/1149125">ابوالفضل فضلی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+<div style="text-align: center;"><font face="Mihan-Iransans" size="2"><img hspace="0" border="0" align="baseline" vspace="0" src="../file.mihanblog.com/public/user_data/user_files/452/1355877/Podcast/S1/E5.jpg" alt="داستان پادشاه یمن"></font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="2"><br></font></div><div style="text-align: center;"><iframe src="https://anchor.fm/alanaq/embed/episodes/--e3tso4/a-aeagrv" height="102px" width="400px" frameborder="0" scrolling="no"></iframe></div><div style="text-align: center;"><span style="color: rgb(72, 75, 98); text-align: start;"><font face="Mihan-Iransans" size="2"><br></font></span></div><div style="text-align: center;"><span style="color: rgb(72, 75, 98); text-align: start;"><font face="Mihan-Iransans" size="2">داستانی که سرنوشت عجیب و پر از درد یک پادشاه را بیان می کند.</font></span></div><div style="text-align: center;"><br></div>
+
+
+
+
+<div id="51423083017"><style>.h_iframe-aparat_embed_frame{position:relative;} .h_iframe-aparat_embed_frame .ratio {display:block;width:100%;height:auto;} .h_iframe-aparat_embed_frame iframe {position:absolute;top:0;left:0;width:100%; height:100%;}</style><div class="h_iframe-aparat_embed_frame"> <span style="text-align: center; display: block; padding-top: 56.2%;"></span><iframe width="100%" height="100%" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" src="https://www.aparat.com/video/video/embed/videohash/4uKAN/vt/frame" style="text-align: center;"></iframe></div></div>
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://alanaq.mihanblog.com/post/category/14" class=text4>رادیو آلانق (پادکست)</a>،&nbsp;<a href="http://alanaq.mihanblog.com/post/category/4" class=text4>کلیپ</a>،&nbsp;<a href="http://alanaq.mihanblog.com/post/category/6" class=text4>داستان</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://alanaq.mihanblog.com/post/125#commentlist">نظرات (<script>setCommentCnt(125)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('125','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://alanaq.mihanblog.com/post/124">کتاب بیشعوری نوشته دکتر خاویر کرمنت</a></font></div>
+            <div class=div58><font class=text7>چهارشنبه 4 اردیبهشت 1398 :: نویسنده : <a href="http://alanaq.mihanblog.com/post/author/1149125">ابوالفضل فضلی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+
+
+
+
+<div style="text-align: justify;"><span style="font-family: Mihan-Iransans; font-size: small; color: rgb(85, 85, 85);">نام اصلی کتاب "assholism" است و شاید ترجمه این عنوان به بیشعوری به محدودیت واژگان معادل آن در زبان فارسی برمی گردد چرا که بیشعور در ادبیات ما به نادان و احمق و بی ادراک معنا می شود و ای بسا کلمه "پفیوز" به معنای&nbsp;بی صفت و بی غیرت، دلالت معنایی بیشتری برای "اسهولیزم"&nbsp;داشته باشد. در عین حال با توجه به استفاده نویسنده از کلام طنز و سخنان طعنه آمیز در کتاب به نظر می رسد ترجمه عنوان کتاب توسط مترجم، هوشیارانه صورت گرفته و هیچ واژه ای همچون "بیشعوری" در این محتوا نمی تواند مفهوم طنز را نیز بر خود حمل نماید.</span></div><div><font style="color: rgb(85, 85, 85); text-align: right;" face="Mihan-Iransans" size="2"><p align="justify" dir="rtl" style="margin: 0px; padding: 0px;"><br>تصویر روی جلد کتاب اثر معروف نقاشی "ادوارد مونک" نروژی از نقاشان سبک پست امپرسیونیسم با نام "جیغ" است. مونک یکی از منتقدان اخلاقی انسان نوین نیز به شمار می رود و موضوعات مهم آثارش عبارتند از رنج، مرگ و عشق فاسد؛ موضوعاتی که ارتباط مستقیم با "assholism" یا بیشعوری دارند. ترجمه این کتاب همراه با توضیحات مختصر مترجم در پانوشت ها بسیار روان صورت گرفته است و از اغلاط املایی آن که بگذریم ترجمه ای قابل تحسین شده است.</p></font><p style="margin: 0px; padding: 0px; color: rgb(85, 85, 85); text-align: justify;"><font face="Mihan-Iransans" size="2"><br>به صورت گذرا باید عرض کنم این کتاب انواع بیشعوری را در تقسیم بندی های ذیل می بیند: بیشعورهای اجتماعی، تجاری، مدنی، مقدس مآب، عصر جدید، دیوان سالار، بیچاره و شاکی. از نظر شدت بیشعوری نیز تقسیمات ذیل قابل ذکر است: بی شعور تمام عیار، بی شعور گَه گیر و بی شعور آب زیر کاه (خوشرو و ترشرو). تقسیمات و زیر تقسیمات در این کتاب به نهایت با دقت صورت گرفته آنقدر که به راحتی می توانید تعدادی از اطرافیانتان را در یکی از گروههای بیشعور متصور شوید.</font></p><p style="margin: 0px; padding: 0px; color: rgb(85, 85, 85); text-align: justify;"><font face="Mihan-Iransans" size="2"><br></font></p><p align="justify" style="margin: 0px; padding: 0px; color: rgb(85, 85, 85);"></p><ul><li><font face="Mihan-Iransans" size="2">دنیا به کام بیشعورهاست و گویی سالهاست که بیشعورهای جهان متحد شده اند.</font></li><li><font face="Mihan-Iransans" size="2">اگر بی شعورها عاشق می شوند فقط به یک دلیل است: می خواهند در هیچ چیز کم نیاورند از جمله عشق.</font></li><li><font face="Mihan-Iransans" size="2">هر چند که در دانشگاه به اندازه ی کافی به ما رقابت بی رحمانه و از پشت خنجر زدن یاد داده بودند، به زودی فهمیدم که در دنیای بی رحم و خودخواه واقعی بیشتر از حدی که آموخته بودیم به آن درس ها نیاز است.</font></li><li><font face="Mihan-Iransans" size="2">آدم بیشعور به کارهایش به این صورت میرسد که یکی دیگر را پیدا میکند تا به کارهایش رسیدگی کند.</font></li><li><font face="Mihan-Iransans" size="2">بهترین راه برای سر و کار داشتن با بی شعورهای تمام عیار آن است که تا حد امکان با آنها سر و کار نداشت!</font></li><li><font face="Mihan-Iransans" size="2">سریع ترین راه برای شکست خوردن در یک مرافعه ی قضایی این است که آدم معتقد باشد سیستم قضایی بی طرف است.</font></li><li><font face="Mihan-Iransans" style="" size="2">سخت ترین مرحله در درمان و ترک بیشعوری همان مرحله ی نخست است، یعنی پذیرفتن بیشعور بودن.</font></li></ul><div><font face="Mihan-Iransans" size="1"><br></font></div><div><font face="Mihan-Iransans" size="1">منبع:&nbsp;<a href="http://mehrema.blogsky.com/1393/11/04/post-4/" target="_blank" title="وبلاگ مهر ما">مهر ما</a></font></div><p></p></div>
+
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://alanaq.mihanblog.com/post/category/13" class=text4>معرفی کتاب</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://alanaq.mihanblog.com/post/tag/%D8%A8%DB%8C%D8%B4%D8%B9%D9%88%D8%B1%DB%8C" class=text4>بیشعوری</a>، <a href="http://alanaq.mihanblog.com/post/tag/%DA%A9%D8%AA%D8%A7%D8%A8" class=text4>کتاب</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://alanaq.mihanblog.com/post/124#commentlist">نظرات (<script>setCommentCnt(124)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('124','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://alanaq.mihanblog.com/post/121">شعر حیدربابایه سلام اثر استاد شهریار با ترجمه فارسی (1)</a></font></div>
+            <div class=div58><font class=text7>چهارشنبه 4 اردیبهشت 1398 :: نویسنده : <a href="http://alanaq.mihanblog.com/post/author/1149125">ابوالفضل فضلی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+
+
+
+
+
+
+
+
+<div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="../file.mihanblog.com/public/user_data/user_files/452/1355877/Shahriyar.jpg" alt="استاد شهریار"></div><div style="text-align: center;"><br></div><div><span style="font-family: Mihan-Iransans; font-size: small;">1. حیدر بابا ‌ایلدریملار شاخاندا</span></div><div><font face="Mihan-Iransans" size="2">سئللر سولار&nbsp; شاقیلدایوب آخاندا</font></div><div><font face="Mihan-Iransans" size="2">قیزلار اونا صف باغلایوب باخاندا</font></div><div><font face="Mihan-Iransans" size="2">سلام اولسون شوکتوزه ائلوزه !</font></div><div><font face="Mihan-Iransans" size="2">منیم دا بیر آدیم گلسین دیلوزه</font></div><div><font face="Mihan-Iransans" size="2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font></div><div><font face="Mihan-Iransans" size="1">حیدر بابا چو ابر شخد بر آسمان</font></div><div><font face="Mihan-Iransans" size="1">سیلابهای تند و خروشان شود روان</font></div><div><font face="Mihan-Iransans" size="1">صف بسته دختران به تماشایش آن زمان</font></div><div><font face="Mihan-Iransans" size="1">بر شوکت و تبار تو بادا سلام من</font></div><div><font face="Mihan-Iransans" size="1">گاهی رود مگر به زبان تو نام من</font></div><div><font face="Mihan-Iransans" size="2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font></div><div><span style="font-family: Mihan-Iransans; font-size: small;">2. حیدر بابا کهلیک لرون اوچاندا</span></div><div><font face="Mihan-Iransans" size="2">کول دیبینن دوشان قالخیب قاچاندا</font></div><div><font face="Mihan-Iransans" size="2">باخچالارون چیچکلنوب آچاندا</font></div><div><font face="Mihan-Iransans" size="2">بیزدن ده بیر ممکون اولسا یاد ائله</font></div><div><font face="Mihan-Iransans" size="2">آچیلمیان اورکلری شاد ائله</font></div><div><font face="Mihan-Iransans" size="2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font></div><div><font face="Mihan-Iransans" size="1">حیدر بابا چو کبک تو پرد ز روی خاک</font></div><div><font face="Mihan-Iransans" size="1">خرگوش زیر بوته&nbsp; گریزد هراسناک</font></div><div><font face="Mihan-Iransans" size="1">باغت به گل نشسته و گل کرده جامه پاک</font></div><div><font face="Mihan-Iransans" size="1">&nbsp;ممکن اگر شود&nbsp; ز من خسته یاد کن</font></div><div><font face="Mihan-Iransans" size="1">دلهای غم گرفته بدان یاد شاد کن</font></div></div><div><br></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <BlogExtendedPost><br><br><b><a href='http://alanaq.mihanblog.com/post/121'>ادامه مطلب</a></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://alanaq.mihanblog.com/post/category/5" class=text4>بزرگان</a>،&nbsp;<a href="http://alanaq.mihanblog.com/post/category/9" class=text4>شعر</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://alanaq.mihanblog.com/post/tag/%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%B4%D9%87%D8%B1%DB%8C%D8%A7%D8%B1" class=text4>استاد شهریار</a>، <a href="http://alanaq.mihanblog.com/post/tag/%D8%AD%DB%8C%D8%AF%D8%B1%D8%A8%D8%A7%D8%A8%D8%A7" class=text4>حیدربابا</a>، <a href="http://alanaq.mihanblog.com/post/tag/%D9%82%D9%88%D8%B1%DB%8C%20%DA%AF%D9%84" class=text4>قوری گل</a>، <a href="http://alanaq.mihanblog.com/post/tag/%D8%B4%D9%86%DA%AF%DB%8C%D9%84%20%D8%A2%D8%A8%D8%A7%D8%AF" class=text4>شنگیل آباد</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://alanaq.mihanblog.com/post/121#commentlist">نظرات (<script>setCommentCnt(121)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('121','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://alanaq.mihanblog.com/post/120">شعر میلاد امام زمان (عج)</a></font></div>
+            <div class=div58><font class=text7>شنبه 31 فروردین 1398 :: نویسنده : <a href="http://alanaq.mihanblog.com/post/author/1149125">ابوالفضل فضلی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><style>.h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/bMx9c/vt/frame" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://alanaq.mihanblog.com/post/category/4" class=text4>کلیپ</a>،&nbsp;<a href="http://alanaq.mihanblog.com/post/category/9" class=text4>شعر</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://alanaq.mihanblog.com/post/tag/%D8%B4%D8%B9%D8%B1" class=text4>شعر</a>، <a href="http://alanaq.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" class=text4>امام زمان</a>، <a href="http://alanaq.mihanblog.com/post/tag/%D9%86%DB%8C%D9%85%D9%87%20%D8%B4%D8%B9%D8%A8%D8%A7%D9%86" class=text4>نیمه شعبان</a>، <a href="http://alanaq.mihanblog.com/post/tag/%D8%A7%D8%A8%D9%88%D8%A7%D9%84%D9%82%D8%A7%D8%B3%D9%85%20%D9%81%D8%B6%D9%84%DB%8C" class=text4>ابوالقاسم فضلی</a>، <a href="http://alanaq.mihanblog.com/post/tag/%D8%A2%D9%84%D8%A7%D9%86%D9%82" class=text4>آلانق</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://alanaq.mihanblog.com/post/120#commentlist">نظرات (<script>setCommentCnt(120)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('120','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div>
+    <div class=div29></div>
+    <div class=div28><font class=text9>
+                <br><br>
+        ( کل صفحات : 6 )&nbsp;&nbsp;&nbsp;
+            <a href="http://alanaq.mihanblog.com/page/1" class=text4><b>1</b></a>&nbsp;&nbsp;&nbsp;<a href="http://alanaq.mihanblog.com/page/2" class=text4><span>2</span></a>&nbsp;&nbsp;&nbsp;<a href="http://alanaq.mihanblog.com/page/3" class=text4><span>3</span></a>&nbsp;&nbsp;&nbsp;<a href="http://alanaq.mihanblog.com/page/4" class=text4><span>4</span></a>&nbsp;&nbsp;&nbsp;<a href="http://alanaq.mihanblog.com/page/5" class=text4><span>5</span></a>&nbsp;&nbsp;&nbsp;<a href="http://alanaq.mihanblog.com/page/6" class=text4><span>6</span></a>&nbsp;&nbsp;&nbsp;    </font>
+    </div>
+</div>
+
+<div class=div17>
+
+    <div class=div170>
+
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=mtext5>موضوعات</font></div></div>
+            <div class=sm2></div>
+            <div class=div341><font class=mtext1><ul>
+                <li><a href="http://alanaq.mihanblog.com/post/category/14">رادیو آلانق (پادکست) (7)</a></li><li><a href="http://alanaq.mihanblog.com/post/category/2">اخبار (15)</a></li><li><a href="http://alanaq.mihanblog.com/post/category/5">بزرگان (2)</a></li><li><a href="http://alanaq.mihanblog.com/post/category/3">تصاویر (8)</a></li><li><a href="http://alanaq.mihanblog.com/post/category/4">کلیپ (27)</a></li><li><a href="http://alanaq.mihanblog.com/post/category/9">شعر (22)</a></li><li><a href="http://alanaq.mihanblog.com/post/category/6">داستان (5)</a></li><li><a href="http://alanaq.mihanblog.com/post/category/7">تالاب قوری گل (4)</a></li><li><a href="http://alanaq.mihanblog.com/post/category/8">شهرستان بستان آباد (4)</a></li><li><a href="http://alanaq.mihanblog.com/post/category/11">زعفران (2)</a></li><li><a href="http://alanaq.mihanblog.com/post/category/13">معرفی کتاب (4)</a></li>            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=mtext5>پیوندهای روزانه</font></div></div>
+            <div class=sm2></div>
+            <div class=div341><font class=mtext1><ul>
+                <li><a href="https://virgool.io/@abolfazl.fazli" title="مقالات برنامه نویسی و توسعه نرم افزار" target="_blank">مقالات من در ویرگول</a></li><li><a href="https://www.imdb.com/user/ur96967324/ratings" title="فیلم هایی که تا به حال دیده ام" target="_blank">فیلم های مورد علاقه من</a></li><li><a href="https://epitomebooks.ir" title="" target="_blank">خلاصه کتاب</a></li><li><a href="http://Shoniz.com" title="بهترین شکلاتها در شونیز" target="_blank">شرکت شونیز</a></li><li><a href="http://gharacheman.ir/" title="روستای قره چمن شهرستان بستان آباد" target="_blank">روستای قره چمن</a></li>                <li><b><a href="http://alanaq.mihanblog.com/linkdaily/">همه پیوندهای روزانه</a></b></li>
+                <li><b><a href="javascript:linkdailyForm()">ارسال پیوند روزانه</a></b></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=mtext5>پیوندها</font></div></div>
+            <div class=sm2></div>
+            <div class=div341><font class=mtext1><ul>
+                <li><a href="http://diyareshahriar.ir/" title="اخبار شهرستان بستان آباد" target="_blank">دیار شهریار</a></li><li><a href="http://www.iranvillage.ir/article-6820--0-0.html" title="سایتها و وبلاگهای روستایی شهرستان بستان آباد" target="_blank">روستاهای بستان آباد</a></li><li><a href="http://www.lenzor.com/afazli" title="عکس هایی از همه جای آلانق" target="_blank">عکس آلانق</a></li><li><a href="http://www.aparat.com/afazli" title="کلیپ های جدید از آلانق" target="_blank">کلیپ آلانق</a></li><li><a href="http://www.jaaar.com/" title="پیشخوان روزنامه های صبح کشور" target="_blank">جــار</a></li><li><a href="http://www.aparat.com/" title="اشتراک فیلم و کلیپ" target="_blank">آپارات</a></li><li><a href="http://www.ghatar.com/" title="اشتراک لینک قطار وب گردی" target="_blank">قطار</a></li><li><a href="http://zoomit.ir" title="تازه های دنیای فناوری" target="_blank">زومیت</a></li>                <li><b><a href="http://alanaq.mihanblog.com/link/">همه پیوندها</a></b></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+        
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=mtext5>آمار وبلاگ</font></div></div>
+            <div class=sm2></div>
+            <div class=div341><font class=mtext1><ul>
+                <li>کل بازدید : <script>getStatVar('total_view');</script></li>
+                <li>بازدید امروز :<script>getStatVar('today_view');</script></li>
+                <li>بازدید دیروز : <script>getStatVar('yesterday_view');</script></li>
+                <li>بازدید این ماه : <script>getStatVar('this_month_view');</script></li>
+                <li>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></li>
+                <li>تعداد نویسندگان : <script>getStatVar('total_author');</script></li>
+                <li>تعداد کل پست ها : <script>getStatVar('total_post');</script></li>
+                <li>آخرین بازدید : <script>getStatVar('last_view_date');</script></li>
+                <li>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div024><center><!-- Weather by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzaar.ir/abzar/tools/weather/hava.php?color=333333&shahr=016&bg=F0F0F0&kc=BBBBBB&kadr=0"></script><div style="display:none"><h1><a href="http://www.1abzar.com">&#1608;&#1590;&#1593;&#1740;&#1578; &#1570;&#1576; &#1608; &#1607;&#1608;&#1575;</a></h1></div>
+<!-- Weather by www.1abzar.com --->
+
+<!-- Online Support by www.1abzar.com --->
+<a href="https://telegram.me/afazlia" target="_blank" title="پشتیبانی آنلاین"><img hspace="0" border="0" align="baseline" vspace="0" src="../file.mihanblog.com/public/user_data/user_files/452/1355877/TelegramOnline.png" alt="پشتیبانی آنلاین"></a>
+<!-- Online Support by www.1abzar.com --->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131437943-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131437943-1');
+</script></center>
+            
+        </div>
+    </div>
+
+</div>
+
+</div>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+    <td class=b1>&nbsp;</td>
+    <td class=b2>
+        <div class=div6></div>
+        <div class=div7>
+            <a href="http://www.mytheme.ir" target="_blank">
+                <img src="http://mihanblog.com/public/public/user_data/template/2099932/blank.gif" border=0 width=182 height=35></a></div>
+    </td>
+    <td class=b1>&nbsp;</td>
+</tr>
+</table>
+</div>
+<style>
+    img{
+        max-width : 500px;
+    }
+</style>
+
+<!-- Goto Top by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzaar.ir/abzar/tools/top-page/jquery.min.js"></script><script>var abzar = "<img src=http://1abzaar.ir/abzar/tools/top-page/top4.png />";</script><script type="text/javascript" src="http://1abzaar.ir/abzar/tools/top-page/scrolltopcontrol.js"></script><div style="display:none"><h1><a href="http://www.1abzar.com">ابزار هدایت به بالای صفحه</a></h1></div>
+<!-- Goto Top by www.1abzar.com --->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131437943-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131437943-1');
+</script>
+
+</body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'alanaq.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

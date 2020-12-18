@@ -1,0 +1,1209 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://behnaz20.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1924207*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[4]='1122';commentCnt[243]='5';commentCnt[244]='1';commentCnt[245]='1';commentCnt[246]='0';commentCnt[247]='1';commentCnt[248]='1';commentCnt[249]='1';commentCnt[250]='0';commentCnt[252]='0';commentCnt[253]='1';commentCnt[254]='0';commentCnt[255]='2';commentCnt[256]='3';commentCnt[262]='2';commentCnt[264]='12';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[4]='0';
+mihanblogDisLikeArrCnt[4]='0';
+mihanblogLikeArrCnt[243]='0';
+mihanblogDisLikeArrCnt[243]='0';
+mihanblogLikeArrCnt[244]='0';
+mihanblogDisLikeArrCnt[244]='0';
+mihanblogLikeArrCnt[245]='0';
+mihanblogDisLikeArrCnt[245]='0';
+mihanblogLikeArrCnt[246]='0';
+mihanblogDisLikeArrCnt[246]='0';
+mihanblogLikeArrCnt[247]='0';
+mihanblogDisLikeArrCnt[247]='0';
+mihanblogLikeArrCnt[248]='0';
+mihanblogDisLikeArrCnt[248]='0';
+mihanblogLikeArrCnt[249]='0';
+mihanblogDisLikeArrCnt[249]='0';
+mihanblogLikeArrCnt[250]='0';
+mihanblogDisLikeArrCnt[250]='0';
+mihanblogLikeArrCnt[252]='0';
+mihanblogDisLikeArrCnt[252]='0';
+mihanblogLikeArrCnt[253]='0';
+mihanblogDisLikeArrCnt[253]='0';
+mihanblogLikeArrCnt[255]='0';
+mihanblogDisLikeArrCnt[255]='0';
+mihanblogLikeArrCnt[256]='0';
+mihanblogDisLikeArrCnt[256]='0';
+mihanblogLikeArrCnt[262]='0';
+mihanblogDisLikeArrCnt[262]='0';
+mihanblogLikeArrCnt[264]='0';
+mihanblogDisLikeArrCnt[264]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://behnaz20.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://behnaz20.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','192');
+	setStatVar('total_author','4');
+	setStatVar('modify_date','یکشنبه 28 مرداد 1397');
+	
+	setStatVar('today_view','18');
+	setStatVar('yesterday_view','29');
+	
+	setStatVar('this_month_view','683');
+	setStatVar('last_month_view','1054');
+
+	setStatVar('total_view','124178');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (05:50)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://behnaz20.mihanblog.com/statupdate/?data[refereruri]=http://roman-e.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607826355&data[hash]=29ceb6ea476c06fe10851bc0d13fc02c&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://behnaz20.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://behnaz20.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://behnaz20.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://behnaz20.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://behnaz20.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://behnaz20.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://behnaz20.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://behnaz20.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://behnaz20.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://behnaz20.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://behnaz20.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://behnaz20.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://behnaz20.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://behnaz20.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://behnaz20.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://behnaz20.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html><head>
+<title>ƈŗγşŧąℓ ℓïɠɧŧ</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+<style type="text/css">
+#navbar-iframe {display: none;}
+a:link, a:visited {color: #64B5A9;text-decoration:none;-webkit-transition: 2s;}
+a:hover{color: #C4E7C9;-webkit-transition-duration:.2s;}
+::selection {color:#64B5A9;}
+b {font-style:bold;color: #C4E7C9;}
+s {color: #C4E7C9;}
+u {text-decoration: none;border-bottom: 3px double #C4E7C9;}
+u:hover {background: #EF88B6;color: #FFFFFF;-webkit-transition: 1s;-moz-border-radius: 10px 10px 10px; -webkit-border-radius: 10px 10px 10px; padding: 7x 7px 7px 7px;}
+body {background:url(http://cafe-webniaz.ir/pics/bg/bg64.png);color:#333333;font-family: "Century Gothic"}
+#pages{position: absolute;background-color:#FFFFFf;top: 50px;left:520px;width: 560px;padding-top: 10px;padding-left:20px;padding-right:20px;-webkit-border-radius:3px;-moz-border-radius:3px;}
+.title{text-align: justify;background-color: transparent;color: #333333;padding-top: 16px;padding-bottom: 5px;padding-left:15px;padding-right: 15px;top: 30px;left:230px;position: absolute;width: 240px;font-family: "Century Gothic"}
+.side{-webkit-border-radius:3px;-moz-border-radius:3px;text-align: justify;background-color: #fff;border: 0px solid #f2f2f2;color: #999;padding-top: 16px;padding-bottom: 5px;padding-left:15px;padding-right: 15px;top: 280px;left:230px;position: absolute;width: 240px;font-size: 14px}
+.pt{font-family: "Century Gothic";background:white;color: #64B5A9;border-bottom: 1px dashed #eee;padding:3px;font-size:25px;margin-top:16px;text-align:center;direction:rtl}
+.com{font-size:10px;margin-top:.5em;margin-bottom:2em;font-family: "Century Gothic";text-align: center}
+.st{font-family: "Century Gothic";background:white;color: #64B5A9;border-bottom: 1px dashed #eee;padding:3px;font-size:25px;margin-top:16px;text-align:center;}
+.ch-grid { margin: 0px 0 0 0; padding: 0; list-style: none; display: block; text-align: center; width: 100%;}
+.ch-item:before {display: table;}
+.ch-grid:after {clear: both;}
+.ch-grid li {width: 220px; height: 220px; display: inline-block; margin: 0px;}
+.ch-item { width: 100%; height: 100%; border-radius: 50%; position: relative; cursor:vertical-text; box-shadow:  inset 0 0 0 13px rgba(255,255,255,0.6),  0 1px 2px rgba(0,0,0,0.1); -webkit-transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out; -o-transition: all 0.4s ease-in-out; -ms-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out;}
+.ch-img{ background-image: url(https://hdwallpaperim.com/wp-content/uploads/2017/09/07/459139-long_hair-brunette-green_eyes-anime-anime_girls-flowers-748x590.jpg);background-size:300px;}
+.ch-info { position: absolute; background: url(https://vignette.wikia.nocookie.net/monstergirlencyclopedia/images/0/09/1346859-bigthumbnail.jpg/revision/latest?cb=20160103044209) #C4E7C9;background-position:50% 50%; width: inherit; height: inherit; border-radius: 50%; opacity: 0; -webkit-transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out; -o-transition: all 0.4s ease-in-out; -ms-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out; -webkit-transform: scale(0); -moz-transform: scale(0); -o-transform: scale(0); -ms-transform: scale(0); transform: scale(0); -webkit-backface-visibility: hidden;}
+.ch-item:hover { box-shadow:  inset 0 0 0 1px rgba(255,255,255,0.1),  0 1px 2px rgba(0,0,0,0.1);}
+.ch-item:hover .ch-info { -webkit-transform: scale(1); -moz-transform: scale(1); -o-transform: scale(1); -ms-transform: scale(1); transform: scale(1); opacity: 1;}
+.ch-item:hover .ch-info p { opacity: 1;}
+a.tplinks{background:#C4E7C9;width:100px;display:inline-block;text-align:center;color:#FFffff;margin-bottom:1px;font:11px ;-webkit-transition: all 0.5s ease;-moz-transition: all 0.5s ease;-o-transition: all 0.5s ease;border:1px solid #FFffff;font: 17px tt ;padding: 1px;font-family: "Century Gothic"}
+a.tplinks:hover{background:#FFffff;border:1px solid #C4E7C9;color:#C4E7C9;}
+a.tplinks2{background:#64B5A9;width:100px;display:inline-block;text-align:center;color:#FFffff;margin-bottom:1px;font:11px ;-webkit-transition: all 0.5s ease;-moz-transition: all 0.5s ease;-o-transition: all 0.5s ease;border:1px solid #FFffff;font: 17px tt ;padding: 1px;font-family: "Century Gothic"}
+a.tplinks2:hover{background:#FFffff;border:1px solid #64B5A9;color:#64B5A9;}
+
+</style>
+<script type="text/javascript" language="javascript">
+<!--
+	function GetBC(lngPostid) {
+	var intTimeZone="<-BlogTimeZone->", strBlogId="behnaz20", intCount=-1, strResult="";
+	try {
+	for (i=0;i<BlogComments.length;i+=2) {
+	if (BlogComments[i]==lngPostid)
+	intCount=BlogComments[i+1] ;}
+	} catch(e) {}
+	if (intCount == -1) strResult="CM's";
+	if (intCount == 0)	strResult="CM's";
+	if (intCount == 1)	strResult="1CM";
+	if (intCount > 1)	strResult=intCount + "CMs";
+	var strUrl = "/comments/?blogid=" + strBlogId + "&postid=" + lngPostid + "&timezone=" + intTimeZone;
+	var strResult = "<a href=\"javascript:void(0)\" target=\"_self\" onclick=\"javascript:window.open('"+strUrl+"','blogfa_comments','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,width=500px,height=500px')\" >"+strResult+"</a>" ;
+	document.write(strResult);}
+	function OpenLD {
+	window.open('/links','blogfa_ld','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px');
+	return true; }
+// -->
+
+</script>
+
+</head>
+<body>
+<div class="title">
+<ul class="ch-grid">
+<li><div class="ch-item ch-img">
+<div class="ch-info">
+<center>
+<div style="margin-top:50px;width:150px;background:url(http://s5.picofile.com/file/8110185168/h11.jpg); border-radius:10px;text-align:center;padding:15px;opacity:0.8;height:92px;" scrolling="auto">
+<span style="direction:rtl; font-family: 'Century Gothic'"><span style="font-size: 18px"><center>ƈŗγşŧąℓ ℓïɠɧŧ</span></span><br>
+<span style="font-size: 10pt"><span style="direction:rtl; font-family: 'Century Gothic'">i'm free:)</center></span></span>
+<center><br><br>
+</div>
+</center>
+</div>
+</div>
+</li>
+</ul>
+<br></div>
+<div class="side">
+<div class="st"> Menu </div><br>
+<center>
+<a class="tplinks" href="index.html">HomE</a>
+<a class="tplinks2" href="http://behnaz20.mihanblog.com/profile">ProfiLe</a><br>
+<a class="tplinks2" href="http://behnaz20.mihanblog.com/post">PosTs</a>
+<a class="tplinks" href="index.html">DesiGn</a>
+</center>
+<div class="st"> About </div>
+<br><div style="clear: left; float: center; margin-bottom: 1em; margin-right: 0.5em;">
+   	
+    	<div align=center > <img src="index.html" >   </div>    
+</div>
+	<span style="font-size: 10pt"><span style="font-family: 'Century Gothic'"><div dir="rtl"></div></span></span>
+<center>
+<select style="float:center;font: 9pt century gothic;border-radius:5px;  color:#666; padding: 4px;width:90%; border: 1px solid #ADD8E6; text-align: center"onChange="location.href=this.options[this.selectedIndex].value;">
+<option selected>Archive ...</option>
+	<option value="/post/archive/1397/5"> مرداد 1397</option>
+	<option value="/post/archive/1397/3"> خرداد 1397</option>
+	<option value="/post/archive/1397/2"> اردیبهشت 1397</option>
+	<option value="/post/archive/1397/1"> فروردین 1397</option>
+	<option value="/post/archive/1396/12"> اسفند 1396</option>
+	<option value="/post/archive/1396/11"> بهمن 1396</option>
+	<option value="/post/archive/1396/10"> دی 1396</option>
+	<option value="/post/archive/1396/9"> آذر 1396</option>
+	<option value="/post/archive/1396/8"> آبان 1396</option>
+	<option value="/post/archive/1396/7"> مهر 1396</option>
+	<option value="/post/archive/1396/6"> شهریور 1396</option>
+	<option value="/post/archive/1396/5"> مرداد 1396</option>
+	</select>
+</center>
+
+
+
+<br><br>
+
+
+<div class="st"> Categories </div>
+<br>
+<span dir="rtl">
+<a href="http://behnaz20.mihanblog.com/post/category/21"><li>uta no prince sama</li></a>
+<a href="http://behnaz20.mihanblog.com/post/category/16"><li>ONE PIECE</li></a>
+<a href="http://behnaz20.mihanblog.com/post/category/15"><li>text</li></a>
+<a href="http://behnaz20.mihanblog.com/post/category/11"><li>Diabolek lovers</li></a>
+<a href="http://behnaz20.mihanblog.com/post/category/10"><li>tokyo ghuol</li></a>
+<a href="http://behnaz20.mihanblog.com/post/category/9"><li>noragami</li></a>
+<a href="http://behnaz20.mihanblog.com/post/category/8"><li>news</li></a>
+<a href="http://behnaz20.mihanblog.com/post/category/6"><li>my arts</li></a>
+<a href="http://behnaz20.mihanblog.com/post/category/2"><li>theme</li></a>
+<a href="http://behnaz20.mihanblog.com/post/category/1"><li>code</li></a>
+</span>
+<br><br>
+
+
+<div class="st"> Friends </div>
+<br><span dir=rtl>
+<a href="index.html"><li>CRYSTAL LIGHT</li></a>
+<a href="../kayda87.mihanblog.com/index.html"><li>وب انیمه ای کایدا_چان</li></a>
+<a href="http://superarda.mihanblog.com"><li>جنگل سحر آمیز</li></a>
+<a href="https://viva-avalanche.blog.ir/"><li>I ❤ Anime</li></a>
+<a href="../keyina.mihanblog.com/index.html"><li>دوران نوجوانی من</li></a>
+<a href="http://dafatarkhatratportghali.mihanblog.com/"><li>♥دفتر خاطرات پرتقالی</li></a>
+<a href="../dsatan-skyland.mihanblog.com/index.html"><li>Sĸyˢᵏʸ ᴸᵃᶰᵈLαɴd</li></a>
+<a href="../aridelmz.mihanblog.com/index.html"><li>Teenage life</li></a>
+<a href="../misspink1.mihanblog.com/index.html"><li>✘تکستـــــــ✘</li></a>
+<a href="../blackbutler.mihanblog.com/index.html"><li>وب اسولا جونم...blackbutler</li></a>
+<a href="../roman-e.mihanblog.com/index.html"><li>وب مینامی الی جونم</li></a>
+<a href="http://zootoponygirls.mihanblog.com"><li>chert o pert</li></a>
+<a href="http://asasasa11111.blogfa.com/"><li>قلمرو تابس ماهـــ/اپل فازی جونم</li></a>
+<a href="../codclub.mihanblog.com/index.html"><li>خل و چل</li></a>
+<a href="../b-lovely.mihanblog.com/index.html"><li>خاطرات دو دوستــ</li></a>
+<a href="http://everafterhigh-m.mihanblog.com/linkdaily/"><li>مدرسه ی جاودانه ی اورافتر های</li></a>
+<a href="../girl161.mihanblog.com/index.html"><li>وب مهستی جون</li></a>
+<a href="../magic-race.mihanblog.com/index.html"><li>مسابقات جادویی فاطمه</li></a>
+<a href="../twilight-sparkle-dash.mihanblog.com/index.html"><li>وب عشقم مهزاد*-*</li></a>
+<a href="http://412sadf528.mihanblog.com/"><li>انیمه کلوپ</li></a>
+<a href="../rainbowshycod.mihanblog.com/index.html"><li>پونی شاپ</li></a>
+</span>
+<br><br>
+    
+<div class="st"> Daily </div>
+<span dir=rtl>
+	 			<a href="http://7themes.ir" target="_blank" title="با سلام....
+ 
+خواهان تبادل لینک با وبلاگ زیبای شما هستیم.در صورت تمایل لینک رو تایید و اطلاع بدید.
+
+سون تم - مرجع تخصصی قالب وردپرس" ><li>قالب وردپرس</li></a>
+	 			<a href="http://www.parstamin-co.com" target="_blank" title="ممنون از وبلاگ خوب و مفید شما خوشحال می شم سری به وبلاگ ما بزنید" ><li>بلبرینگ پارس تامین</li></a>
+	 			<a href="http://bookold.mihanblog.com" target="_blank" title="" ><li>کتاب قدیمی و نایاب</li></a>
+	 			<a href="http://7themes.ir" target="_blank" title="با سلام....
+ 
+خواهان تبادل لینک با وبلاگ زیبای شما هستیم.در صورت تمایل لینک رو تایید و اطلاع بدید.
+
+سون تم - مرجع تخصصی قالب وردپرس" ><li>قالب وردپرس</li></a>
+	 			<a href="http://7themes.ir" target="_blank" title="با سلام....
+ 
+خواهان تبادل لینک با وبلاگ زیبای شما هستیم.در صورت تمایل لینک رو تایید و اطلاع بدید.
+
+سون تم - مرجع تخصصی قالب وردپرس" ><li>قالب وردپرس</li></a>
+	 			<a href="http://anitv.mihanblog.com" target="_blank" title="aniTV شبکه ای پر از انیمه و انیمیشن" ><li>★★aniTV★★</li></a>
+	 			<a href="https://farishtheme.ir" target="_blank" title="ضمن عرض سلام و ادب و احترام
+
+جا دارد تشکری از شما داشته باشیم به خاطر وبلاگی که دارید و محتوایی که ارائه میکنید.
+
+برای بنده قابل استفاده بود.
+
+از مدیر وبلاگ تشکر میکنم.
+
+ما هم در فریش تم به ارائه قالب های وردپرس و هاست وردپرس میپردازیم. در صورتی که روزی تمایل داشتید وبسایتی راه اندازی کنید که با حداقل هزینه بهترین کارایی و طراحی را داشته باشد. خوش حال خواهیم شد مهمان ما باشید...
+
+تشکر - فریش تم" ><li>قالب وردپرس</li></a>
+	 			<a href="http://mimos.ir" target="_blank" title="سلام و عرض درود
+ممنون بابت محتوای خوب وبگاهتون.
+ما هم در میموس با آموزش بازاریابی اینترنتی به تمام علاقمندان به کسب و کار آنلاین کمک می کنیم ...
+ممنون میشم لینک ما رو برای ترویج این نوع کسب و کار انتشار بدید.
+با تشکر میموس.ای ار" ><li>آموزش بازاریابی اینترنتی</li></a>
+	 			<a href="http://mimos.ir" target="_blank" title="سلام و عرض درود
+ممنون بابت محتوای خوب وبگاهتون.
+ما هم در میموس با آموزش بازاریابی اینترنتی به تمام علاقمندان به کسب و کار آنلاین کمک می کنیم ...
+ممنون میشم لینک ما رو برای ترویج این نوع کسب و کار انتشار بدید.
+با تشکر میموس.ای ار" ><li>آموزش بازاریابی اینترنتی</li></a>
+	 			<a href="http://barbi1.blogfa.com/" target="_blank" title="" ><li>شهر باربی</li></a>
+	 <center>	<a href="http://behnaz20.mihanblog.com/[cb:linkdaily_full_list_href]">=> All <=</a>
+</center></span>
+  
+<br><br>
+
+
+<div class="st"> Tags </div><br>
+<span dir=rtl></span>
+
+
+    
+    <div class="st"> Authors </div><br>
+	  <span dir=rtl>
+	<a href="http://behnaz20.mihanblog.com/post/author/1568956"   ><li>بهناز محمدی</li></a><br>
+</span>	  <span dir=rtl>
+	<a href="http://behnaz20.mihanblog.com/post/author/1577533"   ><li>♥❄ ♥❄ nao~chan❄ ♥❄ ♥ </li></a><br>
+</span>	  <span dir=rtl>
+	<a href="http://behnaz20.mihanblog.com/post/author/1701380"   ><li>ایلین .</li></a><br>
+</span>	  <span dir=rtl>
+	<a href="http://behnaz20.mihanblog.com/post/author/1701924"   ><li>Elçin </li></a><br>
+</span>	  	
+
+    <div class="st"> Codes </div><br>
+	<div align="center"><script type='text/javascript' src='http://www.parandehgharib.ir/1395/effects/004.swf'></script>    
+
+
+
+
+ <style>
+a:hover{
+text-shadow:0px 2px 3px;
+-moz-text-shadow:0px 2px 3px;
+-o-text-shadow:0px 2px 3px;
+-ms-text-shadow:0px 2px 3px;
+-khtml-text-shadow:0px 2px 3px;
+-webkit-text-shadow:0px 2px 3px;}
+</style>
+<div align="center"><a href="../hamiarweb.mihanblog.com/index.html" target="" title=""><img src="https://www.uplooder.net/img/image/34/108b8c04aa2458b888aa41dc83f15a65/8796457645784.png" alt="https://www.uplooder.net/img/image/34/108b8c04aa2458b888aa41dc83f15a65/8796457645784.png" class="transparent" height="47" width="167"></a></div></div>
+<br><br>
+
+</div>
+
+<div id="pages">
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="pt"><a href="http://behnaz20.mihanblog.com/post/4">fix...</a></div>
+<div class="com"><span dir=rtl>سه شنبه 9 آذر 1395 | 06:40 ب.ظ | بهناز محمدی</span>
+<a target="_self" href="javascript:newComment(4)" > نظرات(<script>setCommentCnt(4)</script>)</a> |<span dir="ltr"><script language="javascript" type="text/javascript">GetBC("4");</script>
+
+</span>
+
+</br></div>
+
+<div class="postbody" dir="rtl" style="text-align: right">
+<font size="2" color="#000" face="Tahoma"><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+<div align="center"><br></div><br><div align="center"><font size="4"><br><span style="background-color: ;"></span></font><font size="3" face="Mihan-IransansBold">کنیچیوا مینا سان!<br>اسم من بهنازه <br>بعضیا منو به اسم کریستال لایت می شناسن<br>ƈŗγşŧąℓ ℓïɠɧŧ(ɓεɧŋąẕ)<br>ارتیست و کدنویس و یه تازه اوتاکوعم<br>کپی از مطالب آزاد است<br>(کلیلک راست به دلایلی قفل شد.برای ذخیره عکس ها دکمهctrl+sرو بگیرید و وب رو ذخیره کنید.بعد برید داخل فولدر ذخیره شده عکسا رو در بیارید)<br>لوگو وب</font><font size="4"><br></font><br><img src="http://s9.picofile.com/file/8312168468/222.gif" alt="" width="203" vspace="0" hspace="0" height="203" border="0" align="bottom"><br><span style="background-color: rgb(255, 204, 255);">کد:<br></span><br><font size="4"><b><textarea style="width: 409px; height: 100px;">&lt;a href="http://behnaz20.mihanblog.com"&gt;&lt;img src="http://s9.picofile.com/file/8312168468/222.gif" alt="دنیای پونی کوچولو ها " width="200" height="200" border="0"&gt;&lt;/a&gt;</textarea></b></font></div><div align="center"><br><img src="http://s8.picofile.com/file/8319161442/rgt.png" alt="" width="440" vspace="0" hspace="0" height="248" border="0" align="bottom"><br><a href="http://behnaz20.mihanblog.com/post/category/15" target="_blank" title=""><img src="http://s9.picofile.com/file/8319161476/gt.png" alt="" width="134" vspace="0" hspace="0" height="97" border="0" align="bottom"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://behnaz20.mihanblog.com/post/category/6" target="" title=""><img src="http://s9.picofile.com/file/8319161876/Untitlehyhy_1.png" alt="" width="126" vspace="0" hspace="0" height="92" border="0" align="bottom"></a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</font></div>
+<div dir="rtl"><span style="font-size: 12px">? ??:</div>
+<br>
+<div class="pt"><a href="http://behnaz20.mihanblog.com/post/264">پناهندگی دختران گمشده0-0</a></div>
+<div class="com"><span dir=rtl>یکشنبه 28 مرداد 1397 | 01:16 ب.ظ | بهناز محمدی</span>
+<a target="_self" href="javascript:newComment(264)" > نظرات(<script>setCommentCnt(264)</script>)</a> |<span dir="ltr"><script language="javascript" type="text/javascript">GetBC("264");</script>
+
+</span>
+
+</br></div>
+
+<div class="postbody" dir="rtl" style="text-align: right">
+<font size="2" color="#000" face="Tahoma"><div align="center"><font face="Mihan-IransansBold">دوموووووو مینا ساننن...خوشگلتون برگشت</font></div><div align="center"><font face="Mihan-IransansBold">عنوان پست عجیبه الان توضیح میدم</font></div><div align="center"><font face="Mihan-IransansBold">خببب..اوتاکو ها اکثرا با انیمهsatsuriku no tenshioیا angels of deathاشنا هستن</font></div><div align="center"><font face="Mihan-IransansBold">در حال حاظر انگویینگه</font></div><div align="center"><font face="Mihan-IransansBold">بازی و مانگا داره</font></div><div align="center"><font face="Mihan-IransansBold">از سبکش خلی خوشم اومد و رفتم چن تا بازی و مانگا مثل ش پیدا کردم.و توی همشون یه چیز مشترک بود</font></div><div align="center"><font face="Mihan-IransansBold">توی همشون یه دخنر کوچولوی گمشده تنهاس که یه پسر جوون کمکش میکنه0-0</font></div><div align="center"><font face="Mihan-IransansBold">از این رو اسم"پناهندگی دختران گمشده"رو به این سبک داستاننا عطا کردم0-0</font></div><div align="center"><font face="Mihan-IransansBold">خودم خیلیییی ازشون خوشم اومد<br></font></div><div align="center"><font face="Mihan-IransansBold">چند تا از بهترین هاشونو معرفی میکنم<br></font></div><div align="center"><font face="Mihan-IransansBold"><img src="http://s8.picofile.com/file/8334936684/_anime_songs_5_utm_source_ig_share_sheet_igshid_hcgafwp7tdnn_.jpg" alt="" width="364" vspace="0" hspace="0" height="449" border="0" align="bottom"><br></font></div><div align="center"><font face="Mihan-IransansBold">angels of death/satsuriku no tenshi</font></div><div align="center"><font face="Mihan-IransansBold">بازی و مانگا و انیمه داره</font></div><div align="center"><font face="Mihan-IransansBold">هر سه تاشون عالین</font></div><div align="center"><font face="Mihan-IransansBold"><img src="http://s8.picofile.com/file/8334936884/0708a01p07.jpg" alt="" width="420" vspace="0" hspace="0" height="296" border="0" align="bottom"></font></div><div align="center"><font face="Mihan-IransansBold">Ib</font></div><div align="center"><font face="Mihan-IransansBold">یک بازی برایPC</font></div><div align="center"><font face="Mihan-IransansBold">سبکش ماجراجویی،معمایی و ترسناکه</font></div><div align="center"><font face="Mihan-IransansBold"><img class="irc_mi" src="https://download.ir/wp-content/uploads/2016/10/Mad.Father-Cover.jpg" style="margin-top: 0px;" alt="Image result for ‫دانلود بازی mad father‬‎" width="332" height="465"></font></div><div align="center"><font face="Mihan-IransansBold">mad father</font></div><div align="center"><div align="center"><font face="Mihan-IransansBold">یک بازی برایPC</font></div><div align="center"><font face="Mihan-IransansBold">سبکش ماجراجویی،معمایی و ترسناکه</font></div><div align="center"><font face="Mihan-IransansBold">یکم چندش اور ممکنه باشه</font></div><div align="center"><font face="Mihan-IransansBold"><img class="irc_mi" src="https://i.pinimg.com/originals/b1/91/c5/b191c5fed4ad607f28960a5a17d8bbdf.jpg" style="margin-top: 0px;" alt="Related image" width="337" height="242"></font></div><div align="center"><font face="Mihan-IransansBold">forest of drizzling rain</font></div><div align="center"><font face="Mihan-IransansBold">بازی و مانگا داره</font></div><div align="center"><font face="Mihan-IransansBold">مانگاکا forest of drizzling rainباangels of deathمشترکه</font></div></div> </font></div>
+<div dir="rtl"><span style="font-size: 12px">? ??:</div>
+<br>
+<div class="pt"><a href="http://behnaz20.mihanblog.com/post/262">Happy birthday dazai_san</a></div>
+<div class="com"><span dir=rtl>سه شنبه 29 خرداد 1397 | 01:14 ب.ظ | بهناز محمدی</span>
+<a target="_self" href="javascript:newComment(262)" > نظرات(<script>setCommentCnt(262)</script>)</a> |<span dir="ltr"><script language="javascript" type="text/javascript">GetBC("262");</script>
+
+</span>
+
+</br></div>
+
+<div class="postbody" dir="rtl" style="text-align: right">
+<font size="2" color="#000" face="Tahoma"><p>دازای_سان تولدتتت مبارککک<img src="https://i.pinimg.com/originals/86/32/f0/8632f077ab621820e99451334a9e7225.jpg" "=""><br>
+</p> </font></div>
+<div dir="rtl"><span style="font-size: 12px">? ??:</div>
+<br>
+<div class="pt"><a href="http://behnaz20.mihanblog.com/post/256">فقط سه روز...</a></div>
+<div class="com"><span dir=rtl>یکشنبه 13 خرداد 1397 | 04:24 ب.ظ | بهناز محمدی</span>
+<a target="_self" href="javascript:newComment(256)" > نظرات(<script>setCommentCnt(256)</script>)</a> |<span dir="ltr"><script language="javascript" type="text/javascript">GetBC("256");</script>
+
+</span>
+
+</br></div>
+
+<div class="postbody" dir="rtl" style="text-align: right">
+<font size="2" color="#000" face="Tahoma">
+
+
+
+<div align="center"><img src="http://s9.picofile.com/file/8328274450/3b829395aebe754e582709a7eb67c191.png" alt="" width="451" vspace="0" hspace="0" height="646" border="0" align="bottom"></div><div align="center"><font size="5" face="Mihan-Iransans">تنها سه روز تا اومدن ادامه ی مانگای نوراگامی</font></div><div align="center"><font size="5" face="Mihan-Iransans"><br></font></div><div align="center"><font size="5" face="Mihan-Iransans">دلم برا یاتو تنگ شده بود</font><br></div>
+
+ </font></div>
+<div dir="rtl"><span style="font-size: 12px">? ??:</div>
+<br>
+<div class="pt"><a href="http://behnaz20.mihanblog.com/post/255">my holiday starts!...</a></div>
+<div class="com"><span dir=rtl>چهارشنبه 9 خرداد 1397 | 06:30 ب.ظ | بهناز محمدی</span>
+<a target="_self" href="javascript:newComment(255)" > نظرات(<script>setCommentCnt(255)</script>)</a> |<span dir="ltr"><script language="javascript" type="text/javascript">GetBC("255");</script>
+
+</span>
+
+</br></div>
+
+<div class="postbody" dir="rtl" style="text-align: right">
+<font size="2" color="#000" face="Tahoma"><div align="center"><font size="4" face="Mihan-IransansBold">تعطیلاتم شروع شددددددددددد<br>و امتحاناتم تموم<br><img src="http://s9.picofile.com/file/8327925892/20066688_104162503590372_8746209317822136320_n.jpg" alt="" width="371" vspace="0" hspace="0" height="371" border="0" align="bottom"><br><br></font></div>
+
+
+ </font></div>
+<div dir="rtl"><span style="font-size: 12px">? ??:</div>
+<br>
+<div class="pt"><a href="http://behnaz20.mihanblog.com/post/254">عنوان در تصویر محو شده...-_-</a></div>
+<div class="com"><span dir=rtl>دوشنبه 31 اردیبهشت 1397 | 01:58 ب.ظ | بهناز محمدی</span>
+<a target="_self" href="javascript:newComment(254)" > نظرات(<script>setCommentCnt(254)</script>)</a> |<span dir="ltr"><script language="javascript" type="text/javascript">GetBC("254");</script>
+
+</span>
+
+</br></div>
+
+<div class="postbody" dir="rtl" style="text-align: right">
+<font size="2" color="#000" face="Tahoma">
+<div align="center"><font size="4" face="Mihan-IransansBold">وقتی تو خیابون می خوای برات یه چیزی بخرن0-0<br></font></div><br><div align="center"><img src="http://s8.picofile.com/file/8327027526/04ac10b292237d990c8cf6bf131d4e6f.jpeg" alt="" width="526" vspace="0" hspace="0" height="923" border="0" align="bottom"></div>
+
+
+
+
+ </font></div>
+<div dir="rtl"><span style="font-size: 12px">? ??:</div>
+<br>
+<div class="pt"><a href="http://behnaz20.mihanblog.com/post/253">help....</a></div>
+<div class="com"><span dir=rtl>دوشنبه 31 اردیبهشت 1397 | 01:44 ب.ظ | بهناز محمدی</span>
+<a target="_self" href="javascript:newComment(253)" > نظرات(<script>setCommentCnt(253)</script>)</a> |<span dir="ltr"><script language="javascript" type="text/javascript">GetBC("253");</script>
+
+</span>
+
+</br></div>
+
+<div class="postbody" dir="rtl" style="text-align: right">
+<font size="2" color="#000" face="Tahoma">
+
+<div align="center"><font size="5" face="Mihan-IransansBold"><img src="http://s8.picofile.com/file/8327027500/0c0e3aa0e77c6f479bcf932b34e21af1.jpg" alt="" width="344" vspace="0" hspace="0" height="411" border="0" align="bottom"><br>گایز ...<br>اونایی که توی کار میکس ویدیو هستید...<br>یه برنامه حرفه ای معرفی کنید برا ساخت<br></font><font size="5" face="Mihan-IransansBold">amv</font><font size="5" face="Mihan-IransansBold"><br>ممنون می شم معرفی کنید</font><br></div>
+
+
+
+ </font></div>
+<div dir="rtl"><span style="font-size: 12px">? ??:</div>
+<br>
+<div class="pt"><a href="http://behnaz20.mihanblog.com/post/252">نظرسنجی جدید</a></div>
+<div class="com"><span dir=rtl>دوشنبه 31 اردیبهشت 1397 | 01:36 ب.ظ | بهناز محمدی</span>
+<a target="_self" href="javascript:newComment(252)" > نظرات(<script>setCommentCnt(252)</script>)</a> |<span dir="ltr"><script language="javascript" type="text/javascript">GetBC("252");</script>
+
+</span>
+
+</br></div>
+
+<div class="postbody" dir="rtl" style="text-align: right">
+<font size="2" color="#000" face="Tahoma"><div align="center"><font size="5" face="Mihan-IransansBold">نظرسنجی جدید گذاشتم...<br>حتما شرکت کنید</font><br></div>
+
+
+ </font></div>
+<div dir="rtl"><span style="font-size: 12px">? ??:</div>
+<br>
+<div class="pt"><a href="http://behnaz20.mihanblog.com/post/249">happy birthday to me</a></div>
+<div class="com"><span dir=rtl>یکشنبه 30 اردیبهشت 1397 | 11:00 ب.ظ | بهناز محمدی</span>
+<a target="_self" href="javascript:newComment(249)" > نظرات(<script>setCommentCnt(249)</script>)</a> |<span dir="ltr"><script language="javascript" type="text/javascript">GetBC("249");</script>
+
+</span>
+
+</br></div>
+
+<div class="postbody" dir="rtl" style="text-align: right">
+<font size="2" color="#000" face="Tahoma"><div align="center"><img src="http://s8.picofile.com/file/8326125142/happy_birthday_orochimaru_sama_by_artemis_girl_d4dvwn9.png" alt="" width="351" vspace="0" hspace="0" height="334" border="0" align="bottom"><br><font size="4" face="Mihan-IransansBold">امروز تفلدمههههه<br>14 ساله شدممممم<br>هوووووووووورااااااا<br><img src="http://s8.picofile.com/file/8326125234/c55f7ad9913d6639a1507126c34cb25ebb165ab1_hq.gif" alt="" width="457" vspace="0" hspace="0" height="253" border="0" align="bottom"><br>همه با همممم<br>تووووولدت مبارک<br>تووووولدت مبارککککککک<br><br></font><br></div>
+
+
+ </font></div>
+<div dir="rtl"><span style="font-size: 12px">? ??:</div>
+<br>
+<div class="pt"><a href="http://behnaz20.mihanblog.com/post/250">تست بدیدددددددددددددددد</a></div>
+<div class="com"><span dir=rtl>پنجشنبه 27 اردیبهشت 1397 | 11:45 ق.ظ | بهناز محمدی</span>
+<a target="_self" href="javascript:newComment(250)" > نظرات(<script>setCommentCnt(250)</script>)</a> |<span dir="ltr"><script language="javascript" type="text/javascript">GetBC("250");</script>
+
+</span>
+
+</br></div>
+
+<div class="postbody" dir="rtl" style="text-align: right">
+<font size="2" color="#000" face="Tahoma"><div align="center"><font size="5" face="Mihan-IransansBold"><a href="http://www.quizyourfriends.com/take-quiz.php?id=1805170342024018&amp;lnk&amp;" target="_blank" title="">برای دادن تست&nbsp; اینجـــــــــا کلیک
+ کن</a><br><img src="http://s8.picofile.com/file/8326601626/IMG_20180414_093602_108.jpg" alt="" width="224" vspace="0" hspace="0" height="399" border="0" align="bottom"><img src="http://s8.picofile.com/file/8326601600/IMG_20180414_093600_884.jpg" alt="" width="224" vspace="0" hspace="0" height="399" border="0" align="bottom"></font></div>
+
+
+ </font></div>
+<div dir="rtl"><span style="font-size: 12px">? ??:</div>
+<br>
+<div class="pt"><a href="http://behnaz20.mihanblog.com/post/248">پیج اینستا</a></div>
+<div class="com"><span dir=rtl>شنبه 8 اردیبهشت 1397 | 06:32 ب.ظ | بهناز محمدی</span>
+<a target="_self" href="javascript:newComment(248)" > نظرات(<script>setCommentCnt(248)</script>)</a> |<span dir="ltr"><script language="javascript" type="text/javascript">GetBC("248");</script>
+
+</span>
+
+</br></div>
+
+<div class="postbody" dir="rtl" style="text-align: right">
+<font size="2" color="#000" face="Tahoma"><p>@behnazcrystal
+</p>
+<p>فالو فراموش نشه ها
+</p> </font></div>
+<div dir="rtl"><span style="font-size: 12px">? ??:</div>
+<br>
+<div class="pt"><a href="http://behnaz20.mihanblog.com/post/247">بازگشت مانگاکای انیمه ی نوراگامی</a></div>
+<div class="com"><span dir=rtl>شنبه 8 اردیبهشت 1397 | 03:18 ب.ظ | بهناز محمدی</span>
+<a target="_self" href="javascript:newComment(247)" > نظرات(<script>setCommentCnt(247)</script>)</a> |<span dir="ltr"><script language="javascript" type="text/javascript">GetBC("247");</script>
+
+</span>
+
+</br></div>
+
+<div class="postbody" dir="rtl" style="text-align: right">
+<font size="2" color="#000" face="Tahoma"><p>بعد از یکسال مانگاکای نوراگامی برگشت.ایشون بدلیل بیماری نتونسته مانگا رو ادامه بده.اما الان حالشون کاملن خوبه و ادامه ی مانگا از خرداد ماه منتشر می شه...
+</p>
+<p>طرفدارا نوراگامی(شامل حال خودم)این خبر رو به همتون تبریک عرض می کنم
+</p> </font></div>
+<div dir="rtl"><span style="font-size: 12px">? ??:</div>
+<br>
+<div class="pt"><a href="http://behnaz20.mihanblog.com/post/246">اطلاعیه...</a></div>
+<div class="com"><span dir=rtl>شنبه 8 اردیبهشت 1397 | 03:14 ب.ظ | بهناز محمدی</span>
+<a target="_self" href="javascript:newComment(246)" > نظرات(<script>setCommentCnt(246)</script>)</a> |<span dir="ltr"><script language="javascript" type="text/javascript">GetBC("246");</script>
+
+</span>
+
+</br></div>
+
+<div class="postbody" dir="rtl" style="text-align: right">
+<font size="2" color="#000" face="Tahoma"><p>دوستان یه سری از عکسای وبلاگ حذف شده بودن که با تلاش شبانه روزیه بنده دوباره درست شدن‌
+</p> </font></div>
+<div dir="rtl"><span style="font-size: 12px">? ??:</div>
+<br>
+<div class="pt"><a href="http://behnaz20.mihanblog.com/post/245">war...</a></div>
+<div class="com"><span dir=rtl>شنبه 18 فروردین 1397 | 05:33 ب.ظ | بهناز محمدی</span>
+<a target="_self" href="javascript:newComment(245)" > نظرات(<script>setCommentCnt(245)</script>)</a> |<span dir="ltr"><script language="javascript" type="text/javascript">GetBC("245");</script>
+
+</span>
+
+</br></div>
+
+<div class="postbody" dir="rtl" style="text-align: right">
+<font size="2" color="#000" face="Tahoma"><div align="center"><img class="irc_mi" src="https://pa1.narvii.com/6376/5a1e4c74cc77754945166616733fcb671ec641d3_hq.gif" style="margin-top: 0px;" alt="Image result for one piece gif" width="647" height="353"></div>
+
+
+ </font></div>
+<div dir="rtl"><span style="font-size: 12px">? ??:</div>
+<br>
+<div class="pt"><a href="http://behnaz20.mihanblog.com/post/244">من و خواهرم به شرح تصویر</a></div>
+<div class="com"><span dir=rtl>شنبه 18 فروردین 1397 | 05:29 ب.ظ | بهناز محمدی</span>
+<a target="_self" href="javascript:newComment(244)" > نظرات(<script>setCommentCnt(244)</script>)</a> |<span dir="ltr"><script language="javascript" type="text/javascript">GetBC("244");</script>
+
+</span>
+
+</br></div>
+
+<div class="postbody" dir="rtl" style="text-align: right">
+<font size="2" color="#000" face="Tahoma">
+<div align="center"><font size="4" face="Mihan-IransansBold">من و خواهرم به شرح تصویر...</font><br><img src="http://s8.picofile.com/file/8323856150/tumblr_nqrephnebd1r8spefo1_r1_500.gif" alt="" vspace="0" hspace="0" border="0" align="bottom"><br><br></div>
+
+
+
+
+ </font></div>
+<div dir="rtl"><span style="font-size: 12px">? ??:</div>
+<br>
+<div class="pt"><a href="http://behnaz20.mihanblog.com/post/243">هفت خان رستم...هنوز تو راه خان اولم0-0</a></div>
+<div class="com"><span dir=rtl>شنبه 18 فروردین 1397 | 05:05 ب.ظ | بهناز محمدی</span>
+<a target="_self" href="javascript:newComment(243)" > نظرات(<script>setCommentCnt(243)</script>)</a> |<span dir="ltr"><script language="javascript" type="text/javascript">GetBC("243");</script>
+
+</span>
+
+</br></div>
+
+<div class="postbody" dir="rtl" style="text-align: right">
+<font size="2" color="#000" face="Tahoma">
+
+<div align="center"><font size="4" face="Mihan-IransansBold">دوستان..آشنایان...فامیل و وابستگان<br>بنده بهناز ملقب به کریستال لایت به اطلاع می رسانم که<br>بنده شروع به دیدن انیمه ی فوقــــــــــــــ العاده ی وان پیس کردم....<br>هنوز قسمت 15 ام هستم...تا آخر تابستون تمومش می کنم<br>خلاصه همین دیگه...برام آرزو موفقیت کنید<br>و اما داستان امروزم در جمع دوستان...<br><br>من:می خوام وان پیس رو از قسمت اول ببینم0-0<br></font><br><div align="center"><font size="4" face="Mihan-IransansBold">من ـــــــــــــ</font><img src="http://s9.picofile.com/file/8323855100/giphy_002.gif" alt="" width="177" vspace="0" hspace="0" height="129" border="0" align="bottom"></div><font size="3" face="Mihan-IransansBold">دوستام :چیــــــــــــــــــی؟</font><img src="http://s8.picofile.com/file/8323855134/189f851f0555811517472d2982f6d1d2.gif" alt="" width="215" vspace="0" hspace="0" height="163" border="0" align="bottom"><br><font size="3" face="Mihan-IransansBold">یکی از بین جمع:بابا همون کارتون800قسمتیه رو می گه</font><img src="http://s9.picofile.com/file/8323855168/giphy.gif" alt="" width="167" vspace="0" hspace="0" height="86" border="0" align="bottom"><br><font size="3" face="Mihan-IransansBold">(بعد از کتک خوردن طرف توسط من0-0)<br>.<br>.<br>.<br><br></font><br><font size="3" face="Mihan-IransansBold">بازماندگان دعوا:موفق باشی...حتما تمومش می کنیــــ</font><img src="http://s9.picofile.com/file/8323856018/MMKt.gif" alt="" width="163" vspace="0" hspace="0" height="122" border="0" align="bottom"><font size="2" face="Mihan-IransansBold"><br>بنده:حالا همتون از جلو چشمم برید..دیگه هم نبینم به انیمه بگین کارتون</font><img src="http://s8.picofile.com/file/8323856050/f92.gif" alt="" width="192" vspace="0" hspace="0" height="107" border="0" align="bottom"></div>
+
+
+
+
+
+
+ </font></div>
+<div dir="rtl"><span style="font-size: 12px">? ??:</div>
+<br>
+<br>
+</div>
+
+
+<a style="visibility:hidden" href=http://vbcode.blog.ir>مبدل قالب بلاگفا به میهن بلاگ</a></body><!-- Music player by www.1abzar.com --->
+<script language="javascript" src="http://1abzaar.ir/abzar/tools/player/?pl=1&start=1&color=3FEACE"></script>
+<script>listmusic1abzar[0] = {title:"I hate you I love you",url: "http://crystallight.freeasphost.net/__nightcore_i_hate_you_i_love_yo.mp3"};</script><div style="display:none"><h2><a href="http://www.1abzar.com/abzar/music.php">&#1605;&#1608;&#1586;&#1740;&#1705; &#1662;&#1604;&#1740;&#1585;</a></h2></div>
+<!-- Music player by www.1abzar.com --->
+
+</html>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'behnaz20.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

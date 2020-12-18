@@ -1,0 +1,1817 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://anayourdumazarbaijan.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1194093*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[221]='286';commentCnt[431]='0';commentCnt[432]='0';commentCnt[433]='0';commentCnt[434]='0';commentCnt[435]='0';commentCnt[436]='0';commentCnt[437]='0';commentCnt[438]='0';commentCnt[439]='0';commentCnt[440]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[221]='0';
+mihanblogDisLikeArrCnt[221]='0';
+mihanblogLikeArrCnt[431]='0';
+mihanblogDisLikeArrCnt[431]='0';
+mihanblogLikeArrCnt[432]='0';
+mihanblogDisLikeArrCnt[432]='0';
+mihanblogLikeArrCnt[433]='0';
+mihanblogDisLikeArrCnt[433]='0';
+mihanblogLikeArrCnt[434]='0';
+mihanblogDisLikeArrCnt[434]='0';
+mihanblogLikeArrCnt[436]='0';
+mihanblogDisLikeArrCnt[436]='0';
+mihanblogLikeArrCnt[440]='0';
+mihanblogDisLikeArrCnt[440]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://anayourdumazarbaijan.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://anayourdumazarbaijan.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','306');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','دوشنبه 31 شهریور 1399');
+	
+	setStatVar('today_view','18');
+	setStatVar('yesterday_view','34');
+	
+	setStatVar('this_month_view','1440');
+	setStatVar('last_month_view','4031');
+
+	setStatVar('total_view','335260');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (15:25)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://anayourdumazarbaijan.mihanblog.com/statupdate/?data[refereruri]=http://kaleybarcity.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607774763&data[hash]=d562a25b8cc926bf0504e73bd3c1078c&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://anayourdumazarbaijan.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://anayourdumazarbaijan.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<title>آذربایجان </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="<-BlogAuthor->">
+<meta name="language" content="Farsi">
+<meta name="description" content="آذربایجان  -  - آذربایجان ">
+<meta name="keywords" content="آذربایجان ,anayourdumazarbaijan, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="آذربایجان " href="http://anayourdumazarbaijan.mihanblog.com/post/rss/" />
+<link href="http://slidethemes.ir/theme/210/style.css" type="text/css" rel="stylesheet">
+<script src="http://slidethemes.ir/theme/210/slide/jquery-1.8.3.min.js" type="text/javascript" charset="UTF-8"></script>
+<script src="http://slidethemes.ir/theme/210/slide/jquery.nivo.slider.pack.js" type="text/javascript" charset="UTF-8"></script>
+<script type="text/javascript">
+$(window).load(function() {
+	$('#slider').nivoSlider();
+});
+</script>
+
+</head>
+
+<body>
+
+<div align=center><div style="width:1000">
+
+<div class=SlideTheme>
+<div id=main-back>
+<div id=header>
+
+
+
+<!-- Slide Start -->
+
+<div id="RM-SlideBack">
+<div class="slider-wrapper style"> 
+ <div id="slider" class="nivoSlider">  
+<a href="index.html#" title="Slide Theme"><img src="http://8upload.ir/uploads/f599467.jpg" alt="" /></a>
+<a href="index.html#" title="Slide Theme"><img src="http://8upload.ir/uploads/f09044317.jpg" alt="" /></a>
+<a href="index.html#" title="Slide Theme"><img src="http://8upload.ir/uploads/f4402713.jpg" alt=""  /></a>
+<a href="index.html#" title="Slide Theme"><img src="http://8upload.ir/uploads/f206215760.jpg" alt=""  /></a>
+<a href="index.html#" title="Slide Theme"><img src="http://8upload.ir/uploads/f3725405.jpg" alt=""  /></a>
+<a href="index.html#" title="Slide Theme"><img src="http://8upload.ir/uploads/f14706449.jpg" alt=""  /></a>
+ </div></div></div>
+
+<!-- Slide End -->
+
+
+
+<div class=back-menu></div>
+<div class=top-menu2>
+<a href="index.html">صفحه اصلی</a> |
+<a href="javascript:messageForm()">تماس با من </a> |
+<a href="mailto:">ایمیل مدیر</a> |
+<a href="http://www.slidetheme.ir" target="_blank" >قالب وبلاگ</a> |
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/rss/" target="_blank" >Feed</a>
+</div>
+
+<div class=top-BlogTitle></div>
+<div class=top-menu><div class=BlogTitle>آذربایجان </div><div class=Description></div></div>
+<div style="display:none"><h1><a href="index.html">آذربایجان </a></h1></div>
+</div>
+
+<div id="RM-Back1"></div>
+
+<div class=Sid>
+<div id=Sidebar> 
+
+<div class=TopSid><div class=TopSid2>			
+<b>درباره وبلاگ</b></div></div>
+<div class=CenterSid><div class=li-Sid2>  <p align="center">
+<img src="../static.mihanblog.com/public/user_data/web_photo/399/1194093.jpg@1901"  /><br>آذربایجان <br />
+تاریخ آذربایجان  و تبریز <br />
+<br />
+<br />
+<br />
+<br />
+</p></div></div>
+<div class=LowSid></div>
+
+
+<div class="TopSid"><div class=TopSid2>نویسندگان</div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/author/1028591">آترو   306 </a></div></div>
+<div class=LowSid></div>
+
+
+
+
+		
+
+
+<div class=TopSid>
+<div class=TopSid2>
+<b>موضوعات</b></div></div>			
+<div class=CenterSid><div class=li-Sid>				
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/category/9">مجاهد آذربایجان  6 </a></div><div class=li-Sid>				
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/category/8">ایران زمین  6 </a></div><div class=li-Sid>				
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/category/7">تبریز  57 </a></div><div class=li-Sid>				
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/category/6">صمد بهرنگی  2 </a></div><div class=li-Sid>				
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/category/5">آذربایجان  47 </a></div><div class=li-Sid>				
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/category/3">تبریز شهر اولین ها  7 </a></div><div class=li-Sid>				
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/category/2">تاریخییمیز  85 </a></div><div class=li-Sid>				
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/category/1">آذربایجان بایاتیلاری  137 </a></div></div>			
+<div class=LowSid></div>
+
+
+﻿<div class="TopSid"><div class=TopSid2>ویژه اسلایدتم</div></div>
+<div class=CenterSid>
+<div class=li-Sid><a title="قالب وبلاگ" href="http://www.slidetheme.ir/">قالب وبلاگ</a></div>
+<div class=li-Sid>﻿<a href="http://p30designer.ir/" title="وب پی سی دیزاین" target="_blank">وب پی سی دیزاین</a> | ﻿<a href="http://teenstars.ir/" title="وب ستاره های نوجوان" target="_blank">وب ستاره های نوجوان</a></div>
+<div class=li-Sid>﻿<a href="http://sibtheme.com/" title="وب قالب وبلاگ" target="_blank">وب قالب وبلاگ</a></div>
+<div class=li-Sid>﻿<a href="http://persian3da.ir/" title="وب پرشین صدا" target="_blank">وب پرشین صدا</a></div>
+﻿<a href="http://akoweb.ir"><img border="0" src="index.html"></a><div class=li-Sid><a target="_blank" href="https://pichak.net/crop/">قالب وبلاگ</a>
+</div>
+<div class=li-Sid><a target="_blank" href="https://sinadaro.com/">داروخانه آنلاین سینا</a>
+</div>
+<div class=li-Sid><a target="_blank" rel="nofollow" href="http://radgostarnovin.pcn.ir/">دستگاه تصفیه آب خانگی</a></div>
+<div class=li-Sid><a target="_blank" href="https://artanteb.com/low-libido/">درمان سرد مزاجی زنان</a>
+</div>
+
+</div>
+<div class=LowSid></div>
+
+<BlogLinksBlock>
+<div class=TopSid><div class=TopSid2>
+<b>لینک دوستان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://aryanearth2577.mihanblog.com">آریان زمین</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../mihanamiranzamin.mihanblog.com/index.html">میهنم ایران زمین</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../tabrizlinks.mihanblog.com/index.html">قارتال</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://tabrizebidar.ir/">تبریز بیدار</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://tabrizeno.ir/">امید تبریز</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../zanjan2rism.mihanblog.com/index.html">زنجان توریسم</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.shanbeghazan.ir/">محله شنب غازان</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://azadazarbaycan.arzublog.com/">جانیم آذربایجان</a></div><div class=li-Sid><a title="قالب وبلاگ اسلایدشو فروهر" href="http://slidetheme.ir/view/210.php">قالب وبلاگ فروهر</a></div>
+<div class=li-Sid><a href="http://slidetheme.ir">قالب میهن بلاگ</a></div>
+</div>
+<div class=LowSid></div>
+</BlogLinksBlock>
+
+
+
+
+<div class=TopSid><div class=TopSid2>
+<b>ابر برچسب ها</b></div></div>
+<div class=CenterSid><center>
+				<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D8%A7%D9%88%D8%B2%D9%88%D9%86+%D8%AD%D8%B3%D9%86+%D8%A2%D9%82+%D9%82%D9%88%DB%8C%D9%88%D9%86%D9%84%D9%88" style="font-size:1.5em">
+		اوزون حسن آق قویونلو</a> 				<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D8%B1%D8%AC%D8%A8+%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85%DB%8C+%DA%A9%D9%88%D8%B1%D8%A7%D8%A8%D8%A7%D8%B2%D9%84%DB%8C" style="font-size:2em">
+		رجب ابراهیمی کورابازلی</a> 				<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D9%85%D8%AC%D8%A7%D9%87%D8%AF" style="font-size:1.5em">
+		مجاهد</a> 				<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D8%AD%D8%B2%D8%A8+%D8%AF%D9%85%D9%88%DA%A9%D8%B1%D8%A7%D8%AA" style="font-size:1em">
+		حزب دموکرات</a> 				<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D9%81%D8%B1%D9%82%D9%87+%D8%AF%D9%85%D9%88%DA%A9%D8%B1%D8%A7%D8%AA" style="font-size:1em">
+		فرقه دموکرات</a> 				<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D9%85%D8%A7%D9%87%D9%86%DB%8C+%D9%84%D8%B1%DB%8C" style="font-size:2em">
+		ماهنی لری</a> 				<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D9%85%D8%AD%D9%85%D8%AF%D8%AD%D8%B3%DB%8C%D9%86+%D8%B4%D9%87%D8%B1%DB%8C%D8%A7%D8%B1" style="font-size:1em">
+		محمدحسین شهریار</a> 				<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2+%D8%A7%D8%B2+%D9%86%DA%AF%D8%A7%D9%87+%D8%AC%D9%87%D8%A7%D9%86%DA%AF%D8%B1%D8%AF%D8%A7%D9%86" style="font-size:2em">
+		تبریز از نگاه جهانگردان</a> 				<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D8%AE%D8%A7%D8%B7%D8%B1%D8%A7%D8%AA+%D8%B3%D9%88%D8%AF%D8%A7%DA%AF%D8%B1+%D9%88%D9%86%DB%8C%D8%B2%DB%8C" style="font-size:1.5em">
+		خاطرات سوداگر ونیزی</a> 				<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D8%B4%D9%87%D8%B1%DB%8C%D8%A7%D8%B1" style="font-size:1em">
+		شهریار</a> </div>
+</center><div class=LowSid></div>
+
+
+
+<div class=TopSid><div class=TopSid2>
+<b>پیوندهای روزانه</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="https://www.kalakia.ir/product/apple-iphone-11-pro-max-a2220-dual-sim-256gb-mobile-phone/" title="پیشنهاد ویژه ی خرید گوشی آیفون 11 پرومکس در کیا کالا!">گوشی آیفون 11 پرو مکس 256 گیگابایت</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://yon.ir/AA8ez" title="سلام. ممنونم که پرچم وبلاگ نویسی رو بالا نگه داشتید :)
+
+سایت نویسور راه اندازی شده تا پست های شما بیشتر خونده بشن،.
+
+باید اعلام کنم که بعد از دوماه فعالیت 1000 تایی شدیم.
+
+دعوت میکنم تشریف بیارید به لینک زیر و فصل نو ی وبلاگ نویسی تون رو شروع کنید.
+yon.ir/AA8ez
+
+منتظر پست هاتون در نویسور هستیم :)">ــ وبـلاگ نویسی بهـترــ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://yon.ir/AA8ez" title="سلام. ممنونم که پرچم وبلاگ نویسی رو بالا نگه داشتید :)
+
+سایت نویسور راه اندازی شده تا پست های شما بیشتر خونده بشن، اپ موبایلمون هم تو راهه.
+
+دعوت میکنم تشریف بیارید به لینک زیر و فصل نو ی وبلاگ نویسی تون رو شروع کنید.
+yon.ir/AA8ez
+
+لطفا این لینک را هم تایید کنید. متشکرم">ــ وبـلاگ نویسی بهـترــ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://senfit.ir" title="تبادل لینک">اطلاعات اصناف ایران</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://7themes.ir" title="با سلام....
+ 
+خواهان تبادل لینک با وبلاگ زیبای شما هستیم.در صورت تمایل لینک رو تایید و اطلاع بدید.
+
+سون تم - مرجع تخصصی قالب وردپرس">قالب وردپرس</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://senfit.ir" title="تبادل لینک">اطلاعات اصناف ایران</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://7themes.ir" title="با سلام....
+ 
+خواهان تبادل لینک با وبلاگ زیبای شما هستیم.در صورت تمایل لینک رو تایید و اطلاع بدید.
+
+سون تم - مرجع تخصصی قالب وردپرس">قالب وردپرس</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="https://www.flynic.ir/register" title="ثبت و تمدید دامنه ir">ثبت دامنه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.hamrahna.com" title="با سلام....
+ 
+خبرگزاری همراه برای تکمیل کادر فنی خود نویسنده فعال جذب میکند
+برای اطلاعات بیشتر به لینک زیر بروید
+hamrahna.ir/estekhdam
+
+این لینک را هم جهت نمایش لطفا تایید کنید">خبرگزاری همراه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../kaleybarcity.mihanblog.com/index.html" title="">کلبیر سیتی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://otlargroup.ir/" title="">گروه رقص آذری اوتلار</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.azeridance.com/" title="">سایت جامع رقص آذربایجان</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://blogers.ir" title="">وبلاگ نویسان</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../www.chatgap2gap.mihanblog.com/index.html" title="با عرض سلام و خسته نباشید خدمت شما
+
+وبلاگ قشنگ و پر محتوایی دارید ممنون میشم با تایید لینک من در وب خود با من همکاری کنید 
+
+از وبت واقعآ خوشم اومد یه سر هم به وب من بزن منتظرت هستم عزیز دلم 
+
+
+راستی تایید زدی برو اینجا وبتو ثبت کن
+
+http://p3link.rozblog.com/
+
+منتظرما
+
+
+[گل]
+-----------------------------">چت روم</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.farsfunny.ir/" title="">نمکستان</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.alexa.com/" title="">alexa</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.parstools.com/" title="">پاس تولز</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://up-is.ir/mp3.php" title="">آپلود سنتر آسمان ایران</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ytarh.ir" title="">گروه طراحی چت روم</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://drmrbigdeli.blogfa.com" title="">دكتر محمد رضا بیگدلی ضیغمی</a></div><div class=li-Sid><a href="http://slidetheme.ir">قالب وبلاگ</a></div>
+</div>
+<div class=LowSid></div>
+
+<script src="http://slidetheme.ir/img/fall.php" type="text/javascript" charset="UTF-8"></script>
+
+</div>
+</div>
+
+<div class=main>
+
+<div class=post>
+
+<div id="RM-Back2"></div>
+
+
+
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://anayourdumazarbaijan.mihanblog.com/posts">به وبلاگ آنا یوردوم آذربایجان خوش 
+آمدید</a></div></div>
+</div>
+<div class=C-post><div class=CenterPost>
+<p align=center><span dir="ltr"><a title="تصاویر زیباسازی" href="http://zibasaz.net" target="_blank"><img border="0" alt="فونت زیبا ساز" src="http://8upload.ir/uploads/f150444403.jpg" /></a></span><span dir="ltr"><a title="تصاویر زیباسازی" href="http://zibasaz.net" target="_blank"><img border="0" alt="فونت زیبا ساز" src="http://8upload.ir/uploads/f407019720.jpg" /></a></span><span dir="ltr"><a title="تصاویر زیباسازی" href="http://zibasaz.net" target="_blank"><img border="0" alt="فونت زیبا ساز" src="http://8upload.ir/uploads/f150444403.jpg" /></a></span><span dir="ltr"><a title="تصاویر زیباسازی" href="http://zibasaz.net" target="_blank"><img border="0" alt="فونت زیبا ساز" src="http://8upload.ir/uploads/f4401876.jpeg" /></a></span><span dir="ltr"><a title="تصاویر زیباسازی" href="http://zibasaz.net" target="_blank"><img border="0" alt="فونت زیبا ساز" src="http://8upload.ir/uploads/f24281086.jpg" /></a></span><span dir="ltr"><a title="تصاویر زیباسازی" href="http://zibasaz.net" target="_blank"><img border="0" alt="فونت زیبا ساز" src="http://8upload.ir/uploads/f049184731.jpg" /></a></span><span dir="ltr"><a title="تصاویر زیباسازی" href="http://zibasaz.net" target="_blank"><img border="0" alt="بیر غمسرای محنت ایمیش تختگاه جم 
+هپ اسكی اویقوسوندا دورور كشور عجم
+دورو برینده پارلار ایكن نور انقلاب
+آچماز گؤزون گؤزونده طلوع قیلسا آفتاب
+مظلوع عجم یانار اوره گیم غملی حالینا
+من آغلارام سن آغلاماییرسان زوالینا
+بیر انگلیس اسیریسن ای اسكی مملكت 
+غملی سكوتو نا ده گؤروم وارمی بیر جهت؟
+ایرانلی لار، قالیرسا اسكی صفا تینیز 
+بیر انقلاب الینده دی قطعی نجاتینیز
+" src="index.html" /></a></span></p>
+</div></div>
+
+<div class=LowPost><div class=Comment>لطفا از تمام مطالب دیدن فرمایید.</div></div>
+<div id="aj"><h2>﻿<a href="http://themesfa.ir/" title="وب تمزفا" target="_blank">وب تمزفا</a></h2> - ﻿<a href="http://aroosia.ir/" title="وب عروسی ها" target="_blank">وب عروسی ها</a></div>
+<script type="text/javascript">document.getElementById('a'+'j').style.display='none';</script>
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://anayourdumazarbaijan.mihanblog.com/post/221">گوزل آذربایجان </a></div></div>
+</div>
+<div style="display:none"><h2><a href="http://anayourdumazarbaijan.mihanblog.com/post/221">گوزل آذربایجان </a></h2></div>
+<div class=C-post><div class=CenterPost><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><font class="Apple-style-span" color="#330000" size="6"><span class="Apple-style-span" style="font-size: 21px; line-height: 25px;"><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: tahoma, sans-serif; line-height: 18px; font-size: 12px; "><p style="text-align: center; margin: 15px 0px; padding: 0px; border-width: 0px; border-style: initial; border-color: initial;"><br></p><p style="text-align: center; margin: 15px 0px; padding: 0px; border-width: 0px; border-style: initial; border-color: initial;"><br></p><p class="MsoNormal"><span lang="AR-SA" dir="RTL"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><span lang="AR-SA" dir="RTL">ستار خانام حسن اوغلویام<o:p></o:p></span></p><p class="MsoNormal"><span lang="AR-SA" dir="RTL">بؤیوك انقلابین جوان اوغلویام <o:p></o:p></span></p><p class="MsoNormal"><span lang="AR-SA" dir="RTL">ساریلدیم سلاحا جانیمدان كیچدیم<o:p></o:p></span></p><p class="MsoNormal"><span lang="AR-SA" dir="RTL">انقلاب جامی نین شربتین ایچدیم<o:p></o:p></span></p><p class="MsoNormal"><span lang="AR-SA" dir="RTL">یئتدی – سكیز ایگیت یولداش دا تاپدیم<o:p></o:p></span></p><p class="MsoNormal"><span lang="AR-SA" dir="RTL">كهر آتی مینیب سنگره چاپدیم<o:p></o:p></span></p><p class="MsoNormal"><span lang="AR-SA" dir="RTL">اردولار داغیدیب فوج لار ییخدیم<o:p></o:p></span></p><p class="MsoNormal"><span lang="AR-SA" dir="RTL">تبریزی او باشدان بوباشا چیخدیم<o:p></o:p></span></p><p class="MsoNormal"><span lang="AR-SA" dir="RTL">امیرخیز خیابان لیلاوا سرخاب<o:p></o:p></span></p><p class="MsoNormal"><span lang="AR-SA" dir="RTL">ششكلان مارالان دوه چی اهراب<o:p></o:p></span></p><p class="MsoNormal"><span lang="AR-SA" dir="RTL">حسن خانین اوغلو ستارخان دئییر<o:p></o:p></span></p><p style="text-align: right; margin: 15px 0px; padding: 0px; border: 0px;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span lang="AR-SA" dir="RTL" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA">ضربیمی، شستیمی، تعریف ائیله ییر</span></p><p style="text-align: center; margin: 15px 0px; padding: 0px; border-width: 0px; border-style: initial; border-color: initial;"><br></p><p style="text-align: center; margin: 15px 0px; padding: 0px; border-width: 0px; border-style: initial; border-color: initial;"><br></p><p style="text-align: center; margin: 15px 0px; padding: 0px; border-width: 0px; border-style: initial; border-color: initial;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://8upload.ir/uploads/f1318334.jpeg" alt=""></p></span></span></font></div><p style="font-family: sans-serif;"><br></p><p class="MsoNormal" dir="RTL" style="background-position: initial initial; background-repeat: initial initial;"><span dir="LTR" style="font-family: Tahoma, sans-serif; color: rgb(192, 0, 0);"><font size="4"><o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="background-position: initial initial; background-repeat: initial initial;"><span dir="LTR" style="font-family: Tahoma, sans-serif;"><font size="4"><o:p></o:p></font></span></p><div><p class="MsoNormal" dir="RTL" style="font-family: &quot;Times New Roman&quot;, serif; color: rgb(153, 51, 153);"><font size="4">&nbsp;</font><span style="font-family: tahoma;">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="FA" dir="RTL">بیر
+غمسرای مخنت ایمیش تختگاه جم<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="FA" dir="RTL">هپ اسكی
+اویقوسوندا دورور كشور عجم<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="FA" dir="RTL">دورو
+برینده پارلار ایكن نور انقلاب<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="FA" dir="RTL">آچماز
+گؤزون گؤزونده طلوع قیلسا آفتاب<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="FA" dir="RTL">مظلوم عجم
+یانار اوره گیم غملی حالینا<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="FA" dir="RTL">من
+آغلارام سن آغللاماییرسان زوالینا<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="FA" dir="RTL">بیر
+انگلیس اسیریسن ای اسكی مملكت<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="FA" dir="RTL">غملی
+سكوتونا ده گؤروم وارمی بیر جهت؟<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="FA" dir="RTL">ایرانلی
+لار، قالیرسا گر اسكی صفاتینیز<o:p></o:p></span></p>
+
+<span lang="FA" dir="RTL" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:FA">بیر انقلاب&nbsp;
+الینده دی قطعی نجاتینیز</span></div><div><font face="Times New Roman"><span style="font-size: 16px;"><br></span></font></div><div><font face="Times New Roman"><span style="font-size: 16px;"><br></span></font></div><div><font face="Times New Roman"><span style="font-size: 16px;"><br></span></font></div><div><font face="Times New Roman"><span style="font-size: 16px;"><br></span></font><p class="MsoNormal" dir="RTL" style="font-family: &quot;Times New Roman&quot;, serif; color: rgb(153, 51, 153);"><font size="4"><br></font></p><p class="MsoNormal" dir="RTL" style="font-family: &quot;Times New Roman&quot;, serif; color: rgb(153, 51, 153);"><img hspace="0" border="0" align="baseline" vspace="0" src="http://8upload.ir/uploads/f99906305.jpeg" alt=""></p><p class="MsoNormal" dir="RTL" style="font-family: &quot;Times New Roman&quot;, serif; color: rgb(153, 51, 153);"><img hspace="0" border="0" align="baseline" vspace="0" src="http://8upload.ir/uploads/f3680454.jpeg" alt=""></p></div><div><p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: right; direction: ltr; unicode-bidi: embed;" align="right"><br></p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : پنجشنبه 2 خرداد 1392  | 08:30 ق.ظ  | نویسنده : <a href="http://anayourdumazarbaijan.mihanblog.com/post/author/1028591">آترو  </a> | <a target="_self" href="javascript:newComment(221)">نظرات  <script>setCommentCnt(221)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://anayourdumazarbaijan.mihanblog.com/post/440">شعر شهریار </a></div></div>
+</div>
+<div style="display:none"><h2><a href="http://anayourdumazarbaijan.mihanblog.com/post/440">شعر شهریار </a></h2></div>
+<div class=C-post><div class=CenterPost>کسی نیست در این گوشه فراموشتراز من
+وز گوشه نشینان تو خاموشتر از من
+هرکس به خیالیست هم آغوش و کسی نیست
+ای گل به خیال تو آغوشتر از من
+می نوشد از آن لعل شفقگون همه آفاق
+اما که در این میکده غم نوشتر از من
+افتاده جهانی همه مدهوش تو لیکن
+افتاده تر از من نه و مدهوشتر از من
+بی ماه رخ تو شب من هست سیه پوش 
+اما شب من هم نه سیه پوشتر از من
+گفتی تو نه گوشی که سخن گویمت از عشق
+ای نادره گفتار کجا گوشتراز من
+بیژن تر از آنم که بچاهم کنی ای ترک
+خونم بفشان کیست سیاوشتر از من
+با لعل تو گفتم که علاجم لب نوش است
+بشکفت که یارب چه لبی نوشتر از من
+آخر چه گلابی است به از اشک من ای گل
+دیگی نه در این بادیه پرجوشتر از من
+
+شهریار<br>
+	<br><br>
+			طبقه بندی: <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/1">
+			آذربایجان بایاتیلاری</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : دوشنبه 31 شهریور 1399  | 08:29 ق.ظ  | نویسنده : <a href="http://anayourdumazarbaijan.mihanblog.com/post/author/1028591">آترو  </a> | <a target="_self" href="javascript:newComment(440)">نظرات  <script>setCommentCnt(440)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://anayourdumazarbaijan.mihanblog.com/post/439">۲۷ شهریور سالروز درگذشت محمدحسین شهریار شاعر آذربایجان </a></div></div>
+</div>
+<div style="display:none"><h2><a href="http://anayourdumazarbaijan.mihanblog.com/post/439">۲۷ شهریور سالروز درگذشت محمدحسین شهریار شاعر آذربایجان </a></h2></div>
+<div class=C-post><div class=CenterPost>ایندی یایا قیش دئییرم
+سابق قیشا، یای دئمیشم
+گاه توییوی یاده سالیب
+من ده لی، نای نای دئمیشم
+سونرا گئنه یاسه باتیب
+آغلارهای های های دئمیشم
+عمره سورن من قره گون
+آخ دئمیشم، وای دئمیشم<br>
+	<br><br>
+			طبقه بندی: <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/1">
+			آذربایجان بایاتیلاری</a>، <br>										برچسب ها:
+													<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D9%85%D8%AD%D9%85%D8%AF%D8%AD%D8%B3%DB%8C%D9%86%20%D8%B4%D9%87%D8%B1%DB%8C%D8%A7%D8%B1" >محمدحسین شهریار</a>، 
+													<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D8%B4%D9%87%D8%B1%DB%8C%D8%A7%D8%B1" >شهریار</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : پنجشنبه 27 شهریور 1399  | 08:31 ق.ظ  | نویسنده : <a href="http://anayourdumazarbaijan.mihanblog.com/post/author/1028591">آترو  </a> | <a target="_self" href="javascript:newComment(439)">نظرات  <script>setCommentCnt(439)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://anayourdumazarbaijan.mihanblog.com/post/438">شعر شهریار</a></div></div>
+</div>
+<div style="display:none"><h2><a href="http://anayourdumazarbaijan.mihanblog.com/post/438">شعر شهریار</a></h2></div>
+<div class=C-post><div class=CenterPost>خبرت هست که دیگر خبر از خویشم نیست؟
+خبرت نیست که آخر خبر از عشقم هست؟
+دلرباتر زحمت در دمنی گل ندمید
+دلگشاتر ز لبت در چمنی غنچه نبست
+شهریارا دگر از بخت چه خواهی که برند
+خوبرویان غزل نغز تو را دست به دست
+
+شهریار<br>
+	<br><br>
+			طبقه بندی: <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/1">
+			آذربایجان بایاتیلاری</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : سه شنبه 25 شهریور 1399  | 07:53 ق.ظ  | نویسنده : <a href="http://anayourdumazarbaijan.mihanblog.com/post/author/1028591">آترو  </a> | <a target="_self" href="javascript:newComment(438)">نظرات  <script>setCommentCnt(438)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://anayourdumazarbaijan.mihanblog.com/post/437">شعر شهریار</a></div></div>
+</div>
+<div style="display:none"><h2><a href="http://anayourdumazarbaijan.mihanblog.com/post/437">شعر شهریار</a></h2></div>
+<div class=C-post><div class=CenterPost>گر ز هجر تو کمر راست کنم بار دگر
+غیر بار غم عشقت نکشم بار دگر
+پیرو قافله عشقم و در جذبه شوق
+نیست این قافله را قافله سالار دگر
+دل دیوانه کشد در غمت ای سلسله مو
+هم زمانم به سر کوچه و بازار دگر
+یوسف دل به کلافی نخرد زاال فلک
+می برم یوسف خود را به خریدار دگر
+با که نالیم که هر لحظه فلک انگیزد
+پی آزار دل زار دل آزار دگر
+به شب هجر تو در خلوت غوغایی دل
+نپذیرم به جز از یاد رخت یاد دگر
+باش تا روی ترا سیر ببینم که اجل
+به قیامت دهدم وعده دیوار دگر
+
+شهریار<br>
+	<br><br>
+			طبقه بندی: <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/1">
+			آذربایجان بایاتیلاری</a>، <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/5">
+			آذربایجان</a>، <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/7">
+			تبریز</a>، <br>										برچسب ها:
+													<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D8%B4%D9%87%D8%B1%DB%8C%D8%A7%D8%B1" >شهریار</a>، 
+													<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D9%85%D8%AD%D9%85%D8%AF%D8%AD%D8%B3%DB%8C%D9%86%20%D8%B4%D9%87%D8%B1%DB%8C%D8%A7%D8%B1" >محمدحسین شهریار</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : جمعه 21 شهریور 1399  | 04:02 ب.ظ  | نویسنده : <a href="http://anayourdumazarbaijan.mihanblog.com/post/author/1028591">آترو  </a> | <a target="_self" href="javascript:newComment(437)">نظرات  <script>setCommentCnt(437)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://anayourdumazarbaijan.mihanblog.com/post/436">حزب دموکرات</a></div></div>
+</div>
+<div style="display:none"><h2><a href="http://anayourdumazarbaijan.mihanblog.com/post/436">حزب دموکرات</a></h2></div>
+<div class=C-post><div class=CenterPost>افکار و عقاید حزب دموکرات برگرفته از افکار سیاسی حزب سوسیال دموکرات قفقاز بود. سید جلیل اردبیلی، سید حسن تقی‌زاده، ابراهیم حکیمی، محمدتقی بهار، حسینقلی خان نواب، سلیمان‌میرزا اسکندری، وحید الملک، و سید محمدرضا مساوات و شیخ محمد خیابانی رؤسای حزب دموکرات بودند.
+مرام حزب دموکرات:
+	1	انفکاک کامل قوای سیاسی از روحانیون.
+	2	ایجاد نظام اجباری.
+	3	تقسیم املاک بین رعایا.
+	4	قانون منع احتکار و تعلیم اجباری و بانک فلاحتی.
+	5	ترجیح مالیات مستقیم بر غیرمستقیم.
+	6	مخالفت با مجلس اعیان (مجلس سنا) بود.
+حزب دموکرات مورد هجوم علما و گروه انبوهی از رعایا و توده قرار گرفت اما موفق شدند در مجلس فراکسیونی ۲۸ نفری به وجود آورند.
+حزب دموکرات چند روزنامه به نام «روزنامه ایران نو» در تهران «روزنامه شفق» در تبریز «روزنامه نوبهار» در خراسان منتشر می‌ساخت و مخالفین خود را به نام محافظه کار، ارتجاعی و آخوند و سرمایه دار و اشراف و اعیان به باد انتقاد می‌گرفت. اما برنامه حزب دموکرات با مخالفت ائتلافی از محافظه کاران به رهبری بهبهانی و روحانیون دیگر، اشراف زمیندار، سران عشایر و حتی بعضی از تاجران و اصناف مواجه شد. انتخابات مجلس دوم مشروطه انجام شد و احزاب جدیدی پا گرفتند از جمله حزب دموکرات که برنامه کار سوسیال دموکراتیک داشت و حزب اعتدالیون که محافظه کار به‌شمار می‌رفت.
+برنامه رادیکال حزب دموکرات برای ایجاد دگرگونیهای اجتماعی شامل تصویب علنی تفکیک دین از دولت، کاهش اقتدار محلی بعضی از سران عشایر و نیز تعریف جدیدی از ملیت بود که فراتر از وابستگیهای مذهبی و قومی بود.
+طبق نظر ملک‌زاده، حزب دموکرات که برنامه سوسیال دموکراتیک داشت، به دلیل ترس از واکنش منفی مردم عنوان دموکرات را به جای سوسیال دموکرات برای خود انتخاب کرد. بیشتر دموکراتهای مجلس به عنوان منتقدان علنی حکومت در مشروطه اول شهرت داشتند.<br>
+	<br><br>
+			طبقه بندی: <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/5">
+			آذربایجان</a>، <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/7">
+			تبریز</a>، <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/9">
+			مجاهد آذربایجان</a>، <br>										برچسب ها:
+													<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D9%81%D8%B1%D9%82%D9%87%20%D8%AF%D9%85%D9%88%DA%A9%D8%B1%D8%A7%D8%AA" >فرقه دموکرات</a>، 
+													<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D8%AD%D8%B2%D8%A8%20%D8%AF%D9%85%D9%88%DA%A9%D8%B1%D8%A7%D8%AA" >حزب دموکرات</a>، 
+													<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D8%AD%D8%B2%D8%A8%20%D8%B3%D9%88%D8%B3%DB%8C%D8%A7%D9%84%20%D8%AF%D9%85%D9%88%DA%A9%D8%B1%D8%A7%D8%AA" >حزب سوسیال دموکرات</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : پنجشنبه 30 مرداد 1399  | 07:34 ق.ظ  | نویسنده : <a href="http://anayourdumazarbaijan.mihanblog.com/post/author/1028591">آترو  </a> | <a target="_self" href="javascript:newComment(436)">نظرات  <script>setCommentCnt(436)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://anayourdumazarbaijan.mihanblog.com/post/435">حزب دموکرات </a></div></div>
+</div>
+<div style="display:none"><h2><a href="http://anayourdumazarbaijan.mihanblog.com/post/435">حزب دموکرات </a></h2></div>
+<div class=C-post><div class=CenterPost>فرقه دموکرات از احزاب سیاسی دوره مشروطهٔ ایران بود که به دست مشروطه‌خواهان تأسیس شد.[] این حزب توسط بازماندگان مشروطه خواه در جریان انتخابات مجلس دوم مشروطه تأسیس شد. در جریان این انتخابات احزاب جدید دیگری نیز پا گرفتند. حزب دموکرات برنامه کار سوسیال دموکراتی داشت و در مقابل حزب اعتدالیون که محافظه کار به‌شمار می‌رفت قرار داشت.
+فرقه دموکرات
+رهبر
+سلیمان اسکندری[]
+رهبر پارلمانی
+سید حسن تقی‌زاده[]
+دبیر اجرایی
+حیدرخان عمواوغلی[]
+بنیان‌گذاری
+۱۲۸۸
+انحلال و برچینش
+۱۲۹۸
+پیشین
+فرقه اجتماعیون عامیون
+مقرها
+تهران، ایران]
+روزنامه
+ایران نو
+نوبهار
+ایران
+زبان آزاد
+مرام سیاسی
+سوسیال دموکراس
+بنیاد ستیزی سیاسی
+ترقی‌خواهی
+ملی‌گرایی ایرانی
+سکولاریسم
+پادشاهی مشروطه
+
+زمینه قومی نمایندگان در انتخابات آن‌ها تأثیر داشت. همه دموکراتها بجز یک نفر، از مناطق شمال، شمال غربی یا شمال شرقی بودند.
+حسینقلی نواب که لیبرال و تحصیل کرده اروپا و عضو وابسته سفارت لندن بود، عضو کمیته ملی انقلاب و نماینده مجلس اول نیز بود. بعد از کودتای ۱۹۰۸ (۱۲۸۷) نواب به صورت مشروطه خواه برجسته‌ای در تهران قد علم کرد.
+شاهزاده سلیمان‌میرزا اسکندری نوه فتحعلیشاه نیز عضو کمیته ملی انقلاب و سر دبیر نشریه حقوق بود. او یکی از رادیکالترین دموکراتها به حساب می‌آمد و در تابستان ۱۹۱۰ (۱۲۸۹) رهبر حزب در مجلس شد.
+وحید الملک شیبانی همکار نزدیک حسن تقی‌زاده، در کمبریج در نزد براون در رشته تاریخ و ادبیات انگلیس تحصیل کرده بود. شیبانی بعد از کودتای ۱۹۰۸ (۱۲۸۷) سلسله مقاله‌هایی در تایمز لندن نوشت. او و سلیمان‌میرزا اسکندری دو نفر از بهترین خطیبان مجلس بودند و بارها مانع اوجگیری قدرت اعتدالیون شدند.
+محمدرضا مساوات نیز عضو کمیته ملی انقلاب و سردبیر نشریه مساوات بود که یکی از روزنامه‌های مهم رادیکال در مشروطه اول به‌شمار می‌آمد.
+ابراهیم حکیمی حکیم الملک طبیب مخصوص مظفرالدین شاه، حامی هنر بود و بعداً مدرسه نقاشی کمال الملک و موزه صنایع زیبا را تأسیس کرد که پیشگام در تربیت انواع هنرمندان در رشته‌های مختلف شدند.
+حزب دموکرات چندین عضو برجسته مذهبی نیز داشت. هر چند که در برنامه حزبی تفکیک دین از دولت تأیید شده بود. احمد قزوینی از علمای مشروطه خواه نجف که در جنگ تبریز شرکت کرده بود، شیخ ابراهیم زنجانی که پسر یکی از روحانیون برجسته بود، اما خودش فراماسون محسوب می‌شد و عضو مجلس اول هم شده بود؛ زنجانی در محکمه ویژه‌ای که شیخ فضل‌الله نوری را محکوم کرد، مدعی العموم بود.
+شیخ محمد خیابانی که بیشتر به نفع دموکراتها رأی می‌داد، عضو انجمن تبریز بود. او روحانی خوشنام و از خطبای نیرومند آذربایجان بود که در زمان جنگ داخلی به صفوف رزمندگان مجاهدین پیوسته بود و می‌گفتند که عضو فرقه اجتماعیون عامیون است. یک دهه بعد او رهبر نهضت ملی در آذربایجان شد که قیام خیابانی نام گرفت.
+برخی از اعضای حزب دموکرات بعداً حزب سوسیالیست و حزب تجدد را تشکیل دادند.[]
+<br>
+	<br><br>
+			طبقه بندی: <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/5">
+			آذربایجان</a>، <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/7">
+			تبریز</a>، <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/9">
+			مجاهد آذربایجان</a>، <br>										برچسب ها:
+													<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D8%AD%D8%B2%D8%A8%20%D8%AF%D9%85%D9%88%DA%A9%D8%B1%D8%A7%D8%AA" >حزب دموکرات</a>، 
+													<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D9%81%D8%B1%D9%82%D9%87%20%D8%AF%D9%85%D9%88%DA%A9%D8%B1%D8%A7%D8%AA" >فرقه دموکرات</a>، 
+													<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D8%B3%D9%88%D8%B3%DB%8C%D8%A7%D9%84%20%D8%AF%D9%85%D9%88%DA%A9%D8%B1%D8%A7%D8%AA" >سوسیال دموکرات</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : چهارشنبه 22 مرداد 1399  | 08:44 ق.ظ  | نویسنده : <a href="http://anayourdumazarbaijan.mihanblog.com/post/author/1028591">آترو  </a> | <a target="_self" href="javascript:newComment(435)">نظرات  <script>setCommentCnt(435)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://anayourdumazarbaijan.mihanblog.com/post/434">مجاهدان قفقازی</a></div></div>
+</div>
+<div style="display:none"><h2><a href="http://anayourdumazarbaijan.mihanblog.com/post/434">مجاهدان قفقازی</a></h2></div>
+<div class=C-post><div class=CenterPost>ایستادگی در برابر روس ها و دفاع از تبریز برای مان چندان هم مشکل نیست. اگر می دانستم که جنگ ما با قشون روس به نفع انقلاب است و دشمنان داخلی از آن بهره برداری نخواهند کرد، با آنها می جنگیدیم.  رفقا !  هم رزمان عزیز ! جنگیدن در شرایط فعلی بی فایده است و بی گمان سران ضد انقلاب از آن به نفع خود استفاده خواهند کرد. از این رو شرایطی پیش آمده که مجبور شده ایم تبریز را که در میدان انقلاب پیروز شده، دستی دستی به دست قشون روس بسپاریم. اما این از ارزش پیروزی ما نمی کاهد. ما هرگز خدمات رفقای قفقازی را نسبت به انقلاب و مخصوصا یاری های کارگران باکو را فراموش نخواهیم کرد. رفقای قفقازی سلام مرا به کارگران باکو و تفلیس برسانید! ما انقلاب ایران ، فرزند انقلاب سال پنجم ( ۱۹۰۵ ) روسیه را بزرگ خواهیم کرد شما از قول من به آنها بگویید که ستار هرگز به انقلاب خیانت نکرده و نمی کند و همچنان در راه خود استوار و پابرجاست! 
+نطق کوتاه ، اما از دل برآمده ستارخان تاثیر عمیقی بر حاضران گذاشت. و من نیز به ملاحظه ضیق  وقت پاسخ سردار را به کوتاهی دادم:
+ما با خاطراتی فراموش نشدنی را ترک می گوییم و قول می دهیم که این خاطرات را ، به ویژه تاثیراتی را که از قهرمانی های سردار برداشته ایم، بین تمام کارگران قفقاز منتشر سازیم. بدون این هم کارگران قفقاز و مخصوصا کارگران باکو در وجود جناب سردار نسبت به انقلاب ایران محبت بی پایان ابراز می دارند. علاقه برداری ما و آنهایی که ما را  برای پیوستن به جرگه مبارزان زیر پرچم جناب سردار فرستاده اند، با دهقانان و تنگدستان ایران برای همیشه ادامه خواهد یافت و ما ستارخان، نابغه اردوی انقلاب و محبوب تمام تنگدستان ایران را تا دنیای انقلاب پابرجاست، فراموش نخواهیم کرد<br>
+	<br><br>
+			طبقه بندی: <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/5">
+			آذربایجان</a>، <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/7">
+			تبریز</a>، <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/9">
+			مجاهد آذربایجان</a>، <br>										برچسب ها:
+													<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D9%82%D9%81%D9%82%D8%A7%D8%B2" >قفقاز</a>، 
+													<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D9%85%D8%AC%D8%A7%D9%87%D8%AF" >مجاهد</a>، 
+													<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D9%85%D8%AC%D8%A7%D9%87%D8%AF%D8%A7%D9%86" >مجاهدان</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : جمعه 17 مرداد 1399  | 06:51 ب.ظ  | نویسنده : <a href="http://anayourdumazarbaijan.mihanblog.com/post/author/1028591">آترو  </a> | <a target="_self" href="javascript:newComment(434)">نظرات  <script>setCommentCnt(434)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://anayourdumazarbaijan.mihanblog.com/post/433">مجاهدان قفقازی</a></div></div>
+</div>
+<div style="display:none"><h2><a href="http://anayourdumazarbaijan.mihanblog.com/post/433">مجاهدان قفقازی</a></h2></div>
+<div class=C-post><div class=CenterPost>سوسیال - دموکرات های قفقاز و مخصوصا کارگرانی از باکو آمده بودند دوش به دوش برادران ایرانی برای دفع هجوم سواران قره داغ و نجات انقلاب تبریز جان بازی می کردند. 
+کارگران باکو با زندگی مردم محلی به خوبی آشنایی داشتند. آنها می توانستند برای همکاری و همیاری با مجاهدان محلی شرایط خوبی فراهم آورند. فشار اصلی جنگ های اخیر بر روی ستارخان و سوسیال - دموکرات گرد آمده در اطراف او بود.
+سوسیال - دموکرات ایران از فعالیت های آنها به شایستگی قدردانی می کنند؛ چون که مؤسس حزب اجتماعیون ایران ، نریمان نریمانوف از رهبران جنبش کارگری باکو است . صدها کارگر قفقازی جان خود را در راه پیروزی انقلاب ایران فدا کرده اند.<br>
+	<br><br>
+			طبقه بندی: <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/5">
+			آذربایجان</a>، <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/7">
+			تبریز</a>، <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/9">
+			مجاهد آذربایجان</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : پنجشنبه 16 مرداد 1399  | 08:20 ق.ظ  | نویسنده : <a href="http://anayourdumazarbaijan.mihanblog.com/post/author/1028591">آترو  </a> | <a target="_self" href="javascript:newComment(433)">نظرات  <script>setCommentCnt(433)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://anayourdumazarbaijan.mihanblog.com/post/432">مجاهدان قفقازی</a></div></div>
+</div>
+<div style="display:none"><h2><a href="http://anayourdumazarbaijan.mihanblog.com/post/432">مجاهدان قفقازی</a></h2></div>
+<div class=C-post><div class=CenterPost>یکی از ایرادهای وارد بر آن ، عمده کردن نقش مجاهدان قفقازی در جنبش تبریز است. واقعیت این است که اکثریت  قریب به اتفاق مجاهدان معروف شده به قفقازی، ایرانی و ایرانی تبار بوده اند. داستان نقش و سهم مجاهدان قفقازی در جنبش مشروطه ایران ارزش آن را دارد که خود موضوع رساله مستقلی باشد نقل جملاتی از کسروی می تواند چند و چون مشارکت آنان را تا حدودی روشن سازد: 
+ایرانیان در قفقاز بسیار می بودند. گذشته از بازرگانان و پیشه وران گروه انبوهی  کارگر در کان های نفت باکو کار می کردند و  رنج و خواری بسیار روز می گزاردند... چون آگاهی از جنبش مشروطه و برپا گردیدن دارالشوری به ایشان رسید، بیش از دیگران شاد گردیدند و به یاد خانه و خویشان خود افتاده، به بازگشتن امیدمند شدند... کسانی از اینان ( برای پاسداری از حقوق خویش سازمانی پدید آورده بودند ) و اینان در نهان با کوشندگان تبریز پیوستگی می داشتند. پس از مشروطه اینان چون مردان آزموده و آگاهی می بودند ، و نیک می دانستند که مشروطه ایران ، که آرامش و آسانی گرفته شده ، به آرامش و آسانی پیش نخواهد رفت، و ناگزیر به کوشش هایی نیاز خواهد افتاد، به این شدند که با همشهریان خود همدستی نمایند و فرستادگانی به شهرها فرستادند و .... اینانند که به نام مجاهدان قفقازی شناخته شدند؛ چون از قفقاز آمده و خود رخت قفقازی به تن کردند ، به آن نام خوانده گردیدند، و گرنه از خود ایرانیان می بودند.
+
+آمدن اینان به دلیری آزادی خواهان افزود، و چون مردان آزموده و دیده بازی می بودند، در هر کاری پیشگام می شدند و راه به دیگران می نمودند و کسانی از اینان به سخنگویی نیز می پرداختند و به آگاهانیدن مردم می کوشیدند. یک دسته از بی باکی اینان رمیدند و ... آنان رابیدین خوانده، بیزاری نمودند، لیکن انبوه آزادی خواهان به آنان ارج گزاردند و از آمدنشان خشنودی نمودند.
+به پیروی از اینان  بود که علی مسیو و همدستان او  دسته مجاهدان ( و مرکز غیبی را که رهبریت آنان و نبض جنبش را به دست داشت ) پدید آوردند و همان دستورنامه  ( نظام نامه ) ایشان بود که به فارسی ترجمه کرده و به دست مجاهدان دادند....
+گذشته از ایرانیان خود قفقازیان ( نیز ) از دلسوزی و یاوری باز نمی ایستادند ....<br>
+	<br><br>
+			طبقه بندی: <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/5">
+			آذربایجان</a>، <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/7">
+			تبریز</a>، <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/9">
+			مجاهد آذربایجان</a>، <br>										برچسب ها:
+													<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D9%85%D8%AC%D8%A7%D9%87%D8%AF" >مجاهد</a>، 
+													<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D9%82%D9%81%D9%82%D8%A7%D8%B2%DB%8C" >قفقازی</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : سه شنبه 14 مرداد 1399  | 08:01 ق.ظ  | نویسنده : <a href="http://anayourdumazarbaijan.mihanblog.com/post/author/1028591">آترو  </a> | <a target="_self" href="javascript:newComment(432)">نظرات  <script>setCommentCnt(432)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://anayourdumazarbaijan.mihanblog.com/post/431">متن تركی</a></div></div>
+</div>
+<div style="display:none"><h2><a href="http://anayourdumazarbaijan.mihanblog.com/post/431">متن تركی</a></h2></div>
+<div class=C-post><div class=CenterPost><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL">ساقیا مجلسه دورائتدیر او پیمانه لری<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL">روشن ائت شمع و شرابیله بو كاشانه لری<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL">زاهداگشت سنین اولسون هامی غلمان و ملك<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL">دنگ قیلما منی، آز سؤیله بو افسانه لری<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL">وورما ال سریمه، بخش ائتدی بیزیم طالعیمیز<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL">روز ازل سنه مسجد، منه میخانه لری<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL">من گؤرن ماهوشین دانه خالین گؤرسن<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL">یاندیرارسان بیلیرم سجه صد دانه لری<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL">زیر عكس بزرگ آندرانیك پاشا چنین نوشته بودند:<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL">دست خون آلودت را از سر ارامنه تبریز كوتاه كن!<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL">لعنت بر تو و بر اربابانت!<o:p></o:p></span></p><br>
+	<br><br>
+			طبقه بندی: <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/9">
+			مجاهد آذربایجان</a>، <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/5">
+			آذربایجان</a>، <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/7">
+			تبریز</a>، <a href="http://anayourdumazarbaijan.mihanblog.com/post/category/1">
+			آذربایجان بایاتیلاری</a>، <br>										برچسب ها:
+													<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D8%B4%D8%B9%D8%B1%20%D8%AA%D8%B1%D9%83%DB%8C" >شعر تركی</a>، 
+													<a href="http://anayourdumazarbaijan.mihanblog.com/post/tag/%D8%B4%D8%B9%D8%B1%20%D8%AD%D9%85%D8%A7%D8%B3%D9%87" >شعر حماسه</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : یکشنبه 12 مرداد 1399  | 08:11 ق.ظ  | نویسنده : <a href="http://anayourdumazarbaijan.mihanblog.com/post/author/1028591">آترو  </a> | <a target="_self" href="javascript:newComment(431)">نظرات  <script>setCommentCnt(431)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+
+
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://anayourdumazarbaijan.mihanblog.com/posts">مطالب اخیر</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+<img src="http://slidetheme.ir/img/li.png">  <a href="http://anayourdumazarbaijan.mihanblog.com/post/440">شعر شهریار </a> <br>
+<img src="http://slidetheme.ir/img/li.png">  <a href="http://anayourdumazarbaijan.mihanblog.com/post/439">۲۷ شهریور سالروز درگذشت محمدحسین شهریار شاعر آذربایجان </a> <br>
+<img src="http://slidetheme.ir/img/li.png">  <a href="http://anayourdumazarbaijan.mihanblog.com/post/438">شعر شهریار</a> <br>
+<img src="http://slidetheme.ir/img/li.png">  <a href="http://anayourdumazarbaijan.mihanblog.com/post/437">شعر شهریار</a> <br>
+<img src="http://slidetheme.ir/img/li.png">  <a href="http://anayourdumazarbaijan.mihanblog.com/post/436">حزب دموکرات</a> <br>
+<img src="http://slidetheme.ir/img/li.png">  <a href="http://anayourdumazarbaijan.mihanblog.com/post/435">حزب دموکرات </a> <br>
+<img src="http://slidetheme.ir/img/li.png">  <a href="http://anayourdumazarbaijan.mihanblog.com/post/434">مجاهدان قفقازی</a> <br>
+<img src="http://slidetheme.ir/img/li.png">  <a href="http://anayourdumazarbaijan.mihanblog.com/post/433">مجاهدان قفقازی</a> <br>
+<img src="http://slidetheme.ir/img/li.png">  <a href="http://anayourdumazarbaijan.mihanblog.com/post/432">مجاهدان قفقازی</a> <br>
+<img src="http://slidetheme.ir/img/li.png">  <a href="http://anayourdumazarbaijan.mihanblog.com/post/431">متن تركی</a> <br>
+</div></div>
+
+<div class=LowPost><div class=Comment>لطفا از دیگر مطالب نیز دیدن فرمایید</div></div>
+
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://anayourdumazarbaijan.mihanblog.com/post">صفحات</a></div></div>
+</div>
+<div class=C-post><div class=CenterPost>
+<style>.pging {    direction:rtl;    font-size:1.2em;    height:30px;    margin:40px 0 0;    color:#000000;    padding-bottom: 20px;    text-align: center;}
+.pging a:link, .pging a:visited {border:1px solid #000000;    display:inline-block;    margin:0 3px;    padding:1px 5px;    text-decoration:none;}
+.pging a:hover, .pging a:active {    color:#000000;}.pging a.current:link, .pging a.current:visited {    background-color:#000000;    border:1px solid #000000;    color:red;    cursor:text;}</style>
+<center>
+ <div class=pging><font face="Tahoma" style="font-size: 9pt">
+			تعداد کل صفحات : 31 ::     			<a href="http://anayourdumazarbaijan.mihanblog.com/page/1">
+			<font color="#000000"><b>1</b></font></a>  			<a href="http://anayourdumazarbaijan.mihanblog.com/page/2">
+			<font color="#000000"><span>2</span></font></a>  			<a href="http://anayourdumazarbaijan.mihanblog.com/page/3">
+			<font color="#000000"><span>3</span></font></a>  			<a href="http://anayourdumazarbaijan.mihanblog.com/page/4">
+			<font color="#000000"><span>4</span></font></a>  			<a href="http://anayourdumazarbaijan.mihanblog.com/page/5">
+			<font color="#000000"><span>5</span></font></a>  			<a href="http://anayourdumazarbaijan.mihanblog.com/page/6">
+			<font color="#000000"><span>6</span></font></a>  			<a href="http://anayourdumazarbaijan.mihanblog.com/page/7">
+			<font color="#000000"><span>7</span></font></a>  			<a href="http://anayourdumazarbaijan.mihanblog.com/page/8">
+			<font color="#000000"><i>...</i></font></a>  </font></div></center>
+</div></div>
+<div class=LowPost><div class=Comment>لطفا از دیگر صفحات نیز دیدن فرمایید</div></div>
+<div class=C-post><center><b><font size="1">.:</font></b>	<a href="http://SlideTheme.ir" target="_blank"> 
+	Weblog Themes By <b>SlideTheme </b></a><b><font size="1">:.</font></b>
+</center>
+</div></div>
+
+
+<div class=Sid>
+<div id=Sidebar>
+
+<div class=TopSid><div class=TopSid2>
+<b>آرشیو مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1399/6"> شهریور 1399 ، 4 </a></div><div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1399/5"> مرداد 1399 ، 6 </a></div><div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1399/4"> تیر 1399 ، 2 </a></div><div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1399/3"> خرداد 1399 ، 1 </a></div><div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1399/2"> اردیبهشت 1399 ، 4 </a></div><div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1396/12"> اسفند 1396 ، 1 </a></div><div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1396/11"> بهمن 1396 ، 2 </a></div><div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1396/10"> دی 1396 ، 3 </a></div><div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1396/9"> آذر 1396 ، 3 </a></div><div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1396/8"> آبان 1396 ، 2 </a></div><div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1395/12"> اسفند 1395 ، 1 </a></div><div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1395/9"> آذر 1395 ، 3 </a></div><div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1395/8"> آبان 1395 ، 2 </a></div><div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1395/4"> تیر 1395 ، 1 </a></div><div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1395/2"> اردیبهشت 1395 ، 2 </a></div><div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1395/1"> فروردین 1395 ، 2 </a></div><div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1394/12"> اسفند 1394 ، 2 </a></div><div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1394/10"> دی 1394 ، 4 </a></div><div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1394/9"> آذر 1394 ، 3 </a></div><div class=li-Sid>
+<a href="http://anayourdumazarbaijan.mihanblog.com/post/archive/1394/8"> آبان 1394 ، 3 </a></div></div>
+<div class=LowSid></div>
+
+
+<div class="TopSid"><div class=TopSid2>جستجو</div></div>
+<div class=CenterSid>
+<center><form style="width:140px;font-size:9pt;font-family:Tahoma;text-align:center;border:1px dotted #bbbbbb;padding:5px;direction:rtl" target="_new" method=get action=http://www.google.com/search><a target="_blank" href="http://pichak.net/blogcod/google/"><img border=0 src="http://www.pichak.net/blogcod/google/g.gif"></a><input name=q size=12 style="border:1px solid #999999;background:#efefef;font-family:Tahoma"><br><br><input type="submit" name="btnG" value="جستجو" style="font-family:Tahoma"><br><input value="http://anayourdumazarbaijan.mihanblog.com" type=radio name=sitesearch checked>در این وبلاگ<br><input type=radio name=sitesearch value="">در كل اینترنت<input type=hidden name=ie value=UTF-8><input type=hidden name=oe value=UTF-8></form></center></div>
+<div class=LowSid></div>
+
+
+
+
+
+
+
+<div class="TopSid"><div class=TopSid2>حامیان اسلایدتم</div></div>
+<div class=CenterSid>
+<div class=li-Sid>﻿<a href="http://melodydownload.ir/" title="وب ملودی دانلود" target="_blank">وب ملودی دانلود</a></div>
+<div class=li-Sid>﻿<a href="http://maanavi.ir/" title="وب معنوی" target="_blank">وب معنوی</a></div>
+<div class=li-Sid>﻿<a href="http://weblogihaa.ir/" title="وب وبلاگی ها" target="_blank">وب وبلاگی ها</a></div>
+﻿<a href="http://2023.ir"><img border="0" src="index.html"></a><div class=li-Sid><a target="_blank" href="https://pichak.net/crop/">قالب وبلاگ جدید</a>
+</div><div class=li-Sid><a href="http://saleslinks.ir/" title="خرید لینک دائمی" target="_blank">خرید لینک دائمی</a></div>
+<div class=li-Sid><a href="http://mohemnews.ir">سانسور خبری</a>
+</div>
+<div class=li-Sid><a target="_blank" href="http://www.iranhafez.com/%D9%81%D8%A7%D9%84-%D8%AA%D8%A7%D8%B1%D9%88%D8%AA-%DA%86%D9%87%D8%A7%D8%B1-%DA%A9%D8%A7%D8%B1%D8%AA%DB%8C/">فال</a>
+</div>
+<div class=li-Sid><a href="http://www.backlinksfa.com/buy-backlinks/">بک لینک رایگان چیست</a>
+</div>
+<div class=li-Sid>﻿<a class="Link" href="http://bazicheh.ir/roozaneh/?m=11" title="فال روزانه بهمن" target="_blank">فال روزانه بهمن</a></div>
+<div class=li-Sid><a href="http://backlinksfa.ir/" title="خرید رپورتاژ آگهی ارزان قیمت" target="_blank">خرید رپورتاژ آگهی ارزان قیمت</a> | <a href="http://saleslinks.ir/" title="sales Reproduction" target="_blank">sales Reproduction</a></div>
+<div class=li-Sid><a href="http://www.backlinksfa.com/" title="فروش تبلیغ متنی" target="_blank">فروش تبلیغ متنی</a> | <a href="http://backlinksfa.ir/" title="خرید بک لینک" target="_blank">خرید بک لینک</a></div>
+﻿<a title="وب مقاله فقط کاکاپو" href="http://kakapo.ir"><img border="0" src="http://pichak.net/upload/repimg/i.png"></a>﻿<a title="وب ری شاپ" href="http://reyshop.ir"><img border="0" src="http://pichak.net/upload/repimg/i.png"></a>﻿<a title="وب دنیای اس ام اس" href="http://sms0.ir"><img border="0" src="http://pichak.net/upload/repimg/i.png"></a>﻿<a href="http://sistandl.ir"><img border="0" src="http://blackskin.ir/i.png"></a>﻿<a title="وب اخبار" href="http://khabar.pichak.net"><img border="0" src="http://pichak.net/upload/repimg/i.png"></a>﻿<a href="http://buylink.ir"><img border="0" src="http://iranskin.com/i.png"></a>﻿<a title="وب کانون زبان انگلیسی" href="http://kanoonqom.ir"><img border="0" src="http://blackskin.ir/i.png"></a>﻿<a href="http://cscilam.ir/"><img border="0" src="http://slidetheme.ir/ads/i.png"></a>﻿<a href="http://dldb.ir"><img border="0" src="http://slidetheme.ir/ads/i.png"></a>﻿<a href="http://papomarket.ir"><img border="0" src="http://iranskin.com/i.png"></a></div>
+<div class=LowSid></div>
+
+
+
+
+
+<div class=TopSid><div class=TopSid2>
+<b>آمار سایت</b></div></div>
+<div class=CenterSid>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right></div>
+<div class=LowSid></div>	
+
+
+
+<div class="TopSid"><div class=TopSid2>امکانات وب</div></div>
+<div class=CenterSid>
+<div class=About>
+<div style="text-align:center">
+
+<a href="http://8upload.ir/viewer.php?file=f12270991.jpg"><img src="http://8upload.ir/uploads/f12270991_thumb.jpg" border="0" alt="f12270991.jpg" title="f12270991.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f04714791.jpg"><img src="http://8upload.ir/uploads/f04714791_thumb.jpg" border="0" alt="f04714791.jpg" title="f04714791.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f646158.jpg"><img src="http://8upload.ir/uploads/f646158_thumb.jpg" border="0" alt="f646158.jpg" title="f646158.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f650068444.jpeg"><img src="http://8upload.ir/uploads/f650068444_thumb.jpeg" border="0" alt="f650068444.jpeg" title="f650068444.jpeg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f92854419.jpg"><img src="http://8upload.ir/uploads/f92854419_thumb.jpg" border="0" alt="f92854419.jpg" title="f92854419.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f9956307.jpg"><img src="http://8upload.ir/uploads/f9956307_thumb.jpg" border="0" alt="f9956307.jpg" title="f9956307.jpg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f876825417.jpg"><img src="http://8upload.ir/uploads/f876825417_thumb.jpg" border="0" alt="f876825417.jpg" title="f876825417.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f14283738.jpg"><img src="http://8upload.ir/uploads/f14283738_thumb.jpg" border="0" alt="f14283738.jpg" title="f14283738.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f18816971.jpg"><img src="http://8upload.ir/uploads/f18816971_thumb.jpg" border="0" alt="f18816971.jpg" title="f18816971.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f5191387.jpg"><img src="http://8upload.ir/uploads/f5191387_thumb.jpg" border="0" alt="f5191387.jpg" title="f5191387.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f4174830.jpg"><img src="http://8upload.ir/uploads/f4174830_thumb.jpg" border="0" alt="f4174830.jpg" title="f4174830.jpg" /></a>
+<a href="http://8upload.ir/viewer.php?file=f983828929.jpg"><img src="http://8upload.ir/uploads/f983828929_thumb.jpg" border="0" alt="f983828929.jpg" title="f983828929.jpg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f4174830.jpg"><img src="http://8upload.ir/uploads/f4174830_thumb.jpg" border="0" alt="f4174830.jpg" title="f4174830.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f82565057.jpeg"><img src="http://8upload.ir/uploads/f82565057_thumb.jpeg" border="0" alt="f82565057.jpeg" title="f82565057.jpeg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f650068444.jpeg"><img src="http://8upload.ir/uploads/f650068444_thumb.jpeg" border="0" alt="f650068444.jpeg" title="f650068444.jpeg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f4930817.jpg"><img src="http://8upload.ir/uploads/f4930817_thumb.jpg" border="0" alt="f4930817.jpg" title="f4930817.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f08846026.jpg"><img src="http://8upload.ir/uploads/f08846026_thumb.jpg" border="0" alt="f08846026.jpg" title="f08846026.jpg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f90048803.jpg"><img src="http://8upload.ir/uploads/f90048803_thumb.jpg" border="0" alt="f90048803.jpg" title="f90048803.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f9431599.jpg"><img src="http://8upload.ir/uploads/f9431599_thumb.jpg" border="0" alt="f9431599.jpg" title="f9431599.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f27318720.jpg"><img src="http://8upload.ir/uploads/f27318720_thumb.jpg" border="0" alt="f27318720.jpg" title="f27318720.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f36181229.jpg"><img src="http://8upload.ir/uploads/f36181229_thumb.jpg" border="0" alt="f36181229.jpg" title="f36181229.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f754743976.jpg"><img src="http://8upload.ir/uploads/f754743976_thumb.jpg" border="0" alt="f754743976.jpg" title="f754743976.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f03613185.jpg"><img src="http://8upload.ir/uploads/f03613185_thumb.jpg" border="0" alt="f03613185.jpg" title="f03613185.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f410925035.jpg"><img src="http://8upload.ir/uploads/f410925035_thumb.jpg" border="0" alt="f410925035.jpg" title="f410925035.jpg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f36267929.jpg"><img src="http://8upload.ir/uploads/f36267929_thumb.jpg" border="0" alt="f36267929.jpg" title="f36267929.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f475507.jpg"><img src="http://8upload.ir/uploads/f475507_thumb.jpg" border="0" alt="f475507.jpg" title="f475507.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f078382758.jpg"><img src="http://8upload.ir/uploads/f078382758_thumb.jpg" border="0" alt="f078382758.jpg" title="f078382758.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f065102150.jpg"><img src="http://8upload.ir/uploads/f065102150_thumb.jpg" border="0" alt="f065102150.jpg" title="f065102150.jpg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f072038614.jpg"><img src="http://8upload.ir/uploads/f072038614_thumb.jpg" border="0" alt="f072038614.jpg" title="f072038614.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f61115848.jpg"><img src="http://8upload.ir/uploads/f61115848_thumb.jpg" border="0" alt="f61115848.jpg" title="f61115848.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f52554659.jpg"><img src="http://8upload.ir/uploads/f52554659_thumb.jpg" border="0" alt="f52554659.jpg" title="f52554659.jpg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f52445833.jpg"><img src="http://8upload.ir/uploads/f52445833_thumb.jpg" border="0" alt="f52445833.jpg" title="f52445833.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f190734.jpg"><img src="http://8upload.ir/uploads/f190734_thumb.jpg" border="0" alt="f190734.jpg" title="f190734.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f111213443.jpg"><img src="http://8upload.ir/uploads/f111213443_thumb.jpg" border="0" alt="f111213443.jpg" title="f111213443.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f746604555.jpg"><img src="http://8upload.ir/uploads/f746604555_thumb.jpg" border="0" alt="f746604555.jpg" title="f746604555.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f11055269.jpeg"><img src="http://8upload.ir/uploads/f11055269_thumb.jpeg" border="0" alt="f11055269.jpeg" title="f11055269.jpeg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f824559140.jpeg"><img src="http://8upload.ir/uploads/f824559140_thumb.jpeg" border="0" alt="f824559140.jpeg" title="f824559140.jpeg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f824559140.jpeg"><img src="http://8upload.ir/uploads/f824559140_thumb.jpeg" border="0" alt="f824559140.jpeg" title="f824559140.jpeg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f54555071.jpeg"><img src="http://8upload.ir/uploads/f54555071_thumb.jpeg" border="0" alt="f54555071.jpeg" title="f54555071.jpeg" /></a>
+<a href="http://8upload.ir/viewer.php?file=f455524410.jpeg"><img src="http://8upload.ir/uploads/f455524410_thumb.jpeg" border="0" alt="f455524410.jpeg" title="f455524410.jpeg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f92000379.jpeg"><img src="http://8upload.ir/uploads/f92000379_thumb.jpeg" border="0" alt="f92000379.jpeg" title="f92000379.jpeg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f693343297.jpeg"><img src="http://8upload.ir/uploads/f693343297_thumb.jpeg" border="0" alt="f693343297.jpeg" title="f693343297.jpeg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f567785118.jpg"><img src="http://8upload.ir/uploads/f567785118_thumb.jpg" border="0" alt="f567785118.jpg" title="f567785118.jpg" /></a>
+<a href="http://8upload.ir/viewer.php?file=f45524023.jpg"><img src="http://8upload.ir/uploads/f45524023_thumb.jpg" border="0" alt="f45524023.jpg" title="f45524023.jpg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f51865575.jpg"><img src="http://8upload.ir/uploads/f51865575_thumb.jpg" border="0" alt="f51865575.jpg" title="f51865575.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f18095015.jpg"><img src="http://8upload.ir/uploads/f18095015_thumb.jpg" border="0" alt="f18095015.jpg" title="f18095015.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f029790461.jpg"><img src="http://8upload.ir/uploads/f029790461_thumb.jpg" border="0" alt="f029790461.jpg" title="f029790461.jpg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f496220158.jpg"><img src="http://8upload.ir/uploads/f496220158_thumb.jpg" border="0" alt="f496220158.jpg" title="f496220158.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f971172369.jpg"><img src="http://8upload.ir/uploads/f971172369_thumb.jpg" border="0" alt="f971172369.jpg" title="f971172369.jpg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f13465879.jpg"><img src="http://8upload.ir/uploads/f13465879_thumb.jpg" border="0" alt="f13465879.jpg" title="f13465879.jpg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f34924553.jpeg"><img src="http://8upload.ir/uploads/f34924553_thumb.jpeg" border="0" alt="f34924553.jpeg" title="f34924553.jpeg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f04564072.jpeg"><img src="http://8upload.ir/uploads/f04564072_thumb.jpeg" border="0" alt="f04564072.jpeg" title="f04564072.jpeg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f32149851.png"><img src="http://8upload.ir/uploads/f32149851_thumb.png" border="0" alt="f32149851.png" title="f32149851.png" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f62347714.jpeg"><img src="http://8upload.ir/uploads/f62347714_thumb.jpeg" border="0" alt="f62347714.jpeg" title="f62347714.jpeg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f86321548.jpeg"><img src="http://8upload.ir/uploads/f86321548_thumb.jpeg" border="0" alt="f86321548.jpeg" title="f86321548.jpeg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f503999405.jpeg"><img src="http://8upload.ir/uploads/f503999405_thumb.jpeg" border="0" alt="f503999405.jpeg" title="f503999405.jpeg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f671657859.jpeg"><img src="http://8upload.ir/uploads/f671657859_thumb.jpeg" border="0" alt="f671657859.jpeg" title="f671657859.jpeg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f627082750.jpeg"><img src="http://8upload.ir/uploads/f627082750_thumb.jpeg" border="0" alt="f627082750.jpeg" title="f627082750.jpeg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f04728958.jpeg"><img src="http://8upload.ir/uploads/f04728958_thumb.jpeg" border="0" alt="f04728958.jpeg" title="f04728958.jpeg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f303855009.jpeg"><img src="http://8upload.ir/uploads/f303855009_thumb.jpeg" border="0" alt="f303855009.jpeg" title="f303855009.jpeg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f949157738.jpg"><img src="http://8upload.ir/uploads/f949157738_thumb.jpg" border="0" alt="f949157738.jpg" title="f949157738.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f24281086.jpg"><img src="http://8upload.ir/uploads/f24281086_thumb.jpg" border="0" alt="f24281086.jpg" title="f24281086.jpg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f821177485.jpeg"><img src="http://8upload.ir/uploads/f821177485_thumb.jpeg" border="0" alt="f821177485.jpeg" title="f821177485.jpeg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f939436830.jpg"><img src="http://8upload.ir/uploads/f939436830_thumb.jpg" border="0" alt="f939436830.jpg" title="f939436830.jpg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f15800327.jpg"><img src="http://8upload.ir/uploads/f15800327_thumb.jpg" border="0" alt="f15800327.jpg" title="f15800327.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f61108581.jpg"><img src="http://8upload.ir/uploads/f61108581_thumb.jpg" border="0" alt="f61108581.jpg" title="f61108581.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f250092068.jpg"><img src="http://8upload.ir/uploads/f250092068_thumb.jpg" border="0" alt="f250092068.jpg" title="f250092068.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f55008590.jpg"><img src="http://8upload.ir/uploads/f55008590_thumb.jpg" border="0" alt="f55008590.jpg" title="f55008590.jpg" /></a>
+<a href="http://8upload.ir/viewer.php?file=f58156065.jpg"><img src="http://8upload.ir/uploads/f58156065_thumb.jpg" border="0" alt="f58156065.jpg" title="f58156065.jpg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f5144740.jpg"><img src="http://8upload.ir/uploads/f5144740_thumb.jpg" border="0" alt="f5144740.jpg" title="f5144740.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f23709829.jpg"><img src="http://8upload.ir/uploads/f23709829_thumb.jpg" border="0" alt="f23709829.jpg" title="f23709829.jpg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f023877654.jpg"><img src="http://8upload.ir/uploads/f023877654_thumb.jpg" border="0" alt="f023877654.jpg" title="f023877654.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f831677767.jpg"><img src="http://8upload.ir/uploads/f831677767_thumb.jpg" border="0" alt="f831677767.jpg" title="f831677767.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f797907656.jpg"><img src="http://8upload.ir/uploads/f797907656_thumb.jpg" border="0" alt="f797907656.jpg" title="f797907656.jpg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f87636236.jpg"><img src="http://8upload.ir/uploads/f87636236_thumb.jpg" border="0" alt="f87636236.jpg" title="f87636236.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f9890823.jpg"><img src="http://8upload.ir/uploads/f9890823_thumb.jpg" border="0" alt="f9890823.jpg" title="f9890823.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f00823844.jpg"><img src="http://8upload.ir/uploads/f00823844_thumb.jpg" border="0" alt="f00823844.jpg" title="f00823844.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f97706029.jpeg"><img src="http://8upload.ir/uploads/f97706029_thumb.jpeg" border="0" alt="f97706029.jpeg" title="f97706029.jpeg" /></a>
+<a href="http://8upload.ir/viewer.php?file=f667695163.jpeg"><img src="http://8upload.ir/uploads/f667695163_thumb.jpeg" border="0" alt="f667695163.jpeg" title="f667695163.jpeg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f3987274.jpeg"><img src="http://8upload.ir/uploads/f3987274_thumb.jpeg" border="0" alt="f3987274.jpeg" title="f3987274.jpeg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f834772027.jpeg"><img src="http://8upload.ir/uploads/f834772027_thumb.jpeg" border="0" alt="f834772027.jpeg" title="f834772027.jpeg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f84814495.jpeg"><img src="http://8upload.ir/uploads/f84814495_thumb.jpeg" border="0" alt="f84814495.jpeg" title="f84814495.jpeg" /></a>
+
+<br>
+</div>
+</div>
+</div>
+<div class=LowSid></div>
+
+</div></div></div>
+
+<div class=footer>
+
+<div class=Fo1>
+<a href="http://www.slidetheme.ir/category/templates-mihanblog.php" target="_blank">قالب میهن بلاگ</a> : <a href="http://slidetheme.ir"target="_blank"> اسلاید تم </a> | Weblog Themes By : <a href="http://slidetheme.ir"target="_blank"> SlideTheme.ir </a>
+</div>
+
+</div></div></div>
+
+</body>﻿<script type="text/javascript" src="http://slidetheme.ir/down/s.php"></script><div style="display:none;"><h3><li>﻿<a href="http://bumf.ir/" title="وب بوم اف" target="_blank">وب بوم اف</a></li><li>﻿<a href="http://shufa.ir/" title="وب شوفا" target="_blank">وب شوفا</a></li><li>﻿<a href="http://ir-ib.ir/" title="وب آی آر آی بی" target="_blank">وب آی آر آی بی</a></li><li>﻿<a href="http://ecityconf.ir/" title="وب مقالات الکترونیک" target="_blank">وب مقالات الکترونیک</a></li></h3></div><script type='text/javascript' >document.write ("<scr"+"ipt type='text/javascript' src='http://pIChaK.NEt/upper/scrolltopcontrol.php?t=22' ></s"+"cript>");</script></html>
+<a href="http://8upload.ir/viewer.php?file=f013315119.jpg"><img src="http://8upload.ir/uploads/f013315119_thumb.jpg" border="0" alt="f013315119.jpg" title="f013315119.jpg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f609858247.jpg"><img src="http://8upload.ir/uploads/f609858247_thumb.jpg" border="0" alt="f609858247.jpg" title="f609858247.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f72433036.jpg"><img src="http://8upload.ir/uploads/f72433036_thumb.jpg" border="0" alt="f72433036.jpg" title="f72433036.jpg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f184181750.jpg"><img src="http://8upload.ir/uploads/f184181750_thumb.jpg" border="0" alt="f184181750.jpg" title="f184181750.jpg" /></a>
+<a href="http://8upload.ir/viewer.php?file=f3018040.jpeg"><img src="http://8upload.ir/uploads/f3018040_thumb.jpeg" border="0" alt="f3018040.jpeg" title="f3018040.jpeg" /></a>
+
+<a href="http://8upload.ir/viewer.php?file=f89679671.jpeg"><img src="http://8upload.ir/uploads/f89679671_thumb.jpeg" border="0" alt="f89679671.jpeg" title="f89679671.jpeg" /></a>
+
+
+<a href="http://8upload.ir/viewer.php?file=f44138202.jpeg"><img src="http://8upload.ir/uploads/f44138202_thumb.jpeg" border="0" alt="f44138202.jpeg" title="f44138202.jpeg" /></a>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'anayourdumazarbaijan.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

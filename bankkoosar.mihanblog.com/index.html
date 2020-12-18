@@ -1,0 +1,2202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://bankkoosar.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1671505*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[1]='30';commentCnt[120]='5';commentCnt[121]='0';commentCnt[122]='0';commentCnt[124]='1';commentCnt[125]='1';commentCnt[130]='0';commentCnt[133]='2';commentCnt[135]='1';commentCnt[138]='2';commentCnt[145]='1';commentCnt[146]='0';commentCnt[147]='1';commentCnt[148]='0';commentCnt[149]='0';commentCnt[150]='0';commentCnt[158]='7';commentCnt[159]='1';commentCnt[161]='2';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[1]='0';
+mihanblogDisLikeArrCnt[1]='0';
+mihanblogLikeArrCnt[120]='0';
+mihanblogDisLikeArrCnt[120]='0';
+mihanblogLikeArrCnt[121]='0';
+mihanblogDisLikeArrCnt[121]='0';
+mihanblogLikeArrCnt[122]='0';
+mihanblogDisLikeArrCnt[122]='0';
+mihanblogLikeArrCnt[124]='0';
+mihanblogDisLikeArrCnt[124]='0';
+mihanblogLikeArrCnt[130]='0';
+mihanblogDisLikeArrCnt[130]='0';
+mihanblogLikeArrCnt[133]='0';
+mihanblogDisLikeArrCnt[133]='0';
+mihanblogLikeArrCnt[146]='0';
+mihanblogDisLikeArrCnt[146]='0';
+mihanblogLikeArrCnt[147]='0';
+mihanblogDisLikeArrCnt[147]='0';
+mihanblogLikeArrCnt[148]='0';
+mihanblogDisLikeArrCnt[148]='0';
+mihanblogLikeArrCnt[149]='0';
+mihanblogDisLikeArrCnt[149]='0';
+mihanblogLikeArrCnt[150]='0';
+mihanblogDisLikeArrCnt[150]='0';
+mihanblogLikeArrCnt[158]='0';
+mihanblogDisLikeArrCnt[158]='0';
+mihanblogLikeArrCnt[159]='0';
+mihanblogDisLikeArrCnt[159]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://bankkoosar.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://bankkoosar.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','100');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','پنجشنبه 22 شهریور 1397');
+	
+	setStatVar('today_view','2');
+	setStatVar('yesterday_view','12');
+	
+	setStatVar('this_month_view','288');
+	setStatVar('last_month_view','520');
+
+	setStatVar('total_view','47106');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (04:12)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://bankkoosar.mihanblog.com/statupdate/?data[refereruri]=http://mathandtheother.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607826282&data[hash]=d904f37215a0ff8688803ae24086a580&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://bankkoosar.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://bankkoosar.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://bankkoosar.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://bankkoosar.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://bankkoosar.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://bankkoosar.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://bankkoosar.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://bankkoosar.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://bankkoosar.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://bankkoosar.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://bankkoosar.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://bankkoosar.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://bankkoosar.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://bankkoosar.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://bankkoosar.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://bankkoosar.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+<head>
+<h1><title>مدرسه نوجوان</title></h1>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Language" content="fa">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="alternate" type="application/rss+xml" title="مدرسه نوجوان" href="http://bankkoosar.mihanblog.com/post/rss/" />
+<link rel="alternate" type="application/atom+xml" title="مدرسه نوجوان" href="http://bankkoosar.mihanblog.com/post/atom/" />
+</head>
+<style type="text/css">
+
+html h1 {margin: 0px;}
+body { font-family: Tahoma; font-size: 8pt; text-align: center; direction: ltr; line-height: 18px; margin: 0px; background-color: #E898A1; padding: 0px; }
+.page { width: 780px; margin-right: auto; margin-left: auto; direction: rtl; background-color: #F6EDEE; margin-top: 0px; margin-bottom: 0px; padding: 0px; }
+/******************* header ******************/
+.header { height: 290px; width: 780px; text-align: center; background-repeat: no-repeat; margin-bottom: 0px; background-image: url(http://s6.picofile.com/file/8214526626/theme_01.jpg); }
+.header-mid { width: 700px; margin-left: auto; padding-top: 60px; text-align: center; margin-right: auto; }
+.header h1 { font-family: Arial; font-size: 24pt; font-weight: bold; margin: 0px; }
+.header h3 { font-family: Tahoma; font-size: 12pt; margin: 0px; padding-top: 20px; color: #000; }
+.header A { color: #000; text-decoration: none; }
+/****************** navbar ******************/
+.navbar { height: 60px; width: 780px; text-align: center; margin-top: 0px; margin-bottom: 20px; background-repeat: no-repeat; background-position: center top; background-image: url(http://s6.picofile.com/file/8214526650/theme_02.jpg); }
+.navbar-mid { width: 95%; margin-right: auto; margin-left: auto; padding-top: 20px; }
+.navbar ul { padding: 0px; margin-top: 0px; margin-right: 50px; margin-bottom: 0px; margin-left: 0px; }
+.navbar li { float: right; list-style-type: none; font-size: 9pt; font-weight: bold; margin-left: 40px; }
+.navbar li a:link { color: #000; text-decoration: none; }
+.navbar li a:visited { color: #000; text-decoration: none; }
+.navbar li a:hover { color: #000; text-decoration: none; }
+/***************** content *******************/
+.main { width: 780px; }
+.content { float: right; width: 540px; margin-right: 10px; }
+.bodypost { width: 540px; margin-bottom: 15px; background-color: #F5DCDF; background-image: url(http://s6.picofile.com/file/8214526734/theme_10.jpg); }
+.bodypost a:link { color: #B8435D; text-decoration: none; }
+.bodypost a:visited { color: #B8435D; text-decoration: none; }
+.bodypost a:hover { color: #000; text-decoration: none; }
+.ptitle { height: 60px; text-align: center; background-repeat: no-repeat; background-position: center; background-image: url(http://s3.picofile.com/file/8214526684/theme_07.jpg); }
+.ptitle-mid { text-align: right; width: 460px; margin-right: 60px; margin-left: auto; padding-top: 20px; }
+.ptitle a:link { color: #000; text-decoration: none; }
+.ptitle a:visited { color: #000; text-decoration: none; }
+.ptitle a:hover { color: #000; text-decoration: none; }
+.ptitle h2 { margin: 0px; font-family: Arial; font-size: 11pt; font-weight: bold; }
+.ptext { text-align: center; font-family: Tahoma; font-size: 9pt; }
+.ptext-mid { width: 95%; margin-right: auto; margin-left: auto; padding-top: 3px; padding-bottom: 3px; text-align: right; }
+.ptext img { max-width: 95%; height: auto; }
+.ptext img:hover { }
+.pinfo { }
+.pinfo-mid { width: 95%; margin-right: auto; margin-left: auto; text-align: right; padding-bottom: 10px; padding-top: 10px; }
+.author { float: right; width: 45%; }
+.date { float: left; width: 45%; }
+.pcat { }
+.pcat-mid { width: 95%; margin-right: auto; margin-left: auto; text-align: right; padding-top: 3px; padding-bottom: 5px; }
+.pcomore { font-size: 9pt; background-repeat: no-repeat; background-position: center; height: 40px; }
+.pcomore-mid { text-align: right; width: 90%; margin-right: auto; margin-left: auto; padding-top: 10px; }
+.pcomore a:link { color: #333; text-decoration: none; }
+.pcomore a:visited { color: #000; text-decoration: none; }
+.pcomore a:hover { color: #666; text-decoration: none; }
+.pmore { float: right; width: 40%; }
+.pcomment { float: left; width: 40%; }
+.p-bbg { height: 20px; background-repeat: no-repeat; background-position: center; background-image: url(http://s6.picofile.com/file/8214526792/theme_12.jpg); }
+.paper { width: 540px; background-color: #F5DCDF; border-radius: 10px; border-top-width: 5px; border-bottom-width: 5px; border-top-style: solid; border-bottom-style: solid; border-top-color: #E898A1; border-bottom-color: #E898A1; }
+.paper-tbg { height: 10px; }
+.paper-text { text-align: center; font-family: Tahoma; font-size: 9pt; font-weight: bold; background-repeat: repeat-y; background-position: center; }
+.paper-text-mid { width: 90%; margin-top: auto; margin-bottom: auto; padding-top: 5px; padding-bottom: 5px; }
+.paper-text a:link { color: #000; text-decoration: none; }
+.paper-text a:visited { color: #000; text-decoration: none; }
+.paper-text a:hover { color: #B8435D; text-decoration: none; }
+.paper-text ul { margin: 0px; padding: 0px; }
+.paper-text li { float: right; margin-left: 20px; list-style-type: none; }
+.paper-text li a:link { color: #000; text-decoration: none; }
+.paper-text li a:visited { color: #000; text-decoration: none; }
+.paper-text li a:hover { color: #B8435D; text-decoration: none; }
+.paper-bbg { height: 10px; }
+.rpapers { float: right; width: 49%; }
+.lpapers { float: left; width: 49%; }
+
+/***************** lbar ***********************/
+.left { float: left; width: 200px; margin-left: 10px; }
+.lm { margin-bottom: 10px; background-color: #EEF5FF; }
+.lmtitle { height: 60px; text-align: center; font-family: Arial; font-size: 11pt; font-weight: bold; color: #000; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8214526668/theme_05.jpg); }
+.lmtitle-mid { width: 120px; margin-right: 60px; margin-left: auto; padding-top: 20px; text-align: right; }
+.lmtext { text-align: center; background-repeat: repeat-y; background-image: url(http://s6.picofile.com/file/8214526700/theme_09.jpg); }
+.lmtext-mid { width: 90%; margin-right: auto; margin-left: auto; text-align: right; padding-top: 5px; padding-bottom: 5px; }
+.lmtext a:link { color: #000; text-decoration: none; }
+.lmtext a:visited { color: #000; text-decoration: none; }
+.lmtext a:hover { color: #666; text-decoration: none; }
+.lmtext ul { padding: 0px; margin: 0px; }
+.lmtext li { list-style-type: none; }
+.lmtext li a:link { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.lmtext li a:visited { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.lmtext li a:hover { color: #666; text-decoration: none; display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; }
+.lmtext img { max-width: 98%; height: auto; }
+.lmtext img:hover { }
+.lm-bbg { height: 20px; background-repeat: no-repeat; background-image: url(http://s3.picofile.com/file/8214526784/theme_11.jpg); }
+/*************** footer **************************/
+.footer { height: 100px; width: 780px; margin-top: 10px; margin-bottom: 0px; font-family: Tahoma; font-size: 10pt; color: #000; background-repeat: no-repeat; background-image: url(http://s3.picofile.com/file/8214526800/theme_14.jpg); font-weight: normal; }
+.footer-mid { width: 80%; margin-right: auto; margin-left: auto; padding-top: 40px; text-align: center; }
+.footer a:link { color: #000; text-decoration: none; font-weight: bold; }
+.footer a:visited { color: #000; text-decoration: none; font-weight: bold; }
+.footer a:hover { color: #000; text-decoration: none; font-weight: bold; }
+/************** etc class **************************/
+.profile-img { text-align: center; margin-top: 5px; margin-bottom: 5px; }
+.profile-text { text-align: justify; }
+
+
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="header-mid"> <a href="index.html">
+      <h1>مدرسه نوجوان</h1>
+      </a>
+      <h3>جایی برای یادگیری و سرگرمی</h3>
+    </div>
+  </div>
+  <!--- e header --->
+  
+  <div class="navbar">
+    <div class="navbar-mid">
+      <ul>
+        <li><a href="index.html">صفحه اصلی</a></li>
+        <li><a href="index.html"> پست الکترونیک</a></li>
+        <li><a href="javascript:messageForm()">تماس با ما</a></li>
+        <li><a href="http://blogt.ir/">قالب وبلاگ</a></li>
+        <li><a href="http://bankkoosar.mihanblog.com/post/rss/">RSS</a></li>
+        <li><a href="http://bankkoosar.mihanblog.com/post/atom/">Atom</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--- e navbar ---->
+  
+  <div class="main">
+   
+      
+    <div class="content">
+              
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		          <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://bankkoosar.mihanblog.com/post/1">
+                <h2>پست ثابت</h2>
+                </a></div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author">نویسنده :<a href="http://bankkoosar.mihanblog.com/post/author/1389286">Dead Me </a></div>
+                <div class="date">تاریخ: پنجشنبه 11 تیر 1394 07:18 ب.ظ</div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="text-align: center;"><img src="http://dynamicforever.com/wp-content/uploads/2015/01/Welcome.png"></p><font style="background-color: rgb(255, 0, 0);"><div align="left"></div><p></p><p><br></p></font><p><font style="background-color: rgb(255, 0, 0);"><br></font></p><font style="background-color: rgb(255, 0, 0);"><p align="center"><img src="data:image/png;base64,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"></p><p align="center"><br></p><p align="center"><br></p><p align="center"><img class="decoded" src="http://pichak.net/smiletext/myimg/17/tahoma/fa/16/0/سلام.png"></p><div align="left"></div><p></p><p>&nbsp;<br></p></font><p align="center" style="direction: ltr;"><font face="Mihan-Koodak"><font face="Mihan-Koodak" size="4"><img title="cafe-webniaz.ir" alt="cafe-webniaz.ir" src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2859%29.gif"><strong>سلام به همگی بازدید کنندگان ارجمند و گرامی</strong><img title="cafe-webniaz.ir" alt="cafe-webniaz.ir" src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2859%29.gif"><strong>&nbsp;</strong></font><font size="4"><strong>&nbsp;</strong></font></font></p><p align="center" style="direction: ltr;"><font face="Mihan-Koodak" size="4"><img title="cafe-webniaz.ir" alt="cafe-webniaz.ir" src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28177%29.gif"><strong>امیدوارم از مطالب گنجانده شده در این وبلاگ نهایت استفاده را ببرید </strong><img title="cafe-webniaz.ir" alt="cafe-webniaz.ir" src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28177%29.gif"></font></p><p align="center" style="direction: ltr;"><font face="Mihan-Koodak" size="3"><a href="http://cafe-webniaz.ir/" target="_blank"><img title="cafe-webniaz.ir" alt="cafe-webniaz.ir" src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28265%29.gif"></a><strong>حتما به آرشیو مطالب سر بزنید</strong></font><font face="Mihan-Koodak" size="3">&nbsp;<img title="cafe-webniaz.ir" alt="cafe-webniaz.ir" src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28265%29.gif"></font></p><p align="center" style="direction: ltr;"><font face="Mihan-IransansBold" size="4"><strong><u>راستی ! اگه کسی پیج اینستاگرام داره که با موضوعات وبلاگ هماهنگی داشته باشه ، میتونه توی </u></strong></font></p><p align="center" style="direction: ltr;"><font face="Mihan-IransansBold" size="4"><a href="http://cafe-webniaz.ir/" target="_blank"><img title="cafe-webniaz.ir" alt="cafe-webniaz.ir" src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28264%29.gif"></a><strong><u>&nbsp;! نظرات بگه تا بعدا همشونو توی یه پست جدا معرفی کنم ! منتظرم</u></strong></font></p><p align="center" style="direction: ltr;"><br></p><p align="center" style="direction: ltr;"><font face="arial,helvetica,sans-serif" size="4"><img title="cafe-webniaz.ir" alt="cafe-webniaz.ir" src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%286%29.gif"></font><font face="arial,helvetica,sans-serif" size="4"><font face="Mihan-Koodak"><strong>با تشکر</strong></font></font><font face="arial,helvetica,sans-serif" size="4"><font face="Mihan-Koodak"><img title="cafe-webniaz.ir" alt="cafe-webniaz.ir" src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%286%29.gif"></font></font></p><p align="center" style="direction: ltr;"><font face="Arial" size="4"><img width="20" height="21" title="cafe-webniaz.ir" style="width: 31px; height: 32px;" alt="cafe-webniaz.ir" src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28259%29.gif"></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="http://bankkoosar.mihanblog.com/post/category/5">متفرقه</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">
+                  <more></more>
+                </div>
+                <div class="pcomment"> <a target="_self" href="javascript:newComment(1)"><b>نظرات : </b><script>setCommentCnt(1)</script> نظر دهید</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://bankkoosar.mihanblog.com/post/161">
+                <h2>این آهنگو شدیداً توصیه میکنم !!</h2>
+                </a></div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author">نویسنده :<a href="http://bankkoosar.mihanblog.com/post/author/1389286">Dead Me </a></div>
+                <div class="date">تاریخ: شنبه 24 تیر 1396 08:21 ق.ظ</div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <p><img src="http://s9.picofile.com/file/8300561634/Screenshot_2017_07_15_09_23_19.jpeg" "=""><br>
+</p>
+<p><br>
+</p>
+<p><a href="http://s8.picofile.com/file/8300561000/169d3ba535f6d18833e9f93111787e1e6827312_360p_31252.mp4.html">http://s8.picofile.com/file/8300561000/169d3ba535f...</a>
+</p>
+<p><br>
+</p> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                                <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">
+                  <more></more>
+                </div>
+                <div class="pcomment"> <a target="_self" href="javascript:newComment(161)"><b>نظرات : </b><script>setCommentCnt(161)</script> نظرات</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://bankkoosar.mihanblog.com/post/159">
+                <h2>برگشتمممم !!!</h2>
+                </a></div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author">نویسنده :<a href="http://bankkoosar.mihanblog.com/post/author/1389286">Dead Me </a></div>
+                <div class="date">تاریخ: جمعه 16 تیر 1396 11:11 ق.ظ</div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+<div align="center"><font face="Mihan-Koodak"><font size="5"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/83.gif"> سلامی دوباره به همگییی&nbsp; !! <img src="http://mihanblog.com/public/public/rte/images_new/smiles/83.gif"><br></font></font><br><font face="Mihan-Koodak"><font size="5"><img alt="نتیجه تصویری برای ‪I'm back‬‏" style="margin-top: 0px;" src="https://image.slidesharecdn.com/imback-131030145733-phpapp02/95/im-back-1-638.jpg?cb=1383145114" class="irc_mi" height="393" width="523"><br>چند وقت بود به دلایل درسی و اینا .... نبودم ولی دوباره برگشتم !!<br><br>امیدوارم بازدید ها مثل قبل دوباره زیاد بشه !!<br><br>یادتون نره وبو به دوستاتو هم معرفی کنید!!<br><br>راستی لطفا نظر بدید از چی پست بذارم ؟؟ <img src="http://mihanblog.com/public/public/rte/images_new/smiles/39.gif"><br><br>چیزی به نظرم نمیرسه ! :-(<br><br>&nbsp;<img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif">مرسی <img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><br><br></font><br><br></font></div>
+
+
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="http://bankkoosar.mihanblog.com/post/category/5">متفرقه</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">
+                  <more></more>
+                </div>
+                <div class="pcomment"> <a target="_self" href="javascript:newComment(159)"><b>نظرات : </b><script>setCommentCnt(159)</script> نظر دهید</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://bankkoosar.mihanblog.com/post/158">
+                <h2>تسلیت</h2>
+                </a></div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author">نویسنده :<a href="http://bankkoosar.mihanblog.com/post/author/1389286">Dead Me </a></div>
+                <div class="date">تاریخ: چهارشنبه 14 مهر 1395 01:15 ب.ظ</div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+
+
+
+<p align="center"><img width="800" height="600" style="width: 581px; height: 375px;" src="http://www.qomefarda.ir/media/photo/527b8d6d79223.jpg"><div align="left"></div><p></p><p align="center"><br></p><p align="center"><font face="Mihan-Yekan" size="5">ماه خون ماه اشك ماه ماتم شد ، بر دل فاطمه داغ عالم شد . </font></p><p align="center"><font face="Mihan-Yekan" size="5">فرا رسیدن ماه محرم را به عزادارن راستینش تسلیت عرض میكنم</font></p><p align="center"><br></p>
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="http://bankkoosar.mihanblog.com/post/category/8">دینی و معنوی</a>،                                 <br />
+                 کلمات کلیدی	:
+                   <a href="http://bankkoosar.mihanblog.com/post/tag/Moharam95" >Moharam95</a> ،                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">
+                  <more></more>
+                </div>
+                <div class="pcomment"> <a target="_self" href="javascript:newComment(158)"><b>نظرات : </b><script>setCommentCnt(158)</script> نظر دهید</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://bankkoosar.mihanblog.com/post/145">
+                <h2>شرلوک قسمت اول ( پرونده صورتی )</h2>
+                </a></div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author">نویسنده :<a href="http://bankkoosar.mihanblog.com/post/author/1389286">Dead Me </a></div>
+                <div class="date">تاریخ: جمعه 14 خرداد 1395 07:17 ب.ظ</div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+
+
+<div style="text-align: center;"><iframe src="http://m.telewebion.com/embed/vod?EpisodeID=1433132" width="480" height="320" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font face="Mihan-Nassim" size="4"><b><br></b></font></div><div style="text-align: center;"><font size="4" face="Mihan-Yekan" color="#000066"><b>'' برای دیدن ویدیو از مرورگر Google chrome استفاده کنید &nbsp;''</b></font></div><div style="text-align: center;"><font size="4" face="Mihan-Yekan" color="#ff0000"><b><br></b></font></div><div style="text-align: center;"><font size="4" face="Mihan-Yekan" color="#ff0000"><b>" برای مشاهده از سایت آپارات نیازی به مرورگر Google chrome نیست "&nbsp;</b></font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="4"><b><br></b></font></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font face="Mihan-Nassim" size="4"><b>آدرس از سایت آپارات :&nbsp;</b></font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="4"><b><br></b></font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="4"><b>پارت 1 :&nbsp;</b></font><div style="display: inline !important;"><font face="Mihan-Nassim" size="4"><b><a href="http://www.aparat.com/v/T63hQ" target="_blank" title="">http://www.aparat.com/v/T63hQ</a></b></font></div></div><div style="text-align: center;"><div style="display: inline !important;"><font face="Mihan-Nassim" size="4"><br></font></div></div><div style="text-align: center;"><div style="display: inline !important;"><font face="Mihan-Nassim" size="4"><b><br></b></font></div></div><div style="text-align: center;"><div style="display: inline !important;"><font face="Mihan-Nassim" size="4"><b>پارت 2 :&nbsp;</b></font></div><b><font face="Mihan-Nassim" size="4"><a href="http://www.aparat.com/v/OWoh4" target="_blank" title="">http://www.aparat.com/v/OWoh4</a></font></b></div><div style="text-align: center;"><b><br></b></div><div style="text-align: center;"><b><br></b></div><div style="text-align: center;"><b><font face="Mihan-Nassim" size="4"><br></font></b></div><div style="text-align: center;"><b><font face="Mihan-Nassim" size="4">پارت 3 :</font>&nbsp;</b><font size="4" face="Mihan-Nassim"><b><a href="http://www.aparat.com/v/OLqfM" target="_blank" title="">http://www.aparat.com/v/OLqfM</a></b></font></div><div style="text-align: center;"><font size="4" face="Mihan-Nassim"><br></font></div><div style="text-align: center;"><font size="4" face="Mihan-Nassim"><br></font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="4"><b>پارت 4 :&nbsp;</b></font><b><font size="4" face="Mihan-Nassim"><a href="http://www.aparat.com/v/c74QM" target="_blank" title="">http://www.aparat.com/v/c74QM</a></font></b></div><div style="text-align: center;"><b><br></b></div><div style="text-align: center;"><b><br></b></div><div style="text-align: center;"><br></div><div style="text-align: center;"><b><br></b></div><div style="text-align: center;"><b><font face="Mihan-Nassim"><font size="4">پارت 5 :&nbsp;</font></font></b><b><font face="Mihan-Nassim" size="4"><a href="http://www.aparat.com/v/nXswA" target="_blank" title="">http://www.aparat.com/v/nXswA</a></font></b></div><div style="text-align: center;"><b><br></b></div><div style="text-align: center;"><b><br></b></div><div style="text-align: center;"><b><br></b></div><div style="text-align: center;"><b><br></b></div><div style="text-align: center;"><b><font face="Mihan-Nassim"><font size="4">پارت 6 :&nbsp;</font></font></b><a href="http://www.aparat.com/v/dQDkK" target="_blank" title=""><b><font size="4" face="Mihan-Nassim">http://www.aparat.com/v/dQDkK</font></b></a></div><a href="http://www.aparat.com/v/T63hQ" target="_blank" title=""><div style="text-align: center;"></div></a><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><b><font face="Mihan-Nassim"><font size="4">پارت 7 :&nbsp;</font></font></b><font size="4" face="Mihan-Nassim"><b><a href="http://www.aparat.com/v/Vqldw" target="_blank" title="">http://www.aparat.com/v/Vqldw</a></b></font></div><div style="text-align: center;"><font size="4" face="Mihan-Nassim"><br></font></div><div style="text-align: center;"><font size="4" face="Mihan-Nassim"><br></font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="4"><b>پارت آخر :&nbsp;</b></font><b><font face="Mihan-Nassim" size="4"><a href="http://www.aparat.com/v/Toit0" target="_blank" title="">http://www.aparat.com/v/Toit0</a></font></b></div><div style="text-align: center;"><b><br></b></div><div style="text-align: center;"><b><br></b></div><div style="text-align: center;"><b><br></b></div><div style="text-align: center;"><b><br></b></div><div style="text-align: center;"><b><br></b></div><div style="text-align: center;"><b><font face="Mihan-Koodak" size="5" color="#cc0000">لذت ببرید !</font></b></div>
+
+
+
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="http://bankkoosar.mihanblog.com/post/category/3">سرگرمی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">
+                  <more></more>
+                </div>
+                <div class="pcomment"> <a target="_self" href="javascript:newComment(145)"><b>نظرات : </b><script>setCommentCnt(145)</script> نظر دهید</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://bankkoosar.mihanblog.com/post/147">
+                <h2>دانلود کارتون zootopia ( دوبله فارسی )</h2>
+                </a></div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author">نویسنده :<a href="http://bankkoosar.mihanblog.com/post/author/1389286">Dead Me </a></div>
+                <div class="date">تاریخ: شنبه 25 اردیبهشت 1395 10:53 ق.ظ</div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img src="http://my-film.org/wp-content/uploads/2016/02/Zootopia-2016.jpg" alt="Zootopia 2016,دانلود فیلم Zootopia 2016 کیفیت عالی ۱۰۸۰p و ۷۲۰p – لینک مستقیم رایگان,دانلود انیمیشن زوتاپیا Zootopia 2016,زیرنویس فارسی انیمیشن Zootopia 2016"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><p class="info" style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><font face="Mihan-IransansLight" size="4"><b>نام فارسی : زوتوپیا</b></font></p><p class="info" style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><font face="Mihan-IransansLight" size="4"><b><br></b></font></p><p class="info" style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><span style="font-family: Mihan-IransansLight; font-size: large;"><b>زبان : فارسی + زبان اصلی</b></span></p><p class="info" style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><br></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><font face="Mihan-IransansLight" size="4"><b>سال تولید : ۲۰۱۶</b></font></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><font face="Mihan-IransansLight" size="4"><b><br></b></font></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><font face="Mihan-IransansLight" size="4"><b>&nbsp;ژانر : انیمیشن ، اکشن ، ماجراجویی</b></font></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><font face="Mihan-IransansLight" size="4"><b><br></b></font></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><font face="Mihan-IransansLight" size="4"><b>خلاصه داستان&nbsp;<span style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(0, 0, 0);">فیلم&nbsp;</span>Zootopia 2016 : در شهری که کاملاً تحت کنترل حیوانات است، یک افسر</b></font></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><font face="Mihan-IransansLight" size="4"><b><br></b></font></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><font face="Mihan-IransansLight" size="4"><b>&nbsp;پلیس خرگوش و یک روباه کلاهبردار باید با همکاری یکدیگر پرده از یک پرونده فساد بردارند</b></font><b style="font-family: Mihan-IransansLight; font-size: large;">.</b></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><b style="font-family: Mihan-IransansLight; font-size: large;"><br></b></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><b style="font-family: Mihan-IransansLight; font-size: large;"><br></b></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><b style="font-family: Mihan-IransansLight; font-size: large;"><br></b></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><b style="font-family: Mihan-IransansLight; font-size: large;"><br></b></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; line-height: 22px;"><font face="Mihan-Koodak" size="6" color="#990000"><b>ادامه داره ! ...</b></font></p></div><div style="text-align: center;"><br></div> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="http://bankkoosar.mihanblog.com/post/category/4">کارتون</a>،  <a href="http://bankkoosar.mihanblog.com/post/category/3">سرگرمی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">
+                  <more><a href='http://bankkoosar.mihanblog.com/post/147'>ادامه</a></more>
+                </div>
+                <div class="pcomment"> <a target="_self" href="javascript:newComment(147)"><b>نظرات : </b><script>setCommentCnt(147)</script> نظر دهید</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://bankkoosar.mihanblog.com/post/150">
+                <h2>خوشحالی یعنی این !</h2>
+                </a></div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author">نویسنده :<a href="http://bankkoosar.mihanblog.com/post/author/1389286">Dead Me </a></div>
+                <div class="date">تاریخ: جمعه 17 اردیبهشت 1395 10:25 ق.ظ</div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div style="text-align: center;"><img src="http://topnop.ir/uploads/201309/tpn7843/S2lAuWFrbP.jpg" alt="خوشحالی یعنی این (24 عکس)"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img src="http://topnop.ir/uploads/201309/tpn7843/6yRMvTWB7A.jpg" alt="خوشحالی یعنی این (24 عکس)"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font face="Mihan-Nassim" color="#660000" size="5"><b>ادامه .....</b></font></div> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="http://bankkoosar.mihanblog.com/post/category/5">متفرقه</a>،  <a href="http://bankkoosar.mihanblog.com/post/category/3">سرگرمی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">
+                  <more><a href='http://bankkoosar.mihanblog.com/post/150'>ادامه....</a></more>
+                </div>
+                <div class="pcomment"> <a target="_self" href="javascript:newComment(150)"><b>نظرات : </b><script>setCommentCnt(150)</script> نظر دهید</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://bankkoosar.mihanblog.com/post/149">
+                <h2>عکس های نکته دار</h2>
+                </a></div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author">نویسنده :<a href="http://bankkoosar.mihanblog.com/post/author/1389286">Dead Me </a></div>
+                <div class="date">تاریخ: سه شنبه 14 اردیبهشت 1395 10:07 ق.ظ</div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div style="text-align: center;"><img src="http://topnop.ir/uploads/201409/tpn10309/Uh7jlY6gkP.jpg" alt="عکس های نکته دار (27 عکس)"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img src="http://topnop.ir/uploads/201409/tpn10309/3wAfoLUPT7.jpg" alt="عکس های نکته دار (27 عکس)"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font size="1"><img src="data:image/png;base64,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"></font></div> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="http://bankkoosar.mihanblog.com/post/category/5">متفرقه</a>،  <a href="http://bankkoosar.mihanblog.com/post/category/3">سرگرمی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">
+                  <more><a href='http://bankkoosar.mihanblog.com/post/149'>ادامه ...</a></more>
+                </div>
+                <div class="pcomment"> <a target="_self" href="javascript:newComment(149)"><b>نظرات : </b><script>setCommentCnt(149)</script> نظر دهید</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://bankkoosar.mihanblog.com/post/146">
+                <h2>دانلود کارتون کونگ فو پاندا 3 ( دوبله فارسی )</h2>
+                </a></div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author">نویسنده :<a href="http://bankkoosar.mihanblog.com/post/author/1389286">Dead Me </a></div>
+                <div class="date">تاریخ: یکشنبه 12 اردیبهشت 1395 10:35 ق.ظ</div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div style="text-align: center;"><img src="http://my-film.org/wp-content/uploads/2015/11/Kung-Fu-Panda-3-2016.jpg" alt="Kung Fu Panda 3 2016,دانلود فیلم Kung Fu Panda 3 2016 کیفیت عالی ۱۰۸۰p و ۷۲۰p لینک مستقیم رایگان و بدون محدودیت,دانلود انیمیشن پاندای کونگ‌فوکار Kung Fu Panda 3"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><div class="info" style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px;"><font face="Mihan-Nassim" size="4">نام فارسی : پاندای کونگ‌فوکار ۳</font></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px;"><font face="Mihan-Nassim" size="4"><br></font></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px;"><font face="Mihan-Nassim" size="4">زبان : فارسی + زبان اصلی</font></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px;"><font face="Mihan-Nassim" size="4"><br></font></p></div><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><font face="Mihan-Nassim" size="4">سال تولید : ۲۰۱۶</font></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><font face="Mihan-Nassim" size="4"><br></font></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><font face="Mihan-Nassim" size="4">ژانر : انیمیشن | اکشن | ماجراجویی</font></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><font face="Mihan-Nassim" size="4"><br></font></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><font face="Mihan-Nassim" size="4">خلاصه داستان&nbsp;<a href="http://my-film.org/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF-%D8%A7%D9%86%DB%8C%D9%85%DB%8C%D8%B4%D9%86-kung-fu-panda-3.html" style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(14, 160, 216); text-decoration: none; transition: all 0.3s ease-out;"><span style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(0, 0, 0);">فیلم Kung Fu Panda 3 2016</span></a>&nbsp;: پاندای کنگ فو کار در ادامه ماجراجویی هایش باید با دو چالش بزرگ، اما متفاوت</font></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><font face="Mihan-Nassim" size="4"><br></font></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><font face="Mihan-Nassim" size="4">&nbsp;رو برو شود: یکی رویارویی با پدر واقعی اش، و دیگری مقابله با یک رقیب شکست ناپذیر…</font></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><font face="Mihan-Nassim" size="4"><br></font></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><font face="Mihan-Nassim" size="4"><br></font></p><p style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; color: rgb(63, 58, 58); line-height: 22px; text-align: right;"><font face="Mihan-Nassim" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; line-height: 22px;"><font size="4" face="Mihan-IransansBold" color="#993399">برید ادامش !</font></p></div><div style="text-align: center;"><br></div> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="http://bankkoosar.mihanblog.com/post/category/4">کارتون</a>،  <a href="http://bankkoosar.mihanblog.com/post/category/3">سرگرمی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">
+                  <more><a href='http://bankkoosar.mihanblog.com/post/146'>ادامش</a></more>
+                </div>
+                <div class="pcomment"> <a target="_self" href="javascript:newComment(146)"><b>نظرات : </b><script>setCommentCnt(146)</script> نظر دهید</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://bankkoosar.mihanblog.com/post/148">
+                <h2>نقاشی های خارق العاده با رنگ های براق</h2>
+                </a></div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author">نویسنده :<a href="http://bankkoosar.mihanblog.com/post/author/1389286">Dead Me </a></div>
+                <div class="date">تاریخ: شنبه 11 اردیبهشت 1395 08:26 ب.ظ</div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+<div style="text-align: center;"><img src="http://topnop.ir/uploads/201605/tpn13782/McwZCSeOoF.jpg" alt="نقاشی هایی خارق العاده با رنگ های براق (13 عکس)"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img src="http://topnop.ir/uploads/201605/tpn13782/G0Seq68b5U.jpg" alt="نقاشی هایی خارق العاده با رنگ های براق (13 عکس)"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img src="http://topnop.ir/uploads/201605/tpn13782/gnWRumay7y.jpg" alt="نقاشی هایی خارق العاده با رنگ های براق (13 عکس)"></div><div style="text-align: center;"><br></div><div style="text-align: center;">&nbsp;</div><div style="text-align: center;"><br></div><div style="text-align: center;"><font face="Mihan-Koodak" size="5" color="#330033">ادامه داره !</font></div>
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="http://bankkoosar.mihanblog.com/post/category/5">متفرقه</a>،  <a href="http://bankkoosar.mihanblog.com/post/category/3">سرگرمی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">
+                  <more><a href='http://bankkoosar.mihanblog.com/post/148'>بقیه عکسا</a></more>
+                </div>
+                <div class="pcomment"> <a target="_self" href="javascript:newComment(148)"><b>نظرات : </b><script>setCommentCnt(148)</script> نظر دهید</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://bankkoosar.mihanblog.com/post/138">
+                <h2>روز پدر</h2>
+                </a></div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author">نویسنده :<a href="http://bankkoosar.mihanblog.com/post/author/1389286">Dead Me </a></div>
+                <div class="date">تاریخ: دوشنبه 6 اردیبهشت 1395 12:19 ب.ظ</div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+
+
+<p align="center"><a id="irc_mil" style="border: 0px currentColor; border-image: none;" href="http://www.google.com/url?sa=i&amp;rct=j&amp;q=&amp;esrc=s&amp;source=images&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=0ahUKEwjJmafAtKnMAhWFWBoKHfv4CngQjRwIBw&amp;url=http%3A%2F%2Fwww.beytoote.com%2Fart%2Fsong%2Ffather1-day-poem.html&amp;psig=AFQjCNFINvvAJLrbWeSeEPItqJAQkL1Plw&amp;ust=1461660620979851" jsaction="mousedown:irc.rl;keydown:irc.rlk;irc.il;" data-ved="0ahUKEwjJmafAtKnMAhWFWBoKHfv4CngQjRwIBw"><img width="300" height="361" id="irc_mi" style="margin-top: 19px;" alt="" src="http://www.beytoote.com/images/stories/economic/hhe225.jpg"><div align="left"></div></a></p> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="http://bankkoosar.mihanblog.com/post/category/5">متفرقه</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">
+                  <more></more>
+                </div>
+                <div class="pcomment"> <a target="_self" href="javascript:newComment(138)"><b>نظرات : </b><script>setCommentCnt(138)</script> نظر دهید</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://bankkoosar.mihanblog.com/post/135">
+                <h2>بهترین روز دنیا</h2>
+                </a></div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author">نویسنده :<a href="http://bankkoosar.mihanblog.com/post/author/1389286">Dead Me </a></div>
+                <div class="date">تاریخ: چهارشنبه 11 فروردین 1395 06:11 ب.ظ</div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+
+
+
+
+<p align="center"><img width="8" height="447" style="width: 454px; height: 299px;" src="http://forums.boursy.com/imported/2014/04/DAA9D8A7D8B1D8AAD9BED8B3D8AAD8A7D984D8B1-1.jpg"><div align="left"></div><p></p><p align="center"><br></p><p align="center"><font face="Mihan-Nassim" size="5"><img title="cafe-webniaz.ir" alt="cafe-webniaz.ir" src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28299%29.gif"><u><font color="#0066cc">&nbsp;</font></u><strong>به بهشت نمیروم اگر مادرم آنجا نباشد ....</strong></font> <img title="cafe-webniaz.ir" alt="cafe-webniaz.ir" src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28299%29.gif"></p>
+
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="http://bankkoosar.mihanblog.com/post/category/5">متفرقه</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">
+                  <more></more>
+                </div>
+                <div class="pcomment"> <a target="_self" href="javascript:newComment(135)"><b>نظرات : </b><script>setCommentCnt(135)</script> نظر دهید</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://bankkoosar.mihanblog.com/post/133">
+                <h2>چرا 1 یك ـــــه ؟؟؟ چرا 2 دوئـــــــــه ؟؟؟؟</h2>
+                </a></div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author">نویسنده :<a href="http://bankkoosar.mihanblog.com/post/author/1389286">Dead Me </a></div>
+                <div class="date">تاریخ: یکشنبه 8 فروردین 1395 10:56 ق.ظ</div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+
+
+<p align="center"><a href="http://www.azarmath.com/portal/wp-content/uploads/2012/05/1.jpg" rel="lightbox[1531]"><img width="450" height="329" title="1" class="aligncenter size-medium &#10;wp-image-1532" src="http://www.azarmath.com/portal/wp-content/uploads/2012/05/1-450x329.jpg"><div align="left"></div></a></p><p align="center"><br></p><p align="center"><font face="Mihan-Koodak" size="6">برید ادامه !</font></p> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="http://bankkoosar.mihanblog.com/post/category/5">متفرقه</a>،  <a href="http://bankkoosar.mihanblog.com/post/category/1">علمی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">
+                  <more><a href='http://bankkoosar.mihanblog.com/post/133'>ادامش</a></more>
+                </div>
+                <div class="pcomment"> <a target="_self" href="javascript:newComment(133)"><b>نظرات : </b><script>setCommentCnt(133)</script> نظر دهید</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://bankkoosar.mihanblog.com/post/130">
+                <h2>دانلود انیمیشن کارتونی My Little Pony Friendship Games 2015</h2>
+                </a></div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author">نویسنده :<a href="http://bankkoosar.mihanblog.com/post/author/1389286">Dead Me </a></div>
+                <div class="date">تاریخ: یکشنبه 2 اسفند 1394 12:37 ب.ظ</div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+
+
+
+
+<p align="center"><img width="1" height="250" style="width: 489px; height: 211px;" src="http://download.ir/wp-content/uploads/2015/09/Pony.logo_.0.www_.download.ir-2.png"><div align="left"></div><p></p>				 <p style="text-align: justify;"><font face="Mihan-Nassim" size="4">My Little Pony Friendship Games 2015 نام یک انیمیشن کارتونی می باشد که در سال 2015 توسط کمپانی DHX Media ساخته شده است . کارگردانی این فیلم انیمیشن بر عهده Jayson Thiessen بوده است که یکی از کارگردانان موفق درزمینه ساخت فیلم انیمیشن می باشد و سابقه ساخت فیلم های انیمیشن موفقی چون The Science of Magic و Perfect Day for Fun را در کارنامه هنری خود دارد و برای ساخت این فیلم های انیمیشن موفق به کسب جوایز بسیاری نیز شده است . هر چهار سال یک بار یک سری مسابقات در سرزمین پونی ها برگذار می شود که در آن پونی های مختلف از مدارس مختلف باید با یکدیگر به رقابت بپردازند و در نهایت برنده این مسابقات برنده یک جام طلایی افتخار ابدی می شود . به همین دلیل پینکی پای ، رینبودش ، راریتی و اپلجک تصمیم می گیرند که به عنوان داوطلب های مدرسه خویش در این سری از مسابقات سخت و طاقت فرسا شرکت کنند و با کمک هم جام طلایی را به مدرسه خویش بیاورند . انیمیشن کارتونی My Little Pony Friendship Games 2015 یکی دیگر از انیمیشن های جذاب و دیدنی سری My Little pony می باشد .</font> </p><strong><p align="left" style="text-align: justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p><p align="left" style="text-align: justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<font face="Mihan-Koodak" size="5"> برو ادامه !</font><br></p></strong>
+
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="http://bankkoosar.mihanblog.com/post/category/4">کارتون</a>،  <a href="http://bankkoosar.mihanblog.com/post/category/3">سرگرمی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">
+                  <more><a href='http://bankkoosar.mihanblog.com/post/130'>بیا ادامه !</a></more>
+                </div>
+                <div class="pcomment"> <a target="_self" href="javascript:newComment(130)"><b>نظرات : </b><script>setCommentCnt(130)</script> نظر دهید </a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://bankkoosar.mihanblog.com/post/125">
+                <h2>مقایسه ی جانوران امروزی با پدر بزرگ های ماقبل تاریخشان</h2>
+                </a></div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author">نویسنده :<a href="http://bankkoosar.mihanblog.com/post/author/1389286">Dead Me </a></div>
+                <div class="date">تاریخ: جمعه 1 آبان 1394 11:56 ق.ظ</div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div align="center">
+
+		<!--AparatShow-->
+				<div style="display:none">[http://www.aparat.com/v/tvCg9]</div>
+                <div class="aparatFrame">
+                    <iframe frameborder=0  allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" width="435" height="290" src="http://www.aparat.com/video/video/embed/videohash/tvCg9/vt/frame"> </iframe>
+                </div>
+
+		<!--eoAparatShow-->
+				<br><br><br><br><br></div> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="http://bankkoosar.mihanblog.com/post/category/5">متفرقه</a>،  <a href="http://bankkoosar.mihanblog.com/post/category/1">علمی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">
+                  <more></more>
+                </div>
+                <div class="pcomment"> <a target="_self" href="javascript:newComment(125)"><b>نظرات : </b><script>setCommentCnt(125)</script> نظر دهید</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://bankkoosar.mihanblog.com/post/124">
+                <h2>زندگی در فضا</h2>
+                </a></div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author">نویسنده :<a href="http://bankkoosar.mihanblog.com/post/author/1389286">Dead Me </a></div>
+                <div class="date">تاریخ: پنجشنبه 30 مهر 1394 12:58 ب.ظ</div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+
+
+<p align="center"><br></p><p align="center"><img width="1" height="228" style="width: 480px; height: 280px; margin-top: 20px;" src="http://topnop.ir/uploads/201306/tpn7264/large/H4hjew6tzB.gif"></p><div align="left"></div><p align="center"><br></p>  </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="http://bankkoosar.mihanblog.com/post/category/5">متفرقه</a>،  <a href="http://bankkoosar.mihanblog.com/post/category/1">علمی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">
+                  <more><a href='http://bankkoosar.mihanblog.com/post/124'>ادامه عکسها</a></more>
+                </div>
+                <div class="pcomment"> <a target="_self" href="javascript:newComment(124)"><b>نظرات : </b><script>setCommentCnt(124)</script> نظر دهید</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://bankkoosar.mihanblog.com/post/122">
+                <h2> حقایق شگفت‌انگیز درباره کلاغ </h2>
+                </a></div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author">نویسنده :<a href="http://bankkoosar.mihanblog.com/post/author/1389286">Dead Me </a></div>
+                <div class="date">تاریخ: یکشنبه 19 مهر 1394 02:14 ب.ظ</div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <br>
+
+
+
+
+<p class="imgarticle" align="center"><a title="کلاغ,ویژگی‌های کلاغ‌ها,زاغ" href="http://www.beytoote.com/scientific/nature/amazing3-facts2-ravens.html" target="_blank"> <img style="width: 302px; height: 191px;" title="کلاغ,ویژگی‌های کلاغ‌ها,زاغ" src="http://www.beytoote.com/images/stories/scientific/hhs1830.jpg" alt="کلاغ,ویژگی‌های کلاغ‌ها,زاغ"> </a></p><strong></strong><br><p style="text-align: justify;"><font face="Mihan-Koodak" size="4">ظاهر
+ ترسناک کلاغ‌ها همیشه سرآغاز شکل‌گیری افسانه‌های زیادی بوده است. بسیاری 
+از مردم کلاغ‌ها را شوم و سمبل مرگ می‌دانند. شاید حتی شنیدن صدای آنها نیز
+ تاثیر مطلوبی بر شنونده باقی نگذارد، اما ناگفته‌های زیادی درباره آنها 
+وجود دارد.</font><font face="Mihan-Koodak" size="4">یکی از شاخص‌ترین ویژگی‌های کلاغ‌ها 
+این است که در هر زیستگاهی از مناطق سرد و یخ‌زده گرفته تا کوهستان‌ها، 
+دشت‌ها، مزارع، علفزارها و حتی شهرها می‌توانند زندگی کنند. کلاغ‌ها انواع 
+گوناگونی دارند: زاغ درختی، زاغ کوهی، زاغ خاوری، زاغ فندق شکن، جیجاق 
+زمینی، زاغ حبشی، زاغ شمالی و ده نوع دیگر نشان‌دهنده بزرگی این گونه است.</font><font face="Mihan-Koodak" size="4">
+</font><br>
+
+
+</p> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="http://bankkoosar.mihanblog.com/post/category/1">علمی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">
+                  <more><a href='http://bankkoosar.mihanblog.com/post/122'>ادامه مطلب</a></more>
+                </div>
+                <div class="pcomment"> <a target="_self" href="javascript:newComment(122)"><b>نظرات : </b><script>setCommentCnt(122)</script> نظر دهید</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://bankkoosar.mihanblog.com/post/121">
+                <h2>عکس های متحرک دیدنی از جغد ها</h2>
+                </a></div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author">نویسنده :<a href="http://bankkoosar.mihanblog.com/post/author/1389286">Dead Me </a></div>
+                <div class="date">تاریخ: دوشنبه 13 مهر 1394 01:38 ب.ظ</div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+
+
+<div style="clear: both;"></div><ul style="display: none;" itemprop="breadcrumb"><li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://topnop.ir/article-topic0-page1.html" itemprop="url"><span itemprop="title">همه آلبوم ها</span>		 </a>		 </li><li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://topnop.ir/modules.php?name=News&amp;file=categories&amp;op=newindex&amp;catid=53" itemprop="url"><span itemprop="title">گیف متحرک</span>		 </a></li></ul><div id="content_article" itemscope="" itemtype="http://schema.org/NewsArticle"><div class="post" style="-moz-user-select: none; -webkit-user-select: none;"><strong><img style="display: none;" src="http://topnop.ir/uploads/201510/tpn12637/mainthb.jpg" itemprop="image" content="http://topnop.ir/uploads/201510/tpn12637/mainthb.jpg"></strong><a class="post-title-link"><h1 align="center"><img style="margin-top: 20px;" src="http://topnop.ir/uploads/201510/tpn12637/large/NsqQaLeKAK.gif"><div align="left"></div></h1><h1 itemprop="headline">&nbsp;</h1><h1 align="center"><img style="margin-top: 20px;" src="http://topnop.ir/uploads/201510/tpn12637/large/H3yWLdpUet.gif"><div align="left"></div></h1><h1 itemprop="headline"> </h1></a><h1 itemprop="headline"><br></h1><div class="post-title"><br></div><div class="post-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </div></div></div> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="http://bankkoosar.mihanblog.com/post/category/5">متفرقه</a>،  <a href="http://bankkoosar.mihanblog.com/post/category/3">سرگرمی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">
+                  <more><a href='http://bankkoosar.mihanblog.com/post/121'>ادامه عکسها</a></more>
+                </div>
+                <div class="pcomment"> <a target="_self" href="javascript:newComment(121)"><b>نظرات : </b><script>setCommentCnt(121)</script> نظر دهید</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://bankkoosar.mihanblog.com/post/120">
+                <h2>انیمیشن های بی پایان</h2>
+                </a></div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author">نویسنده :<a href="http://bankkoosar.mihanblog.com/post/author/1389286">Dead Me </a></div>
+                <div class="date">تاریخ: یکشنبه 12 مهر 1394 02:48 ب.ظ</div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+
+
+<div style="clear: both;"></div><ul style="display: none;" itemprop="breadcrumb"><li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://topnop.ir/article-topic0-page1.html" itemprop="url"><span itemprop="title">همه آلبوم ها</span>		 </a>		 </li><li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://topnop.ir/modules.php?name=News&amp;file=categories&amp;op=newindex&amp;catid=53" itemprop="url"><span itemprop="title">گیف متحرک</span></a></li></ul><div align="center" class="post" style="-moz-user-select: none; -webkit-user-select: none;" itemscope="" itemtype="http://schema.org/NewsArticle"><font face="Tahoma" size="2"><font face="Mihan-Koodak" size="4">این عکس های کم حجم و متحرک را میتوانید سال ها نگاه کنید. زیر هیچ&nbsp; گاه تمام نخواهند شد.</font> </font></div><div align="center" class="post" style="-moz-user-select: none; -webkit-user-select: none;" itemscope="" itemtype="http://schema.org/NewsArticle"><font size="2"><img style="margin-top: 20px;" src="http://topnop.ir/uploads/201308/tpn7574/large/iIG5mAL1E7.gif">&nbsp;</font></div><div align="center" class="post" style="-moz-user-select: none; -webkit-user-select: none;" itemscope="" itemtype="http://schema.org/NewsArticle"><font size="2"><img style="margin-top: 20px;" src="http://topnop.ir/uploads/201308/tpn7574/large/ABS0mjYDtn.gif">&nbsp;</font></div><div align="center" class="post" style="-moz-user-select: none; -webkit-user-select: none;" itemscope="" itemtype="http://schema.org/NewsArticle"><font size="2"></font><br></div> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="http://bankkoosar.mihanblog.com/post/category/5">متفرقه</a>،  <a href="http://bankkoosar.mihanblog.com/post/category/3">سرگرمی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">
+                  <more><a href='http://bankkoosar.mihanblog.com/post/120'>ادامه عکسها</a></more>
+                </div>
+                <div class="pcomment"> <a target="_self" href="javascript:newComment(120)"><b>نظرات : </b><script>setCommentCnt(120)</script> نظر دهید</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                    
+      <!--- e bodypost --->
+      
+            <!--- e barge ---->
+      
+              <div class="paper">
+          <div class="paper-tbg"></div>
+          <div class="paper-text">
+            <div class="paper-text-mid"> تعداد کل صفحات : 6               <a href="http://bankkoosar.mihanblog.com/page/1"> <b>1</b></a>  <a href="http://bankkoosar.mihanblog.com/page/2"> <span>2</span></a>  <a href="http://bankkoosar.mihanblog.com/page/3"> <span>3</span></a>  <a href="http://bankkoosar.mihanblog.com/page/4"> <span>4</span></a>  <a href="http://bankkoosar.mihanblog.com/page/5"> <span>5</span></a>  <a href="http://bankkoosar.mihanblog.com/page/6"> <span>6</span></a>               <div style="clear:both"></div>
+            </div>
+          </div>
+          <div class="paper-bbg"></div>
+        </div>
+            
+      <!--- e paper ---> 
+      
+    </div>
+    <!--- e content --->
+    
+    <div class="left">
+    
+     <div class="lm">
+        <div class="lmtitle">
+          <div class="lmtitle-mid">درباره من</div>
+        </div>
+        <div class="lmtext">
+          <div class="lmtext-mid">
+            <div class="profile-img"> <img src="../static.mihanblog.com/public/user_data/web_photo/558/1671505.jpg@5104"  /></div>
+            <div class="profile-text">                                          <br />
+                                            بسم الله الرحمن الرحیم<br />
+.<br />
+.<br />
+.<br />
+<br />
+من این وبلاگ را برای تمامی کسانی که مشتاق یادگیری و در کنارش کمی سرگرمی <br />
+<br />
+هستند ساخته ام.</div>
+          </div>
+        </div>
+        <div class="lm-bbg"></div>
+      </div>
+      
+              <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">تازه ترین مطالب</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                                  <li><a href="http://bankkoosar.mihanblog.com/post/161" title="شنبه 24 تیر 1396"> این آهنگو شدیداً توصیه میکنم !! </a></li>
+                                  <li><a href="http://bankkoosar.mihanblog.com/post/159" title="جمعه 16 تیر 1396"> برگشتمممم !!! </a></li>
+                                  <li><a href="http://bankkoosar.mihanblog.com/post/158" title="چهارشنبه 14 مهر 1395"> تسلیت </a></li>
+                                  <li><a href="http://bankkoosar.mihanblog.com/post/145" title="جمعه 14 خرداد 1395"> شرلوک قسمت اول ( پرونده صورتی ) </a></li>
+                                  <li><a href="http://bankkoosar.mihanblog.com/post/147" title="شنبه 25 اردیبهشت 1395"> دانلود کارتون zootopia ( دوبله فارسی ) </a></li>
+                                  <li><a href="http://bankkoosar.mihanblog.com/post/150" title="جمعه 17 اردیبهشت 1395"> خوشحالی یعنی این ! </a></li>
+                                  <li><a href="http://bankkoosar.mihanblog.com/post/149" title="سه شنبه 14 اردیبهشت 1395"> عکس های نکته دار </a></li>
+                                  <li><a href="http://bankkoosar.mihanblog.com/post/146" title="یکشنبه 12 اردیبهشت 1395"> دانلود کارتون کونگ فو پاندا 3 ( دوبله فارسی ) </a></li>
+                                  <li><a href="http://bankkoosar.mihanblog.com/post/148" title="شنبه 11 اردیبهشت 1395"> نقاشی های خارق العاده با رنگ های براق </a></li>
+                                  <li><a href="http://bankkoosar.mihanblog.com/post/138" title="دوشنبه 6 اردیبهشت 1395"> روز پدر </a></li>
+                                  <li><a href="http://bankkoosar.mihanblog.com/post/135" title="چهارشنبه 11 فروردین 1395"> بهترین روز دنیا </a></li>
+                                  <li><a href="http://bankkoosar.mihanblog.com/post/133" title="یکشنبه 8 فروردین 1395"> چرا 1 یك ـــــه ؟؟؟ چرا 2 دوئـــــــــه ؟؟؟؟ </a></li>
+                                  <li><a href="http://bankkoosar.mihanblog.com/post/130" title="یکشنبه 2 اسفند 1394"> دانلود انیمیشن کارتونی My Little Pony Friendship Games 2015 </a></li>
+                                  <li><a href="http://bankkoosar.mihanblog.com/post/125" title="جمعه 1 آبان 1394"> مقایسه ی جانوران امروزی با پدر بزرگ های ماقبل تاریخشان </a></li>
+                                  <li><a href="http://bankkoosar.mihanblog.com/post/124" title="پنجشنبه 30 مهر 1394"> زندگی در فضا </a></li>
+                                <li><a href="http://bankkoosar.mihanblog.com/post/list">لیست تمام مطالب</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+            
+              <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">موضوعات</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                                  <li> <a href="http://bankkoosar.mihanblog.com/post/category/8">دینی و معنوی(6) </a> </li>
+                                  <li> <a href="http://bankkoosar.mihanblog.com/post/category/6">انگلیسی(4) </a> </li>
+                                  <li> <a href="http://bankkoosar.mihanblog.com/post/category/5">متفرقه(57) </a> </li>
+                                  <li> <a href="http://bankkoosar.mihanblog.com/post/category/4">کارتون(21) </a> </li>
+                                  <li> <a href="http://bankkoosar.mihanblog.com/post/category/3">سرگرمی(57) </a> </li>
+                                  <li> <a href="http://bankkoosar.mihanblog.com/post/category/2">درسی(12) </a> </li>
+                                  <li> <a href="http://bankkoosar.mihanblog.com/post/category/1">علمی(14) </a> </li>
+                              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+            
+      
+      
+              <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid"> لینک های روزانه </div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                                  <li><a href="http://tizland.ir" title="برای باهوشا" target="_blank">سرزمین تیز هوش ها</a> </li>
+                                  <li><a href="http://tidakaren3000.avablog.ir" title="" target="_blank">دنیای انیمه</a> </li>
+                                  <li><a href="http://biamooz.blog.ir/" title="یادگیری" target="_blank">بیاموز</a> </li>
+                                  <li><a href="../mathandtheother.mihanblog.com/index.html" title="" target="_blank">ققنوس آرزو ها</a> </li>
+                                  <li><a href="http://s-lessonsteach.mihanblog.com/" title="مناسب برای دانش آموزای دوره ی متوسطه ." target="_blank">سکوی علم</a> </li>
+                                  <li><a href="http://www.jamroid.ir/" title="" target="_blank">جم روید</a> </li>
+                                  <li><a href="http://7themes.ir/" title="با سلام....
+ 
+خواهان تبادل لینک با وبلاگ زیبای شما هستیم.در صورت تمایل لینک رو تایید و اطلاع بدید.
+محمد - سون تم - مرجع تخصصی قالب وردپرس و پوسته های وبسایت های وردپرس" target="_blank">قالب وردپرس</a> </li>
+                                  <li><a href="http://buy-gripeez.lineblog.ir" title="" target="_blank">چسب جادویی گریپز</a> </li>
+                                  <li><a href="../www.mihanblog.com/index.html" title="" target="_blank">میهن بلاگ</a> </li>
+                                  <li><a href="http://webniaz.blogfa.com/" title="خدمات وبلاگ نویسی" target="_blank">وبیناز</a> </li>
+                                <li><a href="http://bankkoosar.mihanblog.com/linkdaily/"><b>همه لینکها</b></a></li>
+                <li><a href="javascript:linkdailyForm()"><b>ارسال لینک</b></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+            
+      
+              <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">نویسندگان</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                                  <li><a href="http://bankkoosar.mihanblog.com/post/author/1389286"><img src="../static.mihanblog.com/public/user_data/user_photo/464/1389286.jpg" style="width:16px;" /></a> <a href="http://bankkoosar.mihanblog.com/post/author/1389286" style="display:inline;"> Dead Me (100) 	            خودم</a></li>
+                              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+                    <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">برگه ها</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                                  <li> <a href="http://bankkoosar.mihanblog.com/extrapage/aboutme">پروفایل من</a> </li>
+                              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+            
+      <div class="lm">
+        <div class="lmtitle">
+          <div class="lmtitle-mid">جستجو در وبلاگ</div>
+        </div>
+        <div class="lmtext">
+          <div class="lmtext-mid">
+            <form id="frm-16077064665fd3a762bf82e" method="get" action="http://bankkoosar.mihanblog.com/post/search/fid/16077064665fd3a762bf82e"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+              <input type="text" name="search_text"/>
+              <input type="submit" value="بگرد و پيداش کن!"/>
+            <input type="hidden" name="frm-id" value="16077064665fd3a762bf82e" id="frm-id" /></form>          </div>
+        </div>
+        <div class="lm-bbg"></div>
+      </div>
+      
+              <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">آرشیو</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                                  <li><a href='http://bankkoosar.mihanblog.com/post/archive/1396/4/4'> هفته چهارم تیر 1396</a></li>
+                                  <li><a href='http://bankkoosar.mihanblog.com/post/archive/1396/4/3'> هفته سوم تیر 1396</a></li>
+                                  <li><a href='http://bankkoosar.mihanblog.com/post/archive/1395/7/2'> هفته دوم مهر 1395</a></li>
+                                  <li><a href='http://bankkoosar.mihanblog.com/post/archive/1395/3/2'> هفته دوم خرداد 1395</a></li>
+                                  <li><a href='http://bankkoosar.mihanblog.com/post/archive/1395/2/4'> هفته چهارم اردیبهشت 1395</a></li>
+                                <li><a href="http://bankkoosar.mihanblog.com/post/archive"><b>کل آرشیوها</b></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+               
+      
+              <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">دوستان</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                <li><a href="http://blogt.ir/">قالب وبلاگ</a></li>
+                                  <li> <a href="http://tizland.ir" title="برای باهوشا"  target="_blank"> سرزمین تیز هوش ها</a></li>
+                                  <li> <a href="http://tidakaren3000.avablog.ir" title=""  target="_blank"> دنیای انیمه</a></li>
+                                  <li> <a href="http://biamooz.blog.ir/" title="یادگیری"  target="_blank"> بیاموز</a></li>
+                                  <li> <a href="../mathandtheother.mihanblog.com/index.html" title=""  target="_blank"> ققنوس آرزو ها</a></li>
+                                  <li> <a href="http://s-lessonsteach.mihanblog.com/" title="وبی مناسب دانش آموزای دوره متوسطه"  target="_blank"> سکوی علم</a></li>
+                                  <li> <a href="http://www.jamroid.ir/" title=""  target="_blank"> جم روید</a></li>
+                                  <li> <a href="http://buy-gripeez.lineblog.ir" title=""  target="_blank"> چسب جادویی گریپز</a></li>
+                                  <li> <a href="http://fa.wikipedia.org" title=""  target="_blank"> ویکی پدیا</a></li>
+                                  <li> <a href="http://topnop.ir" title="مجله الکترونیکی جالب انگیز و سرگرم کننده"  target="_blank"> تاپ ناپ</a></li>
+                                  <li> <a href="http://webniaz.blogfa.com" title="خدمات وبلاگ نویسی"  target="_blank"> وبیناز</a></li>
+                                  <li> <a href="http://ucancam.blogfa.com" title=""  target="_blank"> گذرگاه</a></li>
+                                  <li> <a href="../www.mihanblog.com/index.html" title=""  target="_blank"> میهن بلاگ</a></li>
+                                <li><a href="http://bankkoosar.mihanblog.com/link/"><b>همه لینکها</b></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+            
+      
+      <div class="lm">
+        <div class="lmtitle">
+          <div class="lmtitle-mid">لینک های مفید</div>
+        </div>
+        <div class="lmtext">
+          <div class="lmtext-mid"> 
+            <ul><li><a href="http://vcad.ir/" target="_blank" title="آموزش تصویری اتوکد">آموزش اتوکد</a></li><li><a href="http://blogt.ir/" target="_blank" title="قالب وبلاگ">قالب وبلاگ</a></li></ul>
+          </div>
+        </div>
+        <div class="lm-bbg"></div>
+      </div>
+      
+      <div class="lm">
+        <div class="lmtitle">
+          <div class="lmtitle-mid">ابزارک های وبلاگ</div>
+        </div>
+        <div class="lmtext">
+          <div class="lmtext-mid"> <br>
+            <a href="http://artskin.ir/">قالب وبلاگ</a><br>
+            <br>
+                          <ul>
+                <li>کل بازدید:<script>getStatVar('total_view');</script></li>
+                <li>بازدید امروز :<script>getStatVar('today_view');</script></li>
+                <li>یازدید دیروز : <script>getStatVar('yesterday_view');</script></li>
+                <li>بازدید این ماه : <script>getStatVar('this_month_view');</script></li>
+                <li>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></li>
+                <li>تعداد نویسندگان : <script>getStatVar('total_author');</script></li>
+                <li>تعداد کل مطالب : <script>getStatVar('total_post');</script></li>
+                <li>آخرین بازدید : <script>getStatVar('last_view_date');</script></li>
+                <li>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></li>
+              </ul>
+                        <div style="text-align:center"> <br />
+              <br />
+              <!-- www.js.coo.ir -->
+<!-- begin the script-->
+<!-- این قسمت را در تگ <head> قرار دهید --> 
+<script language="JavaScript">
+var NS4 = (document.layers);    
+var IE4 = (document.all);
+var win = window;    
+var n   = 0;
+function findInPage(str) {
+  var txt, i, found;
+  if (str == ""<img border="0" src="Http://mihanblog.com/Yahoo/3.Gif">
+   return false;
+  if (NS4) {
+    if (!win.find(str))
+      while(win.find(str, false, true))
+        n++;
+    else
+      n++;
+    if (n == 0)
+      alert("Not found."<img border="0" src="Http://mihanblog.com/Yahoo/3.Gif">;
+  }
+  if (IE4) {
+    txt = win.document.body.createTextRange();
+    for (i = 0; i <= n && (found = txt.findText(str)) != false; i++) {
+      txt.moveStart("character", 1);
+      txt.moveEnd("textedit"<img border="0" src="Http://mihanblog.com/Yahoo/3.Gif">;
+    }
+    if (found) {
+      txt.moveStart("character", -1);
+      txt.findText(str);
+      txt.select();
+      txt.scrollIntoView();
+      n++;
+    } else {      if (n > 0) {
+        n = 0;        findInPage(str);
+      }      else
+        alert("Not found."<img border="0" src="Http://mihanblog.com/Yahoo/3.Gif">;
+    }  }  return false;}
+</script>
+<!-- این قسمت را در محل مورد نظر برای نمایش باگس جستجو قرار دهید -->
+ <form name="search" onSubmit="return findInPage(this.string.value);">
+<font size=3><input name="string" type="text" size=15 onChange="n = 0;"></font>
+<input type="submit" value="Find">
+</form>
+<!--end of the script-->
+<!-- www.js.coo.ir -->
+
+
+
+
+<p align='center'><script type='text/javascript' src='http://cafe-webniaz.ir/abzar/sargarmi/webniaz_ayamidanid.js'></script></p>
+
+
+
+
+<p align='center'><script type='text/javascript' src='http://cafe-webniaz.ir/abzar/mazhabi/webniaz_hadis2.js'></script></p>
+
+
+
+
+<p align='center'><script type='text/javascript' src='http://cafe-webniaz.ir/abzar/omoumi/saat1.bmp'></script></p>
+
+
+
+
+<!-- www.webniaz.blogfa.com --->
+<script>window.onload=function(){alert("خوش اومدی! نظر یادت نره!!")}
+window.onunload=function() {alert("یادت نره دوباره سر بزنیا!")}</script><script src="http://cafe-webniaz.ir/abzaronline/www.jquery.min.js?v39067"></script>
+<!-- www.webniaz.blogfa.com --->
+
+
+
+
+<p align='center'><script type='text/javascript' src='http://cafe-webniaz.ir/abzar/link/linkax4.bmp'></script></p>
+
+
+
+
+<p align='center'><script type='text/javascript' src='http://cafe-webniaz.ir/abzar/axotasvir/rotate4.bmp'></script></p>
+
+
+
+
+<!-- Start Cod Azan behtarinabzar.ir --->
+<script type="text/javascript" src="http://dl.behtarinabzar.ir/tools/azan/azan.php?sh=25&colort=020308&colort2=FF2E12&bg=B4FFB0&c=CC1260"></script><div style="display:none"><h1><a href="http://www.behtarinabzar.ir">ابزار نمایش اوقات شرعی</a></h1></div>
+<!-- End Cod Azan behtarinabzar.ir --->
+
+
+
+
+<script src='http://pichak.net/blogcod/weather/cod.php?width=6&style=1&textcolor=020507&bgcolor=FFF8F3&city=IRXX0029&border=FF2D1A' type=text/javascript ></script><div style='display:none'><h3><a href=http://pichak.net>کد نمایش آب و هوا</a></h3><h2><a href=http://pichak.net/blogcod/weather>کد نمایش آب و هوا</a></h2></div>
+
+
+
+
+<center><script type="text/javascript" src="http://PichAk.nEt/blogcod/data/cod/06.js"></script></center>﻿<div style="display:none;"><li><a href="http://shufa.ir">شوفا</a>
+</li></div>
+
+
+
+
+<script type=text/javascript src="http://PICHAK.net/zekr-rooz/show.php?n=11"></script><div style="display:none"><a target="_blank" title="کد ذکر ایام هفته" href="http://picHAk.net/zekr-rooz">کد ذکر ایام هفته</a></div>
+
+
+
+
+<!-- Upper Code by Nightnama.ir --->
+<script type="text/javascript" src="http://nightnama.ir/codes/upper/jquery.min.js"></script><script>var abzar = "<img src= http://nightnama.ir/codes/upper/2/9.png>";</script><script type="text/javascript" src="http://nightnama.ir/codes/upper/scrolltop.js"></script><div style="display:none"><h1><a href="http://nightnama.ir">هدایت به بالا</a></h1></div>
+<P><A href="http://nightnama.ir/codes/upper" target=_blank><SPAN 
+style="FONT-WEIGHT: 700; TEXT-DECORATION: none">کد هدایت به بالا</FONT> </SPAN></A></P>
+<!-- Upper Code by Nightnama.ir --->
+
+
+
+
+
+<p align='center'><script type='text/javascript' src='http://cafe-webniaz.ir/bmp/guitar.bmp'></script></p>
+
+
+
+
+<p align='center'><script type='text/javascript' src='http://cafe-webniaz.ir/bmp/piano.bmp'></script></p>
+
+
+
+
+<p align='center'><script type='text/javascript' src='http://cafe-webniaz.ir/bmp/ashpazi.bmp'></script></p
+
+
+
+
+<p align='center'><script type='text/javascript' src='http://cafe-webniaz.ir/bmp/tamarkozhavas.bmp'></script></p>
+
+
+
+<p align='center'><script type='text/javascript' src='http://cafe-webniaz.ir/abzar/zibasaz/aviz5.bmp'></script></p>
+
+
+
+
+<P><A target="_blank" Title="icon => webniaz.blogf.com" href="http://www.webniaz.blogfa.com"><IMG style="WIDTH: 100px; HEIGHT: 100px" 
+border=0 hspace=0   align=baseline 
+src="http://s3.picofile.com/file/7470654622/6.jpg"></A> </P>
+
+
+
+
+<P><A target="_blank" Title="icon => webniaz.blogf.com" href="http://www.webniaz.blogfa.com"><IMG style="WIDTH: 100px; HEIGHT: 100px" 
+border=0 hspace=0   align=baseline 
+src="http://s1.picofile.com/file/7470654294/4.jpg"></A> </P>
+
+
+
+
+<P><A target="_blank" Title="icon => webniaz.blogf.com" href="http://www.webniaz.blogfa.com"><IMG style="WIDTH: 100px; HEIGHT: 100px" 
+border=0 hspace=0   align=baseline 
+src="http://s3.picofile.com/file/7470656020/11.jpg"></A> </P>
+
+
+
+
+<P><A target="_blank" Title="icon => webniaz.blogf.com" href="http://www.webniaz.blogfa.com"><IMG style="WIDTH: 100px; HEIGHT: 100px" 
+border=0 hspace=0   align=baseline 
+src="http://s3.picofile.com/file/7470656555/13.jpg"></A> </P>
+
+
+
+
+<P><A target="_blank" Title="icon => webniaz.blogf.com" href="http://www.webniaz.blogfa.com"><IMG style="WIDTH: 100px; HEIGHT: 100px" 
+border=0 hspace=0   align=baseline 
+src="http://s3.picofile.com/file/7470657090/14.jpg"></A> </P>
+
+
+
+
+<P><A target="_blank" Title="icon => webniaz.blogf.com" href="http://www.webniaz.blogfa.com"><IMG style="WIDTH: 100px; HEIGHT: 100px" 
+border=0 hspace=0   align=baseline 
+src="http://s1.picofile.com/file/7299628274/2.gif"></A> </P>
+
+
+
+<P><A target="_blank" Title="icon => webniaz.blogf.com" href="http://www.webniaz.blogfa.com"><IMG style="WIDTH: 100px; HEIGHT: 100px" 
+border=0 hspace=0   align=baseline 
+src="http://s1.picofile.com/file/7299635264/5.jpg"></A> </P>
+
+
+
+<P><A target="_blank" Title="icon => webniaz.blogf.com" href="http://www.webniaz.blogfa.com"><IMG style="WIDTH: 100px; HEIGHT: 100px" 
+border=0 hspace=0   align=baseline 
+src="http://s1.picofile.com/file/7299636662/7.gif"></A> </P>
+
+
+
+
+
+<P><A target="_blank" Title="icon => webniaz.blogf.com" href="http://www.webniaz.blogfa.com"><IMG style="WIDTH: 100px; HEIGHT: 100px" 
+border=0 hspace=0   align=baseline 
+src="http://s1.picofile.com/file/7299848816/11.jpg"></A> </P>
+
+
+
+<P><A target="_blank" Title="icon => webniaz.blogf.com" href="http://www.webniaz.blogfa.com"><IMG style="WIDTH: 100px; HEIGHT: 100px" 
+border=0 hspace=0   align=baseline 
+src="http://s1.picofile.com/file/7299640428/10.jpg"></A> </P>
+
+
+
+
+<P><A target="_blank" Title="icon => webniaz.blogf.com" href="http://www.webniaz.blogfa.com"><IMG style="WIDTH: 100px; HEIGHT: 100px" 
+border=0 hspace=0   align=baseline 
+src="http://s1.picofile.com/file/7299851391/15.jpg"></A> </P>
+
+
+
+
+<P><A target="_blank" Title="icon => webniaz.blogf.com" href="http://www.webniaz.blogfa.com"><IMG style="WIDTH: 100px; HEIGHT: 100px" 
+border=0 hspace=0   align=baseline 
+src="http://s1.picofile.com/file/7313214187/1.jpg"></A> </P>
+
+
+
+
+<P><A target="_blank" Title="icon => webniaz.blogf.com" href="http://www.webniaz.blogfa.com"><IMG style="WIDTH: 100px; HEIGHT: 100px" 
+border=0 hspace=0   align=baseline 
+src="http://s1.picofile.com/file/7313216448/8.gif"></A> </P>
+
+
+
+
+
+<p align="center"><a title="قالب وبلاگ" target="_blank" href="http://slidetheme.ir"><img src='http://zibasaz.net/flower-icone/1.jpg' border='0' /></a></p>﻿<!-- zibasazi -->
+
+
+
+
+<p align="center"><a title="قالب وبلاگ" target="_blank" href="http://slidetheme.ir"><img src='http://zibasaz.net/icone/22.png' border='0' /></a></p>﻿<!-- zibasazi -->
+
+
+
+
+<p align="center"><a title="قالب وبلاگ" target="_blank" href="http://slidetheme.ir"><img src='http://zibasaz.net/icone/37.png' border='0' /></a></p>﻿<!-- zibasazi -->
+
+
+
+
+<p align="center"><a title="قالب وبلاگ" target="_blank" href="http://slidetheme.ir"><img src='http://zibasaz.net/icone/43.png' border='0' /></a></p>﻿<!-- zibasazi -->
+
+
+
+
+
+<p align="center"><a title="قالب وبلاگ" target="_blank" href="http://slidetheme.ir"><img src='http://zibasaz.net/icone/45.png' border='0' /></a></p>﻿<!-- zibasazi -->
+
+
+
+
+<p align="center"><a title="قالب وبلاگ" target="_blank" href="http://slidetheme.ir"><img src='http://zibasaz.net/icone/57.png' border='0' /></a></p>﻿<!-- zibasazi -->
+
+
+
+
+
+<p align="center"><a title="قالب وبلاگ" target="_blank" href="http://slidetheme.ir"><img src='http://zibasaz.net/icone/64.png' border='0' /></a></p>﻿<!-- zibasazi -->
+
+
+
+
+<!-- www.webniaz.blogfa.com --->
+<style> html, body{background : url(http://cafe-webniaz.ir/pics/bg/bg37.jpg)}</style>
+<script src="http://cafe-webniaz.ir/abzaronline/www.jquery.min.js?v39067"></script>
+<!-- www.webniaz.blogfa.com --->
+
+
+
+
+<br />
+              <br />
+              
+		<form id="frm-16077064665fd3a762bf9f5" method="post" action="http://bankkoosar.mihanblog.com/poll/new/fid/16077064665fd3a762bf9f5/atrty/1607706466/avrvy/0/key/eec4da8e66c4470b608d53ec6837d9c9/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="341655" id="data[pollid]" />		
+                <li> نظر شما درباره این وبلاگ چیست؟<br>
+                   <label><input type="radio" name="data[answer]" value="v1">عالی</label><br>
+                   <label><input type="radio" name="data[answer]" value="v2">خیلی خوب</label><br>
+                   <label><input type="radio" name="data[answer]" value="v3">خوب</label><br>
+                   <label><input type="radio" name="data[answer]" value="v4">متوسط</label><br>
+                   <label><input type="radio" name="data[answer]" value="v5">بد</label><br>
+                   <label><input type="radio" name="data[answer]" value="v6">افتضاح</label><br>
+                                    <input type="submit" value="بگو ببینم!"/>
+                </li>
+              
+		<input type="hidden" name="frm-id" value="16077064665fd3a762bf9f5" id="frm-id" /></form>              <br />
+            </div>
+          </div>
+        </div>
+        <div class="lm-bbg"></div>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+    <!--- e left --->
+    
+    <div style="clear:both"></div>
+  </div>
+  <!--- e main --->
+  
+  <div class="footer">
+    <div class="footer-mid">تمام حقوق وبلاگ متعلق به نویسنده‌ی آن می باشد :: <a href="http://artskin.ir/"> قالب وبلاگ: آرت اسکین</a> 
+      <!--- برای حفظ حقوق طراح قالب لطفا نام و آدرس طراح را تغییر نداده و پاک نفرمایید. سپاس ---> 
+    </div>
+  </div>
+  <!--- e footer ---> 
+  
+</div>
+<!--- e page --->
+
+</body>
+</html>
+
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'bankkoosar.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

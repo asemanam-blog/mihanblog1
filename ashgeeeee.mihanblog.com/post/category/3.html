@@ -1,0 +1,1343 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc@rsd.html" />
+<script type="text/javascript" src="../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*813189*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[139]='2';commentCnt[143]='1';commentCnt[144]='1';commentCnt[146]='1';commentCnt[149]='1';commentCnt[296]='1';commentCnt[354]='18';commentCnt[358]='1';commentCnt[359]='3';commentCnt[530]='17';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[139]='0';
+mihanblogDisLikeArrCnt[139]='0';
+mihanblogLikeArrCnt[143]='0';
+mihanblogDisLikeArrCnt[143]='0';
+mihanblogLikeArrCnt[144]='0';
+mihanblogDisLikeArrCnt[144]='0';
+mihanblogLikeArrCnt[146]='0';
+mihanblogDisLikeArrCnt[146]='0';
+mihanblogLikeArrCnt[149]='0';
+mihanblogDisLikeArrCnt[149]='0';
+mihanblogLikeArrCnt[354]='0';
+mihanblogDisLikeArrCnt[354]='0';
+mihanblogLikeArrCnt[358]='0';
+mihanblogDisLikeArrCnt[358]='0';
+mihanblogLikeArrCnt[359]='0';
+mihanblogDisLikeArrCnt[359]='0';
+mihanblogLikeArrCnt[530]='1';
+mihanblogDisLikeArrCnt[530]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://ashgeeeee.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://ashgeeeee.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','517');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','دوشنبه 6 دی 1395');
+	
+	setStatVar('today_view','30');
+	setStatVar('yesterday_view','18');
+	
+	setStatVar('this_month_view','1849');
+	setStatVar('last_month_view','462');
+
+	setStatVar('total_view','188014');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (05:32)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://ashgeeeee.mihanblog.com/statupdate/?data[refereruri]=http://ashgeeeee.mihanblog.com/&data[postid]=&data[requesturi]=/post/category/3&data[sdate]=1607830743&data[hash]=a88392770f7b3d95618a090dfc3627e7&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://ashgeeeee.mihanblog.com/post/category/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://ashgeeeee.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://ashgeeeee.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Theme Designer" content="www.MyTheme.ir">
+
+    <meta name="description" content="عشقی"/>
+    <meta name="keywords" content="عشق"/>
+    <link rel="alternate" type="application/rss+xml" title="عشق" href="../rss/index.html" />
+    <link rel="alternate" type="application/atom+xml" title="عشق" href="../atom/index.html" />
+    <link href="http://mihanblog.com/public/public/user_data/template/2099039/style.css" type="text/css" rel="stylesheet">
+
+    <title>عشق - مطالب اس ام اس عاشقانه</title>
+
+</head>
+
+<body>
+
+<div class="">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td class=div2 valign=top>
+
+<div class=div60></div>
+
+<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>درباره وبلاگ</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div31><center></center><br>
+            <font class=text1>چون گوش شنوایی نیافتم حرفایم رو مینویسم<br>
+                مدیر وبلاگ : <a href="../author/590544.html"> محمد نوریزاده</a></font></div>
+    </div><div class=div30></div>
+</div>
+
+<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>مطالب اخیر</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div32><font class=text1><a href="../533.html">بعد از چند سال</a></font></div><div class=div32><font class=text1><a href="../532.html">m13</a></font></div><div class=div32><font class=text1><a href="../531.html">++دخترا تـــــرســــونیستن++</a></font></div><div class=div32><font class=text1><a href="../530.html">aks</a></font></div><div class=div32><font class=text1><a href="../529.html">aks</a></font></div><div class=div32><font class=text1><a href="../528.html">الهی چه دختر نازیه.......</a></font></div><div class=div32><font class=text1><a href="../527.html">دوستت دارم . . .</a></font></div><div class=div32><font class=text1><a href="../526.html">کودکی</a></font></div><div class=div32><font class=text1><a href="../525.html">شب</a></font></div><div class=div32><font class=text1><a href="../524.html">چرا نیستی کنارم؟؟؟؟؟؟؟؟</a></font></div><div class=div32><font class=text1><a href="../523.html">عشق</a></font></div><div class=div32><font class=text1><a href="../522.html">اگر جمله ی دوستت دارم</a></font></div><div class=div32><font class=text1><a href="../521.html">عاشقیم!</a></font></div><div class=div32><font class=text1><a href="../520.html">داستان عاشقی جدید اردیبهشت 92 واقعی(داستان خودم نیست من هیچ وقت حرف دلم رو به کسی نمیزنم)</a></font></div><div class=div32><font class=text1><a href="../519.html">تنها راه رسیدن</a></font></div>    </div><div class=div30></div>
+</div>
+<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>موضوعات</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div32><font class=text1><a href="6.html">داستان عاشقانه و زیبا (13)</a></font></div><div class=div32><font class=text1><a href="5.html">شعر های عاشقانه (9)</a></font></div><div class=div32><font class=text1><a href="4.html">عشق و تنهایی....! (40)</a></font></div><div class=div32><font class=text1><a href="3.html">اس ام اس عاشقانه (10)</a></font></div><div class=div32><font class=text1><a href="2.html">عشق (68)</a></font></div><div class=div32><font class=text1><a href="1.html">جملات عاشقانه (237)</a></font></div>    </div><div class=div30></div>
+</div>
+<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>آرشیو وبلاگ</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div32><font class=text1><a href="../archive/1395/10.html"> دی 1395</a></font></div><div class=div32><font class=text1><a href="../archive/1392/12.html"> اسفند 1392</a></font></div><div class=div32><font class=text1><a href="../archive/1392/8.html"> آبان 1392</a></font></div><div class=div32><font class=text1><a href="../archive/1392/7.html"> مهر 1392</a></font></div><div class=div32><font class=text1><a href="../archive/1392/6.html"> شهریور 1392</a></font></div><div class=div32><font class=text1><a href="../archive/1392/5.html"> مرداد 1392</a></font></div><div class=div32><font class=text1><a href="../archive/1392/3.html"> خرداد 1392</a></font></div><div class=div32><font class=text1><a href="../archive/1392/2.html"> اردیبهشت 1392</a></font></div><div class=div32><font class=text1><a href="../archive/1391/12.html"> اسفند 1391</a></font></div><div class=div32><font class=text1><a href="../archive/1391/10.html"> دی 1391</a></font></div><div class=div32><font class=text1><a href="../archive/1391/7.html"> مهر 1391</a></font></div><div class=div32><font class=text1><a href="../archive/1391/6.html"> شهریور 1391</a></font></div>        <div class=div32><font class=text1><a href="../archive.html">آرشیو كل مطالب</a></font></div>
+    </div><div class=div30></div>
+</div>
+<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>پیوندهای روزانه</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div32><font class=text1><a href="http://shopglasses.ir/post/1" title="" target="_blank">عینک آفتابی مردانه</a></font></div><div class=div32><font class=text1><a href="../../../pandababy.mihanblog.com/index.html" title="" target="_blank">**❤**❤**❤**gaty paty **❤**❤**❤**</a></font></div><div class=div32><font class=text1><a href="http://www.khorshidgroup.org" title="" target="_blank">گروه اینترنتی خورشید</a></font></div><div class=div32><font class=text1><a href="http://group.sunbow.ir/" title="بهترین لحظات و بهترین  سرگرمی ها" target="_blank">شادترین گروه دختر و پسرای ایرونی</a></font></div><div class=div32><font class=text1><a href="http://www.khorshidgroup.org" title="" target="_blank">گروه اینترنتی خورشید</a></font></div><div class=div32><font class=text1><a href="http://es32.ir" title="آپدیت روزانه آنتی ویروس شما با قویترین سرور آپدیت در ایران تحویل آنی اکانتها بعد از پرداخت آنلاین اکانت یک ماهه فقط و فقط یک هزار تومان اکانت یکساله ده هزار تومان و انواع اکانتهای 2 و 3 و 6 و 9 ماهه" target="_blank">اکانت اختصاصی آپدیت نود 32</a></font></div><div class=div32><font class=text1><a href="http://www.namadownload.com" title="سلام،حال شما؟خسته نباشید.بنده آیناز حسن پور هستم.قصد دارم سایتم رو هرچه سریعتر به رتبه ی بالا برسونم.راستش وضع مالیم چندان مناسب نبود واسه همین میخوام به من کمک کنید تا مطالب بیشتری آپلود کنم.و یا در بهتر کردن سایتم و بخش های مختلف اون از جمله فروشگاه و یا انجمن سایت منو یاری کنید.ضمنا سعی میکنم در سود و درآمد آینده ی سایتم شما رو هم سهیم کنم.اونقدا هم بیمعرفت نیستم که لطف عزیزی مثل شما رو فراموش کنم.اگه موافق بودید که همکاری کنید شما رو به عنوان یکی از نویسندگان سایتم و مدیران ارشد سایتم قرارتون میدم.مطمئنم میتونیم با کمک همدیگه به یه درآمد عالی برسیم.این درآمد رو واسه خرج زندگیم میخوام.آخه من تمام خونوادم رو توی یه حادثه از دست دادم.به هر حال لطفتون رو فراموش نمیکنم.پاسختون رو در بخش نظرات سایتم ارسال کنید لطفا.خوشحال شدم.فعلا
+http://www.namadownload.com" target="_blank">آیناز افشار پور</a></font></div><div class=div32><font class=text1><a href="http://www.top700.com" title="گاهی شانس فقط یک بار به آدم رو میاره پس باید قدرش رو دونست بهترین فرصت زندگی شما برای ثروتمند شدن مجموعه ای بی نظیر برای اولین بار در ایران برای کسانی که می خواهند بهتر زندگی کنند و از کمترین وقت و هزینه بیشترین سود را ببرند.برای آگاهی از جزییات بیشتر به لینک زیر مراجعه کنید.
+http://www.top700.com" target="_blank">$سایت تخصصی کسب درآمد از اینترنت$</a></font></div><div class=div32><font class=text1><a href="http://1o2.ir/c6p87" title="سامانه تبلیغاتی ایران پاپ آپ در نظر دارد تا محیط و بستری مناسب و حرفه ای برای وبمستران عزیز فراهم کند تا بتوانند از بازدیدکنندگان خود به درآمد برسند.
+در این سیستم به ازای هر پاپ آپ که در سایت شما باز شود ، مبلغ 20 ریال تعلق می گیرد و پس از رسیدن به حد نصاب ( 100 هزار ریال ) می توانید درخواست واریز آن را بدهید.
+این سامانه مجهز به سیستم ضد تقلب بوده و در هر 24 ساعت برای هر آی پی منحصر به فرد ، یک بار پاپ آپ محاسبه خواهد شد.
+.
+از طریق این لینک میتوانید ثبت نام نمایید:
+http://1o2.ir/c6p87
+.
+.
+.
+.
+تی شارژ:
+http://oto.tbooks.xzn.ir
+تی بوکز:
+http://tbooks.ir" target="_blank">کسب درآمد آنی از اینترنت</a></font></div><div class=div32><font class=text1><a href="http://idehhost.com" title="تبدیل وبلاگ به سایت فقط با 20 تومان برای 1سال 
+هزینه سال های بعد 14.000تومان :هاست دامنه ملی(ir)
+آموزشه کار رایگان 
+راه اندازی رایگان
+راهنمایی و کمک رایگان
+09193198330
+تمامی مراحله نصب و کانفیگ رایگان
+ایده هاست ارزان ترین در ایران!
+ارزان و با کیفیت
+09193198330
+درصورت بروز هرگونه مشکل با پشتیبان در ارتباط باشید" target="_blank">امیرعلی</a></font></div>        <div class=div32><font class=text1><a href="../../linkdaily/index.html">همه پیوندهای روزانه</a></font></div>
+        <div class=div32><font class=text1><a href="javascript:linkdailyForm()">ارسال پیوند روزانه</a></font></div>
+    </div><div class=div30></div>
+</div>
+<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>پیوندها</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div32><font class=text1><a href="../../../fereshte97.mihanblog.com/index.html" title="" target="_blank">fereshteye pak</a></font></div><div class=div32><font class=text1><a href="http://www.dokhtaraketanhaaa.blogfa.com/" title="" target="_blank">دخترک تنها</a></font></div><div class=div32><font class=text1><a href="http://buy-glasses.ir" title="" target="_blank">خرید عینک آفتابی</a></font></div><div class=div32><font class=text1><a href="http://karizmacell.com/" title="بزرگترین فروشگاه اینترنتی کشور" target="_blank">فروشگاه اینترنتی کاریزماسل</a></font></div><div class=div32><font class=text1><a href="http://music74sk.mihanblog.com/" title="" target="_blank">نگین</a></font></div><div class=div32><font class=text1><a href="http://delbakhteh.loxblog.com/" title="" target="_blank">پایان عشق</a></font></div><div class=div32><font class=text1><a href="http://blackloves.loxblog.com/cat.php?cat=1" title="" target="_blank">ღღحـریــم عشـــق ღღ</a></font></div><div class=div32><font class=text1><a href="http://love-sole.blogfa.com/" title="" target="_blank">غزل</a></font></div><div class=div32><font class=text1><a href="http://raha3074.blogfa.com/" title="" target="_blank">رها.....!$!</a></font></div><div class=div32><font class=text1><a href="../../../eshghooolanehayeman.mihanblog.com/index.html" title="" target="_blank">ღ♥love♥ღ</a></font></div><div class=div32><font class=text1><a href="http://www.sinahooti.blogfa.com/" title="" target="_blank">دل عاشق سیناهوتی</a></font></div><div class=div32><font class=text1><a href="http://1ghatreashk.blogfa.com/" title="" target="_blank">سهم من از عشق</a></font></div><div class=div32><font class=text1><a href="http://agahidan9.rozblog.com " title="" target="_blank">تبادل لینک اتوماتیک و رایگان</a></font></div><div class=div32><font class=text1><a href="http://alishmastanha.blogfa.com/" title="" target="_blank">دوست داشتنی</a></font></div><div class=div32><font class=text1><a href="http://www.tanha-211.blogfa.com/" title="" target="_blank">صداقت گمشده ... !!!</a></font></div>        <div class=div32><font class=text1><a target="_blank" href="http://www.mytheme.ir">بهترین قالب های وبلاگ</a></font></div>
+        <div class=div32><font class=text1><a href="../../link/index.html">همه پیوندها</a></font></div>
+    </div><div class=div30></div>
+</div>
+<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>نویسندگان</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div32><font class=text1><a href="../author/590544.html"> محمد نوریزاده (517)</a></font></div>    </div><div class=div30></div>
+</div>
+
+
+		<form id="frm-16076702045fd319bc603ac" method="post" action="http://ashgeeeee.mihanblog.com/poll/new/fid/16076702045fd319bc603ac/atrty/1607670204/avrvy/0/key/e3d3a79be0baf740f202a6f7c859bb46/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="160330" id="data[pollid]" />		<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>نظرسنجی</font></div></div>
+    <div class=div342></div>
+    <div class=div341>        <div class=div32><font class=text1>ایا تا به حال عاشق شدید<br>
+            <label><input type="radio" name="data[answer]" value="v1">بله</label><br><label><input type="radio" name="data[answer]" value="v2">خیر</label><br><label><input type="radio" name="data[answer]" value="v3">عاشق بودم</label><br><label><input type="radio" name="data[answer]" value="v4">عاشق هستم</label><br><label><input type="radio" name="data[answer]" value="v5">بدم میاد</label><br></font>
+            <div align="center"><br><input type="submit" value="ثبت" style="font-family: Tahoma; font-size: 9pt"><br><br></div></div>    </div><div class=div30></div>
+</div>
+		<input type="hidden" name="frm-id" value="16076702045fd319bc603ac" id="frm-id" /></form>
+<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>برچسبها</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div32><font class=text1><a href="../tag/عشق+بد.html">عشق بد</a></font></div><div class=div32><font class=text1><a href="../tag/شعر+عاشقانه.html">شعر عاشقانه</a></font></div><div class=div32><font class=text1><a href="../tag/دوستت+دارم.html">دوستت دارم</a></font></div><div class=div32><font class=text1><a href="../tag/عاشق.html">عاشق</a></font></div><div class=div32><font class=text1><a href="../tag/عشق.html">عشق</a></font></div><div class=div32><font class=text1><a href="../tag/عشقی.html">عشقی</a></font></div><div class=div32><font class=text1><a href="../tag/عاشقانه.html">عاشقانه</a></font></div><div class=div32><font class=text1><a href="../tag/شماره+دختر.html">شماره دختر</a></font></div><div class=div32><font class=text1><a href="../tag/معشوق.html">معشوق</a></font></div><div class=div32><font class=text1><a href="../tag/دختر.html">دختر</a></font></div>    </div><div class=div30></div>
+</div>
+<form id="frm-16076702045fd319bc60b7b" method="get" action="http://ashgeeeee.mihanblog.com/post/search/fid/16076702045fd319bc60b7b"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> <div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>جستجو</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div32><center><input type="text" name="search_text"><br>
+            <input type="submit" value="جستجو" style="font-family: Tahoma; font-size: 9pt"></center></div>
+    </div><div class=div30></div>
+</div><input type="hidden" name="frm-id" value="16076702045fd319bc60b7b" id="frm-id" /></form>
+<div class=div24>
+    <div class=div35>
+        <div class=div25><font class=text5>آمار وبلاگ</font></div></div>
+    <div class=div342></div>
+    <div class=div341>
+        <div class=div32><font class=text1>کل بازدید : <script>getStatVar('total_view');</script></font></div>
+        <div class=div32><font class=text1>بازدید امروز :<script>getStatVar('today_view');</script></font></div>
+        <div class=div32><font class=text1>بازدید دیروز : <script>getStatVar('yesterday_view');</script></font></div>
+        <div class=div32><font class=text1>بازدید این ماه : <script>getStatVar('this_month_view');</script></font></div>
+        <div class=div32><font class=text1>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></font></div>
+        <div class=div32><font class=text1>تعداد نویسندگان : <script>getStatVar('total_author');</script></font></div>
+        <div class=div32><font class=text1>تعداد کل پست ها : <script>getStatVar('total_post');</script></font></div>
+        <div class=div32><font class=text1>آخرین بازدید : <script>getStatVar('last_view_date');</script></font></div>
+        <div class=div32><font class=text1>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></font></div>
+    </div><div class=div30></div>
+</div>
+<div class=div24>
+
+    <style>
+
+
+
+        .clearfix {display: inline-block;}
+        .clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+
+
+
+        .cblike{
+            margin:4px 0 4px 35px;
+        }
+        .cblike a {
+            float:left;
+            padding:3px;
+            text-align:center;
+            font-size:12px;
+            color:#FFF;
+            display:block;
+            line-height:15px;
+            text-decoration: none;
+        }
+
+
+
+
+        .cblike a.clike_plus {
+            background-color:#009900 ; /*green #039B03*/
+
+            border-radius: 5px ;
+
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+
+            /*border:1px solid green;
+            border-right:0px;*/
+        }
+        .cblike a.clike_minus {
+            background-color:#CC0000;
+            border-radius: 5px ;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+
+            /*border:1px solid red;
+            border-left:0px;*/
+        }
+        .cblike a.clike_minus:hover {
+            background-color:red;
+            text-decoration: none;
+        }
+        .cblike a.clike_plus:hover {
+            background-color:green;
+            text-decoration: none;
+        }
+        .cblike a span{
+            font-weight:bold;
+            font-size:13px;
+
+            color:#fff;
+        }
+
+
+
+        .mihan_logo {
+            background: url("http://mihanblog.com/public/public/images/logo/poweredby.gif") no-repeat scroll center top transparent;
+            height: 131px;
+            margin-top: 10px;
+            text-align: center;
+        }</style>
+    <div class="mihan_logo"></div>
+
+    <center><!-- start logo cod off http://moshavereee.mihanblog.com/ --><p align="center"><p align="center"><a href="../../../moshavereee.mihanblog.com/index.html" target="_blank"><img border="0" src="http://www.astroupload.com/uploads/1380014399711.gif" width="150" height="200" alt="محمد نوریزاده"></a></p><!--finish logo cod off http://moshavereee.mihanblog.com/ -->
+
+
+
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=3040205&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=3040205" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code -->
+
+
+
+
+
+
+<p align="center"><a href="../../../mohamadrasoolallah.mihanblog.com/index.html" target="_blank"><img border="0" src="http://upload7.ir/images/67403464696329409987.gif" width="120" alt="محمد رسول الله" height="240"></a><br><input onclick="this.select()" type="text" width="356" name="T1" size="15" value='<!-- start logo cod off http://mohamadrasoolallah.mihanblog.com --><p align="center"><p align="center"><a href="http://mohamadrasoolallah.mihanblog.com" target="_blank"><img border="0" src="http://upload7.ir/images/67403464696329409987.gif" width="120" height="240" alt="محمد رسول الله"></a></p><!--finish logo cod off http://mohamadrasoolallah.mihanblog.com -->' dir="ltr" ></p><div style="display:none"><a href="http://blogers.ir">وبلاگ</a>-<a href="http://blogers.ir/cod/make-logo-banner-cod/">کد لوگو و بنر</a></div>
+
+
+
+
+
+ <script language="javascript" src="http://blogskins.ir/tools/player/?pl=1&file=http://up.winplay.ir/91/tir/Ali_Abdolmaleki_-_Engari_Marizam_%5B128%5D.mp3&start=1&random=1&vol=90"></script><br><a href="../../../codejadidmusic.mihanblog.com/index.html"target="_blank" >کد اهنگ جدید برای وبلاگ </a><br></center></div>
+
+</td>
+
+<td class=div1 valign=top>
+
+    <div class=div61>
+        <div class=div10><font class=title>عشق</font></div>
+        <div class=div12><font class=des>زندگی بدون عشق هیچ معنایی ندارد</font></div>
+    </div>
+
+    		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="../530.html">aks</a></font></div>
+            <div class=div58><font class=text7>چهارشنبه 3 مهر 1392 :: نویسنده : <a href="../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><img src="http://upload7.ir/images/30691091201189294076.jpg">
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="6.html" class=text4>داستان عاشقانه و زیبا</a>،&nbsp;<a href="5.html" class=text4>شعر های عاشقانه</a>،&nbsp;<a href="3.html" class=text4>اس ام اس عاشقانه</a>،&nbsp;<a href="2.html" class=text4>عشق</a>،&nbsp;<a href="4.html" class=text4>عشق و تنهایی....!</a>،&nbsp;<a href="1.html" class=text4>جملات عاشقانه</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                                <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="../530.html#commentlist">نظرات (<script>setCommentCnt(530)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('530','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/359">اس ام اس ویژه محکومیت اهانت به قرآن ، مقدس ترین کتاب آسمانی</a></font></div>
+            <div class=div58><font class=text7>شنبه 15 مهر 1391 :: نویسنده : <a href="../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">به نام خداوند جان بازه ها / جمیع المعارف خداوند ماه</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">به نام خداوند معشوقه ام نازنین / به نام خداوند زیبای زیباترین . . .</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">حادثه ی اهانت به قرآن و پیامبر عظیم الشان (ص)، با همه ی تلخی ،در دل خود حامل بشارتی بزرگ است.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">خورشید پرفروغ قرآن روز به روز بلندتر و درخشنده تر خواهد شد . . .</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">(مقام معظم رهبری)</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">آسمان تنگ شد و زهر هلاهل بارید / فتنه از لانه ی صهیون و ستم، آغازید</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">نامه ی مریم و عیسی و خدا سوزاندند / بذر از کینه زده، گریه و خون رویاندند</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">قلب، از فتنه ی صهیون و سیا خونبارست / این نه از سوی نصاراست، ز استکبارست . . .</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">یا صاحب الزمان!</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">جز تسلیت حرفی برای گفتن و تسکین قلب نازنینتان نداریم شما خود بهتر می دانید</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">که ناراحتی دوستانتان فقط زمانی به پایان می رسد که قرآن ناطق و امامشان برای انتقام</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">از چنین رذیلان پستی بیاید و عدالتی جهانی را برپا کند.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">اللهم عجل لولیک الفرج</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">از پس لانه ی تان مرد به پا می سازیم / مشعل از سوخته ی حرف خدا می سازیم</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">لانه ی فتنه به مردان خدا می گیریم / قدس را عاقبت از چنگ شما می گیریم . . .</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">زیر سم اسب وحوش، جسم حسین بن علی(ع)</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">لیک چه شد جز آنکه گشت نورش به عالم منجلی</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">امروز هم گرچه زدند بر قلب ما آتش، ولی</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">به خواست حق روشن شود از نور قرآن عالمی . . .</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">با خدا باش ، پادشاهی کن ، بی خدا باش ، هرچه خواهی کن . . .</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">.</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">با تمام وجود گناه کردیم</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">اما نه نعمتهایش را از ما گرفت ، نه گناهانمان را فاش کرد</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">بیندیش اگر اطاعتش کنیم چه میکند&nbsp; . . .</span><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><br style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; "><span style="font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: center; ">(شریعتی)</span>
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="3.html" class=text4>اس ام اس عاشقانه</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%A7%D8%B3%20%D8%A7%D9%85%20%D8%A7%D8%B3%20%D9%88%DB%8C%DA%98%D9%87%20%D9%85%D8%AD%DA%A9%D9%88%D9%85%DB%8C%D8%AA%20%D8%A7%D9%87%D8%A7%D9%86%D8%AA%20%D8%A8%D9%87%20%D9%82%D8%B1%D8%A2%D9%86" class=text4>اس ام اس ویژه محکومیت اهانت به قرآن</a>، <a href="http://ashgeeeee.mihanblog.com/post/tag/%D9%85%D9%82%D8%AF%D8%B3%20%D8%AA%D8%B1%DB%8C%D9%86%20%DA%A9%D8%AA%D8%A7%D8%A8%20%D8%A2%D8%B3%D9%85%D8%A7%D9%86%DB%8C" class=text4>مقدس ترین کتاب آسمانی</a>،                 <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/359#commentlist">نظرات (<script>setCommentCnt(359)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('359','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/358">اس ام اس های حکیمانه</a></font></div>
+            <div class=div58><font class=text7>شنبه 15 مهر 1391 :: نویسنده : <a href="../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "><font color="#00ff00" size="3"><strong>تحمل و بردباری بالاترین جرات و جسارت است. (پاستور)</strong></font></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "><font color="#ff0000" size="3"><strong>پیش تمام دشمنان به نزدیکترین دشمن خود که زبان است توجه داشته باش. (سقراط)</strong></font></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "><font color="#ffff00" size="3"><strong>کینه و تنفر را به کسانی واگذار کنید که نمیتوانند دوست بدارند.(ویکتور هوگو)</strong></font><font color="#ffffff" size="3"><strong></strong></font></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "><font color="#00ffff" size="3"><strong>عشق، تنها مرضی است که بیمار از آن لذت می برد.(افلاطون)</strong></font></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "><font color="#00ff40" size="3"><strong>یا چنان نمای که هستی، یا چنان باش که مینمایی. (بایزید بسطامی)</strong></font></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "><font color="#8080c0" size="3"><strong>آنانکه نمی توانند خود را اداره کنند ناچار از اطاعت دیگرانند. (ویکتور هوگو)</strong></font></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "><font color="#8080ff" size="3"><strong>دست هایی که کمک می رسانند مقدس تر از لبهایی هستند که دعا می کنند.</strong></font></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "><font color="#ffff00" size="3"><strong>تنها کسانی که ما را می رنجانند عزیزانی هستند که همیشه کوشیده ایم از ما نرنجند.</strong></font></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "><font color="#ff8000" size="3"><strong>هرگاه احساس کردی که گناه کسی آنقدر بزرگ است که نمی توانی او را ببخشی،</strong></font></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "><font color="#ff8000" size="3"><strong>بدان که اشکال در کوچکی قلب توست، نه در بزرگی گناه او.</strong></font></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "><font color="#80ff80" size="3"><strong>امروز کسی باش که واقعا ً آرزو داری !</strong></font></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "><font color="#80ff80" size="3"><strong>مهربان، با گذشت، انعطاف پذیر، مدد رسان...</strong></font></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "><font color="#80ff80" size="3"><strong>رنج و نگرانی را کنار بگذار و به لحظات زندگی چنان ارزش بده که آرزو داری.</strong></font></p><p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; text-align: justify; "><br></p><p align="right" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "><font color="#80ff80" size="3"><strong>نیت، کلام، کردار و گفتارت را آرامش بده و اگر باورت نکردند، نهراس</strong></font></p>
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="3.html" class=text4>اس ام اس عاشقانه</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%A7%D8%B3%20%D8%A7%D9%85%20%D8%A7%D8%B3%20%D9%87%D8%A7%DB%8C%20%D8%AD%DA%A9%DB%8C%D9%85%D8%A7%D9%86%D9%87" class=text4>اس ام اس های حکیمانه</a>،                 <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/358#commentlist">نظرات (<script>setCommentCnt(358)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('358','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/354">جملات عاشقانه (مخصوص دوران نامزدی و اس ام اس به ......) </a></font></div>
+            <div class=div58><font class=text7>شنبه 15 مهر 1391 :: نویسنده : <a href="../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><p dir="rtl" align="center" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 13px; line-height: 21px; text-align: center; "><span lang="AR-SA" style="font-size: 10pt; ">جملات عاشقانه (مخصوص دوران نامزدی و اس ام اس به ......)</span></p><p dir="rtl" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 13px; line-height: 21px; text-align: justify; "></p><p dir="rtl" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: Tahoma; font-size: 13px; line-height: 21px; text-align: justify; "><span lang="AR-SA" style="font-size: 10pt; ">دوستت ندارم به اندازه ی اقیانوس، . چون یه روز به آخرش میرسی . دوستت ندارم به اندازی خورشید، . چون غروب میکنه . دوستت دارم . به اندازی روت که هیچوقت کم نمیشه&nbsp;<br><br><br>گاهی اوقات آرزو می کنم ای کاش تک پرنده عاشقی بودم که میان صدها هزار پرنده بتوانم به قله بلند سرزمین هستی برسم و پرواز کان نغمه سر دهم که... من شیدای تو وعاشقانه دوستت دارم&nbsp;<br><br>=======================&nbsp;<br><br>برای آنکه به طریق خود ایمان داشته باشیم ، لازم نیست ثابت کنیم که طریق دیگران نادرست است . کسی که چنین می پندارد ، به گامهای خود نیز ایمان ندارد . (پائولو کوئلیو&nbsp;<br><br>=======================&nbsp;<br><br>عشق یعنی خون دل یعنی جفا عشق یعنی درد و دل یعنی صفا عشق یعنی یک شهاب و یک سراب عشق یعنی یک سلام و یک جواب عشق یعنی یک نگاه و یک نیاز عشق یعنی عالمی راز و نیاز&nbsp;<br><br>=======================&nbsp;<br><br>به روی گونه تابیدی و رفتی مرا با عشق سنجیدی و رفتی تمام هستی ام نیلوفری بود تو هستی مرا چیدی و رفتی&nbsp;<br><br>=======================&nbsp;<br><br>نفرین به اون کسایی که روی دلا پا می ذارن تا که می بینن عاشقی میرن و تنهات می ذارن نفرین به آدمایی که تو سینه ها دل ندارن عاشق عاشق کشین ، رحم و مروت ندارن&nbsp;<br><br>=======================&nbsp;<br><br>روی یک طاقچه سنگی میون دو قاب رنگی بودن من وتو با هم داره تصویر قشنگی عکس تو تو قاب خاتم در حصار خالی از غم حتی در مرگ تن من نمی گیره رنگ ماتم&nbsp;<br><br>=======================&nbsp;<br><br>آفرینش روز و شب، زیبایی زمین و کهکشانها، درخشش ستارگان فروزان، همه حاکی از وجود پروردگار یکتاست، پس از او اطاعت می کنیم، چون او معین کرده که مرگ آغاز جاودانه هاست.&nbsp;<br><br>=======================&nbsp;<br>می دونی زیباترین خط منحنی دنیا چیه ؟ لبخندی که بی اراده رو لبهای یک عاشق نقش می بنده تا در نهایت سکوت فریاد بزنه : دوستت دارم&nbsp;<br><br>=====================&nbsp;<br><br>خواب ناز بودم شبی.... دیدیم کسی در میزند.... در را گشودم روی او ...دیدم غم است در می زند... ای دوستان بی وفا...از غم بیاموزید وفا..غم با آن همه بیگانگی..... هر شب به من سر می زند&nbsp;<br><br>======================&nbsp;<br><br>هزار دستگاه ریو، صد دستگاه آپارتمان، هزار سکه طلا و میلیاردها ریال اسکناس دو هزارتومانی فدای یه تار موی گلی مثل تو&nbsp;<br><br>======================&nbsp;<br><br>هرگاه دلت هوایم را کرد، به آسمان بنگر و ستارگان را ببین که همچون دل من در هوایت می تپند&nbsp;<br><br><br>بیا با پاک ترین سلام عشق آشتی کنیم *بیا با بنفشه های لب جوب آشتی کنیم * بیا ازحسرت و غم دیگه باهم حرف نزنیم * بیا برخنده ی این صبح بهار خنده کنیم&nbsp;<br><br>=======================&nbsp;<br><br>خوشبختی مثل یه پروانه است . وقتی دنبالش می‌دوی پرواز می‌کنه اما وقتی وایسی میاد رو سرت میشینه&nbsp;<br><br>=======================&nbsp;<br><br>من همه ی قصه هام قصه ی توست اگه غمگینه اونم از غصه ی توست&nbsp;<br><br>=======================&nbsp;<br><br>سهم من از دوری تو چیزی جز دلتنگی به اندازه دریاها ،نگاهی تاریک همچون شب های بدون مهتاب و لحظه هایی که ثانیه به ثانیه میگذرند نیست .پس ای دوست بشنو صدای دلتنگی مرا&nbsp;<br><br>=======================&nbsp;<br><br>تو بارانی من باران پرستم تودریایی من امواج تو هستم اگرروزی بپرسی باز گویم: تو من هستی و من نقش تو هستم&nbsp;<br><br>=======================&nbsp;<br><br>طبق قانون بقای شادی هیچ شادی از بین نمیره؛ بلکه فقط از دلی به دلی دیگه جابه جا می‌شه&nbsp;<br><br>=======================&nbsp;<br><br>اگرکسی واقعا کسی رو دوست داشته باشد بیشتر از اینکه بهت بگه دوست دارم میگه مواظب خودت باش...پس مواظب خودت باش&nbsp;<br><br>=======================&nbsp;<br><br>وقتی برگ های پاییز رو زیر پات له می کنی یادت باشه روزی بهت نفس هدیه می کردن&nbsp;<br><br>=======================&nbsp;<br><br>عیب جامعه این است که همه می خواهند آدم مهمی باشند و هیچ کس نمی خواهد فرد مفیدی باشد&nbsp;<br><br>=======================&nbsp;<br><br>ای عشق، شکسته ایم، مشکن ما را/ اینگونه به خاک ره میفکن ما را/ ما در تو به چشم دوستی می بینیم/ ای دوست مبین به چشم دشمن ما را&nbsp;<br><br>رسم زمونه : تو چشم میذاری من قایم میشم .........اما تو یکی دیگه رو پیدا میکنی&nbsp;<br><br>======================&nbsp;<br><br>تکیه بر دوست مکن محرم اسرار کسی نیست ما تجربه کردیم کسی یار کسی نیست&nbsp;<br><br>======================&nbsp;<br><br>عشق کلید شهر قلب است به شرط آنکه قفل دلت هرز نباشد که با هر کلیدی باز شود&nbsp;<br><br>======================&nbsp;<br><br>مرگ آن نیست که در قبر سیاه دفن شوم مرگ آن است که از خاطر تو با همه ی خاطره ها محو شوم&nbsp;<br><br>======================&nbsp;<br>می خوام روی تمام سنگ های دنیا بنویسم دلم واست تنگ شده و آرزو میکنم یکی از اون سنگ ها به سرت بخوره تا بفهمی دل تنگی چه دردی&nbsp;<br><br>=====================&nbsp;<br><br>غیر از غم عشق تو ندارم , غم دیگر شادم که جز این نیست مرا همدم دیگر&nbsp;<br><br>=====================&nbsp;<br><br>زدرد عشق توبا کس حکایتی که نکردم چرا جفای تو کم شد؟شکایتی که نکردم !!!&nbsp;<br><br>=====================&nbsp;<br><br>گر هیچ مرا در دل تو جاست بگو گر هست بگو نیست بگو راست بگو&nbsp;<br><br>=====================&nbsp;<br><br>گر نرخ بوسه را لب جانان به جان کند حاشا که مشتری سر مویی زیان کند&nbsp;<br><br>=====================&nbsp;<br><br>تو را برای وفای تو دوست می دارم******وگرنه دلبر پیمانه شکن فراوان است&nbsp;<br><br>=====================&nbsp;<br><br>هر گز ندیدم بر لبی لبخند زیبای تو را هر گز نمی گیرد کسی در قلب من جای تو را</span></p>
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="3.html" class=text4>اس ام اس عاشقانه</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                <a href="http://ashgeeeee.mihanblog.com/post/tag/%D8%AC%D9%85%D9%84%D8%A7%D8%AA%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87%20(%D9%85%D8%AE%D8%B5%D9%88%D8%B5%20%D8%AF%D9%88%D8%B1%D8%A7%D9%86%20%D9%86%D8%A7%D9%85%D8%B2%D8%AF%DB%8C%20%D9%88%20%D8%A7%D8%B3%20%D8%A7%D9%85%20%D8%A7%D8%B3%20%D8%A8%D9%87%20_____%7C(dot)%7C__________%7C(dot)%7C__________%7C(dot)%7C__________%7C(dot)%7C__________%7C(dot)%7C__________%7C(dot)%7C_____)" class=text4>جملات عاشقانه (مخصوص دوران نامزدی و اس ام اس به ......)</a>،                 <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/354#commentlist">نظرات (<script>setCommentCnt(354)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('354','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/296">دلم می تپد برای تو... </a></font></div>
+            <div class=div58><font class=text7>پنجشنبه 29 تیر 1391 :: نویسنده : <a href="../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><p dir="rtl" style="color: rgb(51, 51, 51); font-family: Tahoma; text-align: right; "><font color="#ff0066" face="courier new, courier, mono" style="background-color: rgb(255, 255, 255);">دلم می تپد برای چشمانی که به روشنایی ودرخشندگی خورشیئ هستند...</font></p><p dir="rtl" style="color: rgb(51, 51, 51); font-family: Tahoma; text-align: right; "><font color="#ff0066" face="courier new, courier, mono" style="background-color: rgb(255, 255, 255);">دلم می تپد برای دستانی که به لطافت ابرهای بارانی هستند...به لطتفت باران...</font></p><p dir="rtl" style="color: rgb(51, 51, 51); font-family: Tahoma; text-align: right; "><font color="#ff0066" face="courier new, courier, mono" style="background-color: rgb(255, 255, 255);">دلم می تپد برای نگاهی که آکنده از عشقو مهربانی است...</font></p><p dir="rtl" style="color: rgb(51, 51, 51); font-family: Tahoma; text-align: right; "><font color="#ff0066" face="courier new, courier, mono" style="background-color: rgb(255, 255, 255);">برای صدایی که آرامش بخش است...همچون صدای امواج دریا...</font></p><p dir="rtl" style="color: rgb(51, 51, 51); font-family: Tahoma; text-align: right; "><font color="#ff0066" face="courier new, courier, mono" style="background-color: rgb(255, 255, 255);">دلم می تپد برای کسی که به زیبایی گل بنفشه است...</font></p><p dir="rtl" style="color: rgb(51, 51, 51); font-family: Tahoma; text-align: right; "><font color="#ff0066" face="courier new, courier, mono" style="background-color: rgb(255, 255, 255);">دلم می تپد...دلم می تپد برای تو...</font></p>
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="3.html" class=text4>اس ام اس عاشقانه</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                                <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/296#commentlist">نظرات (<script>setCommentCnt(296)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('296','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/149">اس ام اس های حکیمانه</a></font></div>
+            <div class=div58><font class=text7>یکشنبه 28 خرداد 1391 :: نویسنده : <a href="../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Tahoma; font-size: 12px; line-height: 21px; "><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><font color="#00ff00" size="3"><strong>تحمل و بردباری بالاترین جرات و جسارت است. (پاستور)</strong></font></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><font color="#ff0000" size="3"><strong>پیش تمام دشمنان به نزدیکترین دشمن خود که زبان است توجه داشته باش. (سقراط)</strong></font></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><font color="#ffff00" size="3"><strong>کینه و تنفر را به کسانی واگذار کنید که نمیتوانند دوست بدارند.(ویکتور هوگو)</strong></font><font color="#ffffff" size="3"><strong></strong></font></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><font color="#00ffff" size="3"><strong>عشق، تنها مرضی است که بیمار از آن لذت می برد.(افلاطون)</strong></font></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><font color="#00ff40" size="3"><strong>یا چنان نمای که هستی، یا چنان باش که مینمایی. (بایزید بسطامی)</strong></font></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><font color="#8080c0" size="3"><strong>آنانکه نمی توانند خود را اداره کنند ناچار از اطاعت دیگرانند. (ویکتور هوگو)</strong></font></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><font color="#8080ff" size="3"><strong>دست هایی که کمک می رسانند مقدس تر از لبهایی هستند که دعا می کنند.</strong></font></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><font color="#ffff00" size="3"><strong>تنها کسانی که ما را می رنجانند عزیزانی هستند که همیشه کوشیده ایم از ما نرنجند.</strong></font></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><font color="#ff8000" size="3"><strong>هرگاه احساس کردی که گناه کسی آنقدر بزرگ است که نمی توانی او را ببخشی،</strong></font></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><font color="#ff8000" size="3"><strong>بدان که اشکال در کوچکی قلب توست، نه در بزرگی گناه او.</strong></font></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><font color="#80ff80" size="3"><strong>امروز کسی باش که واقعا ً آرزو داری !</strong></font></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><font color="#80ff80" size="3"><strong>مهربان، با گذشت، انعطاف پذیر، مدد رسان...</strong></font></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><font color="#80ff80" size="3"><strong>رنج و نگرانی را کنار بگذار و به لحظات زندگی چنان ارزش بده که آرزو داری.</strong></font></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><br></p><p align="right" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><font color="#80ff80" size="3"><strong>نیت، کلام، کردار و گفتارت را آرامش بده و اگر باورت نکردند، نهراس</strong></font></p></span>
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="3.html" class=text4>اس ام اس عاشقانه</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                                <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/149#commentlist">نظرات (<script>setCommentCnt(149)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('149','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/146">جملات عاشقانه (مخصوص دوران نامزدی و اس ام اس به ......) </a></font></div>
+            <div class=div58><font class=text7>یکشنبه 28 خرداد 1391 :: نویسنده : <a href="../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Tahoma; font-size: 13px; line-height: 21px; "><p dir="rtl" align="center" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; text-align: center; "><span lang="AR-SA" style="font-size: 10pt; font-family: Tahoma; ">جملات عاشقانه (مخصوص دوران نامزدی و اس ام اس به ......)</span></p><p dir="rtl" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "></p><p dir="rtl" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "><span lang="AR-SA" style="font-size: 10pt; font-family: Tahoma; ">دوستت ندارم به اندازه ی اقیانوس، . چون یه روز به آخرش میرسی . دوستت ندارم به اندازی خورشید، . چون غروب میکنه . دوستت دارم . به اندازی روت که هیچوقت کم نمیشه&nbsp;<br><br><br>گاهی اوقات آرزو می کنم ای کاش تک پرنده عاشقی بودم که میان صدها هزار پرنده بتوانم به قله بلند سرزمین هستی برسم و پرواز کان نغمه سر دهم که... من شیدای تو وعاشقانه دوستت دارم&nbsp;<br><br>=======================&nbsp;<br><br>برای آنکه به طریق خود ایمان داشته باشیم ، لازم نیست ثابت کنیم که طریق دیگران نادرست است . کسی که چنین می پندارد ، به گامهای خود نیز ایمان ندارد . (پائولو کوئلیو&nbsp;<br><br>=======================&nbsp;<br><br>عشق یعنی خون دل یعنی جفا عشق یعنی درد و دل یعنی صفا عشق یعنی یک شهاب و یک سراب عشق یعنی یک سلام و یک جواب عشق یعنی یک نگاه و یک نیاز عشق یعنی عالمی راز و نیاز&nbsp;<br><br>=======================&nbsp;<br><br>به روی گونه تابیدی و رفتی مرا با عشق سنجیدی و رفتی تمام هستی ام نیلوفری بود تو هستی مرا چیدی و رفتی&nbsp;<br><br>=======================&nbsp;<br><br>نفرین به اون کسایی که روی دلا پا می ذارن تا که می بینن عاشقی میرن و تنهات می ذارن نفرین به آدمایی که تو سینه ها دل ندارن عاشق عاشق کشین ، رحم و مروت ندارن&nbsp;<br><br>=======================&nbsp;<br><br>روی یک طاقچه سنگی میون دو قاب رنگی بودن من وتو با هم داره تصویر قشنگی عکس تو تو قاب خاتم در حصار خالی از غم حتی در مرگ تن من نمی گیره رنگ ماتم&nbsp;<br><br>=======================&nbsp;<br><br>آفرینش روز و شب، زیبایی زمین و کهکشانها، درخشش ستارگان فروزان، همه حاکی از وجود پروردگار یکتاست، پس از او اطاعت می کنیم، چون او معین کرده که مرگ آغاز جاودانه هاست.&nbsp;<br><br>=======================&nbsp;<br>می دونی زیباترین خط منحنی دنیا چیه ؟ لبخندی که بی اراده رو لبهای یک عاشق نقش می بنده تا در نهایت سکوت فریاد بزنه : دوستت دارم&nbsp;<br><br>=====================&nbsp;<br><br>خواب ناز بودم شبی.... دیدیم کسی در میزند.... در را گشودم روی او ...دیدم غم است در می زند... ای دوستان بی وفا...از غم بیاموزید وفا..غم با آن همه بیگانگی..... هر شب به من سر می زند&nbsp;<br><br>======================&nbsp;<br><br>هزار دستگاه ریو، صد دستگاه آپارتمان، هزار سکه طلا و میلیاردها ریال اسکناس دو هزارتومانی فدای یه تار موی گلی مثل تو&nbsp;<br><br>======================&nbsp;<br><br>هرگاه دلت هوایم را کرد، به آسمان بنگر و ستارگان را ببین که همچون دل من در هوایت می تپند&nbsp;<br><br><br>بیا با پاک ترین سلام عشق آشتی کنیم *بیا با بنفشه های لب جوب آشتی کنیم * بیا ازحسرت و غم دیگه باهم حرف نزنیم * بیا برخنده ی این صبح بهار خنده کنیم&nbsp;<br><br>=======================&nbsp;<br><br>خوشبختی مثل یه پروانه است . وقتی دنبالش می‌دوی پرواز می‌کنه اما وقتی وایسی میاد رو سرت میشینه&nbsp;<br><br>=======================&nbsp;<br><br>من همه ی قصه هام قصه ی توست اگه غمگینه اونم از غصه ی توست&nbsp;<br><br>=======================&nbsp;<br><br>سهم من از دوری تو چیزی جز دلتنگی به اندازه دریاها ،نگاهی تاریک همچون شب های بدون مهتاب و لحظه هایی که ثانیه به ثانیه میگذرند نیست .پس ای دوست بشنو صدای دلتنگی مرا&nbsp;<br><br>=======================&nbsp;<br><br>تو بارانی من باران پرستم تودریایی من امواج تو هستم اگرروزی بپرسی باز گویم: تو من هستی و من نقش تو هستم&nbsp;<br><br>=======================&nbsp;<br><br>طبق قانون بقای شادی هیچ شادی از بین نمیره؛ بلکه فقط از دلی به دلی دیگه جابه جا می‌شه&nbsp;<br><br>=======================&nbsp;<br><br>اگرکسی واقعا کسی رو دوست داشته باشد بیشتر از اینکه بهت بگه دوست دارم میگه مواظب خودت باش...پس مواظب خودت باش&nbsp;<br><br>=======================&nbsp;<br><br>وقتی برگ های پاییز رو زیر پات له می کنی یادت باشه روزی بهت نفس هدیه می کردن&nbsp;<br><br>=======================&nbsp;<br><br>عیب جامعه این است که همه می خواهند آدم مهمی باشند و هیچ کس نمی خواهد فرد مفیدی باشد&nbsp;<br><br>=======================&nbsp;<br><br>ای عشق، شکسته ایم، مشکن ما را/ اینگونه به خاک ره میفکن ما را/ ما در تو به چشم دوستی می بینیم/ ای دوست مبین به چشم دشمن ما را&nbsp;<br><br>رسم زمونه : تو چشم میذاری من قایم میشم .........اما تو یکی دیگه رو پیدا میکنی&nbsp;<br><br>======================&nbsp;<br><br>تکیه بر دوست مکن محرم اسرار کسی نیست ما تجربه کردیم کسی یار کسی نیست&nbsp;<br><br>======================&nbsp;<br><br>عشق کلید شهر قلب است به شرط آنکه قفل دلت هرز نباشد که با هر کلیدی باز شود&nbsp;<br><br>======================&nbsp;<br><br>مرگ آن نیست که در قبر سیاه دفن شوم مرگ آن است که از خاطر تو با همه ی خاطره ها محو شوم&nbsp;<br><br>======================&nbsp;<br>می خوام روی تمام سنگ های دنیا بنویسم دلم واست تنگ شده و آرزو میکنم یکی از اون سنگ ها به سرت بخوره تا بفهمی دل تنگی چه دردی&nbsp;<br><br>=====================&nbsp;<br><br>غیر از غم عشق تو ندارم , غم دیگر شادم که جز این نیست مرا همدم دیگر&nbsp;<br><br>=====================&nbsp;<br><br>زدرد عشق توبا کس حکایتی که نکردم چرا جفای تو کم شد؟شکایتی که نکردم !!!&nbsp;<br><br>=====================&nbsp;<br><br>گر هیچ مرا در دل تو جاست بگو گر هست بگو نیست بگو راست بگو&nbsp;<br><br>=====================&nbsp;<br><br>گر نرخ بوسه را لب جانان به جان کند حاشا که مشتری سر مویی زیان کند&nbsp;<br><br>=====================&nbsp;<br><br>تو را برای وفای تو دوست می دارم******وگرنه دلبر پیمانه شکن فراوان است&nbsp;<br><br>=====================&nbsp;<br><br>هر گز ندیدم بر لبی لبخند زیبای تو را هر گز نمی گیرد کسی در قلب من جای تو را</span></p></span>
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="3.html" class=text4>اس ام اس عاشقانه</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                                <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/146#commentlist">نظرات (<script>setCommentCnt(146)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('146','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/144">اس ام اس عاشقانه، جملات عاشقانه سری 3</a></font></div>
+            <div class=div58><font class=text7>یکشنبه 28 خرداد 1391 :: نویسنده : <a href="../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+
+<div><br></div><div><span class="Apple-style-span" style="color: rgb(36, 24, 1); font-family: Tahoma; ">آسمون آرزومون پره از ابرهای تیره لالایی واست بخونم تاشاید خوابت بگیره..<br><br>اگه از خواب نپریدی،توی خواب خدارودیدی..<br><br>یه جوری بپرس ازش که دلامون چرا اسیره…؟<br><br>.<br><br>.<br><br>.<br><br><br>اگه میتونستم تودنیا یه چیزدیگه باشم میخواستم اشک چشمهای توباشم<br><br>میدونی چرا ؟ چونکه توچشمات متولدبشم، روی گونه هات<br><br>زندگی کنم وروی لبهات بمیرم.&nbsp;</span></div>                <BlogExtendedPost><br><br><b><a href='http://ashgeeeee.mihanblog.com/post/144'>ادامه مطلب</a></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="3.html" class=text4>اس ام اس عاشقانه</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                                <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/144#commentlist">نظرات (<script>setCommentCnt(144)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('144','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/143">اس ام اس عاشقانه، جملات عاشقانه سری 2</a></font></div>
+            <div class=div58><font class=text7>یکشنبه 28 خرداد 1391 :: نویسنده : <a href="../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+
+<div><br></div><div><span class="Apple-style-span" style="color: rgb(36, 24, 1); font-family: Tahoma; ">حسی دارم ، اگـــــر بدانی بد نیست / شعری گفتم تو هم بخوانی بد نیست<br><br>الآن&nbsp; خیلی دلم بـرایت تنگ است / در هــر صورت خبر رســانی بد نیست . . .<br><br>.<br><br>.<br><br>.<br><br>ای دل، دل سودا زده، سامانم کـو؟ / ای کالبد تهی شده جـــــــانم کـو؟<br><br>امـــروز که از همیشه مشتاق ترم / ای خانه ی سوت و کور مهمانم کو؟<br><br>.<br><br>.<br><br>.<br><br>نسبت به تو&nbsp; حس&nbsp; کور&nbsp; میـلی دارم / دور و بـــــــر خود&nbsp; هـــزار&nbsp; لیـلی دارم<br><br>من نــاز نمی خرم&nbsp; شما هم نفروش / چون عاشق کشته مرده خیلی دارم . . .</span></div>                <BlogExtendedPost><br><br><b><a href='http://ashgeeeee.mihanblog.com/post/143'>ادامه مطلب</a></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="3.html" class=text4>اس ام اس عاشقانه</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                                <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/143#commentlist">نظرات (<script>setCommentCnt(143)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('143','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div18><font class=text6><a href="http://ashgeeeee.mihanblog.com/post/139">اس ام اس ها و جملات عاشقانه بسیار زیبا</a></font></div>
+            <div class=div58><font class=text7>یکشنبه 28 خرداد 1391 :: نویسنده : <a href="../author/590544.html"> محمد نوریزاده</a></font>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div>
+        </div>
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><span class="Apple-style-span" style="font-family: Tahoma, Arial, sans-serif; line-height: 17px; "><p style="background-image: none; background-attachment: scroll; background-origin: initial; background-clip: initial; background-color: transparent; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-color: initial; font-size: 11px; outline-width: 0px; outline-style: none; outline-color: initial; vertical-align: baseline; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; background-position: 0px 0px; background-repeat: repeat repeat; "><b><br></b></p><ul style="background-image: none; background-attachment: scroll; background-origin: initial; background-clip: initial; background-color: transparent; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-color: initial; font-size: 11px; outline-width: 0px; outline-style: none; outline-color: initial; vertical-align: baseline; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; list-style-type: none; list-style-position: initial; list-style-image: initial; background-position: 0px 0px; background-repeat: repeat repeat; "><li style="background-image: none; background-attachment: scroll; background-origin: initial; background-clip: initial; background-color: transparent; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-color: initial; font-size: 11px; outline-width: 0px; outline-style: none; outline-color: initial; vertical-align: baseline; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; background-position: 0px 0px; background-repeat: repeat repeat; "><strong style="background-image: none; background-attachment: scroll; background-origin: initial; background-clip: initial; background-color: transparent; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-color: initial; font-size: 11px; outline-width: 0px; outline-style: none; outline-color: initial; vertical-align: baseline; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; background-position: 0px 0px; background-repeat: repeat repeat; ">واسه مشق شبت&nbsp; 100&nbsp; بار بنویس : اونی که فکرش رو نمیکنی همیشه به یادته . . .</strong></li></ul><p style="background-image: none; background-attachment: scroll; background-origin: initial; background-clip: initial; background-color: transparent; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-color: initial; font-size: 11px; outline-width: 0px; outline-style: none; outline-color: initial; vertical-align: baseline; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; background-position: 0px 0px; background-repeat: repeat repeat; "><strong style="background-image: none; background-attachment: scroll; background-origin: initial; background-clip: initial; background-color: transparent; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-color: initial; font-size: 11px; outline-width: 0px; outline-style: none; outline-color: initial; vertical-align: baseline; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; background-position: 0px 0px; background-repeat: repeat repeat; "><br></strong></p><p style="background-image: none; background-attachment: scroll; background-origin: initial; background-clip: initial; background-color: transparent; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-color: initial; font-size: 11px; outline-width: 0px; outline-style: none; outline-color: initial; vertical-align: baseline; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; background-position: 0px 0px; background-repeat: repeat repeat; "><strong style="background-image: none; background-attachment: scroll; background-origin: initial; background-clip: initial; background-color: transparent; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-color: initial; font-size: 11px; outline-width: 0px; outline-style: none; outline-color: initial; vertical-align: baseline; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; background-position: 0px 0px; background-repeat: repeat repeat; ">یه عکس از چشات بفرست<br><br>یه آهو اینجاس می خوام روشو کم کنم !</strong></p><p style="background-image: none; background-attachment: scroll; background-origin: initial; background-clip: initial; background-color: transparent; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-color: initial; font-size: 11px; outline-width: 0px; outline-style: none; outline-color: initial; vertical-align: baseline; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; background-position: 0px 0px; background-repeat: repeat repeat; ">&nbsp;</p><p style="background-image: none; background-attachment: scroll; background-origin: initial; background-clip: initial; background-color: transparent; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-color: initial; font-size: 11px; outline-width: 0px; outline-style: none; outline-color: initial; vertical-align: baseline; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; background-position: 0px 0px; background-repeat: repeat repeat; "><img src="http://www.3eke.ir/img/albums/Admin/10002/normal_lover-fighter_3eke_ir.jpg" border="0" alt="اس ام اس عاشقانه" width="330" height="400" style="background-image: none; background-attachment: scroll; background-origin: initial; background-clip: initial; background-color: transparent; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-color: initial; font-size: 11px; outline-width: 0px; outline-style: none; outline-color: initial; vertical-align: baseline; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-width: initial; border-color: initial; border-width: initial; border-color: initial; background-position: 0px 0px; background-repeat: repeat repeat; ">&nbsp;<br><br>برای عشق گریه کن،اماکسی رابه خاطرعشق به گریه کردن ننداز!! باعشق بازی کن،اماهرگزکسی را با عشق بازی نده!!<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>واسه مشق شبت&nbsp; 100&nbsp; بار بنویس : اونی که فکرش رو نمیکنی همیشه به یادته . .<br><br><br>وای بر من,تو همانی که امیدم بودی؟<br>تو همان چشم سیه,دلبر افسونگر من؟<br>هر چه کوشم مگر این حادثه باور نکنم<br>میدود یاد خطاهای تو در باور من<br><br><br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>در عالم رفاقت محبت تقدیمت میکنم<br><br>تا در بیگانگی فردا فراموشم نکنی<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>یه عکس از چشات بفرست<br><br>یه آهو اینجاس می خوام روشو کم کنم !<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br><br>خدایا!<br>خورشید را به من قرض میدهی ؟<br>از تو كه پنهان نیست<br>سرزمین خیالم سالهاست یخ بسته است...</p><p style="background-image: none; background-attachment: scroll; background-origin: initial; background-clip: initial; background-color: transparent; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-color: initial; font-size: 11px; outline-width: 0px; outline-style: none; outline-color: initial; vertical-align: baseline; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; background-position: 0px 0px; background-repeat: repeat repeat; "><br>* * * * * * * * * * * * * * * * * * * * * * * *</p><p style="background-image: none; background-attachment: scroll; background-origin: initial; background-clip: initial; background-color: transparent; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-color: initial; font-size: 11px; outline-width: 0px; outline-style: none; outline-color: initial; vertical-align: baseline; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; background-position: 0px 0px; background-repeat: repeat repeat; ">در ادامه با این جملات زیبا همراه باشید:</p><p style="background-image: none; background-attachment: scroll; background-origin: initial; background-clip: initial; background-color: transparent; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-color: initial; font-size: 11px; outline-width: 0px; outline-style: none; outline-color: initial; vertical-align: baseline; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; background-position: 0px 0px; background-repeat: repeat repeat; "><br><br>تو را هر لحظه به خاطر می آورم<br><br>بی هیچ بهانه ای<br><br>شاید دوست داشتن همین باشد...<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>بیا تا پرواز اعتماد را با هم تجربه کنیم<br><br>وگرنه میشکنیم بال های دوستی مان را<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br><br>من از طرز نگاه تو امید مبهمی دارم،<br>نگاهت را مگیر از من<br>که با آن عالمی دارم...!<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br><br>ماه من پرده از آن چهره ی زیبا بردار<br>تا فلک لاف نیاید که چه ماهی دارد...<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>حتم دارم که تویی آن شبح آینه پوش<br>عاشقی جرم قشنگیست ,به انکار مکوش<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>به اندازه دیوونه های دیوونه خونه ، دیوونه وار دیوونتم دیوونه !<br><br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>شب شرابی خوردم و مستی مرا در بر گرفت / دوریت آمد به یادم هستی ام آتش گرفت . . .<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>به اندازه دیوونه های دیوونه خونه ، دیوونه وار دیوونتم دیوونه !<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>همیشه مست و شیدری تو بودم / به فکر آرزو های تو بودم<br><br>تموم آرزوهای منی ، کاش / یکی از آرزوهای تو بودم . . .<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>هرچه زدم بی تو دلم وا نشد / جز تو کسی باب دل ما نشد<br><br>هرچه پرستو شدم و پر زدم / هم نفسی مثل تو پیدا نشد . . .<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>هر شب به فکرت نازنین تا صبح خلوت میکنم / هر دم به شوق دیدنت اخمی به ساع میکنم<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>اگر اسم آدما رو بارزترین صفاتشون بذارن ٬ اسم منو چی میذاشتی !؟<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>صدای پای تو که میروی ، صدای پای مرگ که میآید . . . ( حسین پناهی )<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>اگر ماه بودی به صد ناز / شاید شبی بر لب بام من مینشستی . . .<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>در این شب پر از سکوت ، واژه ها یاری ام نمیکنند ، کاش تو بودی تا سکوتی مرگبار<br><br>بر لحظاتم سایه نمی افکند ، کاش تو بودی تا در دریای مهربانیت غرق میشدم<br><br>تو زیباترین ترانه ام هستی . . .<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>من تو را باز کجا خواهم یافت ؟ جز در اندیشه خویش و به جز قصه هجران و شکیب<br><br>چیست افسانه عمر . . . ؟<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>آفتاب پنجره را میشناسد حتی اگر بسته باشد<br><br>مهتاب به دیدارم می آید حتی اگر خسته باشد<br><br>دل هواتو میکند حتی اگر شکسته باشد . . .<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>واسه مشق شبت&nbsp; 100&nbsp; بار بنویس : اونی که فکرش رو نمیکنی همیشه به یادته . . .<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>ما گذشتیم و گذشت آنچه تو با ما کردی<br><br>تو بمان با دگران وای به حال دگران . . .<br><br>* * * * * * * * * * * * * * * * * * * * * * * *<br><br>چرا غمگینی ؟ : عاشق شدم<br><br>آیا عشق شیرین است ؟ : بله شیرین تر از زندگی<br><br>چرا تنهایی ؟ : ویژگی عاشق هاست<br><br>لذت تنهایی چیست ؟ : فکر به او و خاطرات او<br><br>چرا می روی ؟ : برای اینکه او رفت<br><br>دلت کجاست ؟ : پیش او<br><br>قلبت کجاست ؟ : او برده<br><br>پس حتما بی رحم بوده&nbsp; نه ؟ : نه اصلا<br><br>چرا ؟ : چون باز هم او را میپرستم . . .</p></span>
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#8b0542">نوع مطلب :</font>
+                <a href="3.html" class=text4>اس ام اس عاشقانه</a>،&nbsp;                <br><font color="#8b0542">برچسب ها :</font>
+                                <br><font color="#8b0542">لینک های مرتبط :</font>
+                            </font></div></div>
+
+
+
+
+
+        <div class=div26>
+
+            <div class=div27><font class=text8><a href="http://ashgeeeee.mihanblog.com/post/139#commentlist">نظرات (<script>setCommentCnt(139)</script>)</a></font></div>
+            <div style="margin-left: 19px; float: left; margin-top: 13px;"> <script>mihanblogPostLike('139','like')</script></div>
+        </div>
+        <div class=div54 style="background: url(http://mihanblog.com/public/public/user_data/template/2099039/mytheme.ir_07.jpg);">
+            <style>
+                .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                .com{ width:435px; float:left; background:#fee8ea; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+                .com1{ width:417px; float:left; background:#bb2177; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                .com3{ width:190px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                .com4{ width:397px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com5{ width:397px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                .com6{ width:407px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+            </style>
+                    </div>
+    </div>
+    <div class=div29></div>
+    <div class=div28><font class=text4>
+                <br><br>
+            </font>
+    </div>
+
+</td>
+<td class=div0>&nbsp;</td>
+<td class=div3>&nbsp;</td>
+</tr>
+<tr>
+    <td class=div2 valign=top>&nbsp;
+
+    </td>
+
+    <td class=div01 valign=top>
+        <div class=div6></div>
+        <div class=div7>
+            <a href="http://www.mytheme.ir" target="_blank">
+                <img src="http://mihanblog.com/public/public/user_data/template/2099039/blank.gif" border=0 width=189 height=35></a></div></td>
+    <td class=div0>&nbsp;</td>
+    <td class=div3>&nbsp;</td>
+</tr>
+</table>
+</div>
+<style>
+    img{
+        max-width : 425px;
+    }
+</style>
+</body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'ashgeeeee.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

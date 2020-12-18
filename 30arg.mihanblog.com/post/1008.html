@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*140299*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','4702');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','پنجشنبه 27 آذر 1399');
+	
+	setStatVar('today_view','3493');
+	setStatVar('yesterday_view','740');
+	
+	setStatVar('this_month_view','33276');
+	setStatVar('last_month_view','36237');
+
+	setStatVar('total_view','2515579');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (11:00)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://30arg.mihanblog.com/statupdate/?data[refereruri]=http://30arg.mihanblog.com/post/archive/1390/10/page/2&data[postid]=1008&data[requesturi]=/post/1008&data[sdate]=1608190307&data[hash]=3329df2e619cb52fd3f7b7f81d2e43c1&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[1008]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+			} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://30arg.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://30arg.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://30arg.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://30arg.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://30arg.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://30arg.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://30arg.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://30arg.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://30arg.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://30arg.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://30arg.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://30arg.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://30arg.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://30arg.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://30arg.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://30arg.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://30arg.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://30arg.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://30arg.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://30arg.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://30arg.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://30arg.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://30arg.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://30arg.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://30arg.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://30arg.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://30arg.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://30arg.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://30arg.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://30arg.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://30arg.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://30arg.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://30arg.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://30arg.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://30arg.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://30arg.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://30arg.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text html">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1.0">
+    <meta name="description" content="دل دیدنی های شهر سرب و سراب(105)" />
+    <meta name="keywords" content="دل,دیدنی,های,شهر,سرب,و,سراب,105," />
+    <title>حکمت و حكایت - دل دیدنی های شهر سرب و سراب(105)</title>
+    <link rel="stylesheet" href="http://file.mihanblog.com//public/user_data/user_files/649/1944575/css/global.css">
+    <link rel="stylesheet" href="http://file.mihanblog.com//public/user_data/user_files/649/1944575/theme21/css/style.css">
+    <link rel="stylesheet" href="http://file.mihanblog.com//public/user_data/user_files/649/1944575/css/mihanblog_theme_icons.css">
+
+    <style>
+    </style>
+</head>
+
+
+<body>
+
+
+<div class="page-container" id="pageContainer">
+    <div class="menu-sidbar" id="menuSidbar">
+        <div class="logo-media">
+            <img src="http://static.mihanblog.com//public/user_data/web_photo/47/140299.jpg?8757"  />        </div>
+
+
+        <div class="menu-wrapper">
+            <ul class="sm-item">
+                <li><a class="sid-menu-item" href="../index.html">صفحه اصلی</a></li>
+                <li><a class="sid-menu-item" href="mailto:a.shefiei@yahoo.com"> پست الکترونیک</a></li>
+                <li><a class="sid-menu-item" href="javascript:messageForm()">تماس با ما</a></li>
+                <li><a class="sid-menu-item" href="rss/index.html">RSS</a></li>
+            </ul>
+            <ul class="menu-social-network">
+                <li class="social-networks-icons">
+                    <a href="1008.html"><i class="icon icon-facebook"></i></a>
+                </li>
+                <li class="social-networks-icons">
+                    <a href="1008.html"><i class="icon icon-twitter"></i></a>
+                </li>
+                <li class="social-networks-icons">
+                    <a href="1008.html"><i class="icon icon-instagram"></i></a>
+                </li>
+                <li class="social-networks-icons">
+                    <a href="1008.html"><i class="icon icon-gplus"></i></a>
+                <li class="social-networks-icons">
+                    <a href="1008.html"><i class="icon icon-telegram"></i></a>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="wrap" id="Wrapper">
+        <div class="sidemenu">
+            <div class="exit-rot" onclick="exitMenu()" id="exitRot"></div>
+            <div id="js--rot-menu-icon" class="rot-menu-icon" onclick="openSiteMenu()">
+                <span class="menu-name" id="mName"> منوی اصلی </span>
+                <span class="m-line m-line1" id="mLine1"></span>
+                <span class="m-line m-line2" id="mLine2"></span>
+                <span class="m-line m-line3" id="mLine3"></span>
+            </div>
+
+            <span class="blog-logo">
+                <img src="http://static.mihanblog.com//public/user_data/web_photo/47/140299.jpg?5675"  />            </span>
+
+
+            <div class="header-field container clearfix">
+
+                <button onclick="openSiteMenu()" class="menu-button">
+                    <span class="icon-barss"></span>
+                    <span class="icon-barss"></span>
+                    <span class="icon-barss"></span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="opac" id="pageBd" onclick="exitMenu()"></div>
+
+
+        <div class="header-section">
+            <div class="header-container">
+                <div class="header-wrapper">
+                    <div class="header-content">
+                        <div class="site-title">
+                            حکمت و حكایت                        </div>
+                        <div class="blog-slogan">
+                            شفیعی مطهر شخصیت کمیاب و کیمیا و نادری است که تسلط ستایش انگیزی بر کلام دارد. ما هنوز کسی با این لیاقت قلمی در ایران نمی شناسیم.                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="page-section">
+            <div class="gotop" id="goTop" onclick="moveToTop()">
+                <div class="gotop-org"></div>
+                <div class="gotop-hov"></div>
+            </div>
+
+
+            <div class="page clearfix">
+
+
+                <div class="post-column">
+
+                                            <div class="post-field clearfix">
+                            <ul>
+                                
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		                                    <li id="1008" class="post container clearfix">
+                                        <div class="post-content">
+
+                                            <div class="title clearfix">
+                                                <h1 class="post-header">
+                                                    <a href="1008.html">دل دیدنی های شهر سرب و سراب(105)</a>
+                                                </h1>
+                                            </div>
+
+
+
+
+
+                                            <div>
+
+
+                                                <div class="name-and-date">
+                                                    <span class="author-name"><i class="icon icon-user"></i><a href="author/52866.html">سیدعلیرضا شفیعی مطهر</a></span>
+                                                    <span class="date"><i class="icon icon-calendar"></i> دوشنبه 12 دی 1390 07:19 ق.ظ</span>
+                                                    <a class="comment-number" target="_self" href="1008.html#commentlist"><i class="icon icon-comments"></i> نظرات (<script>setCommentCnt(1008)</script>) </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <div class="content">
+                                                <div class="content-body">
+                                                    <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><STRONG><FONT size=5>&nbsp;<IMG title="" src="http://www.jasjoo.com/app_images/poem_top.png"></FONT></STRONG> 
+<P></P>
+<P><STRONG><FONT size=5>&nbsp;دل دیدنی های شهر سرب و سراب(۱۰۵) </FONT></STRONG></P>
+<P><IMG style="WIDTH: 252px; HEIGHT: 228px" id=rg_hi class=rg_hi alt="" src="data:image/jpeg;base64,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" width=251 height=201 data-height="201" data-width="251"><IMG style="WIDTH: 209px; HEIGHT: 241px" id=rg_hi class=rg_hi alt="" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQoKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzf/wAARCACWAIIDASIAAhEBAxEB/8QAHAAAAgMBAQEBAAAAAAAAAAAAAAYEBQcBAwII/8QAOxAAAgEDBAEDAgUCBAUDBQAAAQIDBAURAAYSITETIkEUUQcyYXGBFZEWI0KhJCUzQ3IXUqJigrHh8f/EABoBAAIDAQEAAAAAAAAAAAAAAAACAQMEBQb/xAAwEQABBAEDAQYEBgMAAAAAAAABAAIDEQQSITFBBSJRYXGBMrHB0RMUI5Gh8ULh8P/aAAwDAQACEQMRAD8A3HRo1zQhd1BvdXLQWqqq4IFnkhQssbPwB/dsHA/g6mkj79DVfU1NvuSVVqWsppZpIGDwJKpcIRxyQDkDvzoQqSDclVVWc1BgjoKmOqFPIHjepQnAJ48MMR3jJAwc9a9L3uWS0wWr1IXmlqpVExjpJQqRZwzkYPDGR+Y/fXlJQxbasAj/AKzFaqCMx8DUhXEDcgSquxBYEg/mye/PwPj/ABdtw0jpNc5K8uhR2gppHLKfgBF8d/GjqpaD6rlRW189xr6c3cQwU/KdJIIRzg4NjjICSHVgSMYB9pwfkX8dU1vtP1V5lRJEj9Scp+VTjsKOzj4H31yzVlDc6H6u3xkQyyPyEkDRMXVsNyVgDnI+RpaM8l6rxWlGMSOVoFbA9pGC2VJDKww3fgfGsOTk/lY9Tu8Sdh43wPZM1uopha/Q4ZoaWqmjC8uaqoBH39zA6s4pFljSRc8XUMMj4OqOnslmnX0an0a1yuGR3yoA+AmcD+2f1Or5AqqFXoAYA1ZjDIomYi/Lp91Dq6KDdLgtE9LCHgWaqk9KETyFFZsE8QQD3gHA/TXzLdDTVEME1JUPyUGSaBRJHEx8A98/544wOyNR77S0Fwkp4bhcFjiSRX+mZowJGVgynJHIEEdcSPOuJapv65/UxPTTQv2FemAkQYA9sikZHXgg+fOtKVXCyozMqsCyn3AHOP3196oqiyw190FzCy0lXAQkc8J4tIoPYceHU+AGzjyME5F7qUI0aNGhCNGjRoQjVDu68VFmoI5aX6FGllEZmrqj0oogQTyPyx6wB1nPkavtUW8LSLrZpkEU0ssX+ZGkEnpvIQO0DAgjPjyP1ONJJq0HTypbVi0nz0LXHk+4btNcQrZINQtHRoT3x4BgWxgfm5f7nV1tfa60dfTXKnNvpookdBBQjmrKw7HPCjGQp/L8aSRt3d9ZIss+z7ZIirxUV1TG8nH7E4J1Y2ege1Vrz0lslsF4pVE09BDLzpq2HODxA9pJAIyAGU4zkeeQzVARLkhxPjewvyHA9itD9O7Yzt6J033Q3G42M01qaijk9aN3lrJGRY0RgxIwDknGPjonvWdQrRRThrh+INASgyae00iTNkeezzz/AG1ql9oWvdgq6KCSJfrICivLHzUBh5K5GejpLofw5uUbgVG5kjhX/t0NtjiI/YsWGP413GuocpI36QRqI9EzbXq7dcbJPHZaqolHJw8tRC0T+o+WLFSq/LZ6GNKW2bhFctvRx1ECtXW5PSqqRgOUcyAqRj9cHH76bdvyWuiuFXaKa5TVddEqy1AlAJUDC+QoXPjI8jI++qveFo2xSVqXuvqZ7bcJCFE1C7LLUEeAUUH1Oh9j0Ptrmdo4IzGAXRBsFK12kmlEop6OrpYKgTCaA0olnaSPgIJD3hTgFcDlkZyML8nXtuzcdytVmt9DRiQXSujJ+odQRAilQzOPhsMMdEZz9sG7strt1TT0lyjnqa1JI1lgaoPQBwQ3AADPQOSMj4xpV3xbJm3T9VM8Xp1NF6MP+VgjBPIFs9n3ZAGOv21OFhOikc40NVbDgfLdXwBskrWlK1w/DyeqsdRf5kgkIjM7LU5aadAMly5/KcdgHPx2Pj2/CG7Vdv3JFZknkktVZG/pwSMW+nlVeQ4k+AVDdfpqVct8XgbTmtNztgiq2j+nkrRMvpSR8cMwXyrEdYxgZzn41K/CXa1SK43+vheKNFK0iuCpdmyGfBHQAyAfnkfjBOmi14A91slt2O507QDfd2AP9LWScfzoZsDPxrHfxqTcgudHVRmpgsdOuVqaORgY5D5aTj2ox0D4/vr0or5uOusaW6tqoqykqFH/ADKBwkwTzxZew2cAFh8E9fOtjInP+FcKSdkXxbJ5tG8qK53dqFYmSKXuiqw3KKqUDvBHhs56PkDI+QGbSZ+H1LRSUj3CmkikYM1OiocmAKcMG+zEjJ/Tjpz0jwA6mlNE5zmAuFI0aNGlViNGjRoQqer3JaaWapglq1NRTuI5IEUtJyKqwwo7PTr34789HVHVvNdK31fSCVc8DU9LEMM0EbEc3Yjr4UnvHtAGSdWVdtaKsvk1wepkjjmijR4o+I5Mhbs5B+GA/gatqC3UtvQrSxBeX52JLM//AJMez/OsGRBLkO0ONM/k/YK0FjW2OV819bTWe2SVFTIqQ08ecsQM4HQ/c+NJNBuCstdluNTcq1pq2pliMSOwZYJJF7RB17EClsfYH5Orf8UDOmzK96YSEqoL8D4X5J9w6/v+x1ilXWVc8s71dXmJmDqrdBXxgt/bA/8A6dPkSPY4UdqP+lu7PwfzIJPAI+q0al3FSWOlaspFSWsrFCUscsh4xwAk+tJ8+9yxyO3wv2JHrYqBb5dqhleSrfiY6+6S+2Vc4Ihi6wqkHPt6A78nOsxtM1tqKyKkqb/FRxqAXqp39QhVwAMHOTjoDwB+gwdys1wty2yGg2THSVcEKgckmxDCD37mAJLHOcAE95OMjNcePrDQ69Lenj5nxUZbIoO60248+A8gmSOJIYljiQJGgCqqjAUDwAPjWX3u8/XSVda0oQLUyU6mTtadUlMZP7HiWP3z30Bpyp7zc6W4x0m4LfBTQzEiCtp6jnEzAZ4sCAVJAJHkdYznSfu/Zl0nr6257Wmpa+lrO6q1zOArNxwxjbwC3kg9ZJP7dFppZcaRsb7d/S5vzbFDbbbS1dLUSPI7+nKtRLzWZSpJbB6XGM9ADBPXjDh+H1XUVm0rdNVq4fiVVnkDl0BIU8gTnIx3nWf2P8Or1XmCO6RG0UMeR6f1frzBevbGQSqDoeD9uuta9R00NHSw01NGI4YUCIijAVQMAaraDqJpW5Etxtj1aiN7+iKuWKCnklqGVYUQtIW8BQO86ySyU096kub7Wpaen5v9Q0coKwRk4AhAX8rEDkSARlj58a1DcNoiv1mq7XUTTQxVUfB3hYBwP0yD/P3GdRdn7apNq2WK20ZL4JeWVgA0sh8sf7AfsANXsfoBI5XNliEtB3CyKmv9w2/vGkMNorqS51TCKqtjfkqgSBlT+VmHWHH7HAyRu4OdQ7m8EUcc00KTSLIBAGAyHPQwT48+fgZ0W2papiMnq08yH8stO2Vb/c+NQ92s2eU0bAwaRwpujXM6NInXdGjRoQjUKolqZJ/QojGpXuWSRSwXPgAAjJ/nr9dTCcaqdtVsdwoZqyIHjLVTjJGOQWRkU/sVVcfpjUIVJvGkvlyjp7EKmjhorkXinrRCxkUBc8AmcAkBsOTjrGM4zFtf4XbStUfrXCnNwlHb1Fxk5D+3Sgfx/fVv+Ic1RT7XmnoquOiqY56cx1MqqyxZmQFiD14J1m9NQHcUokp7fct1ShsmtuMxiowfB4g+04/+lD58+dUSzfhuADS4+X3ND+UwuqvZac1bt6z2yqnov6esVDTtI0dNwyqoCcAL+2pm3IZYrNStVsHqpoxNUOM4aRhlsZ+O8D7AAfGs7rth1su2LpFUWbb1NJ9NJ9PHSozMrccg8iqgHP2GniyX+jm2zZrjyb0q1II0xgkO+AAf2PR00L3vBL26fcH5KCAOFJ3PS0tXaGirYIpoDPCXjmUMjASr5B6xpGvNt/DWlqXkp7zSWOuTzJa60ROvg4Krkfborp03NC1yp4bTE6JJVPyYugcCNCCxK/IzxX/7hpYum0oLPbJ66t3Hdo44VLFaKGmjLfIVB6eST4AzqXmQHugH3r6FAVPQfiRTWKtgpqrclHfrXLIsYqQvp1VPk+XGArqPkjBH2OtVpaiCqp456aaOaGRQySRsGVgfBBHnSMm06Zo+f+KdwekEDeo0sLB1bx5jOdT9n2Ntu3u6UNPcZ6uklSOoKTRophlYsDjgqr7gASMfGf8AVnUsMn+QA97+gQRSb9GjRqxQq+90v1NIGFUaV4HWZJwAQpXs5B8qRkHx0Tgg96qdvJaKCCpmgoxSzK4WomeFUednOQx4+csxwD2OxgavLlRRXK31VDUFhDUxNDJwbB4sCDg/B71AttlFDCsU08lczSiaWoqSObOoAUhVAUY4jwB4z2STpHa9Yrjr4+SnalcAffRo70adQjOjOqPed2qrHt6ouFFCkssbxrh84UM4UsR1nAOcZ+NZvX7j3t6zGmvdOqnHt+ij685wCc4/L5J8/ppS4DlXRY8koJYLpapuKQxWOvcErinfLA4KjHZz+g70r2+6VVJc90bepBEtzjVq21JL0kyOnXz2BICD+4/XVRYN31t3q22vu6lg/wCZwSQwVdOCFlynuVlyeJwWwc98T+mumnte5q6jtm4aya07vs54RVEMnpPMuepI8ji6uFzjsrkj95BvhI9jmHS4UU53ONLjJbLfXU0UokP1FRDIOSgIv7YOJGTGfsftq6VQqhVAAAwAPjVPbaOO21XCSeqrKydFWSqqCCzBc4GAAqjs9ADzr4vu6aGx1SU1ZBcJJJI/VU01FJMpGcY5KCM/p8ZH3GikpBCvCOsazyybb3Ds6uqaGx09Hc9vzSmamgq6po3o3PeASrZXP8/PnOZS/iDUV80UFi2td6p54/Uhlq4/pYXHyQ7eeiD0D51Aqdy3qqippK652+1B6gLJbrd/xNa8Ybi2MjPRznihOB0e9ChMc1whsPOsvlSs1zqgAlNTdkKCAqRg49oZxl2wMt3xGAK6Y3O4XeKTn6dzpp2jejzzgp4GGPUY47cqVIz5IKjA5Nrwhoo6Na+iYywUlxbkizg1FfOhUKyhTlgufdycnjyIwoAOmChtLSU4iqYfp6Pz9GJC7SH7zPnLE/IyR9y2hC8qChirqWnpadpf6TSBRDIJCGqGXwwIx7Fx0R+Y9joAtc0VHBQwiKnQqmcksxZmP3ZiSSf1J1IACgBcADoDSGN2V1x3OlNbGC0cdYaZlKg+sVYhySRnoK5GMdDJ+2oc4Nq0r3htX1T9rxq5kp6aWeQ4SNC7H9AM69V1W7gvVHYreayvLenyCBUGWYn4A/uf41JNC07WlxAAsrGa7fG9pTHK90/p/PAWOK3pwZvsDIGLfwdN20t+XaSvp6HctNA0FS4ihuNKCqCQ/lSRT+UnsAg9n99S7pv+01VslVKN5IpFK/8AG8Io+/vkk/7artu0Nfe6ajokt8kFsimimnrKleDymMq4CKR2eS4JxjHYYnrWQySB7Qw6gefJdKdkX4Xei0O6bnf2K08DoaNd0a2LmKNcqGnuVDPRVkfqU86GORMkZBH3HYP6jxpA3FdtpUUVRQW+1W+rrPdGz/ToEicZBLORkkEeASc+cedaQfHWkX/0wsr1dXPU1NfIaioknKCYIqF2LEDiAcZPydI8Oru8q/HdE1/6t6fJJWxJ7RPu2Ke83WKCaib06SGbK/UyEcRIG6XHbAKMkk5661qW5Nq2fc8Mcd2pFkePuKdDxliPn2sOx2B141j29dvWy23We30VWa2l9INKkuHanfzx5Adkj3Y8jH6jWqfho1cdmW83KSWR8P6Mk352h5n0y368OPnvxnSxGu7XC05w1kTh1h3Q8ivoqqDaO7bHJ/yDdzVNKPy0t3h9bj+nqA8sf214XmPdk9DG24aOyIIPd9VS3meiK56PuC5x46JI8fbVjuXd1XBWTW2zQJJPGULVL+6MKSQ6jsf5g+3jsfqNZ5d9vz3Mma6XGoq5gByaUl88c4IHgE/YYGdbIsd0m/AXGly44zV2VbUdtRrB/W2t1LLa6NJGWSTcVXUqqplTxQKFI6Op1gu22koqhaG/2ilX3MKe10hofU66DO2XY/GVwdLtpv1uh2Ndtq0y3KeaokKwRijcMEfjzBJGB3zOTgd68f6YtDQ09qRpc1EnKURhi4QDPlEkx7ivZXHZ7GdQIhpc4nhMcgB7G18Sv9q79qUutPb49qxtLUsIzLT1/qTuQCfc0gBbAB7ZvvrXEJZASCCR2D8a/OtRQ3Oj3Aj7Zqq1DTEKaoyRZLke4Ar7WXGBgjyCCBjT5ZPxAuVqkjg3jHC1FKwRLrTIVWNjjAlT/T3/AKh141UyKURh7gtM8+KZtEJ/flXu6d8jb92/p4s9VWkQrK0kMsahQxYAYYg/6Tqh27edvW2vqLpFty/Uz1Ds5kaM1KoXJZuCozcMnzgavL9sGnv10mub3u5QyTKiqsBi4Kqg4AyhJGST2fnS7QUdVDfWtFr3es7AsiJWWoOhdQSyh0ZO+j8fB76Oqrdq3qlmeZA7aqT9Zt02W9TGC3VySVAXmad1aOUL4yUYA4/jUTfG1Yt12pKZqmSlqIX9SnnTsI+Me5fDDBxjXxQRTWCmud0vzU3GKEMZqflj00BJ9pHRySfJ8j7ahXneM1vpmmqEiokKcozJE84wSAOTLiNckjy+PnOO9JNkRRUHnnjYm1oi17HgpCsdsvG37+sM8cFLeQoCJMnqU1wQZPsfGVI78e4fII1sFiuQu1ujq/p5adiSrxSjtWBwQD4YZHTDojxpRuN6kmihodw0FvqPXPOIJFJIh4ke7KhimMqc4wM+Tpksl5iq6h7e9IaSphiWT01IaMoSQCjADrIIwQCMeMYJz4+TC92mN9g8D7FXzOfJ3389SrrOjRo1vWdd0l/iDt26XyWhkt11+ip4RItUrzuiFSAQxCn3EYxg/DHvTpr5kjSVGSRFdW6KsMg6gixSZjixwcOQsrtlp2PbpYFvW57VVPSk8aQTxxU4OQQWj5HkRjrJPycaYr7vS1TUBpNu3eiqa+oYRIKadXaJT+aTAz4XOM/OBps+ipQhQU0IUjBAjAzrG/xAtVl2PuS211spBTGvhq/Uw5ILgxnrJ6/MfHXeniaC4NVeTJI5rnclVO+r8tko4bfSv6c06nLd5RAf/wAk5Gf/AC+dVO1N3UsEfoV8zlCPZxidj9ugB4wAOtM+1dsUW54q3dN4RJYY1ENGkg5jmuQcp4PuOMHonTkKDcFtrLfQDc7r6/L04YaKCONQuMgZHfnIA7wCdaX5bmPIHCxR4LHRAO5O5SYu8bCfyXBs/IMMgx/8ete9Hd6OSnut4oZ0mSnoxDFJGO1LEtJ5ZPhUP5gevOn2vrrnaz/xl9pkXg75nowPagyzZDDwO9I1bX0dVeqie8bjt9MXqY3SGFDLUMEVML6Sk8SWUnskkHwM652XluzIjC0dRfsVoxOz4ceUSEngpX29uetdTRJTtUV8hLRBnJ5FiSzMSchQcnJzplqamgtlmkiuNUtTlvQlVyCZJH74YPjIPQPQXHgapZZdyybhqpmkWGGvqCIbpeomhRkB9sZPEFej0uFyckaZYvwUp6qppprte56qOKFI+EcYXko+Afgefuf110RlAMAG/wAlmdg63knYXfmVO/CHclLLa6+yPcUMdvkAopZpACYHzxXJPfAgr+3H41Y/h/tOsts6Vl3q6Span5LTmmbmHYjBlYkdMRkADxybJOerW1/h3tG3Ui08dhoZwvfqVUKyuf3ZhnUiPa+0I6sQx2SypVBeQRaaIOAc94Az8HWNwDjdLdpG19Fa3qE1ForoQoYyU8ihSMgkqdYtZ7OKCF2i/wASWeKVe6anKVtKwYd8QFbIPn3DPen7fWyJLrZhFticWmtifmDT5iEoxjixXv8A/ekGxmSgt1NSSxXCOohQQzfQXmIhXT2kFJXAU5HgDGud2iHFg0/9++38FXxVe6ZYknkpuMFVe5JBGEVobbDBIwHgcpECj/YDOmTZFuWnq7pUmF1kLRwl5qgzSvxHP3N8f9THEdDGlmlr4ZyIZPqXmwSIay6oWYD59OAsSP4067Ip46fblKYIoYopi86JDEY1VXYsBxPjoj4H7awdlROEziRVD5+n2Tyu2V9/OjRo16FZ13Ro0aEI0sfiJtqPc22KqmEfKshUzUbZxxlAOO/sfB/fTPr4m/6T+B0fOjhCy3Z0VFNa6WzW9qiS0ui10hqCC/qElWhYeMrIpYjGB0PnTZd/QobxS1noTVTIgDQxU6P9PH2OYLEFRkjIXJOOh50ubO27HtGxf1JaQzXWqQGbLStHyYlse1XKgZA5cfjvV7e60Q1VqkFDRm4Vq4UVVc8EPswwXIQ82yxKgr/7j1jWRrnPeXdFYQAKXzU3OywboMNwuMlNVylY4aSaSVI5s5X8rexskYGPt99UlXBUDc7QQWKaOlFxjVKqKSFUOEVyOPIN/pJ8eO9M8b00W66qF7nUmpkiik+iZY+HA8lUqQvMjKPkFsA9/OqGkraGo/EKWsgvMIDUiRra5pTFKKg/mcxNg8uAQA4zgnVcrWvHfsgb+6lji07Kn2rJfv63dLzfKrG3OMsRinUr6wViFIVusH4AOCMZ78u+wpKKq27FX22GSnpKt2khgfkqxoDxUIp/KuFBwOskkedQ90UEm7Hk2+kjQ0KIHrplYgsSfbEpU+cciQfHt6OdQrvXw2+WrpKWokNJTvBRJSxScUjdkY8DxBYcgEA+csNaYwGtFBIdyqmSuggvpWguG4KhaipneWSmqucEChsD84IyWKqFHz/A1Me2JX3Kgt91poLnUyB56mqqYC7xMApVQ8YURniem6zx8ZOde1i2+BVNTUEBprLQ15eJRUuxlfivI5zkgPzHbfmz0QMGzpqe41F7rI5YIZqCoiKG4QSPDIp+AU/K5HQDqcjGOvGqHAuO/TdMDSqLfUvbbilsaG4mc9slDeRWCJeWORWYrJgEHOFOMEfGlmrpdxUN1rkrLZd5oPq5XinovpagSIzkjKOmR5+MedaJHakpqqJGRKn6SAf04VE3J1YAhm7Hbdgczn+MkmHeLnU0FthWpkportVchEHVQFCgszlDJg4AJIDaTIDntoUfVS00UqWG4vf6utstu/rTVMcbeoK2KOlgpmHWGMI5Fux7c9/prVLbTCioYKUEFYY1QELxGAMePjS5tOP05IP6fXPPQNTK5GQ6fZWVyOZJ7/Mx6H69turMOCKNlxjnxSvJJormjXdGtiRGjRo0IRqq3Hbq66WySlt1za3SuCDKIFlBUjBBVvjv4IOrXRoQkpab8QKEqqVNgukSj/uRyUz/APx5DUCWS/fXJNd9s3P0fVWWSKgr4qqFiMYPBwGXsA4X7fqc6Jo0ugKbWa1V/s0t/p7vJW1dsqIkaGZblSyQBomHSe4BRhwGz2fI+eplJXWyWnqdyXmGiqktwleKsSWOZY4wfaIuOTkjGScHPQ60+MiuMOAw+xGdU1dtHbleXNVY7dIzjiz/AEyhmGc4JAz51QMan6tRTatqpeWy2gqLFHcoGMj3BmqZnKBSWb4PQ6UAKM94UZ0u2ahjuFzvT3GNxHPdn4ozH38UjUEZVSD/AJfWOx7gCfJcJpLZtuzq0jJSW+kRUHR4xr4H8DSXapaucW+ts7Crjl5S5j4yoHmm5yc35ewIpYY8kNgdjRkB5DQw1uhtb2q+slvGynqZbXdVrbLTSCP6O6FiykjPFJgCR2wUBus9al/4hts9spqW+UlfaYHRZIZHmf0gMdFKmNsAY6/MOjj5181NLc6TcMlFbtyH1JXaaOjutp5xZLsfbMvEeT0Oz1r5rLvuKisQa6WlYrXEC0tws1UpKoM5f0pR2rYJ8k4OR3g6qdG5/LvStlIIHRXlHTQPchuGlusv078jJxqRPAYePxyzxLNg+zj4+cdxLtSQV9kq6y/ySxGqIhMMczxq8WcrEckiMvgcm8gEjOBnVZt2r2bfKqquAazgtwMbsqxTOIwCWdCi+7JJyCf9OPGrbYtZ/iqtqb40MyUMEjQ25nDJ6iY9zFc4bOeifHjrsszWSF4HQclFik02CgFvtkMJhihkwPUSIAICAAAoHhQAAB8ADVlrgGu62KtGjRo0IXg6TFTxkAOetC+sGXJTBOMAaNGhCAtQBjnGf3B10rMQPcufk/zo0aEL5X12JHJBg4JA10+vxyCnQ+c6NGhC4gnYBuSYPxjXF9aSNWDKG7z9tGjQhdMcrDjJ6bKfzDHkfbSncfw4s8k7VdjlqrBWHGZLXJ6StjxyQe0jv7aNGhCILHvOmj9GXcFsuULDg/1NC8TsvyOUb9HBPeOte77de9W1rReaeCK2lcyRU1VI7SNkccsyggDGfnvH27NGk0N8FNq1ots2WjtKWmK2UjUK/wDYkiV1Y/JII7OrOCGOCJIoY0jjQcVRFwFA+APgaNGnUL10aNGhCNGjRoQv/9k=" width=209 height=241 data-height="241" data-width="209"></P>
+<P><FONT size=3>من ریاضی را زبانی دیدم که خدا با آن مشق آفرینش را نوشت و با آن می توان سرنوشت را از سر نوشت.&nbsp; </FONT></P>
+<P><IMG style="WIDTH: 225px; HEIGHT: 225px" id=rg_hi class=rg_hi alt="" src="data:image/jpeg;base64,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" width=225 height=225 data-height="225" data-width="225"><IMG style="WIDTH: 260px; HEIGHT: 225px" id=rg_hi class=rg_hi alt="" src="data:image/jpeg;base64,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" width=278 height=181 data-height="181" data-width="278"></P>
+<P><FONT size=3>من همواره پر رنگ ها را دیدم، صداهای بلند را شنیدم و ادعاهای گزاف&nbsp;را احساس كردم؛ غافل از آن كه خوب ها آسان می آیند، بی رنگ می مانند و بی صدا می روند... </FONT></P>
+<P><FONT size=3>&nbsp;<IMG style="WIDTH: 328px; HEIGHT: 189px" id=rg_hi class=rg_hi alt="" src="data:image/jpeg;base64,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" width=267 height=189 data-height="189" data-width="267"></FONT></P>
+<P><FONT size=3>من دلی را ندیدم بی غم و بی قبس،گلی را بی خار و خس و پرنده ای را بی قفس؛ اما اگر این سختی ها و&nbsp;تلخی ها نبود، زندگی معنا نداشت.&nbsp; </FONT></P>
+<P><IMG style="WIDTH: 383px; HEIGHT: 194px" id=rg_hi class=rg_hi alt="" src="data:image/jpeg;base64,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" width=259 height=194 data-height="194" data-width="259"></P>
+<P><FONT size=3>من در خزان برگی را ریزان و مرگی را عیان ندیدم مگر این كه مرگ را آغازی برای كمال دیدم، نه پایانی برای زوال.&nbsp; </FONT></P>
+<P><IMG style="WIDTH: 256px; HEIGHT: 192px" id=rg_hi class=rg_hi alt="" src="http://t2.gstatic.com/images?q=tbn:ANd9GcQD2iJ1F5Uku8Jn8YS9dftthSQ7QyafPMGTRekbjQ-hs6RXhs69TQ" width=256 height=192 data-height="192" data-width="256"><IMG style="WIDTH: 256px; HEIGHT: 191px" id=rg_hi class=rg_hi alt="" src="http://t2.gstatic.com/images?q=tbn:ANd9GcSYz-zNLbPPmEUs3Ctpz98kMTcVOhW_UDOcdzSyaaSrTcO7ZR3HTA" width=275 height=183 data-height="183" data-width="275"></P>
+<P><FONT size=3>من زندگی را تا آن لحظه شیرین و هستی را نوشین دیدم كه از بودنم دلی نیفسرد و از نبودنم گلی نپژمرد.&nbsp; </FONT></P>
+<P><STRONG>ادامه دارد.... </STRONG></P>
+<P><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; شفیعی مطهر</STRONG></P>                                                </div>
+                                            </div>
+
+                                            <div class="read-more">
+                                                                                            </div>
+                                        </div>
+
+
+                                        <div class="bottom-post-side clearfix">
+                                            <div class="clearfix btmpost">
+
+                                                <span class="last-edit"><i class="icon icon-edit"></i>  آخرین ویرایش: - - </span>
+                                            </div>
+
+                                            
+                                            
+
+                                            
+
+                                            <a class="send-comment" target="_self" href="1008.html#commentform"><span> <i class="icon icon-comment"></i> ارسال دیدگاه </span> </a>
+
+
+                                            <div class="post-like clearfix">
+                                                <script>mihanblogPostLike('1008','like')</script>                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+
+                                                                            <div class="comment-content">
+                                            <div class="comment-title">
+                                                <i class="icon icon-comments"></i>
+                                                دیدگاه ها  </div>
+                                            <ul>
+                                                <a name='commentlist'></a>                                            </ul>
+                                        </div>
+                                        <div class="comment-form">
+                                            <a name="commentform"></a>
+                                            <div class="comment-form-title">دیدگاه خود را با ما در میان بگذارید :</div>
+                                            <br/> <style>
+
+
+#imageCodeWrapper div{
+	float: right;
+}
+#imageCodeWrapper .imageCode_input #imgstr{
+	width:83px;
+	height:34px;
+	font-size:25px;
+}
+#imageCodeWrapper .imageCode_number{
+	margin:1px 5px 0px 0px;
+}
+#imageCodeWrapper .imageCode_number img{
+ 	border: 0px;
+ 	width: 122px;
+ 	height: 37px;
+}
+#imageCodeWrapper .imageCode_refresh{
+	cursor:pointer;
+	margin: 3px 3px 0px 0px;
+
+	width: 16px;
+	height: 16px;
+
+    background:url(http://static.mihanblog.com//public/images/icon/gen/refresh.gif) center right no-repeat;
+}
+
+.clearfix {display: inline-block;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+
+
+.comment_form .err-msg{
+	padding-right: 110px;
+	color: #F00;
+}
+.comment_form{
+	direction: rtl;
+}
+
+.comment_form label{
+	width: 110px;
+	display: block;
+	float: right;
+}
+.comment_form .comment_form_msg{
+	background: none repeat scroll 0 0 #8CDA5C;
+    border: 1px solid #249224;
+    padding: 5px;
+    margin: 5px;
+}
+.comment_form .required{
+	background: url(http://static.mihanblog.com//public/images/icon/require2.gif) no-repeat right top;
+	padding-right: 20px;
+}
+
+.comment_form .required{
+	width: 90px;
+}
+.comment_form .controls{
+	text-align: center;
+}
+.comment_form .btn{
+	font-family: tahoma;
+}
+.smileLayer{
+    position:absolute;
+    display:none;
+    background-color:#fff;
+    border:1px solid #555;
+}
+    .msgbody{
+        float:right;
+        width:260px
+    }
+    .msgtitle{
+        float:right;
+        -width:57px;
+        text-align:right;
+        -padding-right:64px;
+    }
+</style>
+
+<script>
+    var mihanBlog_commentBody_cursorPos=0;
+    function set_mihanBlogCommentBodyCursorPos(textarea_id){
+        mihanBlog_commentBody_cursorPos = c_$(textarea_id).selectionStart;
+    }
+</script>
+
+<form id="frm-16081903075fdb0963e6d5b" method="post" action="http://30arg.mihanblog.com/post/comment/new/1008/fromtype/postone/fid/16081903075fdb0963e6d5b/atrty/1608190307/avrvy/0/key/090bd0aefd749df4c54c4d2357ecafe5/#post_form" >
+	<a name="post_form"></a>
+	<div class="comment_form">
+
+					<div class="comment_form_row clearfix">
+				<label for="full_name">نام (فارسی):</label>
+				<input type="text" name="data[full_name]" id="full_name" value="" class="comment_form_textbox" />			</div>
+
+			<div class="comment_form_row clearfix">
+				<label for="email">ایمیل :</label>
+				<input type="text" name="data[email]" id="email" value="" class="comment_form_textbox english" />			</div>
+
+			<!--
+            <div class="comment_form_row clearfix">
+				<label for="web">آدرس وب/وبلاگ :</label>
+				<input type="text" name="data[web]" id="web" value="" class="comment_form_textbox english" />			</div>
+            -->
+
+			<div class="comment_form_row clearfix">
+				<label for="remember">مرا بخاطر بسپار :</label>
+				<input type="checkbox"  name="data[remember]" id="remember" value="1" />			</div>
+
+			<div class="comment_form_row clearfix">
+
+                <div class="msgtitle" for="title">
+                	<label class="required">
+                    	متن نظر (فارسی): 					</label>
+                     <!--   
+                    <div id="showsmile" style="position: relative;">
+                        <img src="http://static.mihanblog.com//public/rte/images_new/smiley.gif" onClick="showMihanBlogSmileBox('body')" style="cursor:pointer" />                    </div>
+                    <div class="smileLayer" id="MihanBlogSmiles_body"><table cellpadding="0"  cellspacing="0"  width="120"><tr><td colspan=2>&nbsp;</td><td style="cursor:pointer;text-align:left;padding:3px 0px 0px 3px;" onclick="showMihanBlogSmileBox('body')"><img src="http://static.mihanblog.com//public/images/icon/close.gif"  /></td></tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/1.gif" onClick="MihanBlogShowSmile('لبخند','body')" title="لبخند" alt="لبخند" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/2.gif" onClick="MihanBlogShowSmile('ناراحت','body')" title="ناراحت" alt="ناراحت" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/3.gif" onClick="MihanBlogShowSmile('چشمک','body')" title="چشمک" alt="چشمک" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/4.gif" onClick="MihanBlogShowSmile('نیشخند','body')" title="نیشخند" alt="نیشخند" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/6.gif" onClick="MihanBlogShowSmile('بغل','body')" title="بغل" alt="بغل" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/7.gif" onClick="MihanBlogShowSmile('سوال','body')" title="سوال" alt="سوال" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/8.gif" onClick="MihanBlogShowSmile('قلب','body')" title="قلب" alt="قلب" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/9.gif" onClick="MihanBlogShowSmile('خجالت','body')" title="خجالت" alt="خجالت" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/10.gif" onClick="MihanBlogShowSmile('زبان','body')" title="زبان" alt="زبان" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/11.gif" onClick="MihanBlogShowSmile('ماچ','body')" title="ماچ" alt="ماچ" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/13.gif" onClick="MihanBlogShowSmile('تعجب','body')" title="تعجب" alt="تعجب" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/14.gif" onClick="MihanBlogShowSmile('عصبانی','body')" title="عصبانی" alt="عصبانی" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/16.gif" onClick="MihanBlogShowSmile('عینک','body')" title="عینک" alt="عینک" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/19.gif" onClick="MihanBlogShowSmile('شیطان','body')" title="شیطان" alt="شیطان" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/20.gif" onClick="MihanBlogShowSmile('گریه','body')" title="گریه" alt="گریه" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/21.gif" onClick="MihanBlogShowSmile('خنده','body')" title="خنده" alt="خنده" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/24.gif" onClick="MihanBlogShowSmile('قهقهه','body')" title="قهقهه" alt="قهقهه" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/27.gif" onClick="MihanBlogShowSmile('خداحافظ','body')" title="خداحافظ" alt="خداحافظ" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/31.gif" onClick="MihanBlogShowSmile('سبز','body')" title="سبز" alt="سبز" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/33.gif" onClick="MihanBlogShowSmile('قهر','body')" title="قهر" alt="قهر" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/36.gif" onClick="MihanBlogShowSmile('هورا','body')" title="هورا" alt="هورا" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/41.gif" onClick="MihanBlogShowSmile('دست','body')" title="دست" alt="دست" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/53.gif" onClick="MihanBlogShowSmile('گل','body')" title="گل" alt="گل" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/39.gif" onClick="MihanBlogShowSmile('تفکر','body')" title="تفکر" alt="تفکر" style="cursor:pointer" /></td>	</tr>	</table></div>                    -->
+                </div>
+                
+                <div class="msgbody">
+				    <textarea name="data[body]" id="body" class="comment_form_textarea" onkeyup="showCaptcha();set_mihanBlogCommentBodyCursorPos('body');" onkeypress="set_mihanBlogCommentBodyCursorPos('body');" onclick="set_mihanBlogCommentBodyCursorPos('body');" rows="8" cols="40"></textarea>                </div>
+
+                <script type="text/javascript">
+
+                                        var showCaptcha = function(){
+                                                    if(c_$('body').value.length>5){
+                                c_$("imageCodeWrapper").style.display="";
+                            }
+                                            }
+                </script>
+			</div>
+
+			<div class="comment_form_row clearfix">
+				<label for="private">ارسال نظر خصوصی :</label>
+				<input type="checkbox"  name="data[private]" id="private" value="1" />			</div>
+        
+							<div class="comment_form_row clearfix">
+					نظرات پس از تایید نشان داده خواهند شد.				</div>
+			
+			<div class="controls clearfix">
+				
+        		<style>
+        		    #imgstr{
+        		        font-size:12px;
+        		    }
+        		</style>
+        		<div id="imageCodeWrapper" class="comment_form_row clearfix">
+	        			<label class="required" for="imgstr">عبارت تصویر :</label>
+	        			
+	        			<div class="imageCode_input">
+	        				<input type="text" name="imgstr" id="imgstr" style="" class="comment_form_textbox">
+	        			</div>
+		        		<div class="imageCode_number">
+	        				<img id="imgcodepage_879411" style="width: auto; height: auto;max-width:140px" src="http://30arg.mihanblog.com/public/public/html/imgcode.php?str=a4d151bc77bae5751517e247ea73a4ff____bqnfyyoeh59" >
+	        			</div>
+	        			<div class="imageCode_refresh" title="تعویض عبارت تصویری" onclick="changeImgCode_879411();"></div>	
+	        	</div>
+	        	<input type="hidden" name="imgcode" id="imgcode_879411" value="a4d151bc77bae5751517e247ea73a4ff____bqnfyyoeh59">
+        		<script>
+        		var imgCodeChangeNum_879411 = 0 ;
+        		changeImgCode_879411 = function (){
+	        		var ImgCodeArr_879411 = new Array();
+	        		ImgCodeArr_879411[1]="baa91ef282664ffe1d77d0524c09f24a____wfioufofk27";
+	        		ImgCodeArr_879411[2]="466e12af25468cfd3f904f0652286b8c____mnoonnhqm59";
+	        		ImgCodeArr_879411[3]="6403a3f407b983b50122986b805249c6____rptfrorru67";
+	        		ImgCodeArr_879411[4]="6800d614a17b60b3deccc954d3065fce____yvrcsregrc75";
+	        		
+	        		
+	        		if(imgCodeChangeNum_879411<4){
+	        			imgCodeChangeNum_879411 ++ ;
+	        		}
+	        		else{
+	        			imgCodeChangeNum_879411 = 1 ;
+	        		}
+	        		
+	        		c_$("imgcode_879411").value = ImgCodeArr_879411[imgCodeChangeNum_879411];
+	        		document.getElementById("imgcodepage_879411").src = "/public/public/html/imgcode.php?str="+ImgCodeArr_879411[imgCodeChangeNum_879411];
+        		}
+        		</script>
+        		<input type="submit" value="ارسال" class="btn" classRow="comment_form_row" onclick="click_send()" />
+			</div>
+	</div>
+
+<input type="hidden" name="frm-id" value="16081903075fdb0963e6d5b" id="frm-id" /></form>
+<script>
+function click_send(){
+
+	Delete_Cookie( 'CMDinfo','/post/', '.mihanblog.com' );
+
+	if(c_$('remember').checked){
+		var cookieStr = c_$('full_name').value +"_____"+c_$('email').value+"_____"+c_$('web').value;
+		Set_Cookie( 'CMDinfo', cookieStr , 1, '/post/', '.mihanblog.com', 0 );
+	}
+}
+
+
+//LOAD
+var CMDinfo = Get_Cookie('CMDinfo');
+
+if(CMDinfo)
+{
+	CMDinfo = CMDinfo.split("_____");
+	c_$('full_name').value = CMDinfo[0];
+	c_$('email').value = CMDinfo[1];
+	c_$('web').value = CMDinfo[2];
+	c_$('remember').checked = true;
+}
+
+</script>                                        </div>
+                                                                                                </ul>
+                        </div>
+
+
+                        
+                    
+
+                    
+
+                </div>
+
+
+                <div class="left-sidebar container">
+                    <div class="inside-sidebar">
+
+                        <form id="frm-16081903075fdb0963e72c9" method="get" action="http://30arg.mihanblog.com/post/search/fid/16081903075fdb0963e72c9"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+                            <div class="search brpdbottom">
+                                <input class="search-input" type="text" name="search_text" placeholder="جستجو">
+                                <button class="search-button" type="submit" value="جستجو">
+                                    <i class="icon icon-search"></i>
+                                </button>
+                            </div>
+                        <input type="hidden" name="frm-id" value="16081903075fdb0963e72c9" id="frm-id" /></form>
+
+                                                    <div class="inside-border">
+                                <div class="title-sidebar">ابر برچسب ها</div>
+                                <ul class="s-tags">
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="tag/کلمات+قصار.html">
+                                                کلمات قصار                                                <span>(1)</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="blog-tag-cloud">
+                                            <a class="super-tags" href="tag/moharram95.html">
+                                                moharram95                                                <span>(1)</span>
+                                            </a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                        
+
+                                                    <div class="title-sidebar">آرشیو موضوعی</div>
+                            <div class="inside-border">
+                                <ul>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-7" href="category/7.html">
+                                                گزین گویه های مطهر                                                <span class="sidebar-dez">
+
+                                        1                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-6" href="category/6.html">
+                                                طنز سیاه نمایی                                                <span class="sidebar-dez">
+
+                                        115                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-5" href="category/5.html">
+                                                قصه های شهرهرت                                                <span class="sidebar-dez">
+
+                                        55                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-4" href="category/4.html">
+                                                سخنان كوتاه حكیمانه                                                <span class="sidebar-dez">
+
+                                        265                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-3" href="category/3.html">
+                                                سروده های حكیمانه                                                <span class="sidebar-dez">
+
+                                        239                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-2" href="category/2.html">
+                                                طنزهای حكیمانه                                                <span class="sidebar-dez">
+
+                                        690                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-1" href="category/1.html">
+                                                حكایات حكیمانه                                                <span class="sidebar-dez">
+
+                                        1232                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                        
+
+                                                    <div class="title-sidebar">آخرین پست ها</div>
+                            <div class="inside-border">
+                                <ul>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="5645.html">
+                                                <span class="last-posts-asp"> شاهکار رئیس مجلس اول مشروطه ایران!</span>
+                                                <span class="last-posts-dez">پنجشنبه 27 آذر 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="5643.html">
+                                                <span class="last-posts-asp">اصطلاح تب كرد و مرد!</span>
+                                                <span class="last-posts-dez">چهارشنبه 26 آذر 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="5642.html">
+                                                <span class="last-posts-asp">#طنزسیاهنمایی. 130  غلط های آمریکا!</span>
+                                                <span class="last-posts-dez">چهارشنبه 26 آذر 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="5641.html">
+                                                <span class="last-posts-asp"> اول اختلاس، بعد نماز و...!!</span>
+                                                <span class="last-posts-dez">سه شنبه 25 آذر 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="5640.html">
+                                                <span class="last-posts-asp">#طنزسیاهنمایی .129  میزان مقبولیت صداوسیما!</span>
+                                                <span class="last-posts-dez">دوشنبه 24 آذر 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="5639.html">
+                                                <span class="last-posts-asp">برو بالاتر!</span>
+                                                <span class="last-posts-dez">یکشنبه 23 آذر 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="5638.html">
+                                                <span class="last-posts-asp">#طنزسیاهنمایی. 128  لعنت بر کاخ سفید!</span>
+                                                <span class="last-posts-dez">شنبه 22 آذر 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="5637.html">
+                                                <span class="last-posts-asp">دو،دوتا می شود ده تا!!  قصّه های شهر هرت.قصّۀ 111</span>
+                                                <span class="last-posts-dez">جمعه 21 آذر 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="5636.html">
+                                                <span class="last-posts-asp">لقمان این گونه بود .. </span>
+                                                <span class="last-posts-dez">پنجشنبه 20 آذر 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="5634.html">
+                                                <span class="last-posts-asp">استاد راهنمای شیطان! </span>
+                                                <span class="last-posts-dez">چهارشنبه 19 آذر 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="5633.html">
+                                                <span class="last-posts-asp">#طنزسیاهنمایی. 127  جاش کجاست؟! </span>
+                                                <span class="last-posts-dez">چهارشنبه 19 آذر 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="5632.html">
+                                                <span class="last-posts-asp"> سزای دوستی با نا اهل!</span>
+                                                <span class="last-posts-dez">سه شنبه 18 آذر 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="5630.html">
+                                                <span class="last-posts-asp">#طنزسیاهنمایی. 126  من قهرم،ولی...</span>
+                                                <span class="last-posts-dez">دوشنبه 17 آذر 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="5629.html">
+                                                <span class="last-posts-asp">گفتگو یا خشونت؟!</span>
+                                                <span class="last-posts-dez">یکشنبه 16 آذر 1399</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="5628.html">
+                                                <span class="last-posts-asp">لطایف شیرین</span>
+                                                <span class="last-posts-dez">یکشنبه 16 آذر 1399</span>
+                                            </a>
+                                        </li>
+                                                                        <li class="link-in-sidebar">
+                                        <a class="clearfix" href="list.html">لیست پست ها</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        
+                                                    <div class="title-sidebar">نویسندگان</div>
+                            <div class="inside-border block-author">
+                                <ul>
+                                                                            <li>
+                                            <div class="block-author-photo">
+                                                <i class="icon icon-user"></i>
+                                                <a href="author/52866.html"></a>                                            </div>
+                                            <a href="author/52866.html">
+                                                <div>سیدعلیرضا شفیعی مطهر</div><div>مطالب ارسالی: (4702)</div>
+                                            </a>
+                                            <div style="clear: both">درباره نویسنده :</div>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                        
+
+                                                    <div class="title-sidebar">لینکدونی</div>
+                            <div class="inside-border clearfix">
+                                <ul>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://blogfa.cc" title="بلاگفا.سی سی، سیستم وبلاگدهی جدید، سیستمی متعلق به همه ی وبلاگ نویسان ایران، و برای وبلاگ نویسان ایران، با هدف دادن آزادی بیشتر به وبلاگ نویسان و عدم تبلیغ درج تبلیغ در وبلاگ های زیر مجموعه. برای حمایت از این سرویس و نشان دادن قدرت وبلاگ نویسان، این سرویس را به دوستان خود معرفی کنید.
+بخشی از امکانات وسیع بلاگفا.سی سی:
+*اختصاص 10 مگابایت فضای آپلود اختصاصی برای هر وبلاگ (در صورت همراهی بیشتر وبلاگ نویسان این فضا بیشتر می شود.) 
+* قابلیت آپلود ویدیو در مطلب. 
+* قابلیت آپلود عکس و درج در مطلب 
+* قابلیت مدیریت فایل های آپلودی 
+* قابلیت تنظیم نحوه لینک های مطالب و دسته ها (می توانید هرگونه که دوست دارید لینک های وبلاگتان را تنظیم کنید.  درست مانند این که یک سایت اختصاصی دارید و چون هیچ گونه تبلیغاتی در وبلاگ شما قرار داده نمی شود، وبلاگ شما با بسیاری از سایت های دانلود که با وردپرس راه اندازی شده اند، هیچگونه تفاوتی نخواهد داشت.) 
+* هسته قدرتمند وردپرس 
+* پشتیبانی از سیستم افزونه. که با فعال سازی هر افزونه امکانات متنوعی را به امکانات پیشفرض وبلاگتان اضافه می کنید. 
+* قالب های متنوع 
+* قابلیت انتقال مطالب از دیگر سرویس ها به بلاگفا.سی سی 
+بقیه قابلیت ها رو در سایت بخونید 
+لذت وبلاگنویسی حرفه ای با بلاگفا.سی سی" target="_blank">
+                                                بلاگفا.سی سی                                            </a>
+                                        </li>
+                                                                        <li class="link-in-sidebar">
+                                        <a class="clearfix" href="../linkdaily/index.html">همه لینکها</a>
+                                    </li>
+                                    <a class="button-cc" href="javascript:linkdailyForm()">ارسال لینک</a>
+                                </ul>
+                            </div>
+                        
+
+                                                    <div class="title-sidebar">لینکستان</div>
+                            <div class="inside-border">
+                                <ul>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://http://www.ramin-2010.mihanblog.com/" title=""  target="_blank">
+                                                حكایت و داستان                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://http://www.lahoot.net/" title=""  target="_blank">
+                                                پرتال فرهنگی مذهبی لاهوت                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://motaghed12.mihanblog.com/" title="زندگی همه اش ا ختیار ا ست اگر تقد یر بگذارد :"  target="_blank">
+                                                مشاوره و روانشناسی(مهدی معتقد)                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://www.313modir.mihanblog.com/" title=""  target="_blank">
+                                                آنتی صهیونیسم                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://nukhod.mihanblog.com/" title="اینجا كسی برای كسی كس نمی شود 
+حتی عقاب در خور كركس نمی شود"  target="_blank">
+                                                نخود                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://behandishan.blogfa.com" title="زندگی نامه نخبگان و انسان های موفق"  target="_blank">
+                                                به اندیشان                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://payamir.blogfa.com" title="جلوه های رفتاری و گفتاری حضرت امیرالمومنین علی (ع)"  target="_blank">
+                                                پیام امیر(ع)                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://payamha.blogfa.com" title="جلوه های رفتاری و گفتاری پیامبر اكرم(ص)"  target="_blank">
+                                                پیام های پیامبر(ص)                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://modara.blogfa.com" title="مقالات ، سروده ها ،روزنوشت ها و معرفی تالیفات شفیعی مطهر"  target="_blank">
+                                                وب نامه مدارا                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://30arg.blogfa.com" title="خکایت ها ، سروده ها و سخنان کوتاه حکمت آمیز و قصه های شهر هرت"  target="_blank">
+                                                حکایات حکیمانه                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://goldasteh.blogfa.com" title="ایران و جهان در آیینه آمار و ارقام"  target="_blank">
+                                                آیا به از این نمی توان بود؟                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://webarhn.blogfa.com" title="دانستنی های زندگی"  target="_blank">
+                                                وب باران                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://modara.blogfa.com" title="آثار ، سروده ها ، تالیفات ، خاطرات و روزنوشت های شفیعی مطهر"  target="_blank">
+                                                شفیعی مطهر                                            </a>
+                                        </li>
+                                                                        <li class="link-in-sidebar">
+                                        <a class="clearfix" href="../link/index.html"> همه اینک ها </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        
+
+                        
+
+                        
+		<form id="frm-16081903075fdb0963e782d" method="post" action="http://30arg.mihanblog.com/poll/new/fid/16081903075fdb0963e782d/atrty/1608190307/avrvy/0/key/3fdbab60f48690f6dcb79d1f7bb3f81d/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="19981" id="data[pollid]" />		
+                            <div class="title-sidebar">نظرسنجی</div>
+                            <div class="inside-border clearfix">
+                                <div class="nolink-sidbar">
+                                    <div class="hr-dashed-rule">آیا مطالب این وبلاگ را مفید و اگاهی بخش می دانید؟</div>
+                                    <ul>
+                                                                                    <li>
+                                                <a href="1008.html#"><label><input type="checkbox"  name="data[v1]" id="v1" value="1" />عالی</label></a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="1008.html#"><label><input type="checkbox"  name="data[v2]" id="v2" value="1" />بسیارخوب</label></a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="1008.html#"><label><input type="checkbox"  name="data[v3]" id="v3" value="1" />خوب</label></a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="1008.html#"><label><input type="checkbox"  name="data[v4]" id="v4" value="1" />متوسط</label></a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="1008.html#"><label><input type="checkbox"  name="data[v5]" id="v5" value="1" />ضعیف</label></a>
+                                            </li>
+                                                                            </ul>
+                                </div>
+                                <input type="submit" class="button-cc"  value="ثبت"/>
+                            </div>
+                        
+		<input type="hidden" name="frm-id" value="16081903075fdb0963e782d" id="frm-id" /></form>
+
+                        <div class="block-user-script">
+                            <iframe scrolling='no' width='150' height='180' frameborder='0' src='http://vu.hadith.ac.ir/tipofday10.aspx?dc=10&Culture=10&title=1&sayer=1&source=1&pword=1&aword=1'></iframe>  
+ 
+<!-- www.bahar22.com Web Master Tools --><center><script type="text/javascript" src="http://www.bahar22.com/ftp/other/01/Sokhan.js"></script><!-- www.bahar22.com Web Master Tools -->
+ 
+<a href="http://www.radiogolha.com" target="_blank"><img border="0" src="http://www.radiogolha.com/Logo140x110.gif"></a> 
+-----------------------------------------  
+<p align="center"><a target="_blank" href="http://parsskin.com">
+<font face="Tahoma" style="font-size: 9pt"><span style="text-decoration: none">
+.</span></font><span style="text-decoration: none"> </span></a></p>
+<p align="center"><script src="http://parsskin.com/random-text/shariati/shariati.js" language="javascript" ></script></p><div style='display:none'><h1><a href="http://parsskin.com/">کد جمله های دکتر شریعتی</a></h1><h1><a href="http://parsskin.com/random-text">کد جمله های دکتر شریعتی</a></h1></div>
+  <!-- Begin of Yasgig.ir jarayed Code --><script language="javascript" src="http://www.yasgig.ir/jarayed/code.php"></script><!-- End of Yasgig.ir jarayed code --> 
+ 
+<!-- Begin up.iranblog.com Upload Pictures & Files --><script type="text/javascript" language="javascript" src="http://up.iranblog.com/tools//view.php?code="></script><!-- Endup.iranblog.com Upload Pictures & File --> 
+--------------------------------- 
+<script type='text/javascript' >document.write ( "<scr"+"ipt type='text/javascript' src='http://ba"+"ha"+"r-"+"20."+"com/alexa/code.php?link=30arg.mihanblog.com&bgi=6&global=1&country=1&links=1&bgc=FFFFFF&borderw=1&borderc=D6D2B4'> </s"+"cript>");</script><br></center>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <div class="footer container">
+                <div class="bottombar clearfix">
+
+                    <div class="blog-statistics inside-bottombar">
+                                                    <div class="title-bottombar">آمار وبلاگ</div>
+                            <ul>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('total_view');</script></span><span class="stat-subs">کل بازدید : </span></li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"> <script>getStatVar('today_view');</script></span><span class="stat-subs">بازدید امروز : </span></li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('yesterday_view');</script></span><span class="stat-subs"> بازدید دیروز : </span></li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('this_month_view');</script></span><span class="stat-subs"> بازدید این ماه : </span> </li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('last_month_view');</script></span><span class="stat-subs">بازدید ماه قبل : </span> </li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"> <script>getStatVar('total_author');</script></span><span class="stat-subs">تعداد نویسندگان : </span></li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('total_post');</script></span><span class="stat-subs">تعداد کل مطالب : </span> </li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('last_view_date');</script></span><span class="stat-subs">آخرین بازدید : </span></li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('modify_date');</script></span><span class="stat-subs">آخرین بروز رسانی : </span> </li>
+                            </ul>
+                                            </div>
+
+                    <div class="inside-bottombar insbtm-archive">
+                                                    <div class="title-bottombar">آرشیو</div>
+                            <ul>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="archive/1399/9.html">
+                                             آذر 1399 <span class="bottombar-dez"> 40 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="archive/1399/8.html">
+                                             آبان 1399 <span class="bottombar-dez"> 55 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="archive/1399/7.html">
+                                             مهر 1399 <span class="bottombar-dez"> 61 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="archive/1399/6.html">
+                                             شهریور 1399 <span class="bottombar-dez"> 46 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="archive/1399/5.html">
+                                             مرداد 1399 <span class="bottombar-dez"> 54 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="archive/1399/4.html">
+                                             تیر 1399 <span class="bottombar-dez"> 60 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="archive/1399/3.html">
+                                             خرداد 1399 <span class="bottombar-dez"> 55 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="archive/1399/2.html">
+                                             اردیبهشت 1399 <span class="bottombar-dez"> 44 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="archive/1399/1.html">
+                                             فروردین 1399 <span class="bottombar-dez"> 39 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="archive/1398/12.html">
+                                             اسفند 1398 <span class="bottombar-dez"> 34 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="archive/1398/11.html">
+                                             بهمن 1398 <span class="bottombar-dez"> 33 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="archive/1398/10.html">
+                                             دی 1398 <span class="bottombar-dez"> 30 پست </span>
+                                        </a>
+                                    </li>
+                                                                <li class="link-in-bottombar">
+                                    <a class="clearfix" href="archive.html"><span>همه آرشیوها</span></a>
+                                </li>
+                            </ul>
+                                            </div>
+
+                    <div class="inside-bottombar">
+                        <div class="about-blog">
+                            <div class="blog-creator">ایجاد شده توسط:
+                                <a href="author/52866.html">سیدعلیرضا شفیعی مطهر</a>
+                            </div>
+                            <div class="blog-desc">حكایت ها ، سروده ها و سخنان کوتاه حکمت آمیز و قصه های شهر هرت <br />
+آپدیت روزانه <br />
+<br />
+×××××××××<br />
+با جور و جمود و جهل باید جنگید<br />
+تاپاک شودجهان از این هرسه پلید<br />
+یا ریشه هر سه را بباید خشکاند<br />
+یا سرخ به خون خویش باید غلتید<br />
+(ش.مطهر)<br />
+«یكی از كهن ترین و سنتی ترین روش های انسان برای انتقال معرفت به نسل های بعد، قصه ها و حكایات بوده است. قصه، ناب ترین و خالص ترین بخش ادبیات است؛ چرا كه ما را به دورانی پیش از پیدایش تفاسیر و تعابیر امروز مان می برد. قصه ها شادند، سرگرم كننده اند، نمایشی اند، اما فراتر از همه ، معرفت را به شكلی دلپذیر منتقل می كنند.»<br />
+(پائولو كوئیلو)</div>
+                        </div>
+                        <div class="social-networks-footer">
+                            <ul class="icons">
+                                <li class="social-networks-icons">
+                                    <a href="https://www.facebook.com/"><i class="icon icon-facebook"></i></a>
+                                </li>
+                                <li class="social-networks-icons">
+                                    <a href="https://www.pinterest.com/"><i class="icon icon-pinterest"></i></a>
+                                </li>
+                                <li class="social-networks-icons">
+                                    <a href="https://twitter.com/"><i class="icon icon-twitter"></i></a>
+                                </li>
+                                <li class="social-networks-icons">
+                                    <a href="https://www.instagram.com/"><i class="icon icon-instagram"></i></a>
+                                </li>
+                                <li class="social-networks-icons">
+                                    <a href="https://plus.google.com/"><i class="icon icon-gplus"></i></a>
+                                </li>
+                                <li class="social-networks-icons">
+                                    <a href="https://web.telegram.org"><i class="icon icon-telegram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-copyright">
+                    <div class="footer-text">
+                        قدرت گرفته با
+                        <!--<span class="heart">♥</span>-->
+                        <i class="icon icon-heart"></i>
+                        از
+                        <a href="http://www.mihanblog.com/">
+                            MihanBlog.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    function openSiteMenu() {
+        document.getElementById("pageContainer").className += " menu-active";
+    }
+
+    function exitMenu() {
+        document.getElementById("pageContainer").classList.remove("menu-active");
+    }
+
+
+        window.onscroll = function() {
+
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                document.getElementById("goTop").style.display = 'block';
+            }
+            else {
+                document.getElementById("goTop").style.display = 'none';
+            }
+
+        };
+
+    function moveToTop() {
+        $('html,body').animate({ scrollTop: 0 }, 'slow');
+    };
+
+</script>
+
+
+
+
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', '30arg.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.targetedwebtraffic.com" target="_blank">Buy Website Traffic</a> | <a href="https://www.seo25.com" target="_blank">Buy Targeted Website Traffic</a>
+    </div>
+</center>

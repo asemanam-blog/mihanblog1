@@ -1,0 +1,1007 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://crystalland.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1810913*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[2]='881';commentCnt[176]='2';commentCnt[177]='0';commentCnt[178]='0';commentCnt[179]='1';commentCnt[180]='1';commentCnt[181]='2';commentCnt[185]='4';commentCnt[186]='3';commentCnt[187]='3';commentCnt[188]='8';commentCnt[189]='1';commentCnt[191]='3';commentCnt[192]='0';commentCnt[193]='1';commentCnt[194]='7';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[2]='0';
+mihanblogDisLikeArrCnt[2]='0';
+mihanblogLikeArrCnt[176]='0';
+mihanblogDisLikeArrCnt[176]='0';
+mihanblogLikeArrCnt[177]='0';
+mihanblogDisLikeArrCnt[177]='0';
+mihanblogLikeArrCnt[178]='0';
+mihanblogDisLikeArrCnt[178]='0';
+mihanblogLikeArrCnt[179]='0';
+mihanblogDisLikeArrCnt[179]='0';
+mihanblogLikeArrCnt[180]='0';
+mihanblogDisLikeArrCnt[180]='0';
+mihanblogLikeArrCnt[181]='0';
+mihanblogDisLikeArrCnt[181]='0';
+mihanblogLikeArrCnt[185]='0';
+mihanblogDisLikeArrCnt[185]='0';
+mihanblogLikeArrCnt[186]='0';
+mihanblogDisLikeArrCnt[186]='0';
+mihanblogLikeArrCnt[187]='0';
+mihanblogDisLikeArrCnt[187]='0';
+mihanblogLikeArrCnt[188]='0';
+mihanblogDisLikeArrCnt[188]='0';
+mihanblogLikeArrCnt[189]='0';
+mihanblogDisLikeArrCnt[189]='0';
+mihanblogLikeArrCnt[191]='0';
+mihanblogDisLikeArrCnt[191]='0';
+mihanblogLikeArrCnt[192]='0';
+mihanblogDisLikeArrCnt[192]='0';
+mihanblogLikeArrCnt[193]='0';
+mihanblogDisLikeArrCnt[193]='0';
+mihanblogLikeArrCnt[194]='0';
+mihanblogDisLikeArrCnt[194]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://crystalland.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://crystalland.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','156');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','یکشنبه 4 شهریور 1397');
+	
+	setStatVar('today_view','8');
+	setStatVar('yesterday_view','67');
+	
+	setStatVar('this_month_view','1201');
+	setStatVar('last_month_view','1517');
+
+	setStatVar('total_view','206294');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (05:39)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://crystalland.mihanblog.com/statupdate/?data[refereruri]=http://flashy-girl.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607826573&data[hash]=1c9d0dbcfe29986dd1da0c7ab102a374&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://crystalland.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://crystalland.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://crystalland.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://crystalland.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://crystalland.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://crystalland.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://crystalland.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://crystalland.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://crystalland.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://crystalland.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://crystalland.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://crystalland.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://crystalland.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://crystalland.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://crystalland.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://crystalland.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<!-- Start Code By Love-skin.ir -->
+<link rel="SHORTCUT ICON" href="http://uupload.ir/files/u0by_pixel_profile_decor_night_sky_f2u_by_kimothefangirl-db2nlo8.gif" />
+<!-- End Code By Love-skin.ir -->
+
+
+
+
+
+
+<html>  <head> <link href="index.html" rel="shortcut icon"> <title>دارکنس امپایر</title> <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <meta http-equiv="Content-Language" content="fa"> <meta name="description" content="" /> <meta name="keywords" content="" /> <link rel="alternate" type="application/rss+xml" title="دارکنس امپایر" href="http://crystalland.mihanblog.com/post/rss/" /> <link rel="alternate" type="application/atom+xml" title="دارکنس امپایر" href="http://crystalland.mihanblog.com/post/atom/" /> </head> <style> *{font-family:B Mahsa;direction:rtl;color:#000000} #sidebar{float:right;width:px;margin-right:0px} #content{float:left;width:550px;padding:20px} #body{display:block;font-size:12px} a,a:hover,a.visited{text-decoration:none} .inbox{list-style:none; padding:0 4px} ul{padding:3px;margin:5px;} h2{color:red} h2 a{color:#000000; font-size:30px; font-family: B Vosta} h3{color:#000000; margin-top:0; font-size:30px; font-family: B Mahsa; text-align:center} #header h1 a{font-size:35px; font-family:arial; float:center; color:} #header h1{margin:0; height:50px; overflow:hidden} .author_box img{float:right;border:none;} .mihan_logo{text-align:center;height:660px;margin-top:10px; background: url() no-repeat top center;} .slogan{ color:#000000; text-align:center; padding:240px 0; background: url(http://uupload.ir/files/a1rq_هدر_قالب_سفارشی_پرنسس_لونا.png) repeat; background: expression(#000000); } #footer{font-size:9px;display:block;margin-top:50px; float:left} #footer a,#footer a:hover,#footer a:visited{color:#000;} .hr{border-top:1px solid #000000;height:1px;margin:3px;} body{margin:0; background: #FF00C6 url(http://uupload.ir/files/dxid_bg109.jpg) repeat fixed center} .sidebar_box{background:url(http://uupload.ir/files/ujew_اتاتالتا.png); padding:10px 5px; line-height:5px; line-height:20px} .sidebar_box_border{background-color:#ffffff; height:1px; display:block; overflow:} .sidebar_box_border_div{width:105px;} .seprator{margin-bottom:10px} .main_menu{text-align:center} .blog_title{color:#} #header{height:0px; overflow:hidden; background: #000000 url() center repeat} #body{ background: url(http://uupload.ir/files/mfye_بدنه_قالب_سفارشییییییی.png) repeat; background: expression(#); } #blog_body{width:776px; margin:20px auto; } #footer_background{background: url(http://uupload.ir/files/0jj3_فوتر_قالب_سفارشی_پرنسس_لونا.png) repeat-x; padding-bottom: 517px} .clearfix { display:inline-block; } .clearfix:after { clear:both; content:'.'; display:block; height:0; visibility:hidden; } * html .clearfix { height:1%; } .clearfix { display:block; } </style> <body> <div id="blog_body"> <div id="header"> <h1><p style="text-align:center; margin:0"><a class="blog_title" href="http://crystalland.mihanblog.com/CrystalLand" style="margin:10px">دارکنس امپایر</a></p></h1> </div> <div class="slogan"></div> <div class="clearfix"> <div id="body" class="clearfix"> <div id="content">  
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		 <div> <h2> <a href="http://crystalland.mihanblog.com/post/2">پست ثابت </a><!--Parstools Voting Widget-->
+<script type="text/javascript">;!(function(e, d) {'use strict';var rating = {id: 'pvw-' + ~~(Math.random() * 999999),theme: '32-15',lang:'fa',tops:1,
+url: 'http://crystalland.mihanblog.com/post/2',
+title: 'پست ثابت '
+};if (typeof e.pvwAttrs != 'object') e.pvwAttrs = {};e.pvwAttrs[rating.id] = rating;d.write('<d'+'iv id="' + rating.id + '" style="display: inline-block"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/vote/vote.js" async></scri' + 'pt>');})(window, document);</script>
+<!--Parstools Voting Widget--> </h2> <p class="date"> پنجشنبه 26 فروردین 1395 05:48 ب.ظ </p> </div> <b>نویسنده:</b> <a href="http://crystalland.mihanblog.com/post/author/1493286"> princess black dahlia  </a> <br/>   <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<div style="text-align: center;"><font face="Mihan-Iransans"><font size="5">&nbsp;</font><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/aoz0_dsdaaaa_by_bananenbuzz-dacuu3j.gif" alt="">&nbsp;<span style="font-size: x-large;">سلام دوستان</span><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/aoz0_dsdaaaa_by_bananenbuzz-dacuu3j.gif" alt=""></font></div><div style="text-align: center;"><font face="Mihan-Iransans"><br></font></div><div style="text-align: center;"><font face="Mihan-Iransans"><br></font></div><div style="text-align: center;"><font face="Mihan-Iransans"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/aoz0_dsdaaaa_by_bananenbuzz-dacuu3j.gif" alt="">&nbsp;<font size="5">به دارکنس امپایر خوش اومدین</font><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/aoz0_dsdaaaa_by_bananenbuzz-dacuu3j.gif" alt=""></font></div><div style="text-align: center;"><font face="Mihan-Iransans"><br></font></div><div style="text-align: center;"><font face="Mihan-Iransans"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/7abp_aa9b9c68930687aa5e188085660c7df1-dac105a.png" alt=""><font size="5">من بلک دالیا هستم همون رینبولایت</font><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/7abp_aa9b9c68930687aa5e188085660c7df1-dac105a.png" alt=""></font></div><div style="text-align: center;"><font face="Mihan-Iransans"><br></font></div><div style="text-align: center;"><font size="5" face="Mihan-Iransans">&nbsp;</font></div><div style="text-align: center;"><font face="Mihan-Iransans"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/aoz0_dsdaaaa_by_bananenbuzz-dacuu3j.gif" alt=""><font size="5">ولی دیگه اسممو عوض کردم</font><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/aoz0_dsdaaaa_by_bananenbuzz-dacuu3j.gif" alt=""></font></div><div style="text-align: center;"><font face="Mihan-Iransans"><br></font></div><div style="text-align: center;"><font face="Mihan-Iransans"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/aoz0_dsdaaaa_by_bananenbuzz-dacuu3j.gif" alt=""><font size="5">خود اسم اصلیم فاطمه هست و 15 سالمه</font><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/aoz0_dsdaaaa_by_bananenbuzz-dacuu3j.gif" alt=""></font></div><div style="text-align: center;"><font face="Mihan-Iransans"><br></font></div><div style="text-align: center;"><font face="Mihan-Iransans"><br></font></div><div style="text-align: center;"><font face="Mihan-Iransans"><img src="http://uupload.ir/files/7abp_aa9b9c68930687aa5e188085660c7df1-dac105a.png"><font size="5">اینجا من داستان مینویسم و مطالبی هم درباره همون داستان میزارم</font><img src="http://uupload.ir/files/7abp_aa9b9c68930687aa5e188085660c7df1-dac105a.png"></font></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/vjua_moon_divider_by_catspy69-dbhmcdo.png" alt=""></div><div style="text-align: center;"><font size="5">خب اینجا هم مثل بقیه وبلاگ ها قوانین خودشو داره که باید رعایت بشن :</font></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font size="5">اول : کپی؟ اصلا و ابدا به هیچ عنوان حتی شخصیت ها هم فروشی نیستن</font></div><div style="text-align: center;"><font size="5">دوم: اقایون؟ فرقی نداره بیان یا نیان منکه دوربین تو خونتون ندارم که بفهمم دختری یا پسر</font></div><div style="text-align: center;"><font size="5">سوم : نویسنده؟....شاید</font></div><div style="text-align: center;"><font size="5">چهارم:نظر تکراری و تبلیغاتی؟ اصلا فکرشم نکنین</font></div><div style="text-align: center;"><font size="5">پنجم: تهمت؟ میخوای دقیقا به چی تهمت بزنی؟؟</font></div><div style="text-align: center;"><font size="5">شیشم: تبادل؟ صد درصد</font></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/aoz0_dsdaaaa_by_bananenbuzz-dacuu3j.gif" alt="" style="font-family: Mihan-Iransans;"><font size="5">اینم از قوانین</font><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/aoz0_dsdaaaa_by_bananenbuzz-dacuu3j.gif" alt="" style="font-family: Mihan-Iransans;"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/aoz0_dsdaaaa_by_bananenbuzz-dacuu3j.gif" alt="" style="font-family: Mihan-Iransans;"><font size="5">زیاد سخت نیستن بهشون عمل کنین</font><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/aoz0_dsdaaaa_by_bananenbuzz-dacuu3j.gif" alt="" style="font-family: Mihan-Iransans;"></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/avrg_%D8%AC%D8%AF%D8%A7%DA%A9%D9%86%D9%86%D8%AF%D9%87_(2).gif" alt=""></div><div style="text-align: center;"><img src="http://uupload.ir/files/7abp_aa9b9c68930687aa5e188085660c7df1-dac105a.png"><font size="5">اینجا فعلا دکمه نداره کم کم براش دکمه هم میزارم</font><img src="http://uupload.ir/files/7abp_aa9b9c68930687aa5e188085660c7df1-dac105a.png"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/vfam_%D8%AC%D8%AF%D8%A7%DA%A9%D9%86%D9%86%D8%AF%D9%87.gif" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font size="5">لگو وبلاگ&nbsp;</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/71z1_blue_planet_custom_box_background_by_duskvsdawn-d89tjg9fsdf.png" alt=""></div><div style="text-align: center;"><hr></div><div style="text-align: center;"><font size="2">&lt;p align="center"&gt;&lt;a href="http://crystalland.mihanblog.com/" target="_blank"&gt;&lt;img border="0" src="http://uupload.ir/files/71z1_blue_planet_custom_box_background_by_duskvsdawn-d89tjg9fsdf.png"&nbsp; alt="امپراطوری تاریکی" &gt;&lt;/a&gt;&lt;br&gt;&lt;input onclick="this.select()" type="text" width="356" name="T1" size="15" value='&lt;!-- start logo cod off http://crystalland.mihanblog.com/ --&gt;&lt;p align="center"&gt;&lt;p align="center"&gt;&lt;a href="http://crystalland.mihanblog.com/" target="_blank"&gt;&lt;img border="0" src="http://uupload.ir/files/71z1_blue_planet_custom_box_background_by_duskvsdawn-d89tjg9fsdf.png"&nbsp; alt="امپراطوری تاریکی"&gt;&lt;/a&gt;&lt;/p&gt;&lt;!--finish logo cod off http://crystalland.mihanblog.com/ --&gt;' dir="ltr" &gt;&lt;/p&gt;&lt;div style="display:none"&gt;&lt;a href="http://blogers.ir"&gt;وبلاگ&lt;/a&gt;-&lt;a href="http://blogers.ir/cod/make-logo-banner-cod/"&gt;کد لوگو و بنر&lt;/a&gt;&lt;/div&gt;</font></div><div style="text-align: center;"><hr></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/aoz0_dsdaaaa_by_bananenbuzz-dacuu3j.gif" alt="" style="font-family: Mihan-Iransans;"><font size="5">حتما بزارین تو وبلاگتون&nbsp;</font><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/aoz0_dsdaaaa_by_bananenbuzz-dacuu3j.gif" alt="" style="font-family: Mihan-Iransans;"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font size="5">امضام:</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/79bx_cooltext292367540812410.png" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/vjua_moon_divider_by_catspy69-dbhmcdo.png" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img src="http://uupload.ir/files/7abp_aa9b9c68930687aa5e188085660c7df1-dac105a.png"><font size="5">خب اینم از این امیدوارم از داستانا خوشتون بیاد</font><img src="http://uupload.ir/files/7abp_aa9b9c68930687aa5e188085660c7df1-dac105a.png"></div>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <br>  <br> <br> <a target="_self" href="javascript:newComment(2)"> <b>دیدگاه : </b> <script>setCommentCnt(2)</script> سلام ^-^ </a> <br/>   <b>آخرین ویرایش:</b> یکشنبه 17 تیر 1397 08:54 ب.ظ <br><br><center><img src='http://uupload.ir/files/yn3y_فعععععففافقافاقا.png'</a> </center>  <div> <h2> <a href="http://crystalland.mihanblog.com/post/194">رویاهای گذشته قسمت سیزدهم</a><!--Parstools Voting Widget-->
+<script type="text/javascript">;!(function(e, d) {'use strict';var rating = {id: 'pvw-' + ~~(Math.random() * 999999),theme: '32-15',lang:'fa',tops:1,
+url: 'http://crystalland.mihanblog.com/post/194',
+title: 'رویاهای گذشته قسمت سیزدهم'
+};if (typeof e.pvwAttrs != 'object') e.pvwAttrs = {};e.pvwAttrs[rating.id] = rating;d.write('<d'+'iv id="' + rating.id + '" style="display: inline-block"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/vote/vote.js" async></scri' + 'pt>');})(window, document);</script>
+<!--Parstools Voting Widget--> </h2> <p class="date"> یکشنبه 4 شهریور 1397 02:43 ب.ظ </p> </div> <b>نویسنده:</b> <a href="http://crystalland.mihanblog.com/post/author/1493286"> princess black dahlia  </a> <br/>   <font size="4">دارکنس لایت <br>_ لاپس؟ لاپس کجایی؟؟<br>_پیداش نکردین؟؟ <br>_ نه معلوم نیست کجا رفته <br>همه دنبال پیدا کردن اون بچهه لاپس بودن ولی من از جام تکون نمیخوردم،چرا باید برام مهم باشه؟ اون دوست من نیست<br>الان صبح شده بود و اونا از دیشب دنبالش بودن ، برادر رزهارت که اسمش سان لایت بود با بقیه مردم قبیله دنبالش میگشتن<br>_ هی، تو گم و گورش کردی که هیچ تکونی نمیخوری؟؟<br>به سمت صدا نگاه کردم،فلوری لایف بود<br>دارکنس لایت: برای هزارمین بار،من نمیدونم اون بچه کجا رفته خواب بودم <br>فلور:هه تو و خواب؟ عجیبه!<br>چشامو تو کاسه چرخوندم رومو یه سمت دیگه کردم و هیچی نگفتم،قطعا باور نمیکنه تقصیر من نیست، اگه بدونم کار کیه...<br>_هی رز چرا اینقدر مضطربی؟<br>به اون سمت نگاه کردم<br>رزهارت ترسیده بود،انگار روح یا چیزی دیده از دیروز همینطوری بود منم فقط یه سوال تو سرم میچرخیده که چرا؟؟<br>رز: ه..هیچی... فقط برای لاپس نگرانم امیدوارم گیر حیوونا تو جنگل نیفتاده باشه<br>شاین: نه بابا اون نیم وجبی از پس خودش برمیاد<br>رز: ا..اره...فکر...فکر کنم حق با توعه<br>خب حالا این دختر مشکوک میزنه اون ماجراشم دیگه بدتر<br>_دوستان مشکلی پیش اومده؟<br>اونسمتو نگاه کردم که یه پونی الیکورن که بدنش بنفش بود&nbsp; موهاشم سرمه ای و چشماشم مشکی بودن رو دیدم ، دوتا سرباز هم جفتش بودن <br>رز: کریستی نایت! <br>و پرید بقلش :دلم برات تنگ شده بود <br>اون دختر که اسمش کریستی نایت بود بهش نگاهی کرد و اونم بقلش کرد :منم همینطور ...چی شد که بعد سالها از اکواستریا برگشتی؟<br>رز: خب با چند نفر همسفر شدم <br>و به ما نگاه کرد <br>کریستی: اوه...شما اکواستریایی هستید؟ <br>دارکنس لایت: من نع..اون دوتا رو حساب کن<br>رز: معرفی میکنم فلوری لایف ، شاینینگ دارک و دارکنس لایت <br>کریستی: سه پونی از نژاد تاریکی؟ خب منکه مشکلی نمیبینم میتونید بیاین <br>رز: و....<br>کریستی نایت بهش نگاه کرد : کسه دیگه ای هم هست؟<br>رز: لاپس لازلی.....ام...البته تو این اسم رو نمیشناسی....پرنسس کریس بلوم<br>به وضوح معلوم بود که تعجب کرد <br>کریستی: کریس بلوم؟؟ اونم باهاتون بوده؟؟؟<br>رز سرش رو به علامت مثبت تکون داد <br>شاین: شما لاپس رو میشناسین؟ یا..همون کریس بلوم که گفتین<br>کریستی: اون در اصل اسمش کریس بلومه و یک شاهزادست چون مادرش دختر دایی من به حساب میاد<br>ما ستا به هم نگاه کردیم <br>فلور: خب چرا باید از ما اینو مخفی کنه؟<br>کریستی: خب...داستانی داره برا خودش..شما دنبال من بیاین اینجور مستقیم به گولدن لند میریم <br>جادوشرو فعال کرد که یک پورتال روبه رومون باز شد <br>هممون وارد اون پورتال شدیم <br>به محض خروجمون دیدیم که ظاهرمون عوض شده <br>فلوری لایف چشم هاش بنفش براق شده بود و موهاش طلایی و بدنش سفید ، منم بدنم روشنتر و موهام براق و چشم هام هم ابی ، شاین هم حالت موهاش فرق کرده بودن و چشم هاش بیشتر میدرخشید ، رز هارت موهاش قرمز و پوستش کرمی شده بود و موهاش هم بلند شده بودن ، کریستی نایت هم بدنش کرمی و موهاش طلایی شده بودن و چشم هاش هم ابی <br>فلور: چه اتفاقی برامون افتاده؟؟<br>رز: گولدن لند چهره واقعیمونو نشون میده<br>فلور: ی..یعنی من در اصل این شکلی هستم؟ <br>کریستی : بله همتون در اصل این شکلی هستید و این ظاهر درون و واقعیتونه ، اگه هم بد بودید من با یه نگاه میفهمیدم چون پرنسس طلایی میتونه وجود های تاریکو ببینه<br>شاین: وایسا وایسا وایسا...تو گفتی پرنسس طلایی؟؟؟<br>کریستی یه نگاه بهش کرد : درسته.من می امورا کلودی کیت مجیک فلای هستم...البته کریستی نایت اسمی بود که خالم روم گذاشته بود که بعد از پرنسس شدن شدم کیتی، خب..دهناتونو ببندین<br>ما دهنای باز شدمونو بستیم <br>رز: اگه یکی باشه که بتونه تو ردیابی کمک کنه بریتمیه <br>کیتی: خب بهتره معطل نکنیم و...<br>هنوز حرفش رو تمام نکرده بود که یه پیگاسوس قشنگ از جلوش رد شد جوری که موهای همشون به سمت راست کشیده شد <br>اون پونی تو هوا وایساد: هنوزم کندیا کیتی <br>کیتی: شرمنده استادم خوب نبوده&nbsp; &nbsp;<br>_ عه پس اینجوریاس؟؟ حالا من شدم پونی بده؟<br>فرود اومد رو زمین<br>_ چرمینگ ملودیسو که میشناسم اونام باید دارکی و فلوری و شاینی باشن <br>ما ستا به هم نگاه کردیم <br>شاین: فکر کنم امروز باید زیادی جا بخوریم <br>_ چیز عجیبی که نیست باد بهم همه چیزو گفت تازه گفت اون کریس بلوم وروجک باهاتون بوده یهو لولو اومده خوردش هوووووو<br>رز: ام...مری اونا چیزی...<br>_ اره بابا اکواستریایی ها کلا خلن البته بماند باحالم دارن ولی به پای من نمیرسن ولی بزارین معرفی کنم بنده مری هستم محافظ عنصر باد همینطور سریعترین پیگاسوس تو ارتوسکاریا! اها یجورایی هم دختر دخترخاله بزرگه این زردک هم میشم <br>کیتی: اولا من زردک نیستم دوما تو خیلی پرحرفی سوما زود باشین به من نگاه نکنین شما که پرنسس توایلایت اسپارکلو دارین من براتون عجیبم؟؟<br>&nbsp;شاین: ام....پرنسس؟؟<br>کیتی: ببینم تو دقیقا از کجای اکواستریا اومدی؟؟<br>شاین: خب....راستش...<br>************<br>کیتی: و اونها هم میخوان همه چیزو درست کنن<br>پرنسس ملودی لایت و شاینی لایت نگاهی به هم کردن <br>شاینی لایت: که اینطور..<br>ملودی لایت: الان از ما کمکی بر میاد؟؟<br>شاین: نمیتونین زمانو درست کنین؟؟<br>دو پرنسس نگاهی به هم کردند و یهو زدن زیر خنده <br>فلور: العان چی خنده داره؟<br>شاینی لایت:هههه.... شما از ما میخواین که بمیرین!!؟؟<br>دارکنس لایت: منظورتون چیه که بمیریم؟؟؟<br>ملودی لایت: یعنی که وقتی زمان درست بشه شما که بوجود اومده زمان جدید هستین باهاش از بین میرین! <br>کیتی: خواهر اینقدر نترسونشون یه راهی هست <br>همه به کیتی نگاه کردن<br>کیتی: میتونیم از کایتلین کمک بگیریم<br>دوتا پرنسس اخم کردن <br>رز(اروم): کیتی...اونو خودت تبعیدش کردی...<br>کیتی: اره میدونم ولی اون دیگه تو تبعید نیست بلکه ازاده و میتونه....<br>ملودی لایت: چه تضمینی برا این داری که ملکه زمان کمکت کنه؟؟<br>کیتی: چون اون خواهرمه!<br><br>ادامه دارد.....<br></font><br>
+
+
+  <br>  <br> <br> <a target="_self" href="javascript:newComment(194)"> <b>دیدگاه : </b> <script>setCommentCnt(194)</script> نظرات </a> <br/>   <b>آخرین ویرایش:</b> یکشنبه 4 شهریور 1397 02:42 ب.ظ <br><br><center><img src='http://uupload.ir/files/yn3y_فعععععففافقافاقا.png'</a> </center>  <div> <h2> <a href="http://crystalland.mihanblog.com/post/193">رویاهای گذشته قسمت دوازدهم </a><!--Parstools Voting Widget-->
+<script type="text/javascript">;!(function(e, d) {'use strict';var rating = {id: 'pvw-' + ~~(Math.random() * 999999),theme: '32-15',lang:'fa',tops:1,
+url: 'http://crystalland.mihanblog.com/post/193',
+title: 'رویاهای گذشته قسمت دوازدهم '
+};if (typeof e.pvwAttrs != 'object') e.pvwAttrs = {};e.pvwAttrs[rating.id] = rating;d.write('<d'+'iv id="' + rating.id + '" style="display: inline-block"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/vote/vote.js" async></scri' + 'pt>');})(window, document);</script>
+<!--Parstools Voting Widget--> </h2> <p class="date"> یکشنبه 31 تیر 1397 02:48 ب.ظ </p> </div> <b>نویسنده:</b> <a href="http://crystalland.mihanblog.com/post/author/1493286"> princess black dahlia  </a> <br/>   
+
+
+<div><br></div><div style="text-align: center;"><font size="5">ببخشید چند روز بود که نزاشته بودمش درگیر یه داستان دیگه بودم که میخوام بعد از این بنویسمش البته گفته بودم که رویاهای گذشته سه فصل هست ولی از اونجا که داستان های هر کدوم جداست و فقط به هم کمی مربوط میشه میخوام بعد از تمام شدن رویاهای گذشته این داستان جدیدو بنویسم که به نظر خودم خیلی قشنگه و امیدوارم شما هم خوشتون بیاد&nbsp;</font></div><div style="text-align: center;"><font size="5">خب اینم از قسمت دوازدهم رویاهای گذشته ادامه مطلب</font></div>  <br> <a href='http://crystalland.mihanblog.com/post/193'>ادامه مطلب</a> <br> <br> <a target="_self" href="javascript:newComment(193)"> <b>دیدگاه : </b> <script>setCommentCnt(193)</script> نظرات </a> <br/>   <b>آخرین ویرایش:</b> یکشنبه 31 تیر 1397 02:54 ب.ظ <br><br><center><img src='http://uupload.ir/files/yn3y_فعععععففافقافاقا.png'</a> </center>  <div> <h2> <a href="http://crystalland.mihanblog.com/post/192">رویاهای گذشته قسمت یازدهم </a><!--Parstools Voting Widget-->
+<script type="text/javascript">;!(function(e, d) {'use strict';var rating = {id: 'pvw-' + ~~(Math.random() * 999999),theme: '32-15',lang:'fa',tops:1,
+url: 'http://crystalland.mihanblog.com/post/192',
+title: 'رویاهای گذشته قسمت یازدهم '
+};if (typeof e.pvwAttrs != 'object') e.pvwAttrs = {};e.pvwAttrs[rating.id] = rating;d.write('<d'+'iv id="' + rating.id + '" style="display: inline-block"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/vote/vote.js" async></scri' + 'pt>');})(window, document);</script>
+<!--Parstools Voting Widget--> </h2> <p class="date"> چهارشنبه 20 تیر 1397 12:14 ب.ظ </p> </div> <b>نویسنده:</b> <a href="http://crystalland.mihanblog.com/post/author/1493286"> princess black dahlia  </a> <br/>   
+
+
+<div><font size="4">سلام دوستان اینم از ادامه داستان</font></div><div><font size="4">ببخشید میدونم باید دیروز میدادم ولی ندادم چون به لطف این کیبوردمون که هی گیر میکنه نتونستم بنویسمش میدونم کوتاهه ولی همینم به زور نوشتم&nbsp;</font></div><div><font size="4">خب داستان ادامه مطلبه منتظر چی هستین؟</font></div><div><font size="4"><br></font></div><div><font size="4"><br></font></div><div><font size="4"><br></font></div><div><font size="4"><br></font></div><div><font size="4"><br></font></div><div><font size="4"><br></font></div><div><font size="4"><br></font></div><div><font size="4"><br></font></div><div><font size="4"><br></font></div><div><font size="4"><br></font></div><div><div style=""><br></div></div>
+
+
+
+
+
+
+
+
+  <br> <a href='http://crystalland.mihanblog.com/post/192'>ادامه مطلب</a> <br> <br> <a target="_self" href="javascript:newComment(192)"> <b>دیدگاه : </b> <script>setCommentCnt(192)</script> نظرات </a> <br/>   <b>آخرین ویرایش:</b> یکشنبه 31 تیر 1397 02:20 ب.ظ <br><br><center><img src='http://uupload.ir/files/yn3y_فعععععففافقافاقا.png'</a> </center>  <div> <h2> <a href="http://crystalland.mihanblog.com/post/191">تغییر</a><!--Parstools Voting Widget-->
+<script type="text/javascript">;!(function(e, d) {'use strict';var rating = {id: 'pvw-' + ~~(Math.random() * 999999),theme: '32-15',lang:'fa',tops:1,
+url: 'http://crystalland.mihanblog.com/post/191',
+title: 'تغییر'
+};if (typeof e.pvwAttrs != 'object') e.pvwAttrs = {};e.pvwAttrs[rating.id] = rating;d.write('<d'+'iv id="' + rating.id + '" style="display: inline-block"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/vote/vote.js" async></scri' + 'pt>');})(window, document);</script>
+<!--Parstools Voting Widget--> </h2> <p class="date"> یکشنبه 17 تیر 1397 09:30 ب.ظ </p> </div> <b>نویسنده:</b> <a href="http://crystalland.mihanblog.com/post/author/1493286"> princess black dahlia  </a> <br/>   <div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">خب دوستان همونطور که دیدید یه تغییراتی توی وب اینجاد کردم و قراره بیشتر هم بشه</font></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/m8nh_جداکننده_(2).gif" alt=""></div><div style="text-align: center;"><font size="4">مطالب قبلیو پاک نمیکنم میزارم بمونه ولی مطالب اصلی دیگه از اینجا شروع میشه که مربوط به داستاناست</font></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/m8nh_جداکننده_(2).gif" alt=""></div><div style="text-align: center;"><font size="4">اول از همه از رویاهای گذشته شروع میکنم میخوام تا جایی که میتونم ادامش بدم و بعد از تمام شدنش برم سراغ نوشتن داستانای دیگه</font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/a5w8_drowsing_twilight_sparkle_by_o_city-d85t46t.gif" alt=""></div>
+
+
+  <br>  <br> <br> <a target="_self" href="javascript:newComment(191)"> <b>دیدگاه : </b> <script>setCommentCnt(191)</script> نظرات </a> <br/>   <b>آخرین ویرایش:</b> یکشنبه 17 تیر 1397 09:40 ب.ظ <br><br><center><img src='http://uupload.ir/files/yn3y_فعععععففافقافاقا.png'</a> </center>  <div> <h2> <a href="http://crystalland.mihanblog.com/post/189">نتیجه نظرسنجی مهم</a><!--Parstools Voting Widget-->
+<script type="text/javascript">;!(function(e, d) {'use strict';var rating = {id: 'pvw-' + ~~(Math.random() * 999999),theme: '32-15',lang:'fa',tops:1,
+url: 'http://crystalland.mihanblog.com/post/189',
+title: 'نتیجه نظرسنجی مهم'
+};if (typeof e.pvwAttrs != 'object') e.pvwAttrs = {};e.pvwAttrs[rating.id] = rating;d.write('<d'+'iv id="' + rating.id + '" style="display: inline-block"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/vote/vote.js" async></scri' + 'pt>');})(window, document);</script>
+<!--Parstools Voting Widget--> </h2> <p class="date"> یکشنبه 17 تیر 1397 06:51 ب.ظ </p> </div> <b>نویسنده:</b> <a href="http://crystalland.mihanblog.com/post/author/1493286"> princess black dahlia  </a> <br/>   <font size="4">خب نتیجه نظر سنجی که حسابی رو مخم بود ولی باید بگم</font><div><font size="4">شخصا شاخ در اوردم از نتیجه</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/22.gif"></div><div><br></div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://s8.picofile.com/file/8331274726/Capture_2018_07_08_19_42_42_358.png" alt=""></div><div><br></div><div><br></div><div><font size="4">اصلا لحظه اول فقط همینجوری نگاش میکردم که یهو چی شد !؟</font></div><div><font size="4">ولی انگار داستانی کردن وب بیشتر رای اورد...خب پس باید وبو یکم تغییرش بدم و نوشتنو ادامه بدم</font></div>  <br>  <br> <br> <a target="_self" href="javascript:newComment(189)"> <b>دیدگاه : </b> <script>setCommentCnt(189)</script> نظرات </a> <br/>   <b>آخرین ویرایش:</b> یکشنبه 17 تیر 1397 06:56 ب.ظ <br><br><center><img src='http://uupload.ir/files/yn3y_فعععععففافقافاقا.png'</a> </center>  <div> <h2> <a href="http://crystalland.mihanblog.com/post/188">نتیجه نظرسنجی 5</a><!--Parstools Voting Widget-->
+<script type="text/javascript">;!(function(e, d) {'use strict';var rating = {id: 'pvw-' + ~~(Math.random() * 999999),theme: '32-15',lang:'fa',tops:1,
+url: 'http://crystalland.mihanblog.com/post/188',
+title: 'نتیجه نظرسنجی 5'
+};if (typeof e.pvwAttrs != 'object') e.pvwAttrs = {};e.pvwAttrs[rating.id] = rating;d.write('<d'+'iv id="' + rating.id + '" style="display: inline-block"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/vote/vote.js" async></scri' + 'pt>');})(window, document);</script>
+<!--Parstools Voting Widget--> </h2> <p class="date"> شنبه 9 تیر 1397 09:00 ب.ظ </p> </div> <b>نویسنده:</b> <a href="http://crystalland.mihanblog.com/post/author/1493286"> princess black dahlia  </a> <br/>   
+<font size="4">اینم پنجمین نظر سنجی که مرتبط با داستان بود و...چشمم روشن&nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/22.gif"><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/cpk6_capture_2018_06_30_21_58_32_176.png" alt=""></div><div><br></div><div><br></div><div><br></div><div><br></div><div><font size="5">شخصیتای اصلی فصل بعد باید اینقدر کم نظر بگیرن=| ؟؟</font></div><div><font size="5">خب از اونجا هم که بیشتریا کم نظر گرفتن منم نمیگم اون شخصیتا کی هستن&nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></div><div><font size="5">و اینکه دوستان منم پرنسس لونا رو دوست دارم ول خدایی هیچکدوم از بقیه شخصیتارو دوست نداشتین؟؟&nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/22.gif"></div><div><font size="5">حالا خوبه رزهارت نظر جمع کرده برا خودش ولی فکر کنم طرفداراش وقتی بفهمن در واقع موضوعش چیه شاخ دربیرن</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/22.gif"></div><div><font size="5">نه نه نه اشتباه نکنین شخصیت منفی نیست&nbsp;</font></div><div><font size="5">ولی فقط خودش نیست و بیشتر شخصیتا زندگیه مخصوص خودشونو داشتن که البته تو توضیحاتشون ننوشتم شرمنده</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></div><div><br></div>
+
+  <br>  <br> <br> <a target="_self" href="javascript:newComment(188)"> <b>دیدگاه : </b> <script>setCommentCnt(188)</script> نظرات </a> <br/>   <b>آخرین ویرایش:</b> شنبه 9 تیر 1397 09:18 ب.ظ <br><br><center><img src='http://uupload.ir/files/yn3y_فعععععففافقافاقا.png'</a> </center>  <div> <h2> <a href="http://crystalland.mihanblog.com/post/187">برگشتم (مهم)</a><!--Parstools Voting Widget-->
+<script type="text/javascript">;!(function(e, d) {'use strict';var rating = {id: 'pvw-' + ~~(Math.random() * 999999),theme: '32-15',lang:'fa',tops:1,
+url: 'http://crystalland.mihanblog.com/post/187',
+title: 'برگشتم (مهم)'
+};if (typeof e.pvwAttrs != 'object') e.pvwAttrs = {};e.pvwAttrs[rating.id] = rating;d.write('<d'+'iv id="' + rating.id + '" style="display: inline-block"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/vote/vote.js" async></scri' + 'pt>');})(window, document);</script>
+<!--Parstools Voting Widget--> </h2> <p class="date"> شنبه 9 تیر 1397 08:23 ب.ظ </p> </div> <b>نویسنده:</b> <a href="http://crystalland.mihanblog.com/post/author/1493286"> princess black dahlia  </a> <br/>   <div style="text-align: center;"><span style="font-size: large;">سلام دوستان......من برگشتم</span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/6.gif"></div><div style="text-align: center;"><font size="4">البته میدونم مدت خیلی زیادی نبودم یک سال چیز کمی نیست</font></div><div style="text-align: center;"><font size="4">من نهم بودم نهمم که میدونید دیگه بعدش باید انتخواب رشته کنید و خلاصه بگم اینده ادم وابسته به همین رشته ایه که انتخوابش میکنه ولی فعلا تموم شد امتحانمو دادم کارنامم رو هم گرفتم فقط مونده رشتمو اعلام کنن&nbsp;</font></div><div style="text-align: center;"><font size="4">خب از بحث درسو مدرسه که بگذریم میرسیم به وبلاگ</font></div><div style="text-align: center;"><font size="4">اینجا میشه گفت دیگه سه سالش شده منم سه ساله که اومدم تو نت ...تو این سه سال چیزای زیادی یاد گرفتم ولی تو این یه سال یخورده کد نویسی که بلد بودم هم از سرم پرید...خب اون موقع لپتابم سوخت و نمیشد درستش کرد منم که تا یه مدت عزا گرفته بودم چون همه عکسام و به خصوص بیس هام پاک شدن....من با همون حالت هیچی نداشتم بزارم وبلاگ و با پاک شدن اونا دیگه کلا هیچی نداشتم وضعم یجوری بود که تا یه مدت نمیزاشتم کسی نزدیک لپتاب بره شاید یه فرجی شد و درست شد&nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/22.gif"></div><div style="text-align: center;"><font size="4">که البته هیچوقت چنین اتفاقی نیوفتاد و اونا رفتن لپتابو درست کردن منم پناه بردم به کامپیوتر و ادیت کردن...</font></div><div style="text-align: center;"><font size="4">بعد چند ماه بالاخره تونستم بیس هامرو برگردونم ولی وبلاگ نویسیو نه</font></div><div style="text-align: center;"><font size="4">تو اون مدتم رفتم تو تلگرام و الانم بعد یه سال برگشتم ولی هنوزم داستان مینویسم و ..به نظرم یکم بهتر شده نسبت به قبل و همینطور ادیت کردنم</font></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font size="4">( راستی اینجوری نگام نکنین وصیت نامه وبلاگو نمینویسم)</font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">خب بحث داستان شد...من داستانو نوشتم این اواخر ولی به دلایل مختلف پاک میشد</font></div><div style="text-align: center;"><font size="4">منم اعصابم خورد شد بود و گفتم شاید اینو نباید ادامه بدم...چون به فکرم اومد که داستانو تا سه فصل ادامه بدم هر فصلم ماجراهایی داره که به بقیه فصلا مرتبطه که با این پاک شدنا دیگه ننوشتم</font></div><div style="text-align: center;"><font size="4">ولی چون داستان نویسی رو دوست دارم میخوام نظر بدین که چکار کنم</font></div><div style="text-align: center;"><font size="4">این داستانو ادامه بدم؟</font></div><div style="text-align: center;"><font size="4">یه داستان دیگه بنویسم؟</font></div><div style="text-align: center;"><font size="4">کلا داستان ننویسم</font></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font size="4">و اگه هم قرار بر داستان نوشتن شد تصمیم دارم اینجارو یه وب داستانی کنم و توش داستانامو بنویسم&nbsp;</font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">خب منتظر نظراتون هستم&nbsp;</font></div>  <br>  <br> <br> <a target="_self" href="javascript:newComment(187)"> <b>دیدگاه : </b> <script>setCommentCnt(187)</script> نظرات </a> <br/>   <b>آخرین ویرایش:</b> شنبه 9 تیر 1397 08:53 ب.ظ <br><br><center><img src='http://uupload.ir/files/yn3y_فعععععففافقافاقا.png'</a> </center>  <div> <h2> <a href="http://crystalland.mihanblog.com/post/186">A changeling can change</a><!--Parstools Voting Widget-->
+<script type="text/javascript">;!(function(e, d) {'use strict';var rating = {id: 'pvw-' + ~~(Math.random() * 999999),theme: '32-15',lang:'fa',tops:1,
+url: 'http://crystalland.mihanblog.com/post/186',
+title: 'A changeling can change'
+};if (typeof e.pvwAttrs != 'object') e.pvwAttrs = {};e.pvwAttrs[rating.id] = rating;d.write('<d'+'iv id="' + rating.id + '" style="display: inline-block"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/vote/vote.js" async></scri' + 'pt>');})(window, document);</script>
+<!--Parstools Voting Widget--> </h2> <p class="date"> جمعه 28 اردیبهشت 1397 08:57 ب.ظ </p> </div> <b>نویسنده:</b> <a href="http://crystalland.mihanblog.com/post/author/1718164"> dark nightmares </a> <br/>  <a href="http://crystalland.mihanblog.com/post/author/1718164"><img src="../static.mihanblog.com/public/user_data/user_photo/573/1718164.jpg"  /></a> <font size="7">!!!!It's soooooo great</font><div><font size="7"><br></font></div><div>
+		<!--AparatShow-->
+				<div style="display:none">[http://www.aparat.com/v/bEuev]</div>
+                <div class="aparatFrame">
+                    <iframe frameborder=0  allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" width="435" height="290" src="http://www.aparat.com/video/video/embed/videohash/bEuev/vt/frame"> </iframe>
+                </div>
+
+		<!--eoAparatShow-->
+				</div>
+
+
+  <br>  <br> <br> <a target="_self" href="javascript:newComment(186)"> <b>دیدگاه : </b> <script>setCommentCnt(186)</script> نظرات </a> <br/>   <b>آخرین ویرایش:</b> - - <br><br><center><img src='http://uupload.ir/files/yn3y_فعععععففافقافاقا.png'</a> </center>  <div> <h2> <a href="http://crystalland.mihanblog.com/post/185">عکسای سانست</a><!--Parstools Voting Widget-->
+<script type="text/javascript">;!(function(e, d) {'use strict';var rating = {id: 'pvw-' + ~~(Math.random() * 999999),theme: '32-15',lang:'fa',tops:1,
+url: 'http://crystalland.mihanblog.com/post/185',
+title: 'عکسای سانست'
+};if (typeof e.pvwAttrs != 'object') e.pvwAttrs = {};e.pvwAttrs[rating.id] = rating;d.write('<d'+'iv id="' + rating.id + '" style="display: inline-block"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/vote/vote.js" async></scri' + 'pt>');})(window, document);</script>
+<!--Parstools Voting Widget--> </h2> <p class="date"> پنجشنبه 9 فروردین 1397 11:13 ق.ظ </p> </div> <b>نویسنده:</b> <a href="http://crystalland.mihanblog.com/post/author/1700453"> ♬❤Kïåñå ÄñÌMÈ❤♬ </a> <br/>   
+
+<font size="4"><font face="Mihan-Iransans">برین ادامه^-^</font></font>
+
+
+
+
+
+
+  <br> <a href='http://crystalland.mihanblog.com/post/185'>ادامه مطلب</a> <br> <br> <a target="_self" href="javascript:newComment(185)"> <b>دیدگاه : </b> <script>setCommentCnt(185)</script> نظرات </a> <br/>   <b>آخرین ویرایش:</b> پنجشنبه 9 فروردین 1397 11:15 ق.ظ <br><br><center><img src='http://uupload.ir/files/yn3y_فعععععففافقافاقا.png'</a> </center>  <div> <h2> <a href="http://crystalland.mihanblog.com/post/181">فن آرتای توایلایت</a><!--Parstools Voting Widget-->
+<script type="text/javascript">;!(function(e, d) {'use strict';var rating = {id: 'pvw-' + ~~(Math.random() * 999999),theme: '32-15',lang:'fa',tops:1,
+url: 'http://crystalland.mihanblog.com/post/181',
+title: 'فن آرتای توایلایت'
+};if (typeof e.pvwAttrs != 'object') e.pvwAttrs = {};e.pvwAttrs[rating.id] = rating;d.write('<d'+'iv id="' + rating.id + '" style="display: inline-block"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/vote/vote.js" async></scri' + 'pt>');})(window, document);</script>
+<!--Parstools Voting Widget--> </h2> <p class="date"> پنجشنبه 2 فروردین 1397 01:56 ب.ظ </p> </div> <b>نویسنده:</b> <a href="http://crystalland.mihanblog.com/post/author/1700453"> ♬❤Kïåñå ÄñÌMÈ❤♬ </a> <br/>   
+<font size="3"><font face="Mihan-Iransans">سلام به عنوان اولین پستم فن آرتای توای رو آوردم.<br>برا دیدنشون برین ادامه.<br></font></font>
+
+
+
+
+  <br> <a href='http://crystalland.mihanblog.com/post/181'>بکلیک تا فن آرتا رو ببینی^_^</a> <br> <br> <a target="_self" href="javascript:newComment(181)"> <b>دیدگاه : </b> <script>setCommentCnt(181)</script> نظرات </a> <br/>   <b>آخرین ویرایش:</b> پنجشنبه 2 فروردین 1397 02:09 ب.ظ <br><br><center><img src='http://uupload.ir/files/yn3y_فعععععففافقافاقا.png'</a> </center>  <div> <h2> <a href="http://crystalland.mihanblog.com/post/180">سلام^_^</a><!--Parstools Voting Widget-->
+<script type="text/javascript">;!(function(e, d) {'use strict';var rating = {id: 'pvw-' + ~~(Math.random() * 999999),theme: '32-15',lang:'fa',tops:1,
+url: 'http://crystalland.mihanblog.com/post/180',
+title: 'سلام^_^'
+};if (typeof e.pvwAttrs != 'object') e.pvwAttrs = {};e.pvwAttrs[rating.id] = rating;d.write('<d'+'iv id="' + rating.id + '" style="display: inline-block"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/vote/vote.js" async></scri' + 'pt>');})(window, document);</script>
+<!--Parstools Voting Widget--> </h2> <p class="date"> پنجشنبه 2 فروردین 1397 01:12 ب.ظ </p> </div> <b>نویسنده:</b> <a href="http://crystalland.mihanblog.com/post/author/1700453"> ♬❤Kïåñå ÄñÌMÈ❤♬ </a> <br/>   <font size="3"><font face="Mihan-Iransans">سلام<img src="http://mihanblog.com/public/public/rte/images_new/smiles/83.gif"><br>نویسنده ی جدید هستم.<img src="http://mihanblog.com/public/public/rte/images_new/smiles/5.gif"><br>از رینبولایت هم ممنونم منو نویسنده کرد.<img src="http://mihanblog.com/public/public/rte/images_new/smiles/1.gif"><br>امیدوارم از من راضی باشین.<img src="http://mihanblog.com/public/public/rte/images_new/smiles/85.gif"></font></font>
+
+
+  <br>  <br> <br> <a target="_self" href="javascript:newComment(180)"> <b>دیدگاه : </b> <script>setCommentCnt(180)</script> نظرات </a> <br/>   <b>آخرین ویرایش:</b> پنجشنبه 2 فروردین 1397 01:56 ب.ظ <br><br><center><img src='http://uupload.ir/files/yn3y_فعععععففافقافاقا.png'</a> </center>  <div> <h2> <a href="http://crystalland.mihanblog.com/post/179">سگ گمشده اگر پیدا کردید با http://pony-sp.mihanblog.com/post/5465 تماس بگیرید</a><!--Parstools Voting Widget-->
+<script type="text/javascript">;!(function(e, d) {'use strict';var rating = {id: 'pvw-' + ~~(Math.random() * 999999),theme: '32-15',lang:'fa',tops:1,
+url: 'http://crystalland.mihanblog.com/post/179',
+title: 'سگ گمشده اگر پیدا کردید با http://pony-sp.mihanblog.com/post/5465 تماس بگیرید'
+};if (typeof e.pvwAttrs != 'object') e.pvwAttrs = {};e.pvwAttrs[rating.id] = rating;d.write('<d'+'iv id="' + rating.id + '" style="display: inline-block"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/vote/vote.js" async></scri' + 'pt>');})(window, document);</script>
+<!--Parstools Voting Widget--> </h2> <p class="date"> شنبه 23 دی 1396 09:01 ب.ظ </p> </div> <b>نویسنده:</b> <a href="http://crystalland.mihanblog.com/post/author/1718164"> dark nightmares </a> <br/>   
+<p> <font size="3"><font size="5">منبع: <a href="../pony-sp.mihanblog.com/index.html" target="" title=""><font size="5">pony-sp.mihanblog.com</font>
+</a></font></font></p><font size="3">
+</font><p><font size="3">دوستان...
+</font></p><font size="3">
+</font><p><font size="3">حال من امروز خیلی بده خیلی...
+</font></p><font size="3">
+</font><p><font size="3">منم نمیتونم درست حرف بزنم...
+</font></p><font size="3">
+</font><p><font size="3">دیشب توی پارک ملت گم شد...
+</font></p><font size="3">
+</font><p><font size="3">هر کدوم از حیوونایی که دوسشون دارم...
+</font></p><font size="3">
+</font><p><font size="3">گم میشن درست مثل گربم که اسمش پوپو بود...
+</font></p><font size="3">
+</font><p><font size="3">این اسمش میکیه...
+</font></p><font size="3">
+</font><p><font size="3">خیلی کوچیکه...
+</font></p><font size="3">
+</font><p><font size="3">چشمای درشت و موهای سفید داره
+</font></p><font size="3">
+</font><p><font size="3">دیشب انقدر گریه کردم
+</font></p><font size="3">
+</font><p><font size="3">همین الانش دستام داره میلرزه...
+</font></p><font size="3">
+</font><p><font size="3">دوستان خواهش میکنم ......
+</font></p><font size="3">
+</font><p><font size="3"><img src="http://p30up.ir/uploads/f384055835.jpg" alt="P30up" "="" width="555" height="555"></font>
+</p><font size="3">
+</font><p><font size="3">نشر بدید و تو وبلاگ و ایسنتا و.. بزارین تروجون هرکیو دوست دارین...
+</font></p>
+
+  <br>  <br> <br> <a target="_self" href="javascript:newComment(179)"> <b>دیدگاه : </b> <script>setCommentCnt(179)</script> نظرات </a> <br/>   <b>آخرین ویرایش:</b> چهارشنبه 23 اسفند 1396 06:00 ب.ظ <br><br><center><img src='http://uupload.ir/files/yn3y_فعععععففافقافاقا.png'</a> </center>  <div> <h2> <a href="http://crystalland.mihanblog.com/post/178">سلام العلیکم و رحمت الله و برکااااتو.</a><!--Parstools Voting Widget-->
+<script type="text/javascript">;!(function(e, d) {'use strict';var rating = {id: 'pvw-' + ~~(Math.random() * 999999),theme: '32-15',lang:'fa',tops:1,
+url: 'http://crystalland.mihanblog.com/post/178',
+title: 'سلام العلیکم و رحمت الله و برکااااتو.'
+};if (typeof e.pvwAttrs != 'object') e.pvwAttrs = {};e.pvwAttrs[rating.id] = rating;d.write('<d'+'iv id="' + rating.id + '" style="display: inline-block"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/vote/vote.js" async></scri' + 'pt>');})(window, document);</script>
+<!--Parstools Voting Widget--> </h2> <p class="date"> چهارشنبه 20 دی 1396 12:57 ق.ظ </p> </div> <b>نویسنده:</b> <a href="http://crystalland.mihanblog.com/post/author/1718164"> dark nightmares </a> <br/>  <a href="http://crystalland.mihanblog.com/post/author/1718164"><img src="../static.mihanblog.com/public/user_data/user_photo/573/1718164.jpg"  /></a> <font size="5">&nbsp;سلام خدمت همه بیکارای عزیز. بنده فردا امتحان جغرافیا نوبت دارم و هنوز هم کپهٔ مرگم رو نزاشتم:| بیخی بابا تازه پنج ساعت درس خوندم ولی چه خوندنی! همش هواسم به گروه دوبلاژمون(مجیکال ویدیو) بود. خو حالا کی آنلاینه؟ اوه اوه بابام بیدار شد! برم سعی میکنم برگردم راستی مودممون هنوز شارژ نداره بابام ساعت ده نت رو روشن کرد یادش رفت خاموشش کنه که الان دارم. فعلا بای!</font>  <br>  <br> <br> <a target="_self" href="javascript:newComment(178)"> <b>دیدگاه : </b> <script>setCommentCnt(178)</script> نظرات </a> <br/>   <b>آخرین ویرایش:</b> چهارشنبه 20 دی 1396 01:03 ق.ظ <br><br><center><img src='http://uupload.ir/files/yn3y_فعععععففافقافاقا.png'</a> </center>  <div> <h2> <a href="http://crystalland.mihanblog.com/post/177">اومدم...</a><!--Parstools Voting Widget-->
+<script type="text/javascript">;!(function(e, d) {'use strict';var rating = {id: 'pvw-' + ~~(Math.random() * 999999),theme: '32-15',lang:'fa',tops:1,
+url: 'http://crystalland.mihanblog.com/post/177',
+title: 'اومدم...'
+};if (typeof e.pvwAttrs != 'object') e.pvwAttrs = {};e.pvwAttrs[rating.id] = rating;d.write('<d'+'iv id="' + rating.id + '" style="display: inline-block"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/vote/vote.js" async></scri' + 'pt>');})(window, document);</script>
+<!--Parstools Voting Widget--> </h2> <p class="date"> جمعه 10 آذر 1396 08:50 ب.ظ </p> </div> <b>نویسنده:</b> <a href="http://crystalland.mihanblog.com/post/author/1718164"> dark nightmares </a> <br/>  <a href="http://crystalland.mihanblog.com/post/author/1718164"><img src="../static.mihanblog.com/public/user_data/user_photo/573/1718164.jpg"  /></a> 
+<font size="5">اومدم با اومدم/ با صد هزار ناز اومد/ با یه سوپرایز اومدم!!!&nbsp;</font><div><font size="5">سلاااممممم. یه سوپرایز اندرویدی اومدم دانلود کنید بعد نظرتون رو بگید فقط خدا شانس بده اندروید من پایین بود:/</font></div><div><font size="5">&nbsp;</font></div><div><font size="5"><br></font></div><div><font size="5">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ((لینک دانلود))</font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5"><br></font></div><div><font size="5">هههه ضد حال! میهن مشکله داره لینک واژش و کادرش غیر فعاله لینک رو دستی میدم :</font></div><div><font size="5">https://yekupload.ir/Pat/Wooden_Toaster_-_Rainbow_Factory_[The_Living_Tombs.mp3.apk<br></font><div><br></div></div>
+
+  <br>  <br> <br> <a target="_self" href="javascript:newComment(177)"> <b>دیدگاه : </b> <script>setCommentCnt(177)</script> نظرات </a> <br/>   <b>آخرین ویرایش:</b> شنبه 30 دی 1396 11:35 ق.ظ <br><br><center><img src='http://uupload.ir/files/yn3y_فعععععففافقافاقا.png'</a> </center>  <div> <h2> <a href="http://crystalland.mihanblog.com/post/176">فعلا دارم میرم</a><!--Parstools Voting Widget-->
+<script type="text/javascript">;!(function(e, d) {'use strict';var rating = {id: 'pvw-' + ~~(Math.random() * 999999),theme: '32-15',lang:'fa',tops:1,
+url: 'http://crystalland.mihanblog.com/post/176',
+title: 'فعلا دارم میرم'
+};if (typeof e.pvwAttrs != 'object') e.pvwAttrs = {};e.pvwAttrs[rating.id] = rating;d.write('<d'+'iv id="' + rating.id + '" style="display: inline-block"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/vote/vote.js" async></scri' + 'pt>');})(window, document);</script>
+<!--Parstools Voting Widget--> </h2> <p class="date"> پنجشنبه 23 شهریور 1396 07:48 ق.ظ </p> </div> <b>نویسنده:</b> <a href="http://crystalland.mihanblog.com/post/author/1636090">  ‪dark     nightmares   </a> <br/>  <a href="http://crystalland.mihanblog.com/post/author/1636090"><img src="../static.mihanblog.com/public/user_data/user_photo/546/1636090.jpg"  /></a> <font size="5">&nbsp;با سلام. من هک شدم و وبلاگ هام به کلی از بین رفته. واسه همینم قبل از اینکه بیاد پست های اینجام رو هم پاک کنه یا به کسی چیزی بگه انصراف میدم. ولی بازم برمیگردم تا اینجا نویسنده باشم وقتی از هک در اومدم</font>  <br>  <br> <br> <a target="_self" href="javascript:newComment(176)"> <b>دیدگاه : </b> <script>setCommentCnt(176)</script> نظرات </a> <br/>   <b>آخرین ویرایش:</b> پنجشنبه 23 شهریور 1396 07:51 ق.ظ <br><br><center><img src='http://uupload.ir/files/yn3y_فعععععففافقافاقا.png'</a> </center>   <br><br>   تعداد کل صفحات : 11  <a href="http://crystalland.mihanblog.com/page/1"> <b>1</b></a>  <a href="http://crystalland.mihanblog.com/page/2"> <span>2</span></a>  <a href="http://crystalland.mihanblog.com/page/3"> <span>3</span></a>  <a href="http://crystalland.mihanblog.com/page/4"> <span>4</span></a>  <a href="http://crystalland.mihanblog.com/page/5"> <span>5</span></a>  <a href="http://crystalland.mihanblog.com/page/6"> <span>6</span></a>  <a href="http://crystalland.mihanblog.com/page/7"> <span>7</span></a>  <a href="http://crystalland.mihanblog.com/page/8"> <i>...</i></a>   <div id="footer" class="clearfix"> <strong> POWERED BY <a href="../www.mihanblog.com/index.html"> <font color="#FF0000" size="2px">s</font>carlett <font color="#FF0000" size="2px">c</font>rosszeria</a> </strong> </div> </div> <div id="sidebar"> <form id="frm-16077996675fd5137312a86" method="get" action="http://crystalland.mihanblog.com/post/search/fid/16077996675fd5137312a86"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search">  <div class="sidebar_box_border_div"> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <div class="sidebar_box"> <input type="text" name="search_text" style="width:90px"/> <input type="submit" value="بگرد و ببین"/> </div> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> </div> <input type="hidden" name="frm-id" value="16077996675fd5137312a86" id="frm-id" /></form> <div class="seprator"><img src="../static.mihanblog.com/public/images/empty.gif"/></div> <div class="sidebar_box_border_div"> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <div class="sidebar_box"> <div style="text-align:center"> <div align="center" style="border:none; width:100px; overflow:hidden"></div> <a href="index.html">E-mail</a><br/> <a href="javascript:messageForm()">call wiht me</a><br/>  <div style="text-align:center">سلام اینجا دارکنس امپایره جایی که من توش داستانامو مینویسم ^-^<br />
+اینجا قبلا شهر پونی های کریستالی بوده ولی حالا تغییر کرده<br />
+من اینجا همه نوع داستان مینویسم امیدوارم از همشون لذت ببرین </div> <div class="clearfix" style="margin-right:70px"> <a href="http://crystalland.mihanblog.com/post/rss/"><img style="border:none; float:right" src="../static.mihanblog.com/public/images/icon/rss.gif"/></a> <a href="http://crystalland.mihanblog.com/post/atom/"><img style="border:none; float:right" src="../static.mihanblog.com/public/images/icon/atom.gif"/></a> </div> </div> </div> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> </div> <div class="seprator"><img src="../static.mihanblog.com/public/images/empty.gif"/></div> 
+		 <div class="seprator"><img src="../static.mihanblog.com/public/images/empty.gif"/></div>  <div class="sidebar_box_border_div"> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <div class="sidebar_box"> <h3>برچسبها</h3>  <a href="http://crystalland.mihanblog.com/post/tag/%D9%BE%D9%88%D9%86%DB%8C-+%D8%A7%DA%A9%D9%88%D8%A7%D8%B3%D8%AA%D8%B1%DB%8C%D8%A7+%DA%AF%D8%B1%D9%84%D8%B2" style="font-size:1em"> پونی- اکواستریا گرلز </a>  <a href="http://crystalland.mihanblog.com/post/tag/%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86+-+%D9%BE%D9%88%D9%86%DB%8C" style="font-size:1em"> داستان - پونی </a>  </div> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> </div>  <div class="seprator"><img src="../static.mihanblog.com/public/images/empty.gif"/></div>  <div class="sidebar_box_border_div"> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <div class="sidebar_box"> <h3>موضوع</h3>  <a href="http://crystalland.mihanblog.com/post/category/2"> داستان(3) </a> <br/>  <a href="http://crystalland.mihanblog.com/post/category/1"> پونی(18) </a> <br/>  </div> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> </div>  <div class="seprator"><img src="../static.mihanblog.com/public/images/empty.gif"/></div>  <div class="sidebar_box_border_div"> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <div class="sidebar_box"> <div><h3>نویسنده </h3>  <a href="http://crystalland.mihanblog.com/post/author/1493286"><img src="../static.mihanblog.com/public/user_data/user_photo/498/1493286.jpg" style="width:16px;" /></a> <a href="http://crystalland.mihanblog.com/post/author/1493286"> princess black dahlia (89) </a> <br/>  </div> </div> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> </div>  <div class="seprator"><img src="../static.mihanblog.com/public/images/empty.gif"/></div>  <div class="sidebar_box_border_div"> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <div class="sidebar_box"> <h3>صفحات جانبی </h3>  <a href="http://crystalland.mihanblog.com/extrapage/datan"> داستان های من </a> <br/>  <a href="http://crystalland.mihanblog.com/extrapage/mlp"> لگو دوستان </a> <br/>  <a href="http://crystalland.mihanblog.com/extrapage/1234"> دزد ها و کپی گرا </a> <br/>  <a href="http://crystalland.mihanblog.com/extrapage/mypony"> پونی فروشی </a> <br/>  </div> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> </div>  <div class="seprator"><img src="../static.mihanblog.com/public/images/empty.gif"/></div>  <div class="sidebar_box_border_div"> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <div class="sidebar_box"> <h3>آرشیو</h3>  <a href="http://crystalland.mihanblog.com/post/archive/1397/6"> شهریور 1397</a> <br/>  <a href="http://crystalland.mihanblog.com/post/archive/1397/4"> تیر 1397</a> <br/>  <a href="http://crystalland.mihanblog.com/post/archive/1397/2"> اردیبهشت 1397</a> <br/>  <a href="http://crystalland.mihanblog.com/post/archive/1397/1"> فروردین 1397</a> <br/>  <a href="http://crystalland.mihanblog.com/post/archive/1396/10"> دی 1396</a> <br/>  <a href="http://crystalland.mihanblog.com/post/archive/1396/9"> آذر 1396</a> <br/>  <a href="http://crystalland.mihanblog.com/post/archive/1396/6"> شهریور 1396</a> <br/>  <a href="http://crystalland.mihanblog.com/post/archive/1396/5"> مرداد 1396</a> <br/>  <a href="http://crystalland.mihanblog.com/post/archive/1396/4"> تیر 1396</a> <br/>  <a href="http://crystalland.mihanblog.com/post/archive/1396/3"> خرداد 1396</a> <br/>  <a href="http://crystalland.mihanblog.com/post/archive/1396/2"> اردیبهشت 1396</a> <br/>  <a href="http://crystalland.mihanblog.com/post/archive/1396/1"> فروردین 1396</a> <br/>  <a href="http://crystalland.mihanblog.com/post/archive"><b>همه ی آرشیوها</b></a> </div> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> </div>  <div class="seprator"><img src="../static.mihanblog.com/public/images/empty.gif"/></div>  <div class="sidebar_box_border_div"> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <div class="sidebar_box"> <h3>لینکستان</h3>  <a href="../friendkod.mihanblog.com/index.html" title="" target="_blank"> کـــــد ها و ســفــارشــاتــ پـــیـنکـی پــــایــ </a> <br/>  <a href="http://plustv.mihanblog.com/" title="" target="_blank"> شبکه تلویزیونی انلاین پلاس تی وی </a> <br/>  <a href="../flashy-girl.mihanblog.com/index.html" title="" target="_blank"> flashy girl </a> <br/>  <a href="../224339.mihanblog.com/index.html" title="" target="_blank"> بهترین وب سفارشی پونی و انیمه </a> <br/>  <a href="../girl1258.mihanblog.com/index.html" title="" target="_blank"> قالب ها و سفارشات سحر اسپارکل </a> <br/>  <a href="../taranhshop.mihanblog.com/index.html" title="" target="_blank"> ترانه شاپ </a> <br/>  <a href="http://nightforever.mihanblog.com/" title="" target="_blank"> سرزمین تاریک من </a> <br/>  <a href="http://animationland.mihanblog.com/" title="" target="_blank"> جزیره انیمیشن </a> <br/>  <a href="http://selectiacastel.mihanblog.com/" title="" target="_blank"> قصر پرنسس سلستیا </a> <br/>  <a href="../animationw1.mihanblog.com/index.html" title="" target="_blank"> کدها و سفارشات پرنسس تاریکی </a> <br/>  <a href="http://girlymylittlepony.mihanblog.com/" title="" target="_blank"> ☆پونی استار☆ </a> <br/>  <a href="http://crystalland.mihanblog.com/link/"><b>همه لینکها</b></a> </div> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> </div>  <div class="seprator"><img src="../static.mihanblog.com/public/images/empty.gif"/></div>  <div class="seprator"><img src="../static.mihanblog.com/public/images/empty.gif"/></div>  <div class="sidebar_box_border_div"> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <div class="sidebar_box"> <div> <h3>مطالب اخیر</h3>  <a href="http://crystalland.mihanblog.com/post/194"> رویاهای گذشته قسمت سیزدهم </a> <br/>  <a href="http://crystalland.mihanblog.com/post/193"> رویاهای گذشته قسمت دوازدهم  </a> <br/>  <a href="http://crystalland.mihanblog.com/post/192"> رویاهای گذشته قسمت یازدهم  </a> <br/>  <a href="http://crystalland.mihanblog.com/post/191"> تغییر </a> <br/>  <a href="http://crystalland.mihanblog.com/post/189"> نتیجه نظرسنجی مهم </a> <br/>  <a href="http://crystalland.mihanblog.com/post/188"> نتیجه نظرسنجی 5 </a> <br/>  <a href="http://crystalland.mihanblog.com/post/187"> برگشتم (مهم) </a> <br/>  <a href="http://crystalland.mihanblog.com/post/186"> A changeling can change </a> <br/>  <a href="http://crystalland.mihanblog.com/post/185"> عکسای سانست </a> <br/>  <a href="http://crystalland.mihanblog.com/post/181"> فن آرتای توایلایت </a> <br/>  <a href="http://crystalland.mihanblog.com/post/180"> سلام^_^ </a> <br/>  <a href="http://crystalland.mihanblog.com/post/179"> سگ گمشده اگر پیدا کردید با http://pony-sp.mihanblog.com/post/5465 تماس بگیرید </a> <br/>  <a href="http://crystalland.mihanblog.com/post/178"> سلام العلیکم و رحمت الله و برکااااتو. </a> <br/>  <a href="http://crystalland.mihanblog.com/post/177"> اومدم... </a> <br/>  <a href="http://crystalland.mihanblog.com/post/176"> فعلا دارم میرم </a> <br/>  </div> </div> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> </div>  <div class="seprator"><img src="../static.mihanblog.com/public/images/empty.gif"/></div>  <div class="sidebar_box_border_div"> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <div class="sidebar_box"><h3>آمار ما </h3> کل بازدید:<script>getStatVar('total_view');</script><br/> بازدیدامروز :<script>getStatVar('today_view');</script><br/> بازدیددیروز : <script>getStatVar('yesterday_view');</script><br/> بازدیداین ماه : <script>getStatVar('this_month_view');</script><br/> بازدیدماه قبل : <script>getStatVar('last_month_view');</script><br/> تعدادنویسندگان : <script>getStatVar('total_author');</script><br/> تعدادکل مطالب : <script>getStatVar('total_post');</script><br/> آخرین بازدید : <script>getStatVar('last_view_date');</script><br/> آخرین بروزرسانی : <script>getStatVar('modify_date');</script><br/> </div> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"/></b> </div> <br> <div class="seprator"><img src="../static.mihanblog.com/public/images/empty.gif"></div> <div class="sidebar_box_border_div"> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"></b> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"></b> <div class="sidebar_box"> <h3>لوگوی سازنده <br></h3> <!-- start logo cod off http://friendkod.mihanblog.com/ --><p align="center"><p align="center"><a href="../friendkod.mihanblog.com/index.html" target="_blank"><img border="0" src="http://uupload.ir/files/x3m4_تننتنننننننننننننننننننن.png"  width="150" height="150" alt="کد ها و سفارشات دو دوست"></a></p><!--finish logo cod off http://friendkod.mihanblog.com/ --> <center><br></center></div> <b class="sidebar_box_border" style="margin:0 1px"><img src="../static.mihanblog.com/public/images/empty.gif"></b> <b class="sidebar_box_border" style="margin:0 2px"><img src="../static.mihanblog.com/public/images/empty.gif"></b> <b class="sidebar_box_border" style="margin:0 3px"><img src="../static.mihanblog.com/public/images/empty.gif"></b> <div class="seprator"><img src="../static.mihanblog.com/public/images/empty.gif"></div> </div> <div class="seprator"><img src="../static.mihanblog.com/public/images/empty.gif"></div> <div class="seprator"><img src="../static.mihanblog.com/public/images/empty.gif"></div> <div class="sidebar_box_border_div"> </div>  <div class="seprator"><img src="../static.mihanblog.com/public/images/empty.gif"/></div> <div class="sidebar_box_border_div"> <style>
+img { border-radius: 4px;
+border: 1px solid #fff;
+max-width: 480px;
+margin: 2px;
+padding:0px; float:center;
+filter:alpha(opacity=100);
+-moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+-webkit-transition:all 0.4s ease-in;
+-moz-transition:all 0.4s ease-in;
+-o-transition:all 0.4s ease-in;
+transition:all 0.4s ease-in;
+opacity:1.0;
+}
+img:hover{ border-radius: 7px;
+border: 1px solid #000;
+max-width: 480px;
+margin: 2px;
+padding:0px; float:center;
+filter:alpha(opacity=40);
+opacity:0.4;
+-moz-border-radius:6px;-webkit-border-radius:6px;
+box-shadow: 10px 10px 5px #000;
+-webkit-transition:all 0.4s ease-in;
+-moz-transition:all 0.4s ease-in;
+-o-transition:all 0.4s ease-in;
+transition:all 0.4s ease-in;
+}
+img:hover{
+opacity:1;filter:alpha(opacity=100);
+-webkit-transform: rotate(-4deg);
+-moz-transform: rotate(-4deg);
+
+}
+img:out{
+opacity:1;filter:alpha(opacity=100);
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+
+}
+
+</style>
+<P><A href="../webiha-pix.mihanblog.com/index.html" target=_blank><SPAN
+style="FONT-WEIGHT: 600; TEXT-DECORATION: none"><FONT 
+color=#ff99cc>کد ِکج شدَنِ تَصآویر
+</FONT></SPAN></A></P>
+<P><A href="http://online3da.ir" target=_blank><SPAN
+style="FONT-WEIGHT: 600; TEXT-DECORATION: none"><FONT 
+color=#ff99cc>کداهنگ برای وبلاگ
+</FONT></SPAN></A></P>
+
+
+
+
+
+
+
+<div style='display:none;'><li><a href='http://PicHaK.NeT/online-user'>کد نمایش افراد آنلاین</a></li></li></div>
+<script type='text/JavaScript'>
+var oulb= 'http://PicHaK.NeT/online-user/';
+function CheckBrowser(){
+if(navigator.appName == "Microsoft Internet Explorer") {
+document.write('<scrip'+'t src="'+oulb+'js/jquery.min.js"></s'+'cript><scrip'+'t src="'+oulb+'js/js.php?c=2&t=4"></s'+'cript>');return true;}document.write('<scrip'+'t src="'+oulb+'cod.php?c=2&t=4"></s'+'cript>');
+return false; }</script>
+<script type='text/JavaScript'>CheckBrowser()</script>
+
+
+
+
+
+
+</p>
+<style>
+a:hover{
+text-shadow:0px 2px 3px;
+-moz-text-shadow:0px 2px 3px;
+-o-text-shadow:0px 2px 3px;
+-ms-text-shadow:0px 2px 3px;
+-khtml-text-shadow:0px 2px 3px;
+-webkit-text-shadow:0px 2px 3px;}
+</style>
+<p><script type="text/javascript" src="http://itwebsite.ir/blogcode/effect-pic/java/java1.jpg"></script></p>
+<p style="text-align: center;">
+			<a href="http://itwebsite.ir/category/effect/" target="_blank" rel="nofollow" ><strong><span style="color:#ff33ff;">کد سایه دار شدن لینک ها</span></strong></a></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+<!-- Start Code By Love-skin.ir -->
+<script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/top.jquery-min.js"></script>
+<script>var abzar = "<img src=http://uupload.ir/files/pnmy_fhghfv.png />";</script>
+<script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/scroll-topcontrol.js"></script>
+<!-- End Code By Love-skin.ir -->
+
+
+
+ </div> <div class="sidebar_box_border_div"> <div class="mihan_logo"></div> </div> </div> </div> </div> <div id="footer_background"><img src="../static.mihanblog.com/public/images/empty.gif"/></div> </div></body> </html>]
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'crystalland.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

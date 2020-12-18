@@ -1,0 +1,2176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc%3Frsd.html" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*1111072*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[258]='18';commentCnt[259]='18';commentCnt[260]='3';commentCnt[261]='1';commentCnt[262]='29';commentCnt[263]='50';commentCnt[264]='32';commentCnt[265]='21';commentCnt[266]='73';commentCnt[267]='64';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[258]='16';
+mihanblogDisLikeArrCnt[258]='4';
+mihanblogLikeArrCnt[259]='10';
+mihanblogDisLikeArrCnt[259]='0';
+mihanblogLikeArrCnt[260]='8';
+mihanblogDisLikeArrCnt[260]='0';
+mihanblogLikeArrCnt[261]='13';
+mihanblogDisLikeArrCnt[261]='4';
+mihanblogLikeArrCnt[262]='10';
+mihanblogDisLikeArrCnt[262]='3';
+mihanblogLikeArrCnt[263]='9';
+mihanblogDisLikeArrCnt[263]='0';
+mihanblogLikeArrCnt[264]='13';
+mihanblogDisLikeArrCnt[264]='0';
+mihanblogLikeArrCnt[265]='6';
+mihanblogDisLikeArrCnt[265]='0';
+mihanblogLikeArrCnt[266]='11';
+mihanblogDisLikeArrCnt[266]='1';
+mihanblogLikeArrCnt[267]='20';
+mihanblogDisLikeArrCnt[267]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://bargh-e-sakhteman.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://bargh-e-sakhteman.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','215');
+	setStatVar('total_author','2');
+	setStatVar('modify_date','جمعه 22 بهمن 1395');
+	
+	setStatVar('today_view','415');
+	setStatVar('yesterday_view','541');
+	
+	setStatVar('this_month_view','10023');
+	setStatVar('last_month_view','10468');
+
+	setStatVar('total_view','2789759');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (14:20)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://bargh-e-sakhteman.mihanblog.com/statupdate/?data[refereruri]=http://bargh-e-sakhteman.mihanblog.com/post/author/955686/page/5&data[postid]=&data[requesturi]=/post/author/955686/page/1?sa=x&ved=0ca8q9qeoadacahukewirl6/i_zgahvlliwkhw7zcyo&data[sdate]=1608202228&data[hash]=a19414eae9af794c2ab43e7ee0493acf&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://bargh-e-sakhteman.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+
+
+ <head>
+
+
+
+
+
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Theme Designer" content="www.MyTheme.ir">
+
+    <meta name="description" content="برق, ساختمان, سیم كشی, مدار های برق , كلید, پریز, نقشه, نقشه كشی برق,روشنایی, آیفون, آیفون تصویری, صوتی, ایفون, نقشه كشی برق ساختمان, دانلود كتاب برق, سیستم, اصول, جزوه, رفع اشكال, ایراد, ایرادات,آموزش,برقکاری ساختمان,برق کاری,یسیم کشی ساختمان,آموزش سیم کشی ساختمان, برق ساختمان,آموزش برق ساختمان,سنسورها,آپارتمان, دانلود , نرم افزار , کاره با , خانوو , مال , وینه، ربق،اسختمان، برقکاری ، برقکار ، تاسیسات ، تعسیسات ، شغل ، برق کشی ، برق کش ، برقکشی  ،اموزش ، رایگان ، ازمون ، آزمون ، جزوه ، جوزوه ، جزو ، منبع، "/>
+    <meta name="keywords" content="برق, ساختمان, سیم كشی, مدار های برق , كلید, پریز, نقشه, نقشه كشی برق, روشنایی, آیفون, آیفون تصویری, صوتی, ایفون, نقشه كشی برق ساختمان, آموزش, آموزش برق ساختمان, برقکاری , آموزش برقکاری ساختمان, برق کاری,نقشه های برق ساختمان,خرید آموزش سیم کشی ساختمان،برقکاری،اموزش،ازمون،فنی و حرفه ای "/>
+    <link rel="alternate" type="application/rss+xml" title="برق ساختمان" href="../../../rss/index.html" />
+    <link rel="alternate" type="application/atom+xml" title="برق ساختمان" href="../../../atom/index.html" />
+    <link href="http://mihanblog.com/public/public/user_data/template/2099932/style.css" type="text/css" rel="stylesheet">
+
+    <title>برق ساختمان - مطالب حامد خسروی</title>
+</head>
+
+
+
+
+
+<body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-91792807-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+<div align="center">
+<table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;</td>
+<td class=div2>
+<div class=div00>
+
+<div class=div60>
+    <div class=div101>
+        <div class=div10><font class=title>برق ساختمان</font></div></div>
+    <div class=div11>
+        <div class=div12><font class=des></font></div></div>
+</div>
+
+<div class=ss>
+    <div class=s1><form id="frm-16082021785fdb37c2d6638" method="get" action="http://bargh-e-sakhteman.mihanblog.com/post/search/fid/16082021785fdb37c2d6638"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+        <div class=s2>
+            <input type="text" name="search_text" size="20" style="border: 0px none; background: none; font-family:Tahoma; font-size:9pt; direction:ltr"></div>
+        <div class=s3><input type="image" src="http://mihanblog.com/public/public/user_data/template/2099932/blank.gif" width=22 height=21 value="جستجو"></div>
+    <input type="hidden" name="frm-id" value="16082021785fdb37c2d6638" id="frm-id" /></form></div>
+
+    <div class=s4>
+        <div class=s5><font class=text10>
+            <a href="../../../../index.html">صفحه نخست</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:messageForm()">تماس با مدیر</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="mailto:hamedkhosravi63@yahoo.com">پست الکترونیک</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href=http://barghsakhteman.takbb.com/ target="_blank">انجمن تخصصی برق ساختمان</a>&nbsp;&nbsp;&nbsp;&nbsp;
+             <b><a href=https://telegram.me/bargh_esakhteman target="_blank">کانال برق ساختمان</a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="../../../rss/index.html">RSS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="../../../atom/index.html">ATOM</a></font></div></div>
+</div>
+
+<div class=mdiv17></div>
+
+<div class=mdiv170>
+
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>درباره وبلاگ</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341>
+            <div class=mdiv31><font class=text1><center><br><br>
+                </center><br>
+                <b>مدیر وبلاگ :</b> <a href="../../955686.html">حامد خسروی</a></font><br><br><font class=text1><b>تلگرام :</b>  bargh_e_sakhteman</font><br><br>
+
+
+
+
+</font></div><center><b>عضویت در گروه تلگرام برقکــاران<br><br></b><a href="https://telegram.me/joinchat/CWZTzj5CiaMOUQjv88waNg" target="_blank" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://file.mihanblog.com//public/user_data/user_files/371/1111072/telegram/telegram_logo_170915.jpg" alt="تلگرام گروه بزرگ برقکاران ساختمان"></a></center><br> <br>
+
+<center><b>عضویت در کانال برق ساختمان</b><br><br><a href="https://telegram.me/bargh_esakhteman" target="_blank" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://file.mihanblog.com//public/user_data/user_files/371/1111072/banner/channellogore.png" alt=""></a></a></center>
+
+        </div><div class=mdiv30></div>
+
+<center><a href="../../../category/11.html" target="" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://file.mihanblog.com//public/user_data/user_files/371/1111072/banner/pdfbanner.gif" alt=""></a></center></a>
+
+  
+         </div><div class=mdiv30></div>
+   
+ <center><a href="../../../../extrapage/tabligh.html" target="_blank""" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://static.mihanblog.com//public/user_data/user_files/371/1111072/mokhtalef/banner.gif" alt=""></center></a>
+   
+                  
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>مطالب اخیر</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341><font class=text1><ul>
+            <li><a href="../../../267.html">ویدئوی آموزش سیم کشی کلید یک پل با پریز</a></li><li><a href="../../../266.html">نکات اجرایی تاسیسات برق ساختمان ( هم بند کردن )</a></li><li><a href="../../../265.html"> نکات اجرایی تاسیسات برق ساختمان ( ژنراتورها )</a></li><li><a href="../../../264.html">نمونه قرارداد برقکاری ساختمان</a></li><li><a href="../../../263.html">نکات اجرایی تاسیسات برقی ساختمان ( تابلوها )</a></li><li><a href="../../../262.html">دانلود نرم افزار نقشه کشی برق ساختمان ProfiCad</a></li><li><a href="../../../261.html">دانلود نرم افزار سیم کشی برق ساختمان برای اندروید Android</a></li><li><a href="../../../260.html">نکات اجرایی تاسیسات برقی ساختمان ( چاه زمین )</a></li><li><a href="../../../259.html">نکات اجرایی تاسیسات برق ساختمان ( سیستم تلفن )</a></li><li><a href="../../../258.html">نکات اجرایی تاسیسات برق ساختمان ( سیستم آنتن مرکزی )</a></li><li><a href="../../../257.html">نکات اجرایی تاسیسات برق ساختمان ( روشنایی )</a></li><li><a href="../../../256.html">نکات اجرایی برق تاسیسات برقی ساختمان ( سیستم اعلان حریق )</a></li><li><a href="../../../255.html">اصول و استانداردهای کابل کشی و سیم کشی ساختمان</a></li><li><a href="../../../254.html">آموزش برق ساختمان درجه یک</a></li><li><a href="../../../253.html">اصول و استانداردهای لوله کشی برق ساختمان</a></li>        </ul></font></div><div class=mdiv30></div>
+    </div>
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>آرشیو وبلاگ</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341><font class=text1><ul>
+            <li><a href="../../../archive/1395/11.html"> بهمن 1395</a></li><li><a href="../../../archive/1395/10.html"> دی 1395</a></li><li><a href="../../../archive/1395/9.html"> آذر 1395</a></li><li><a href="../../../archive/1395/8.html"> آبان 1395</a></li><li><a href="../../../archive/1395/7.html"> مهر 1395</a></li><li><a href="../../../archive/1395/6.html"> شهریور 1395</a></li><li><a href="../../../archive/1395/5.html"> مرداد 1395</a></li><li><a href="../../../archive/1395/4.html"> تیر 1395</a></li><li><a href="../../../archive/1395/3.html"> خرداد 1395</a></li><li><a href="../../../archive/1395/2.html"> اردیبهشت 1395</a></li><li><a href="../../../archive/1395/1.html"> فروردین 1395</a></li><li><a href="../../../archive/1394/9.html"> آذر 1394</a></li>            <li><b><a href="../../../archive.html">آرشیو كل مطالب</a></b></li>
+        </ul></font></div><div class=mdiv30></div>
+    </div>
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>نویسندگان</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341><font class=text1><ul>
+            <li><a href="../../955686.html">حامد خسروی (215)</a></li><li><a href="../../1184987.html">احمد رضایی (0)</a></li>        </ul></font></div><div class=mdiv30></div>
+    </div>
+   
+		
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>برچسبها</font></div></div>
+        <div class=sm></div>
+
+        <div class=mdiv341><font class=text1><ul>
+            <li><a href="../../../tag/نصب.html">نصب</a></li><li><a href="../../../tag/نقشه.html">نقشه</a></li><li><a href="../../../tag/ساختمان.html">ساختمان</a></li><li><a href="../../../tag/روش.html">روش</a></li><li><a href="../../../tag/آموزش.html">آموزش</a></li><li><a href="../../../tag/کتاب.html">کتاب</a></li><li><a href="../../../tag/pdf.html">pdf</a></li><li><a href="../../../tag/دانلود.html">دانلود</a></li><li><a href="../../../tag/برق.html">برق</a></li><li><a href="../../../tag/سیم+کشی.html">سیم کشی</a></li>        </ul></font></div><div class=mdiv30></div>
+    </div>
+<center><script src="http://431.ir/ads/feed/show_banner.php?AdsID=52146&num=1&percent=0&size=1&direction=0&cat=1&subcat=8&theme=0&domain=bziran.com" ></script><center>
+
+</div>
+
+
+<div class=div20>
+
+<center><a href="http://www.bziran.com/detail.php?id=720&amp;vendors=21360034&amp;AdsID=52146" target="_blank" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://file.mihanblog.com//public/user_data/user_files/371/1111072/banner/jamepahn2.gif" alt=""></a></center><br>
+
+<center><a href="https://telegram.me/bargh_esakhteman" target="_blank" title="کانال تلگرام برق ساختمان"><img hspace="0" border="0" align="baseline" vspace="0" src="http://file.mihanblog.com//public/user_data/user_files/371/1111072/banner/chl.png" alt="کانال تلگرام برق ساختمان"></a></center><br>
+
+
+    		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="../../../267.html">ویدئوی آموزش سیم کشی کلید یک پل با پریز</a>
+</font></div>
+            <div class=div58><font class=text7>جمعه 22 بهمن 1395 :: نویسنده : <a href="../../955686.html">حامد خسروی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+<div><font size="2"><br></font></div><div><font size="2">دوستان ویدئوی آموزش سیم کشی کلید تک پل و یک پریز قرار داده شده است. نقشه های مربوط به آن نیز در سایت قرار دارد که می توانید استفاده کنید:</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div>
+		<!--AparatShow-->
+				<div style="display:none">[http://www.aparat.com/v/SYI9p]</div>
+                <div class="aparatFrame">
+                    <iframe frameborder=0  allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" width="435" height="290" src="http://www.aparat.com/video/video/embed/videohash/SYI9p/vt/frame"> </iframe>
+                </div>
+
+		<!--eoAparatShow-->
+				</div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="1"><br></font></div><div><font size="2">منبع : aparat.com</font></div><div><font size="2"><br></font></div>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost></font>
+
+                <br><br><font color="#c70900"> موضوعات مرتبط</font><hr width="200px" align="right"><br>
+                <font class=text4>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="../../../category/6.html" class=text4>آموزش سیم کشی</a>،&nbsp;<a href="../../../category/11.html" class=text4>دانلود ها</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="../../../tag/ویدئو.html" class=text4>ویدئو</a>، <a href="../../../tag/ویدیو.html" class=text4>ویدیو</a>، <a href="../../../tag/فیلم.html" class=text4>فیلم</a>، <a href="../../../tag/تصویری.html" class=text4>تصویری</a>، <a href="../../../tag/آموزش.html" class=text4>آموزش</a>، <a href="../../../tag/برق.html" class=text4>برق</a>، <a href="../../../tag/ساختمان.html" class=text4>ساختمان</a>،                 
+            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="../../../267.html#commentlist">نظرات (<script>setCommentCnt(267)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('267','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="../../../266.html">نکات اجرایی تاسیسات برق ساختمان ( هم بند کردن )</a>
+</font></div>
+            <div class=div58><font class=text7>چهارشنبه 13 بهمن 1395 :: نویسنده : <a href="../../955686.html">حامد خسروی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+
+<div><font size="2" color="#3333ff"><br></font></div><div><div><font size="3" color="#3333ff">هم بند کردن</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><span style="font-size: small;">•</span><span style="font-size: small;">&nbsp;</span><font size="2">قسمت های اصلی فلزی ساختمان، مانند اسكلت فلزی و آرماتورهای بتن (در صورت امكان)&nbsp;</font></div><div><font size="2">• هادی حفاظتی كلیه وسایل و دستگاه های نصب ثابت و هادی های حفاظتی پریزها</font></div><div><font size="2"><br></font></div><div><font size="2">در سرویس های بهداشتی می بایست برای هم ولتاژ كردن هم بندی اضافی انجام شود همین&nbsp;</font><span style="font-size: small;">هم بندی موارد زیر را شامل می شود:&nbsp;</span></div><div><font size="2">• وان یا زیر دوشی فلزی</font></div><div><font size="2">• لوله های آب سرد و گرم</font></div><div><font size="2">• بدنه های هادی وسائل نصب ثابت</font></div><div><font size="2">• لوله های فلزی فاضلاب</font></div><div><font size="2">• لوله های گاز، حرارت مركزی یا هر نوع لوله دیگر</font></div><div><font size="2">• هادی های حفاظتی مدارهای پریز و روشنائی</font></div><div><font size="2"><br></font></div><div><font size="2">در آشپزخانه باید برای هم ولتاژ كردن هم بندی اضافه انجام شود، این هم بندی باید موارد زیر&nbsp;</font><span style="font-size: small;">را شامل شود:</span></div><div><font size="2">• یخچال، اجاق گاز، قفسه بندی فلزی، ظرفشوئی (سینك)، هر نوع وسایل برقی، لوله های&nbsp;</font><span style="font-size: small;">آب سرد و گرم، لوله های فاضلاب، لوله های حرارت مركزی، اجزای فلزی ساختمان از&nbsp;</span><span style="font-size: small;">جمله ستون ها، هادی های حفاظتی مدارهای پریز و روشنائی.</span></div><div><span style="font-size: small;"><br></span></div><div><font size="2">- مهندس ناظر برق از زمانی كه اسكلت ساختمان اجرا می شود باید وارد عملیات نظارت شود.&nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">در پروژه می بایست هم بندی اصلی و اضافی زیر نظر متخصص مربوطه به قرار زیر انجام گردد:</font></div><div><font size="2"><br></font></div><div><font size="2">الف: هم بندی اصلی برای هم ولتاژ كردن</font></div><div><font size="2">یك هادی هم بندی اصلی باید كلیه قسمت های زیر را از نظر الكتریكی به یكدیگر وصل كند.</font></div><div><font size="2">• هادی حفاظتی اصلی</font></div><div><font size="2">• هادی اتصال به زمین</font></div><div><font size="2">• لول های اصلی فلزی آب</font></div><div><font size="2">• لوله های اصلی گاز</font></div><div><font size="2">• لوله های قائم (رایزرها) تأسیسات از هر نوع</font></div><div><font size="2">• قسمت های فلزی اصلی ساختمان مانند اسكلت فلزی و آرماتورهای بتن.</font></div><div><font size="2"><br></font></div><div><font size="2">ب: هم بندی اضافی برای هم ولتاژ كردن</font></div><div><font size="2">هم بندی اضافی برای هم ولتاژ كردن باید كلیه قسمت های ... را كه به طور همزمان در دسترسند&nbsp;</font><span style="font-size: small;">در بر گیرد از جمله:</span></div><div><font size="2">• كلیه نرده ها و پلكان و قسمت های فلزی استخر</font></div><div><font size="2">• كلیه بدنه های هادی دستگاه ها و لوازم و غیره كه به صورت ثابت نصب شده باشند.</font></div><div><font size="2">• قسمت های هادی بیگانه از هر نوع</font></div><div><font size="2">• مواد كاهنده مقاومت نسبت به نمك و ذغال ارجح می باشد.</font></div><div><font size="2">• مقاومت مجاز سیستم اتصال زمین فشار ضعیف حداكثر 2 اهم می باشد.</font></div><div><font size="2">• قسمت های فلزی اصلی ساختمان مانند اسكلت فلزی و آرماتورهای بتن باید به چاه ارت</font></div><div><font size="2">متصل گردد.</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div>منبع :&nbsp;نکات اجرایی تاسیسات برق ساختمان : سازمان نظام مهندسی</div></div><div><br></div>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost></font>
+
+                <br><br><font color="#c70900"> موضوعات مرتبط</font><hr width="200px" align="right"><br>
+                <font class=text4>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="../../../category/2.html" class=text4>مفاهیم برق</a>،&nbsp;<a href="../../../category/6.html" class=text4>آموزش سیم کشی</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="../../../tag/ارت.html" class=text4>ارت</a>، <a href="../../../tag/ارتینگ.html" class=text4>ارتینگ</a>، <a href="../../../tag/هم&#32;بندی.html" class=text4>هم بندی</a>، <a href="../../../tag/earthing.html" class=text4>earthing</a>، <a href="../../../tag/سیستم.html" class=text4>سیستم</a>، <a href="../../../tag/اصول.html" class=text4>اصول</a>، <a href="../../../tag/اجرا.html" class=text4>اجرا</a>،                 
+            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="../../../266.html#commentlist">نظرات (<script>setCommentCnt(266)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('266','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="../../../265.html"> نکات اجرایی تاسیسات برق ساختمان ( ژنراتورها )</a>
+</font></div>
+            <div class=div58><font class=text7>سه شنبه 12 بهمن 1395 :: نویسنده : <a href="../../955686.html">حامد خسروی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+
+<div><font size="2"><br></font></div><div><div><font size="3" color="#3333ff">نکات اجرایی ژنراتورها</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">ژنراتورها برای تأمین برق اضطراری در مواقعی كه شبكه توزیع برق از كار می افتد مورد استفاده&nbsp;</font><span style="font-size: small;">قرار می گیرد. به منظور كسب اطمینان از این كه دو منبع تأمین توان الكتریكی (یعنی شبكه&nbsp;</span><span style="font-size: small;">توزیع و ژنراتور) به طور همزمان وارد مدار نمی شوند، باید دقت زیادی صورت گیرد. اتصال همزمان&nbsp;</span><span style="font-size: small;">شبكه توزیع برق و ژنراتور به مدار مصرف كننده می تواند بسیار خطرناك باشد كه این وضعیت&nbsp;</span><span style="font-size: small;">معمولا در هنگام عملكرد نامطلوب كلیدهای انتقال و استفاده نامناسب از ژنراتورها رخ می دهد.</span></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">1- در موارد زیر، برای تأمین مصارف اضطراری و ایمنی، باید نیروی برق به كمك مولدهایی كه&nbsp;</font><span style="font-size: small;">معمولا نیروی محرك آنها موتورهای دیزل است، در محل تولید شود:</span></div><div><span style="font-size: small;"><br></span></div><div><font size="2">الف) ساختمان های مسكونی با بیش از چهار طبقه از كف زمین و مجهز به آسانسور؛</font></div><div><font size="2">ب) ساختمان های عمومی كه نوع فعالیت آنها به نحوی است كه قطع برق ممكن است&nbsp;</font><span style="font-size: small;">خطر یا خسارت جبران ناپذیری بیافریند؛</span></div><div><font size="2">ساختمان های عمومی دارای شرایط (الف)؛</font></div><div><font size="2">ج) بیمارستان ها و مراكز بهداشتی با توجه به نوع فعالیت آنها؛</font></div><div><font size="2">د) سردخانه های بزرگ؛</font></div><div><font size="2">ه) مراكز صنعتی كه قطع برق طولانی مدت در آنها ممكن است موجب خسارت جبران&nbsp;</font><span style="font-size: small;">ناپذیر شود؛</span></div><div><font size="2">و) هر نوع ساختمان یا مجموعه یا مركز دیگری كه به تشخیص مقامات ذیصلاح باید دارای&nbsp;</font><span style="font-size: small;">نیروگاه اضطراری باشد.</span></div><div><font size="2"><br></font></div><div><font size="2">2- برآورد نیروی اضطراری لازم باید با توجه به مصارف ضروری، جریان های راه اندازی و دیگر&nbsp;</font><span style="font-size: small;">ملاحظات فنی مربوط به عمل آید. با توجه به نوع ساختمان یا مجموعه، در مركز نیروی&nbsp;</span><span style="font-size: small;">مورد نیاز، ممكن است از یك یا چند مولد استفاده شود. واحدها ممكن است با راه اندازی</span></div><div><font size="2">دستی، خودكار، یا وقفه كوتاه یا بی وقفه باشند.</font></div><div><font size="2"><br></font></div><div><font size="2">3- در انتخاب محل و ظرفیت و نوع واحدها و ابعاد نیروگاه، علاوه بر ملاحظات فنی نظیر استقرار&nbsp;</font><span style="font-size: small;">در نزدیكی مركز بار، افت ولتاژ، شرایط راه اندازی، نحوه ایجاد ارتباط با سیستم تغذیه نیروی&nbsp;</span><span style="font-size: small;">اصلی، انتخاب سرعت، افت توان مولد اولیه، تأمین هوا برای مصرف مولد و خنك كردن آن و&nbsp;</span><span style="font-size: small;">غیره، مراتب زیر نیز باید مورد توجه قرار گیرند:</span></div><div><font size="2">الف) نیروگاه در محلی ساخته و نصب شود كه از نظر لرزش، سر و صدا و دود هیچ نوع اثر&nbsp;</font><span style="font-size: small;">سویی بر فعالیت های محل و اطراف آن نداشته باشد؛</span></div><div><font size="2">ب) حمل و نقل و نصب و بهره برداری از واحدها بدون اشكال انجام پذیر باشد؛</font></div><div><font size="2">ج) فونداسیون واحدها مستقل از پی ساختمان و مجهز به لرزه گیرهایی مناسب محل&nbsp;</font><span style="font-size: small;">استقرار باشد و آسیبی به پی های بنا نرساند؛</span></div><div><font size="2">د) صدا خفه كن (اگزوز) با توجه به محل نصب انتخاب شود. برای مثال، برای ساختمان یا&nbsp;</font><span style="font-size: small;">محله مسكونی از صدا خفه كن مخصوص مناطق مسكونی استفاده شود؛</span></div><div><font size="2">ه) دودكش یا دودكش های نیروگاه باید از لبه بام ساختمان محل استقرار آن بلندتر باشد&nbsp;</font><span style="font-size: small;">و از نقطه خروج دود به فضای آزاد، مخروطی فرضی با محور قائم، كه رأس آن در این نقطه&nbsp;</span><span style="font-size: small;">و قاعده آن در جهت بالا و زاویه رأس آن 90 درجه است، تا فاصله افقی 50 متری هیچ</span></div><div><font size="2">ساختمان مسكونی، اداری یا عمومی را قطع نكند. در غیر این صورت ارتفاع دودكش ها را&nbsp;</font><span style="font-size: small;">باید تا حصول شرط فوق بلندتر در نظر گرفت.</span></div><div><font size="2">و) مخزن سوخت باید طبق مقررات و ضوابط شركت نفت و دیگر مقررات ایمنی مقامات&nbsp;</font><span style="font-size: small;">مربوط و با حجم كافی پیش بینی شود. در انتخاب محل مخزن سوخت لازم است به راه&nbsp;</span><span style="font-size: small;">های ارتباطی تانكر سوخت رسانی و لوله هایی كه از آن به نیروگاه می رود، توجه مخصوص&nbsp;</span><span style="font-size: small;">شود.</span></div><div><font size="2">ز) جرثقیل سرویس، مناسب با نوع نیروگاه وواحدها پیش بینی و نصب شود.</font></div><div><font size="2"><br></font></div><div><font size="2">4- ژنراتورها باید قابلیت تأمین برق مورد نیاز تمامی بارهای متصل را داشته باشد.</font></div><div><font size="2"><br></font></div><div><font size="2">5- در نظر گرفتن الكترود اتصال زمین برای ژنراتورهای ثابت الزامی است.</font></div><div><font size="2"><br></font></div><div><font size="2">6- ژنراتورها باید قابلیت تأمین برق مورد نیاز تمامی بارهای متصل را داشته باشد.</font></div><div><font size="2"><br></font></div><div><font size="2">7- ژنراتورهای ضد باران نباید در داخل ساختمان محبوس شوند.</font></div><div><font size="2"><br></font></div><div><font size="2">8- مشكلی كه در بند 13-4-4-1 دیده میشود این است كه دیزل ژنراتور برای ساختمان های&nbsp;</font><span style="font-size: small;">كوچك عملی به نظر نمی رسد و بهتر است به ویژگی Block out كفایت شود.</span></div><div><font size="2"><br></font></div><div><br></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div>منبع :&nbsp;&nbsp;نکات اجرایی تاسیسات برق ساختمان : سازمان نظام مهندسی</div><div><br></div></div>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost></font>
+
+                <br><br><font color="#c70900"> موضوعات مرتبط</font><hr width="200px" align="right"><br>
+                <font class=text4>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="../../../category/6.html" class=text4>آموزش سیم کشی</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="../../../tag/اصول.html" class=text4>اصول</a>، <a href="../../../tag/نحوه.html" class=text4>نحوه</a>، <a href="../../../tag/استاندارد.html" class=text4>استاندارد</a>، <a href="../../../tag/ژنراتور.html" class=text4>ژنراتور</a>، <a href="../../../tag/برق.html" class=text4>برق</a>، <a href="../../../tag/اضطراری.html" class=text4>اضطراری</a>، <a href="../../../tag/ساختمان.html" class=text4>ساختمان</a>،                 
+            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="../../../265.html#commentlist">نظرات (<script>setCommentCnt(265)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('265','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="../../../264.html">نمونه قرارداد برقکاری ساختمان</a>
+</font></div>
+            <div class=div58><font class=text7>دوشنبه 11 بهمن 1395 :: نویسنده : <a href="../../955686.html">حامد خسروی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+
+
+
+<div><font size="2"><br></font></div><div><div><font size="2">این قرارداد در تاریخ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;مابین شرکت &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; به نمایندگی &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; به نشانی &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;تلفن &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; که در این قرارداد کارفرما نامیده می شود از یکطرف آقای &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; فرزند &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; به شماره شناسنامه &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; به نشانی &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; تلفن &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; که از طرف دیگر پیمانکار نامیده می شود مطابق با شرایط و مشخصات ذیل امضاء و مبادله گردید .</font></div><div><font size="2">&nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2" color="#3333ff">ماده یک – موضوع قرارداد</font></div><div><font size="2">اجرای کلیه عملیات کنده کاری و شیارزنی ، لوله گذاری و کابل کشی ، نصب فریم ، نصب و سربندی و راه اندازی کلید و پریز و سربندی و راه اندازی کلیه چراغهای سقفی و دیواری روکار و توکار و ایستاده و سربندی و راه اندازی تلفن های پروزه</font></div><div><font size="2">&nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2" color="#3333ff">ماده دو- اسناد و مدارک قرارداد</font></div><div><font size="2">2-1- قرارداد حاضر</font></div><div><font size="2">2-2- نقشه و مشخصات فنی</font></div><div><font size="2">2-3- دستور کارهایی که در حین اجرا توسط کارفرما ابلاغ می گردد .</font></div><div><font size="2">&nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2" color="#3333ff">ماده سه – مبلغ قرارداد</font></div><div><font size="2">مبلغ کل قرارداد حدودا &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ریال پیش بینی می گردد که تا 25 درصد قابل افزایش یا کاهش می باشد که بر اساس صورت وضعیت پیشرفت کار طبق تایید نماینده کارفرما قابل پرداخت خواهد بود بر اساس نرخنامه پیوست .</font></div><div><font size="2">&nbsp;</font></div><div><span style="font-size: small;">&nbsp;</span></div><div><font size="2">&nbsp;</font></div><div><font size="2" color="#3333ff">ماده چهار – مدت قرارداد</font></div><div><font size="2">مدت زمان پیش بینی شده برای انجام کار مفاد موضوع قرارداد از تاریخ مبادله &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; روز تعیین شده است .</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2" color="#3333ff">ماده پنج – نحوه پرداخت</font></div><div><font size="2">پس از اتمام کار پیمانکار موظف است نسبت به تهیه صورت وضعیت کارهای انجام شده اقدام و پس از تایید نماینده کارفرما با توجه به مفاد قرارداد نسبت به پرداخت مبلغ کارکرد پس از کسر 10 درصد حسن انجام کار و 5 درصد مالیات اقدام خواهد شد .</font></div><div><font size="2">تبصره -5 درصد حسن انجام کار پس از تحویل موقت و 5 درصد پس از تحویل قطعی با درخواست کتبی پیمانکار و تایید کارفرما به پیمانکار پرداخت می گردد .</font></div><div><font size="2">&nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2" color="#3333ff">ماده شش – تعهدات پیمانکار</font></div><div><font size="2">&nbsp;6-1- پیمانکار ملزم به رعایت مبحث 13 مقررات ملی ساختمان و نشریه 1-110 سازمان مدیریت و برنامه ریزی کشور می باشد .</font></div><div><font size="2">6-2- پیمانکار از محل کار بازدید و از کم و کیف آن کاملا مطلع می باشد و کلیه نقشه ها و مشخصات فنی مربوط به اجرای کار را رویت نموده است و کلیه کارها را طبق نقشه و دستور کارها زیر نظر دستگاه نظارت بدون عیب و نقص انجام دهد .</font></div><div><font size="2">6-3- پیمانکار می بایستی در تمام مراحل کار در کارگاه حاضر بوده و در غیاب خود نماینده تام الاختیار ذیصلاح با اطلاعات فنی مورد نیاز که مورد تایید کارفرما نیز باشد حضور داشته باشد .</font></div><div><font size="2">6-4- چنانچه پیمانکار نسبت به شروع کار در موعد مقرر اقدام ننماید ، سپرده پیمانکار به نفع کارفرما ضبط و قرارداد فیمابین بدون نیاز به هیچگونه تشریفات لغو شده تلقی می گردد .</font></div><div><font size="2">6-5- چنانچه پیمانکار پس از شروع کار به هر علت کار را متوقف نماید کارفرما می تواند بدون نیاز به تامین دلیل از دستگاههای قضایی و مراجع ذیصلاح نسبت به تنظیم صورتجلسه کارکرد که به تایید کارفرما رسیده اقدام و یک نسخه از آن را تحویل پیمانکار نماید .</font></div><div><font size="2">6-6- پیمانکار متعهد به رعایت دقیق برنامه زمان بندی اجراء عملیات می باشد و در صورت هرگونه تاخیر که ناشی از کار پیمانکار باشد کلیه خسارات وارده متوجه وی خواهد بود .</font></div><div><font size="2">6-7- پیمانکار حق واگذاری کار به غیر را ندارد و در صورت اثبات چنین سندی کارفرما حق هرگونه اقدام را به هر شکل و بصورت تام الاختیار خواهد داشت .</font></div><div><font size="2">6-8- پیمانکار در حفظ و حراست اموال شرکت ، ابزار و ماشین آلات &nbsp;، مصالح و قطعات مسئول است و کارفرما در هر مقطعی می تواند آمارگیری و بررسی از ابزار و وسائل &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; نموده و در صورت وجود کمی و کاستی پیمانکار مسئول پاسخگویی و جبران است .</font></div><div><font size="2">6-9- پیمانکار مسئولیت کامل ناشی از منع قانونی کارکردن افراد مشمول نظام وظیفه و اتباع بیگانه خارجی یا افرادی را که به نحوی از حق کار کردن محروم هستند را دارد . و کارفرما فرض را بر این قرارداده که افراد پیمانکار هیچ نوع منع قانونی برای کار کردن ندارد .</font></div><div><font size="2">6-10- پیمانکار ملزم می گردد هرگاه عدم صلاحیت اخلاقی و یا فنی یک یا چند تن از پرسنل وی بنا به تشخیص مسئولین کارگاه محرز گردد حداکثر ظرف مدت 48 ساعت از اعلام مسئولین کارکنان مذکور را تسویه حساب و تعویض و بجای آنها افراد مورد تایید را بکار گمارد .</font></div><div><font size="2">6-11- در صورت وقوع حادثه برای پرسنل پیمانکار ، پیمانکار مسئولیت تهیه ، تکمیل و امضا فرم گزارشات حادثه وزارت کار و همچنین کلیه جنبه های مالی و حقوقی آن را بعهده خواهد داشت .</font></div><div><font size="2">6-12- پیمانکار مسئولیت کامل ایمنی پرسنل خود را بعهده داشته و متعهد خواهد بود که پرسنل خود را ملزم به استفاده از لوازم و وسایل استحفاظی نماید تا پرسنل دچار حادثه ناشی از کار نگردند . ضمنا رعایت مبحث 12 مقررات ملی ساختمان نیز اجباری است .</font></div><div><font size="2">6-13- پیمانکار تعهد می نماید که ئذ پایان هر روز لیست کارگران خود با مشخص نمودن وظیفه مربوطه به دفتر کارگاه تحویل نماید .</font></div><div><font size="2">&nbsp;</font></div><div><font size="2">&nbsp;</font></div><div><font size="2">&nbsp;</font></div><div><font size="2" color="#3333ff">ماده هفت – مشخصات فنی</font></div><div><font size="2">7-1- تمامی لوله کشی های برق باید از تابلوی برق مربوط شروع و به جعبه تقسیم یا جعبه کلید و پریز ختم شود، بدین معنی که باقی گذاردن سر لوله به طور آزاد و یا استفاده از سرچیقی برای ختم لوله مجاز نیست .</font></div><div><font size="2">7-2- در مکانهای تر و مرطوب کلیه اتصالهای مجراها و لوله ها باید در برابر رطوبت عایق ، و کلیه درپوشهای جعبه تقسیمها دارای واشر بوده و با پیچ به جعبه ها متصل شود .</font></div><div><font size="2">7-3- در مواردی که از لوله های غیر فلزی استفاده می شود باید کلیه لوازم اتصال آن نیز از همان نوع انتخاب شود .</font></div><div><font size="2">7-4- کلیه لوله های روکار و یا توکار باید با خط الراس دیوارها و سقف ، موازی و یا عمود بر آن ، به طرز منظمی نصب شود . همچنین فواصل لوله ها از یکدیگر باید مساوی بوده و شعاع خمش لوله ها یکسان باشد .</font></div><div><font size="2">7-5- خم کردن لوله ها ، در صورت لزوم ، باید به گونه ای انجام شود که لوله ها زخمی نشده و قطر داخلی آن به طور موثر نقصان نیابد . برای لوله های با قطر 25 میلیمتر می توان از لوله خم کن دستی استفاده کرد لیکن برای لوله های با قطر بیش از 25 میلیمتر باید از ماشین خم کن استفاده شود .</font></div><div><font size="2">7-6- تعداد خمها ، در مسیر لوله کشی بین دو نقطه اتصال مکانیکی مانند دو جعبه ( اعم از تقسیم و یا جعبه کلید و پریز ) و یا یک جعبه و یک بوشن و یا دو بوشن در صورتی که تعداد خمها از چهار خم 90 درجه ( مجموعا 360 درجه ) بیشتر گردد باید از جعبه کشش ( pull box ) استفاده شود .</font></div><div><font size="2">7-7- در مواردی که لوله ها در کارگاه بریده می شود باید لبه های تیز و برنده آن از داخل و خارج لوله صاف ، و به کلی بر طرف شود .</font></div><div><font size="2">7-8- لوله های له شده و زده دار نباید در لوله کشی مصرف شود ، و در هنگام نصب نیز باید دقت و مواظبت به عمل آید که لوله ها زخمی و معیوب نشود .</font></div><div><font size="2">7-9- تمامی مجاوری و لوله ها باید از یک نقطه اتصال تا نقطه اتصال دیگر ( جعبه تقسیم به جعبه تقسیم یا پریز به پریز و مانند آن ) به صورت پیوسته امتداد یابد .</font></div><div><font size="2">7-10- دهانه ورودی لوله هایی که از ساختمان خارج و یا به ساختمان وارد می شود باید به طریقی در برابر آب و گاز مسدود شود .</font></div><div><font size="2">7-11- کلیه لوله ها و مجاری و جعبه ها و مانند آن باید در جریان نصب به طریق مناسب و به طور موقت مسدود شود تا از ورود گچ و شن و مواد خارجی مشابه داخل آن جلوگیری شود .</font></div><div><font size="2">7-12- لوله ها باید در هنگام نصب خالی باشد و سیمها یا کابلها پس از پایان لوله کشی به داخل آن هدایت شود 7-13- حداقل فاصله بین لوله های برق و سایر لوله های تاسیساتی از قبیل آب ، بخار ، گاز ، &nbsp;و امثال آن باید 15 سانتیمتر باشد .</font></div><div><font size="2">7-14- در مسیر لوله کشی توکار در هر نقطه اتصال چراغ ، کلید ، پریز و مانند آن باید یک جعبه متناسب با مورد کاربرد نصب شود .</font></div><div><font size="2">7-15- کلیه هادیهایی که به جعبه تقسیم یا جعبه کشش وارد می شود باید در برابر ساییدگی حفاظت شود ، به این ترتیب که برای حراست پوشش عایق سیمها ، در محل ورود هادی ، یا اتصال لوله به جعبه تقسیم ، و مانند آن، باید یک بوشن فیبری و یا برنجی نصب شود مگر اینکه معادل آن در ساخت جعبه در نظر گرفته شده باشد .</font></div><div><font size="2">7-16- اندازه جعبه های تقسیم یا کشش باید طوری انتخاب شود که فضای کافی برای سیمها و کابلهای داخل آن وجود داشته باشد .</font></div><div><font size="2">7-17- در موارد اتصال لوله به جعبه در صورتی که از بوشن یا مهره قفلی استفاده شود جعبه های مدور نباید به کار برده شود .</font></div><div><font size="2">7-18- جعبه های اتصال و جعبه تقسیمهای فلزی مخصوص کشش باید با مهره قفلی یا بوشن متناسب با نوع لوله کشی به لوله متصل می شود و دقت کافی به عمل آید که روزه های سرلوله به قدر کافی به داخل جعبه وارد شود و در نتیجه محل لازم برای نصب بوشن یا مهره قفلی و تامین اتصال الکتریکی محکم با جعبه مربوط به وجود آید .</font></div><div><font size="2">7-19- در لوله کشی فلزی کلیه اتصالات اعم از لوله و جعبه ها و سایر لوازم مربوط باید به نحوی انجام شود که اتصال موثر الکتریکی تحقق پذیرد .</font></div><div><font size="2">7-20- مجاری فلزی ، جعبه های تقسیم و کشش ، تابلوها ، کابلهای زره دار ، و لوازم لوله کشی مربوط ، باید به سیستم زمین اتصال داده شود .</font></div><div><font size="2">7-21- در مواردی که لوله ها به کانال فلزی ، یا تابلو ، و یا هر نوع صفحه فلزی ، ختم می شود ، اتصال باید به وسیله بوشن برنجی و واشر سربی انجام شود .</font></div><div><font size="2">7-22- کلیه مجاری و لوله هایی که به جعبه های تقسیم و یا کشش ، تابلوها ، کابینت ها ، و مانند آن ختم می شود . باید به طریق مقتضی ، علامتگذاری و مشخص شود .</font></div><div><font size="2">7-23- کلیه لوازم الکتریکی ، باید به طور کاملا مستقل روی دیوارها نصب شود و اتکایی به لوله های برقی مجاور خود نداشته باشد . &nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2">&nbsp;</font></div><div><font size="2" color="#3333ff">ماده هشت – مشخصات فنی لوله کشی توکار</font></div><div><font size="2">8-1- در دیوارهای بتنی برای نصب و عبور لوله های برقی باید هنگام قالب بندی محل لازم در نظر گرفته شود . کندن شیار روی این گونه دیوارها ، یا سقف و کف بتنی ، پس از اتمام بتن ریزی ، مجاز نخواهد بود .</font></div><div><font size="2">8-2- در دیوارهای آجری ، شیارکنی و یا جاسازی و ایجاد سوراخ برای نصب لوله های برق ، باید پس از کاهگل کاری و یا گچ و خاک دیوارها و یا سقف انجام شود . عمق این گونه شیارها باید به نحوی باشد که اولا ، بیش از نصف ضخامت دیوار برداشته نشود و ثانیا ، سطح خارجی لوله نصب شده ، حداقل 5/1 سانتیمتر زیر سطح تمام شده دیوار قرار گیرد .</font></div><div><font size="2">8-3- تمامی جعبه های تقسیم ، کشش و کلید و پریز باید به گونه ای نصب شود که لبه خارجی آن با سطح تمام شده دیوار کاملا هم سطح و تراز باشد . در مواردی که این گونه جعبه ها پایین تر از سطح دیوار قرار گیرد ، باید به وسیله حلقه های قابل تنظیم لبه های خارجی جعبه با سطح دیوار یکسان شود .</font></div><div><font size="2">8-4- لوله های توکار باید به طریقی نصب شود که از پیچ و خمهای اضافی امتناع شود و حتی المقدور از کوتاهترین فاصله استفاده شود .</font></div><div><font size="2">8-5- لوله های توکار باید حداقل 15 میلیمتر زیر سطح تمام شده دیوار یا سقف نصب شود .</font></div><div><font size="2">8-6- در مواردی که لوله ها در کف نصب می شود حداقل فاصله از روی لوله تا سطح تمام شده ، باید سه سانتیمتر باشد .</font></div><div><font size="2">8-7-جعبه های تقسیم و کشش و امثال آن ، باید به گونه ای نصب شود که سیمها و کابلهای محتوی آن بدون تخریب ساختمان و یا خاکبرداری قابل دسترسی باشد ضمن اینکه حتی المقدور دور از انتظار قرار گیرد .</font></div><div><font size="2">8-8- اتصالات بدون رزوه باید به طور محکم انجام شود . در مکانهای مرطوب یا درجایی که لوله در بتن یا زیر خاک و امثال آن دفن می شود ، اتصال باید از نوعی باشد که از ورود آب به داخل لوله ها جلوگیری کند .</font></div><div><font size="2">&nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2" color="#3333ff">ماده نه – مشخصات فنی سیم کشی</font></div><div><font size="2">9-1- سیمهای مدارهای مختلف اکتریکی حامل ولتاژهای متفاوت باید از لوله های جداگانه عبور کند .</font></div><div><font size="2">9-2- هادیهای مربوط به یک مدار باید کلا در داخل یک لوله یا مجرا یا کانال سیم کشی ( ترانکینگ ) کشیده شود .</font></div><div><font size="2">9-3- سیم نول هر مدار فیوز باید به طور مجزا تعبیه شود و استفاده از یک نول مشترک برای مدارهای مختلف مجاز نخواهد بود .</font></div><div><font size="2">9-4- به کاربردن سیم اتصال زمین ( هادی حفاظتی ) به جای سیم نول مجاز نمی باشد ، سیم نول ( خنثی ) باید به طور جداگانه کشیده شود .</font></div><div><font size="2">9-5- تمامی سیمهای درون لوله ها اعم از سیم خنثی ( سیم صفر ) و یا سیم محافظ ( مخصوص اتصال بدنه به زمین ) باید دارای پوشش باشد .</font></div><div><font size="2">9-6- لوله های فلزی و پوششهای فلزی سیمهای عایقدار نباید به عنوان سیم نول یا سیم حفاظت مورد استفاده قرار گیرد .</font></div><div><font size="2">9-7- تمامی مدارها باید در داخل مجاری ساختمان ( کانالها ، رایزرها و غیره ) ، کانالهای ویزه سیم کشی ( مانند ترانکینگ و نظایر آن ) یا لوله ها یا نگهدارهای مخصوص به گونه ای نصب یا هدایت شود که بازدید ، خارج کردن و نصب مجدد آن در داخل مجاری ، لوله ها و دیگر محلهای ذکر شده بدون ایجاد خرابی و کندوکاو ، امکان پذیر باشد .</font></div><div><font size="2">9-8- استفاده از مسیر ( شاف ) آسانسور به عنوان کانال بالارو برای هر نوع مداری جز مدارهای مجاز مربوط به خود آسانسور ممنوع است .</font></div><div><font size="2">9-9- سیستم سیم کشی باید به گونه ای علامتگذاری شود که شناسایی هاددیها برای بازرسی ، آزمایش و تعمیرات بعدی به سهولت امکان پذیر باشد .</font></div><div><font size="2">9-10- پوشش سیمها برای مصارف مختلف باید به رنگهای متفاوت باشد ، لیکن برای یک نوع مصرف همچون سیم کشی سیستم تلفن و مانند آن ، رنگ پوشش سیم در تمام ساختمان باید یکسان انتخاب شود ، به گونه ای که تغییرات و تعمیرات بعدی به سهولت انجام پذیرد .</font></div><div><font size="2">9-11- سیمها و کابلها نباید از ابتدا در داخل لوله های برق قرار داده شود بلکه باید پس از نصب لوله ها و اتمام نازک کاری ، در موقع مناسب نسبت به قراردادن آن در داخل لوله ها اقدام شود .</font></div><div><font size="2">9-12- تمامی سمهایی که در داخل لوله های برق قرار می گیرد باید یک تکه و بدون زدگی باشد .</font></div><div><font size="2">9-13-اتصال سیمها به یکدیگر باید در داخل جعبه های تقسیم انجام شود و موکدا به وسیله ترمینال صورت پذیرد.</font></div><div><font size="2">9-14-سرسیمهای افشان باید قبل از قرار گرفتن در ترمینال با لحیم کاری یکپارچه شود .</font></div><div><font size="2">9-15- پوشش سرسیمها ( به ویژه سیمهای افشان ) باید با استفاده از ابزار مخصوص ( سیم لخت کن ) برداشته شود و توجه گردد که به رشته ها یاهادیها آسیبی وارد نشود .</font></div><div><font size="2">9-16- در هر نقطه خروجی و در هر قسمت کلیدی حداقل باید 15 سانتیمتر از سیم برای ایجاد اتصالات و وصل وسایل و دستگاههای مربوطه در نظر گرفته شود مگر آنکه سیم بدون اتصال از آن نقطه یا سمت عبور داده شود .</font></div><div><font size="2">9-17- اتصال سیمها به شینه های تابلو ، ماشینها و مصرف کننده های دیگر فقط با پیچ و مهره مجاز است .</font></div><div><font size="2">9-18- هر رشته سیم نول باید مستقلا به شینه نول تابلو متصل شود و اتصال دو یا چند سیم نول به هر بسته به تابلو مجاز نخواهد بود .</font></div><div><font size="2">9-19-تمامی مدارهای نهایی روشنایی و پریزها ، برای اتصال به بدنه های هادی چراغها یا کنتاکت حفاظتی پریزها ( بر حسب مورد) باید شامل هادی حفاظتی باشد .</font></div><div><font size="2">9-20-سیمهای لخت که به سیستم زمین متصل نیست باید فقط روی مقره کشیده شود و از دیوارها و قسمتهای فلزی و ساختمانها فاصله کافی داشته باشد .</font></div><div><font size="2">9-21-سیستمهای سیم کشی روکار یا توکار که در محیطهای تر و مرطوب مورد استفاده قرار می گیرد باید با استفاده از لوله های فولادی مقاوم در برابر زنگ زدگی و خوردگی ، یا پلاستیکی سخت انجام شود .</font></div><div><font size="2">9-22- لوازم سیم کشی که در محیطهای تر و مرطوب به کار می رود باید مجهز به اتصالات متناسب با نوع سیم کشی باشد تا از نفوذ آب و رطوبت به درون لوله ها و سایر تجهیزات مانند جعبه ها ، کلیدها ، پریزها ، چراغها و سایر مصرف کننده ها جلوگیری شود .</font></div><div><font size="2">&nbsp;</font></div><div><font size="2" color="#3333ff">ماده ده – مشخصات فنی کلید و پریزها</font></div><div><font size="2">10-1-کلیدهایی که محل نصب آن جنب در ورودی واقع می شود باید در طرف قفل قرار گیرد .</font></div><div><font size="2">10-2- محل نصب کلید و پریز و مانند آن ، در محل هایی که کاشیکاری می شود ، باید به گونه ای تعیین شود که هر کدام از لوازم مزبور در مرکز یک کاشی قرار گیرد .</font></div><div><font size="2">10-3- روش بستن کلید و پریز به جعبه زیر آن باید به وسیله پیچ بوده و محل ورود آن رزوه شده باشد و نحوه اتصال لوله به جعبه باید به وسیله بوش برنجی انجام شود .</font></div><div><font size="2">10-4- کلیه چراغ های سقفی و آویز بایستی در مرکز سقف ها به نسبت های مساوی از دیوار نصب شده و حالت تقارن از یکدیگر را حفظ کند . کلیه سیم ها و حلقه ها باید کاملا در داخل چراغ قرار گیرند .</font></div><div><font size="2">10-5- چراغهای سقفی باید به سقف اصلی ساختمان نصب شود و در صورت وجود سقف کاذب چراغ ها باید به سقف اصلی آویزان شود ، قاب چراغ نیز بایستی در سقف کاذب محکم شود . اتصال چراغها به سقف اصلی به وسیله رول پلاک و پیچ خواهد بود .</font></div><div><font size="2">&nbsp;</font><span style="font-size: small;">&nbsp;</span></div><div><font size="2">&nbsp;</font></div><div><font size="2">&nbsp;</font></div><div><font size="2" color="#3333ff">ماده یازده – تعهدات کارفرما</font></div><div><font size="2">11-1- پرداخت مبلغ انجام کار به پیمانکار مطابق نرخنامه پیوست</font></div><div><font size="2">11-2- تهیه مصالح و لوله و سیم و کابل طبق برآوردی که توسط پیمانکار تهیه می شود .</font></div><div><font size="2">لازم به ذکر است که پیمانکار در تخمین و سفارش مصالح برای کار خود می بایست دقت کافی بکار ببندد که از سفارش بیش از نیاز خودداری شود .</font></div><div><font size="2">11-3-تهیه اتاق استراحت و برق جهت استراحت پیمانکار</font></div><div><font size="2">&nbsp;</font></div><div><font size="2" color="#3333ff">ماده دوازده – موارد فسخ قرارداد</font></div><div><font size="2">در صورتی که پیمانکار به هر غلت عمدا یا سهوا در ایفاء تعهدات خود قصور ورزد و یا به حسب تشخیص کارفرما در ایفا تعهدات خود نباشد کارفرما می تواند نسبت به فسخ این قرارداد اقدام نماید .</font></div><div><font size="2">&nbsp;</font></div><div><font size="2" color="#3333ff">ماده سیزده</font></div><div><font size="2">این قرارداد در سیزده ماده و یک تبصره در سه نسخه تهیه و تنظیم شده که هر نسخه حکم واحد را دارد و قابل اعتبار می باشد .</font></div><div><font size="2">&nbsp;</font></div><div><font size="2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;کارفرما &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;پیمانکار</font></div><div><font size="2">&nbsp;</font></div><div><font size="2"><br></font></div><div><br></div><div><font size="2" color="#ff0000">نرخنامه :&nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2">1- لوله کشی برق با لوله پی وی سی از نمره 5/13 الی 16 با کنده کاری از قرار هر متر طول &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font></div><div><font size="2">2- لوله کشی برق با لوله پی وی سی از نمره 29 الی 42 با کنده کاری از قرار هر متر طول &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font></div><div><font size="2">3- سیم کشی &nbsp;از نمره 6/0 الی 5/2 از قرار هر متر طول &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font></div><div><font size="2">4- سیم کشی از نمره 4 الی 6 از قرار هر متر طول &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font></div><div><font size="2">5- کابل کشی توکار &nbsp;5/1*2 الی 5/2*4 از قرار هر متر طول &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font></div><div><font size="2">6- کابل کشی تلفن 2 زوجی الی 15 از قرار هر متر طول &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font></div><div><font size="2">7- کابل کشی تلفن از 20 الی 40 زوجی از قرار هر متر طول &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font></div><div><font size="2">8- کابل کشی 16*4 الی 16+35*3 از قرار هر متر طول &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font></div><div><font size="2">9- کابل کشی 4*4 الی 10*4 از قرار هر متر طول &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font></div><div><font size="2">10- نصب انواع کلید پریز با قوطی وکنده کاری هر عدد &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font></div><div><font size="2">11- نصب چراغ فلورسنت &nbsp;40*1 الی 20*20 هر عدد &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font></div><div><font size="2">12- نصب چراغ فلورسنت 40*2 الی 40*3 &nbsp;هر عدد &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font></div><div><font size="2">13- نصب چراغ سقفی و دیواری ( دکوراتیو ) با لامپ معمولی هر عدد &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font></div><div><font size="2">14- نصب شاسی دتکتور و آژیر &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font></div><div><font size="2">15- نصب و راه اندازی دستگاه اعلام حریق بطور کامل &nbsp;</font></div><div><font size="2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font></div><div><font size="2">16- نصب تابلو طبقات و موتورخانه هر دستگاه &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font></div><div><font size="2">17- نصب تابلو اصلی ساختمان هر دستگاه &nbsp; &nbsp;&nbsp;</font></div><div><font size="2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font></div><div><font size="2">18- سیم کشی ارت 16*1 الی 35*1 هر متر طول &nbsp;</font><span style="font-size: small;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></div><div><font size="2">19- نصب فن روی شیشه با برشکاری شیشه هر عدد &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font></div><div><font size="2">20- نصب تجهیزات چاه ارت هر حلقه &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font></div><div><font size="2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font></div><div><font size="2">21- نصب کلید و پریز با قوطی مربوطه مربوطه کولر گازی هرعدد &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font></div><div><font size="2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font></div><div><font size="2">22- نصب آیفون هر گوشی &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font></div></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div>
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost></font>
+
+                <br><br><font color="#c70900"> موضوعات مرتبط</font><hr width="200px" align="right"><br>
+                <font class=text4>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="../../../category/2.html" class=text4>مفاهیم برق</a>،&nbsp;<a href="../../../category/6.html" class=text4>آموزش سیم کشی</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="../../../tag/نمونه.html" class=text4>نمونه</a>، <a href="../../../tag/قرارداد.html" class=text4>قرارداد</a>، <a href="../../../tag/پیمانکاری.html" class=text4>پیمانکاری</a>، <a href="../../../tag/برق.html" class=text4>برق</a>، <a href="../../../tag/اجرا.html" class=text4>اجرا</a>، <a href="../../../tag/ساختمان.html" class=text4>ساختمان</a>، <a href="../../../tag/پروژه.html" class=text4>پروژه</a>،                 
+            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="../../../264.html#commentlist">نظرات (<script>setCommentCnt(264)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('264','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="../../../263.html">نکات اجرایی تاسیسات برقی ساختمان ( تابلوها )</a>
+</font></div>
+            <div class=div58><font class=text7>جمعه 8 بهمن 1395 :: نویسنده : <a href="../../955686.html">حامد خسروی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+
+<div><font size="2"><br></font></div><div><font size="3">نکات اجرایی تابلوهای برق ساختمان</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img hspace="0" border="0" align="baseline" vspace="0" src="http://file.mihanblog.com//public/user_data/user_files/371/1111072/pdf/125201399.jpg" alt="تاسیسات برق ساختمان تابلوها"></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><div><font size="2">1- تابلو می بایستی مطابق با آخرین اصلاحیه استاندارد IEC 439 و نشریه 1-110&nbsp;</font><span style="font-size: small;">سازمان مدیریت و برنامه ریزی ساخته شود.</span></div><div><font size="2"><br></font></div><div><font size="2">2- ضخامت ورق تابلوهای دیواری 1.5 میلی متر می باشد.</font></div><div><font size="2"><br></font></div><div><font size="2">3- بدنه تابلوها ابتدا باید چربی گیری و زنگ زدایی و فسفاته كاری شده و سپس سه لایه رنگ&nbsp;</font><span style="font-size: small;">كوره ای بر روی آنها قرار گیرد.</span></div><div><font size="2"><br></font></div><div><font size="2">4- بدنه فلزی كلیه تابلوها توسط رنگ پودری الكترو استاتیك رنگ آمیزی گردند.</font></div><div><font size="2"><br></font></div><div><font size="2">5- درجه حفاظت تابلو در برابر نفوذ گرد و غبار و پاشش آب IP42</font></div><div><font size="2"><br></font></div><div><font size="2">6- ترتیب رنگ بندی شینه كشی های افقی و عمودی و سطوح مختلف تابلو باید به رنگ قرمز،&nbsp;</font><span style="font-size: small;">زرد، آبی و به صورت استاندارد بوده و ظرفیت آنها 1.5 برابر جریان نامی انتخاب گردد.</span></div><div><font size="2"><br></font></div><div><font size="2">7- كلیه سیم كشی ها با رنگ استاندارد و شماره سیم بوده و درون كانال پلاستیكی (ترانكینگ)&nbsp;</font><span style="font-size: small;">اجرا شود.</span></div><div><font size="2"><br></font></div><div><font size="2">8- كلیه تجهیزات كد گذاری شده و دارای لیبل باشد.</font></div><div><font size="2">آدرس فیدرهای خروجی بر روی كلید مربوطه در داخل تابلو نوشته شود.</font></div><div><font size="2"><br></font></div><div><font size="2">9- صفحه گلند و گلند كابل در محل ورود و خروج كابل در تابلوهای روكار دیواری یا ایستاده&nbsp;</font><span style="font-size: small;">تعبیه شود.</span></div><div><font size="2"><br></font></div><div><font size="2">10- روی درب تابلوها باید دارای علامت احتیاط باشد.</font></div><div><font size="2"><br></font></div><div><font size="2">11- درب تابلوها باید دارای قسمت نقشه راهنما باشد.</font></div><div><font size="2"><br></font></div><div><font size="2">12- درب تابلوها باید دارای نوار لاستیكی بوده و با استفاده از شینه مسی به شینه ارت متصل&nbsp;</font><span style="font-size: small;">شود.</span></div><div><font size="2"><br></font></div><div><font size="2">13- كلیه پیچ و مهره ها گالوانیزه باشد.</font></div><div><font size="2"><br></font></div><div><font size="2">14- لوله های تابلوها از نوع سه تكه باشد.</font></div><div><font size="2"><br></font></div><div><font size="2">15- قبل از ساخت تابلوهای نقشه جانمایی لوازم تابلویی با قید ابعاد و اندازه تابلوها جهت بررسی&nbsp;</font><span style="font-size: small;">دستگاه نظارت ارسال و پس از تأیید ساخته شود.</span></div><div><font size="2"><br></font></div><div><font size="2">16- لوازم تابلویی داخل تابلوهای برق از كالاهای با كیفیت مرغوب و مورد تأیید دستگاه نظارت&nbsp;</font><span style="font-size: small;">تهیه و نصب گردند.</span></div><div><font size="2"><br></font></div><div><font size="2">17- ساختمان تابلوها باید طوری باشد كه دسترسی به كلیه لوازم و تجهیزات داخلی تابلو برای&nbsp;</font><span style="font-size: small;">تعمیر و تعویض بدون تداخل با كار قسمت های دیگر امكان پذیر باشد.</span></div><div><font size="2"><br></font></div><div><font size="2">18- در داخل هر تابلو باید صورت و نقشه كاملی از مدارهای تابلو با قاب مناسب نصب شود.</font></div><div><font size="2"><br></font></div><div><font size="2">19- هر مدار خروجی باید روی كلید دارای شماره مدار، اندازه و قدرت كلید باشد.</font></div><div><font size="2"><br></font></div><div><font size="2">20- تابلوها باید بطور قرینه نسبت به اطراف خود نصب شوند.</font></div><div><font size="2"><br></font></div><div><font size="2">21- در نظر گرفتن میله ترمینال برای سیم زمین تجهیزات الزامی است.</font></div><div><font size="2"><br></font></div><div><font size="2">22- مشخصات مدار باید به صورت واضح و خوانا مشخص شود.</font></div><div><font size="2"><br></font></div><div><font size="2">23- تمام سیم های نول باید مجهز به ترمیال مجزا باشد.</font></div><div><font size="2"><br></font></div><div><font size="2">24- برطبق مقررات ملی 13-5-1-2-1 ورودی تابلو باید به كلید قطع كننده مجهز باشد.</font></div><div><font size="2"><br></font></div><div><font size="2">25- اجرای تابلوی خازن كه برای صرفه جویی در مصرف برق می باشد توصیه می شود.</font></div><div><font size="2"><br></font></div><div><font size="2">26- در تابلوهای برق در مقطع شینه اتصال زمین معادل با مقطع شینه نول می باشد.</font></div><div><font size="2"><br></font></div><div><font size="2">27- تابلوی مجزا در هر طبقه موجود باشد.</font></div><div><font size="2"><br></font></div><div><font size="2">28- برطبق مقررات ملی 13-9-1-1-2 رعایت حداقل فاصله تابلو در آشپزخانه با شیر آب و&nbsp;</font><span style="font-size: small;">اجاق گاز 1.5 متر الزامیست.</span></div><div><font size="2"><br></font></div><div><font size="2">29- برطبق مقررات ملی 13-9-1-1-2 نصب تابلو در فضای دربسته ممنوع می باشد.</font></div><div><font size="2"><br></font></div><div><font size="2">30- حداقل فاصله كنتور برق 60 سانتی متر تا تأسیسات آب و 130 سانتی متر تا تأسیسات گاز&nbsp;</font><span style="font-size: small;">رعایت گردد.</span></div><div><font size="2"><br></font></div><div><font size="2">31- برطبق مقررات ملی 13-9-1-1-2 حداقل 1,5 متر فضای آزاد در جلوی تابلو برق در نظر&nbsp;</font><span style="font-size: small;">گرفته شود.</span></div><div><font size="2"><br></font></div><div><font size="2">32- برطبق مقررات ملی 13-4-2-4-2 حریم تابلوها در اتاق برق حفظ گردد.</font></div><div><font size="2"><br></font></div><div><font size="2">33- از كلیدهای خودكار مینیاتوری به عنوان كلید كنترل مدار (قطع و وصل) چراغ ها استفاده&nbsp;</font><span style="font-size: small;">نشود؛ زیرا عمر مكانیكی این كلید ها محدود است و از آنها برای حفاظت استفاده می شود.&nbsp;</span><span style="font-size: small;">مقررات ملی 13-5-2-5-5</span></div><div><font size="2"><br></font></div><div><font size="2">34- برطبق مقررات ملی 13-5-1-2-1 ورودی تابلو باید دارای قطع كننده باشد و جریان نامی&nbsp;</font><span style="font-size: small;">این كلید باید حداقل برابر جریان نامی كل تابلو یا مصرف كل تابلو باشد.</span></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><br></div><div><br></div><div><br></div><div><font color="#ff0000"><br></font></div><div><div><span style="font-size: small;"><font color="#ff0000">منبع :&nbsp;نکات اجرایی تاسیسات برقی ساختمان : سازمان نظام مهندسی</font></span></div></div></div><div><span style="font-size: small;"><font color="#ff0000"><br></font></span></div><div><span style="font-size: small;"><font color="#ff0000"><br></font></span></div>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost></font>
+
+                <br><br><font color="#c70900"> موضوعات مرتبط</font><hr width="200px" align="right"><br>
+                <font class=text4>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="../../../category/2.html" class=text4>مفاهیم برق</a>،&nbsp;<a href="../../../category/6.html" class=text4>آموزش سیم کشی</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="../../../tag/استاندارد.html" class=text4>استاندارد</a>، <a href="../../../tag/تاسیسات.html" class=text4>تاسیسات</a>، <a href="../../../tag/برق.html" class=text4>برق</a>، <a href="../../../tag/تابلو.html" class=text4>تابلو</a>، <a href="../../../tag/ساختمان.html" class=text4>ساختمان</a>، <a href="../../../tag/اجرا.html" class=text4>اجرا</a>، <a href="../../../tag/مقررات.html" class=text4>مقررات</a>،                 
+            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="../../../263.html#commentlist">نظرات (<script>setCommentCnt(263)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('263','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="../../../262.html">دانلود نرم افزار نقشه کشی برق ساختمان ProfiCad</a>
+</font></div>
+            <div class=div58><font class=text7>چهارشنبه 6 بهمن 1395 :: نویسنده : <a href="../../955686.html">حامد خسروی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+
+
+<div><br></div><div><font size="2">امروز در این پست براتون دانلود برنامه ای که مربوط به نقشه کشی برق (ساختمان) می باشد، قرار داده می شود. که بتونید به سادگی و به راحتی نقشه های خود را بکشید. این برنامه با حجم بسیار پایین و ساده میتونه مشکلات شما رو برای هر نوع نقشه کشی برق رفع کند. ابتدایی ترین نیاز برای ترسیم نقشه های برق، داشتن علائم وسایل و تجهیزات برقی است. استاندارد IEC 60617 یکی از مراجع مهم و با ارزش علائم برق است. این استاندارد مجموعه قابل توجهی ازعلائم لازم را در خود جای داده و مبحث سیزدهم مقررات ملی نیز استفاده از آن را اجباری کرده است و تاکید نموده که برای ترسیم نقشه های برق ساختمان بایستی فقط از علائم موجود در این استاندارد استفاده شود.</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><br></div><div><br></div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img hspace="0" border="0" align="baseline" vspace="0" src="http://file.mihanblog.com//public/user_data/user_files/371/1111072/pdf/profi.jpg" alt="نم افزار نقشه کشی برق ساختمان proficad"></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a href="http://dl.wikipower.ir/soft%20ware/narm%20afzar%20naghshekeshi%20bargh%20-%20[www.wikipower.ir].zip" target="_blank" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://file.mihanblog.com//public/user_data/user_files/371/1111072/pdf/Download.gif" alt=""></a></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font color="#ff0000"><font size="2">رمز فایل :&nbsp;</font><span style="font-family: tahoma, Arial, sans-serif; font-size: 12px; text-align: justify;">www.wikipower.ir</span></font></div><div><font size="2"><br></font></div><div><br></div><div><br></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">منبع :&nbsp;</font><a href="http://wikipower.ir/" target="_blank" title=""><font size="2">wikipower.ir</font></a></div>
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost></font>
+
+                <br><br><font color="#c70900"> موضوعات مرتبط</font><hr width="200px" align="right"><br>
+                <font class=text4>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="../../../category/11.html" class=text4>دانلود ها</a>،&nbsp;<a href="../../../category/8.html" class=text4>نقشه های برق ساختمان</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="../../../tag/دانلود.html" class=text4>دانلود</a>، <a href="../../../tag/نرم&#32;افزار.html" class=text4>نرم افزار</a>، <a href="../../../tag/نقشه&#32;کشی.html" class=text4>نقشه کشی</a>، <a href="../../../tag/برق.html" class=text4>برق</a>، <a href="../../../tag/ساختمان.html" class=text4>ساختمان</a>، <a href="../../../tag/proficad.html" class=text4>proficad</a>، <a href="../../../tag/سیم&#32;کشی.html" class=text4>سیم کشی</a>،                 
+            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="../../../262.html#commentlist">نظرات (<script>setCommentCnt(262)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('262','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="../../../261.html">دانلود نرم افزار سیم کشی برق ساختمان برای اندروید Android</a>
+</font></div>
+            <div class=div58><font class=text7>چهارشنبه 6 بهمن 1395 :: نویسنده : <a href="../../955686.html">حامد خسروی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+
+<div><br></div><div><font size="2">نرم افزار Electric Toolkit به صورت عکس، به شما آموزش میدهد که چطور انواع سیم کشی های خانگی را انجام دهید. این نرم افزار دارای آموزش های مدار های سوئیچ های سه طرفه و چهار طرفه، سیم کشی ساده لامپ، مشخصات سیم ها و …. می باشد. این نرم افزار می تواند یک ابزار بسیار کاربردی برای افرادی که با برق سروکار دارند، باشد.</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img hspace="0" border="0" align="baseline" vspace="0" src="http://file.mihanblog.com//public/user_data/user_files/371/1111072/pdf/tool.jpg" alt="نرم افزار سیم کشی برق ساختمان اندروید"></div><div><font size="2"><br></font></div><div>&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="http://katfile.com/m3hsdkmgy1nv.html" target="_blank" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://file.mihanblog.com//public/user_data/user_files/371/1111072/pdf/Download.gif" alt=""></a></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><br></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">منبع : www.fa.omran-yar.ir</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost></font>
+
+                <br><br><font color="#c70900"> موضوعات مرتبط</font><hr width="200px" align="right"><br>
+                <font class=text4>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="../../../category/11.html" class=text4>دانلود ها</a>،&nbsp;<a href="../../../category/6.html" class=text4>آموزش سیم کشی</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="../../../tag/دانلود.html" class=text4>دانلود</a>، <a href="../../../tag/نرم&#32;افزار.html" class=text4>نرم افزار</a>، <a href="../../../tag/آموزش.html" class=text4>آموزش</a>، <a href="../../../tag/سیم&#32;کشی.html" class=text4>سیم کشی</a>، <a href="../../../tag/برق.html" class=text4>برق</a>، <a href="../../../tag/اندروید.html" class=text4>اندروید</a>، <a href="../../../tag/ساختمان.html" class=text4>ساختمان</a>،                 
+            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="../../../261.html#commentlist">نظرات (<script>setCommentCnt(261)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('261','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="../../../260.html">نکات اجرایی تاسیسات برقی ساختمان ( چاه زمین )</a>
+</font></div>
+            <div class=div58><font class=text7>دوشنبه 4 بهمن 1395 :: نویسنده : <a href="../../955686.html">حامد خسروی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+
+<div><br></div><div><div><font color="#3333ff" size="3">تاسیسات چاه زمین</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">1- وجود الكترود زمین اساسی كه متداولترین روش احداث آن چاه زمین است بر طبق بند 13-4-3-1-ج مبحث سیزدهم مقررات ملی برای مشتركان با&nbsp;</font><span style="font-size: small;">كنتورهای بیش از 60A سه فاز یا مجموعه ای از كنتورها با مجموع جریان بیش از 60A در هر فاز ضروری است.</span></div><div><font size="2"><br></font></div><div><font size="2">در بند پ- 1-9-5 همین مبحث، روش سنتی قرار دادن صفحه مسی داخل&nbsp;</font><span style="font-size: small;">زغال و پر كردن چاه با لایه های نمك و زغال شرح داده شده است كه از 2 جهت مشكلات اساسی ایجاد می&nbsp;</span><span style="font-size: small;">نماید:</span></div><div><span style="font-size: small;"><br></span></div><div><font size="2">1- خوردگی صفحه مسی به علت وجود نمك</font></div><div><font size="2">2- شسته شدن نمك و بالا رفتن مقاومت چاه</font></div><div><font size="2">به همین منظور در این دستورالعمل استفاده از مواد كاهنده مقاومت همانند خاك های معدنی&nbsp;</font><span style="font-size: small;">بنتونیت توصیه شده است.</span></div><div><span style="font-size: small;"><br></span></div><div><font size="2">2-1- مطابق بند پ- 1-4-7-1 مبحث 13 استفاده از آرماتورهای فونداسیون برای هم بندی&nbsp;</font><span style="font-size: small;">اصلی ساختمان به سیستم زمین الكتریكی ضروری است. هم بندی فوق علاوه بر اثر هم&nbsp;</span><span style="font-size: small;">پتانسیل سازی، تأثیر قابل ملاحظه ای در كاهش مقاومت زمین دارد.</span></div><div><font size="2"><br></font></div><div><font size="2">3-1- از نكات بسیار مهم پس از احداث چاه زمین، آزمایش مقدار مقاومت الكتریكی زمین در&nbsp;</font><span style="font-size: small;">دوره های تناوب مشخص است. به منظور آشنائی مهندسان با نحوه انجام این آزمایش،&nbsp;</span><span style="font-size: small;">روش مورد لزوم مطابق استاندارد BS 7671 شرح داده شده است.</span></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">2- دستورالعمل احداث چاه زمین</font></div><div><font size="2"><br></font></div><div><font size="2">1-2 - محل مناسب چاه زمین مكانی است كه امكان آبیاری آن وجود داشته باشد، بنابراین&nbsp;</font><span style="font-size: small;">عدم صدمه به سازه ساختمان در انتخاب محل چاه زمین می باید مد نظر قرار داد شود.</span></div><div><font size="2"><br></font></div><div><font size="2">2-2 - عمق نصب صفحه زمین نقطه ای است كه نم طبیعی به طور دائم وجود داشته باشد ولی در&nbsp;</font><span style="font-size: small;">هر حال عمق لبه بالائی صفحه از 1.5 متر نباید كمتر باشد.</span></div><div><font size="2"><br></font></div><div><font size="2">3-2 - ابعاد صفحه زمین حداقل 50*50 سانتی متر با ضخامت 2 میلی متر است.</font></div><div><font size="2"><br></font></div><div><font size="2">4-2 - در اطراف صفحه زمین حداقل 20 سانتی متر ماده كاهنده مقاومت باید ریخته شود،&nbsp;</font><span style="font-size: small;">بنابراین قطر چاه حداقل 90 سانتی متر است.</span></div><div><font size="2"><br></font></div><div><font size="2">5-2 - هادی های زمین، مسی، چند مفتولی و به مقطع حداقل 35 میلیمتر مربع هستند.</font></div><div><font size="2"><br></font></div><div><font size="2">6-2 - اتصال های هادی زمین به صفحه زمین به یكی از دو روش زیر انجام می شود:</font></div><div><font size="2"><br></font></div><div><font size="2">1-6-2 در انتهای هادی ها یك كابل شوی مسی (پرسی یا پیچی) نصب می شود. كابل شو به&nbsp;</font><span style="font-size: small;">كمك دو عدد پیچ و مهره مسی به صفحه مسی اتصال می یابد. استفاده از پیچ و مهره&nbsp;</span><span style="font-size: small;">گالوانیزه ممنوع می باشد.</span></div><div><font size="2"><br></font></div><div><font size="2">2-6-2 اتصال هادی ها به كابل شو و كابل شو به صفحه با جوش اكسیژن (لحیم سخت) انجام می&nbsp;</font><span style="font-size: small;">گیرد. جوشكاری در كل سطح تماس باید صورت گیرد. اتصال لحیم نرم (سرب یا قلع) مجاز&nbsp;</span><span style="font-size: small;">نیست.</span></div><div><font size="2"><br></font></div><div><font size="2">7-2 - مقدار مناسب ماده كاهنده مقاومت بنتونیت به صورت دوغاب به نسبت 300Kg بنتونیت و&nbsp;</font><span style="font-size: small;">1 متر مكعب آب است. روی بنتونیت با خاك دستی سرند شده پوشانده می شود.</span></div><div><font size="2"><br></font></div><div><font size="2">8-2 - وجود شینه زمین در مجاورت چاه زمین یا داخل تابلوی اصلی (مطابق جزئیات پیوست)&nbsp;</font><span style="font-size: small;">ضروری است.</span></div><div><font size="2"><br></font></div><div><font size="2">9-2 - برای انجام اندازه گیری مقاومت، امكان باز كردن هادی های اتصال زمین از شینه اتصال&nbsp;</font><span style="font-size: small;">زمین باید وجود داشته باشد.</span></div><div><font size="2"><br></font></div><div><font size="2">10-2 - به شینه زمین علاوه بر چاه زمین، سیم های لخت مسی از اسكلت فلزی ساختمان، آرماتور&nbsp;</font><span style="font-size: small;">داخل بتن، هادی حفاظتی اصلی و هادی خنثی، لوله اصلی فلزی آب، فاضلاب، كانال های&nbsp;</span><span style="font-size: small;">تأسیساتی و بدنه دیزل ژنراتور متصل می شود.</span></div><div><font size="2"><br></font></div><div><font size="2">11-2 - مقاومت كل زمین نباید از 2 اهم تجاوز كند. هر ساله این مقدار باید در گرم ترین ماه سال&nbsp;</font><span style="font-size: small;">اندازه گیری گردد.</span></div><div><font size="2"><br></font></div><div><font size="2">12-2 - در صورتی كه یك چاه زمین مقاومت لازم را ایجاد نكند از چند الكترود به صورت موازی&nbsp;</font><span style="font-size: small;">باید استفاده نمود. فاصله این چاه ها حداقل سه برابر بزرگترین بعد صفحه باید باشد ( 10&nbsp;</span><span style="font-size: small;">متر فاصله توصیه می گردد)</span></div><div><font size="2"><br></font></div><div><font size="2">13-2 - چاه های زمین با سیم لخت مسی حداقل 35 میلیمتر مربع به یكدیگر متصل می گردد.</font></div><div><font size="2"><br></font></div><div><font size="2">14-2 - هیچیك از هادی ها از نوع افشان نبوده و در انواع چند مفتولی ضخامت هر مفتول كمتر از&nbsp;</font><span style="font-size: small;">1/8 میلی متر نباشد.</span></div><div><font size="2"><br></font></div><div><font size="2">15-2 - هادی زمین نباید هیچ گونه زدگی و خوردگی داشته باشد و آن را باید كاملا در وسط چاه&nbsp;</font><span style="font-size: small;">قرار داد و همچنین در معرض كشش نباشد.</span></div><div><font size="2"><br></font></div><div><font size="2">16-2 - دریچه بازدید در بالای چاه به منظور بررسی وضعیت چاه در نظر گرفته شود.</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">3- از چاه زمین برای فاضلاب استفاده نگردد كه این امر در مقررات ملی 13 پ 1-9-5&nbsp;</font><span style="font-size: small;">یادآوری 5 ذكر شده است و علت آن این است مواد اسیدی روغنی، كف جوهر نمك مس را تخریب&nbsp;</span><span style="font-size: small;">می كند و الكترولیتی را پائین می آورد.</span></div><div><font size="2"><br></font></div><div><font size="2">4- آزمایش مقاومت زمین (حداكثر 2 اهم) انجام شود، نتیجه این آزمایش در كارگاه نگهداری&nbsp;</font><span style="font-size: small;">شود و هر سال یك بار این آزمایش می بایست انجام گردد كه این امر بر طبق مقررات ملی&nbsp;</span><span style="font-size: small;">13 پ 1-9-4 می باشد.</span></div><div><font size="2"><br></font></div><div><font size="2">5- فاصله هر دو چاه از همدیگر حداقل می بایست معادل دو برابر ارتفاع یكی از چاه های ارت&nbsp;</font><span style="font-size: small;">باشد.</span></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">منبع : نکات اجرایی تاسیسات برقی ساختمان : سازمان نظام مهندسی</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><br></div></div>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost></font>
+
+                <br><br><font color="#c70900"> موضوعات مرتبط</font><hr width="200px" align="right"><br>
+                <font class=text4>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="../../../category/2.html" class=text4>مفاهیم برق</a>،&nbsp;<a href="../../../category/6.html" class=text4>آموزش سیم کشی</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="../../../tag/استاندارد.html" class=text4>استاندارد</a>، <a href="../../../tag/اصول.html" class=text4>اصول</a>، <a href="../../../tag/چاه.html" class=text4>چاه</a>، <a href="../../../tag/ارت.html" class=text4>ارت</a>، <a href="../../../tag/زمین.html" class=text4>زمین</a>، <a href="../../../tag/احداث.html" class=text4>احداث</a>، <a href="../../../tag/برق.html" class=text4>برق</a>،                 
+            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="../../../260.html#commentlist">نظرات (<script>setCommentCnt(260)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('260','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="../../../259.html">نکات اجرایی تاسیسات برق ساختمان ( سیستم تلفن )</a>
+</font></div>
+            <div class=div58><font class=text7>شنبه 2 بهمن 1395 :: نویسنده : <a href="../../955686.html">حامد خسروی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+
+<div><font size="2"><br></font></div><div><font size="2">نکات اجرایی سیستم تلفن</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><div><font size="2">1- در ساختمان هایی كه مراكز اختصاصی تلفن دارند، لازم است اتاق مركز و در صورت نیاز اتاق های سایر تجهیزات مربوط به سیستم تلفن در محلی مناسب، از نظر ارتباط با شبكه تلفن شهری و مدارهای داخلی ساختمان، پیش بینی شود و از آن جز برای نصب تجهیزات مربوط به تلفن، و در صورت داشتن فضای كافی برای دیگر تجهیزات جریان ضعیف، برای&nbsp;</font><span style="font-size: small;">هیچ منظور دیگری استفاده نشود. ابعاد اتاق و راهروهای اطراف كابینت ها و میزهای مربوط&nbsp;</span><span style="font-size: small;">باید برای انجام كلیه عملیات سرویس و تعمیرات كافی باشد.</span></div><div><font size="2"><br></font></div><div><font size="2">2- در ساختمان های فاقد مركز تلفن اختصاصی، محل جعبه تقسیم ترمینال اصلی كه خطوط&nbsp;</font><span style="font-size: small;">ورودی به آن وصل می شود باید به نحوی انتخاب شود كه انجام ارتباط بین این جعبه و&nbsp;</span><span style="font-size: small;">خطوط شبكه شهری و جعبه های تقسیم طبقات به سهولت انجام شود.</span></div><div><font size="2"><br></font></div><div><font size="2">3- جعبه تقسیم های ترمینال طبقات یا مناطق توزیع باید با توجه به توسعه های بعدی پیش&nbsp;</font><span style="font-size: small;">بینی شوند و برای اتصالات اضافی محل كافی داشته، به ترمینال زمین مجهز باشند.</span></div><div><font size="2"><br></font></div><div><font size="2">4- ارتباط بین جعبه تقسیم های ترمینال طبقات و جعبه تقسیم های نیمه اصلی یا جعبه&nbsp;</font><span style="font-size: small;">تقسیم مركز تلفن باید با كابل حفاظت شده در لوله ها یا مجاری كابل، انجام شود.</span></div><div><font size="2"><br></font></div><div><font size="2">5- كابل های مورد استفاده در سیستم های تلفن باید نوعی پرده فلزی (فویل، زره یا نظایر آن)&nbsp;</font><span style="font-size: small;">داشته، شامل یك رشته هادی مخصوص اتصال زمین باشد. مقررات ملی 13-8-0-8</span></div><div><font size="2"><br></font></div><div><font size="2">6- اتصالات بین جعبه تقسیم های ترمینال و محل دستگاه تلفن (پریز تلفن) باید مشتمل بر&nbsp;</font><span style="font-size: small;">سه رشته هادی (شامل زمین) باشد.</span></div><div><font size="2"><br></font></div><div><font size="2">یادآوری 1- در ساختمان های فاقد مركز تلفن و اگر از نظر مقررات شركت مخابرات بلامانع&nbsp;</font><span style="font-size: small;">باشد، می توان به دو رشته هادی اكتفا كرد.</span></div><div><font size="2"><br></font></div><div><font size="2">7- اتصال به دستگاه تلفن می تواند به یكی از دو روش زیر انجام شود:</font></div><div><font size="2">الف) در محل جعبه سیم كشی تلفن، جعبه انتهایی تلفن</font></div><div><font size="2">ب) در محل جعبه سیم كشی تلفن، پریز محصول تلفن (با حداقل سه كنتاكت) نصب و و</font></div><div><font size="2">اتصال تلفن به آن از طریق سه یا چند شاخه مناسب انجام شود.</font></div><div><font size="2"><br></font></div><div><font size="2">یادآوری 2- در ساختمان های فاقد مركز تلفن خصوصی در صورت وجود شرایط ذكر شده&nbsp;</font><span style="font-size: small;">در یادآوری 1 می توان از پریز دو كنتاكته استفاده كرد.</span></div><div><font size="2"><br></font></div><div><font size="2">یادآوری 3- پریزهای دو، سه یا چند كنتاكته تلفن باید مخصوص این سیستم باشد، به گونه&nbsp;</font><span style="font-size: small;">ای كه وصل اشتباهی دو شاخه های برق به آنها یا دو، سه یا چند شاخه های تلفن به&nbsp;</span><span style="font-size: small;">پریزهای برق امكان پذیر نباشد.</span></div><div><font size="2"><br></font></div><div><font size="2">8- هادی های اتصال زمین سیم ها و كابل های تلفن باید از طریق یك هادی حفاظتی،&nbsp;</font><span style="font-size: small;">ترمینال زمین جعبه اصلی تلفن یا مركز تلفن را به الكترود زمین ساختمان متصل كنند.</span></div><div><font size="2"><br></font></div><div><font size="2">9- پیمانكار یا مالك می بایست پیش از اجرا و نصب جعبه تقسیم اصلی تلفن MTB و كابل&nbsp;</font><span style="font-size: small;">ورودی با شركت مخابرات هماهنگی لازم را انجام دهد.</span></div><div><font size="2"><br></font></div><div><font size="2">10- قطر كابل تلفن طبق مقررات ملی 13-8-0-8 حداقل 0,6 میلی متر می باشد.</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><br></div></div><div><font color="#cc0000">منبع : نکات اجرایی تاسیسات برق ساختمان : سازمان نظام مهندسی</font></div><div><br></div>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost></font>
+
+                <br><br><font color="#c70900"> موضوعات مرتبط</font><hr width="200px" align="right"><br>
+                <font class=text4>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="../../../category/2.html" class=text4>مفاهیم برق</a>،&nbsp;<a href="../../../category/6.html" class=text4>آموزش سیم کشی</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="../../../tag/اصول.html" class=text4>اصول</a>، <a href="../../../tag/استاندارد.html" class=text4>استاندارد</a>، <a href="../../../tag/اجرا.html" class=text4>اجرا</a>، <a href="../../../tag/سیستم.html" class=text4>سیستم</a>، <a href="../../../tag/تلفن.html" class=text4>تلفن</a>، <a href="../../../tag/سیم&#32;کشی.html" class=text4>سیم کشی</a>، <a href="../../../tag/روش.html" class=text4>روش</a>،                 
+            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="../../../259.html#commentlist">نظرات (<script>setCommentCnt(259)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('259','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="../../../258.html">نکات اجرایی تاسیسات برق ساختمان ( سیستم آنتن مرکزی )</a>
+</font></div>
+            <div class=div58><font class=text7>پنجشنبه 30 دی 1395 :: نویسنده : <a href="../../955686.html">حامد خسروی</a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+
+<div><font size="2"><br></font></div><div><font size="2" color="#3333ff">نکات اجرایی تاسیسات سیستم آنتن مرکزی</font></div><div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">1- مركز تقویت و تغییر فركانس سیستم آنتن مركزی باید كلیه كانال های موجود در منطقه&nbsp;</font><span style="font-size: small;">نصب را شامل شود و حداقل قدرت تقویت آن معادل حداكثر افت در كل سیستم توزیع شبكه&nbsp;</span><span style="font-size: small;">محلی باشد.</span></div><div><font size="2"><br></font></div><div><font size="2">2- كلیه لوازم و وسائل به كار رفته در سیستم آنتن مركزی باید از انواع مخصوص این كار باشد&nbsp;</font><span style="font-size: small;">و از وسائل متفرقه و نامربوط در آن استفاده نشود.</span></div><div><font size="2"><br></font></div><div><font size="2">3- كابل های سیستم توزیع آنتن باید از نوع هم محور با امپدانس مشخصه 75 اهم باشد و&nbsp;</font><span style="font-size: small;">سطح مقطع آن با توجه به مشخصات سیستم و افت آن انتخاب شود.</span></div><div><font size="2"><br></font></div><div><font size="2">4- مدارهای سیستم آنتن مركزی باید به صورت مستقل از دیگر سیستم ها، در لوله های&nbsp;</font><span style="font-size: small;">مخصوص آن هدایت شوند.</span></div><div><font size="2"><br></font></div><div><font size="2">5- محل آنتن مركزی روی پشت بام در بلندترین محل ممكن نصب گردد.</font></div><div><font size="2"><br></font></div><div><font size="2">6 - مقاومت انتهایی آنتن گذاشته شود، علت آن این است كه برگشت موجی كه منتقل می شود&nbsp;</font><span style="font-size: small;">اتفاق نیفتد تا كیفیت تصویر مطلوب باشد.</span></div><div><font size="2"><br></font></div><div><font size="2" color="#3333ff"><br></font></div><div><font size="2" color="#3333ff">سیستم های جریان ضعیف دیگر</font></div><div><font size="2"><br></font></div><div><font size="2">سیستم های چند رسانه ای، شبكه های رایانه ای، سیستم های حفاظتی و دزدگیر، تلویزیون&nbsp;</font><span style="font-size: small;">مدار بسته، ساعت مركزی، كنترل و ابزار دقیق و سیستم های BMS (سیستم مدیریت ساختمان)</span></div></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><font color="#ff0000"><br></font></div><div><font color="#ff0000">منبع :&nbsp;نکات اجرایی تاسیسات برق ساختمان : سازمان نظام مهندسی</font></div><div><br></div><div><br></div><div><br></div>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost></font>
+
+                <br><br><font color="#c70900"> موضوعات مرتبط</font><hr width="200px" align="right"><br>
+                <font class=text4>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="../../../category/2.html" class=text4>مفاهیم برق</a>،&nbsp;<a href="../../../category/6.html" class=text4>آموزش سیم کشی</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="../../../tag/اصول.html" class=text4>اصول</a>، <a href="../../../tag/استاندارد.html" class=text4>استاندارد</a>، <a href="../../../tag/سیستم.html" class=text4>سیستم</a>، <a href="../../../tag/آنتن.html" class=text4>آنتن</a>، <a href="../../../tag/مرکزی.html" class=text4>مرکزی</a>، <a href="../../../tag/روش.html" class=text4>روش</a>، <a href="../../../tag/برق.html" class=text4>برق</a>،                 
+            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="../../../258.html#commentlist">نظرات (<script>setCommentCnt(258)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('258','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div>
+    <div class=div29></div>
+    <div class=div28><font class=text9>
+                <br><br>
+        ( کل صفحات : 22 )&nbsp;&nbsp;&nbsp;
+            <a href="1.html" class=text4><b>1</b></a>&nbsp;&nbsp;&nbsp;<a href="2.html" class=text4><span>2</span></a>&nbsp;&nbsp;&nbsp;<a href="3.html" class=text4><span>3</span></a>&nbsp;&nbsp;&nbsp;<a href="4.html" class=text4><span>4</span></a>&nbsp;&nbsp;&nbsp;<a href="5.html" class=text4><span>5</span></a>&nbsp;&nbsp;&nbsp;<a href="6.html" class=text4><span>6</span></a>&nbsp;&nbsp;&nbsp;<a href="7.html" class=text4><span>7</span></a>&nbsp;&nbsp;&nbsp;<a href="8.html" class=text4><i>...</i></a>&nbsp;&nbsp;&nbsp;    </font>
+    </div>
+</div>
+
+
+<div class=div17>
+
+    <div class=div170>
+
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=mtext5>همکاری با ما</font></div></div>
+            <div class=sm2></div>
+            <div class=div341><font class=mtext2>گروه برق ساختمان آماده همکاری در پروژه های ساختمانی می باشد.انجام پروژه های برق ساختمان با بهترین کیفیت تخصص ماست.<br>همراه: 09213531204</font><br></div></div><div class=div30></div>
+        </div><br><br>
+
+
+<center><b>کانال برق ساختمان</b><center><br>
+  <center><a href="https://telegram.me/bargh_esakhteman" target="_blank" title=""><img src="http://file.mihanblog.com//public/user_data/user_files/371/1111072/banner/channellogore.png" alt="کانال تلگرام آموزش برق ساختمان"></a></center>
+
+
+<div class=div17>
+
+    <div class=div170>
+
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=mtext5>موضوعات</font></div></div>
+            <div class=sm2></div>
+            <div class=div341><font class=mtext1><ul>
+                <li><a href="../../../category/5.html">پاسخ به سوالات (22)</a></li><li><a href="../../../category/2.html">مفاهیم برق (56)</a></li><li><a href="../../../category/1.html">كلیدهای برق (11)</a></li><li><a href="../../../category/3.html">آیفون صوتی (6)</a></li><li><a href="../../../category/4.html">آیفون تصویری (9)</a></li><li><a href="../../../category/7.html">سنسورها (4)</a></li><li><a href="../../../category/6.html">آموزش سیم کشی (55)</a></li><li><a href="../../../category/8.html">نقشه های برق ساختمان (47)</a></li><li><a href="../../../category/9.html">سیستم اعلان حریق (4)</a></li><li><a href="../../../category/12.html">آموزش نرم افزار دیالوکس (3)</a></li><li><a href="../../../category/10.html">آموزش دوربین مداربسته (3)</a></li><li><a href="../../../category/11.html">دانلود ها (68)</a></li>            </ul></font></div><div class=div30></div>
+        </div>
+<br><center><a href="http://www.bziran.com/detail.php?id=670&amp;vendors=21360034&amp;AdsID=52146" target="_blank" title="آموزش سیم کشی"><img hspace="0" border="0" align="baseline" vspace="0" src="http://file.mihanblog.com//public/user_data/user_files/371/1111072/banner/simkeshi.gif" alt="آموزش سیم کشی خانگی"></a></center><br>
+
+<br><center><a href="http://www.bziran.com/detail.php?id=199&amp;vendors=31130313&amp;AdsID=52146" target="_blank" title="خرید با یک کلیک"><img hspace="0" border="0" align="baseline" vspace="0" src="http://file.mihanblog.com//public/user_data/user_files/371/1111072/banner/jame2.gif" alt="آموزش جامع سیم کشی برق ساختمان"></a></center><br>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=mtext5>پیوندهای روزانه</font></div></div>
+            <div class=sm2></div>
+            <div class=div341><font class=mtext1><ul>
+                <li><a href="http://tovama.com" title="بهترین فروشگاه محصولات دست ساز" target="_blank">محصولات دست ساز تو و ما</a></li><li><a href="http://www.cafealone.com" title="شعر,مینیمال,جملات فلسفی,متن آهنگ,داستان کوتاه" target="_blank">کافه تنهایی</a></li><li><a href="http://esteva.mihanblog.com" title="سلام .
+
+شما هم لینک وب سایتتون رو تو این صفحه ثبت کنید.
+http://esteva.mihanblog.com
+
+خیلی زود تایید میکنم
+
+این لینک رو تایید کنید لطفا." target="_blank">مجله اینترنتی استوا</a></li><li><a href="http://mrhs.blogfa.com/" title="به نام خدا
+
+به وبلاگ آسمان خوش آمدید
+
+این وبلاگ بیشتر جنبه تفریحی و فان داره و گاهی اوقات هم جنبه شخصی پیدا می کنه !
+
+برای استفاده از مطالب وبلاگ می تونید ازبخش  موضوعات،  موضوع مورد علاقه را پیدا کنید
+
+و اگر هم موافق با تبادل لینک بودید در همین پست و در قسمت نظرات بفرمایید
+
+همچین امیدوارم  همیشه دلتون مثل آسمان صاف و ساده باشه" target="_blank">سعی کن خودت باشی !</a></li><li><a href="https://cafebazaar.ir/app/ir.webposter.calculator/?l=fa" title="رسم نمودارهای ریاضی + ماشین حساب مهندسی
+در موبایلتان
+
+https://cafebazaar.ir/app/ir.webposter.calculator/?l=fa
+
+برای حمایت از ما این را تایید فرمایید" target="_blank">ماشین حسـاب گرافـــیکی</a></li><li><a href="http://esteva.mihanblog.com/" title="سلام . مطالب وبلاگتون رو دنبال میکنم
+لینکتون رو به این ادرس بفرستید
+http://esteva.mihanblog.com/linkdaily/new
+خیلی زود تایید میکنم
+
+شما هم این لینک رو تایید کنید" target="_blank">مجله اینترنتی استوا</a></li><li><a href="http://esteva.mihanblog.com" title="انصافا وبلاگ زیبایی دارید .
+
+این لینک را تایید کنید  لطفا" target="_blank">استوا</a></li><li><a href="https://cafebazaar.ir/app/ir.webposter.calculator/?l=fa" title="سلام
+
+ماشین حساب گرافیکی اسم یه اپلیکیشن اندرویده که برای رسم نمودار های ریاضی مخصوص دانش آموزان و دانش جویان طراحی شده.
+
+https://cafebazaar.ir/app/ir.webposter.calculator/?l=fa
+
+لطفا این لینک را هم تایید کنید." target="_blank">رسم نمودار ریاضی</a></li><li><a href="http://www.bespar.net/" title="" target="_blank">نیازمندی های صنعت ساختمان</a></li><li><a href="http://mohsenbm.mihanblog.com/" title="ما شمارو لینک کردیم امیدواریم ورودی خوبی برای بازدید بیشتر شما باشیم" target="_blank">برق قدرت </a></li>                <li><b><a href="../../../../linkdaily/index.html">همه پیوندهای روزانه</a></b></li>
+                <li><b><a href="javascript:linkdailyForm()">ارسال پیوند روزانه</a></b></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+      
+ <div><center>
+<a href="http://www.bziran.com/detail.php?id=4639&amp;vendors=41250015&amp;AdsID=52146" target="_blank" title="خرید نرم افزار اتوکد الکتریکال"><img hspace="0" border="0" align="baseline" vspace="0" src="http://static.mihanblog.com//public/user_data/user_files/371/1111072/banner/autocadnarm.gif" alt="دانلود نرم افزار اتوکد الکتریکال"></a>
+</center></div><br>
+
+ <div><center>
+<a href="http://www.bziran.com/detail.php?id=4597&amp;vendors=41250015&amp;AdsID=52146" target="_blank" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://static.mihanblog.com//public/user_data/user_files/371/1111072/banner/cadamo.gif" alt=""></a>
+</center></div>   
+
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=mtext5>پیوندها</font></div></div>
+            <div class=sm2></div>
+            <div class=div341><font class=mtext1><ul>
+                <li><a href="http://www.touristo.ir" title="جاذبه های توریستی و گردشگری ایران و جهان" target="_blank">توریستی و گردشگری</a></li><li><a href="http://www.senfit.ir" title="اطلاعات اصناف" target="_blank">اطلاعات اصناف ایران</a></li><li><a href="http://electeronic.blogfa.com" title="" target="_blank">وبلاگ تخصصى برق و الکترویک</a></li><li><a href="http://afshinghezeljeh-et.ir" title="" target="_blank">مهندسى برق - الکتروتکنیک</a></li><li><a href="http://berouzweb.ir" title="" target="_blank">به روز وب</a></li><li><a href="http://scitech.blogsky.com" title="" target="_blank">دنیای علم و تکنولوژی</a></li><li><a href="http://kamalseyfi.blogfa.com" title="" target="_blank">آموزش برق، الکترونیک و کامپیوتر</a></li><li><a href="http://encoding.mihanblog.com" title="" target="_blank">دنیای برق و کامپیوتر</a></li><li><a href="http://godisverywell.mihanblog.com/" title="" target="_blank">♥♥♥عكس های خفن!!!!♥♥♥</a></li><li><a href="http://havaytaze.mihanblog.com" title="" target="_blank">هوای تازه</a></li>                <li><a target="_blank" href="http://www.mytheme.ir">بهترین قالب های وبلاگ</a></li>
+                <li><b><a href="../../../../link/index.html">همه پیوندها</a></b></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+
+<div><center><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.iranvij.ir/img_khordad94/00480815823561768758.gif" alt=""></br>
+<a href="http://lalezaar.com"/ target="_blank" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.iranvij.ir/img_khordad94/35035502437094232272.gif" alt=""></a></br>
+<a href="../../../../extrapage/tabligh.html" target="" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.iranvij.ir/img_khordad94/65067585826538353472.gif" alt=""></a></br>
+<a href="../../../../extrapage/tabligh.html" target="" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.iranvij.ir/img_khordad94/65067585826538353472.gif" alt=""></a></br>
+<a href="../../../../extrapage/tabligh.html" target="" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.iranvij.ir/img_khordad94/65067585826538353472.gif" alt=""></a></br>
+<a href="../../../../extrapage/tabligh.html" target="" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.iranvij.ir/img_khordad94/65067585826538353472.gif" alt=""></a></br>
+<a href="../../../../extrapage/tabligh.html" target="" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.iranvij.ir/img_khordad94/65067585826538353472.gif" alt=""></a></br>
+<a href="../../../../extrapage/tabligh.html" target="" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.iranvij.ir/img_khordad94/65067585826538353472.gif" alt=""></a></br>
+<a href="../../../../extrapage/tabligh.html" target="" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.iranvij.ir/img_khordad94/65067585826538353472.gif" alt=""></a></br>
+<a href="../../../../extrapage/tabligh.html" target="" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.iranvij.ir/img_khordad94/65067585826538353472.gif" alt=""></a></br>
+<a href="../../../../extrapage/tabligh.html" target="" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://upload.iranvij.ir/img_khordad94/65067585826538353472.gif" alt=""></a></br>
+</div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=mtext5>صفحات جانبی</font></div></div>
+            <div class=sm2></div>
+            <div class=div341><font class=mtext1><ul>
+                <li><a href="../../../../extrapage/dialux.html">پروژه دیالوکس</a></li><li><a href="../../../../extrapage/tabligh.html">تعرفه تبلیغات در وبلاگ برق ساختمان</a></li><li><a href="../../../../extrapage/amooz.html">دانلود مجموعه آموزش جامع</a></li><li><a href="../../../../extrapage/amoozesh1.html">خرید آموزش جامع سیم کشی برق ساختمان</a></li><li><a href="../../../../extrapage/amoozesh.html">خرید مجموعه آموزش سیم کشی و کابل کشی ساختمان</a></li><li><a href="../../../../extrapage/sharsh.html">شارژ آنلاین</a></li>            </ul></font></div><div class=div30></div>
+        </div>
+
+       <!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=2767760&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=2767760" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code -->
+
+        <div class=div024><center><!-- Begin ToolsIR.com Alexa code -->
+<script src="http://alexa.toolsir.com/badge.php?url=http://bargh-e-sakhteman.mihanblog.com&size=95&bg=a&bc=333333" type="text/javascript"></script><div style="display:none;"><h2><a href="http://www.toolsir.com/">دریافت کد رتبه جهانی سایت و وبلاگ</a></h2></div>
+<!-- End ToolsIR.com Alexa code -->
+
+<!-- Begin ToolsIR.com Pagerank code -->
+<script src="http://pagerank.toolsir.com/rank.php?id=txt&site=http://bargh-e-sakhteman.mihanblog.com/" type="text/javascript"></script><div style="display:none;"><h2><a href="http://www.toolsir.com/">دریافت کد پیج رنک گوگل</a></h2></div>
+<!-- End ToolsIR.com Pagerank code -->
+
+
+</center>
+            <style>
+                .mihan_logo {
+                    background: url("http://mihanblog.com/public/public/images/logo/poweredby.gif") no-repeat scroll center top transparent;
+                    height: 131px;
+                    margin-top: 10px;
+                    text-align: center;
+                }
+            </style>
+            <div class="mihan_logo"></div>
+
+        </div>
+    </div>
+
+</div>
+
+</div>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+    <td class=b1>&nbsp;</td>
+    <td class=b2>
+        <div class=div6></div>
+        <div class=div7>
+            <a href="http://www.mytheme.ir" target="_blank">
+                <img src="http://mihanblog.com/public/public/user_data/template/2099932/blank.gif" border=0 width=182 height=35></a></div>
+    </td>
+    <td class=b1>&nbsp;</td>
+</tr>
+</table>
+</div>
+<style>
+    img{
+        max-width : 500px;
+    }
+</style>
+<script>
+var linkwithin_site_id = 1828539;
+</script>
+<script src="http://www.linkwithin.com/widget.js"></script>
+<a href="http://www.linkwithin.com/"><img src="http://www.linkwithin.com/pixel.png" alt="Related Posts Plugin for WordPress, Blogger..." style="border: 0" /></a>
+
+</body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'bargh-e-sakhteman.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.targetedwebtraffic.com" target="_blank">Buy Website Traffic</a> | <a href="https://www.seo25.com" target="_blank">Buy Targeted Website Traffic</a>
+    </div>
+</center>

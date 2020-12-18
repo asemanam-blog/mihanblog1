@@ -1,0 +1,2398 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://aftabir.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*235404*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[1464]='4';commentCnt[1465]='36';commentCnt[1466]='33';commentCnt[1467]='33';commentCnt[1468]='37';commentCnt[1469]='29';commentCnt[1470]='47';commentCnt[1471]='58';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[1464]='0';
+mihanblogDisLikeArrCnt[1464]='0';
+mihanblogLikeArrCnt[1465]='0';
+mihanblogDisLikeArrCnt[1465]='0';
+mihanblogLikeArrCnt[1466]='0';
+mihanblogDisLikeArrCnt[1466]='0';
+mihanblogLikeArrCnt[1467]='0';
+mihanblogDisLikeArrCnt[1467]='0';
+mihanblogLikeArrCnt[1468]='0';
+mihanblogDisLikeArrCnt[1468]='0';
+mihanblogLikeArrCnt[1469]='0';
+mihanblogDisLikeArrCnt[1469]='0';
+mihanblogLikeArrCnt[1470]='0';
+mihanblogDisLikeArrCnt[1470]='0';
+mihanblogLikeArrCnt[1471]='0';
+mihanblogDisLikeArrCnt[1471]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://aftabir.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://aftabir.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','1112');
+	setStatVar('total_author','12');
+	setStatVar('modify_date','یکشنبه 12 آذر 1396');
+	
+	setStatVar('today_view','50');
+	setStatVar('yesterday_view','309');
+	
+	setStatVar('this_month_view','9154');
+	setStatVar('last_month_view','11178');
+
+	setStatVar('total_view','2222385');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (06:06)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://aftabir.mihanblog.com/statupdate/?data[refereruri]=http://heyroozegar.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607827212&data[hash]=cad2a578300c4b06c65156ad73442b7a&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://aftabir.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://aftabir.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://aftabir.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://aftabir.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://aftabir.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://aftabir.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://aftabir.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://aftabir.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://aftabir.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://aftabir.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://aftabir.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://aftabir.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://aftabir.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://aftabir.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://aftabir.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://aftabir.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<script>document.getElementById('mihan_page_advert').style.display='none';</script>
+
+
+
+<!-- www.xabzar.com --->
+<script type="text/javascript" src="http://www.xabzar.com/tools/click-c/click-c.js"></script><div style="display:none"><h1><a href="http://aftabir.mihanblog.com/post/4">مقاله ی چگونه پزشکی قبول شویم</a></h1></div>
+<!-- www.xabzar.com --->
+<p align="center"><script type=text/javascript src="http://pichak.net/blogcod/mose/04/code.php"></script></p>﻿<div style="display:none;"><li><a href="http://dlsun.ir">دی ال سان</a>
+</li></div>
+
+<!-- Begin ParsTools.com Mp3 Player Code --><audio controls src='http://bayanbox.ir/download/7279304894179987867/khodahafez.mp3' autoplay loop volume='100'>Your browser does not support the audio element.</audio><a href='http://parstools.com' title='پارس تولز ابزار وب'>پارس تولز ابزار وب</a><!-- End ParsTools.com Mp3 Player Code -->
+
+<html>
+
+
+
+
+
+
+<SCRIPT SRC="http://talabanoo.rozblog.com/code/popup"></SCRIPT>
+
+<style>
+    /*
+    Theme Name: Smashing Theme - Widget Ready V
+    Theme URI: http://smashingmagazine.com/
+    Description: Designed by <a href="http://www.designdisease.com">Elena G. - DesignDisease</a>.
+    Version: 1.01
+    Author: Design Disease
+    Author URI: http://wp-themes.designdisease.com/
+    */
+
+
+body { background: #fff url(http://mihanblog.com/public/public/user_data/template/23/images/BkgBody.gif) repeat center; font-family: tahoma, Arial, Helvetica, sans-serif; font-size: 12px; padding: 20px; margin: 0px; color:#35383d;}
+
+html { padding: 0; margin: 0;}
+
+a:link { text-decoration: none; color : #218dd1; border: 0px; -moz-outline-style: none;}
+a:active { text-decoration: underline; color : #218dd1; border: 0px; -moz-outline-style: none;}
+a:visited { text-decoration: none; color : #218dd1; border: 0px; -moz-outline-style: none;}
+a:hover	{ text-decoration: underline; color : #cc0000; border: 0px; -moz-outline-style: none;}
+a:focus { outline: none;-moz-outline-style: none;}
+img{
+    max-width : 505px;
+}
+h1, h2, h3, h4 { font-family: Arial, Helvetica, sans-serif;}
+
+img { padding: 0px; margin: 0px; border: none; text-align: center;}
+hr { border-left:0px solid #abb0b5; border-right:0px solid #abb0b5; border-top:1px dotted #abb0b5; border-bottom:0px solid #abb0b5; height : 1px;  }
+
+
+input { font-family: 'Verdana'; color: #282b31; font-size: 11px;}
+textarea { font-family: 'Verdana'; color: #282b31; font-size: 11px;}
+select { font-family: 'Verdana'; color: #282b31; font-size: 11px;}
+
+    /* BGContainer +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.BGC { width: 980px; margin: 0 auto; padding: 0px; position: relative; }
+
+    /* Header +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+    /**/ * html .Header {text-align:right;height: 80px;} /* */
+.Header {margin:0 0 0 15px;text-align:right; background: #fff url(http://mihanblog.com/public/public/user_data/template/23/images/HeaderBkg.gif) no-repeat left top; width: 535px; position: relative; clear: left; padding: 0px 30px 0px 0px; min-height:80px;}
+
+.Header h1 { direction:rtl;white-space:nowrap;overflow:hidden;font-size: 26px; line-height: 26px; letter-spacing: 0px; padding: 27px 5px 0px 0px; margin: 0px; font-weight: bold; }
+.Header h1 a { color:#ff3300; text-decoration: none; }
+.Header h1 a:visited { color:#ff3300; text-decoration: none; }
+.Header h1 a:hover { color:#ff3300; text-decoration: none; }
+.Header .Desc { color:#8f8f8f; font-size: 15px; line-height: 15px; font-weight: bold; letter-spacing: 0px; font-family: 'Arial'; padding: 0px; margin: 0px 0px 0px 0px;}
+
+    /* Search ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Search { position: absolute; background: url(http://mihanblog.com/public/public/user_data/template/23/images/Search.gif) no-repeat left top; top: 20px; right: -220px; width: 220px; height: 63px;}
+.Search  div { padding: 28px 10px 10px 10px; margin: 0px;}
+.Search  input { border: none; color: #fff; font-size: 11px;}
+.Search  input.search {width: 21px; height: 21px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/SearchButton.gif) no-repeat;}
+.Search  input.keyword { background:transparent none repeat scroll 0 0;border:medium none;direction:rtl;padding:5px 5px 5px 15px;width:180px; }
+#buttonsearch { padding: 0px; margin: -21px 175px 0px 0px; top: 0px; background: none; }
+
+    /* Syndicate ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Syn { position: absolute; top: 45px; right: -400px; width: 170px;}
+.Syn ul { text-align:left;margin: 0px; padding: 0px;}
+
+.Syn li { background: url(http://mihanblog.com/public/public/user_data/template/23/images/SynIco.gif) no-repeat left center; margin: 0px; padding: 0px 0px 1px 15px; list-style-type: none; font-size: 10px; color:#25252b;}
+.Syn li a { color:#25252b; font-size: 10px; text-decoration: underline; }
+.Syn li a:visited { color:#25252b; font-size: 10px; text-decoration: underline; }
+.Syn li a:hover { color:#25252b; font-size: 10px; text-decoration: underline; }
+
+    /* Container +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.CON {margin:0px;text-align:right;background: #fff url(http://mihanblog.com/public/public/user_data/template/23/images/BGC.gif) repeat-y center; width: 980px; float: left; position: relative; padding: 0px}
+
+    /* Side Central Single +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SCS { background: url(http://mihanblog.com/public/public/user_data/template/23/images/SC.gif) no-repeat left top; width: 505px; float: left; padding: 0px 30px 15px 45px;}
+.SCS h1 { font-size: 20px; font-weight: normal; background: url(http://mihanblog.com/public/public/user_data/template/23/images/Dotted.gif) repeat-x bottom; padding-bottom: 10px; letter-spacing: -1px; }
+.SCS h2 { font-size: 18px; font-weight: normal; }
+.SCS h3 { font-size: 14px; font-weight: bold; }
+
+.SCS p { font-size: 12px; line-height: 17px;}
+.SCS p strong {}
+.SCS img {}
+.SCS ul { padding: 10px 0px; margin: 0px; }
+.SCS li { padding: 2px 0px 2px 15px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostContentLiIco.png) no-repeat left top; font-size: 11px; line-height: 15px; color:#4c4c4c; }
+.SCS blockquote { padding: 2px 10px; background: #e9f8ff; margin: 0px; color:#336699; }
+.SCS blockquote p { font-size: 11px; padding: 5px 0px; margin: 5px 0px; line-height: 15px;}
+.SCS blockquote li { padding: 2px 0px 2px 15px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostContentBlockLiIco.png) no-repeat left top; font-size: 11px; line-height: 15px; color:#336699; }
+.SCS blockquote a { color:#0080ca; }
+.SCS blockquote a:visited { color:#0080ca; }
+.SCS blockquote a:hover { color:#003399; }
+
+    /* Side Central +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SC {text-align:right; background: url(http://mihanblog.com/public/public/user_data/template/23/images/SC.gif) no-repeat left top; width: 505px; float: left; padding: 0px 0px 15px 45px;}
+.SC h2 { font-weight: normal;}
+.pagetitle { font-size: 24px; font-weight: normal; letter-spacing: -1px; border-bottom: solid 1px #787878; padding: 0px 0px 15px 0px; margin: 0px 0px 15px 0px; color:#787878;}
+
+    /* Menu +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.Menu { padding: 15px 0px 30px 0px; width: 505px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/Dotted.gif) repeat-x top;}
+.Menu em { display: none}
+.Menu ul { list-style: none; margin: 0px; padding: 0px;}
+.Menu ul li ul { display: none;}
+.Menu li { padding: 0px; margin: 0px; display: inline; font-size: 10px; line-height: 11px; font-weight: bold;}
+.Menu a { padding: 0px 0px 0px 3px; margin-right: 2px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/MLeft.png) no-repeat left top; float: left;}
+.Menu a span { padding: 4px 9px 5px 6px; display: block; background: url(http://mihanblog.com/public/public/user_data/template/23/images/MRight.png) no-repeat right top; float: right; }
+.Menu a span { float: none; color: #3b98d2;}
+.Menu a:hover span { color: #3b98d2;}
+.Menu a:hover { background-position: 0% -20px; color:#ffffff; text-decoration: none;}
+.Menu a:hover span { background-position: 100% -20px;  color:#ffffff;}
+.Menu .on { background: url(http://mihanblog.com/public/public/user_data/template/23/images/MLeft.png) no-repeat left bottom; color:#ffffff; }
+.Menu .on span { background: url(http://mihanblog.com/public/public/user_data/template/23/images/MRight.png) no-repeat right bottom; color:#ffffff; }
+
+    /* Post +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Post {	overflow:hidden;width:505px;padding: 15px 0px; position: relative; clear: left;}
+.PostHead { direction:rtl;position: relative; clear: left; width: 405px; padding-left: 100px;}
+.PostHead h1 { text-align:right;font-size: 19px; line-height: 19px; letter-spacing: -1px; font-weight: normal; padding: 0px 2px 1px 0px; margin: 0px; color:#cc0000;}
+.PostHead h1 a { color: #218dd1; text-decoration: none;}
+.PostHead h1 a:visited { color: #218dd1; text-decoration: none;}
+.PostHead h1 a:hover { color:#cc0000; text-decoration: none;}
+.PostHead ul { text-align:right;padding: 0px; margin: 0px;}
+.PostHead li { list-style-type: none; display:block}
+.PostHead li a { color:#8a98a2; text-decoration: underline;}
+.PostHead li a:visited { color:#8a98a2; text-decoration: underline;}
+.PostHead li a:hover { color:#8a98a2; text-decoration: underline;}
+
+.PostAuthor {background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostAuthor.png) no-repeat right center; padding: 1px 12px 1px 5px; margin: 0px; font-size: 10px; color:#8a98a2; font-weight: bold;display:block;}
+.PostCateg { float:right;background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostCategr.png) no-repeat right center; padding: 1px 12px 1px 5px; margin: 0px; font-size: 10px; color:#8a98a2; font-weight: bold;display:block;}
+
+    /**/ * html .PostTime { right: 30px;} /**/
+.PostTime { position: absolute; top: 20px; left: 0px; color:#8a98a2;}
+
+.PostContent {overflow:hidden;width:505px;direction:rtl;text-align:right; padding: 5px 0px 5px 0px; font-size: 12px; line-height: 17px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/Dotted.gif) repeat-x bottom; color:#444640; }
+.PostContent p { color:#444640; font-size: 12px; line-height: 17px;}
+.PostContent p strong {}
+.PostContent img {}
+.PostContent ul { padding: 10px 0px; margin: 0px; }
+.PostContent li { padding: 2px 15px 2px 0px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostContentLiIco.png) no-repeat right top; font-size: 11px; line-height: 15px; color:#4c4c4c; }
+.PostContent blockquote { padding: 2px 10px; background: #e9f8ff; margin: 0px; color:#336699; }
+.PostContent blockquote p { font-size: 11px; padding: 5px 0px; margin: 5px 0px; line-height: 15px;}
+.PostContent blockquote li { padding: 2px 0px 2px 15px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostContentBlockLiIco.png) no-repeat left top; font-size: 11px; line-height: 15px; color:#336699; }
+.PostContent blockquote a { color:#0080ca; }
+.PostContent blockquote a:visited { color:#0080ca; }
+.PostContent blockquote a:hover { color:#003399; }
+.PostContent a { text-decoration: underline;}
+
+.PostDet { text-align:left;direction:rtl;padding-top: 10px;}
+.PostDet ul { padding: 0px; margin: 0px;}
+.PostDet li { padding: 2px 0px 5px 15px; margin: 0px 10px 0px 0px; list-style-type: none; display: inline; color:#336699; font-size: 10px; font-weight: bold; }
+.PostDet li a {color:#ff3300;}
+.PostDet li a:visited { text-decoration: underline; color:#ff3300;}
+.PostDet li a:hover { text-decoration: underline; color:#990000;}
+
+.PostCom { background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostCom.png) no-repeat left center; }
+
+
+    /* Side Right +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SR {text-align:right;background: url(http://mihanblog.com/public/public/user_data/template/23/images/SR.gif) no-repeat right top; width: 400px; float: right; }
+.SR .poll #poll_question {color:#660000; }
+.SR h2 { font-size: 14px; letter-spacing: normal; font-weight: bold;}
+.SR h3 { font-size: 14px; letter-spacing: normal; font-weight: bold;}
+
+    /* Side Right Left +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SRL {width: 215px; float: left; padding: 5px 5px 5px 0px; color:#fff;}
+.SRL h3 { color:#ffffcc; padding: 5px 0px 5px 0px; margin: 0px; text-transform: uppercase; font-size: 14px; color:#666; letter-spacing: 0px;}
+.SRL p { color:#fff; font-size: 11px;}
+
+    /* Panel SRL +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.PT { height: 5px; width: 5px; position: absolute; top: 0px; right: 0px;}
+    /**/ *html .PT  { right: 5px;} /**/
+.Panel { position: relative; margin-bottom: 5px; padding: 10px 10px 10px 10px;  color:#333; font-size: 11px;}
+.Panel ul { margin: 0px; padding: 0px;}
+.Panel ul li {direction:rtl;width:175px;margin: 0px; padding: 0px; list-style-type: none; font-size: 11px; }
+.Panel ul li a { background: url(http://mihanblog.com/public/public/user_data/template/23/images/CategLi.png) no-repeat right top; display: block; padding: 1px 10px 2px 0px; font-size: 11px; }
+.Panel ul li a:visited { background: url(http://mihanblog.com/public/public/user_data/template/23/images/CategLi.png) no-repeat right top; display: block; }
+.Panel ul li a:hover { background: #ffffff url(http://mihanblog.com/public/public/user_data/template/23/images/CategLi.png) no-repeat right top; display: block; text-decoration: none;}
+
+.Panel ul ul li { margin: 0px; padding: 0px 0px 0px 10px; list-style-type: none; font-size: 10px; border-bottom: solid 1px #e1f3fa;}
+.Panel ul ul li a { margin: 0px; padding: 0px; list-style-type: none; font-size: 10px; background: none;}
+.Panel ul ul li a:visited { margin: 0px; padding: 0px; list-style-type: none; font-size: 10px; background: none;}
+.Panel ul ul li a:hover { margin: 0px; padding: 0px; list-style-type: none; font-size: 10px; background: none;}
+
+.Panel p { color:#333; font-size: 11px;}
+
+
+    /* Panel Blue +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PBlue .PT { background: url(http://mihanblog.com/public/public/user_data/template/23/images/BlueTop.gif) no-repeat;}
+.PBlue { background: #e1f3fa url(http://mihanblog.com/public/public/user_data/template/23/images/BlueBottom.gif) no-repeat right bottom; border-left: solid 10px #c7e5f1;}
+.PBlue ul { border-top: solid 1px #c7e5f1;}
+.PBlue ul li { border-bottom: solid 1px #c7e5f1;}
+.PBlue ul li a {color:#336699;}
+.PBlue ul li a:visited { color:#336699; }
+.PBlue ul li a:hover { color:#003366;}
+.PBlue ul ul li { border-bottom: solid 1px #e1f3fa;}
+
+    /* Panel Yellow +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PYellow .PT { background: url(http://mihanblog.com/public/public/user_data/template/23/images/YellowTop.gif) no-repeat;}
+.PYellow { background: #faf4e1 url(http://mihanblog.com/public/public/user_data/template/23/images/YellowBottom.gif) no-repeat right bottom; border-left: solid 10px #ebe3c8;}
+.PYellow ul { border-top: solid 1px #ebe3c8;}
+.PYellow ul li { border-bottom: solid 1px #ebe3c8;}
+.PYellow ul li a { color:#cc6600;}
+.PYellow ul li a:visited { color:#cc6600; }
+.PYellow ul li a:hover { color:#993300;}
+.PYellow ul ul li { border-bottom: solid 1px #faf4e1;}
+
+    /* Panel Pink +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PPink .PT { background: url(http://mihanblog.com/public/public/user_data/template/23/images/PinkTop.gif) no-repeat;}
+.PPink { background: #f2e2d5 url(http://mihanblog.com/public/public/user_data/template/23/images/PinkBottom.gif) no-repeat right bottom; border-left: solid 10px #e4cab5;}
+.PPink ul { border-top: solid 1px #e4cab5;}
+
+.PPink ul li { border-bottom: solid 1px #e4cab5;}
+.PPink ul li a { color:#993333;}
+.PPink ul li a:visited { color:#993333; }
+.PPink ul li a:hover { color:#660000;}
+.PPink ul ul li { border-bottom: solid 1px #f2e2d5;}
+
+
+    /* Panel Green +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PGreen .PT { background: url(http://mihanblog.com/public/public/user_data/template/23/images/GreenTop.png) no-repeat;}
+.PGreen { background: #95E088 url(http://mihanblog.com/public/public/user_data/template/23/images/GreenBottom.png) no-repeat right bottom; border-left: solid 10px #70B764;}
+.PGreen ul { border-top: solid 1px #70B764;}
+.PGreen ul li { border-bottom: solid 1px #70B764;}
+.PGreen ul li a { color:#993333;}
+.PGreen ul li a:visited { color:#993333; }
+.PGreen ul li a:hover { color:#660000;}
+.PGreen ul ul li { border-bottom: solid 1px #70B764;}
+
+    /* Panel Marron +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PMaroon .PT { background: url(http://mihanblog.com/public/public/user_data/template/23/images/MaroonTop.png) no-repeat;}
+.PMaroon { background: #FAE4E3 url(http://mihanblog.com/public/public/user_data/template/23/images/MaroonBottom.png) no-repeat right bottom; border-left: solid 10px #F39199;}
+.PMaroon ul { border-top: solid 1px #F39199;}
+.PMaroon ul li { border-bottom: solid 1px #F39199;}
+.PMaroon ul li a { color:#993333;}
+.PMaroon ul li a:visited { color:#993333; }
+.PMaroon ul li a:hover { color:#660000;}
+.PMaroon ul ul li { border-bottom: solid 1px #7F39199;}
+
+
+    /* Panel Marron +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PGray .PT { background: url(http://mihanblog.com/public/public/user_data/template/23/images/GrayTop.png) no-repeat;}
+.PGray { background: #D4D4D4 url(http://mihanblog.com/public/public/user_data/template/23/images/GrayBottom.png) no-repeat right bottom; border-left: solid 10px #A1A1A1;}
+.PGray ul { border-top: solid 1px #A1A1A1;}
+.PGray ul li { border-bottom: solid 1px #A1A1A1;}
+.PGray ul li a { color:#993333;}
+.PGray ul li a:visited { color:#993333; }
+.PGray ul li a:hover { color:#660000;}
+.PGray ul ul li { border-bottom: solid 1px #A1A1A1;}
+
+    /* Side Right Right +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SRR { direction:rtl;position: relative; width: 160px; float: right; padding: 10px; color:#fff; font-size: 11px; }
+.SRR h3 { background: url(http://mihanblog.com/public/public/user_data/template/23/images/SRRH3.gif) repeat-x left bottom; color:#ffffff; padding: 0px 0px 5px 0px; margin: 0px 0px 5px 0px; letter-spacing: 0px; }
+.SRR h2 { background: url(http://mihanblog.com/public/public/user_data/template/23/images/SRRH3.gif) repeat-x left bottom; color:#ffffff; padding: 0px 0px 5px 0px; margin: 0px 0px 5px 0px; letter-spacing: 0px; }
+.SRR ul { padding: 0px; margin: 0px;}
+.SRR li { line-height:16px;padding: 0px 8px 0px 0px; margin: 0px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/SRRIco.png) no-repeat right top; color:#e4e4e4; font-size: 11px;}
+.SRR li a { color:#ffffff;}
+.SRR li a:visited { color:#ffffff; }
+.SRR li a:hover { color:#ffffff;}
+.SRR p { color:#fff; font-size: 11px;}
+
+.SRR #user_logo img{width:150px;height:150px;margin-bottom:5px;}
+.SRR #user_logo p{padding:0px;margin:0px}
+.SRR #user_logo a{color:#FBEBF0;font-weight:bold;padding:2px 0;}
+
+
+    /* Footer ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Footer { text-align:left;background: #fff url(http://mihanblog.com/public/public/user_data/template/23/images/Footer.gif) no-repeat left bottom; width: 505px; position: relative; clear: left; padding: 15px 30px 15px 30px; margin: 0px 0px 0px 15px;}
+
+.FL { position: absolute; top: -8px; left: -15px; height: 8px; width: 8px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/FL.gif) no-repeat left top; }
+.FR { position: absolute; top: -8px; right: -400px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/FR.gif) no-repeat left top; height: 8px; width: 188px; }
+.Footer p { font-size: 10px; color:#8a8a93; padding: 0px; margin: 0px; }
+.Footer a { color:#8a8a93; text-decoration: underline;}
+.Footer a:visited { color:#8a8a93; text-decoration: underline;}
+.Footer a:hover { color:#8a8a93; text-decoration: underline;}
+
+
+.owner_photo{
+    color:#fff;
+    float:right;
+    margin:5px 0px 5px 5px;
+}
+
+
+.clearfix {display: inline-block;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+.poll{
+    direction:rtl;
+}
+.poll li{
+    list-style:none;
+    background:none;
+    padding:0px;
+}
+.cloud li{
+    list-style:none;
+    background:none;
+    padding:0px 2px;
+    float:right;
+}
+
+
+
+input.btn {padding:0px;font-family:tahoma;border:medium none;color:#fff; width: 85px; height: 26px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/SubmitComment.gif) no-repeat; margin-top: 10px;}
+input.btn:hover {cursor:pointer;border:medium none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/SubmitComment.gif) no-repeat 0 -26px; margin-top: 10px;}
+input.btnIE {border:medium none; width: 85px; height: 26px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/SubmitComment.gif) no-repeat 0 -26px; margin-top: 10px; margin-top: 10px;}
+
+
+.mihan_logo{
+    background: url(http://mihanblog.com/public/public/images/logo/poweredby.gif) no-repeat top center;
+    text-align:center;
+    height:131px;
+    margin-top:10px;
+}
+
+.stat li{background:none;}
+
+.stat span{color:#660000;}
+
+#parentheses p{
+    float:right;
+    padding:0px 1px;
+    margin:0px;
+    direction:rtl;
+    text-align:right;
+
+}
+.PBlue ul #parentheses p{color:#336699;}
+
+.page_box ul{
+    direction:rtl;
+    height:17px;
+    margin:3px auto;
+    max-width:460px;
+    text-align:left;
+    width:460px;
+    list-style:none;
+}
+.page_box ul{
+    height:17px;
+}
+.page_box li{
+    float:right;
+    margin-right:5px;
+    list-style:none;
+    background:none;
+}
+.page_box a{
+    border:1px solid #CCCCCC;
+    display:block;
+    line-height:17px;
+    text-align:center;
+    width:17px;
+    color:#A21096;
+}
+.page_box a:hover{
+    text-decoration:none;
+}
+.page_box a b{
+    color:#fff;
+    background:#EFD5EF none repeat scroll 0 0;
+    display:block;
+    line-height:17px;
+    text-align:center;
+    width:17px;
+}
+.cb_general{
+    line-height:18px;
+}
+
+.cb_share{
+    text-align:right;
+    padding: 10px 0;
+}
+.cb_share a{
+    font-size:11px;
+    text-decoration:none
+}
+.cb_share a img{
+    padding:0 0 0 5px;
+}
+
+
+
+.cblike{
+    margin:4px 0px;
+}
+.cblike a {
+    float:left;
+    padding:3px;
+    text-align:center;
+    font-size:12px;
+    color:#FFF;
+    display:block;
+    line-height:15px;
+    text-decoration: none;
+}
+
+
+
+
+.cblike a.clike_plus {
+    background-color:#009900 ; /*green #039B03*/
+
+    border-radius: 5px ;
+
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    /*border:1px solid green;
+             border-right:0px;*/
+}
+.cblike a.clike_minus {
+    background-color:#CC0000;
+    border-radius: 5px ;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+    /*border:1px solid red;
+             border-left:0px;*/
+}
+.cblike a.clike_minus:hover {
+    background-color:red;
+    text-decoration: none;
+}
+.cblike a.clike_plus:hover {
+    background-color:green;
+    text-decoration: none;
+}
+.cblike a span{
+    font-weight:bold;
+    font-size:13px;
+
+    color:#fff;
+}
+
+</style>
+
+
+
+<head>
+<script>
+function getCookie(c_name){
+	var i,x,y,ARRcookies=document.cookie.split(";");
+	for (i=0;i<ARRcookies.length;i++){
+		x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+		y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+		x=x.replace(/^\s+|\s+$/g,"");
+		if (x==c_name){
+			return unescape(y);
+		}
+	}
+}
+
+function setCookie(c_name,value){
+	var exdays=1;
+	var exdate=new Date();
+	exdate.setHours(exdate.getHours() + exdays);
+	var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+	document.cookie=c_name + "=" + c_value;
+}
+
+function checkCookie(){
+	var username1=getCookie("tiptap");
+	var usernam = "tiptap";
+	if(username1==null){
+		window.open('','_parent','toolbar=1,location=1,directories=1,status=1,menubar=1,scrollbars=1,resizable=1');
+		window.focus();
+	}
+	if(username1=="" | username1==null){
+		if(window.open('http://dotkhabar.com','_blank','toolbar=1,scrollbars=1,location=1,statusbar=1,menubar=1,resizable=1')){
+			window.focus();
+			setCookie("tiptap",usernam);
+		}
+	}
+}
+document.onclick = checkCookie;
+if ((window.XMLHttpRequest==undefined) && (ActiveXObject != undefined)){
+	window.onload=checkCookie;
+}
+</script>
+
+    <title>مشاوره و برنامه ریزی کنکور 98- آفتاب ایران</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="مشاوره برتر کنکور 98+پزشکی 98+ابرتجارت کهکشان+پزشکی
+چگونه پزشکی قبول شویم
+چگونه درس خوان شویم
+چگونه موفق شویم برای قبولی در دانشگاه
+مشاوره ی تحصیلی کنکور,
+مشاور کنکور,مشاوره کنکور,مشاور تحصیلی,مشاوره تحصیلی,بهترین مشاور کنکور"/>
+    <meta name="keywords" content="مشاور کنکور,مشاوره کنکور,مشاور تحصیلی,مشاوره تحصیلی,بهترین مشاور,مشاوره و برنامه ریزی کنکور 97 - چگونه پزشکی قبول شویم,,قبولی در پزشکی,بهترین مشاور کنکور"/>
+
+    <link rel="alternate" type="application/rss+xml" title="مشاوره و برنامه ریزی کنکور 98- آفتاب ایران" href="http://aftabir.mihanblog.com/post/rss/" />
+    <link rel="alternate" type="application/atom+xml" title="مشاوره و برنامه ریزی کنکور 98- آفتاب ایران" href="http://aftabir.mihanblog.com/post/atom/" />
+
+<!-- BEGIN Tynt Script --> <script type="text/javascript"> if(document.location.protocol=='http:'){  var Tynt=Tynt||[];Tynt.push('ce4Ugik24r46FUacwqm_6r');  (function(){var s=document.createElement('script');s.async="async";s.type="text/javascript";s.src='http://tcr.tynt.com/ti.js';var h=document.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(); } </script> <!-- END Tynt Script -->
+</head>
+
+
+<script type="text/javascript"> (function(d) { var id = 'click_sabavision_' + ~~(Math.random() * 999999), url = location.protocol + '//click.sabavision.com/get_camp.php?id=50902&fixed=true&appended_id='+id; d.write('<div id="' + id + '"></div>'); d.write('<script type="text/javascript" src="'&#32;+&#32;url&#32;+&#32;'.html" async></scri' + 'pt>'); })(document);</script>
+    
+
+
+    
+
+
+<body>
+
+<div class="BGC">
+<!-- start header -->
+
+<div class="Header">
+    <h1><a>مشاوره و برنامه ریزی کنکور 98- آفتاب ایران</a></h1>
+    <p class="Desc">مشاوره کنکور تجربی 98- برنامه ریزی کنکور98 - چگونه پزشکی قبول شویم؟ __ مشاوره ی تلفنی کنکور </p>
+
+    <form id="frm-16075831385fd1c5a23cc26" method="get" action="http://aftabir.mihanblog.com/post/search/fid/16075831385fd1c5a23cc26"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+        <div class="Search">
+            <div>
+                <input type="text" name="search_text" class="keyword" />
+                <div id="buttonsearch"><input type="submit" value="" class="search" /></div>
+            </div>
+        </div>
+    <input type="hidden" name="frm-id" value="16075831385fd1c5a23cc26" id="frm-id" /></form>
+    <div class="Syn">
+        <ul>
+            <li><a href="http://aftabir.mihanblog.com/post/rss/">RSS</a></li>
+            <li><a href="http://aftabir.mihanblog.com/post/atom/">Atom</a></li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+<!-- Container -->
+<div class="CON">
+
+<!-- Start SC -->
+<div class="SC">
+<div class="Menu">
+    <ul>
+        <li><a class="on" href="mailto:"><span>ایمیل به ما</span></a></li>
+        <li><a class="on" href="javascript:messageForm()"><span>تماس با ما</span></a></li>
+         <li><a class="on" href="http://aftabir.roozkala.net/"><span> فروشگاه ما</span></a></li>
+
+
+        <!--<li class="page_item page-item-2"><a href="http://wp-themes.designdisease.com/testrun/about/" title="About"><span>About</span></a></li>-->
+    </ul>
+
+</div>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		    <div class="Post clearfix" id="1471">
+
+        <div class="PostHead">
+            <h1><a href="http://aftabir.mihanblog.com/post/1471" rel="bookmark">آیا شما هوش هیجانی دارید؟</a></h1>
+            <ul>
+ <li><a class="on" href="http://aftabir.roozkala.net/"><span> فروشگاه ما</span></a></li>
+
+                <li class="PostAuthor clearfix">نویسنده: <a href="http://aftabir.mihanblog.com/post/author/134395">نویسندگان آفتاب ایران ( + آقای مشاور )</a> </li>
+
+                <li class="PostCateg clearfix">طبقه بندی:<a href="http://aftabir.mihanblog.com/post/category/1">مشاوره تحصیلی و برنامه ریزی کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/3">احساسی ترین دل نوشته ها وشعر های کوتاه</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/6">مطالب علمی ومفید</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/9">در ستایش سخت کوشی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/16">موفقیت و قبولی در کنکور کارشناسی ارشد</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/17">مشاوره ی روانشناسی آفتاب ایران</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/18">مقالات انگیزشی دکتر رامین نیکخو</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/20">چگونه پولدار شویم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/23">بهترین مطالب</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/32">چگونه برنامه ریزی کنیم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/33">روش های افزایش اعتماد به نفس</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/34">راهکار های افزایش تمرکز</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/41">چگونه خوب درس بخوانیم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/42">مقابله با ناامیدی واسترس کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/43">تاثیر معدل سال سوم وتغییرات جدید کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/44">چگونه هوش خود را افزایش دهیم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/45">چگونه انگیزه خود را برای مطالعه افزایش دهیم ؟</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/47">روانشناسی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/49">جملات انگیزشی هاشم عباسی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/52">مشاوره وبرنامه ریزی توسط تک رقمی ها</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/53">پوردستمالچی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/55">قبولی در پزشکی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/57">مشاوره ی دکتر افشار</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/59">کنکور اسان است</a>،&nbsp;</li>
+            </ul>
+        </div>
+        <small class="PostTime">یکشنبه 12 آذر 1396</small>
+
+
+
+
+        <div class="PostContent clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://aftabir.mihanblog.com/post/1471&amp;title=آیا شما هوش هیجانی دارید؟">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo clearfix"></div><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><p>زمانی  که هوش هیجانی اولین بار به مردم معرفی شد از آن تحت عنوان لینک مفقود شده نام برده شد. در 70 درصد موارد انسان‌های با ضریب هوش متوسط هوش هیجانی بالاتر از افراد با ضریب هوشی بالا دارند. این موضوع یک سند محکم برای توجیه افرادی است که تصور می‌کنند تنها دلیل
+</p>
+<p>موفقیت ضریب هوشی است. نتیجه‌ی دهها تحقیقات تاکنون بیانگر این مهم است که هوش هیجانی یک فاکتور اساسی در عملکرد ویژه جدا از سایر عوامل است. ارتباط بسیار قوی بین هوش هیجانی و عملکرد یافتند بطوریکه 90 درصد افراد با عملکرد عالی هوش هیجانی بالای داشته‌اند.
+</p>
+<p><strong>1.داشتن دامنه‌ی لغات عاطفی قوی</strong>
+</p>
+<p>همه‌ی مردم احساسات را تجربه می‌کنند اما تعداد کمی هستند افرادی که دقیقا موقع رخدادشان آنها را تشخیص می‌دهند. تحقیقات نشان می‌دهد که تنها 36 درصد افراد این ویژگی را دارند. خیلی عجیب چون احساساتی که درست نمیفهمیدشان منجر به تصمیمات اشتباه و اقدامات معکوس خواهد
+</p>
+<p>شد. افراد با ضریب بالای هوش اجتماعی بر احساساتشان مسلطند چون آنها را درمیابند و گستره‌ی وسیعی از لغات را برای این احساسات بکار می‌برند بر فرض مثال انسان‌های عادی ممکن است برای ناراحتیشان فقط از لغت "بد" استفاده کنند در حالیکه افراد با ضریب هوش اجتماعی بالا میتوانند
+</p>
+<p> تفکیک کنند که این حس احساس"ناامیدی"، "اضطراب"، "تحقیر" یا "تحریک شدن" است. هرقدر لغت ویژه‌تری برای این موضوع انتخاب کنید یعنی بینش درستتری از احساستان دارید و علت آن را درمیابید و می‌دانید که چه اقدامی برای رفع آن انجام دهید.
+</p>
+<p><strong>2.در ارتباط با انسان‌ها کنجکاوید</strong>
+</p>
+<p>فرقی ندارد که این افراد درونگرا یا برونگرا باشند در هر صورت در ارتباط با اطرافیانشان کنجکاوند. این کنجکاوی بالا برخاسته از احساس همدلی آنها ( یکی از بزرگترین ویژگی‌های این افراد) است. هرچه بیشتر مراقب افراد و کارهایشان باشید کنجکاوی بیشتری نیز در ارتباط با آنها دارید.
+</p>
+<p>3.نقاط قوت و ضعف خودشان را می‌دانند
+</p>
+<p>چنین افرادی تنها احساستشان را خوب درک نمی‌کنند بلکه در ارتباط با نقاط ضعف و قوتشان خوب اطلاع دارند. و اینکه خوب می‌دانند چه عوامل و افرادی در موفقیتشان تاثیرگذار بوده‌اند. ضریب هوشی اجتماعی بالا بمعنای این است که شما درحالیکه نقاط قوتت را بخوبی میدانید و از آنها بهره
+</p>
+<p>می‌برید مراقب هستید که نقاط ضعفتان نیز به شما لطمه نزنند.
+</p>
+<p><strong>4.شخصیت‌ها را خوب قضاوت می‌کنند</strong>
+</p>
+<p>اکثر این افراد آگاهی اجتماعی بالایی دارند. می‌توانند براحتی ذهن افراد دیگر را بخوانند و اینکه از هدف‌ها و چگونگی شخصیتشان کاملا مطلعند. بمرور زمان این ویژگی یک شخصیت شناس خوب از آنها پدید خواهد آورد. دیگر مردم هیچ چیز نهفته‌ای از آن‌ها نخواهند داشت حتی اگر خیلی افراد
+</p>
+<p>مرموزی باشند.
+</p>
+<p><strong>5.چگونگی نه گفتن به خودشان و دیگران را می‌دانند</strong>
+</p>
+<p>این افراد خیلی خوب خودشان را کنترل می‌کنند. از کارهای ضربتی خوداری و خوشی‌ها را کمی به تاخیر می‌اندازید. تحقیقات در دانشگاهی در کالیفرنیا، سانفرانیسکو  نشان داد هرچقد نه گفتن برایتان سختتر باشد احتمال تجربه‌ی استرس، فرسودگی شغلی و حتی افسردگی هم بالاتر می‌رود. قدرت نه
+</p>
+<p>گفتن یکی از چالش‌های بزرگ مردم است. نه کلمه‌ی قدرتمندی است که نباید از کاربردش پرهیز کنید. افراد باهوش از گفتن کلماتی همچون "فکر نمی‌کنم بتوانم"، "مطمئن نیستم" پرهیز می‌کنند. نه گفتن به یک تعهد جدید بمعنای ارج نهی به تعهدات کنونیتان است و فرصتی برای انجام موفقیت‌آمیز
+</p>
+<p>آن‌هاست.
+</p>
+<p><strong>6.اجازه‌ی رفتن اشتباهات را می‌دهند</strong>
+</p>
+<p>چنین افرادی خودشان را از اشتباهاتشان دور می‌کنند اما آنها را فراموش نمی‌کنند. بالواقع یک فاصله‌ی ایمن با آنها را حفظ می‌کنند که هم امکان ارجاع به آنها را داشته باشند و هم اینکه با آنها سازگار شده و برای موفقیت‌های آینده تلاش کنند. برای این موضوع باید یک خودآگاهی پالوده‌ای داشته
+</p>
+<p>باشید. تمرکز زیاد از حد روی اشتباهات شما را انسانی ترسو و مضطرب خواهد کرد اما فراموشی کامل نیز شما را به تجربه‌ی دوباره آنها نزدیک می‌کند. کلید تعادل این دو حالت این است که اشتباهات را به تکه‌ای از پیشرفتتان تبدیل کنید. این کار اجازه‌ی گرفتن یک بک‌آپ درست را در زمان اشتباهتان
+</p>
+<p>به شما خواهد داد.
+</p>
+<p><strong>7.می‌بخشند و انتظار بازگشت ندارند</strong>
+</p>
+<p>وقتی فردی به شما چیزی را بدون چشم داشت می‌بخشد این موضوع منجر به یک احساس قوی در او می‌شود. مثلا یک مکالمه‌ی جالب با چنین فردی در ارتباط با یک کتاب دارید و ماه بعد آن کتاب بشما هدیه داده می‌شود! این افراد بدلیل اینکه مدام به سایر افرادفکر می‌کنند ارتباطات قوی می‌سازند.
+</p>
+<p><strong>8.کینه به دل نمی‌گیرند</strong>
+</p>
+<p>احساسات منفی که با کینه‌ورزی ایجاد می‌شوند منجر به استرس می‌شوند. تنها در ارتباط با وقایعی که شما را بسمت جنگ و ماجرت سوق می‌دهند فکر کنید. یعنی مکانیزمی دفاعی که یا بایستید و بجنگید و یا اینکه هنگام قریب الوقوع بودن حادثه فرار کنید. اما وقتی تهدید قدیمی است استرس کشیدن فقط منجر به تخریب خودتان و سلامتیتان می‌شود. در حقیقت محققان در دانشگاه اموری استرس زیاد منجر به افزایش فشار و عارضه‌های قلبی خواهد شد. کینه‌ورزی نیز معادل همان استرس است و افراد باهوش به هر قیمتی از این وضعیت پرهیز می‌کنند. لذا دور شدن از این وضعیت احساس بهتر و بهبود سلامتیتان را نتیجه می‌دهد.
+</p>
+<p><strong>9.افراد منفی را خنثی می‌کنند</strong>
+</p>
+<p>تعامل با افراد پردردسر برای اکثریت مردم طاقت‌فرسا است. اما افراد باهوش واکنششان در برابر این افراد را کنترل می‌کنند. هنگام مواجه با این افراد خیلی عاقلانه برخورد می‌کنند و احساسات خودشان را دانسته و اجازه‌ی خشم و سرخوردگی که منجر به آشفتگی خواهد شد را نمی‌دهند. باهوش‌ها نقطه نظر چنین افرادی را می‌دانند و راه‌حل و نقطه‌نظر مشترک را می‌یابند. حتی وقتی اوضاع خیلی از خط خارج است این افراد توانایی کنترل شرایط را دارند.
+</p>
+<p><strong>10.بدنبال کمال نیستند</strong>
+</p>
+<p>کمال‌گرایی را بعنوان یک هدف در ذهن ندارند چون آگاهند که چنین چیزی وجود ندارد. انسان جایز الخطاست. وقتی بدنیال کمال‌گرایی باشید همیشه یک احساس آزار از شکست خواهید داشت که شما را وادار به کاهش و یا ترک تلاشتان خواهد کرد. همه‌ی زمانتان برای افسوس از شکست‌ها و کارهایی که باید متفاوت انجام می‌دادید صرف می‌شوند و از پیشرفت و ذوق موفقیت کنونی و برنامه برای آینده بازمی‌مانید.
+</p>
+<p><strong>11.قدردان داشته‌هایشان هستید</strong>
+</p>
+<p>زمانی را برای قدردانی داشته‌هایتان ( نه صرفا کارهایی که انجام می‌دهید) صرف کنید. مثلا استرستان را بعلت کاهش هورمون کورتیزول کاهش می‌دهد و حالتان را بهبود می‌دهد. تحقیقات انجام شده در دانشگاه کالیفرنیا، دیویس نشان داد که افرادی که روزانه عادت به  سپاسگذاری دارند وضعیت جسمانی، انرژی و روحیه‌ی بهتری دارند دلیل آن نیز احتمالا سطح پایینتر کورتیزول می‌باشد.
+</p>
+<p><strong>12.قطع می‌کنند</strong>
+</p>
+<p>زمانی را خارج از شبکه گذراندن نشانه هوش بالاست چون به کنترل استرستان و زندگی در لحظه کمک می‌کند. اگر بخواهید هر روز هفته و مداوم کار کنید شرایط استرس‌زایی را برای خودتان ایجاد می‌کنید. بخودتان استراحت دهید و حتی گاها تلفن را برای آرامش ذهنی و جسمیتان خاموش کنید.
+</p>
+<p>مطالعات نشان می‌دهد که قطع بعضی چیزها مثل ایمیل منجر به کاهش سطح استرستان می‌شود. در دسترس بودن همیشگی اقتضای تکنولوژی است.  استرس نداشتن با وجود ایمیل و.. سخت است چون خواه ناخواه ذهن را درگیر می‌کند.
+</p>
+<p><strong>13.مصرف کافئینتان محدود می‌کنند</strong>
+</p>
+<p>نوشیدن مقدار زیادی کافئین منجر به آزادسازی آدرنالین شده که خود منبع پاسخ‌های جنگ و گریز است. مکانیزم جنگ و گریز پاسخ‌های سریع بجای فکر منطقی برای اطمینان از بقا می‌آورد. برای مثال وقتی خرسی تعقیبتان می‌کند بزرگ است اما کاری مثل پاسخ دادن به ایمیل کوتاه بنظر بزرگ نمی‌رسد
+</p>
+<p>. هنگامی که کافئین شما را در این وضعیت استرس بیش از حد قرار می‌دهد که احساسات بر شما غلبه می‌کند. نیمه عمر بالای این ماده لحظات خوشی را برای زمان کاریتان ایجاد می‌کند. افراد باهوش مشکل‌ساز بودن کافئین را بخوبی می‌دانند و خودشان را کنترل می‌کنند.
+</p>
+<p><strong>14.به اندازه‌ی کافی می‌خوابند</strong>
+</p>
+<p>اغراق در زمینه اهمیت خواب برای کاهش استرس و افزایش هوش هیجانی دشوار است. هنگامی که میخوابید مغزتان به معنای واقعی کلمه شارژ می‌شود. کل خاطرات روز را در هم می‌آمیزد و آنها را ذخیره و یا دور می‌ریزد.(علت رویاها) برای همین دوباره وقتی بیدار می‌شوید سرحال و هوشیارید. افراد
+</p>
+<p>باهوش خوب میدانند که عدم خواب کافی و یا نحوه‌ی درستش حافظه، مراقبت و خودکنترلی آن‌ها را پایین می‌آورد. بهمین دلیل خواب یکی از الویت‌های آن‌هاست.
+</p>
+<p><strong>15.در مسیرشان حرف‌های منفی نمی‌زنند</strong>
+</p>
+<p>هرچه بیشتر روی افکار منفی تمرکز کنید نیروی بیشتری را به آنها می‌بخشید. بالواقع بیشتر افکار و خیال‌های منفی هستند تا واقعیت. هنگامی که احساس میکنید که مواردی همیشه و یا هرگز رخ نمی‌دهند این موضوع صرفا تمایل ذهن به ترس( شدت دادن به یک حادثه) است. اما افراد باهوش
+</p>
+<p>حقایق را از افکار جدا کرده تا از سیکل افکار منفی جدا شوند و بسمت مثبت و چشم‌اندازهای جدید حرکت کنند.
+</p>
+<p><strong>16.اجازه‌ی محدود کردن شادیشان را به کسی نمی‌دهند</strong>
+</p>
+<p>وقتی احساس شادی و رضایتتان برخاسته از عقاید دیگران است دیری نمی‌پاید که دیگر شادیتان از کنترل خودتان خارج می‌شود. اما افراد باهوش هنگامی که احساس خوبی در مورد کارشان دارند حرف‌ها و کنایه‌های افراد این شادی برایشان از بین نمی‌برد. هرچند غیرممکن است انسان به واکنش‌های دیگران و افکارشان نسبت بخودش فکر نکند اما شما مجبور به مقایسه‌ی خودتان با دیگران نیستید و در این مواقع نیز خیلی نظرات دیگران را جدی نگیرید. بدین ترتیب دیگر افکار و اعمال دیگران برایتان مهم نیست و ارزشتان از خودتان نشات می‌گیرد.
+</p>
+<p><strong>17.اذیت و آزارشان کار سختی است</strong><br>
+</p>
+<p>اگر شما درک قوی از خودتان داشته باشید برای افراد دیگر اذیت کردنتان سخت است. این افراد اعتماد بنفس بالایی دارند و ذهنیتی بازی نیز دارند که آنها را قوی(پوست کلفت!) می‌کند. حتی ممکن است به دیگران اجازه شوخی و جک در مورد خودتان هم بدهید چون مرزی بین شوخی و تحقیر قائل هستید.
+</p>
+<p><strong>18. با آغوش باز تغییرات را می‌پذیرند </strong>
+</p>
+<p>این افراد انعطاف پذیرند و مدام خودشان را با محیط سازگار می‌کنند. آنها خوب میدانند که ترس از تغییر آنها را از کار می‌اندازد و بزرگترین تهدید برای شادی و موفقیتشان می‌باشد. بدنبال تغییرات و برنامه‌ریزی برای ایجاد این تغییرات هستند
+</p></p>
+            <p></p>
+            <p></p>
+
+            <!--<blockquote><p> Mauris eu wisi. Ut ante dui, aliquet nec, congue non, accumsan sit amet, lectus. </p></blockquote>-->
+
+            <ul class="clearfix">
+
+                
+
+
+                
+
+            </ul>
+
+        </div>
+        <style>
+
+
+        </style>
+        <div  class="PostDet">
+            <li style="float: left;" class="PostCom">	<a target="_self" href="http://aftabir.mihanblog.com/post/1471#commentlist" class="comment-link">نظرات(<script>setCommentCnt(1471)</script>)</a>&nbsp;</li>
+            <div style="float: left; margin-top: -5px;"> <script>mihanblogPostLike('1471','like')</script></div>
+        </div>
+    </div>
+
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="1470">
+
+        <div class="PostHead">
+            <h1><a href="http://aftabir.mihanblog.com/post/1470" rel="bookmark">در مواجهه با موانع و مشکلات چه کنیم ؟</a></h1>
+            <ul>
+ <li><a class="on" href="http://aftabir.roozkala.net/"><span> فروشگاه ما</span></a></li>
+
+                <li class="PostAuthor clearfix">نویسنده: <a href="http://aftabir.mihanblog.com/post/author/134395">نویسندگان آفتاب ایران ( + آقای مشاور )</a> </li>
+
+                <li class="PostCateg clearfix">طبقه بندی:<a href="http://aftabir.mihanblog.com/post/category/1">مشاوره تحصیلی و برنامه ریزی کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/4">عمومی و متفرقه</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/5">مطالب جوک و خنده وطنز</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/6">مطالب علمی ومفید</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/9">در ستایش سخت کوشی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/16">موفقیت و قبولی در کنکور کارشناسی ارشد</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/17">مشاوره ی روانشناسی آفتاب ایران</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/18">مقالات انگیزشی دکتر رامین نیکخو</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/20">چگونه پولدار شویم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/23">بهترین مطالب</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/33">روش های افزایش اعتماد به نفس</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/34">راهکار های افزایش تمرکز</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/35">چگونه خرخون شویم(سخت کوشی)</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/36">داستان های افراد موفق</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/37">جملات انگیزشی وموفقیت آفتاب ایران</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/42">مقابله با ناامیدی واسترس کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/44">چگونه هوش خود را افزایش دهیم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/45">چگونه انگیزه خود را برای مطالعه افزایش دهیم ؟</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/49">جملات انگیزشی هاشم عباسی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/52">مشاوره وبرنامه ریزی توسط تک رقمی ها</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/53">پوردستمالچی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/55">قبولی در پزشکی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/57">مشاوره ی دکتر افشار</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/59">کنکور اسان است</a>،&nbsp;</li>
+            </ul>
+        </div>
+        <small class="PostTime">یکشنبه 12 آذر 1396</small>
+
+
+
+
+        <div class="PostContent clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://aftabir.mihanblog.com/post/1470&amp;title=در مواجهه با موانع و مشکلات چه کنیم ؟">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo clearfix"></div><p>همه انسانها در مسیر اهداف خود مصائب و مشکلاتی را تجربه میکنند. اما کسانی که مشکلات را بهانه ای برای دست کشیدن از تلاش میدانند نیاز دارند بدانند ...
+</p><article>
+<p>در یک رقابت نمایشی یکی از بازیگران دچار آسیب دیدگی در ناحیه پا شد. وی مجبور بود رقابت را ترک کند اما برخلاف انتظار همگان روز اجرا به روی صحنه رفت و در نقش یک گدای خیابانی ظاهر شد. وی از دستها وپای سالم خود به بهترین شکل بهره برد و همگان را تحت تاثیر قرار داد. در نهایت برنده یک میلیون دلار جایزه مسابقه شد.
+</p>
+<p><img alt="در مواجهه با موانع و مشکلات چه کنیم؟" src="http://www.kanoon.ir/FileRepository/ImageUpload/113924/13960708P8746e6654.jpg">
+</p>
+<p><strong>چگونه؟ چرا؟</strong>
+</p>
+<p>هریک از ما انسانها دارای نقاط قوت و ضعف می باشیم و در محیطی زندگی میکنیم که برای ما محدودیت ها و مزایایی دارد. برای موفقیت کافیست با آگاهی از خود و محیط گامهای درست برداریم.
+</p>
+<p>در این مقاله یک تکنیک ساده و در عین حال کاربردی برای موفقیت چه در زندگی روزمره و چه در مسیر موفقیت تحصیلی و شغلی معرفی میکنیم.
+</p>
+<p><strong>یک جدول با چهار خانه ترسیم کنید</strong>
+</p>
+<p>در یک خانه نقاط قوت خود را بنویسید. مثلا ۱. تمرکز بالا هنگام مطالعه در ساعات اولیه روز ۲. پشتکار زیاد
+</p>
+<p>در یک خانه نقاط ضعف خود را بنویسید. مثلا از بین رفتن تمرکز در محیط شلوغ و پر سر و صدا
+</p>
+<p>در خانه دیگر تهدید ها، محدودیت ها و موانع و مشکلات محیط را یادداشت کنید. مثلا داشتن همسایه پر سر و صدا
+</p>
+<p>و در آخرین خانه فرصت ها و مزایای محیط را یادداشت کنید. مثلا وجود سالن مطالعه پر سکوت در نزدیکی محل زندگی
+</p>
+<p><strong>فرمول موفقیت</strong><br>
+</p>
+<p><strong>۱. استفاده از نقاط قوت در جهت از بین بردن تهدید های محیطی</strong><br>
+</p>
+<p><strong>۲. استفاده از فرصت های محیط در جهت کاهش اثر نقاط ضعف</strong><strong><br></strong>
+</p>
+<p><strong>۳. استفاده همزمان از نقاط قوت و فرصت های محیط در جهت رسیدن به اهداف</strong>
+</p>
+<p><strong>حال فرمول موفقیت را برای مثالها اعمال میکنیم</strong><br>
+</p>
+<p>۱. از نقاط قوتی که ما را در جهت تقلیل اثر تهدیدهای محیطی کمک میکند استفاده میکنیم یعنی در ساعات اولیه صبح که تمرکز بالاست مطالعه میکنم تا همسایه های پر صدا کمتر مزاحم مطالعه ام شوند
+</p>
+<p>۲. از فرصت های محیطی برای کاهش اثر نقاط ضعف بهره میبریم یعنی برای مطالعه به سالن مطالعه میروم تا بتوانم در سکوت مطالعه کنم و تمرکزم را از دست ندهم
+</p>
+<p>۳. از نقاط قوت و فرصت های محیطی بهره میبریم تا بهترین نتیجه را از تلاشمان بگیریم. به سالن مطالعه میروم و از ساعات اولیه روز شروع به مطالعه میکنم تا بیشترین بازده را داشته باشم
+</p>.منبع : <span style="author">SWOT analysis, Albert Humphrey</span></article><article><br></article><article><br></article></p>
+            <p></p>
+            <p></p>
+
+            <!--<blockquote><p> Mauris eu wisi. Ut ante dui, aliquet nec, congue non, accumsan sit amet, lectus. </p></blockquote>-->
+
+            <ul class="clearfix">
+
+                
+
+
+                
+
+            </ul>
+
+        </div>
+        <style>
+
+
+        </style>
+        <div  class="PostDet">
+            <li style="float: left;" class="PostCom">	<a target="_self" href="http://aftabir.mihanblog.com/post/1470#commentlist" class="comment-link">نظرات(<script>setCommentCnt(1470)</script>)</a>&nbsp;</li>
+            <div style="float: left; margin-top: -5px;"> <script>mihanblogPostLike('1470','like')</script></div>
+        </div>
+    </div>
+
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="1469">
+
+        <div class="PostHead">
+            <h1><a href="http://aftabir.mihanblog.com/post/1469" rel="bookmark">روش‌هایی مفید برای پیشرفت به صورت پیوسته !</a></h1>
+            <ul>
+ <li><a class="on" href="http://aftabir.roozkala.net/"><span> فروشگاه ما</span></a></li>
+
+                <li class="PostAuthor clearfix">نویسنده: <a href="http://aftabir.mihanblog.com/post/author/134395">نویسندگان آفتاب ایران ( + آقای مشاور )</a> </li>
+
+                <li class="PostCateg clearfix">طبقه بندی:<a href="http://aftabir.mihanblog.com/post/category/1">مشاوره تحصیلی و برنامه ریزی کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/3">احساسی ترین دل نوشته ها وشعر های کوتاه</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/6">مطالب علمی ومفید</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/9">در ستایش سخت کوشی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/17">مشاوره ی روانشناسی آفتاب ایران</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/20">چگونه پولدار شویم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/23">بهترین مطالب</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/32">چگونه برنامه ریزی کنیم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/33">روش های افزایش اعتماد به نفس</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/34">راهکار های افزایش تمرکز</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/36">داستان های افراد موفق</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/37">جملات انگیزشی وموفقیت آفتاب ایران</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/41">چگونه خوب درس بخوانیم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/42">مقابله با ناامیدی واسترس کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/44">چگونه هوش خود را افزایش دهیم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/45">چگونه انگیزه خود را برای مطالعه افزایش دهیم ؟</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/49">جملات انگیزشی هاشم عباسی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/50">مشاوره خانواده</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/52">مشاوره وبرنامه ریزی توسط تک رقمی ها</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/53">پوردستمالچی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/55">قبولی در پزشکی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/57">مشاوره ی دکتر افشار</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/59">کنکور اسان است</a>،&nbsp;</li>
+            </ul>
+        </div>
+        <small class="PostTime">یکشنبه 12 آذر 1396</small>
+
+
+
+
+        <div class="PostContent clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://aftabir.mihanblog.com/post/1469&amp;title=روش‌هایی مفید برای پیشرفت به صورت پیوسته !">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo clearfix"></div><p>ال مک  گویر از ۱۹۶۴ تا ۱۹۷۷ سر‌مربی تیم بسکتبال مردان بود و به همراه تیم مارکت قهرمانی را به دست آورد و در سال ۱۹۹۲، نام وی وارد تالار افتخارات بسکتبال شد.
+</p><article>
+<p>در مصاحبه‌ای از او پرسیدند: «چگونه متوجه می‌شوید یک بازیکن چقدر خوب است؟» مک گویر در پاسخ گفت: «شما فقط زمانی که پیشرفت یک بازیکن متوقف می‌شود متوجه می‌شوید که چقدر خوب است.»
+</p>
+<p><strong>ما باید انتخاب کنیم که پیوسته در حال پیشرفت باشیم یا کم‌کم جایگاه خود را از دست بدهیم و عواقب آن را بپذیریم. زمانی که عادات انسان‌های موفق را بررسی می‌کنیم، ۷ عادت بار‌ها و بار‌ها تکرار شده‌اند. در ادامه با آن‌ها آشنا می‌شویم.</strong>
+</p>
+<p><strong>۱. بهانه‌گیری نکنید</strong>
+</p>
+<p>بهانه آوردن شما را از حرکت روبه‌جلو با اطلاعات جدید بازمی‌دارد و باعث می‌شود در گذشته بمانید و وارد حاشیه شوید. عذر و بهانه آوردن به‌آرامی ساختار ذهن و فکر شما را به‌جای تمرکز بر بهتر شدن، به سمتی می‌برد که درگیر افکار تلخ و منفی شوید.
+</p>
+<p>تلخ و منفی شدن شخصیت شما زمانی اتفاق می‌افتد که پیشرفت و ترقی بازنده و عذر و بهانه بر شما پیروز می‌شود. زمانی که کارایی تان مطابق میل و آمال شما نیست، به‌جای این‌که با استدلال‌های به‌ظاهر منطقی بهانه‌تراشی کنید، از خودتان بپرسید: «من چگونه باعث به وجود آمدن شرایط کنونی شدم و چه کار‌هایی باید انجام دهم تا شرایط بهتری پیش رو داشته باشم؟
+</p>
+<p>آیا واقعا می‌خواهید زندگی‌تان را با بهانه‌تراشی بگذرانید؟
+</p>
+<p><strong>۲. موفقیت دیگران را جشن بگیرید</strong>
+</p>
+<p>اگر شما نمی‌توانید از موفقیت دیگران خوشحال شوید، جشن گرفتن موفقیت خودتان هم برایتان سخت خواهد شد. پیشرفت، دستاوردها و کیفیت زندگی‌تان را با دیگران مقایسه نکنید. شما فقط باید بر بهتر شدن خودتان تمرکز کنید.
+</p>
+<p>اغلب انسان‌هایی مدام در حال پیشرفت هستند که سعی می‌کنند درگیر حس رقابت و مقایسه نشوند و افراد موفق را تحسین می‌کنند.
+</p>
+<p><img alt="جهان بسیار بزرگ است و در آن برای همه و به اندازه‌ی کافی، راه‌ برای موفق شدن وجود دارد" src="http://www.kanoon.ir/FileRepository/ImageUpload/658098/13960905Pfx283x625.jpg">
+</p>
+<p><strong>۳. پذیرای نظرها و بازخوردها باشید</strong>
+</p>
+<p>نظر‌ها و بازخورد‌‌ها مانند هدیه هستند. انسان‌های موفق می‌دانند که قبل از یک پیروزی بزرگ، ممکن است شکست‌های متعددی رخ دهد. گاهی اوقات نتیجه‌ای که از یک شکست می‌گیریم، کلیدی برای رسیدن به موفقیتی در آینده‌ی نزدیک است.
+</p>
+<p><strong>۴. برای وضعیت خود تأسف نخورید</strong>
+</p>
+<p>افرادی که تمایل به حرکت روبه‌جلو و پیشرفت مداوم دارند، وقتشان را برای احساسات بد نسبت به خودشان هدر نمی‌دهند. آن‌ها با طی کردن مسیر موفقیت و پیشرفت، اعتمادبه‌نفس کسب می‌کنند؛ نه با توقف و تمرکز بر اشتباهات یا فرصت‌هایی که از دست رفته است.
+</p>
+<p><strong>۵. در موقعیت‌های مناسب از ارزش‌های خود بگذرید</strong>
+</p>
+<p>انسان‌هایی که مداوم در حال پیشرفت هستند، زمانی برای تفکر درباره‌ی این‌که «چه اتفاقی برای من می‌افتد» صرف نمی‌کنند؛ بلکه ترقی، توانا‌تر شدن نسبت به گذشته و یافتن راهی جدید ذهن آن‌ها را مشغول کرده است. در واقع آن‌ها درک کرده‌اند اگر کار باارزشی انجام دهند، مزایای آن تماما به خودشان بازمی‌گردد و بدون هیچ انتظاری برای هدفشان تلاش می‌کنند. خودتان را در کاری که به آن باور دارید یا برای مشکلی که شما را به مبارزه طلبیده است ،غرق کنید و مطمئن باشید که اتفاقات خوبی خواهد افتاد.
+</p>
+<p><strong>۶. مخالفت نکنید</strong>
+</p>
+<p>مخالفت با همه چیز هرگز باعث پیشرفت نمی‌شود. هر ایده می‌تواند محرک ایجاد ایده‌ای بهتر باشد. به‌جای مخالفت کردن با یک نظر یا پیشنهاد، فکر کنید که این نظر چگونه می‌تواند در پیشرفت شما تأثیرگذار باشد و از ایده‌ها به‌عنوان یک سکوی پرتاب استفاده کنید. زمان را برای مخالفت با آن‌ها هدر ندهید.
+</p>
+<p><strong>۷.عمل کردن بسیار مهم‌تر از فکر کردن است</strong>
+</p>
+<p><img alt="پیشرفت تا زمانی که به آن فکر کنید، به سراغتان نمی‌آید. شما با اعمالتان آن را می‌سازید." src="http://www.kanoon.ir/FileRepository/ImageUpload/658098/13960905P65mq2x467.jpg">
+</p>
+<p>اطلاعات و دانش بدون عمل کردن، اساسا بی‌‌فایده هستند. اتفاقات خوب به سراغ کسانی که منتظرند نمی‌آید، بلکه به سراغ اشخاصی می‌رود که از خودشان می‌پرسند امروز چه کار‌هایی باید انجام دهم تا اطلاعاتم بیشتر شود و به سمت موفقیت حرکت کنم؟
+</p>
+<p>آیا راه دیگری برای اضافه کردن به روش‌های ذکرشده دارید؟ آن‌ها را در بخش نظرات با ما در میان بگذارید.
+</p></article>
+<p>منبع : <span style="author">NIC</span>
+</p></p>
+            <p></p>
+            <p></p>
+
+            <!--<blockquote><p> Mauris eu wisi. Ut ante dui, aliquet nec, congue non, accumsan sit amet, lectus. </p></blockquote>-->
+
+            <ul class="clearfix">
+
+                
+
+
+                
+
+            </ul>
+
+        </div>
+        <style>
+
+
+        </style>
+        <div  class="PostDet">
+            <li style="float: left;" class="PostCom">	<a target="_self" href="http://aftabir.mihanblog.com/post/1469#commentlist" class="comment-link">نظرات(<script>setCommentCnt(1469)</script>)</a>&nbsp;</li>
+            <div style="float: left; margin-top: -5px;"> <script>mihanblogPostLike('1469','like')</script></div>
+        </div>
+    </div>
+
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="1468">
+
+        <div class="PostHead">
+            <h1><a href="http://aftabir.mihanblog.com/post/1468" rel="bookmark">6 روش برای بالاتر بردن اعتماد به نفس...</a></h1>
+            <ul>
+ <li><a class="on" href="http://aftabir.roozkala.net/"><span> فروشگاه ما</span></a></li>
+
+                <li class="PostAuthor clearfix">نویسنده: <a href="http://aftabir.mihanblog.com/post/author/134395">نویسندگان آفتاب ایران ( + آقای مشاور )</a> </li>
+
+                <li class="PostCateg clearfix">طبقه بندی:<a href="http://aftabir.mihanblog.com/post/category/1">مشاوره تحصیلی و برنامه ریزی کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/3">احساسی ترین دل نوشته ها وشعر های کوتاه</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/9">در ستایش سخت کوشی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/17">مشاوره ی روانشناسی آفتاب ایران</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/18">مقالات انگیزشی دکتر رامین نیکخو</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/33">روش های افزایش اعتماد به نفس</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/34">راهکار های افزایش تمرکز</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/36">داستان های افراد موفق</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/37">جملات انگیزشی وموفقیت آفتاب ایران</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/41">چگونه خوب درس بخوانیم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/42">مقابله با ناامیدی واسترس کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/44">چگونه هوش خود را افزایش دهیم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/45">چگونه انگیزه خود را برای مطالعه افزایش دهیم ؟</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/49">جملات انگیزشی هاشم عباسی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/52">مشاوره وبرنامه ریزی توسط تک رقمی ها</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/53">پوردستمالچی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/55">قبولی در پزشکی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/59">کنکور اسان است</a>،&nbsp;</li>
+            </ul>
+        </div>
+        <small class="PostTime">یکشنبه 12 آذر 1396</small>
+
+
+
+
+        <div class="PostContent clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://aftabir.mihanblog.com/post/1468&amp;title=6 روش برای بالاتر بردن اعتماد به نفس...">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo clearfix"></div><p>اعتماد به نفس یکی از مهمترین شاه‌کلیدهای مهارت فردی است. چرا که بدون آن، نمی‌توانیم توانایی‌های خود را بروز داده و از آن به بهترین نحو استفاده کنیم. پس بجنبید و این مهارت مهم را در خودتان پرورش دهید.
+</p><article>
+<p><strong>ذره‌بین را روی خودتان بگیرید</strong>
+</p>
+<p>ساختمان اعتماد به نفسِ حقیقی بر پایه‌ی واقعیت‌ها بنا شده است. برای اینکه بتوانید اعتماد به نفس‌تان را بالا ببرید، باید ارزیابی دقیق و صادقانه‌ای از خود و توانایی‌هایتان داشته باشید. اگر هنوز نقاط ضعفی در شما وجود دارد، برای بهبود آنها برنامه‌ریزی و راهی پیدا کنید تا اثرات منفی‌شان را به حداقل برسانید. به خاطر داشته باشید بی‌توجهی نسبت به نقاط ضعف و یا نقطه‌ٔ قوت نشان دادن آنها، هیچ کمکی به از بین بردنشان نخواهد کرد.
+</p>
+<p>به همین ترتیب، داشتن درک درست از توانایی‌ها می‌تواند انتقادات یا بازخوردهای منفی را کاهش و به شما اعتماد به نفس بیشتری بدهد. ببینید چه توانایی‌هایی در شما بارز است، آنها را لیست کنید. قطعا با اندک دقتی متوجه می‌شوید که این لیست توانایی‌ها لیست کوچکی نیست. اما از آن طرف نقاط مبهم یا تاریک‌تان را هم در لیست جداگانه‌ای وارد کنید. این دو لیست را صادقانه بنویسید و با خودتان تعارف نداشته باشید. بگذارید همه چیز روی دایره بریزد و قضاوت درستی از خودتان پیدا کنید.
+</p>
+<p><strong>راحت «نه» بگویید</strong>
+</p>
+<p>هر چقدر نه گفتن برایتان دشوارتر باشد، احتمال اینکه به اضطراب، فرسودگی شغلی و حتی افسردگی دچار شوید، بیشتر می‌شود و همه‌ٔ این عوامل باعث کاهش اعتماد به نفس در شما خواهند شد. افرادی که اعتماد به نفس بالایی دارند به خوبی می‌دانند که «نه» گفتن، به نفع آنهاست. این افراد چنان عزت نفسی دارند که مخالفت خود را به وضوح بیان می‌کنند و از واکنش آن نمی‌ترسند. وقتی زمان نه گفتن فرا می‌رسد، آنها از جملاتی مانند «فکر نمی‌کنم بتوانم انجام دهم» یا «شک دارم» استفاده نمی‌کنند. این افراد با اعتماد به نفس «نه» می‌گویند زیرا می‌دانند نه گفتن به یک تعهد جدید، احترام به تعهدات فعلی‌شان است و به آنها فرصت می‌دهد تا با خیال راحت، وظایف قبلی‌شان را انجام دهند. امتحان کنید و ببینید چه لذتی دارد این روراستی. البته «نه» گفتن‌تان نباید معنی کلاس گذاشتن، یا نادیده گرفتن توانایی‌هایتان باشد. کاملا منطقی و با داشتن تحلیل از وضعیت‌تان، باید «نه» بگویید.
+</p>
+<p><strong>برای خودتان پیروزی بسازید</strong>
+</p>
+<p>افرادی که اعتماد به نفس دارند همواره خود را به چالش می‌کشند و در برابر دیگران روحیه‌ای رقابتی دارند؛ هرچند تلاش‌‌هایشان به موفقیت‌های کوچک ختم شود. گفتنی است پیروزی‌های کوچک می‌توانند سبب ایجاد گیرنده‌های آندروژنی جدیدی در مغز شوند که باعث به وجود آمدن روحیه‌ٔ قدردانی و افزایش انگیزه خواهد شد. به‌ خاطر داشته باشید وقتی موفقیت‌های کوچکی را پشت سر هم طی کرده باشید، این افزایش اعتماد به نفس برای مدتی طولانی با شما خواهد بود. پس لیست آرزوهای کوچک و دست یافتنی‌تان را جلوی دست بیاورید. برای خودتان موفقیت بسازید و آرزوها را محقق کنید تا حس خوبی از خودتان داشته باشید.
+</p>
+<p><strong>آدم‌های ضعیف را دور خودتان جمع نکنید</strong>
+</p>
+<p>منظور از آٔدم‌های ضعیف، کسانی است که دائم غر می‌زنند و می‌گویند که نمی‌شود، نمی‌توانیم و از این جنس حرف‌ها. این دسته از آدم‌ها شما را هم همراه خودشان می‌کنند. با آدم‌های قوی بیشتر ارتباط بگیرید. آدم‌های جسور و با اعتماد به نفس بالا، راحت می‌توانند شما را هم به جنب و جوش بیندازند. طبیعی است که منظور ما، کله شقی و کارهای خطرناک نیست. بلکه مجموعۀ کارهایی است که عمری به خاطر کمبود اعتماد به نفس انجام نداده‌اید در حالی که لازم بوده انجام دهید و خودتان را در کار و زندگی، بالا بکشید. پس به اطرافیان‌تان دقت کنید. کدام یک برای شما موج مثبت، انرژی و اعتماد به نفس به همراه می‌آورند؟
+</p>
+<p><strong>بدو، بپر، بشین</strong>
+</p>
+<p>ورزش یک اتفاق مهم برای کسانی است که اعتماد به نفس پایینی دارند. آنها می‌توانند با انجام تمرینات سبک، خودشان را سر حال و سرزنده کنند. افرادی که به مدت ۱۰ هفته و هفته‌ای ۲ بار ورزش می‌کنند، به مراتب از نظر اجتماعی، هوشی و جسمانی توانمندی بیشتری دارند. ورزش کردن علاوه بر اینکه تناسب اندام شما را حفظ می‌کند، اعتماد به نفستان را نیز بالا می‌برد. تمرینات بدنی سبب آزاد سازی اندورفین در بدن نیز می‌شود و روحیه‌ٔ شما را مثبت و پر نشاط خواهد کرد. بنابراین همواره برای تمرینات ورزشی خود برنامه‌ریزی کنید؛ خواهید دید که اعتماد به نفستان بالا خواهد رفت. مخصوصا که به تناسب دلخواه بدنی هم دست پیدا می‌کنید و از خودتان رضایت بیشتری خواهید داشت.
+</p>
+<p><strong>خودتان را در ذهن آدم‌ها جستجو نکنید</strong>
+</p>
+<p>افراد کمرو بیش از حد راجع به اینکه دیگران درباره‌شان چه فکری خواهند کرد نگران می‌شوند. اما واقعیت این است که مردم اصلا راجع به آنها فکر نمی کنند. اصلا!
+</p>
+<p>تصور کنید قدرت جادویی خواندن افکار دیگران را داشتید؛ فکر می‌کنید توی سر اطرافیان‌تان چه جملاتی می‌شنیدید؟
+</p>
+<li> «ای وای! ایستگاه رو رد کردم»
+</li>
+<li> «وای! پول یادم رفت»
+</li>
+<li> «فردا چی بگم به مجید؟»
+</li>
+<li> «امروز یادم باشه زود برگردم به کارهام برسم»
+</li>
+<li> «عجب ترافیکی، امروزم دیر می‌رسم سر کار»
+</li>
+<p>دقت کنید چقدر در جمله‌ها ضمیر متصل اول شخص می‌بینید؟ «کردم»، «یادم رفت»، «بگم»، «برگردم» و… انسان به صورت طبیعی بیشتر(۹۹% اوقات) درگیر خودش و امور مربوط به خودش است! آنقدر مردم برای خودشان دغدغه دارند که به آنها فکر کنند تا دیگر وقت نداشته باشند راجع به شما فکر کنند. پس خیالتان راحت باشد.
+</p>
+<p>شما هم می‌توانید اعتماد به نفس داشته باشید
+</p>
+<p>خلاصه اینکه اعتماد به نفس چیزی عجیبی نیست که مثلا شما نداشته‌ باشید و بقیه داشته‌ باشند. خیر! شما هم می‌توانید آن را داشته باشید. خوبش را هم داشته باشید. با ما در بخش بعدی همراه باشید تا تمرینات دیگری ارائه کنیم.
+</p></article>
+<p>منبع : <span style="author">باشگاه خبرنگاران</span>
+</p></p>
+            <p></p>
+            <p></p>
+
+            <!--<blockquote><p> Mauris eu wisi. Ut ante dui, aliquet nec, congue non, accumsan sit amet, lectus. </p></blockquote>-->
+
+            <ul class="clearfix">
+
+                
+
+
+                
+
+            </ul>
+
+        </div>
+        <style>
+
+
+        </style>
+        <div  class="PostDet">
+            <li style="float: left;" class="PostCom">	<a target="_self" href="http://aftabir.mihanblog.com/post/1468#commentlist" class="comment-link">نظرات(<script>setCommentCnt(1468)</script>)</a>&nbsp;</li>
+            <div style="float: left; margin-top: -5px;"> <script>mihanblogPostLike('1468','like')</script></div>
+        </div>
+    </div>
+
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="1467">
+
+        <div class="PostHead">
+            <h1><a href="http://aftabir.mihanblog.com/post/1467" rel="bookmark">چه‌طور یک عادت درست را تقویت کنیم ؟!</a></h1>
+            <ul>
+ <li><a class="on" href="http://aftabir.roozkala.net/"><span> فروشگاه ما</span></a></li>
+
+                <li class="PostAuthor clearfix">نویسنده: <a href="http://aftabir.mihanblog.com/post/author/134395">نویسندگان آفتاب ایران ( + آقای مشاور )</a> </li>
+
+                <li class="PostCateg clearfix">طبقه بندی:<a href="http://aftabir.mihanblog.com/post/category/1">مشاوره تحصیلی و برنامه ریزی کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/9">در ستایش سخت کوشی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/16">موفقیت و قبولی در کنکور کارشناسی ارشد</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/17">مشاوره ی روانشناسی آفتاب ایران</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/18">مقالات انگیزشی دکتر رامین نیکخو</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/23">بهترین مطالب</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/33">روش های افزایش اعتماد به نفس</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/34">راهکار های افزایش تمرکز</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/35">چگونه خرخون شویم(سخت کوشی)</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/36">داستان های افراد موفق</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/37">جملات انگیزشی وموفقیت آفتاب ایران</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/41">چگونه خوب درس بخوانیم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/42">مقابله با ناامیدی واسترس کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/43">تاثیر معدل سال سوم وتغییرات جدید کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/44">چگونه هوش خود را افزایش دهیم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/45">چگونه انگیزه خود را برای مطالعه افزایش دهیم ؟</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/49">جملات انگیزشی هاشم عباسی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/52">مشاوره وبرنامه ریزی توسط تک رقمی ها</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/53">پوردستمالچی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/55">قبولی در پزشکی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/57">مشاوره ی دکتر افشار</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/59">کنکور اسان است</a>،&nbsp;</li>
+            </ul>
+        </div>
+        <small class="PostTime">یکشنبه 12 آذر 1396</small>
+
+
+
+
+        <div class="PostContent clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://aftabir.mihanblog.com/post/1467&amp;title=چه‌طور یک عادت درست را تقویت کنیم ؟!">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo clearfix"></div><p>روی ساختن  یک عادت مثبت، تمرکز کنید. بعضی عادت کردن‌ها مثل کاهش زمان خواب، افزایش زمان مطالعه یا عادت به آرام خواندن نسبت به بقیه‌ی عادت‌ها ممکن است بیش‌تر طول بکشد. اصلاً اهمیتی ندارد که چه‌قدر ساختن یک عادت طول خواهد کشید. هر مدتی که طول بکشد اهمیتی ندارد.
+</p>
+<p>با تمام قوا وارد عمل شوید و عقب‌نشینی نکنید.
+</p>
+<p>به خودتان ساده بگیرید. اگر خطایی کردید به خودتان پرخاش کنید و دوباره راهکار خود را از سر بگیرید.
+</p>
+<p>راهکار اول:
+</p>
+<ul>
+	<li>تصور کردن</li>
+	<li>برای خیلی‌ها سخت است که قبل از این‌که به خواب بروند برنامه‌ی فردای‌شان را تصور کنند. در عوض بعضی‌ها جزء‌به‌جزء را مرور می‌کنند. تنها لیست کارهای بعد را مرور نکنید. تصور کنید که دارید آن‌ها را انجام می‌دهید. این روش برنامه‌ریزی روز بعد شک‌ها و تردیدهای‌تان را به دور می‌ریزد و روز بعد هوشیارتر می‌شوید.</li>
+</ul></p>
+            <p></p>
+            <p></p>
+
+            <!--<blockquote><p> Mauris eu wisi. Ut ante dui, aliquet nec, congue non, accumsan sit amet, lectus. </p></blockquote>-->
+
+            <ul class="clearfix">
+
+                
+
+
+                
+
+            </ul>
+
+        </div>
+        <style>
+
+
+        </style>
+        <div  class="PostDet">
+            <li style="float: left;" class="PostCom">	<a target="_self" href="http://aftabir.mihanblog.com/post/1467#commentlist" class="comment-link">نظرات(<script>setCommentCnt(1467)</script>)</a>&nbsp;</li>
+            <div style="float: left; margin-top: -5px;"> <script>mihanblogPostLike('1467','like')</script></div>
+        </div>
+    </div>
+
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="1466">
+
+        <div class="PostHead">
+            <h1><a href="http://aftabir.mihanblog.com/post/1466" rel="bookmark">کاستن حواس‌پرتی‌های ناشی از شرایط بدن</a></h1>
+            <ul>
+ <li><a class="on" href="http://aftabir.roozkala.net/"><span> فروشگاه ما</span></a></li>
+
+                <li class="PostAuthor clearfix">نویسنده: <a href="http://aftabir.mihanblog.com/post/author/134395">نویسندگان آفتاب ایران ( + آقای مشاور )</a> </li>
+
+                <li class="PostCateg clearfix">طبقه بندی:<a href="http://aftabir.mihanblog.com/post/category/1">مشاوره تحصیلی و برنامه ریزی کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/3">احساسی ترین دل نوشته ها وشعر های کوتاه</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/4">عمومی و متفرقه</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/9">در ستایش سخت کوشی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/13">بهترین مشاوره های روانشناسی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/17">مشاوره ی روانشناسی آفتاب ایران</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/18">مقالات انگیزشی دکتر رامین نیکخو</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/23">بهترین مطالب</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/32">چگونه برنامه ریزی کنیم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/33">روش های افزایش اعتماد به نفس</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/34">راهکار های افزایش تمرکز</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/35">چگونه خرخون شویم(سخت کوشی)</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/36">داستان های افراد موفق</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/37">جملات انگیزشی وموفقیت آفتاب ایران</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/38">مصاحبه با نفرات برتر کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/41">چگونه خوب درس بخوانیم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/42">مقابله با ناامیدی واسترس کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/43">تاثیر معدل سال سوم وتغییرات جدید کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/44">چگونه هوش خود را افزایش دهیم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/45">چگونه انگیزه خود را برای مطالعه افزایش دهیم ؟</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/49">جملات انگیزشی هاشم عباسی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/52">مشاوره وبرنامه ریزی توسط تک رقمی ها</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/53">پوردستمالچی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/55">قبولی در پزشکی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/57">مشاوره ی دکتر افشار</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/59">کنکور اسان است</a>،&nbsp;</li>
+            </ul>
+        </div>
+        <small class="PostTime">یکشنبه 12 آذر 1396</small>
+
+
+
+
+        <div class="PostContent clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://aftabir.mihanblog.com/post/1466&amp;title=کاستن حواس‌پرتی‌های ناشی از شرایط بدن">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo clearfix"></div><p>افکار آزاردهنده: به طور حتم مطالعه در شرایطی که نگران هستید ساده نیست و این افکار آزاردهنده عامل مهمی برای بر هم زدن تمرکز است. بهتر است برای تمرکز بیش‌تر و پیشگیری از بروز بیماری‌های مختلف افکار آزاردهنده را روی کاغذ یادداشت کنید تا وضعیت بهتر شود.
+</p>
+<p>گرسنگی: مغز بدون تأمین سوخت مورد نیاز نمی‌تواند درست عمل کند، البته حواستان باشد صبحانه یکی از مهم‌ترین منابع تأمین مواد غذایی است که نباید فراموش شود. اجازه ندهید گرسنگی قدرت توجه و تمرکز را از شما بگیرد.
+</p>
+<p>خواب نامنظم: خواب یکی از نیازهای ضروری انسان است که نشاط روحی و جسمی را به همراه دارد؛ اما این نیاز باید در حد متعارف و متعادل برطرف شود. متخصصان مقدار خواب لازم برای یک جوان را 7 الی 8 ساعت در طول مدت 24 ساعت می‌دانند و خروج از حد اعتدال خواب (پرخوابی یا کم‌خوابی) باعث بروز مشکلاتی می‌شود و ضررهایی در پی دارد. یکی از آن‌ها فرسودگی و عدم تمرکز حواس هنگام مطالعه است.
+</p>
+<p>عادات غذایی نادرست: فعالیت‌ها و عادات غذایی نادرست می‌تواند از علایم و مشکلات مربوط به تمرکز باشد. به عنوان مثال سنگینی معده و سیری بیش از حد یکی از زمینه‌های عدم تمرکز هنگام مطالعه است. باید از خوردن غذاهای پرحجم خودداری کنید؛ زیرا با سرازیر شدن خون به دستگاه گوارش از بنیه‌ی ذهنی و حسی شما کاسته می‌شود. این ضرب‌المثل را به یاد داشته باشید و به آن عمل کنید: «صبحانه را مانند پادشاهان، ناهار را مانند شاهزاده‌ها و شام را مانند فقرا صرف کنید.»
+</p></p>
+            <p></p>
+            <p></p>
+
+            <!--<blockquote><p> Mauris eu wisi. Ut ante dui, aliquet nec, congue non, accumsan sit amet, lectus. </p></blockquote>-->
+
+            <ul class="clearfix">
+
+                
+
+
+                
+
+            </ul>
+
+        </div>
+        <style>
+
+
+        </style>
+        <div  class="PostDet">
+            <li style="float: left;" class="PostCom">	<a target="_self" href="http://aftabir.mihanblog.com/post/1466#commentlist" class="comment-link">نظرات(<script>setCommentCnt(1466)</script>)</a>&nbsp;</li>
+            <div style="float: left; margin-top: -5px;"> <script>mihanblogPostLike('1466','like')</script></div>
+        </div>
+    </div>
+
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="1465">
+
+        <div class="PostHead">
+            <h1><a href="http://aftabir.mihanblog.com/post/1465" rel="bookmark">۲۰ توصیه برای تقویت تمرکز (ادامه)</a></h1>
+            <ul>
+ <li><a class="on" href="http://aftabir.roozkala.net/"><span> فروشگاه ما</span></a></li>
+
+                <li class="PostAuthor clearfix">نویسنده: <a href="http://aftabir.mihanblog.com/post/author/134395">نویسندگان آفتاب ایران ( + آقای مشاور )</a> </li>
+
+                <li class="PostCateg clearfix">طبقه بندی:<a href="http://aftabir.mihanblog.com/post/category/1">مشاوره تحصیلی و برنامه ریزی کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/9">در ستایش سخت کوشی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/13">بهترین مشاوره های روانشناسی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/16">موفقیت و قبولی در کنکور کارشناسی ارشد</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/17">مشاوره ی روانشناسی آفتاب ایران</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/18">مقالات انگیزشی دکتر رامین نیکخو</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/23">بهترین مطالب</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/33">روش های افزایش اعتماد به نفس</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/34">راهکار های افزایش تمرکز</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/35">چگونه خرخون شویم(سخت کوشی)</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/36">داستان های افراد موفق</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/37">جملات انگیزشی وموفقیت آفتاب ایران</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/38">مصاحبه با نفرات برتر کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/40">معرفی منابع نفرات برتر برای کنکور وامتحانات نهایی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/41">چگونه خوب درس بخوانیم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/42">مقابله با ناامیدی واسترس کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/45">چگونه انگیزه خود را برای مطالعه افزایش دهیم ؟</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/49">جملات انگیزشی هاشم عباسی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/52">مشاوره وبرنامه ریزی توسط تک رقمی ها</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/53">پوردستمالچی</a>،&nbsp;</li>
+            </ul>
+        </div>
+        <small class="PostTime">یکشنبه 12 آذر 1396</small>
+
+
+
+
+        <div class="PostContent clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://aftabir.mihanblog.com/post/1465&amp;title=۲۰ توصیه برای تقویت تمرکز (ادامه)">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo clearfix"></div><p>11. زمان‌هایی را که بیش‌ترین وظایف کاری را در طول 24 ساعت شبانه‌روزی دارید مشخص کنید. ساعت پربازده خود را پیدا کنید.
+</p>
+<p>12. مثبت باشید. وقتی نیاز به تمرکز دارید مدام به خود یادآوری کنید که می‌توانید. این تکرار لفظی توانایی تمرکز را افزایش می‌دهد.
+</p>
+<p>13. تقسیم‌بندی وظایف کنید. کارهایی که آغاز و پایان مشخصی ندارند تمرکز شما را مختل می‌کنند. اگر پروژه‌ی بزرگی را باید انجام دهید مسیر انجام آن را مشخص کنید و با تقسیم‌بندی مناسب کارها تمرکز خود را افزایش دهید.
+</p>
+<p>14. نیازهای خود را مدیریت کنید. قبل از آغاز هر کاری مطمئن شوید تمام کارها و وسایلی را که به آن‌ها نیاز دارید مرتب و آماده کرده‌اید. این کار به کاهش حواس‌پرتی در حین کار کمک می‌کند.
+</p>
+<p>15. آرام باشید. خود را به منظم بودن مقید کنید تا از زمان‌های بیش‌تری استفاده‌ی مؤثر داشته باشید.
+</p>
+<p>16. با وظایف کوچک‌تر شروع کنید. اگر در ابتدای کار به‌راحتی قادر به تمرکز نبودید ناامید نشوید. به همان کار کوچک بچسبید تا کم کم آرام‌تر شده و تمرکزتان بیش‌تر شود.
+</p>
+<p>17. مغز خود را تعمیم دهید. اگر نمی‌توانید بیش از چند ثانیه روی موضوعی تمرکز کنید به محض این‌که حواستان پرت شد دوباره همان موضوع را در ذهن خود نگه دارید و به آن توجه کنید. با این تمرین ذهنتان را تمرین می‌دهید که بتواند مدت طولانی‌تری روی یک مطلب ثابت شود.
+</p>
+<p>18. برای تقویت تمرکز مهلت‌های مشخصی را تعیین کنید.
+</p>
+<p>19. خواب کافی و منظم از عوامل مؤثر در تقویت تمرکز است.
+</p>
+<p>20. استقامت داشته باشید. اگر در ابتدای تمرینات پیشرفت نکردید هرگز ناامید نشوید و ادامه دهید. هر هفته با تمرین‌های کوچک شروع کنید و موفقیت‌های کوچک را به یاد بسپرید.
+</p>
+<p>در پایان قلب خود را با مغزتان پیوند دهید. آن‌چه به موفقیت شما کمک می‌کند همراه کردن احساسات و دیدگاه مثبت با تلاش ذهنی است.
+</p>
+<p>وقتی از کار کردن لذت می‌برید خیلی سریع‌تر و بهتر بر قدرت تمرکز شما افزوده می‌شود.
+</p></p>
+            <p></p>
+            <p></p>
+
+            <!--<blockquote><p> Mauris eu wisi. Ut ante dui, aliquet nec, congue non, accumsan sit amet, lectus. </p></blockquote>-->
+
+            <ul class="clearfix">
+
+                
+
+
+                
+
+            </ul>
+
+        </div>
+        <style>
+
+
+        </style>
+        <div  class="PostDet">
+            <li style="float: left;" class="PostCom">	<a target="_self" href="http://aftabir.mihanblog.com/post/1465#commentlist" class="comment-link">نظرات(<script>setCommentCnt(1465)</script>)</a>&nbsp;</li>
+            <div style="float: left; margin-top: -5px;"> <script>mihanblogPostLike('1465','like')</script></div>
+        </div>
+    </div>
+
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="1464">
+
+        <div class="PostHead">
+            <h1><a href="http://aftabir.mihanblog.com/post/1464" rel="bookmark">۲۰  توصیه برای تقویت تمرکز  !!</a></h1>
+            <ul>
+ <li><a class="on" href="http://aftabir.roozkala.net/"><span> فروشگاه ما</span></a></li>
+
+                <li class="PostAuthor clearfix">نویسنده: <a href="http://aftabir.mihanblog.com/post/author/134395">نویسندگان آفتاب ایران ( + آقای مشاور )</a> </li>
+
+                <li class="PostCateg clearfix">طبقه بندی:<a href="http://aftabir.mihanblog.com/post/category/1">مشاوره تحصیلی و برنامه ریزی کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/9">در ستایش سخت کوشی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/13">بهترین مشاوره های روانشناسی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/17">مشاوره ی روانشناسی آفتاب ایران</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/23">بهترین مطالب</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/33">روش های افزایش اعتماد به نفس</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/34">راهکار های افزایش تمرکز</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/35">چگونه خرخون شویم(سخت کوشی)</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/36">داستان های افراد موفق</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/37">جملات انگیزشی وموفقیت آفتاب ایران</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/41">چگونه خوب درس بخوانیم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/42">مقابله با ناامیدی واسترس کنکور</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/44">چگونه هوش خود را افزایش دهیم</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/45">چگونه انگیزه خود را برای مطالعه افزایش دهیم ؟</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/49">جملات انگیزشی هاشم عباسی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/53">پوردستمالچی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/55">قبولی در پزشکی</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/57">مشاوره ی دکتر افشار</a>،&nbsp;<a href="http://aftabir.mihanblog.com/post/category/59">کنکور اسان است</a>،&nbsp;</li>
+            </ul>
+        </div>
+        <small class="PostTime">یکشنبه 12 آذر 1396</small>
+
+
+
+
+        <div class="PostContent clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://aftabir.mihanblog.com/post/1464&amp;title=۲۰  توصیه برای تقویت تمرکز  !!">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo clearfix"></div><p>از آن‌جا که هر یک از حواس پنج‌گانه در یک لحظه محرکی را از دنیای بیرون دریافت می‌کند و همین امر می‌تواند تمرکز انسان را به‌راحتی مختل کند، ذهن انسان نمی‌تواند به طور معمول هرج و مرج‌ها را کنترل کند.
+</p>
+<p>هرچند تقویت قدرت تمرکز کاری دشوار است اما غیر ممکن نیست.
+</p>
+<ul>
+	<li>مراقبه کردن</li>
+	<li>محیط مناسبی برای درس خواندن انتخاب کنید.</li>
+	<li>فضاهای راحت و دلچسب نقش مهمی در ایجاد تمرکز کامل دارند.</li>
+	<li>افکار خود را کنترل کنید. اجازه ندهید افکار خودبه‌خود بیایند؛ یعنی بی‌ربط به ذهنتان خطور کنند و موجب آشفتگی شوند.</li>
+	<li>یک برنامه‌ی زمانی مشخص و منطقی داشته باشید. زمان‌بندی مناسب برای انجام کارها باعث ایجاد تعادل بین کار و تفریح می‌شود و به آرامش ذهنی کمک می‌کند.</li>
+	<li>هرگز منفی نباشید و هرگز نگویید نمی‌توانم. این اظهارات منفی تمرکز را دشوار می‌سازد؛ چون ذهن شما از روی گفتن نمی‌توانم به عدم توانایی تمرکز کردن تبدیل می‌شود.</li>
+	<li>چند کار را هم‌زمان با هم انجام ندهید. هر گاه چند کار هم‌زمان با هم انجام می‌دهید هرگز نمی‌توانید روی یک کار متمرکز شوید.</li>
+	<li>صداهای اضافی را حذف کنید. صداهای اضافی در محیط درس خواندن تمرکز مناسب را غیر ممکن می‌سازد.</li>
+	<li>رژیم غذایی مناسب و ورزش متعادل تأثیر بسیار زیادی در افزایش قدرت تمرکز شما دارد. کمبود ریزمغذی‌های ضروری موجب خستگی و آشفتگی ذهن می‌شود.</li>
+	<li>وظیفه‌ی خود را خوب درک کنید.</li>
+	<li>به احساس تعلل در کار کردن غلبه کنید. وظایف خود را به تعویق نیندازید</li>
+</ul></p>
+            <p></p>
+            <p></p>
+
+            <!--<blockquote><p> Mauris eu wisi. Ut ante dui, aliquet nec, congue non, accumsan sit amet, lectus. </p></blockquote>-->
+
+            <ul class="clearfix">
+
+                
+
+
+                
+
+            </ul>
+
+        </div>
+        <style>
+
+
+        </style>
+        <div  class="PostDet">
+            <li style="float: left;" class="PostCom">	<a target="_self" href="http://aftabir.mihanblog.com/post/1464#commentlist" class="comment-link">نظرات(<script>setCommentCnt(1464)</script>)</a>&nbsp;</li>
+            <div style="float: left; margin-top: -5px;"> <script>mihanblogPostLike('1464','like')</script></div>
+        </div>
+    </div>
+
+
+    <div class="clearer"></div>
+
+
+<!-- Comment -->
+
+
+<div>
+
+    <style>
+
+            /*** COMMENT BODY***/
+        .comment_body{
+            background: #FAF4E1;
+            margin:10px;
+            border-radius: 5px;
+            border-right:5px solid #EBE3C8;
+            overflow:hidden
+        }
+
+        .comment .comment_reply {
+            background: none repeat scroll 0 0 #F2E2D5;
+            border-radius: 5px 5px 5px 5px;
+            border-right: 5px solid #E4CAB5;
+            font-size: 10px;
+            width: 350px;
+            margin-top:10px;
+            overflow:hidden
+        }
+        .comment .comemnt_text {
+            direction: rtl;
+            line-height: 1.5em;
+            text-align: right;
+        }
+
+
+
+        .comment .name {
+            font-weight: 600;
+            color: #4E3E09;
+            padding-right: 5px;
+            text-align: right;
+            line-height: 26px;
+            float: right;
+        }
+
+
+        .comment .date {
+            font-size: 10px;
+            padding: 5px;
+            color: #7E7E7E;
+            float: left;
+        }
+
+
+        .comment .comemnt_web {
+            padding: 5px 0 5px 15px; color: #999; direction: ltr; text-align: left;
+
+        }
+
+
+        .comment .comemnt_web a {
+            color: #554c3d;
+            text-decoration: underline;
+        }
+
+
+
+        .comment_det{
+            border-bottom:1px solid #F4F4F2;
+            padding:4px;
+
+        }
+
+
+        .comment .name,.date,.comemnt_text,.comment_reply{
+            margin-right:3px;
+            padding-right:3px;
+
+        }
+
+            /**** COMMENT FORM ****/
+
+        .comment_form {
+            background: none repeat scroll 0 0 #FAE4E3;
+            border-radius: 5px 5px 5px 5px;
+            border-right: 5px solid #F39199;
+            direction: rtl;
+            margin: 10px;
+            padding: 20px;
+
+        }
+
+
+
+        .comment_form label {
+            width: 100px;
+            display: block;
+            float: right;
+            text-align: left;
+            font-size: 11px;
+            color: #555;
+            padding-left: 10px;
+        }
+
+
+        .comment_form .comment_form_row {
+            margin: 3px 0;
+        }
+
+
+        #imageCodeWrapper .imageCode_input #imgstr {
+            font-size: 25px;
+            height: 34px;
+            width: 70px;
+        }
+
+        .comment_form input.btn { input.btn {
+                                      background: url("http://mihanblog.com/public/public/user_data/template/23/images/SubmitComment.gif") no-repeat scroll 0 0 		transparent;
+                                      border: medium none;
+                                      color: #FFFFFF;
+                                      font-family: tahoma;
+                                      height: 26px;
+                                      margin-top: 10px;
+                                      padding: 0;
+                                      width: 85px;
+                                  }
+        .comment_form .comment_form_textarea, .comment_form .comment_form_textbox {
+            border: 1px solid #C5C5C5;
+        }
+
+
+
+
+    </style>
+
+    </div>
+<!-- End Comment-->
+
+
+
+<!-- Start Nav -->
+<div align="center" class="page_box clearfix">
+    <ul><li>تعداد صفحات :139</li><li><a href="http://aftabir.mihanblog.com/page/1"><b>1</b></a>&nbsp;&nbsp;</li><li><a href="http://aftabir.mihanblog.com/page/2"><span>2</span></a>&nbsp;&nbsp;</li><li><a href="http://aftabir.mihanblog.com/page/3"><span>3</span></a>&nbsp;&nbsp;</li><li><a href="http://aftabir.mihanblog.com/page/4"><span>4</span></a>&nbsp;&nbsp;</li><li><a href="http://aftabir.mihanblog.com/page/5"><span>5</span></a>&nbsp;&nbsp;</li><li><a href="http://aftabir.mihanblog.com/page/6"><span>6</span></a>&nbsp;&nbsp;</li><li><a href="http://aftabir.mihanblog.com/page/7"><span>7</span></a>&nbsp;&nbsp;</li><li><a href="http://aftabir.mihanblog.com/page/8"><i>...</i></a>&nbsp;&nbsp;</li></ul></div>
+<!-- End Nav -->
+
+
+</div>
+<!-- End SC -->
+<div class="SR"><div class="SRL">
+
+
+
+
+
+
+
+
+            <!-- Start Categ -->
+        <div class="Panel PBlue">
+            <h3>آرشیو موضوعی</h3>
+            <ul>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/64"><p>معرفی رشته های دانشگاهی +راهنمایی انتخاب رشته کنکور</p><p>(11)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/63"><p>اخبار جذاب وجالب(زنگ تفریح کنکوری ها)</p><p>(15)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/62"><p>کارنامه های رتبه های برتر کنکور</p><p>(25)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/61"><p>نبیلتی</p><p>(4)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/59"><p>کنکور اسان است</p><p>(35)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/58"><p>دانلود مستند(فیلم آموزشی)</p><p>(31)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/56"><p>دانلود رایگان جزوات درسی</p><p>(75)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/55"><p>قبولی در پزشکی</p><p>(54)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/54"><p>نازی سنتر</p><p>(5)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/52"><p>مشاوره وبرنامه ریزی توسط تک رقمی ها</p><p>(54)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/51"><p>ماشین سنگین</p><p>(8)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/48"><p>دانلود سوالات امتحانات نهایی سال سوم</p><p>(13)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/42"><p>مقابله با ناامیدی واسترس کنکور</p><p>(68)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/1"><p>مشاوره تحصیلی و برنامه ریزی کنکور</p><p>(250)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/23"><p>بهترین مطالب</p><p>(97)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/32"><p>چگونه برنامه ریزی کنیم</p><p>(37)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/33"><p>روش های افزایش اعتماد به نفس</p><p>(64)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/37"><p>جملات انگیزشی وموفقیت آفتاب ایران</p><p>(69)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/36"><p>داستان های افراد موفق</p><p>(56)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/47"><p>روانشناسی</p><p>(46)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/46"><p>هنر</p><p>(3)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/35"><p>چگونه خرخون شویم(سخت کوشی)</p><p>(29)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/9"><p>در ستایش سخت کوشی</p><p>(62)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/34"><p>راهکار های افزایش تمرکز</p><p>(51)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/43"><p>تاثیر معدل سال سوم وتغییرات جدید کنکور</p><p>(30)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/57"><p>مشاوره ی دکتر افشار</p><p>(25)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/53"><p>پوردستمالچی</p><p>(32)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/49"><p>جملات انگیزشی هاشم عباسی</p><p>(99)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/38"><p>مصاحبه با نفرات برتر کنکور</p><p>(28)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/18"><p>مقالات انگیزشی دکتر رامین نیکخو</p><p>(36)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/44"><p>چگونه هوش خود را افزایش دهیم</p><p>(61)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/41"><p>چگونه خوب درس بخوانیم</p><p>(45)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/45"><p>چگونه انگیزه خود را برای مطالعه افزایش دهیم ؟</p><p>(38)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/28"><p>روش مطالعه ی دروس ریاضی وهندسی(تجربی وریاضی)</p><p>(29)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/29"><p>روش مطالعه ی زیست شناسی+فیلم آموزشی</p><p>(31)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/31"><p>روش مطالعه ی فیزیک</p><p>(19)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/30"><p>روش مطالعه ی شیمی</p><p>(27)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/24"><p>روش مطالعه ی ادبیات وزبان فارسی</p><p>(21)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/25"><p>روش مطالعه ی عربی</p><p>(19)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/26"><p>روش مطالعه ی دین وزندگی</p><p>(17)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/27"><p>روش مطالعه ی زبان انگلیسی</p><p>(18)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/40"><p>معرفی منابع نفرات برتر برای کنکور وامتحانات نهایی</p><p>(20)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/21"><p>از شهرمون تهران چه خبر</p><p>(4)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/19"><p>کلاهبرداری شرکت ابر تجارت کهکشان +شرکت های جدید هرمی</p><p>(42)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/13"><p>بهترین مشاوره های روانشناسی</p><p>(61)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/20"><p>چگونه پولدار شویم</p><p>(30)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/17"><p>مشاوره ی روانشناسی آفتاب ایران</p><p>(71)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/16"><p>موفقیت و قبولی در کنکور کارشناسی ارشد</p><p>(65)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/15"><p>ازدواج موفق وانتخاب همسر آینده+خوشبختی</p><p>(16)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/14"><p>خدا</p><p>(19)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/5"><p>مطالب جوک و خنده وطنز</p><p>(22)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/12"><p>آموزش کامپیوتر ,موبایل</p><p>(10)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/8"><p>سلامتی با طب سنتی ایرانی - اسلامی</p><p>(22)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/10"><p>قوانین سربازی ومعافیت وامریه به جای خدمت</p><p>(24)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/7"><p>ناهنجاری های اجتماعی</p><p>(10)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/6"><p>مطالب علمی ومفید</p><p>(91)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/4"><p>عمومی و متفرقه</p><p>(62)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/3"><p>احساسی ترین دل نوشته ها وشعر های کوتاه</p><p>(66)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/50"><p>مشاوره خانواده</p><p>(7)</p></a></li>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="http://aftabir.mihanblog.com/post/category/65"><p>جدیدترین اطلاعیه های سازمان سنجشsanjesh.org</p><p>(11)</p></a></li>
+                            </ul>
+            <div class="PT"></div>
+        </div>
+        <!-- End Categ -->
+    
+    <!-- Start Archives -->
+            <div class="Panel PYellow">
+            <h3>آرشیو</h3>
+            <ul>
+                                    <li><a href='http://aftabir.mihanblog.com/post/archive/1396/9' title=' آذر 1396(24)'> آذر 1396</a></li>
+                                    <li><a href='http://aftabir.mihanblog.com/post/archive/1396/8' title=' آبان 1396(6)'> آبان 1396</a></li>
+                                    <li><a href='http://aftabir.mihanblog.com/post/archive/1396/7' title=' مهر 1396(2)'> مهر 1396</a></li>
+                                    <li><a href='http://aftabir.mihanblog.com/post/archive/1396/6' title=' شهریور 1396(12)'> شهریور 1396</a></li>
+                                    <li><a href='http://aftabir.mihanblog.com/post/archive/1396/5' title=' مرداد 1396(21)'> مرداد 1396</a></li>
+                                    <li><a href='http://aftabir.mihanblog.com/post/archive/1396/4' title=' تیر 1396(1)'> تیر 1396</a></li>
+                                    <li><a href='http://aftabir.mihanblog.com/post/archive/1395/12' title=' اسفند 1395(2)'> اسفند 1395</a></li>
+                                    <li><a href='http://aftabir.mihanblog.com/post/archive/1395/8' title=' آبان 1395(2)'> آبان 1395</a></li>
+                                    <li><a href='http://aftabir.mihanblog.com/post/archive/1395/7' title=' مهر 1395(5)'> مهر 1395</a></li>
+                                    <li><a href='http://aftabir.mihanblog.com/post/archive/1395/6' title=' شهریور 1395(4)'> شهریور 1395</a></li>
+                                    <li><a href='http://aftabir.mihanblog.com/post/archive/1395/5' title=' مرداد 1395(8)'> مرداد 1395</a></li>
+                                <li><a href="http://aftabir.mihanblog.com/post/archive"><b>لیست آرشیوها</b></a></li>
+            </ul>
+            <div class="PT"></div>
+        </div>
+        <!-- End Archives -->
+
+    <!-- Start Links -->
+            <div class="Panel PPink">
+            <h3>لینکدونی</h3>
+            <ul>
+                                    <li><a href="http://dotkhabar.com/" title="دات خبر , اخرین و جدیدترین اخبار ایران و جهان" target="_blank">دات خبر,دریافت پربیننده ترین مطالب روزانه برای سایت و وبلاگ</a></li>
+                                    <li><a href="http://www.aftabir.com" title="www.aftabir.com + آفتاب+افتاب" target="_blank">آفتاب</a></li>
+                                    <li><a href="http://KingAds.ir" title="" target="_blank">http://KingAds.ir</a></li>
+                                    <li><a href="http://downloadsefid.mihanblog.com" title="" target="_blank">دانلود سفید</a></li>
+                                <li><b><a href="http://aftabir.mihanblog.com/linkdaily/">همه لینکها</a></b></li>
+                <li><b><a href="javascript:linkdailyForm()">ارسال لینک به لینکدونی</a></b></li>
+            </ul>
+            <div class="PT"></div>
+        </div>
+        <!-- End Links -->
+
+    <!-- Start Links -->
+            <div class="Panel PMaroon">
+            <h3>لینکستان</h3>
+            <ul>
+                                    <li><a href="http://dotkhabar.com/" title="دات خبر,پربیننده ترین مطالب هزار سایت در یک سایت"  target="_blank">سایت منبع,دریافت پربیننده ترین مطالب روزانه برای وبلاگ</a></li>
+                                    <li><a href="http://talabanoo.rozblog.com" title="بسیار جذاب و دیدنی با مدیریت زهرا :)"  target="_blank">سایت بانوان طلایی ایران زمین+تالار گفتمان</a></li>
+                                    <li><a href="http://aftabir.mihanblog.com/post/4" title="فوق العاده ترین مقاله ی منتشرشده برای کنکور ودرس خواندن"  target="_blank">چگونه پزشکی دانشگاه تهران قبول شویم؟؟؟</a></li>
+                                    <li><a href="http://dr-aval.blog.ir" title=""  target="_blank">ترک ناهنجاری های جنسی دوره ی نوجوانی</a></li>
+                                    <li><a href="http://kadbanoo.mihanblog.com" title="اینجا فقط مخصوص دختر خانومای گله"  target="_blank">مدل موی دخترانه,مد لباس وزیبایی,فوت و فن های آشپزی</a></li>
+                                    <li><a href="http://aftabiran.rozblog.com/Forum" title="زودتر ثبت نام کنید واز اطلاعات دیگران بی بهره نمونید"  target="_blank">بزرگترین تالار گفتمان دانش آموزان سخت کوش کنکوری(ثبت نام کنید)</a></li>
+                                    <li><a href="http://www.irupload.ir" title=""  target="_blank">اپلود عكس</a></li>
+                                <li><a href="http://aftabir.mihanblog.com/link/"><b>همه لینکها</b></a></li>
+            </ul>
+            <div class="PT"></div>
+        </div>
+        <!-- End Links -->
+
+    <!-- Start extrapage -->
+            <div class="Panel PGray">
+
+
+<p>
+            <h3>صفحات جانبی</h3>
+            <ul>
+                                    <li><a href="http://aftabir.mihanblog.com/extrapage/konkur_in">نکات کنکوری 96</a></li>
+                                    <li><a href="http://aftabir.mihanblog.com/extrapage/345454565667">بازی</a></li>
+                                    <li><a href="http://aftabir.mihanblog.com/extrapage/www_chistatv_ir">سایت برنامه ی تلوزیونی چیستا /www.chistatv.ir</a></li>
+                                    <li><a href="http://aftabir.mihanblog.com/extrapage/www_sharif_ir">دانشگاه صنعتی شریف - خانه/www.sharif.ir</a></li>
+                                    <li><a href="http://aftabir.mihanblog.com/extrapage/www_shirazu_ac_ir">دانشگاه شیراز/www.shirazu.ac.ir</a></li>
+                                    <li><a href="http://aftabir.mihanblog.com/extrapage/ww_sanjesh_org">سازمان سنجش آموزش کشور/www.sanjesh.org</a></li>
+                                    <li><a href="http://aftabir.mihanblog.com/extrapage/sanjesh_org">www.sanjesh.org</a></li>
+                                    <li><a href="http://aftabir.mihanblog.com/extrapage/ltms_medu_ir">www.ltms.medu.ir</a></li>
+                                    <li><a href="http://aftabir.mihanblog.com/extrapage/www_sanjesh_org">سازمان سنجش آموزش کشور</a></li>
+                                    <li><a href="http://aftabir.mihanblog.com/extrapage/www_ltms_medu_ir">سامانه ضمن خدمت فرهنگیان</a></li>
+                                    <li><a href="http://aftabir.mihanblog.com/extrapage/7">سربازان سیاه پوش اس اس</a></li>
+                                    <li><a href="http://aftabir.mihanblog.com/extrapage/4">من &quot;سایه&quot;از سرزمین آفتاب</a></li>
+                                    <li><a href="http://aftabir.mihanblog.com/extrapage/2">هشت موضوع شگفت انگیز در مورد زندگیه البرت انشتین</a></li>
+                            </ul>
+            <div class="PT"></div>
+        </div>
+        <!-- End extrapage -->
+
+    <div align="center"></div>
+
+
+
+
+</div><div class="SRR">
+
+
+    <div id="user_logo" class="clearfix">
+        <div align="center"><img src="../static.mihanblog.com/public/user_data/web_photo/79/235404.jpg@1886"  /></div>
+        <div align="center"><a href="http://aftabir.mihanblog.com/post/author/134395">نویسندگان آفتاب ایران ( + آقای مشاور )</a></div>
+        <p>پزشکی 98<br />
+چگونه پزشکی قبول شویم 98<br />
+چگونه درس خوان شویم<br />
+چگونه موفق شویم برای قبولی در دانشگاه کنکور 98<br />
+مشاوره ی تحصیلی کنکور 98</p>
+    </div><br />
+
+    <!-- Start Recent posts -->
+            <h3>آخرین پست ها</h3>
+        <ul class="clearfix">
+                            <li><a  href="http://aftabir.mihanblog.com/post/1471">آیا شما هوش هیجانی دارید؟</a></li>
+                            <li><a  href="http://aftabir.mihanblog.com/post/1470">در مواجهه با موانع و مشکلات چه کنیم ؟</a></li>
+                            <li><a  href="http://aftabir.mihanblog.com/post/1469">روش‌هایی مفید برای پیشرفت به صورت پیوسته !</a></li>
+                        <li><a  href="http://aftabir.mihanblog.com/post/list"><b>لیست آخرین پستها</b></a></li>
+        </ul>
+        <!-- End Recent posts -->
+    <br />
+            <h3>نویسندگان</h3>
+        <ul class="clearfix">
+                            <li class="clearfix"  id="parentheses">
+                    <p><a href="http://aftabir.mihanblog.com/post/author/134395"><img src="../static.mihanblog.com/public/user_data/user_photo/45/134395.jpg" style="width:16px;" /></a></p><a  class="clearfix" href="http://aftabir.mihanblog.com/post/author/134395"><p>نویسندگان آفتاب ایران ( + آقای مشاور )</p><p>(624)</p></a>
+                </li>
+
+                            <li class="clearfix"  id="parentheses">
+                    <p><a href="http://aftabir.mihanblog.com/post/author/234531"></a></p><a  class="clearfix" href="http://aftabir.mihanblog.com/post/author/234531"><p>یاسین(مهندسی مكانیك) </p><p>(6)</p></a>
+                </li>
+
+                            <li class="clearfix"  id="parentheses">
+                    <p><a href="http://aftabir.mihanblog.com/post/author/314821"></a></p><a  class="clearfix" href="http://aftabir.mihanblog.com/post/author/314821"><p>مشاور </p><p>(14)</p></a>
+                </li>
+
+                            <li class="clearfix"  id="parentheses">
+                    <p><a href="http://aftabir.mihanblog.com/post/author/1308636"><img src="../static.mihanblog.com/public/user_data/user_photo/437/1308636.jpg" style="width:16px;" /></a></p><a  class="clearfix" href="http://aftabir.mihanblog.com/post/author/1308636"><p>زهـــرا </p><p>(60)</p></a>
+                </li>
+
+                            <li class="clearfix"  id="parentheses">
+                    <p><a href="http://aftabir.mihanblog.com/post/author/1325293"></a></p><a  class="clearfix" href="http://aftabir.mihanblog.com/post/author/1325293"><p>ملیکا شاه چراغی(دوم تجربی)</p><p>(45)</p></a>
+                </li>
+
+                            <li class="clearfix"  id="parentheses">
+                    <p><a href="http://aftabir.mihanblog.com/post/author/1325299"></a></p><a  class="clearfix" href="http://aftabir.mihanblog.com/post/author/1325299"><p>سایه تهرانی</p><p>(3)</p></a>
+                </li>
+
+                            <li class="clearfix"  id="parentheses">
+                    <p><a href="http://aftabir.mihanblog.com/post/author/1411863"></a></p><a  class="clearfix" href="http://aftabir.mihanblog.com/post/author/1411863"><p>رضا دلاوری</p><p>(0)</p></a>
+                </li>
+
+                            <li class="clearfix"  id="parentheses">
+                    <p><a href="http://aftabir.mihanblog.com/post/author/1433627"></a></p><a  class="clearfix" href="http://aftabir.mihanblog.com/post/author/1433627"><p>مستعان الف</p><p>(81)</p></a>
+                </li>
+
+                            <li class="clearfix"  id="parentheses">
+                    <p><a href="http://aftabir.mihanblog.com/post/author/1455721"></a></p><a  class="clearfix" href="http://aftabir.mihanblog.com/post/author/1455721"><p>روح الله کریمی</p><p>(54)</p></a>
+                </li>
+
+                            <li class="clearfix"  id="parentheses">
+                    <p><a href="http://aftabir.mihanblog.com/post/author/1457706"></a></p><a  class="clearfix" href="http://aftabir.mihanblog.com/post/author/1457706"><p>نسرین باتوانی</p><p>(165)</p></a>
+                </li>
+
+                            <li class="clearfix"  id="parentheses">
+                    <p><a href="http://aftabir.mihanblog.com/post/author/1544658"></a></p><a  class="clearfix" href="http://aftabir.mihanblog.com/post/author/1544658"><p>نویسندگان آفتاب ایران ss</p><p>(53)</p></a>
+                </li>
+
+                            <li class="clearfix"  id="parentheses">
+                    <p><a href="http://aftabir.mihanblog.com/post/author/1556053"></a></p><a  class="clearfix" href="http://aftabir.mihanblog.com/post/author/1556053"><p>مریم (دانشجوی پزشکی)</p><p>(0)</p></a>
+                </li>
+
+                    </ul>
+        <br/>
+
+    <!-- Start Recent Poll -->
+    
+		    <!-- End Recent Poll -->
+    <br />
+
+
+            <h3><span class="clearfix">آمار وبلاگ</span></h3>
+        <ul class='stat'>
+            <li>کل بازدید : <span><script>getStatVar('total_view');</script></span></li>
+            <li>بازدید امروز :<span><script>getStatVar('today_view');</script></span></li>
+            <li>بازدید دیروز : <span><script>getStatVar('yesterday_view');</script></span></li>
+            <li>بازدید این ماه : <span><script>getStatVar('this_month_view');</script></span></li>
+            <li>بازدید ماه قبل : <span><script>getStatVar('last_month_view');</script></span></li>
+            <li>تعداد نویسندگان : <span><script>getStatVar('total_author');</script></span></li>
+            <li>تعداد کل پست ها : <span><script>getStatVar('total_post');</script></span></li>
+            <li>آخرین بازدید : <span><script>getStatVar('last_view_date');</script></span></li>
+            <li>آخرین بروز رسانی : <span><script>getStatVar('modify_date');</script></span></li>
+        </ul>
+        <br />
+
+    <!-- Start Recent Tag_Cloud -->
+            <h3><span class="clearfix">اَبر برچسبها</span></h3>
+        <div class="clearfix">
+            <ul class="cloud">
+                                    <li><a href="http://aftabir.mihanblog.com/post/tag/%DA%A9%D9%86%DA%A9%D9%88%D8%B1" style="font-size:1.12em">کنکور</a>&nbsp;</li>
+                                    <li><a href="http://aftabir.mihanblog.com/post/tag/%D8%B3%D8%B1%DA%AF%D8%B1%D9%85%DB%8C+%D9%87%D8%A7%DB%8C+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C" style="font-size:1.15em">سرگرمی های ریاضی</a>&nbsp;</li>
+                                    <li><a href="http://aftabir.mihanblog.com/post/tag/%DA%A9%D9%84%D8%A7%D9%87%D8%A8%D8%B1%D8%AF%D8%A7%D8%B1%DB%8C+%D8%B4%D8%B1%DA%A9%D8%AA+%D8%A7%D8%A8%D8%B1+%D8%AA%D8%AC%D8%A7%D8%B1%D8%AA+%DA%A9%D9%87%DA%A9%D8%B4%D8%A7%D9%86" style="font-size:2em">کلاهبرداری شرکت ابر تجارت کهکشان</a>&nbsp;</li>
+                                    <li><a href="http://aftabir.mihanblog.com/post/tag/%D9%85%D8%B4%D8%A7%D9%88%D8%B1+%D9%87%D8%A7%D8%B4%D9%85+%D8%B9%D8%A8%D8%A7%D8%B3%DB%8C" style="font-size:1.49em">مشاور هاشم عباسی</a>&nbsp;</li>
+                                    <li><a href="http://aftabir.mihanblog.com/post/tag/%D9%85%D8%B9%D9%85%D8%A7%DB%8C+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C" style="font-size:1.3em">معمای ریاضی</a>&nbsp;</li>
+                                    <li><a href="http://aftabir.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C" style="font-size:1.12em">آموزش ریاضی</a>&nbsp;</li>
+                                    <li><a href="http://aftabir.mihanblog.com/post/tag/%D8%AF%DA%A9%D8%AA%D8%B1+%D8%B1%D8%A7%D9%85%DB%8C%D9%86+%D9%86%DB%8C%DA%A9%D8%AE%D9%88" style="font-size:1em">دکتر رامین نیکخو</a>&nbsp;</li>
+                                    <li><a href="http://aftabir.mihanblog.com/post/tag/%D8%B3%D8%A7%DB%8C%D8%AA+%DA%A9%D9%86%DA%A9%D9%88%D8%B1" style="font-size:1.52em">سایت کنکور</a>&nbsp;</li>
+                                    <li><a href="http://aftabir.mihanblog.com/post/tag/%DA%86%DA%AF%D9%88%D9%86%D9%87+%D8%A8%D8%AF%D9%88%D9%86+%D8%AF%D8%A7%D8%B4%D8%AA%D9%86+%D8%B3%D8%B1%D9%85%D8%A7%DB%8C%D9%87+%D9%BE%D9%88%D9%84%D8%AF%D8%A7%D8%B1+%D8%B4%D9%88%DB%8C%D9%85%D8%9F" style="font-size:1em">چگونه بدون داشتن سرمایه پولدار شویم؟</a>&nbsp;</li>
+                            </ul>
+        </div>
+        <!-- End Recent Tag_Cloud -->
+
+
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=1608533&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=1608533" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code -->
+
+<!-- Begin WebGozar.com Newsletter code -->
+<form action="http://www.webgozar.com/nletter/join.aspx"  target=_blank onsubmit="return sp(this);" name=wfrm method=post><p align=center dir=rtl><input class=txts type=text name="wgname"><br><input class=txts type=text name="wgemail"><br><input type=hidden value="345260" name="code"><input type="radio" id=c1 value="1" checked="true" name="R1" checked=true><font class=txtb><label for="c1">عضویت</label><input type="radio" id=c2 value="0" name="R1"><label for="c2">لغو عضویت</label><br><input type=submit class=txts value="ارسال به خبرنامه"></font><font class=txta><br><a href="http://www.webgozar.com">Powered by WebGozar</a></font><script language="javascript" src="http://webgozar.ir/scs/n2.js"></script><script language="vbscript" src="http://webgozar.ir/scs/n1.vbs"></script></p></form>
+<!-- End WebGozar.com Newsletter code -->
+
+<a href = 'http://www.seomastering.com/' title='Site value checker' target='_blank'><img src='http://www.seomastering.com/btn/af/ta/bir_mihanblog_com/site-value-3.png' border='0' width='88' height='31' alt='aftabir.mihanblog.com value' title='aftabir.mihanblog.com worth'/></a>
+<a href = 'http://www.seomastering.com/' title='Real PageRank checker' target='_blank'><img src='http://www.seomastering.com/btn/af/ta/bir_mihanblog_com/pagerank-violet.png' border='0' width='88' height='31' alt='aftabir.mihanblog.com Real PR' title='aftabir.mihanblog.com Real PageRank'/></a>
+<a href = 'http://www.seomastering.com/' title='TrustRank checking' target='_blank'><img src='http://www.seomastering.com/btn/af/ta/bir_mihanblog_com/trust-red.png' border='0' width='88' height='31' alt='aftabir.mihanblog.com Trust' title='aftabir.mihanblog.com TrustRank'/></a>
+<a href = 'http://www.seomastering.com/' title='Alexa, PageRank checking' target='_blank'><img src='http://www.seomastering.com/btn/af/ta/bir_mihanblog_com/pr-alexa-1.png' border='0' width='88' height='31' alt='aftabir.mihanblog.com Alexa/PageRank' title='aftabir.mihanblog.com Alexa/PR'/></a>
+
+
+
+
+
+    <div align="center" class="mihan_logo"></div>
+
+
+
+
+
+</div></div>
+
+
+</div>
+
+
+<!-- Container -->
+
+
+<div class="Footer"><div class="FL"></div><div class="FR"></div>
+    <p><strong>POWERED BY <a href="../www.mihanblog.com/index.html"><font color="#FF0000" size="2px">M</font>IHAN<font color="#FF0000" size="2px">B</font>LOG.COM</a></strong><br />
+        Smashing Theme is created by: www.designdisease.com</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+</body>
+</html>
+
+<br />
+
+
+
+<style>
+.ads-asildesign-ir{
+position:fixed;
+right:2px;
+bottom:2px;
+z-index:1000; 
+border:0px solid #D6D6D6; 
+padding:1px;
+width:250px;
+}
+.ads1-asildesign-ir{
+width:242px; 
+padding:3px; 
+margin:0; 
+float:right; 
+background:#e8e8e8; 
+color:#C40000;
+cursor:pointer; 
+font-size: 8pt; 
+font-family: tahoma; 
+text-align: right; 
+direction:rtl; 
+text-decoration:none;
+}
+.ads2-asildesign-ir{
+width:250px; 
+height:163px; 
+margin:0 0 8px 4px; 
+font: 10px tahoma; 
+padding: 1px 3px; 
+background:#5c5c5c; 
+color:gold;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+}
+</style>
+
+</div>
+
+<RB:Guest_Block> <style>div.guestwarn {background:black;color:white;max-width:280px;min-height:18px;padding:0 5px 3px;position:fixed;right: 2%; top: 80%;padding: 10px 15px;position: fixed;z-index: 10;font-size:12px;-moz-border-radius: 8px; -webkit-border-radius: 8px; :alpha(opacity=80); -moz-opacity:.80; opacity:.80; -moz-box-shadow:5px 5px 5px #191919; -webkit-box-shadow:5px 5px 5px #191919; box-shadow:5px 5px 5px #191919;} .close {float: right;background: transparent url(http://www.fileiran.com/images/x.png);width: 22px;height: 22px;}</style> <div id="message-1" class="msgbox" style="display: block;"> <div class="guestwarn"> <a href="index.html#" class="close" onclick="closeBox('message-1'); return false;" title=""></a><p align="center"><font face="Tahoma">  <br/> سلام مهمان گرامی؛ <br>مهمان گرامی، برای مشاهده تالار با امکانات کامل میبایست از طریق <a href="http://aftabir.mihanblog.com/Forum/Register"><span style="text-decoration: none"><font color="#FFFF00">ایــن لیـــنک</font></span></a> ثبت نام کنید</font> <br/><br/></div></div> </RB:Guest_Block> 
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'aftabir.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

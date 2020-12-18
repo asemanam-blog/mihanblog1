@@ -1,0 +1,1304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*1900863*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','64');
+	setStatVar('total_author','2');
+	setStatVar('modify_date','سه شنبه 26 شهریور 1398');
+	
+	setStatVar('today_view','72');
+	setStatVar('yesterday_view','193');
+	
+	setStatVar('this_month_view','4676');
+	setStatVar('last_month_view','5586');
+
+	setStatVar('total_view','331193');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (17:06)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://blackbutler.mihanblog.com/statupdate/?data[refereruri]=http://blackbutler.mihanblog.com/&data[postid]=&data[requesturi]=/page/3&data[sdate]=1608213515&data[hash]=aa1f8d113164f382f52927004195f9f4&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[4]='5100';commentCnt[31]='13';commentCnt[33]='22';commentCnt[34]='59';commentCnt[35]='7';commentCnt[36]='36';commentCnt[37]='69';commentCnt[38]='14';commentCnt[39]='-';commentCnt[40]='2';commentCnt[41]='14';commentCnt[45]='4';commentCnt[46]='20';commentCnt[48]='-';commentCnt[49]='-';commentCnt[50]='1';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[4]='0';
+mihanblogDisLikeArrCnt[4]='0';
+mihanblogLikeArrCnt[31]='0';
+mihanblogDisLikeArrCnt[31]='0';
+mihanblogLikeArrCnt[33]='0';
+mihanblogDisLikeArrCnt[33]='0';
+mihanblogLikeArrCnt[34]='0';
+mihanblogDisLikeArrCnt[34]='0';
+mihanblogLikeArrCnt[35]='0';
+mihanblogDisLikeArrCnt[35]='0';
+mihanblogLikeArrCnt[36]='0';
+mihanblogDisLikeArrCnt[36]='0';
+mihanblogLikeArrCnt[37]='0';
+mihanblogDisLikeArrCnt[37]='0';
+mihanblogLikeArrCnt[38]='0';
+mihanblogDisLikeArrCnt[38]='0';
+mihanblogLikeArrCnt[39]='0';
+mihanblogDisLikeArrCnt[39]='0';
+mihanblogLikeArrCnt[40]='0';
+mihanblogDisLikeArrCnt[40]='0';
+mihanblogLikeArrCnt[41]='0';
+mihanblogDisLikeArrCnt[41]='0';
+mihanblogLikeArrCnt[45]='0';
+mihanblogDisLikeArrCnt[45]='0';
+mihanblogLikeArrCnt[46]='0';
+mihanblogDisLikeArrCnt[46]='0';
+mihanblogLikeArrCnt[48]='0';
+mihanblogDisLikeArrCnt[48]='0';
+mihanblogLikeArrCnt[49]='0';
+mihanblogDisLikeArrCnt[49]='0';
+mihanblogLikeArrCnt[50]='0';
+mihanblogDisLikeArrCnt[50]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://blackbutler.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://blackbutler.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://blackbutler.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://blackbutler.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://blackbutler.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://blackbutler.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://blackbutler.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://blackbutler.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://blackbutler.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://blackbutler.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://blackbutler.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://blackbutler.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://blackbutler.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://blackbutler.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://blackbutler.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://blackbutler.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://blackbutler.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<link href='https://fonts.googleapis.com/css?family=Allura' rel='stylesheet'>
+<link href='http://www.fontonline.ir/css/BMorvarid.css' rel='stylesheet' type='text/css'>
+
+	<html>	<head><link href=" http://gazo.emoji7.jp/img/052vt_756169/%E3%82%B5%E3%82%A4%E3%82%B3%E3%83%BC_m.gif " rel="shortcut icon">		<title>вℓαcк вυтℓєя</title>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">		<meta http-equiv="Content-Language" content="fa">		<meta name="description" content="" />		<meta name="keywords" content="" />				<link rel="alternate" type="application/rss+xml" title="вℓαcк вυтℓєя" 		  href="../post/rss/index.html" />		<link rel="alternate" type="application/atom+xml" title="вℓαcк вυтℓєя" 		  href="../post/atom/index.html" />		</head>	<style>
+		*{direction:rtl;color:#ffffff}		#sidebar{float:left;width:3px;margin-right:-10px; font-family: BMorvarid,'BMorvarid',cursive;}			#content{float:right;width:680px;padding:140px;margin-top:-140px; font-family: BMorvarid,'BMorvarid',cursive; }
+			#body{display:block;font-size:12px; font-family: BMorvarid,'BMorvarid',cursive;}	
+			a,a.hover,a.visited{text-decoration:none; color:white;}	
+	.inbox{list-style:none; padding:0 4px}	
+	ul{padding:3px;margin:5px;}		
+h2 a{color:#ffffff; font-size:27px; font-family: BMorvarid,'BMorvarid',cursive; }		
+h3{color:#00b8ff; margin-top:0;  font-family:'Allura'; text-align:center; border-bottom: 2px solid #ffffff;
+    font-size:50px;
+ line-height: 20px;
+margin-bottom:10px;
+padding: 12px 20px;font-weight:900;
+color: #aef9fb;
+ text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}	
+	#header h1 a{font-size:35px; font-family:A Dast Nevis; float:center; color:}	
+			#header h1{margin:20; height:50px; overflow:hidden}		
+		.author_box img{float:right;border:none;}	
+	.mihan_logo{text-align:center;height:131px;margin-top:10px;	
+background: url() no-repeat top center;}		
+.slogan{			color:#000000; text-align:center; padding:350px 0;	
+		background: url(http://uupload.ir/files/f0un_هدر.png) repeat;		
+	background: expression(#FFFFFF);		}			
+	#footer{font-size:9px;display:block;margin-top:10px; float:left}		
+#footer a,#footer a:hover,#footer a:visited{color:#000;}			
+	.hr{border-top:1px solid #CCCCCC;height:1px;margin:3px;}				
+	body{margin:0; background: #FFFFFF url(http://www.hdwallpapery.com/static/images/free-wallpapers-hd-atpeek-engine-abstract-landscape-photo-wallpapers-hd_8nN8o3q.jpg) repeat fixed center}				
+.sidebar_box{background-color:#000000; ; padding:18px 10px 10px 3px; line-height:1px; line-height:22px; border-radius:25px;
+-moz-border-radius:25px; box-shadow: -5px 5px 7px #ffffff; border-style:dashed; border-color:#000000}	}
+%%.sidebar_box_border{background-color:#000000; height:1px; display:block; overflow:}		.sidebar_box_border_div{width:220px;}
+
+	.seprator{margin-bottom:5px}	
+	.main_menu{text-align:center}		
+.blog_title{color:#}				
+#header{height:0px; overflow:hidden; background: #FFFFFF url() center repeat}		#body{			
+background: url(http://uupload.ir/files/ttvp_بدنه.png) repeat;		
+	background: expression(#FFFFFF);		}	
+	#blog_body{width:1000px; margin:40px 200px -50px 100px; }	
+	#footer_background{background: url(http://uupload.ir/files/ck50_فوتر.png) repeat-x; padding-bottom:500px}			
+.clearfix {			display:inline-block;		}		
+.clearfix:after {			
+clear:both;			content:'.';			display:block;			height:0;			visibility:hidden;		}		* html .clearfix {			height:1%;		}		.clearfix {			display:block;		}	
+</style>	
+<body>	
+<div id="blog_body">				
+<div id="header">				
+<h1><p style="text-align:center; margin:0"><a class="blog_title" href="blackbutler.html" style="margin:10px">вℓαcк вυтℓєя</a></p></h1>			
+</div>					
+<div class="slogan"></div>						
+<div class="clearfix">							
+<div id="body" class="clearfix">										
+<div id="content">						
+							
+
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+										
+<div>									
+<h2>										
+<a href="../post/4.html">***پســــــت جــــاودانه***</a>									
+</h2>									
+<p class="date">										
+دوشنبه 29 شهریور 1395 12:56 ق.ظ								
+	</p>								
+</div>											
+<b>نویسنده:</b>								
+<a href="../post/author/1456234.html">									
+αѕυℓα 								
+</a>														
+<br/>											
+															
+<a href="../post/author/1456234.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/486/1456234.jpg"  /></a>								
+<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div align="center"><font face="Mihan-IransansBold"><font size="3">**بـــه نــــام خــدا**</font></font></div><div align="center"><font face="Mihan-IransansBold"><font size="3"><br></font></font></div><div align="center"><font face="Mihan-IransansBold"><font size="5">در صورت فلفلی شدن وب خدایی نکرده</font></font></div><div align="center"><font face="Mihan-IransansBold"><font size="5">به این وب مراجعه نمایید</font></font></div><div align="center"><font face="Mihan-IransansBold"><font size="5">http://nana2000.mihanblog.com/<br></font><br><font size="3"><img src="http://orig03.deviantart.net/5048/f/2014/060/1/a/1a932dd4f1e07b13472f0c951aeec3e2-d78jfxo.gif" alt="Pixel Ciel Pink by nyharu">ســـلامیـ بهـ گرمیـ انیمهـ</font><img src="http://orig03.deviantart.net/5048/f/2014/060/1/a/1a932dd4f1e07b13472f0c951aeec3e2-d78jfxo.gif" alt="Pixel Ciel Pink by nyharu"><br><font size="3"><img src="http://orig03.deviantart.net/5048/f/2014/060/1/a/1a932dd4f1e07b13472f0c951aeec3e2-d78jfxo.gif" alt="Pixel Ciel Pink by nyharu">اینـ وبـ فقط مخصوصـ دوستدارانـ</font><img src="http://orig03.deviantart.net/5048/f/2014/060/1/a/1a932dd4f1e07b13472f0c951aeec3e2-d78jfxo.gif" alt="Pixel Ciel Pink by nyharu"><br><font size="3"><img src="http://orig03.deviantart.net/5048/f/2014/060/1/a/1a932dd4f1e07b13472f0c951aeec3e2-d78jfxo.gif" alt="Pixel Ciel Pink by nyharu">انیمهـ خادمـ سیاهـ هستـ</font><img src="http://orig03.deviantart.net/5048/f/2014/060/1/a/1a932dd4f1e07b13472f0c951aeec3e2-d78jfxo.gif" alt="Pixel Ciel Pink by nyharu"><br><font size="3"><img src="http://orig03.deviantart.net/5048/f/2014/060/1/a/1a932dd4f1e07b13472f0c951aeec3e2-d78jfxo.gif" alt="Pixel Ciel Pink by nyharu">یعنیـ تو اینـ وبـ ما فقطـ از انیمهـ</font><img src="http://orig03.deviantart.net/5048/f/2014/060/1/a/1a932dd4f1e07b13472f0c951aeec3e2-d78jfxo.gif" alt="Pixel Ciel Pink by nyharu"><br><font size="3"><img src="http://orig03.deviantart.net/5048/f/2014/060/1/a/1a932dd4f1e07b13472f0c951aeec3e2-d78jfxo.gif" alt="Pixel Ciel Pink by nyharu">خادمـ سیاهـ آپـ میکنیم</font><img src="http://orig03.deviantart.net/5048/f/2014/060/1/a/1a932dd4f1e07b13472f0c951aeec3e2-d78jfxo.gif" alt="Pixel Ciel Pink by nyharu"><br><font size="3"><img src="http://orig03.deviantart.net/5048/f/2014/060/1/a/1a932dd4f1e07b13472f0c951aeec3e2-d78jfxo.gif" alt="Pixel Ciel Pink by nyharu">حالا قبلـ از همهـ چیـ انتظار میرهـ</font><img src="http://orig03.deviantart.net/5048/f/2014/060/1/a/1a932dd4f1e07b13472f0c951aeec3e2-d78jfxo.gif" alt="Pixel Ciel Pink by nyharu"><br><img src="http://orig03.deviantart.net/5048/f/2014/060/1/a/1a932dd4f1e07b13472f0c951aeec3e2-d78jfxo.gif" alt="Pixel Ciel Pink by nyharu"><font size="3">کهـ قوانینـ وبمو بخونید چونـ</font><img src="http://orig03.deviantart.net/5048/f/2014/060/1/a/1a932dd4f1e07b13472f0c951aeec3e2-d78jfxo.gif" alt="Pixel Ciel Pink by nyharu"><br><font size="3"><img src="http://orig03.deviantart.net/5048/f/2014/060/1/a/1a932dd4f1e07b13472f0c951aeec3e2-d78jfxo.gif" alt="Pixel Ciel Pink by nyharu">اینجا همـ مثلـ جاهایـ دیگهـ </font><img src="http://orig03.deviantart.net/5048/f/2014/060/1/a/1a932dd4f1e07b13472f0c951aeec3e2-d78jfxo.gif" alt="Pixel Ciel Pink by nyharu"><br><font size="3"><img src="http://orig03.deviantart.net/5048/f/2014/060/1/a/1a932dd4f1e07b13472f0c951aeec3e2-d78jfxo.gif" alt="Pixel Ciel Pink by nyharu">قوانینـ خاصـ خودشو دارهـ</font><img src="http://orig03.deviantart.net/5048/f/2014/060/1/a/1a932dd4f1e07b13472f0c951aeec3e2-d78jfxo.gif" alt="Pixel Ciel Pink by nyharu"><br><br><font size="3"><img src="http://s8.picofile.com/file/8267846350/QdsjnMYnWO3L.gif" alt="http://s8.picofile.com/file/8267846350/QdsjnMYnWO3L.gif" height="233" width="464"><br></font><font size="3"><img src="http://a.deviantart.net/avatars/c/i/cielsmileplz.png?1" alt=":iconcielsmileplz:">از ایـــنکهـ قوانینـ و خوندیـ ممنونمـ</font><img src="http://a.deviantart.net/avatars/c/i/cielsmileplz.png?1" alt=":iconcielsmileplz:"><br><img src="http://orig01.deviantart.net/d954/f/2014/045/2/3/kuroshitsuji_noah_s_arc_free_icons_pack_by_nyharu-d76hv5b.gif" alt="Kuroshitsuji Noah's arc Free Icons Pack by nyharu"><img src="http://orig01.deviantart.net/d954/f/2014/045/2/3/kuroshitsuji_noah_s_arc_free_icons_pack_by_nyharu-d76hv5b.gif" alt="Kuroshitsuji Noah's arc Free Icons Pack by nyharu"><img src="http://orig01.deviantart.net/d954/f/2014/045/2/3/kuroshitsuji_noah_s_arc_free_icons_pack_by_nyharu-d76hv5b.gif" alt="Kuroshitsuji Noah's arc Free Icons Pack by nyharu"><br><font size="4"><img src="http://orig07.deviantart.net/e8cb/f/2012/009/9/1/ciel_phantomhive_icon_by_blue_sky_girl-d4ltmrs.gif" alt="Ciel Phantomhive icon by blue-sky-girl">حالا میریمـ سراغـ دکمهـ هایـ وب</font></font><img src="http://orig07.deviantart.net/e8cb/f/2012/009/9/1/ciel_phantomhive_icon_by_blue_sky_girl-d4ltmrs.gif" alt="Ciel Phantomhive icon by blue-sky-girl"><br><a href="../post/category/1.html" target="" title=""><img src="http://up.persianscript.ir/uploadsmedia/ff29--.png"></a></div><div align="center"><a href="../post/category/2.html" target="" title=""><img src="http://up.persianscript.ir/uploadsmedia/9907--.png"></a></div><div align="center"><a href="../post/category/3.html" target="" title=""><img src="http://up.persianscript.ir/uploadsmedia/3100--.png"></a></div><div align="center"><a href="../post/category/4.html" target="" title=""><img src="http://up.persianscript.ir/uploadsmedia/649f--.png"></a></div><div align="center"><a href="../extrapage/mylogoandmyfriendslogo.html" target="" title=""><img src="http://up.persianscript.ir/uploadsmedia/94e2--.png"></a><br><br><br><img src="http://orig01.deviantart.net/d954/f/2014/045/2/3/kuroshitsuji_noah_s_arc_free_icons_pack_by_nyharu-d76hv5b.gif" alt="Kuroshitsuji Noah's arc Free Icons Pack by nyharu"><img src="http://orig01.deviantart.net/d954/f/2014/045/2/3/kuroshitsuji_noah_s_arc_free_icons_pack_by_nyharu-d76hv5b.gif" alt="Kuroshitsuji Noah's arc Free Icons Pack by nyharu"><img src="http://orig01.deviantart.net/d954/f/2014/045/2/3/kuroshitsuji_noah_s_arc_free_icons_pack_by_nyharu-d76hv5b.gif" alt="Kuroshitsuji Noah's arc Free Icons Pack by nyharu"><br><font size="4"><font face="Mihan-IransansBold"><img src="http://orig05.deviantart.net/f677/f/2010/241/e/d/alois_and_ciel_pixel_by_raiinb0wsharpii-d2xjlib.gif" alt="Alois and Ciel Pixel by RAiiNB0Wsharpii">اینمـ آرمـ گوگولیـ وبـــ</font></font><img src="http://orig05.deviantart.net/f677/f/2010/241/e/d/alois_and_ciel_pixel_by_raiinb0wsharpii-d2xjlib.gif" alt="Alois and Ciel Pixel by RAiiNB0Wsharpii"><br><img src="http://up.persianscript.ir/uploadsmedia/c9f7-1-2-.png"></div><div align="center"><br></div><div align="center"><img src="http://orig05.deviantart.net/f677/f/2010/241/e/d/alois_and_ciel_pixel_by_raiinb0wsharpii-d2xjlib.gif" alt="Alois and Ciel Pixel by RAiiNB0Wsharpii" style="font-family: Mihan-IransansBold; font-size: large;"><font face="Mihan-IransansBold" size="4">اخبار وب بخونید</font><img src="http://orig05.deviantart.net/f677/f/2010/241/e/d/alois_and_ciel_pixel_by_raiinb0wsharpii-d2xjlib.gif" alt="Alois and Ciel Pixel by RAiiNB0Wsharpii" style="font-family: Mihan-IransansBold; font-size: large;"></div><div align="center"><div style="direction: rtl; text-align: start;"><div style="direction: rtl;"><div style="direction: rtl;"><div align="center" style="direction: rtl;"><div align="center" style="direction: rtl;"><div style="direction: rtl; border: 1px solid rgb(0, 0, 0); border-image-source: initial; border-image-slice: initial; border-image-width: initial; border-image-outset: initial; border-image-repeat: initial; width: 202px; height: 125px; overflow: auto; background-image: url(./&quot%3Bhttp:/axgig.com/images/80043222938564435811.gif&quot%3B.html);"><p align="center" style="direction: rtl;"><font size="4"><span style="background-color: rgb(153, 51, 153);">قالب و آهنگ وب تغییر کرد&nbsp;</span></font></p><p align="center" style="direction: rtl;"><font size="4"><span style="background-color: rgb(153, 51, 153);">و&nbsp; حتما به بخش بیوگرافی سر بزنین چون ما همیشه بیوگرافی زیاد آپ میکنیم</span></font></p></div></div></div></div></div></div></div><div align="center"><center><div id="divStayTopLeft" style="position:absolute"><div id="divStayTopLeft" style="position:absolute"><br></div></div></center></div><div align="center"><font size="4"><font face="Mihan-IransansBold"><img src="http://orig05.deviantart.net/f677/f/2010/241/e/d/alois_and_ciel_pixel_by_raiinb0wsharpii-d2xjlib.gif" alt="Alois and Ciel Pixel by RAiiNB0Wsharpii">همینـ دیگهـ برید و خوشـ باشید</font></font></div><div align="center"><img src="http://orig05.deviantart.net/f677/f/2010/241/e/d/alois_and_ciel_pixel_by_raiinb0wsharpii-d2xjlib.gif" alt="Alois and Ciel Pixel by RAiiNB0Wsharpii"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+													<br>																																
+<br>								<br>													<a target="_self" href="javascript:newComment(4)">									<b>کامنت: </b>									<script>setCommentCnt(4)</script> уσυя ηιcє cσммєηтѕ								</a>																<br/>																																										<b>آخرین ویرایش:</b>								
+دوشنبه 30 بهمن 1396  07:10 ب.ظ																
+<br><br><center><img src='http://uupload.ir/files/zlxk_جداکننده.png'</a></center>																						
+<div>									
+<h2>										
+<a href="../post/50.html">#نظرسنجی</a>									
+</h2>									
+<p class="date">										
+دوشنبه 9 بهمن 1396 07:24 ب.ظ								
+	</p>								
+</div>											
+<b>نویسنده:</b>								
+<a href="../post/author/1456234.html">									
+αѕυℓα 								
+</a>														
+<br/>											
+															
+<a href="../post/author/1456234.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/486/1456234.jpg"  /></a>								
+<div style="text-align: center;"><font face="Mihan-IransansBold" size="4">به نام خـدا</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">سلام دوستان بالاخره یه نظرسنجی گذاشتم که دوس دارم شرکت کنید</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">راجب منه اینکه چ احساسی نسبت به من داری یا راجبم چی فکر میکنی</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">ممنون میشم که شرکت کنید</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">با تشکر دیگه کاریتون ندارم برید خوش باشید^^</font></div><div style="text-align: center;"><img src="https://pa1.narvii.com/5693/b7ad4bed77251c7c87bafbeef7562f353e62c34f_hq.gif" alt="Image result for black butler gifs ciel"></div>
+
+
+								
+													<br>																																
+<br>								<br>													<a target="_self" href="javascript:newComment(50)">									<b>کامنت: </b>									<script>setCommentCnt(50)</script> Ƈ♡MMƐИƬS								</a>																<br/>																				<b>استیکر:</b>																		<a href="../post/tag/انیمه.html" >										انیمه									</a> ?																		<a href="../post/tag/انیمه&#32;خادم&#32;سیاه.html" >										انیمه خادم سیاه									</a> ?																										<br/>																																							<b>آخرین ویرایش:</b>								
+دوشنبه 9 بهمن 1396  07:32 ب.ظ																
+<br><br><center><img src='http://uupload.ir/files/zlxk_جداکننده.png'</a></center>																						
+<div>									
+<h2>										
+<a href="../post/49.html">دانلود انیمه کتاب اطلس خادم سیاه</a>									
+</h2>									
+<p class="date">										
+دوشنبه 9 بهمن 1396 02:02 ب.ظ								
+	</p>								
+</div>											
+<b>نویسنده:</b>								
+<a href="../post/author/1456234.html">									
+αѕυℓα 								
+</a>														
+<br/>											
+									
+<b>موضوع مطلب:</b>									
+										
+<a href="../post/category/1.html">										
+	دانلودی ها										
+</a>									
+															
+<br>								
+															
+<a href="../post/author/1456234.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/486/1456234.jpg"  /></a>								
+
+
+<div style="text-align: center;"><font face="Mihan-IransansBold" size="4">به نام خدا</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">سلام دوستان اومدم با دانلود کتاب اطلس زیرنویس فارسی</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">چسبیده امیدوارم لذت ببرید</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">منبع:</font><a href="http://www.namasha.com/itachi14power" target="" title="">http://www.namasha.com/itachi14power</a></div><div style="text-align: center;"><img src="http://www.cheaplightning.com/wp-content/uploads/2017/02/C887F-Large.jpg" alt="Related image" height="553" width="394"></div><div style="text-align: center;"><ul class="Dic" id="Dic" style="box-sizing: border-box; border: 0px; outline: 0px; margin: 5px; padding: 0px; transition: all 0.5s; color: rgb(51, 51, 51); font-family: Tahoma; text-align: start;"><p style="box-sizing: border-box; border: 0px; outline: 0px; margin: 0px 0px 10px; padding: 0px; transition: all 0.5s; color: rgb(212, 212, 212);"><span style="box-sizing: border-box; border: 0px; outline: 0px; margin: 0px; padding: 0px; font-weight: 700; transition: all 0.5s; background-color: rgb(204, 51, 204);"><font size="4">خلاصه انیمه</font></span></p><p style="box-sizing: border-box; border: 0px; outline: 0px; margin: 0px 0px 10px; padding: 0px; color: rgb(212, 212, 212);"><span style="box-sizing: border-box; border: 0px; outline: 0px; margin: 0px; padding: 0px; font-weight: 700; background-color: rgb(204, 51, 204);"><font size="4">بعد از اینکه شایعاتی درمورد زنده شدن مردگان به گوش سیل رسید، ارل سیل فانتومهایو بهمراه خدمتکار خود سباستین بدنبال جستجوی این ماجرا وارد کشتی مسافربری لوکس شدن تا درمورد ادعای معجزه “انجمن آرورا” تحقیق کنند. همینطور که در آبها پیش میرفتن افراد مرموزی زیر پرچم ققنوس جمع میشدن و سیل و سباستین قدم به قدم به حقیقت ماجرا نزدیک تر. ولی از سرنوشت مهر و موم شده خود بروی این تابوت شناور میتوانند رهایی یابند…؟</font></span></p></ul></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><a href="http://www.namasha.com/videos/dl/7139624622-720p/%D9%81%DB%8C%D9%84%D9%85_%D8%B3%DB%8C%D9%86%D9%85%D8%A7%DB%8C%DB%8C_%D8%A7%D9%86%DB%8C%D9%85%D9%87_%D8%AE%D8%A7%D8%AF%D9%85_%D8%B3%DB%8C%D8%A7%D9%87_%DA%A9%D8%AA%D8%A7%D8%A8_%D8%A2%D8%AA%D9%84%D8%A7%D9%86%D8%AA%DB%8C%D8%B3_%D8%A7%D8%B7%D9%84%D8%B3_Kuroshitsuji_Movie_Book_of_the_Atlantic_HD_%D8%A8%D8%A7_%D8%B2%DB%8C%D8%B1%D9%86%D9%88%DB%8C%D8%B3_%D9%81%D8%A7%D8%B1%D8%B3%DB%8C_itachi_14-720p.mp4" target="" title="black butler"><font face="Mihan-Koodak" size="5">دانلود</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/100.gif"></a></div>
+
+
+
+
+
+
+								
+													<br>																																
+<br>								<br>													<a target="_self" href="javascript:newComment(49)">									<b>کامنت: </b>									<script>setCommentCnt(49)</script> xثابتx								</a>																<br/>																				<b>استیکر:</b>																		<a href="../post/tag/black&#32;butler.html" >										black butler									</a> ?																		<a href="../post/tag/book&#32;of&#32;atlantic.html" >										book of atlantic									</a> ?																		<a href="../post/tag/کتاب&#32;اطلس.html" >										کتاب اطلس									</a> ?																		<a href="../post/tag/دانلود.html" >										دانلود									</a> ?																		<a href="../post/tag/دانلود&#32;انیمه.html" >										دانلود انیمه									</a> ?																		<a href="../post/tag/خادم&#32;سیاه.html" >										خادم سیاه									</a> ?																										<br/>																																							<b>آخرین ویرایش:</b>								
+دوشنبه 9 بهمن 1396  02:21 ب.ظ																
+<br><br><center><img src='http://uupload.ir/files/zlxk_جداکننده.png'</a></center>																						
+<div>									
+<h2>										
+<a href="../post/48.html">زندگــــــــــlifeــــــــی</a>									
+</h2>									
+<p class="date">										
+دوشنبه 25 دی 1396 11:53 ق.ظ								
+	</p>								
+</div>											
+<b>نویسنده:</b>								
+<a href="../post/author/1456234.html">									
+αѕυℓα 								
+</a>														
+<br/>											
+															
+<a href="../post/author/1456234.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/486/1456234.jpg"  /></a>								
+<div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s8.picofile.com/file/8316761618/Untitled.png" alt=""></div>
+
+
+								
+													<br>																																
+<br>								<br>													<a target="_self" href="javascript:newComment(48)">									<b>کامنت: </b>									<script>setCommentCnt(48)</script> XثابتX								</a>																<br/>																				<b>استیکر:</b>																		<a href="../post/tag/تکست.html" >										تکست									</a> ?																		<a href="../post/tag/دلنوشته.html" >										دلنوشته									</a> ?																		<a href="../post/tag/دلنوشته&#32;غمگین.html" >										دلنوشته غمگین									</a> ?																		<a href="../post/tag/انیمه.html" >										انیمه									</a> ?																		<a href="../post/tag/خادم&#32;سیاه.html" >										خادم سیاه									</a> ?																		<a href="../post/tag/مانگا.html" >										مانگا									</a> ?																		<a href="../post/tag/undertaker.html" >										undertaker									</a> ?																										<br/>																																							<b>آخرین ویرایش:</b>								
+دوشنبه 25 دی 1396  11:55 ق.ظ																
+<br><br><center><img src='http://uupload.ir/files/zlxk_جداکننده.png'</a></center>																						
+<div>									
+<h2>										
+<a href="../post/46.html">بیوگرافیFrancis Midford</a>									
+</h2>									
+<p class="date">										
+شنبه 2 دی 1396 05:12 ب.ظ								
+	</p>								
+</div>											
+<b>نویسنده:</b>								
+<a href="../post/author/1456234.html">									
+αѕυℓα 								
+</a>														
+<br/>											
+									
+<b>موضوع مطلب:</b>									
+										
+<a href="../post/category/4.html">										
+	بیوگرافی ها										
+</a>									
+															
+<br>								
+															
+<a href="../post/author/1456234.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/486/1456234.jpg"  /></a>								
+<div style="text-align: center;"><font face="Mihan-IransansBold" size="4">به نام خدا</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4"><br></font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">سلام امروز اومدم با بیوگرافی مادر الیزابت</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">حتما بخونید جالبه</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">راستی ترجمه از خودمه پس هر گونه کپی حرامه</font></div><div style="text-align: center;"><img src="https://vignette.wikia.nocookie.net/kuroshitsuji/images/8/8b/BotA_Francis.png/revision/latest/scale-to-width-down/290?cb=20170909123918" alt="BotA Francis"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">نام:فرنسیس میدفورد(Francis Midford)</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">نوع:انسان</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">جنسیت:زن</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">وضعیت:زنده</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">بستگان:</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">کلودیا فانتوم هایو(مادر)</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">alexis leon midford(همسر)</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">edward midford(پسر.فرزند)</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">vincent phantomhive(برادر)</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">elizabeth midford(دختر.فرزند)</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">راشل فانتوم هایو(خواهر ناتنی)</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">شیل فانتوم هایو و برادر دوقلوش(برادرزاده)</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">____________________________________________________</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">صداگذار ژاپنی:atsuko tanaka</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">صداگذار انگلیسی:elizabeth maxwell</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">________________________________________________</font></div><div style="text-align: center;"><img src="https://vignette.wikia.nocookie.net/kuroshitsuji/images/e/e4/Francis_Midford_anime_appearance.png/revision/latest/scale-to-width-down/200?cb=20170604070347" alt="Francis Midford anime appearance"></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">ظاهر:</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">فرانسیس به عنوان یک زن تمیز و منظم معرفی می کند.&nbsp; او بسیار شبیه به دخترش است. او لباس عروسی با دستکش های سفید و یک گردنبند کوتاه، گردنبند دارد. او به خاطر حفظ زیبایی جوانانی خود مشهور است و به دلیل تمرینات شدید فیزیکی او به خوبی شناخته شده است</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">_____________________________________________________</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">شخصیت:</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4"><div>فرانسیس یک فرد پر افتخار و سختگیر است که به خاطر جاه طلبی و بزرگی عظیمش مشهور است. او یک منتقد دائمی است و اغلب به طور مستقیم از نظرات دیگران سخن می گوید. او از قوانین پیروی می کند، تمایل و وسوسه های خود را حفظ می کند و هرگز اقدامات خود را پنهان نمی کند؛ به همین علت، او بسیار محترم است. او به سرعت و متعهد است و تمایل به رسیدن به اهداف پیش از آنکه پیش بینی شده یا برنامه ریزی شده باشد. علاوه بر این، او فوق العاده اختصاص داده شده است، برای او ادامه تحصیلات خود را با آموزش دقیق حتی پس از ازدواج او با الکسیس لئون میدفورد.</div><div>&nbsp; &nbsp;با تاناکا احترام برخورد می کند. زمانی که او به سیل و سباستین گفت که از نظر ظاهریاز اویاد بگیرند، باید اشاره کرد. علاوه بر این، او معتقد است که بی اعتنایی در محیط خانه، در نهایت منجر به انحطاط اخلاقی یک فرد خواهد شد، و بسیار دقت در جزئیات و نگرانی در مورد حفظ نظافت است. فرانسیس عمیقا در مورد خانواده اش مراقبت می کند و برای او بسیار مهم است که الیزابت با مردی مواجه می شود که می تواند به اندازه کافی از او مراقبت کند</div></font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">_____________________________________</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">حلال نمیکنم اگ کپی کنی فقط فقط با ذکر منبع قبلش به خودم باید بگی</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">به خدا خستم شد از بس تایپ کردم و اینا</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">منتظر نظرات خوبتون هستیم</font></div><div style="text-align: center;"><br></div>
+
+
+								
+													<br>																																
+<br>								<br>													<a target="_self" href="javascript:newComment(46)">									<b>کامنت: </b>									<script>setCommentCnt(46)</script> نظرات								</a>																<br/>																				<b>استیکر:</b>																		<a href="../post/tag/بیوگرافی&#32;شخصیت&#32;انیمه&#32;ای.html" >										بیوگرافی شخصیت انیمه ای									</a> ?																		<a href="../post/tag/انیمه.html" >										انیمه									</a> ?																		<a href="../post/tag/انیمه&#32;خادم&#32;سیاه.html" >										انیمه خادم سیاه									</a> ?																		<a href="../post/tag/شیل&#32;فانتوم&#32;هایو.html" >										شیل فانتوم هایو									</a> ?																		<a href="../post/tag/سباستین&#32;میکائلیس.html" >										سباستین میکائلیس									</a> ?																		<a href="../post/tag/الیزابت&#32;میدفورد.html" >										الیزابت میدفورد									</a> ?																		<a href="../post/tag/Francis&#32;Midford.html" >										Francis Midford									</a> ?																										<br/>																																							<b>آخرین ویرایش:</b>								
+شنبه 2 دی 1396  05:41 ب.ظ																
+<br><br><center><img src='http://uupload.ir/files/zlxk_جداکننده.png'</a></center>																						
+<div>									
+<h2>										
+<a href="../post/45.html">دانلود انیمه خادم سیاه زیرنویس فارسی چسبیده</a>									
+</h2>									
+<p class="date">										
+شنبه 27 آبان 1396 06:54 ب.ظ								
+	</p>								
+</div>											
+<b>نویسنده:</b>								
+<a href="../post/author/1456234.html">									
+αѕυℓα 								
+</a>														
+<br/>											
+									
+<b>موضوع مطلب:</b>									
+										
+<a href="../post/category/1.html">										
+	دانلودی ها										
+</a>									
+															
+<br>								
+															
+<a href="../post/author/1456234.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/486/1456234.jpg"  /></a>								
+<div style="text-align: center;"><font face="Mihan-IransansBold" size="4"><u>به نام خدا</u></font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4"><u>سلـــام دوســــتان خــــیلی وقتـــ بــــود نبــــــودم</u></font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4"><u>ولـــــــــی خـــــب بـه هـرحــال امـــروز اومـــــــدم</u></font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4"><u>بـا فصــــل سـه انـیمه فوق العاده خـادم سیاه</u></font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4"><u>بریـــد دامــــه مطلـب........</u></font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="5" color="#cc33cc"><u style="background-color: rgb(51, 255, 255);">راستـــــی درخـــــــواستی هم قبول میکنم.......</u></font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="5" color="#cc33cc"><u style="background-color: rgb(51, 255, 255);">پس هر درخواستی داشتی همینجا بگو....</u></font></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img src="http://img1.ak.crunchyroll.com/i/spire3/7cbdd404f0bb8827990eba58e22a1efa1405016116_full.jpg" alt="Image result for black butler book of circus"></div>
+
+
+								
+													<br>																<a href='../post/45.html'>ادامه مطلب</a>																
+<br>								<br>													<a target="_self" href="javascript:newComment(45)">									<b>کامنت: </b>									<script>setCommentCnt(45)</script> میخوام نظر بدم^^........								</a>																<br/>																				<b>استیکر:</b>																		<a href="../post/tag/انیمه.html" >										انیمه									</a> ?																		<a href="../post/tag/دانلود&#32;انیمه&#32;با&#32;زیرنویس&#32;فارسی.html" >										دانلود انیمه با زیرنویس فارسی									</a> ?																		<a href="../post/tag/انیمه&#32;خادم&#32;سیاه.html" >										انیمه خادم سیاه									</a> ?																		<a href="../post/tag/انیمه&#32;خادم&#32;سیاه&#32;کتاب&#32;سیرک.html" >										انیمه خادم سیاه کتاب سیرک									</a> ?																										<br/>																																							<b>آخرین ویرایش:</b>								
+شنبه 27 آبان 1396  07:06 ب.ظ																
+<br><br><center><img src='http://uupload.ir/files/zlxk_جداکننده.png'</a></center>																						
+<div>									
+<h2>										
+<a href="../post/41.html">تصاویر grell </a>									
+</h2>									
+<p class="date">										
+دوشنبه 13 شهریور 1396 12:12 ق.ظ								
+	</p>								
+</div>											
+<b>نویسنده:</b>								
+<a href="../post/author/1456234.html">									
+αѕυℓα 								
+</a>														
+<br/>											
+															
+<a href="../post/author/1456234.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/486/1456234.jpg"  /></a>								
+<div style="text-align: center;"><font face="Mihan-Iransans" size="4">به نام خدا</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4">.</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4">.</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4">کنیچیوا میناسان</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4">اومدم با تصاویر توپ و عالی گریل جانمان</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4">نظر فراموش نشود</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4">ادامه مطلب پلیز..</font></div><div style="text-align: center;"><img src="https://t08.deviantart.net/8kUhMZehtYB9EaxeBbQw_tTkBXs=/fit-in/700x350/filters:fixed_height(100,100):origin()/pre11/ebe1/th/pre/f/2010/341/d/e/grell_sutcliff_by_puppet_girl86-d34fme4.jpg" alt="Grell Sutcliff by Puppet-Girl86"></div>
+
+
+								
+													<br>																<a href='../post/41.html'>ادامه مطلب</a>																
+<br>								<br>													<a target="_self" href="javascript:newComment(41)">									<b>کامنت: </b>									<script>setCommentCnt(41)</script> نظرات								</a>																<br/>																				<b>استیکر:</b>																		<a href="../post/tag/انیمه.html" >										انیمه									</a> ?																		<a href="../post/tag/خادم&#32;سیاه.html" >										خادم سیاه									</a> ?																		<a href="../post/tag/black&#32;butler.html" >										black butler									</a> ?																										<br/>																																							<b>آخرین ویرایش:</b>								
+دوشنبه 13 شهریور 1396  12:18 ق.ظ																
+<br><br><center><img src='http://uupload.ir/files/zlxk_جداکننده.png'</a></center>																						
+<div>									
+<h2>										
+<a href="../post/40.html">black butler:book of atlantic</a>									
+</h2>									
+<p class="date">										
+سه شنبه 24 مرداد 1396 08:34 ب.ظ								
+	</p>								
+</div>											
+<b>نویسنده:</b>								
+<a href="../post/author/1463548.html">									
+ Bʟᴜʀʀʏғᴀᴄᴇ								
+</a>														
+<br/>											
+									
+<b>موضوع مطلب:</b>									
+										
+<a href="../post/category/3.html">										
+	سبستین میکایلیس										
+</a>									
+										
+<a href="../post/category/2.html">										
+	شیل فانتوم هایو										
+</a>									
+															
+<br>								
+															
+<a href="../post/author/1463548.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/488/1463548.jpg"  /></a>								
+<br><div align="center"><br><font size="3"><br></font><br><img src="http://s9.picofile.com/file/8303619350/Book_Of_The_Atlantic.png" alt="http://s9.picofile.com/file/8303619350/Book_Of_The_Atlantic.png" class="transparent" width="496" height="303"><font size="3"><br><br>اولین آپم از کتاب آتلانتیسه -__-<br><br>من یه سری از تیکه هاشو تو یوتیوب دیدم ^^<br><br>برای همین میخوام بگم قضیه از چه قراره :) <br><br><font size="5"><font size="4">خلاصه داستان:<font size="3">در آوریل 1889 ،ارل شیل فانتوم هایو به همراه خدمتکارانش<br><br>سباستین میکائیلیس و اسنیک ،به خانه خانواده میدوفورد،نه تنها برای اهداف<br><br>تفریحی ،بلکه برای بررسی آزمایش های غیر قانونی انسانی که بعدا در نشست<br><br>آئورورا معلوم میشود یک دکتر مشکوک است،میفهمند که افرادی که فوت میکنند<br><br>دوباره به زندگی برمیگردند،اما چیزی جز انسان(احتمالا زامبی) تبدیل شده اند<br><br>حالا وظیفه شیل و خدمتکارانش است که بفهمند&nbsp; که آن موجودات چه هستند؟<br><br>مرده زنده شده؟یک پیشرفت پزشکی یا یک نیروی ماوراء طبیعی؟<br></font></font></font></font></div>
+
+
+								
+													<br>																																
+<br>								<br>													<a target="_self" href="javascript:newComment(40)">									<b>کامنت: </b>									<script>setCommentCnt(40)</script> نظـــر								</a>																<br/>																																										<b>آخرین ویرایش:</b>								
+سه شنبه 24 مرداد 1396  08:43 ب.ظ																
+<br><br><center><img src='http://uupload.ir/files/zlxk_جداکننده.png'</a></center>																						
+<div>									
+<h2>										
+<a href="../post/39.html">NEW AUTHOR</a>									
+</h2>									
+<p class="date">										
+سه شنبه 24 مرداد 1396 08:17 ب.ظ								
+	</p>								
+</div>											
+<b>نویسنده:</b>								
+<a href="../post/author/1463548.html">									
+ Bʟᴜʀʀʏғᴀᴄᴇ								
+</a>														
+<br/>											
+															
+<a href="../post/author/1463548.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/488/1463548.jpg"  /></a>								
+<br><br><div align="center"><br><img src="http://s9.picofile.com/file/8303618318/_.png" alt="http://s9.picofile.com/file/8303618318/_.png" class="transparent"><font size="3"><br><br>سلام ^^<br><br>نویسنده جدیدم^^<br><br>طرفدار سینه به چاک خادم سیاه -__-<br><br>همین دیگه حرفی ندارم -___-<br></font></div>
+
+
+								
+													<br>																																
+<br>								<br>													<a target="_self" href="javascript:newComment(39)">									<b>کامنت: </b>									<script>setCommentCnt(39)</script> -__-								</a>																<br/>																																										<b>آخرین ویرایش:</b>								
+سه شنبه 24 مرداد 1396  08:27 ب.ظ																
+<br><br><center><img src='http://uupload.ir/files/zlxk_جداکننده.png'</a></center>																						
+<div>									
+<h2>										
+<a href="../post/38.html">چپتر 129 مانگای خادم سیاه انگلیسی آنلاین</a>									
+</h2>									
+<p class="date">										
+جمعه 16 تیر 1396 09:07 ب.ظ								
+	</p>								
+</div>											
+<b>نویسنده:</b>								
+<a href="../post/author/1456234.html">									
+αѕυℓα 								
+</a>														
+<br/>											
+									
+<b>موضوع مطلب:</b>									
+										
+<a href="../post/category/3.html">										
+	سبستین میکایلیس										
+</a>									
+										
+<a href="../post/category/2.html">										
+	شیل فانتوم هایو										
+</a>									
+										
+<a href="../post/category/1.html">										
+	دانلودی ها										
+</a>									
+															
+<br>								
+															
+<a href="../post/author/1456234.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/486/1456234.jpg"  /></a>								
+
+<div style="text-align: center;"><font size="3">به نام خدا</font></div><div style="text-align: center;"><font size="3">.</font></div><div style="text-align: center;"><font size="3">.</font></div><div style="text-align: center;"><font size="3">سلام دوستان ببخشید میخواستم به فارسی بزارم ولی یهویی همه چیزم</font></div><div style="text-align: center;"><font size="3"><br></font></div><div style="text-align: center;"><font size="3">پاک شد برای همین نتونستم الانم به انگلیسی اون چپتری رو که شیل</font></div><div style="text-align: center;"><font size="3"><br></font></div><div style="text-align: center;"><font size="3">برادر خودش پیدا میکنه رو براتون میزارم اگ به فارسی پیدا کنم فارسیشو میزارم</font></div><div style="text-align: center;"><font size="3"><br></font></div><div style="text-align: center;"><font size="3">به هر حال برین لینک زیر بخونین</font></div><div style="text-align: center;"><a href="http://www.mangahome.com/manga/kuroshitsuji/v18/c129" target="" title="blackbutler.mihanblog.com"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/100.gif"><font size="3">http://www.mangahome.com/manga/kuroshitsuji/v18/c129</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/100.gif"></a></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img src="http://www.uplooder.net/img/image/69/4222bc2d51eea6bc96e3db8aaea07141/Kuroshitsuji.jpg" alt="Image result for ‫شیل خادم سیاه‬‎" height="279" width="498"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">عکس بالا کپی شده از دخملا باحال</font></div>
+
+
+
+
+								
+													<br>																																
+<br>								<br>													<a target="_self" href="javascript:newComment(38)">									<b>کامنت: </b>									<script>setCommentCnt(38)</script> نظرات								</a>																<br/>																				<b>استیکر:</b>																		<a href="../post/tag/انیمه.html" >										انیمه									</a> ?																		<a href="../post/tag/مانگا&#32;خادم&#32;سیاه.html" >										مانگا خادم سیاه									</a> ?																		<a href="../post/tag/خادم&#32;سیاه.html" >										خادم سیاه									</a> ?																		<a href="../post/tag/شیل&#32;فانتوم&#32;هایو.html" >										شیل فانتوم هایو									</a> ?																		<a href="../post/tag/سباستین&#32;میکاییلیس.html" >										سباستین میکاییلیس									</a> ?																		<a href="../post/tag/مانگای&#32;فارسی.html" >										مانگای فارسی									</a> ?																		<a href="../post/tag/مانگای&#32;انگلیسی.html" >										مانگای انگلیسی									</a> ?																										<br/>																																							<b>آخرین ویرایش:</b>								
+دوشنبه 30 بهمن 1396  07:18 ب.ظ																
+<br><br><center><img src='http://uupload.ir/files/zlxk_جداکننده.png'</a></center>																						
+<div>									
+<h2>										
+<a href="../post/36.html">کاسپلی خادم سیاه</a>									
+</h2>									
+<p class="date">										
+سه شنبه 13 تیر 1396 02:15 ب.ظ								
+	</p>								
+</div>											
+<b>نویسنده:</b>								
+<a href="../post/author/1456234.html">									
+αѕυℓα 								
+</a>														
+<br/>											
+									
+<b>موضوع مطلب:</b>									
+										
+<a href="../post/category/3.html">										
+	سبستین میکایلیس										
+</a>									
+										
+<a href="../post/category/2.html">										
+	شیل فانتوم هایو										
+</a>									
+															
+<br>								
+															
+<a href="../post/author/1456234.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/486/1456234.jpg"  /></a>								
+
+
+<div style="text-align: center;"><font face="Mihan-Koodak" size="4">به نام خدا</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4">.</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4">.</font></div><div style="text-align: center;"><img src="http://a.deviantart.net/avatars/a/s/askblackbutler.gif?1" alt=":iconaskblackbutler:"></div><div style="text-align: center;"><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">&nbsp;</span><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">❤</span><font face="Mihan-Iransans" size="4">کنیچیواااا</font><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">&nbsp;</span><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">❤</span></div><div style="text-align: center;"><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">&nbsp;</span><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">❤</span><font face="Mihan-Iransans" size="4">اومدم با خوگل ترین کاسپلی های خادم سیاه</font><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">&nbsp;</span><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">❤</span></div><div style="text-align: center;"><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">&nbsp;</span><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">❤</span><font face="Mihan-Iransans" size="4">خیلی کاوایی هستن</font><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">&nbsp;</span><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">❤</span></div><div style="text-align: center;"><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">&nbsp;</span><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">❤</span><font face="Mihan-Iransans" size="4">به خصوص شیییییییییل</font><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">&nbsp;</span><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">❤</span></div><div style="text-align: center;"><img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12965111_473208582876289_600867835_n.jpg?ig_cache_key=MTIzODYyOTgyMjE0NDU2NzQxOQ%3D%3D.2" alt="Related image"></div><div style="text-align: center;">____________________<span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">&nbsp;</span><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">❤</span>_________________________</div><div style="text-align: center;"><br></div><div style="text-align: center;"><img src="http://www.mlo.me/upen/v/201308/20130816/Black-Butler-KuroShitsuji-Cosplay-Costume-1221-1657396.jpg" alt="Image result for black butler cosplay" height="612" width="459"></div><div style="text-align: center;">___________________________________<span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">&nbsp;</span><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">❤</span>_________________________________________</div><div style="text-align: center;"><br></div><div style="text-align: center;"><img src="https://images.ttcdn.co/media/products/186944-8236841cd56d4af89b7c9e2dbabb3e2b/s/harajukuinwonderland/mey-black-butler-cosplay-wig-0.png" alt="Image result for black butler cosplay"></div><div style="text-align: center;"><br></div><div style="text-align: center;">______________________________________<span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">&nbsp;</span><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">❤</span>__________________________________________</div><div style="text-align: center;"><img src="http://img00.deviantart.net/ab11/i/2011/329/a/2/lizzie___kuroshitsuji_by_pugoffka_sama-d4h9l0v.jpg" alt="Related image" height="751" width="502"></div><div style="text-align: center;">_______________________________<span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">&nbsp;</span><span style="color: rgb(44, 54, 53); font-family: Verdana, sans-serif; font-size: 12px; background-color: rgb(221, 229, 216);">❤</span>_______________________________</div><div style="text-align: center;"><img src="http://orig04.deviantart.net/b334/f/2013/047/f/4/white_rose___kuroshitsuji_by_omae_no_yome-d5v5wi3.jpg" alt="Related image"></div>
+
+
+
+								
+													<br>																																
+<br>								<br>													<a target="_self" href="javascript:newComment(36)">									<b>کامنت: </b>									<script>setCommentCnt(36)</script> نظر بده هر چی بدی بازم کمه								</a>																<br/>																				<b>استیکر:</b>																		<a href="../post/tag/کاسپلی&#32;انیمه&#32;ای.html" >										کاسپلی انیمه ای									</a> ?																		<a href="../post/tag/شیل&#32;فانتوم&#32;هایو.html" >										شیل فانتوم هایو									</a> ?																		<a href="../post/tag/کاسپلی&#32;خادم&#32;سیاه.html" >										کاسپلی خادم سیاه									</a> ?																		<a href="../post/tag/سباستین&#32;میکاییلیس.html" >										سباستین میکاییلیس									</a> ?																		<a href="../post/tag/انیمه.html" >										انیمه									</a> ?																		<a href="../post/tag/مانگا.html" >										مانگا									</a> ?																										<br/>																																							<b>آخرین ویرایش:</b>								
+دوشنبه 30 بهمن 1396  07:19 ب.ظ																
+<br><br><center><img src='http://uupload.ir/files/zlxk_جداکننده.png'</a></center>																						
+<div>									
+<h2>										
+<a href="../post/37.html">شباهت تولد ریوما و شیل</a>									
+</h2>									
+<p class="date">										
+دوشنبه 12 تیر 1396 04:59 ب.ظ								
+	</p>								
+</div>											
+<b>نویسنده:</b>								
+<a href="../post/author/1456234.html">									
+αѕυℓα 								
+</a>														
+<br/>											
+									
+<b>موضوع مطلب:</b>									
+										
+<a href="../post/category/2.html">										
+	شیل فانتوم هایو										
+</a>									
+															
+<br>								
+															
+<a href="../post/author/1456234.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/486/1456234.jpg"  /></a>								
+<div style="text-align: center;"><font face="Mihan-Nassim" size="5">به نام خدا</font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="5">.</font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="5">.</font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="5">.</font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="5">فقط تو ماه تولد شباهت دارن</font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="5">به نظر شما بین شیل و ریوما شباهتی وجود داره</font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="5">از نظر نه زیاد نه اینکه اصلا شباهتی نباشه فقط اینکه خیلی کم</font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="5">و اینکه شیل خوشمل تره</font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="5">با هم شباهت دارن نظر شما چیست؟</font></div><div style="text-align: center;"><img src="http://photos02.wisgoon.com/media/pin/photos02/images/o/2016/9/6/10/500x500_1473143193446507.png" alt="Image result for ‫شیل فانتوم هایو‬‎"></div>
+
+
+								
+													<br>																																
+<br>								<br>													<a target="_self" href="javascript:newComment(37)">									<b>کامنت: </b>									<script>setCommentCnt(37)</script> نظرات								</a>																<br/>																				<b>استیکر:</b>																		<a href="../post/tag/انیمه.html" >										انیمه									</a> ?																		<a href="../post/tag/شاهزاده&#32;تنیس.html" >										شاهزاده تنیس									</a> ?																		<a href="../post/tag/مانگا.html" >										مانگا									</a> ?																		<a href="../post/tag/خادم&#32;سیاه.html" >										خادم سیاه									</a> ?																		<a href="../post/tag/شباهت&#32;انیمه&#32;ای.html" >										شباهت انیمه ای									</a> ?																		<a href="../post/tag/ریوما&#32;ایچیزن.html" >										ریوما ایچیزن									</a> ?																		<a href="../post/tag/شیل&#32;فانتوم&#32;هایو.html" >										شیل فانتوم هایو									</a> ?																										<br/>																																							<b>آخرین ویرایش:</b>								
+دوشنبه 12 تیر 1396  05:03 ب.ظ																
+<br><br><center><img src='http://uupload.ir/files/zlxk_جداکننده.png'</a></center>																						
+<div>									
+<h2>										
+<a href="../post/33.html">شیل فانتوم هایو</a>									
+</h2>									
+<p class="date">										
+پنجشنبه 8 تیر 1396 03:15 ب.ظ								
+	</p>								
+</div>											
+<b>نویسنده:</b>								
+<a href="../post/author/1456234.html">									
+αѕυℓα 								
+</a>														
+<br/>											
+									
+<b>موضوع مطلب:</b>									
+										
+<a href="../post/category/2.html">										
+	شیل فانتوم هایو										
+</a>									
+															
+<br>								
+															
+<a href="../post/author/1456234.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/486/1456234.jpg"  /></a>								
+
+
+<div style="text-align: center;"><font face="verdana, arial, helvetica, sans-serif" size="5">به&nbsp;</font><font size="5" face="courier new, courier, monospace">نام خدا</font></div><div style="text-align: center;"><font size="5" face="courier new, courier, monospace"><br></font></div><div style="text-align: center;"><font size="5" face="courier new, courier, monospace">سلام دوستان اومدم با یه عکس بسی&nbsp;</font></div><div style="text-align: center;"><font size="5" face="courier new, courier, monospace">گوگولی از شیل جونم&nbsp;</font></div><div style="text-align: center;"><font size="5" face="courier new, courier, monospace">بیایید اینم عسک</font></div><div style="text-align: center;"><font face="courier new, courier, monospace" size="5">چیزی نداشتم ک بزارم شما بگید</font></div><div style="text-align: center;"><font face="courier new, courier, monospace" size="5">از چی بزارم</font></div><div style="text-align: center;"><img src="http://pre09.deviantart.net/e8a1/th/pre/f/2013/217/3/f/ciel_phantomhive_by_misakikchan14-d6grsdn.png" alt="Ciel Phantomhive by MisakiKChan14"></div>
+
+
+
+
+
+
+								
+													<br>																																
+<br>								<br>													<a target="_self" href="javascript:newComment(33)">									<b>کامنت: </b>									<script>setCommentCnt(33)</script> نظرات								</a>																<br/>																				<b>استیکر:</b>																		<a href="../post/tag/عکس&#32;چیبی.html" >										عکس چیبی									</a> ?																		<a href="../post/tag/شیل&#32;فانتوم&#32;هایو.html" >										شیل فانتوم هایو									</a> ?																		<a href="../post/tag/سباستین&#32;میکاییایس.html" >										سباستین میکاییایس									</a> ?																		<a href="../post/tag/خادم&#32;سیاه.html" >										خادم سیاه									</a> ?																		<a href="../post/tag/انیمه.html" >										انیمه									</a> ?																		<a href="../post/tag/مانگا.html" >										مانگا									</a> ?																										<br/>																																							<b>آخرین ویرایش:</b>								
+دوشنبه 5 تیر 1396  01:57 ب.ظ																
+<br><br><center><img src='http://uupload.ir/files/zlxk_جداکننده.png'</a></center>																						
+<div>									
+<h2>										
+<a href="../post/35.html">عکس های سباستین میکاییلیس</a>									
+</h2>									
+<p class="date">										
+دوشنبه 5 تیر 1396 01:50 ب.ظ								
+	</p>								
+</div>											
+<b>نویسنده:</b>								
+<a href="../post/author/1456234.html">									
+αѕυℓα 								
+</a>														
+<br/>											
+									
+<b>موضوع مطلب:</b>									
+										
+<a href="../post/category/3.html">										
+	سبستین میکایلیس										
+</a>									
+															
+<br>								
+															
+<a href="../post/author/1456234.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/486/1456234.jpg"  /></a>								
+<div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4">به نام خدا</font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4">.</font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4">سلام عشقیا دیروز خیلی بهم خوش گذشت میخواستم</font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4"><br></font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4">براتون دیروز هم پست بزارم اما نشد چون خونه دختر دایی جونم بودم</font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4"><br></font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4">خیلی بهمون خوش گذشت دختره دیفونه از شیل بدش میاد میگه لوسه</font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4"><br></font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4">ولی عاششششششششششششششق سباستینه</font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4"><br></font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4">میخواستم با موبایلم پست بزارم شارژ موبایلم تموم شد دیه چه کنیم</font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4"><br></font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4">نشستیم با هم انیمه سینمایی silent voice رو دیدیم</font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4"><br></font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4">کلا ما جفتمون اوتاکو بیدیم بگذریم</font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4"><br></font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4">این پست رو تقدیمی واس ساناز جونم میگذارم</font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4"><br></font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4">آی لاو یو عشقم</font></div><div style="text-align: center;"><img src="http://pre08.deviantart.net/cd57/th/pre/i/2014/139/b/a/render_sebastian_michaelis_by_yaelrukia-d7j0qw0.png" alt="Render Sebastian Michaelis by YaelRukia"></div>
+
+
+								
+													<br>																<a href='../post/35.html'>ادامه مطلب</a>																
+<br>								<br>													<a target="_self" href="javascript:newComment(35)">									<b>کامنت: </b>									<script>setCommentCnt(35)</script> نظرات								</a>																<br/>																				<b>استیکر:</b>																		<a href="../post/tag/انیمه.html" >										انیمه									</a> ?																		<a href="../post/tag/خادم&#32;سیاه.html" >										خادم سیاه									</a> ?																		<a href="../post/tag/سباستین&#32;میکاییلیس.html" >										سباستین میکاییلیس									</a> ?																		<a href="../post/tag/شیل&#32;فانتوم&#32;هایو.html" >										شیل فانتوم هایو									</a> ?																		<a href="../post/tag/عکس&#32;انیمه&#32;خادم&#32;سیاه.html" >										عکس انیمه خادم سیاه									</a> ?																		<a href="../post/tag/عکس&#32;انیمه&#32;ای.html" >										عکس انیمه ای									</a> ?																										<br/>																																							<b>آخرین ویرایش:</b>								
+دوشنبه 5 تیر 1396  01:56 ب.ظ																
+<br><br><center><img src='http://uupload.ir/files/zlxk_جداکننده.png'</a></center>																						
+<div>									
+<h2>										
+<a href="../post/34.html">undertaker &amp; ciel</a>									
+</h2>									
+<p class="date">										
+شنبه 3 تیر 1396 03:19 ب.ظ								
+	</p>								
+</div>											
+<b>نویسنده:</b>								
+<a href="../post/author/1456234.html">									
+αѕυℓα 								
+</a>														
+<br/>											
+									
+<b>موضوع مطلب:</b>									
+										
+<a href="../post/category/2.html">										
+	شیل فانتوم هایو										
+</a>									
+															
+<br>								
+															
+<a href="../post/author/1456234.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/486/1456234.jpg"  /></a>								
+<div style="text-align: center;"><font face="Mihan-IransansBold" size="4">به نام خدا</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">.</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">.</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">کنیچیوا میناسان^^</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4">آقا یه سوال دارم الان این عکسو ببینید</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/13.gif"></div><div style="text-align: center;"><span style="font-family: Mihan-IransansBold; font-size: large;">&nbsp;</span><img src="http://img06.deviantart.net/a4b0/i/2015/270/1/f/that_butler__submersion_by_delila2110-d9b3k4t.jpg" alt="That Butler, Submersion by Delila2110"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4">آقا کسی اینجا مانگاش خونده فک کنم این مال</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4">انیمه سینماییش باشه کسی خونده ایا؟؟؟؟</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4">کسی داند چه خبر است آیا؟؟</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4">کسی داند چه به خورد این بدبخت می دهد آیا؟؟</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4">________________</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><font face="Mihan-Iransans" size="4">_____</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><span style="font-family: Mihan-Iransans; font-size: large;">____</span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><span style="font-family: Mihan-Iransans; font-size: large;">____________________</span></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4">جیــــــــــــــغ</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4">آقا خداوکیلی چقدر این شیل و آندرتیکر خوشگل شدن اینجا</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4">خدایی جفتشون خیلی جذاب شدن</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4">آقایون جون مادرتون اینجوری نکنین با این کاراتون دارین</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4">کشته میدید=_____=</font></div>
+
+
+								
+													<br>																																
+<br>								<br>													<a target="_self" href="javascript:newComment(34)">									<b>کامنت: </b>									<script>setCommentCnt(34)</script> زیادش کن نظرام کمن								</a>																<br/>																				<b>استیکر:</b>																		<a href="../post/tag/انیمه.html" >										انیمه									</a> ?																		<a href="../post/tag/مانگا.html" >										مانگا									</a> ?																		<a href="../post/tag/خادم&#32;سیاه.html" >										خادم سیاه									</a> ?																		<a href="../post/tag/شیل&#32;فانتوم&#32;هایو.html" >										شیل فانتوم هایو									</a> ?																		<a href="../post/tag/سباستین&#32;میکاییلیس.html" >										سباستین میکاییلیس									</a> ?																		<a href="../post/tag/آندر&#32;تیکر.html" >										آندر تیکر									</a> ?																		<a href="../post/tag/under&#32;taker.html" >										under taker									</a> ?																										<br/>																																							<b>آخرین ویرایش:</b>								
+شنبه 3 تیر 1396  03:26 ب.ظ																
+<br><br><center><img src='http://uupload.ir/files/zlxk_جداکننده.png'</a></center>																						
+<div>									
+<h2>										
+<a href="../post/31.html">یه توضیح مختصر درباره آندرتیکر</a>									
+</h2>									
+<p class="date">										
+شنبه 3 تیر 1396 12:18 ق.ظ								
+	</p>								
+</div>											
+<b>نویسنده:</b>								
+<a href="../post/author/1456234.html">									
+αѕυℓα 								
+</a>														
+<br/>											
+									
+<b>موضوع مطلب:</b>									
+										
+<a href="../post/category/4.html">										
+	بیوگرافی ها										
+</a>									
+															
+<br>								
+															
+<a href="../post/author/1456234.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/486/1456234.jpg"  /></a>								
+<div style="text-align: center;"><font face="Mihan-IransansBold" size="4"><u>به نام خدا</u></font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4"><u>.</u></font></div><div style="text-align: center;"><img src="http://a.deviantart.net/avatars/a/l/allis-srm.png?8" alt=":iconallis-srm:"><font face="Mihan-IransansBold" size="4"><u>سلام بازدید وب خیلی کمه هااا بیایین زیاد سر بزنین</u></font><img src="http://a.deviantart.net/avatars/a/l/allis-srm.png?8" alt=":iconallis-srm:"></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4"><u>خب بگذریم براتوناطلاعات &nbsp;راجب گورکن یا همون آندر تیکر خودمون و اوردم</u></font></div><div style="text-align: center;"><img src="http://a.deviantart.net/avatars/a/l/allis-srm.png?8" alt=":iconallis-srm:"><font face="Mihan-IransansBold" size="4"><u>اینم بیو بخونین و حال کنین و کپی نکنین</u></font><img src="http://a.deviantart.net/avatars/a/l/allis-srm.png?8" alt=":iconallis-srm:"></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="4"><u>_____________________________</u></font></div><div style="text-align: center;"><span style="color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-weight: bold; line-height: 22.4px; text-align: start;">Undertaker&nbsp;</span><span style="color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; line-height: 22.4px; text-align: start;">(<span lang="ja" xml:lang="ja">葬儀屋（アンダーテイカー）</span></span></div><div style="text-align: center;"><span style="color: rgb(34, 34, 34); line-height: 22.4px; text-align: start;"><span lang="ja" xml:lang="ja"><div style="font-family: sans-serif; text-align: center;"><font size="4">Undertaker سابق Grim Reaper و مدیر مراسم تشییع جنازه در لندن است. هویت او به عنوان Grim Reaper سرکش، تا بعد از آن در سریال مشخص نشد، جایی که او اذعان کرد که او در پشت قیام جسد شناخته شده به عنوان عروسک عجیب و غریب است. پس از داشتن طبیعت واقعی خود را در معرض، Undertaker یک نقش بیشتر خصمانه در سری می گیرد. پیش از این، او سالها به عنوان یک خبرنگار برای خانواده فانتوم عمل کرد. بر خلاف دیگر Grim Reapers، او به نظر نمی رسد نیاز به عینک داشته باشد . همانند سباستین، Undertaker بر انسانها و همچنین اصول زندگی تأکید دارد. علی رغم شخصیت بی نظیر و خنده دارش، Undertaker یک شخص ، بی رحمانه و مبهم است. با این حال، او نشان داده است که به&nbsp;شدت مراقب Cielاست و او مایل به کشتن سباستین دارد ، زیرا او معتقد است که به خاطر سباستین&nbsp;Ciel بدبخت است.&nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/22.gif" style="font-family: tahoma;"></div></span></span><span style="color: rgb(34, 34, 34); line-height: 22.4px; text-align: start;"><span lang="ja" xml:lang="ja"><div style="font-family: sans-serif; text-align: center; font-size: 14px;">_______________________________________</div><div style="text-align: center;"><font face="Mihan-Iransans" size="4">راستی گفته شده که آندر تیکر از تمامی شخصیت های انیمه</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4"><br></font></div></span></span><span style="color: rgb(34, 34, 34); line-height: 22.4px; text-align: start;"><span lang="ja" xml:lang="ja"><div style="text-align: center;"><img src="http://a.deviantart.net/avatars/a/l/allis-srm.png?8" alt=":iconallis-srm:"><font face="Mihan-Iransans" size="4">خادم سیاه جذاب تره</font><img src="http://a.deviantart.net/avatars/a/l/allis-srm.png?8" alt=":iconallis-srm:"></div></span></span><span style="color: rgb(34, 34, 34); line-height: 22.4px; text-align: start;"><span lang="ja" xml:lang="ja"><div style="text-align: center;"><font face="Mihan-Iransans" size="4"><br></font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4">یعنی از سباستین و شیل جونی خوشگل تره؟</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4"><br></font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4">من که اینطور فکر نمیکنم حالا نظر شما چیه نظراتتون بهم</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="4"><br></font></div></span></span><span style="color: rgb(34, 34, 34); line-height: 22.4px; text-align: start;"><span lang="ja" xml:lang="ja"><div style="text-align: center;"><img src="http://a.deviantart.net/avatars/a/l/allis-srm.png?8" alt=":iconallis-srm:"><font face="Mihan-Iransans" size="4">بگید کامنت پلیز</font><img src="http://a.deviantart.net/avatars/a/l/allis-srm.png?8" alt=":iconallis-srm:"></div></span></span><span style="color: rgb(34, 34, 34); line-height: 22.4px; text-align: start;"><span lang="ja" xml:lang="ja"><div style="text-align: center;"><img src="http://pre14.deviantart.net/29bf/th/pre/f/2015/254/c/6/undertaker_akuma_6___kuroshitsuji__render__by_misakikchan14-d996tzp.png" alt="Undertaker Akuma 6 - Kuroshitsuji (Render) by MisakiKChan14"></div></span></span></div>
+
+
+								
+													<br>																																
+<br>								<br>													<a target="_self" href="javascript:newComment(31)">									<b>کامنت: </b>									<script>setCommentCnt(31)</script> نظرات								</a>																<br/>																				<b>استیکر:</b>																		<a href="../post/tag/undertaker.html" >										undertaker									</a> ?																		<a href="../post/tag/black&#32;butler.html" >										black butler									</a> ?																		<a href="../post/tag/انیمه.html" >										انیمه									</a> ?																		<a href="../post/tag/بیوگرافی&#32;خادم&#32;سیاه.html" >										بیوگرافی خادم سیاه									</a> ?																		<a href="../post/tag/شیل&#32;فانتوم&#32;هایو.html" >										شیل فانتوم هایو									</a> ?																		<a href="../post/tag/سباستین&#32;میکاییلیس.html" >										سباستین میکاییلیس									</a> ?																		<a href="../post/tag/خادم&#32;سیاه.html" >										خادم سیاه									</a> ?																										<br/>																																							<b>آخرین ویرایش:</b>								
+شنبه 3 تیر 1396  12:31 ق.ظ																
+<br><br><center><img src='http://uupload.ir/files/zlxk_جداکننده.png'</a></center>																				
+											
+<br><br>												
+													
+							
+صفحات دیگه : 5  							
+							
+<a href="1.html"> <span>1</span></a>							
+							
+<a href="2.html"> <span>2</span></a>							
+							
+<a href="3.html"> <b>3</b></a>							
+							
+<a href="4.html"> <span>4</span></a>							
+							
+<a href="5.html"> <span>5</span></a>							
+						
+														
+<div id="footer" class="clearfix">							
+<strong>								
+POWERED BY <a href="http://roman-e.mihanblog.com/">								
+<font color="#FF0000" size="2px">M</font>agic								
+<font color="#FF0000" size="2px">S</font>pirit</a>							
+</strong>						
+</div>					
+</div>											
+<div id="sidebar">							
+<form id="frm-16082135155fdb640b245ff" method="get" action="http://blackbutler.mihanblog.com/post/search/fid/16082135155fdb640b245ff"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 								
+<div class="sidebar_box_border_div">									<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									
+<div class="sidebar_box">										
+<input type="text" name="search_text" style=" width:100px" />										
+<input type="submit" style="display: block; width: 60px; height: 30px; color:#000; margin-right: 110px;
+    margin-top: -27px;" value="جستجو"/>								
+</div>									<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>								</div>							<input type="hidden" name="frm-id" value="16082135155fdb640b245ff" id="frm-id" /></form>													
+
+<div class="seprator"><img src="http://static.mihanblog.com//public/images/empty.gif"/></div>												
+<div class="sidebar_box_border_div">								
+<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>								
+<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>								
+<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>								
+<div class="sidebar_box">									
+<div style="text-align:center">		
+<!-- start logo cod off http://roman-e.mihanblog.com/ --><p align="center"><p align="center"><a href="http://roman-e.mihanblog.com/" target="_blank"><img border="0" src="http://uupload.ir/files/8z3o_wdf_245996212.png"  width="200" height="210" alt="magic spirit"></a></p><!--finish logo cod off http://roman-e.mihanblog.com/ -->   
+                                                <div align="center" style="border:none; width:160px; overflow:hidden"></div>
+<!--locking Right click by : fa-tools.ir--> <script language="javascript" src="http://fa-tools.ir/code/rightclick/right-click1.js"></script> <a target="_blank" href="http://fa-tools.ir/News/topic/21/" > کد حرفه ای قفل کردن کامل راست کلیک </a><div style="display:none"><a href="http://fa-tools.ir" > فاتولز – جدیدترین ابزار رایگان وبمستر </a></div> <!--locking Right click by : fa-tools.ir-->								
+<a href="3.html">ایمیل</a><br/>										
+<a href="javascript:messageForm()">تماس با ما</a><br/>
+<div style="text-align:center">ســـــــــلامـ ممنونـ کهـ سر زدیـ بازمـ بیا کامنتـ همـ فراموشـ نکنـ هر چیـ کهـ اینجا قرار میگیرهـ از انیمهـ بسیار زیبا و جذابـ خادمـ سیاهـ هستـ										
+									
+<div class="clearfix" style="margin-right:70px">											
+									</div>									
+</div>								
+</div>								
+<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>								
+<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>								
+<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>							
+</div>							<div class="seprator"><img src="http://static.mihanblog.com//public/images/empty.gif"/></div>														
+
+		<form id="frm-16082135155fdb640b24712" method="post" action="http://blackbutler.mihanblog.com/poll/new/fid/16082135155fdb640b24712/atrty/1608213515/avrvy/0/key/da1207a32c73b981bc19edc8f9cba507/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="374200" id="data[pollid]" />										
+<div class="sidebar_box_border_div">									
+<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									
+<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									
+<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									
+<div class="sidebar_box">										
+<h3>Survey</h3>										
+ژانر انیمه مورد علاقت چیه؟<br>										
+											
+<label><input type="radio" name="data[answer]" value="v1">ترسناک</label>											
+<br>										
+											
+<label><input type="radio" name="data[answer]" value="v2">کمدی</label>											
+<br>										
+											
+<label><input type="radio" name="data[answer]" value="v3">اکشن</label>											
+<br>										
+											
+<label><input type="radio" name="data[answer]" value="v4">زندگی روزمره</label>											
+<br>										
+											
+<label><input type="radio" name="data[answer]" value="v5">مدرسه ی</label>											
+<br>										
+											
+<label><input type="radio" name="data[answer]" value="v6">عاشقانه</label>											
+<br>										
+											
+<label><input type="radio" name="data[answer]" value="v7">درام</label>											
+<br>										
+											
+<input  type="submit" style="color:#000;margin-right:30px; margin-top:5px;" value="ثبت" >									
+</div>									<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>								</div>							
+		<input type="hidden" name="frm-id" value="16082135155fdb640b24712" id="frm-id" /></form>																					<div class="seprator"><img src="http://static.mihanblog.com//public/images/empty.gif"/></div>																											<div class="sidebar_box_border_div">									<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<div class="sidebar_box">										<h3>Stickers</h3>																									<a href="../post/tag/خادم+سیاه.html" style="font-size:1.64em">												خادم سیاه 											</a>																									<a href="../post/tag/kurushitsuji.html" style="font-size:1.06em">												kurushitsuji 											</a>																									<a href="../post/tag/اوتاکو.html" style="font-size:1.06em">												اوتاکو 											</a>																									<a href="../post/tag/مانگا.html" style="font-size:1.34em">												مانگا 											</a>																									<a href="../post/tag/انیمه+خادم+سیاه.html" style="font-size:1.31em">												انیمه خادم سیاه 											</a>																									<a href="../post/tag/شیل+فانتوم+هایو.html" style="font-size:1.48em">												شیل فانتوم هایو 											</a>																									<a href="../post/tag/undertaker.html" style="font-size:1em">												undertaker 											</a>																									<a href="../post/tag/black+butler.html" style="font-size:1.31em">												black butler 											</a>																									<a href="../post/tag/سباستین+میکاییلیس.html" style="font-size:1.39em">												سباستین میکاییلیس 											</a>																									<a href="../post/tag/انیمه.html" style="font-size:2em">												انیمه 											</a>																				</div>										<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>								</div>														<div class="seprator"><img src="http://static.mihanblog.com//public/images/empty.gif"/></div>																											<div class="sidebar_box_border_div">									<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<div class="sidebar_box">										<h3>Subjects</h3>																					<a href="../post/category/5.html">												فن فیک(2)											</a>											<br/>																			<a href="../post/category/4.html">												بیوگرافی ها(10)											</a>											<br/>																			<a href="../post/category/3.html">												سبستین میکایلیس(23)											</a>											<br/>																			<a href="../post/category/2.html">												شیل فانتوم هایو(28)											</a>											<br/>																			<a href="../post/category/1.html">												دانلودی ها(8)											</a>											<br/>																	</div>									<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>								</div>																					<div class="seprator"><img src="http://static.mihanblog.com//public/images/empty.gif"/></div>																													<div class="sidebar_box_border_div">															<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<div class="sidebar_box">										<div>											
+<h3>Authors</h3>																								<a href="../post/author/1456234.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/486/1456234.jpg" style="width:16px;" /></a>												<a href="../post/author/1456234.html">													αѕυℓα (48)												</a>											<br/>																								<a href="../post/author/1582810.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/528/1582810.jpg" style="width:16px;" /></a>												<a href="../post/author/1582810.html">													♡мɒo♡тɒмɒii♡ (8)												</a>											<br/>																								<a href="../post/author/1668110.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/557/1668110.jpg" style="width:16px;" /></a>												<a href="../post/author/1668110.html">													AwLn- (3)												</a>											<br/>																					</div>									</div>									<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>								</div>																					<div class="seprator"><img src="http://static.mihanblog.com//public/images/empty.gif"/></div>																											<div class="sidebar_box_border_div">									<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<div class="sidebar_box">										
+<h3>Extra Pages</h3>																						<a href="../extrapage/mylogoandmyfriendslogo.html">												لوگوها											</a>											<br/>																				</div>										<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>								</div>																					<div class="seprator"><img src="http://static.mihanblog.com//public/images/empty.gif"/></div>																																			<div class="sidebar_box_border_div">									<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<div class="sidebar_box">										<h3>Archives</h3>																					<a href="../post/archive/1398/6.html"> شهریور 1398</a>											<br/>																					<a href="../post/archive/1397/12.html"> اسفند 1397</a>											<br/>																					<a href="../post/archive/1397/11.html"> بهمن 1397</a>											<br/>																					<a href="../post/archive/1397/9.html"> آذر 1397</a>											<br/>																					<a href="../post/archive/1397/4.html"> تیر 1397</a>											<br/>																					<a href="../post/archive/1397/3.html"> خرداد 1397</a>											<br/>																					<a href="../post/archive/1397/2.html"> اردیبهشت 1397</a>											<br/>																					<a href="../post/archive/1397/1.html"> فروردین 1397</a>											<br/>																					<a href="../post/archive/1396/12.html"> اسفند 1396</a>											<br/>																					<a href="../post/archive/1396/11.html"> بهمن 1396</a>											<br/>																					<a href="../post/archive/1396/10.html"> دی 1396</a>											<br/>																					<a href="../post/archive/1396/8.html"> آبان 1396</a>											<br/>																				<a href="../post/archive.html"><b>همه آرشیو ها</b></a>									</div>									<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>								</div>																																						<div class="seprator"><img src="http://static.mihanblog.com//public/images/empty.gif"/></div>																																	<div class="seprator"><img src="http://static.mihanblog.com//public/images/empty.gif"/></div>																											<div class="sidebar_box_border_div">									<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<div class="sidebar_box">										<h3>Links</h3>																						<a href="http://www.subnama.ir/" title="دانلود زیرنویس فارسی فیلم و سریال با لینک مستقیم و بدون فیلتر" target="_blank">												دانلود زیرنویس											</a>											<br/>																						<a href="http://www.vidarchive.ir/" title="وید آرشیو. مجموعه ی بزرگی از کلیپ ها با موضوعات مختلف جایگزینی برای یوتیوب ..." target="_blank">												دانلود کلیپ											</a>											<br/>																						<a href="http://baygoosh.mihanblog.com/" title="" target="_blank">												دخملونه											</a>											<br/>																						<a href="http://otaku-city.blog.ir" title="" target="_blank">												آموزش ژاپنی الفبای هیرا											</a>											<br/>																						<a href="http://yon.ir/AA8ez" title="سلام. ممنونم که پرچم وبلاگ نویسی رو بالا نگه داشتید :)
+
+سایت نویسور راه اندازی شده تا پست های شما بیشتر خونده بشن،.
+
+باید اعلام کنم که بعد از دوماه فعالیت 1000 تایی شدیم.
+
+دعوت میکنم تشریف بیارید به لینک زیر و فصل نو ی وبلاگ نویسی تون رو شروع کنید.
+yon.ir/AA8ez
+
+منتظر پست هاتون در نویسور هستیم :)" target="_blank">												ــ وبـلاگ نویسی بهـترــ											</a>											<br/>																						<a href="http://baygoosh.mihanblog.com/" title="" target="_blank">												دخملونه											</a>											<br/>																						<a href="http://yon.ir/AA8ez" title="سلام. ممنونم که پرچم وبلاگ نویسی رو بالا نگه داشتید :)
+
+سایت نویسور راه اندازی شده تا پست های شما بیشتر خونده بشن، اپ موبایلمون هم تو راهه.
+
+دعوت میکنم تشریف بیارید به لینک زیر و فصل نو ی وبلاگ نویسی تون رو شروع کنید.
+yon.ir/AA8ez
+
+لطفا این لینک را هم تایید کنید. متشکرم" target="_blank">												ــ وبـلاگ نویسی بهـترــ											</a>											<br/>																						<a href="http://yon.ir/AA8ez" title="سلام. ممنونم که پرچم وبلاگ نویسی رو بالا نگه داشتید :)
+
+سایت نویسور راه اندازی شده تا پست های شما بیشتر خونده بشن، اپ موبایلمون هم تو راهه.
+
+دعوت میکنم تشریف بیارید به لینک زیر و فصل نو ی وبلاگ نویسی تون رو شروع کنید.
+yon.ir/AA8ez
+
+لطفا این لینک را هم تایید کنید. متشکرم" target="_blank">												ــ وبـلاگ نویسی بهـترــ											</a>											<br/>																						<a href="http://worldofanime.mihanblog.com/" title="" target="_blank">												stockholm syndrome											</a>											<br/>																						<a href="http://mykhatere.mihanblog.com/" title="" target="_blank">												خاطرات صورتی من											</a>											<br/>																				<a href="../linkdaily/index.html"><b>همه لینک ها</b></a>										<a href="javascript:linkdailyForm()"><b></b></a>									</div>									<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>								</div>																																				<div class="seprator"><img src="http://static.mihanblog.com//public/images/empty.gif"/></div>																											<div class="sidebar_box_border_div">									<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>										<div class="sidebar_box">										<div>											<h3>Subjects</h3>																								<a href="../post/87.html">													فن فیک پارت 2												</a>												<br/>																								<a href="../post/86.html">													chapter  149 -												</a>												<br/>																								<a href="../post/85.html">													تست شناخت ادمین ماندانا												</a>												<br/>																								<a href="../post/84.html">													fact-												</a>												<br/>																								<a href="../post/83.html">													chapter 149 spoilers-												</a>												<br/>																								<a href="../post/82.html">													جدیدترین چپترهای مانگای خادم سیاه												</a>												<br/>																								<a href="../post/81.html">													صداپیشه های شخصیت های انیمه black butler												</a>												<br/>																								<a href="../post/80.html">													 دیالوگ های معروف انیمه خادم سیاه												</a>												<br/>																								<a href="../post/79.html">													بیوگرافی برادر دوقلوی شیل												</a>												<br/>																								<a href="../post/78.html">													فن فیک پارت1												</a>												<br/>																								<a href="../post/77.html">													میخوام فن فیک بنویسم												</a>												<br/>																								<a href="../post/75.html">													یه کانال تلگرام تازگی ها زدم:/												</a>												<br/>																								<a href="../post/73.html">													بیوگرافی Edward Midford												</a>												<br/>																								<a href="../post/72.html">													ســــــــــــ1397#ــــــــــال نو مبـــــــــــــــــارکــــــــــــ												</a>												<br/>																								<a href="../post/71.html">													فکت و اسپویل راجب خادم سیاه												</a>												<br/>																					</div>									</div>									<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>								</div>																					<div class="seprator"><img src="http://static.mihanblog.com//public/images/empty.gif"/></div>																																				<div class="sidebar_box_border_div">									<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>								<div class="sidebar_box">										
+<h3>Views</h3>										کل بازدید:<script>getStatVar('total_view');</script><br/>										بازدید امروز:<script>getStatVar('today_view');</script><br/>										بازدید دیروز: <script>getStatVar('yesterday_view');</script><br/>										بازدید این ماه: <script>getStatVar('this_month_view');</script><br/>										بازدید ماه قبل: <script>getStatVar('last_month_view');</script><br/>										تعداد نویسندگان: <script>getStatVar('total_author');</script><br/>										تعداد کل مطالب: <script>getStatVar('total_post');</script><br/>																			</div>										<b class="sidebar_box_border" style="margin:0 1px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 2px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>									<b class="sidebar_box_border" style="margin:0 3px"><img src="http://static.mihanblog.com//public/images/empty.gif"/></b>								</div>																																		<div class="seprator"><img src="http://static.mihanblog.com//public/images/empty.gif"/></div>												<div class="sidebar_box_border_div">								<script language="JavaScript1.2">
+function disableselect(e){
+return false
+}function reEnable(){
+return true
+}document.onselectstart=new Function ("return false")
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}</script><!-- HTML Codes by Quackit.com -->
+<audio src="http://up2www.com/uploads/0eb6Taylor-Swift-Look-What-You-Made-Me-Do-MP3-320.mp3" autoplay="autoplay" controls loop="loop" id="MusicPlayer">
+<embed src="http://up2www.com/uploads/0eb6Taylor-Swift-Look-What-You-Made-Me-Do-MP3-320.mp3" autoplay="true" width="450" height="300" name="MusicPlayer" id="MusicPlayer">
+</audio><!-- Online Support by www.1abzar.com --->
+<script type="text/javascript" src="https://online.1abzar.com/1abzar.php?admin=3053513&on=http://s8.picofile.com/file/8318834468/Untitled.png&off=http://up.persianscript.ir/uploads2/b389-Untitledsssss.png"></script><div style="display:none"><h3><a href="http://www.1abzar.com">&#1662;&#1588;&#1578;&#1740;&#1576;&#1575;&#1606;&#1740;</a></h3></div>
+<!-- Online Support by www.1abzar.com --->
+
+							</div>							<div class="sidebar_box_border_div">								<div class="mihan_logo"></div>							</div>					</div>				</div>			</div>						<div id="footer_background"><img src="http://static.mihanblog.com//public/images/empty.gif"/></div>										</div></body></html><p align='center'><script>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'blackbutler.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.targetedwebtraffic.com" target="_blank">Buy Website Traffic</a> | <a href="https://www.seo25.com" target="_blank">Buy Targeted Website Traffic</a>
+    </div>
+</center>

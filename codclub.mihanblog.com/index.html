@@ -1,0 +1,1394 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://codclub.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1781202*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[1]='1462';commentCnt[324]='13';commentCnt[325]='2';commentCnt[326]='5';commentCnt[327]='5';commentCnt[328]='0';commentCnt[329]='3';commentCnt[330]='1';commentCnt[331]='1';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[1]='0';
+mihanblogDisLikeArrCnt[1]='0';
+mihanblogLikeArrCnt[324]='0';
+mihanblogDisLikeArrCnt[324]='0';
+mihanblogLikeArrCnt[325]='0';
+mihanblogDisLikeArrCnt[325]='0';
+mihanblogLikeArrCnt[326]='0';
+mihanblogDisLikeArrCnt[326]='0';
+mihanblogLikeArrCnt[327]='0';
+mihanblogDisLikeArrCnt[327]='0';
+mihanblogLikeArrCnt[328]='0';
+mihanblogDisLikeArrCnt[328]='0';
+mihanblogLikeArrCnt[329]='0';
+mihanblogDisLikeArrCnt[329]='0';
+mihanblogLikeArrCnt[330]='0';
+mihanblogDisLikeArrCnt[330]='0';
+mihanblogLikeArrCnt[331]='0';
+mihanblogDisLikeArrCnt[331]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://codclub.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://codclub.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','248');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','پنجشنبه 22 اسفند 1398');
+	
+	setStatVar('today_view','7');
+	setStatVar('yesterday_view','46');
+	
+	setStatVar('this_month_view','1325');
+	setStatVar('last_month_view','934');
+
+	setStatVar('total_view','310536');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (04:28)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://codclub.mihanblog.com/statupdate/?data[refereruri]=http://thisisyasi.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607825899&data[hash]=9f06379ca3ba2cfbe0b27c3c8213544d&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://codclub.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://codclub.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://codclub.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://codclub.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://codclub.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://codclub.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://codclub.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://codclub.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://codclub.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://codclub.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://codclub.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://codclub.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://codclub.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://codclub.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://codclub.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://codclub.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://codclub.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://codclub.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://codclub.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://codclub.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://codclub.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://codclub.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://codclub.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://codclub.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://codclub.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://codclub.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://codclub.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://codclub.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://codclub.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://codclub.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://codclub.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://codclub.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://codclub.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://codclub.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://codclub.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://codclub.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="expires" content="-1" />
+<meta name="description" content="ｏｐｅｎ ｍｉｎｄ" />
+<meta name="keywords" content="" />
+<title>ｏｐｅｎ ｍｉｎｄ</title>
+<base target="_blank" />
+<style type="text/css" media="all">
+body             {margin:0px; word-wrap:break-word; font-family:tahoma, sans-serif; font-size:13px; color:#666;}
+#Granny             {width:750px;}
+::-webkit-scrollbar         {width:7px;}
+::-webkit-scrollbar-track     {background:#fff; border:1px solid #D6CEC3;}
+::-webkit-scrollbar-thumb     {background:#8BD0BD; box-shadow:0px 0px 7px 3px #D6CEC3;}
+::-moz-scrollbar         {width:7px;}
+::-moz-scrollbar-track     {background:#fff; border:1px solid #D6CEC3;}
+::-moz-scrollbar-thumb     {background:#8BD0BD; box-shadow:0px 0px 7px 3px #D6CEC3;}
+a             {text-decoration:none; color:#E88DC8;}
+a:hover            {text-decoration:underline;}
+#Header            {background:#fff url("http://s2.picofile.com/file/8101607550/277.jpg") no-repeat center; height:330px; margin-bottom:10px; border:10px solid #fff; outline:1px solid #ddd;}
+#BlogTitle        {color:#E88DC8; font-size:20px; text-shadow:1px 2px 3px #bbb; padding-bottom:15px;}
+.OnePost            {direction:rtl; background:#FFF; border:10px solid #fff; outline:1px solid #ddd;}
+.OnePost img        {max-width:98%;}
+.MidPost            {border:1px solid #eee; padding:5px;}
+.BotPost            {background:#F4F4F4; border:1px solid #ddd; margin-top:4px; color:#999; padding:2px 5px; font-size:12px; font-family:maiandra gd;}
+.TitleHeaderPost        {border-bottom:1px solid #ddd; border-top:1px solid #ddd; background:#A3EAF0; height:20px; font-size:15px; text-align:right; padding:5px;}
+.TitleHeaderPost a        {color:white; text-shadow:1px 2px 3px #444;}
+.PostTextBody        {direction:rtl; padding:5px; font-size:13px; color:#444; text-align:right; line-height: 150%; }
+.PostSep            {height:15px;}
+.LinkSep            {height:15px;}
+#MainCol            {background:#F4F4F4; border:1px solid #ddd; direction:rtl; width:500px; padding:15px; float:right;}
+#Menu            {display:none;}
+#Menu a            {font-size:16px; color:#4F2D14; font-family:maiandra gd;}
+#Menu a:hover        {color:red; text-shadow:1px 2px 3px #999; border-bottom:1px dashed red;}
+#SideCol            {background:#F4F4F4; direction:rtl; float:left; border:1px solid #ddd; direction:rtl; width:170px; padding:15px;}
+.Box            {background:#fff; color:#3F1D1C; padding:4px; border-bottom:1px solid #ddd; border-top:1px solid #ddd;}
+.Box a            {color:#666;}
+.Link            {padding:2px 17px; text-align:left; text-shadow:1px 2px 3px #bbb;}
+.Link a            {color:#666;}
+.Title            {b:#F3B6D5; background:#A3EAF0; padding:2px 10px; text-align:left; color:white; text-shadow:1px 2px 3px #222;}
+#Inside            {background:#fff; border:5px solid #ddd; margin-bottom:5px; box-shadow:0px 0px 3px 1px #bbb;}
+.Box img            {max-width:98%; border:2px solid #eee; margin-bottom:3px;}
+
+
+</style>
+<script type="text/javascript" language="javascript">
+<!--
+    function GetBC(lngPostid) {
+    var intTimeZone="<-BlogTimeZone->", strBlogId="CODCLUB", intCount=-1, strResult="";
+    try {
+    for (i=0;i<BlogComments.length;i+=2) {
+    if (BlogComments[i]==lngPostid)
+    intCount=BlogComments[i+1] ;}
+    } catch(e) {}
+    if (intCount == -1) strResult="CM's";
+    if (intCount == 0)    strResult="CM's";
+    if (intCount == 1)    strResult="1CM";
+    if (intCount > 1)    strResult=intCount + "CM";
+    var strUrl = "/comments/?blogid=" + strBlogId + "&postid=" + lngPostid + "&timezone=" + intTimeZone;
+    var strResult = "<a href=\"javascript:void(0)\" target=\"_self\" onclick=\"javascript:window.open('"+strUrl+"','blogfa_comments','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,width=500px,height=500px')\" >"+strResult+"</a>" ;
+    document.write(strResult);}
+    function OpenLD {
+    window.open('/links','blogfa_ld','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px');
+    return true; }
+// -->
+
+
+</script>
+</head>
+<body>
+<center>
+    <div id="Granny">
+<!-------------------MainCol-------------------->
+<div id="MainCol">
+<div id="Header"></div>
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		        <div class="OnePost">
+<div class="TitleHeaderPost"><a href="http://codclub.mihanblog.com/post/1">.:WeLCoMe:.</a></div>
+            <div class="MidPost">
+<div class="PostTextBody"><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+<div align="center"><img src="http://s6.picofile.com/file/8384511984/tumblr_ov63vejLGL1upu1txo1_1280.png" alt="" height="" hspace="0" border="0" vspace="0" width="500" align="bottom"></div><div align="center"><font size="3">خب خب... سلام به شهروند<br>بنده مهسا هستم و به اسم رریتی پای نظر میدم :|<br>این وب قبلا وب کدنویسی بوده، ولی الان از هرچی دلم بخواد آپ میکنم<br>دوست نتی 99% قبول<br>تبادل لینک و لوگو 100% قبول<br>لطفا قبل از هک کردن بهم بگید مشکل چیه :|<br>و راستی فهش کردن من تو این وب آزاده <br>کپی هم کنی به درک نشون میدی چقدر از من خوشت میاد<br>سفارش قالب میهن بلاگ میگیرم<br>اگه دیدید که من آنلاینم بیاید و با من حرف بزنید... بیشتر موقع ها حوصلم سر میره<br>همین دیگه یادتون باشه خوشگذرونی فقط با آبدوغ خیار<br><font size="2"><font size="3"><font size="2"><font size="3"><font style="font-size: 9pt" face="yekan"><font size="4">.:دکمه ها:.<br></font></font></font></font></font></font></font><div style="text-align: center;"><a href="http://codclub.mihanblog.com/post/category/1" target="" title=""><img src="http://s9.picofile.com/file/8301750168/ue1.png" alt="" hspace="0" border="0" vspace="0" align="bottom"></a></div><div style="text-align: center;"><br></div><div style="text-align: center;"><a href="http://codclub.mihanblog.com/post/category/4" target="" title=""><img src="http://s9.picofile.com/file/8301750292/ue2.png" alt="" hspace="0" border="0" vspace="0" align="bottom"></a></div><div style="text-align: center;"><br></div><div style="text-align: center;"><a href="http://codclub.mihanblog.com/extrapage/steal" target="" title=""><img src="http://s8.picofile.com/file/8301750318/ue3.png" alt="" hspace="0" border="0" vspace="0" align="bottom"></a></div><div style="text-align: center;"><br></div><div style="text-align: center;"><a href="http://codclub.mihanblog.com/extrapage/myfriends" target="" title=""><img src="http://s8.picofile.com/file/8301750400/ue4.png" alt="" hspace="0" border="0" vspace="0" align="bottom"></a></div><div style="text-align: center;"><br></div><div style="text-align: center;"><a href="http://codclub.mihanblog.com/extrapage/my_weblog" target="" title=""><img src="http://s8.picofile.com/file/8301750550/ue5.png" alt="" hspace="0" border="0" vspace="0" align="bottom"></a><br><br><font size="4">دکمه ها توسط: <a href="../cool-girls.mihanblog.com/index.html" target="" title="">قلمرو درخشش خورشید</a><br><br>لوگو وب اگه دوست داشتید بزارید تو وبتون :)<br><br><a title="Open Mind" alt="Open Mind" href="index.html" target="_blank"><img src="http://s9.picofile.com/file/8331641718/codclub.gif" height="" width="130"></a><br> <textarea style="background:#FFFFFF;width:140px;height:22px;text-align:left;overflow:hidden;" onclick="javascript:this.select();"> &lt;!-- Start Code Banner By : http://codclub.mihanblog.com/ --&gt; &lt;p style="text-align:center"&gt;&lt;a title="Open Mind" alt="Open Mind" href="http://codclub.mihanblog.com/"  target="_blank"&gt;&lt;img src="http://s9.picofile.com/file/8331641718/codclub.gif" width="130" height=""&gt;&lt;/a&gt;&lt;/p&gt; &lt;!-- End Code Banner By : http://codclub.mihanblog.com/ --&gt; </textarea></font><font size="4"><br><!-- Start Code By Love skin --><!-- Start Code Banner By http://codclub.mihanblog.com --><br><font face="tahoma,arial,helvetica,sans-serif" size="3">"Farari" </font></font><font size="4"><font face="tahoma,arial,helvetica,sans-serif" size="3"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2819%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir"></font><br></font><br></div><font size="3"><font style="font-size: 9pt" face="yekan"><span class="auto-style2"><p><img alt="" src="http://s9.picofile.com/file/8330964400/lain_watermarked_by_kicked_in_teeth_dbupp46.gif" class="DD" style="box-shadow: rgb(192, 192, 192) 0px 0px 15px; opacity: 1; transition-duration: 0.5s;" height="118" width="121"></p><p><br></p></span></font></font><font size="3"><img class="transparent" alt="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28190%29.gif" src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28190%29.gif">اخبار وب</font><img class="transparent" alt="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28190%29.gif" src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28190%29.gif"><div align="center"><textarea id="c" style="resize: none; overflow: hidden; width: 200px; height: 90px; border: px solid #000; border-radius: 0px; font-size: 10pt; color: #000; text-align: left; background: #fff  url(http://s7.picofile.com/file/8241611768/heart_pattern_108.gif) repeat center; padding: 0px 0px 0px 0px;">به خاطر بی حوصلگی خودم به احتمال زیاد دیگه اونقدرا آنلاین نمیشم</textarea><br><br></div>
+ </div><div align="center">                        </div><font size="3">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<br>Tag's: </br>
+            </div>
+            <div class="BotPost">
+<a target="_self" href="javascript:newComment(1)" > نظرات(<script>setCommentCnt(1)</script>)</a>
+<script language="javascript" type="text/javascript">GetBC("1");</script> .
+
+رریتی پای  . یکشنبه 4 بهمن 1394 . 09:30 ب.ظ            </div>
+
+        </div>
+    <div class="PostSep"></div>
+        <div class="OnePost">
+<div class="TitleHeaderPost"><a href="http://codclub.mihanblog.com/post/331">کمی چیز از یه پروژه</a></div>
+            <div class="MidPost">
+<div class="PostTextBody"><div align="center"><font size="3">دوستم ازم خواستش تو یه بازی بهش کمک کنم. الان شغلم اینه که برای بازیش شخصیت و بکگراند بکشم :)</font><br><font size="3">یه دونه از کارایی که براش انجام دادم.</font><br><font size="3">وقتی که بازیش تموم شد یه پست براش درست میکنم.<br><br><img src="http://s7.picofile.com/file/8390882242/texture_applied.png" alt="" height="" hspace="0" border="0" vspace="0" width="500" align="bottom"><br></font><font size="3">
+
+
+</font></div> </div>
+<br>Tag's: </br>
+            </div>
+            <div class="BotPost">
+<a target="_self" href="javascript:newComment(331)" > نظرات(<script>setCommentCnt(331)</script>)</a>
+<script language="javascript" type="text/javascript">GetBC("331");</script> .
+
+رریتی پای  . جمعه 23 اسفند 1398 . 03:05 ب.ظ            </div>
+
+        </div>
+    <div class="PostSep"></div>
+        <div class="OnePost">
+<div class="TitleHeaderPost"><a href="http://codclub.mihanblog.com/post/330">زنده</a></div>
+            <div class="MidPost">
+<div class="PostTextBody">
+
+
+<div align="center"><font size="3">من... زندم؟</font><br><font size="3">یا خیارشور</font><br><font size="3">بله دوستان من نمردم</font><br><font size="3">تو این حال و هوای کرونایی لطفا مراقب خودتون باشید!</font><br><font size="3">شااااید یه وقتی دوباره کد درست کردم، ولی پسر نگاه کردن به این وبسایت واقعا به آدم نوستالژیک میده</font><br><font size="3">5 ساله که این وبسایتو داvم. باحاله نه؟</font><br><font size="3">آپدیت اینکه تو این یه سال چی شد: ی دوست دختر پیدا کردم.......... همون روز فهمیدم که تو روز ولنتاین داره با پسر داییش رل میره</font><br><font size="3">بهترین ولنتاین دنیا<br><br><img src="http://s7.picofile.com/file/8390821500/unnamed.jpg" alt="" height="500" hspace="0" border="0" vspace="0" width="500" align="bottom"><br></font><font size="3">
+
+
+</font></div>
+
+
+
+
+
+ </div>
+<br>Tag's: </br>
+            </div>
+            <div class="BotPost">
+<a target="_self" href="javascript:newComment(330)" > نظرات(<script>setCommentCnt(330)</script>)</a>
+<script language="javascript" type="text/javascript">GetBC("330");</script> .
+
+رریتی پای  . پنجشنبه 22 اسفند 1398 . 11:01 ب.ظ            </div>
+
+        </div>
+    <div class="PostSep"></div>
+        <div class="OnePost">
+<div class="TitleHeaderPost"><a href="http://codclub.mihanblog.com/post/protected/329">  مطلب رمز دار : آپدیت؟؟؟</a></div>
+            <div class="MidPost">
+<div class="PostTextBody">این مطلب رمزدار است، جهت مشاهده باید کلمه رمز این مطلب را وارد کنید.<form id="frm-16077439875fd439f347e35" method="post" action="http://codclub.mihanblog.com/post/protected/329/fid/16077439875fd439f347e35/atrty/1607743987/avrvy/0/key/b6ebb23574d075f85f02c5359a1e9c89/" ><input type="password" name="data[post_pass]" id="post_pass" value="" class="english" /><input type="hidden" name="secfrdcodedvar" id="secfrdcodedvar" value="3a1d4c9cb5c973cd413d04ae87d758df"><input type="submit" value="ارسال" class="btn" /><input type="hidden" name="frm-id" value="16077439875fd439f347e35" id="frm-id" /></form> </div>
+<br>Tag's: </br>
+            </div>
+            <div class="BotPost">
+<a target="_self" href="javascript:newComment(329)" > نظرات(<script>setCommentCnt(329)</script>)</a>
+<script language="javascript" type="text/javascript">GetBC("329");</script> .
+
+رریتی پای  . چهارشنبه 25 اردیبهشت 1398 . 08:59 ق.ظ            </div>
+
+        </div>
+    <div class="PostSep"></div>
+        <div class="OnePost">
+<div class="TitleHeaderPost"><a href="http://codclub.mihanblog.com/post/328">اومدم</a></div>
+            <div class="MidPost">
+<div class="PostTextBody"><div align="center"><font size="2">و قراره دوباره برم هه :/</font><br><font size="2">پام شنبه صبح پیچ خورده رفتیم گچ گرفتیم دیگه نتونستم برم مدرسه<br>من در کل همیشه تو اتاقمم ولی اینکه حتی نمیتونم اونطوری که دلم میخواد بشینم منو عذاب میده<br>بعدشم هر روز باید کشک خالی بخورم<br>راستش زیاد تعجب نکردم که همش 35 تا بازدید امروز داشتم<br>هییی یادش بخیر اون موقع ها که پست میکردم بیشتر از صد تا بازدید داشتم<br>تقریبا دلم میخواد یه قالبی چیزی درست کنم<br>اهان حالا که بعد از قرنی برگشتم بیام یه خاطره ای چیزی بگم چمدونم<br><br><img src="http://s9.picofile.com/file/8360428618/rantaro_devider.png" alt="" height="" hspace="0" border="0" vspace="0" width="500" align="bottom"><br><br>خو خو من یه کراش دارم تو مدرسه اسمش مریمه<br>شنبه صبح من پام پیچ خرد و به زور راه میرفتم<br>بعد خانوم رفت یکمی از پله افتاد یه طوری رفتار میکنه که انگار پاش شکسته بود :/<br>خواستم باهاش حرف بزنم بهم گفت اعصابش خورده (کسخل مثل همیشه رفتار میکرد)<br>و خو دیگه داشت کارت قربانی رو بازی میکرد :||<br>همون روز رفتیم دکتر ببینیم پام چشه مثل اینکه یه چیزایی پاره شدن نمیدونم<br>باید پام گچ میخورد :|| رفتن شلوارمو پاره کردن بعد گچ گرفتن. وقتی تموم شد دکتر اومد پرسید چرا انقدر پاره کردنش <img src="http://mihanblog.com/public/public/rte/images_new/smiles/24.gif"><br>از مامانم گفتم مشاورا چی کار میکنن چونکه حوصلم صر رفته بود :/<br>اومد بهم توضیح داد و اینا بعد گفت :هی مهسا میخوای بری پیش یکیشون؟<br>من پرسیدم چرا؟ <img src="http://mihanblog.com/public/public/rte/images_new/smiles/22.gif"><br>مامنم همینطوری گفت چمدونم یه چیزی نداره بخوای با مشاور و اینا حرف بزنی؟<br>من گفتم نه<br>یعنی کل هفته داره ذهنمو مشغول میکنه. راستشو بخوای قلبم داره ذوب میشه<br>اهان و بعدشم از یکشنبه تا الان مدرسه نرفتم<br>ولی چهارشنبه باید برم امتحان بدم<br>میخوام رفتم اونجا برم پیش کراشم بزنم تو کلش هرچی داره از دماغش بیاد بیرون<br>بدبخت پاش یذره کبود شده بود بهم میگفت حالش خوب نیست<br>خوبه دیگه ازش خوشم نمیاد خیلی ادم چرتیه :/<br>خو دیگه ببینم دیگه رو کی قرار یه کراش داشته باشم<br>تا قرن بعد بای :/<br></font><font size="2">
+
+
+</font></div> </div>
+<br>Tag's: </br>
+            </div>
+            <div class="BotPost">
+<a target="_self" href="javascript:newComment(328)" > نظرات(<script>setCommentCnt(328)</script>)</a>
+<script language="javascript" type="text/javascript">GetBC("328");</script> .
+
+رریتی پای  . سه شنبه 24 اردیبهشت 1398 . 03:39 ب.ظ            </div>
+
+        </div>
+    <div class="PostSep"></div>
+        <div class="OnePost">
+<div class="TitleHeaderPost"><a href="http://codclub.mihanblog.com/post/327">قالب c`mon and smile (سفارش پینکی)</a></div>
+            <div class="MidPost">
+<div class="PostTextBody">
+<div align="center"><font size="3"><img src="http://s8.picofile.com/file/8336337918/pp.png" alt="" height="" hspace="0" border="0" vspace="0" width="500" align="bottom"><br><img src="http://s9.picofile.com/file/8336337926/ppp.png" alt="" height="" hspace="0" border="0" vspace="0" width="500" align="bottom"><br><br>این قالب سفارش دوستم پینکیه<br>اگه بخواد براش این پستو رمزی میکنم<br>و اینکه بک گراندو خواستی عوض کن. تو انتخاب بک گراند زیاد خوب نیستم :/<br><br><a href="http://norainbooms.mihanblog.com/extrapage/3" target="_blank" title=""><img src="http://s8.picofile.com/file/8336051892/sample.png" alt="" hspace="0" border="0" vspace="0" align="bottom"></a><br><br>کد:<br>[<textarea dir="rtl">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;&lt;c&lt;c          &lt;html&gt;      &lt;head&gt;         &lt;title&gt;[cb:blog_page_title]&lt;/title&gt;         &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;         &lt;meta http-equiv="Content-Language" content="fa"&gt;         &lt;meta name="description" content="[cb:blog_meta_description]" /&gt;         &lt;meta name="keywords" content="[cb:blog_meta_keywords]" /&gt;                 &lt;link rel="alternate" type="application/rss+xml" title="[cb:blog_title]"           href="[cb:blog_rss_href]" /&gt;         &lt;link rel="alternate" type="application/atom+xml" title="[cb:blog_title]"           href="[cb:blog_atom_href]" /&gt;         &lt;/head&gt;     &lt;style&gt;         *{font-family:tahoma;direction:rtl;color:#}         #sidebar{float:left;width:202px;margin-right:5px}         #content{float:right;width:510px;padding:73px}            #body{display:block;font-size:12px}                 a,a:hover,a.visited{text-decoration:none}         .inbox{list-style:none; padding:0 4px}         ul{padding:3px;margin:5px;}         h2{color:red}         h2 a{color:#000; font-size:25px; font-family:B Vosta}         h3{color:#000; margin-top:0; font-size:25px; font-family:B KOODAK; text-align:center}         #header h1 a{font-size:35px; font-family:arial; float:center; color:}                #header h1{margin:0; height:50px; overflow:hidden}                 .author_box img{float:right;border:none;}                  .slogan{             color:#000000; text-align:center; padding:250px 0;             background: url(http://s8.picofile.com/file/8336329768/p1.png) repeat;          background: expression(#FFFFFF);         }                 #footer{font-size:9px;display:block;margin-top:50px; float:left}         #footer a,#footer a:hover,#footer a:visited{color:#000;}                 .hr{border-top:1px solid #CCCCCC;height:1px;margin:3px;}                    body{margin:0; background: #FFFFFF url(http://s8.picofile.com/file/8336337742/_1.jpg) repeat center}                 .sidebar_box{background-color:#; padding:10px 5px; line-height:5px; line-height:20px}         .sidebar_box_border{background-color:#; height:1px; display:block; overflow:hidden}         .sidebar_box_border_div{width:185px;}         .seprator{margin-bottom:10px}         .main_menu{text-align:center}         .blog_title{color:#}                 #header{height:px; overflow:hidden; background:  url() center no-repeat}         #body{             background: url(http://s8.picofile.com/file/8336330334/p2.png) repeat;             background: expression(#FFFFFF);         }         #blog_body{width:885px; margin:30px auto; }         #footer_background{background: url(http://s8.picofile.com/file/8336329792/p3.png) repeat-x; padding-bottom:500px} {height:0}             .clearfix {             display:inline-block;         }         .clearfix:after {             clear:both;             content:'.';             display:block;             height:0;             visibility:hidden;         }         * html .clearfix {             height:1%;         }         .clearfix {             display:block;         }     &lt;/style&gt;     &lt;body&gt;          &lt;div id="blog_body"&gt;                 &lt;div id="header"&gt;                              &lt;/div&gt;                     &lt;div class="slogan"&gt;[cb:blog_slogan]&lt;/div&gt;                         &lt;div class="clearfix"&gt;                             &lt;div id="body" class="clearfix"&gt;                                         &lt;div id="content"&gt;                         &lt;cb:block_post&gt;                             &lt;cb:loop_post&gt;                                 &lt;div&gt;                                     &lt;h2&gt;                                         &lt;a href="[cb:post_href]"&gt;[cb:post_title]&lt;/a&gt;                                     &lt;/h2&gt;                                     &lt;p class="date"&gt;                                         [cb:post_create_date] [cb:post_create_time]                                     &lt;/p&gt;                                 &lt;/div&gt;                                             &lt;b&gt;نویسنده :&lt;/b&gt;                                 &lt;a href="[cb:post_author_href]"&gt;                                     [cb:post_author_name]                                 &lt;/a&gt;                                                                 &lt;br/&gt;                                             &lt;cb:block_post_category&gt;                                     &lt;b&gt;ارسال شده در:&lt;/b&gt;                                     &lt;cb:loop_post_category&gt;                                         &lt;a href="[cb:post_category_href]"&gt;                                             [cb:post_category_name]                                         &lt;/a&gt;،                                     &lt;/cb:loop_post_category&gt;                                                                                  &lt;br&gt;                                 &lt;/cb:block_post_category&gt;                                                                               [cb:post_author_photo_big]                                 [cb:post_body1]                                 [cb:post_body2]                                                                 &lt;br&gt;                                                                 [cb:post_continue_link]                                                                 &lt;br&gt;                                 &lt;br&gt;                                                                 &lt;a target="_self" href="[cb:post_comment_href]"&gt;                                     &lt;b&gt;دیدگاه ها : &lt;/b&gt;                                     [cb:post_comment_count] [cb:post_comment_text]                                 &lt;/a&gt;                                                                 &lt;br/&gt;                                             &lt;cb:block_post_tag&gt;                                     &lt;b&gt;برچسب ها:&lt;/b&gt;                                     &lt;cb:loop_post_tag&gt;                                     &lt;a href="[cb:post_tag_href]" &gt;                                         [cb:post_tag_name]                                     &lt;/a&gt; ،                                     &lt;/cb:loop_post_tag&gt;                                                                         &lt;br/&gt;                                 &lt;/cb:block_post_tag&gt;                                                     &lt;cb:block_post_related_link&gt;                                     &lt;b&gt;دنبالک ها:&lt;/b&gt;                                     &lt;cb:loop_post_related_link&gt;                                     &lt;a href="[cb:post_related_link_href]" target="_blank"&gt;                                         [cb:post_related_link_name]                                     &lt;/a&gt; ،                                     &lt;/cb:loop_post_related_link&gt;                                                                         &lt;br/&gt;                                 &lt;/cb:block_post_related_link&gt;                                                                                  &lt;b&gt;آخرین ویرایش:&lt;/b&gt;                                 [cb:post_edit_date]  [cb:post_edit_time]                                                                 &lt;br&gt;&lt;br&gt;                                                         &lt;/cb:loop_post&gt;                         &lt;/cb:block_post&gt;                                                  &lt;br&gt;&lt;br&gt;                                                        &lt;cb:block_general_list&gt;                             &lt;cb:loop_general_list&gt;                                 &lt;a href=" [cb:general_list_href]" title=" [cb:general_list_title]"&gt;                                     [cb:general_list_text]                                 &lt;/a&gt;&lt;br&gt;                             &lt;/cb:loop_general_list&gt;                                  &lt;/cb:block_general_list&gt;                                                         &lt;cb:block_pages&gt;                             تعداد کل صفحات : [cb:pages_total]                              &lt;cb:loop_pages&gt;                             &lt;a href=" [cb:pages_href]"&gt; [cb:pages_no]&lt;/a&gt;                              &lt;/cb:loop_pages&gt;                         &lt;/cb:block_pages&gt;                                                         &lt;div id="footer" class="clearfix"&gt;                             &lt;strong&gt;                                 POWERED BY &lt;a href="http://www.mihanblog.com/"&gt;                                 &lt;font color="#FF0000" size="2px"&gt;M&lt;/font&gt;IHAN                                 &lt;font color="#FF0000" size="2px"&gt;B&lt;/font&gt;LOG.COM&lt;/a&gt;                             &lt;/strong&gt;                         &lt;/div&gt;                     &lt;/div&gt;                                            &lt;div id="sidebar"&gt;                             &lt;cb:block_search&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                           &lt;input type="text" name="search_text" style="width:90px"/&gt;                                         &lt;input type="submit" value="[cb:search_button_text]"/&gt;                                     &lt;/div&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_search&gt;                                                        &lt;div class="seprator"&gt;&lt;/div&gt;                                                 &lt;div class="sidebar_box_border_div"&gt;                                 &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                 &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                 &lt;div class="sidebar_box"&gt;                                     &lt;div style="text-align:center"&gt;                                         &lt;div align="center" style="border:none; width:160px; overflow:hidden"&gt;[cb:blog_logo]&lt;/div&gt;                                         &lt;a href="[cb:blog_email]"&gt; پست الکترونیک&lt;/a&gt;&lt;br/&gt;                                         &lt;a href="[cb:blog_contact_href]"&gt;تماس با ما&lt;/a&gt;&lt;br/&gt;                                         &lt;div style="text-align:center"&gt;[cb:blog_description]&lt;/div&gt;                                         &lt;div class="clearfix" style="margin-right:70px"&gt;                                             &lt;a href="[cb:blog_rss_href]"&gt;&lt;img style="border:none; float:right" src="http://static.mihanblog.com//public/images/icon/rss.gif"/&gt;&lt;/a&gt;                                             &lt;a href="[cb:blog_Atom_href]"&gt;&lt;img style="border:none; float:right" src="http://static.mihanblog.com//public/images/icon/atom.gif"/&gt;&lt;/a&gt;                                         &lt;/div&gt;                                     &lt;/div&gt;                                 &lt;/div&gt;                                 &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                 &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                 &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                             &lt;/div&gt; &lt;div class="seprator"&gt;&lt;/div&gt;                                                         &lt;cb:block_poll&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                         &lt;h3&gt;نظرسنجی&lt;/h3&gt;                                         [cb:poll_question]&lt;br&gt;                                         &lt;cb:loop_poll&gt;                                             [cb:poll_answer]                                             &lt;br&gt;                                         &lt;/cb:loop_poll&gt;                                            &lt;input type="submit" value="[cb:poll_button_text]"/&gt;                                     &lt;/div&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_poll&gt;                                                                                     &lt;div class="seprator"&gt;&lt;/div&gt;                                                                            &lt;cb:block_blog_tag_cloud&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                         &lt;h3&gt;اَبر برچسبها&lt;/h3&gt;                                         &lt;cb:loop_blog_tag_cloud&gt;                                                            &lt;a href="[cb:blog_tag_cloud_href]" style="font-size:[cb:blog_tag_cloud_size]em"&gt;                                                 [cb:blog_tag_cloud_text]                                             &lt;/a&gt;                                         &lt;/cb:loop_blog_tag_cloud&gt;                                        &lt;/div&gt;                                        &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_blog_tag_cloud&gt;                              &lt;div class="seprator"&gt;&lt;/div&gt;                                                                            &lt;cb:block_blog_category&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                         &lt;h3&gt;آرشیو موضوعی&lt;/h3&gt;                                         &lt;cb:loop_blog_category&gt;                                             &lt;a href="[cb:blog_category_href]"&gt;                                                 [cb:blog_category_name]([cb:blog_category_post_count])                                             &lt;/a&gt;                                             &lt;br/&gt;                                           &lt;/cb:loop_blog_category&gt;                                     &lt;/div&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_blog_category&gt;                                                         &lt;div class="seprator"&gt;&lt;/div&gt;                                                                                     &lt;cb:block_author&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                                                &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                         &lt;div&gt;                                             &lt;h3&gt;نویسندگان&lt;/h3&gt;                                             &lt;cb:loop_author&gt;                                                     [cb:author_photo_small]                                                 &lt;a href="[cb:author_href]"&gt;                                                     [cb:author_name]([cb:author_post_count])                                                 &lt;/a&gt;                                             &lt;br/&gt;                                             &lt;/cb:loop_author&gt;                                         &lt;/div&gt;                                     &lt;/div&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_author&gt;                                                         &lt;div class="seprator"&gt;&lt;/div&gt;                                                                            &lt;cb:block_extrapage&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                         &lt;h3&gt;صفحات جانبی&lt;/h3&gt;                                         &lt;cb:loop_extrapage&gt;                                                     &lt;a href="[cb:extrapage_href]"&gt;                                                 [cb:extrapage_title]                                             &lt;/a&gt;                                             &lt;br/&gt;                                         &lt;/cb:loop_extrapage&gt;                                              &lt;/div&gt;                                        &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_extrapage&gt;                                                         &lt;div class="seprator"&gt;&lt;/div&gt;                                                                                                                &lt;cb:block_blog_archive&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                         &lt;h3&gt;آرشیو&lt;/h3&gt;                                         &lt;cb:loop_blog_archive&gt;                                             &lt;a href="[cb:blog_archive_href]"&gt;[cb:blog_archive_text]&lt;/a&gt;                                             &lt;br/&gt;                                         &lt;/cb:loop_blog_archive&gt;                                         &lt;a href="[cb:blog_archive_full_list_href]"&gt;&lt;b&gt;همه آرشیوها&lt;/b&gt;&lt;/a&gt;                                     &lt;/div&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_blog_archive&gt;                                                                                                                                &lt;div class="seprator"&gt;&lt;/div&gt;                                                                            &lt;cb:block_link&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                         &lt;h3&gt;لینکستان&lt;/h3&gt;                                         &lt;cb:loop_link&gt;                                                     &lt;a href="[cb:link_href]" title="[cb:link_title]" target="_blank"&gt;                                                 [cb:link_text]                                             &lt;/a&gt;                                             &lt;br/&gt;                                         &lt;/cb:loop_link&gt;                                         &lt;a href="[cb:link_full_list_href]"&gt;&lt;b&gt;همه لینکها&lt;/b&gt;&lt;/a&gt;                                     &lt;/div&gt;                                        &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_link&gt;                                                            &lt;div class="seprator"&gt;&lt;/div&gt;                                                                            &lt;cb:block_linkdaily&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                         &lt;h3&gt;لینکدونی&lt;/h3&gt;                                         &lt;cb:loop_linkdaily&gt;                                                     &lt;a href="[cb:linkdaily_href]" title="[cb:linkdaily_title]" target="_blank"&gt;                                                 [cb:linkdaily_text]                                             &lt;/a&gt;                                             &lt;br/&gt;                                         &lt;/cb:loop_linkdaily&gt;                                         &lt;a href="[cb:linkdaily_full_list_href]"&gt;&lt;b&gt;همه لینکها&lt;/b&gt;&lt;/a&gt;                                         &lt;a href="[cb:linkdaily_new_href]"&gt;&lt;b&gt;ارسال لینک&lt;/b&gt;&lt;/a&gt;                                     &lt;/div&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_linkdaily&gt;                                                                                                                         &lt;div class="seprator"&gt;&lt;/div&gt;                                                                            &lt;cb:block_blog_recent_post&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                            &lt;div class="sidebar_box"&gt;                                         &lt;div&gt;                                             &lt;h3&gt;مطالب اخیر&lt;/h3&gt;                                             &lt;cb:loop_blog_recent_post&gt;                                                     &lt;a href="[cb:blog_recent_post_href]"&gt;                                                     [cb:blog_recent_post_text]                                                 &lt;/a&gt;                                                 &lt;br/&gt;                                             &lt;/cb:loop_blog_recent_post&gt;                                         &lt;/div&gt;                                     &lt;/div&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_blog_recent_post&gt;                                                         &lt;div class="seprator"&gt;&lt;/div&gt;                                                                                                                &lt;cb:block_stat&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                         &lt;h3&gt;آمار وبلاگ &lt;/h3&gt;                                         کل بازدید:[cb:stat_total_view]&lt;br/&gt;                                         بازدید امروز :[cb:stat_today_view]&lt;br/&gt;                                         بازدید دیروز : [cb:stat_yesterday_view]&lt;br/&gt;                                         بازدید این ماه : [cb:stat_this_month_view]&lt;br/&gt;                                         بازدید ماه قبل : [cb:stat_last_month_view]&lt;br/&gt;                                         تعداد نویسندگان : [cb:stat_total_author]&lt;br/&gt;                                         تعداد کل مطالب : [cb:stat_total_post]&lt;br/&gt;                                         آخرین بازدید : [cb:stat_last_view_date]&lt;br/&gt;                                         آخرین بروز رسانی : [cb:stat_modify_date]&lt;br/&gt;                                     &lt;/div&gt;                                        &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_stat&gt;                                                                                                                   &lt;div class="seprator"&gt;&lt;/div&gt;                                                 &lt;div class="sidebar_box_border_div"&gt;                       &lt;!-- start logo cod off  --&gt;&lt;p align="center"&gt;&lt;p align="center"&gt;&lt;a href="http://codclub.mihanblog.com/" target="_blank"&gt;&lt;img border="0" src="http://s9.picofile.com/file/8332394350/logo.png"  width="100" alt="سازنده قالب"&gt;&lt;/a&gt;&lt;/p&gt;&lt;!--finish logo cod off ادرس وبت --&gt;            [cb:blog_script]                             &lt;/div&gt;                              &lt;div class="sidebar_box_border_div"&gt;                                                             &lt;/div&gt;                     &lt;/div&gt;                  &lt;/div&gt;             &lt;/div&gt;                         &lt;div id="footer_background"&gt;&lt;/div&gt;                                         &lt;/div&gt;                            &lt;/body&gt;  &lt;/html&gt;</textarea>]<br></font></div><font size="3">
+
+
+</font>
+
+ </div>
+<br>Tag's: </br>
+            </div>
+            <div class="BotPost">
+<a target="_self" href="javascript:newComment(327)" > نظرات(<script>setCommentCnt(327)</script>)</a>
+<script language="javascript" type="text/javascript">GetBC("327");</script> .
+
+رریتی پای  . سه شنبه 13 شهریور 1397 . 03:54 ب.ظ            </div>
+
+        </div>
+    <div class="PostSep"></div>
+        <div class="OnePost">
+<div class="TitleHeaderPost"><a href="http://codclub.mihanblog.com/post/326">ست The Magic Of Music + آهنگ (هاتسونه میکو) (به غیر از قالب)</a></div>
+            <div class="MidPost">
+<div class="PostTextBody">
+
+
+
+
+
+<font size="3">
+</font><div align="center"><br><font size="3">قالبو تو پست قبل گزاشتم<br>اینجا بقیه کدارو میزارم<br>راستی ببخشید اگه عکسا خیلی بزرگ بودن...<br><br>بالابر:<br><img src="http://s8.picofile.com/file/8336050718/up.png" alt="" hspace="0" border="0" vspace="0" align="bottom"><br><br>[<textarea dir="rtl">&lt;!-- Goto Top by www.1abzar.com ---&gt; &lt;script type="text/javascript" src="http://1abzaar.ir/abzar/tools/top-page/jquery.min.js"&gt;&lt;/script&gt;&lt;script&gt;var abzar = "&lt;img src=http://s8.picofile.com/file/8336050718/up.png /&gt;";&lt;/script&gt;&lt;script type="text/javascript" src="http://1abzaar.ir/abzar/tools/top-page/scrolltopcontrol.js"&gt;&lt;/script&gt;&lt;div style="display:none"&gt;&lt;h2&gt;&lt;a href="http://www.1abzar.com/abzar/top-page.php"&gt;هدایت به بالای صفحه&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt; &lt;!-- Goto Top by www.1abzar.com ---&gt;</textarea>]<br><br>بالابر 2:<br><img src="http://s8.picofile.com/file/8336064518/%D8%B9%D8%AD%D8%AD%D8%AD.png" alt="" hspace="0" border="0" vspace="0" align="bottom"><br><br>[<textarea dir="rtl">&lt;!-- Goto Top by www.1abzar.com ---&gt; &lt;script type="text/javascript" src="http://1abzaar.ir/abzar/tools/top-page/jquery.min.js"&gt;&lt;/script&gt;&lt;script&gt;var abzar = "&lt;img src=http://s8.picofile.com/file/8336064518/%D8%B9%D8%AD%D8%AD%D8%AD.png /&gt;";&lt;/script&gt;&lt;script type="text/javascript" src="http://1abzaar.ir/abzar/tools/top-page/scrolltopcontrol.js"&gt;&lt;/script&gt;&lt;div style="display:none"&gt;&lt;h2&gt;&lt;a href="http://www.1abzar.com/abzar/top-page.php"&gt;هدایت به بالای صفحه&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt; &lt;!-- Goto Top by www.1abzar.com ---&gt;</textarea>]<br><br>موس:<br><img src="http://s8.picofile.com/file/8336050650/d2.png" alt="" hspace="0" border="0" vspace="0" align="bottom"><br><br>[<textarea dir="rtl">&lt;!-- www.webniaz.blogfa.com ---&gt; &lt;style type="text/css"&gt;html, body, a, a:hover {cursor: url(http://s8.picofile.com/file/8336050650/d2.png), progress;}&lt;/style&gt; &lt;script src="http://cafe-webniaz.ir/abzaronline/www.jquery.min.js?v39067"&gt;&lt;/script&gt; &lt;!-- www.webniaz.blogfa.com ---&gt;</textarea>]<br><br>آنلاین آفلاین (خودتون باید برین درست کنین)<br>آنلاین:<br><img src="http://s8.picofile.com/file/8336050692/onlineu.png" alt="" hspace="0" border="0" vspace="0" align="bottom"><br><br>آفلاین:<br><img src="http://s8.picofile.com/file/8336050676/offlineu.png" alt="" hspace="0" border="0" vspace="0" align="bottom"><br><br><a href="http://www.1abzar.com/abzar/online-support.php" target="_blank" title="">روی من کلیک کنید تا برید تو سایتی که میشه آنلاین آفلاین درست کرد</a><br><br>دکمه:<br><img src="http://s8.picofile.com/file/8336051868/d1.png" alt="" hspace="0" border="0" vspace="0" align="bottom"><br><br>لطفا خودتون روی دکمه متنتون رو بنویسید<br><br>کد آهنگ Anamanaguchi از هاتسونه میکو (انگلیسی)<br><img src="http://s8.picofile.com/file/8336148068/maxresdefault.jpg" alt="" height="231" hspace="0" border="0" vspace="0" width="411" align="bottom"><br><br>[<textarea dir="rtl">&lt;!-- SCM Music Player http://scmplayer.co --&gt; &lt;script type="text/javascript" src="http://scmplayer.co/script.js"  data-config="{'skin':'skins/simpleBlue/skin.css','volume':49,'autoplay':true,'shuffle':false,'repeat':1,'placement':'top','showplaylist':false,'playlist':[{'title':'Hatsune Miku - Anamanaguchi','url':'https://soundcloud.com/beki-sama/miku-ft-hatsune-miku-anamanaguchi-miku-expo-north-america-2016'}]}" &gt;&lt;/script&gt; &lt;!-- SCM Music Player script end --&gt;</textarea>]<br><br><a href="https://genius.com/Anamanaguchi-miku-lyrics" target="_blank" title="">لینک به متن ترانه</a></font></div><font size="3">
+
+
+
+
+</font>
+
+
+
+
+
+
+
+
+
+
+
+ </div>
+<br>Tag's: </br>
+            </div>
+            <div class="BotPost">
+<a target="_self" href="javascript:newComment(326)" > نظرات(<script>setCommentCnt(326)</script>)</a>
+<script language="javascript" type="text/javascript">GetBC("326");</script> .
+
+رریتی پای  . شنبه 10 شهریور 1397 . 08:55 ب.ظ            </div>
+
+        </div>
+    <div class="PostSep"></div>
+        <div class="OnePost">
+<div class="TitleHeaderPost"><a href="http://codclub.mihanblog.com/post/325">قالب The Magic Of Music (هاتسونه میکو)</a></div>
+            <div class="MidPost">
+<div class="PostTextBody">
+
+
+
+<div align="center"><font size="3"><img src="http://s8.picofile.com/file/8336065450/hm.png" alt="" height="" hspace="0" border="0" vspace="0" width="500" align="bottom"><br><img src="http://s9.picofile.com/file/8336065434/hm1.png" alt="" height="" hspace="0" border="0" vspace="0" width="500" align="bottom"><br>بنظرم بهتر بود مینوشتم the art of music<br>آهان و اینکه اون عکس دومی رو بد عکس گرفتم قالبه هیچ مشکلی نداره<br>فکر کنم مرضیه بودش گفته بود یه ست از هاتسونه درست کنم<br>عوض کردن بک گراند آزاده<br>دمو:<br><br><a href="http://norainbooms.mihanblog.com/extrapage/2" target="_blank" title=""><img src="http://s8.picofile.com/file/8336051892/sample.png" alt="" hspace="0" border="0" vspace="0" align="bottom"></a><br><br>کد:<br>[<textarea dir="rtl">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;&lt;c&lt;c          &lt;html&gt;      &lt;head&gt;         &lt;title&gt;[cb:blog_page_title]&lt;/title&gt;         &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;         &lt;meta http-equiv="Content-Language" content="fa"&gt;         &lt;meta name="description" content="[cb:blog_meta_description]" /&gt;         &lt;meta name="keywords" content="[cb:blog_meta_keywords]" /&gt;                 &lt;link rel="alternate" type="application/rss+xml" title="[cb:blog_title]"           href="[cb:blog_rss_href]" /&gt;         &lt;link rel="alternate" type="application/atom+xml" title="[cb:blog_title]"           href="[cb:blog_atom_href]" /&gt;         &lt;/head&gt;     &lt;style&gt;         *{font-family:tahoma;direction:rtl;color:#}         #sidebar{float:left;width:220px;margin-right:5px}         #content{float:right;width:680px;padding:70px}            #body{display:block;font-size:12px}                 a,a:hover,a.visited{text-decoration:none}         .inbox{list-style:none; padding:0 4px}         ul{padding:3px;margin:5px;}         h2{color:red}         h2 a{color:#000; font-size:25px; font-family:B Vosta}         h3{color:#000; margin-top:0; font-size:25px; font-family:B KOODAK; text-align:center}         #header h1 a{font-size:35px; font-family:arial; float:center; color:}                #header h1{margin:0; height:50px; overflow:hidden}                 .author_box img{float:right;border:none;}                  .slogan{             color:#000000; text-align:center; padding:250px 0;             background: url(http://s8.picofile.com/file/8336045692/whatever.png) repeat;          background: expression(#FFFFFF);         }                 #footer{font-size:9px;display:block;margin-top:50px; float:left}         #footer a,#footer a:hover,#footer a:visited{color:#000;}                 .hr{border-top:1px solid #CCCCCC;height:1px;margin:3px;}                    body{margin:0; background: #FFFFFF url(http://s8.picofile.com/file/8336064242/Star_Background_2_3.jpg) repeat center}                 .sidebar_box{background-color:#; padding:10px 5px; line-height:5px; line-height:20px}         .sidebar_box_border{background-color:#; height:1px; display:block; overflow:hidden}         .sidebar_box_border_div{width:185px;}         .seprator{margin-bottom:10px}         .main_menu{text-align:center}         .blog_title{color:#}                 #header{height:px; overflow:hidden; background:  url() center no-repeat}         #body{             background: url(http://s8.picofile.com/file/8336046942/whatever2.png) repeat;             background: expression(#FFFFFF);         }         #blog_body{width:1099px; margin:30px auto; }         #footer_background{background: url(http://s8.picofile.com/file/8336046750/whatever3.png) repeat-x; padding-bottom:440px} {height:0}             .clearfix {             display:inline-block;         }         .clearfix:after {             clear:both;             content:'.';             display:block;             height:0;             visibility:hidden;         }         * html .clearfix {             height:1%;         }         .clearfix {             display:block;         }     &lt;/style&gt;     &lt;body&gt;          &lt;div id="blog_body"&gt;                 &lt;div id="header"&gt;                              &lt;/div&gt;                     &lt;div class="slogan"&gt;[cb:blog_slogan]&lt;/div&gt;                         &lt;div class="clearfix"&gt;                             &lt;div id="body" class="clearfix"&gt;                                         &lt;div id="content"&gt;                         &lt;cb:block_post&gt;                             &lt;cb:loop_post&gt;                                 &lt;div&gt;                                     &lt;h2&gt;                                         &lt;a href="[cb:post_href]"&gt;[cb:post_title]&lt;/a&gt;                                     &lt;/h2&gt;                                     &lt;p class="date"&gt;                                         [cb:post_create_date] [cb:post_create_time]                                     &lt;/p&gt;                                 &lt;/div&gt;                                             &lt;b&gt;نویسنده :&lt;/b&gt;                                 &lt;a href="[cb:post_author_href]"&gt;                                     [cb:post_author_name]                                 &lt;/a&gt;                                                                 &lt;br/&gt;                                             &lt;cb:block_post_category&gt;                                     &lt;b&gt;ارسال شده در:&lt;/b&gt;                                     &lt;cb:loop_post_category&gt;                                         &lt;a href="[cb:post_category_href]"&gt;                                             [cb:post_category_name]                                         &lt;/a&gt;،                                     &lt;/cb:loop_post_category&gt;                                                                                  &lt;br&gt;                                 &lt;/cb:block_post_category&gt;                                                                               [cb:post_author_photo_big]                                 [cb:post_body1]                                 [cb:post_body2]                                                                 &lt;br&gt;                                                                 [cb:post_continue_link]                                                                 &lt;br&gt;                                 &lt;br&gt;                                                                 &lt;a target="_self" href="[cb:post_comment_href]"&gt;                                     &lt;b&gt;دیدگاه ها : &lt;/b&gt;                                     [cb:post_comment_count] [cb:post_comment_text]                                 &lt;/a&gt;                                                                 &lt;br/&gt;                                             &lt;cb:block_post_tag&gt;                                     &lt;b&gt;برچسب ها:&lt;/b&gt;                                     &lt;cb:loop_post_tag&gt;                                     &lt;a href="[cb:post_tag_href]" &gt;                                         [cb:post_tag_name]                                     &lt;/a&gt; ،                                     &lt;/cb:loop_post_tag&gt;                                                                         &lt;br/&gt;                                 &lt;/cb:block_post_tag&gt;                                                     &lt;cb:block_post_related_link&gt;                                     &lt;b&gt;دنبالک ها:&lt;/b&gt;                                     &lt;cb:loop_post_related_link&gt;                                     &lt;a href="[cb:post_related_link_href]" target="_blank"&gt;                                         [cb:post_related_link_name]                                     &lt;/a&gt; ،                                     &lt;/cb:loop_post_related_link&gt;                                                                         &lt;br/&gt;                                 &lt;/cb:block_post_related_link&gt;                                                                                  &lt;b&gt;آخرین ویرایش:&lt;/b&gt;                                 [cb:post_edit_date]  [cb:post_edit_time]                                                                 &lt;br&gt;&lt;br&gt;                                                         &lt;/cb:loop_post&gt;                         &lt;/cb:block_post&gt;                                                  &lt;br&gt;&lt;br&gt;                                                        &lt;cb:block_general_list&gt;                             &lt;cb:loop_general_list&gt;                                 &lt;a href=" [cb:general_list_href]" title=" [cb:general_list_title]"&gt;                                     [cb:general_list_text]                                 &lt;/a&gt;&lt;br&gt;                             &lt;/cb:loop_general_list&gt;                                  &lt;/cb:block_general_list&gt;                                                         &lt;cb:block_pages&gt;                             تعداد کل صفحات : [cb:pages_total]                              &lt;cb:loop_pages&gt;                             &lt;a href=" [cb:pages_href]"&gt; [cb:pages_no]&lt;/a&gt;                              &lt;/cb:loop_pages&gt;                         &lt;/cb:block_pages&gt;                                                         &lt;div id="footer" class="clearfix"&gt;                             &lt;strong&gt;                                 POWERED BY &lt;a href="http://www.mihanblog.com/"&gt;                                 &lt;font color="#FF0000" size="2px"&gt;M&lt;/font&gt;IHAN                                 &lt;font color="#FF0000" size="2px"&gt;B&lt;/font&gt;LOG.COM&lt;/a&gt;                             &lt;/strong&gt;                         &lt;/div&gt;                     &lt;/div&gt;                                            &lt;div id="sidebar"&gt;                             &lt;cb:block_search&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                           &lt;input type="text" name="search_text" style="width:90px"/&gt;                                         &lt;input type="submit" value="[cb:search_button_text]"/&gt;                                     &lt;/div&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_search&gt;                                                        &lt;div class="seprator"&gt;&lt;/div&gt;                                                 &lt;div class="sidebar_box_border_div"&gt;                                 &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                 &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                 &lt;div class="sidebar_box"&gt;                                     &lt;div style="text-align:center"&gt;                                         &lt;div align="center" style="border:none; width:160px; overflow:hidden"&gt;[cb:blog_logo]&lt;/div&gt;                                         &lt;a href="[cb:blog_email]"&gt; پست الکترونیک&lt;/a&gt;&lt;br/&gt;                                         &lt;a href="[cb:blog_contact_href]"&gt;تماس با ما&lt;/a&gt;&lt;br/&gt;                                         &lt;div style="text-align:center"&gt;[cb:blog_description]&lt;/div&gt;                                         &lt;div class="clearfix" style="margin-right:70px"&gt;                                             &lt;a href="[cb:blog_rss_href]"&gt;&lt;img style="border:none; float:right" src="http://static.mihanblog.com//public/images/icon/rss.gif"/&gt;&lt;/a&gt;                                             &lt;a href="[cb:blog_Atom_href]"&gt;&lt;img style="border:none; float:right" src="http://static.mihanblog.com//public/images/icon/atom.gif"/&gt;&lt;/a&gt;                                         &lt;/div&gt;                                     &lt;/div&gt;                                 &lt;/div&gt;                                 &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                 &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                 &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                             &lt;/div&gt; &lt;div class="seprator"&gt;&lt;/div&gt;                                                         &lt;cb:block_poll&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                         &lt;h3&gt;نظرسنجی&lt;/h3&gt;                                         [cb:poll_question]&lt;br&gt;                                         &lt;cb:loop_poll&gt;                                             [cb:poll_answer]                                             &lt;br&gt;                                         &lt;/cb:loop_poll&gt;                                            &lt;input type="submit" value="[cb:poll_button_text]"/&gt;                                     &lt;/div&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_poll&gt;                                                                                     &lt;div class="seprator"&gt;&lt;/div&gt;                                                                            &lt;cb:block_blog_tag_cloud&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                         &lt;h3&gt;اَبر برچسبها&lt;/h3&gt;                                         &lt;cb:loop_blog_tag_cloud&gt;                                                            &lt;a href="[cb:blog_tag_cloud_href]" style="font-size:[cb:blog_tag_cloud_size]em"&gt;                                                 [cb:blog_tag_cloud_text]                                             &lt;/a&gt;                                         &lt;/cb:loop_blog_tag_cloud&gt;                                        &lt;/div&gt;                                        &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_blog_tag_cloud&gt;                              &lt;div class="seprator"&gt;&lt;/div&gt;                                                                            &lt;cb:block_blog_category&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                         &lt;h3&gt;آرشیو موضوعی&lt;/h3&gt;                                         &lt;cb:loop_blog_category&gt;                                             &lt;a href="[cb:blog_category_href]"&gt;                                                 [cb:blog_category_name]([cb:blog_category_post_count])                                             &lt;/a&gt;                                             &lt;br/&gt;                                           &lt;/cb:loop_blog_category&gt;                                     &lt;/div&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_blog_category&gt;                                                         &lt;div class="seprator"&gt;&lt;/div&gt;                                                                                     &lt;cb:block_author&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                                                &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                         &lt;div&gt;                                             &lt;h3&gt;نویسندگان&lt;/h3&gt;                                             &lt;cb:loop_author&gt;                                                     [cb:author_photo_small]                                                 &lt;a href="[cb:author_href]"&gt;                                                     [cb:author_name]([cb:author_post_count])                                                 &lt;/a&gt;                                             &lt;br/&gt;                                             &lt;/cb:loop_author&gt;                                         &lt;/div&gt;                                     &lt;/div&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_author&gt;                                                         &lt;div class="seprator"&gt;&lt;/div&gt;                                                                            &lt;cb:block_extrapage&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                         &lt;h3&gt;صفحات جانبی&lt;/h3&gt;                                         &lt;cb:loop_extrapage&gt;                                                     &lt;a href="[cb:extrapage_href]"&gt;                                                 [cb:extrapage_title]                                             &lt;/a&gt;                                             &lt;br/&gt;                                         &lt;/cb:loop_extrapage&gt;                                              &lt;/div&gt;                                        &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_extrapage&gt;                                                         &lt;div class="seprator"&gt;&lt;/div&gt;                                                                                                                &lt;cb:block_blog_archive&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                         &lt;h3&gt;آرشیو&lt;/h3&gt;                                         &lt;cb:loop_blog_archive&gt;                                             &lt;a href="[cb:blog_archive_href]"&gt;[cb:blog_archive_text]&lt;/a&gt;                                             &lt;br/&gt;                                         &lt;/cb:loop_blog_archive&gt;                                         &lt;a href="[cb:blog_archive_full_list_href]"&gt;&lt;b&gt;همه آرشیوها&lt;/b&gt;&lt;/a&gt;                                     &lt;/div&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_blog_archive&gt;                                                                                                                                &lt;div class="seprator"&gt;&lt;/div&gt;                                                                            &lt;cb:block_link&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                         &lt;h3&gt;لینکستان&lt;/h3&gt;                                         &lt;cb:loop_link&gt;                                                     &lt;a href="[cb:link_href]" title="[cb:link_title]" target="_blank"&gt;                                                 [cb:link_text]                                             &lt;/a&gt;                                             &lt;br/&gt;                                         &lt;/cb:loop_link&gt;                                         &lt;a href="[cb:link_full_list_href]"&gt;&lt;b&gt;همه لینکها&lt;/b&gt;&lt;/a&gt;                                     &lt;/div&gt;                                        &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_link&gt;                                                            &lt;div class="seprator"&gt;&lt;/div&gt;                                                                            &lt;cb:block_linkdaily&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                         &lt;h3&gt;لینکدونی&lt;/h3&gt;                                         &lt;cb:loop_linkdaily&gt;                                                     &lt;a href="[cb:linkdaily_href]" title="[cb:linkdaily_title]" target="_blank"&gt;                                                 [cb:linkdaily_text]                                             &lt;/a&gt;                                             &lt;br/&gt;                                         &lt;/cb:loop_linkdaily&gt;                                         &lt;a href="[cb:linkdaily_full_list_href]"&gt;&lt;b&gt;همه لینکها&lt;/b&gt;&lt;/a&gt;                                         &lt;a href="[cb:linkdaily_new_href]"&gt;&lt;b&gt;ارسال لینک&lt;/b&gt;&lt;/a&gt;                                     &lt;/div&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_linkdaily&gt;                                                                                                                         &lt;div class="seprator"&gt;&lt;/div&gt;                                                                            &lt;cb:block_blog_recent_post&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                            &lt;div class="sidebar_box"&gt;                                         &lt;div&gt;                                             &lt;h3&gt;مطالب اخیر&lt;/h3&gt;                                             &lt;cb:loop_blog_recent_post&gt;                                                     &lt;a href="[cb:blog_recent_post_href]"&gt;                                                     [cb:blog_recent_post_text]                                                 &lt;/a&gt;                                                 &lt;br/&gt;                                             &lt;/cb:loop_blog_recent_post&gt;                                         &lt;/div&gt;                                     &lt;/div&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_blog_recent_post&gt;                                                         &lt;div class="seprator"&gt;&lt;/div&gt;                                                                                                                &lt;cb:block_stat&gt;                                 &lt;div class="sidebar_box_border_div"&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;div class="sidebar_box"&gt;                                         &lt;h3&gt;آمار وبلاگ &lt;/h3&gt;                                         کل بازدید:[cb:stat_total_view]&lt;br/&gt;                                         بازدید امروز :[cb:stat_today_view]&lt;br/&gt;                                         بازدید دیروز : [cb:stat_yesterday_view]&lt;br/&gt;                                         بازدید این ماه : [cb:stat_this_month_view]&lt;br/&gt;                                         بازدید ماه قبل : [cb:stat_last_month_view]&lt;br/&gt;                                         تعداد نویسندگان : [cb:stat_total_author]&lt;br/&gt;                                         تعداد کل مطالب : [cb:stat_total_post]&lt;br/&gt;                                         آخرین بازدید : [cb:stat_last_view_date]&lt;br/&gt;                                         آخرین بروز رسانی : [cb:stat_modify_date]&lt;br/&gt;                                     &lt;/div&gt;                                        &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;/b&gt;                                     &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;/b&gt;                                 &lt;/div&gt;                             &lt;/cb:block_stat&gt;                                                                                                                   &lt;div class="seprator"&gt;&lt;/div&gt;                                                 &lt;div class="sidebar_box_border_div"&gt;                       &lt;!-- start logo cod off  --&gt;&lt;p align="center"&gt;&lt;p align="center"&gt;&lt;a href="http://codclub.mihanblog.com/" target="_blank"&gt;&lt;img border="0" src="http://s9.picofile.com/file/8332394350/logo.png"  width="100" alt="سازنده قالب"&gt;&lt;/a&gt;&lt;/p&gt;&lt;!--finish logo cod off ادرس وبت --&gt;            [cb:blog_script]                             &lt;/div&gt;                              &lt;div class="sidebar_box_border_div"&gt;                                                             &lt;/div&gt;                     &lt;/div&gt;                  &lt;/div&gt;             &lt;/div&gt;                         &lt;div id="footer_background"&gt;&lt;/div&gt;                                         &lt;/div&gt;                            &lt;/body&gt;  &lt;/html&gt;</textarea>]<br></font></div><font size="3">
+
+
+</font>
+
+
+
+
+
+
+
+ </div>
+<br>Tag's: </br>
+            </div>
+            <div class="BotPost">
+<a target="_self" href="javascript:newComment(325)" > نظرات(<script>setCommentCnt(325)</script>)</a>
+<script language="javascript" type="text/javascript">GetBC("325");</script> .
+
+رریتی پای  . شنبه 10 شهریور 1397 . 08:30 ب.ظ            </div>
+
+        </div>
+    <div class="PostSep"></div>
+        <div class="OnePost">
+<div class="TitleHeaderPost"><a href="http://codclub.mihanblog.com/post/324">رسیدم و رسیدم خیلی دیرم رسیدم</a></div>
+            <div class="MidPost">
+<div class="PostTextBody">
+<div align="center"><font size="3"><img src="http://s9.picofile.com/file/8336040950/bananastrawberry_milk_t_shirt_0_1024x1024_518736f2_a1ad_48ae_93cd_eea1b31e896f_900x.jpeg" alt="" height="446" hspace="0" border="0" vspace="0" width="449" align="bottom"><br>نمیدونم چرا ولی تو این دو ماهی که نبودم خیلی چیزا اتفاق افتاد :/<br>تو اون وب دیگم (که خاک خورده) هی مردم دارن دعوا میگیرن<br>اینجا هم یه شخصی به اسم پونی (اینم شد اسم؟) میاد بدون دلیل فهش میده بعد میگه چقد با کلاسه -_-<br>این دو ماهی هم که نبودم به خاطر این بودش که عادت کردم هر سال برای یه مدتی از لپ تاپ جدا شم<br>درکل زیاد اهل کامپیوتر و اینا نیستم...<br>خو دیگه هر کاری دارین بهم بگین اینجا چونکه نظرای قبلیو نمیخونم<br>و راستی کمی شخصیت داشته باشین یه نفر میگه بالای چشتون ابروعه بهتون بر نخوره<br>بزار هرچی دلشون میخواد بگن :|<br>آهان و اینکه این انجمن طرفدارای مهسا چی چیه؟<br>اصلا من چرا یه انجمن دارم ؟<br>لطفا یکی بگههه<br>+<br>انگار میهن دوباره قاطی کرده همه وبا امروز هیچ بازدیدی نخوردن ولی دیروز 125 تا خوردن؟؟<br>نمیدونم چرا اینطوری شده<br></font></div>
+
+
+
+
+ </div>
+<br>Tag's: </br>
+            </div>
+            <div class="BotPost">
+<a target="_self" href="javascript:newComment(324)" > نظرات(<script>setCommentCnt(324)</script>)</a>
+<script language="javascript" type="text/javascript">GetBC("324");</script> .
+
+رریتی پای  . شنبه 10 شهریور 1397 . 06:09 ب.ظ            </div>
+
+        </div>
+    <div class="PostSep"></div>
+
+                                                                                                                                              تعداد کل صفحات : 31                                                           <a href="http://codclub.mihanblog.com/page/1"> <b>1</b></a>                                                           <a href="http://codclub.mihanblog.com/page/2"> <span>2</span></a>                                                           <a href="http://codclub.mihanblog.com/page/3"> <span>3</span></a>                                                           <a href="http://codclub.mihanblog.com/page/4"> <span>4</span></a>                                                           <a href="http://codclub.mihanblog.com/page/5"> <span>5</span></a>                                                           <a href="http://codclub.mihanblog.com/page/6"> <span>6</span></a>                                                           <a href="http://codclub.mihanblog.com/page/7"> <span>7</span></a>                                                           <a href="http://codclub.mihanblog.com/page/8"> <i>...</i></a>                                                       
+</div>
+
+
+<!-------------------MainCol-------------------->
+<!-------------------SideCol-------------------->
+
+<div id="SideCol">
+<div id="BlogTitle">ｏｐｅｎ ｍｉｎｄ</div>
+
+    <div id="Inside">
+<div class="Link" style="border-left:15px solid #E88DC8;"><a href="index.html">HOME</a></div>
+<div class="Link" style="border-left:15px solid #F3B6D5;"><a href="javascript:messageForm()">EMAIL</a></div>
+<div class="Link" style="border-left:15px solid #E88DC8;"><a href="http://CODCLUB.mihanblog.com/profile">PROFILE</a></div>
+<div class="Link" style="border-left:15px solid #F3B6D5;"><a href="http://CODCLUB.mihanblog.com/Archive"> ARCHIVE</a></div>
+<div class="Link" style="border-left:15px solid #E88DC8;"><a href="http://CODCLUB.mihanblog.com/links">DAILY</a></div>
+<div class="Link" style="border-left:15px solid #F3B6D5;"><a href="http://CODCLUB.mihanblog.com/post">POSTS</a></div>
+<div class="Link" style="border-left:15px solid #E88DC8;"><a href="http://templateworld.blogfa.com">DESIGN</a></div>
+    </div>
+    <div class="LinkSep"></div>
+
+    <div id="Inside">
+<div id="About" class="Title">ABOUT</a></div>
+    <div class="Box" id="Box1">
+    <div align="center" style="border:none; width:130px; overflow:hidden"><img src="../static.mihanblog.com/public/user_data/web_photo/594/1781202.jpg@2292"  /></div>
+    قبلا رریتی پای بودم و اسم وبم کد ها و سفارشات رریتی پای بود<br />
+هنوزم کد میزارم ولی وب دیگه فقط از کد نیست    </div>
+<div id="cats" class="Title">CATEGORIES</div>
+    <div class="Box" id="Box4">
+        <a href="http://codclub.mihanblog.com/post/category/25">شوگر مون(sugar moon)</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/24">دی جی پون 3</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/23">دازلینگ</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/22">پرنسس لونا و نایتمر مون</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/21">رارا</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/20">سانست شیمر</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/19">اسپایک</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/18">رینبودش</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/17">پرنسس سلستیا</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/15">توایلایت اسپارکل پونی</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/14">فلاتر شای</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/13">متفرقه</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/12">متحرک ها</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/11">دکمه ها</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/10">پینکی مین</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/9">بلاگفا</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/7">آموزش ها</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/6">رریتی</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/5">اپل جک</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/4">ابزار زیبا ساز</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/3">پینکی پای</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/2">ست ها</a><br>
+        <a href="http://codclub.mihanblog.com/post/category/1">قالب ها</a><br>
+        
+    </div>
+<div id="tags" class="Title">TAGS</a></div>
+    <div class="Box" id="Box5">
+        <a href="http://codclub.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8+%D8%A7%D9%86%DB%8C%D9%85%D9%87+%D8%B5%D9%88%D8%B1%D8%AA%DB%8C+%D9%88+%D8%B2%D8%B1%D8%AF">قالب انیمه صورتی و زرد</a> <span dir="rtl">(1)</span><br>
+        <a href="http://codclub.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8+%D8%A7%D9%86%DB%8C%D9%85%D9%87">قالب انیمه</a> <span dir="rtl">(1)</span><br>
+        <a href="http://codclub.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8+%D8%A7%D9%86%DB%8C%D9%85%D9%87+%D9%85%DB%8C%D9%87%D9%86+%D8%A8%D9%84%D8%A7%DA%AF">قالب انیمه میهن بلاگ</a> <span dir="rtl">(1)</span><br>
+        <a href="http://codclub.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8+%D8%B2%D8%B1%D8%AF">قالب زرد</a> <span dir="rtl">(1)</span><br>
+        <a href="http://codclub.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8+%D8%A7%D9%86%DB%8C%D9%85%D9%87+%D8%B2%D8%B1%D8%AF+%D9%85%DB%8C%D9%87%D9%86+%D8%A8%D9%84%D8%A7%DA%AF">قالب انیمه زرد میهن بلاگ</a> <span dir="rtl">(1)</span><br>
+        <a href="http://codclub.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8+%D8%A7%D9%86%DB%8C%D9%85%D9%87+%D8%B2%D8%B1%D8%AF">قالب انیمه زرد</a> <span dir="rtl">(1)</span><br>
+        </div>
+<div id="Links" class="Title">LINKS</div>
+    <div class="Box" id="Box2">
+        <a href="../winxclub111.mihanblog.com/index.html" target="_blank" >عشق وینکس</a><br>
+        <a href="../mjorvajorm.mihanblog.com/index.html" target="_blank" >JoorVaJoor</a><br>
+        <a href="http://otaku-city.blog.ir/" target="_blank" >otaku city</a><br>
+        <a href="../hayola.mihanblog.com/index.html" target="_blank" >حس و حال منو هیولا</a><br>
+        <a href="../m-takset.mihanblog.com/index.html" target="_blank" >نوشتار</a><br>
+        <a href="http://rainbowanime.mihanblog.com/" target="_blank" >رینبو انیمه</a><br>
+        <a href="../rainbowcode.mihanblog.com/index.html" target="_blank" >✨ رینبو کد ✨</a><br>
+        <a href="../themeland.mihanblog.com/index.html" target="_blank" >theme land</a><br>
+        <a href="../mlplight.mihanblog.com/index.html" target="_blank" >وب بسخ ولی انتقال شده :|</a><br>
+        <a href="http://thesea.mihanblog.com/" target="_blank" >into the sea</a><br>
+        <a href="http://dokhtarone1.mihanblog.com/" target="_blank" >فن کلاب طرفداران انیمه</a><br>
+        <a href="../flashy-girl.mihanblog.com/index.html" target="_blank" >flashy girl</a><br>
+        <a href="../thisisyasi.mihanblog.com/index.html" target="_blank" >My blue Queendom</a><br>
+        <a href="http://lisa-dokhi.mihanblog.com/" target="_blank" >lisa new</a><br>
+        <a href="http://setaregantnnis.avablog.ir/" target="_blank" >دنیای دخترونه من</a><br>
+        <a href="http://actressgirl.blogfa.com/" target="_blank" >خاطرات یک دختر بازیگر</a><br>
+        <a href="http://openpizza.blogfa.com/" target="_blank" >garbage world</a><br>
+        <a href="http://mykhatere.mihanblog.com/" target="_blank" >خاطرات صورتی من (وب پناه)</a><br>
+        <a href="../girlscity13412.mihanblog.com/index.html" target="_blank" >(=^-^=) وب هپول پپوی خودم</a><br>
+        <a href="http://lonelytomboy.mihanblog.com/" target="_blank" >:)Lonely Tomboy</a><br>
+        </div>
+<div id="other" class="Title">OTHER</div>
+    <div class="Box" id="Box3">
+    <style>img{max-width:90%;}</style>
+
+<!-- Online Support by www.1abzar.com --->
+<style>#abzar-online-support{position:fixed;z-index:20000;bottom:10px;left:10px}</style><script type="text/javascript" src="https://online.1abzar.com/1abzar.php?admin=3060174&mail=1&on=http://s8.picofile.com/file/8332095084/Online.png&off=http://s9.picofile.com/file/8332095092/offline.png"></script><div style="display:none"><h3><a href="http://www.1abzar.com">&#1662;&#1588;&#1578;&#1740;&#1576;&#1575;&#1606;&#1740;</a></h3></div>
+<!-- Online Support by www.1abzar.com --->
+
+<!-- Start Code By Love skin -->
+<style>.icon-90-0{text-align:center;}.icon-90-0 img{border-radius:0px;width:90px;height:90px;}</style>
+<p class="icon-90-0"><img src="http://s5.picofile.com/file/8140814268/chibi_twilight_shreds_animated_by_kanduli_d7ajyer.gif"></p>
+<!-- End Code By Love skin -->
+    </div>
+    </div>
+    <div class="LinkSep"></div>
+
+    <div id="Inside">
+<a href="http://templateworld.blogfa.com">TEMPLATE WORLD</a>
+    </div>
+</div>
+<!-------------------SideCol-------------------->
+</div>
+
+</center>
+<a style="visibility:hidden" href=http://vbcode.blog.ir>مبدل قالب بلاگفا به میهن بلاگ</a></body>
+</html>  
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'codclub.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

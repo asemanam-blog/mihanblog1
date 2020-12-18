@@ -1,0 +1,1105 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc@rsd.html" />
+<script type="text/javascript" src="../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1454354*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[235]='6';commentCnt[240]='7';commentCnt[250]='7';commentCnt[255]='14';commentCnt[266]='19';commentCnt[273]='7';commentCnt[312]='16';commentCnt[341]='3';commentCnt[349]='8';commentCnt[370]='18';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[235]='1';
+mihanblogDisLikeArrCnt[235]='0';
+mihanblogLikeArrCnt[240]='3';
+mihanblogDisLikeArrCnt[240]='0';
+mihanblogLikeArrCnt[250]='7';
+mihanblogDisLikeArrCnt[250]='0';
+mihanblogLikeArrCnt[255]='9';
+mihanblogDisLikeArrCnt[255]='0';
+mihanblogLikeArrCnt[266]='4';
+mihanblogDisLikeArrCnt[266]='0';
+mihanblogLikeArrCnt[273]='0';
+mihanblogDisLikeArrCnt[273]='0';
+mihanblogLikeArrCnt[312]='0';
+mihanblogDisLikeArrCnt[312]='0';
+mihanblogLikeArrCnt[341]='0';
+mihanblogDisLikeArrCnt[341]='0';
+mihanblogLikeArrCnt[349]='0';
+mihanblogDisLikeArrCnt[349]='0';
+mihanblogLikeArrCnt[370]='0';
+mihanblogDisLikeArrCnt[370]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://2onyaye-shad-ma.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://2onyaye-shad-ma.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','311');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','شنبه 29 تیر 1398');
+	
+	setStatVar('today_view','8');
+	setStatVar('yesterday_view','116');
+	
+	setStatVar('this_month_view','1653');
+	setStatVar('last_month_view','1931');
+
+	setStatVar('total_view','170204');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (04:12)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://2onyaye-shad-ma.mihanblog.com/statupdate/?data[refereruri]=http://2onyaye-shad-ma.mihanblog.com/&data[postid]=&data[requesturi]=/post/category/2&data[sdate]=1607820730&data[hash]=fd37abdf4b911e5e0ac06f23faeddad1&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://2onyaye-shad-ma.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<head>
+<title>بوی خاک و نم بارون ... - مطالب خاطرات</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="<-BlogAuthor->">
+<!-- از اینکه از قالب های ماه اسکین استفاده می کنید سپاسگزاریم -->
+<meta name="language" content="Farsi">
+<meta name="description" content="بوی خاک و نم بارون ... - مطالب خاطرات -  - بوی خاک و نم بارون ...">
+<meta name="keywords" content="بوی خاک و نم بارون ... - مطالب خاطرات,2onyaye-shad-ma, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="بوی خاک و نم بارون ..." href="../rss/index.html" />
+<link href="http://mahskin.ir/view/282/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+<div align=center><div style="width:775">
+
+<div class=MahSkin>
+<div id=header>
+
+<div class=top-BlogTitle></div>
+<div class=top-menu><div class=BlogTitle>بوی خاک و نم بارون ...</div><div class=Description></div></div>
+<div style="display:none"><h1><a href="../../index.html">بوی خاک و نم بارون ...</a></h1></div>
+
+
+<div class=top-menu2>
+<div style="float:right;width:0px;direction:rtl; height:20px"></div>
+<div style="float:right;width:450">
+
+<a href="../../index.html">صفحه اصلی</a> |
+<a href="mailto:zahrakhalaj79@yahoo.com">ایمیل مدیر</a> |
+<a href="javascript:messageForm()">تماس با من </a> |
+<a href="http://mahskin.ir" target="_blank" >قالب وبلاگ</a> |
+<a href="../rss/index.html" target="_blank" >Feed</a>
+</div>
+</div></div>
+
+
+<div id=main-back>
+
+<div class=main>
+
+<div class=post>
+
+<script src="http://mahskin.ir/img/trans.php" type="text/javascript" charset="UTF-8"></script>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="../370.html">اینجا همه چی درهمه !</a></div></div>
+</div>
+<div style="display:none"><h2><a href="../370.html">اینجا همه چی درهمه !</a></h2></div>
+<div class=C-post><div class=CenterPost><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<div><font size="2">سلام</font></div>
+<font size="2">امتحانا شروع شد&nbsp;</font><div><font size="2">با حرفای مینا و مامانم دیگه اصلا برام اهمیت نداره امتحانا</font></div><div><font size="2">فقط نگران اینم که تستای اون درسو زدم یا نه</font></div><div><font size="2">بخاطر همین استرسم خییییلی کم تر شده</font></div><div><font size="2"><br></font></div><div><font size="2">باز هم امتحانا و خانم نظری ：)</font></div><div><font size="2">دم دار وایساده , مامان من و بابام و کلی از راننده سرویسا هم دم در</font></div><div><font size="2">نمیزاشت بچه ها برن!!!<img src="http://mihanblog.com/public/public/rte/images_new/smiles/45.gif"></font></div><div><font size="2">بابا دیگه اومدن دنبالمون خب .....</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">چتد روز پیشا یه خانم زنگ زد خونمون, گفت منزل خانم .....؟</font></div><div><font size="2">گفتم بله</font></div><div><font size="2">-مادرتون هستن؟</font></div><div><font size="2">+ نه</font></div><div><font size="2">- شما دخترشونی؟</font></div><div><font size="2">+بله, امرتون؟</font></div><div><font size="2">-قصد ازدواج داری؟&nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/22.gif"></div><div><font size="2">+نه</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/22.gif"></div><div><font size="2">-نهههه!!!!!!!!!!!!!!</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/13.gif"></div><div><font size="2">+</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/22.gif"></div><div><font size="2">-قدت بلنده؟</font></div><div><font size="2">+ بله</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/17.gif"></div><div><font size="2">- چند سانته؟</font></div><div><font size="2">+</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/45.gif"></div><div><font size="2">-چقد درس خوندی؟</font></div><div><font size="2">+پیش دانشگاهیم</font></div><div><font size="2">-بعدن دوباره مزاحم میشیم&nbsp;</font></div><div><font size="2">و بدون خدافظی قطع کرد!!</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/62.gif"></div><div><font size="2"><br></font></div><div><font size="2">بعد از اون چند بار دیگه زنگ زد و بالاخره تونست با مامانم حرف بزنه و مامانم ردش کرد ....</font></div><div><font size="2"><br></font></div><div><font size="2">عاغا این چ وضعیت خاستگاریه اخه!!!!!</font></div><div><font size="2">* خدایا خودت ظهور کن ....</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/10.gif"></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">چه تظاهراتی هم شده ....</font></div><div><font size="2">مهسا：خدا کنه زود بجنبن کنکور کنسل شه&nbsp;</font></div><div><font size="2">من ： به همین خیال باش</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></div><div><font size="2"><br></font></div><div><font size="2">تلگرامو هم که فیلتر کردن, ولی ملت غیور ما همه فیلتر شکن&nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></div><div><font size="2">ینی استعداد یابی شد خداییش تو این زمان&nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">و در آخر هم میخوام چن تا از خر های عالم رو نام ببرم ：</font></div><div><font size="2"><br></font></div><div><font size="2">#معلمی که میگه مهم نیس این قسمت ولی تو امتحان میارتش خر است</font></div><div><font size="2">#امتحانات پایان ترمی که فقط اطلاعات تشریحی بچه های کنکوری رو میسنجه خر است&nbsp;</font></div><div><font size="2">#کسایی که زود با آدم صمیمی و پسرخاله میشن خر است&nbsp;</font></div><div><font size="2">#مسوولانی که به جای حل مشکلات اساسی, تلگرام و اینترنتو فیلتر میکننن خر است</font></div><div><font size="2">#چشم درد خر است</font></div><div><font size="2">#قضاوت عجولانه خر است</font></div><div><font size="2">#زود تموم شدن شارژ موبایل خر است</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">روزای زمستونی ولی درواقع بهاریتون&nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/45.gif"><font size="2">سرشار از اتفاقات قشنگ</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div>
+
+
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="2.html">
+			خاطرات</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : دوشنبه 11 دی 1396  | 06:11 ب.ظ  | نویسنده : <a href="../author/1224950.html">زهرا❤  </a> | <a target="_self" href="javascript:newComment(370)">نظرات  <script>setCommentCnt(370)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="../349.html">روزای پاییزی</a></div></div>
+</div>
+<div style="display:none"><h2><a href="../349.html">روزای پاییزی</a></h2></div>
+<div class=C-post><div class=CenterPost>
+<font color="#006600"><b><font size="2">بعد از چند روز تیکه تیکه دیدن فیلم&nbsp; if i stay رو تموم کردم ...<br>خیلی ازش خوشم اومد<br>شاید خیلیا دوست نداشته باشن ولی حس میکردم واقعا به روحیه ی من میخوره ...<br>خیلی احساس خوبی پیدا کردم وقتی دیدمش...<br><br><br>امروز مامان و بابا و مهلا رفتن کوه با گروه<br>اما من نرفتم...<br>خیلی دلم میخواست ... اما درسام میموند ...<br>البته گرچه خونه موندنمم مساوی شد با خوابیدن. اما بهتر از هیچی نخوندن بود<br><br><br>جدیدن خیلی دارم حال میکنم با تنهایی<br>جمع گریز شدم ...<br>حتی تفریح رو هم تنهایی دوست دارم...<br><br><br>درس هم میخونیم ...<br>همراه با استرس!!!<br>خدایا ینی از دروس پایه عقب نمیوفتم!!!<br>چقد حجم زیادیو باید تا اردیبهشت تموم کنم.<br>اصلا ممکنه ؟؟؟!!<br><br><br>بعضی اوقات یه کسایی وارد زندگی آدم میشن که باعث میشن حال آدم بهتر بشه...<br>حتی اگه این حال خوب موقتی باشه بازم بهش می ارزه<br><br><br>عاشق هوای پاییزم ... هواش عالیه<br>هم هوای پاییزو دوست دارم هم هوای شهریورو <br>هوای شهریور ازون هواهاس که میشه با مهلا رخت خوابامونو همراه با یه لپ تاپ و گوشی و هدفون ببریم رو بالکن و تا نیمه های شب بیدار باشیم تو سکوت و ازون هوا لذت ببریم<br>هوای پاییز هم ازون هواهاس که سرده ولی سرده باحال که اذیتمون نمیکنه ...<br><br>زندگی خیلی قشنگه<br>نه اینکه همه چی رو رواله هااااا ، نه <br>زندگی قشنگه چون نگاهمون بهش قشنگه ...<br><br>+ یاد یه شعر افتادم <br>میگفت :<br>آهای بارون پاییزی ، کی گفته تو غم انگیزی ؟!<br><br><br>روزهای پاییزیتون سرشار از اتفاقات و حس های قشنگ<img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"><br><br><br>--------------------------------------------------------------------------------------------<br><br>بعدن نوشت:<br><br>لینک آهنگ تنها امید زندگی از سینا سرلک<br>" خوده ارامش "<br><a href="http://sv.behtaraneh.ir/1396/05/30/Sina%20Sarlak%20-%20Tanha%20Omide%20Zendegi%20128.mp3" target="_blank" title="">دانلود </a><br></font></b></font>
+
+
+
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="2.html">
+			خاطرات</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : جمعه 14 مهر 1396  | 11:21 ب.ظ  | نویسنده : <a href="../author/1224950.html">زهرا❤  </a> | <a target="_self" href="javascript:newComment(349)">نظرات  <script>setCommentCnt(349)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="../341.html">فیلبند</a></div></div>
+</div>
+<div style="display:none"><h2><a href="../341.html">فیلبند</a></h2></div>
+<div class=C-post><div class=CenterPost>
+<font size="2"><b>سلام سلام&nbsp;</b></font><div><font size="2"><b>حالتون چطوره؟</b></font></div><div><font size="2"><b>با گرمی این روزا چه میکنید؟</b></font></div><div><font size="2"><b>ما که در ۴۰ درجه گرمای اینجا رسما زغال شدیم</b></font></div><div><font size="2"><b><br></b></font></div><div><font size="2"><b>خوشبختانه ساعت مطالعم رو ۶ساعت تنظیم شده، البته ۵ساعتم میشه</b></font></div><div><font size="2"><b>قرار بوط تو مرداد ۷ساعت بشه، اما نشد!</b></font></div><div><font size="2"><b>به من چه باو ، این مسافرتا نمیزارن</b></font></div><div><font size="2"><b>راستی مسافرت !</b></font></div><div><font size="2"><b>شما شهر آمل روستای فیلبند رفتین؟؟</b></font></div><div><font size="2"><b>اگه ترفتین به جرعت میگم از دست دادینش...</b></font></div><div><font size="2"><b>عااالیه</b></font></div><div><font size="2"><b>تو گوگل که سرچ بکنین نوشته روستایی برفراز ابرها!</b></font></div><div><font size="2"><b>ما عکساشو که دیدیم باور نمیکردیم ، اما واقعیه، ینی هرچی راجع فیلبند میگن واقعیه، ینی عااااالیه</b></font></div><div><font size="2"><b>خیلی رویاییه، من دوست دارم هرسال تابستون فقط برم اونجا</b></font></div><div><font size="2"><b>چون واقعا جذاب بود</b></font></div><div><font size="2"><b><br></b></font></div><div><font size="2"><b><br></b></font></div><div><font size="2"><b>خلاصه ...</b></font></div><div><font size="2"><b>نتایج کنکور هم اومد ، منم وقتی فکر میکنم سال دیگه منتظر نتیجه ی کنکور خودمم واقعا استرس میگیرم!</b></font></div><div><font size="2"><b><br></b></font></div><div><font size="2"><b>راستی ترازم از اول تابستون تا الان از ۶۵۰۰ بالاتر نرفته و این خیلی نگرانم میکنه....</b></font></div><div><font size="2"><b><br></b></font></div><div><font size="2"><b>یه آقا دکترم تو فامیل داریم ، که یه سال ازم کوچیک تره و دوسالو جهشی خونده، امسال کنکور داده ، رتبش شده ۹۸ کشور و ۱۵ منطقه!</b></font></div><div><font size="2"><b>ینی ترکونداااااا ! ترکوند!</b></font></div><div><font size="2"><b>از ۳سال پیش صداش میزدن آقای دکتر ! (ایییییییشش! )</b></font></div><div><font size="2"><b><br></b></font></div><div><font size="2"><b>جدیدن هم یه سره ماکان باند گوش میدم!</b></font></div><div><font size="2"><b>ینی بگم خدا مینا رو چیکار نکنه!</b></font></div><div><font size="2"><b>اون معرفی کرد ، خخخ</b></font></div><div><font size="2"><b>ینی یکسره تو خونه دارم میگم : هربار این درو ، محکم نبند درو ،....</b></font></div><div><font size="2"><b><br></b></font></div><div><font size="2"><b>روزای گرمتون پر از شوق زندگی&nbsp;</b></font></div><div><b><br></b></div><div><br></div>
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="2.html">
+			خاطرات</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : پنجشنبه 19 مرداد 1396  | 02:20 ب.ظ  | نویسنده : <a href="../author/1224950.html">زهرا❤  </a> | <a target="_self" href="javascript:newComment(341)">نظرات  <script>setCommentCnt(341)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="../312.html">خوبه همه چی :)</a></div></div>
+</div>
+<div style="display:none"><h2><a href="../312.html">خوبه همه چی :)</a></h2></div>
+<div class=C-post><div class=CenterPost>خوب میگذره روزامون.  خوب میگذره روزاتون؟ :)  .     … ..  یه روزایی این وبلاگ بیچاره ی ما خاطره نویسی بود.  هیچ خاطره ای هم از قلم نمیوفتاد ، امان از دست درس و کنکور و مشغله ها  و خرابی گوشی و… که نمیزارن آدم یکم فرصت پیدا کنه نفس بکشه :(  ……  الان دیگه خاطره هامو نمینویسم، تاریخشو یادداشت میکنم، خیلی خوبه فقط بدیش اینه بعد از یه مدت یادم میره کدوم تاریخ مال کدوم خاطره بود…  خخخخ… .  روزای قشنگین ، امروزم که از دیشب تا امشب بارون اومد.  عالی ،  ،،،، روزای زمستونی و بارونیتون پر از اتفاقای قشنگ ❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤<br>
+	<br><br>
+			طبقه بندی: <a href="2.html">
+			خاطرات</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : شنبه 23 بهمن 1395  | 07:34 ب.ظ  | نویسنده : <a href="../author/1224950.html">زهرا❤  </a> | <a target="_self" href="javascript:newComment(312)">نظرات  <script>setCommentCnt(312)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="../273.html">آتش و اشک .... (اسم دیگه به ذهنم نرسید !!!! )</a></div></div>
+</div>
+<div style="display:none"><h2><a href="../273.html">آتش و اشک .... (اسم دیگه به ذهنم نرسید !!!! )</a></h2></div>
+<div class=C-post><div class=CenterPost><div><font size="2">سلام.&nbsp;</font></div><div><font size="2">ان شاالله که حالتون عالی تر از هر روزه.</font></div><div><font size="2"><br></font></div><div><font size="2">پنجشنبه از ظهر ناهار تا ساعت ۱ شب خونه ی عمم بودیم.&nbsp;</font></div><div><font size="2">خیلی خوش گذشت خدایی.&nbsp;</font></div><div><font size="2">با دخترعمم دیوونه بازی و سرکار گذاشتن یه نفر و مجبور کردنش به اینکه آواز بخونه و صداشو با گیتار بفرسته ...</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></div><div><font size="2">عصر بعد از ناهار اومدیم با همه ی دختر عمه ها حرعت یا حقیقت بازی کنیم.&nbsp;</font></div><div><font size="2">تا من میگفتم حقیقت این دختر عمه ی ما سوالایی میپرسید که خودش جوابشو میدونس فقط میخواست جلوی همه از من اعتراف بگیره بی شخصیت !!!</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/22.gif"></div><div><font size="2">جرعت خیلی باحال بود ، کلن کسی میگفت جرعت مجبورش میکردیم بلند شه وسط خونه برقصه و یه جمله ای رو چند بار بگه.&nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/10.gif"></div><div><font size="2">مثلا بگه : من خرم ! من خرم !</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/24.gif"></div><div><font size="2">همزمان بقیه هم دست میزدن و میگفتن این خره این خره!</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/24.gif"></div><div><font size="2">منم که فقط کلن ولو بودم رو زمین بهشون میخندیدم !!!&nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/24.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/24.gif"></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">شب برای شام میخواستیم بریم پارکی که نزدیک خونه ی عممه. حدودا دوتا خیابون باهاش فاصله داشت.&nbsp;</font></div><div><font size="2">همینطور که بقیه مشغول آماده شدن بودن ، من و دختر عمم صحنه رو خالی دیدیم و فرار کردیم که پیاده خودمون تا اونحا بریم.&nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></div><div><font size="2">تا اومدیم بیرون تصمیم گرفتیم تا اونجا بدوییم‌.</font></div><div><font size="2">ساعت ده شب ،دوتا دختر ، مثل خل و چلا تو خیابون میدویدن و بلند بلند میخندیدن!!</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/15.gif"></div><div><font size="2">یعنی مرده بودیم از خنده از وضعیتمون !</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/21.gif"></div><div><font size="2">وسط راه رفتیم یه پفکم خریدیم و تو راه خوردیم .&nbsp;</font></div><div><font size="2">دختر عمه ی من همینطور که تو راه پفک میخوردیم و میرفتیم ، به هرکس که از کنارمون رد میشد (ترجیحا پسر !!! &nbsp; &nbsp;) &nbsp;پفک تعارف میکرد !!</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/22.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/24.gif"></div><div><font size="2">وای وای من مرده بودم از خجالت و خنده. ول نمیکرد که!!</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/9.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/21.gif"></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">بعدم که همه اومدن رفتیم خودمون جدا از بقیه رو چمنا نشستیم و به سرکار گذاشتن اون یه نفر تو چت ، ادامه دادیم !!</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></div><div><font size="2"><br></font></div><div><font size="2">ساعت یک بود که خداحافظی کردیم از هم ،، و رفتیم که خونه ی مادربزرگم با دخترخالم شب بخوابیم !</font></div><div><font size="2">تا ساعت چهار هم بیدار بودیم باهم !!!</font></div><div><font size="2">کلن جو فامیلی باحالی داشتیم.&nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">خیییلی هوا گرمه اینجا.&nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/20.gif"></div><div><font size="2">امروز بیرون بودیم با مامانم ، وقتی برگشتیم،مامانم داشت ماشینو پارک میکرد . یه پسره داشت با شلنگ آب جلوی درشونو میشست.&nbsp;</font></div><div><font size="2">به مامانم گفتم : دوست دارم الان وایسم جلوی این پسره ،بعد شلنگو بگیره روم و همه ی بدنمو خیسه خیس کنه! آخ که چه حالی میده!</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/38.gif"></div><div><font size="2">خخخ مامانم فقط خندید.&nbsp;</font></div><div><font size="2">وقتی پارک کردیم و رفتیم تو، تو حیاط داشتم کفشامو درمیاوردم که یوهو خیسسس شدم.&nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/17.gif"></div><div><font size="2">مامان خانوم دقیقا شلنگو برداشته گرفته روم و خیسسسس!</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/21.gif"></div><div><font size="2">مهلا که دیگه هیچی! موش آب کشیده!! جیغ میزد اون وسط!</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/24.gif"></div><div><font size="2">بعد خیلی قشنگ که خیسمون کرد بیخیال شد و گفت حالا برید لباساتونو عوض کنید !!</font></div><div><font size="2">عاغا این چه وضعشه آخه !!!</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/10.gif"></div><div><font size="2"><br></font></div><div><font size="2">روزای وداع با تعطیلاتتون</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"><font size="2">&nbsp;سرشار از اتفاقای باحال و قشنگ.</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">+من و تو ، آتش و اشکیم در دل یک شمع</font></div><div><font size="2">به سرنوشت تو وابسته ست تقدیرم ....</font></div><div><font size="2">«فاضل نظری»</font></div><div>#برای ....</div><div><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"></div>
+
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="2.html">
+			خاطرات</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : شنبه 13 شهریور 1395  | 03:25 ب.ظ  | نویسنده : <a href="../author/1224950.html">زهرا❤  </a> | <a target="_self" href="javascript:newComment(273)">نظرات  <script>setCommentCnt(273)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="../266.html">تولد مهسا به سبک خودمون !!!!</a></div></div>
+</div>
+<div style="display:none"><h2><a href="../266.html">تولد مهسا به سبک خودمون !!!!</a></h2></div>
+<div class=C-post><div class=CenterPost>
+<div>سلام. حالتون چطوره؟؟</div><div>دیروز یعنی چهارشنبه برای من خیییییلی روز خوبی بود. ولی چون سرم خیلی شلوغ بود نتونستم همون دیروز ابن پستو بزارم.&nbsp;</div><div>انقدر حالم خوب بود که هیچی نمیتونست خرابش کنه.&nbsp;<img src="http://mihanblog.com/public/public/rte/images_new/smiles/16.gif" style="font-size: 11px;"></div><div>واقعاااا عااالی بودم. به طوری که مامانم بهم کفت :زهرا امروز خیلی خوشحالی !!!</div><div>من کفتم مگه بده ؟</div><div>گفت نه فقط غیر عادیه !!!</div><div><img src="http://mihanblog.com/public/public/rte/images_new/smiles/24.gif"></div><div>خخخخ خو چ کنم؟؟ یه روزم نباید دیوونه باشیم ....<img src="http://mihanblog.com/public/public/rte/images_new/smiles/33.gif" style="font-size: 11px;"></div><div><span style="font-size: 11px;"><br></span></div><div><span style="font-size: 11px;"><br></span></div><div>یکشنبه تولد مهساس، ما از چند روز قبل با مینا قرار کذاشتیم که تو کلاس دیوونه بازی دربیاریم و مجبورش کنیم برامون بستنی بخره.&nbsp;<img src="http://mihanblog.com/public/public/rte/images_new/smiles/15.gif" style="font-size: 11px;"></div><div>ولی مینا دیروز صبح یوهو بهم پیام داد که : زهرا تو ازسر راهت از این کیک صبحانه ها که بسته بندی شده و تقریبا بزرگتر از کیک و کلوچه های معمولیه بخر بیار، یه جوری براش تولد میگیربم.&nbsp;</div><div>خخخخ منم گفتم باشه.&nbsp;</div><div>ولی قرار شد از بستنیمون کوتاه نیایم‌!!!<img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif" style="font-size: 11px;"></div><div>خلاصه منم کلی گشتم تا کیکو پیدا مردم.&nbsp;</div><div>تو مدرسه ، همه چی برنامه ریزی شده بود .&nbsp;</div><div>مینا آهنگ تولد آماده کرده بود و کبریت از مدرسه گرفتیم و ...</div><div>حالا مهسا خانومو دیدیم ، دپرس! داغون ! معلوم بود از اون دنده ش بلند شده !!!&nbsp;<img src="http://mihanblog.com/public/public/rte/images_new/smiles/45.gif" style="font-size: 11px;"></div><div>مام برعکس همیشه که بهش پیله میکردیم تا خلش کنیم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif" style="font-size: 11px;"><span style="font-size: 11px;">&nbsp;، هیییچیچچچچی بهش نگفتیم.&nbsp;</span></div><div>فقد با مینا قرار گذاشتیم اگه تو تولدشم دپرس باشه ، هممون میدویم و میزنیمش . خخخخ<img src="http://mihanblog.com/public/public/rte/images_new/smiles/24.gif" style="font-size: 11px;"></div><div>خلاصه موقع استراحت من مهسا رو بردم آب بخوریم و حرف بزنیم و سرشو گرم کنم تا مینا وکوثر آماده کنن کیکو آهنگ و دوربینو.&nbsp;</div><div>خلاصه با مهسا حرف میزدم مهسام با عصبانیت و خشنی داشت جواب منو میداد و منم اصلا گوش نمیدادم اصلا چی میگه !!!!!!<img src="http://mihanblog.com/public/public/rte/images_new/smiles/22.gif" style="font-size: 11px;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif" style="font-size: 11px;"></div><div>بعد تا رفتیم سمت مینا و کوثر همون لحظه دوربین رو من و مهسا بود . من وسط حرفای مهسا ، پریدم بغلش و جیغ جیغ کنان گفتم تولدت مبارک عشقممممم .&nbsp;<img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif" style="font-size: 11px;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/6.gif" style="font-size: 11px;"></div><div>الان این صحنه تو فیلممون هست !!<img src="http://mihanblog.com/public/public/rte/images_new/smiles/21.gif" style="font-size: 11px;"></div><div>هممون کلی جیغ و بغل ....</div><div>خلاصه دو تا کبریت گذاشتیم رو کیک به عنوان شمع تا فوتش کنه !&nbsp;<img src="http://mihanblog.com/public/public/rte/images_new/smiles/21.gif" style="font-size: 11px;"></div><div>خخخخ حالا هرماری میکردیم ، باد میومد خاموش میشد ، تا اینکه یوهو یکیش موند، این خانومم تا اومد آرزو کنه و فوتش کنه ، همینطور که لبش غنچه مونده بود برای فوت ، یوهو باد زد و خاموش شد!کبریتا هم تمومشده بود دیگه !!!!<img src="http://mihanblog.com/public/public/rte/images_new/smiles/24.gif" style="font-size: 11px;"></div><div><span style="font-size: 11px;"><br></span></div><div>با گوشه ی کاغذ کیک چاقو درست کرد و کیکشو برش داد و ما هم جییییییغ که تولدت مبارکککککک.<img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif" style="font-size: 11px;"><span style="font-size: 11px;">&nbsp;</span></div><div>خخخخخ خدایی تولد قشنگی بود.&nbsp;</div><div>خیلی بهتر از تولدای جینگیل و وینگیل ما با کلی لباسا و آرایشا و رقصا و پزیراییای خفنمون بود.&nbsp;<img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif" style="font-size: 11px;"></div><div>خیلی بهتر از هر چیز خوب شدن مهسا جونم بود . که از اون حالت دپرسیش در اومد و دوباره مثه خودمون خل شد !&nbsp;<img src="http://mihanblog.com/public/public/rte/images_new/smiles/15.gif" style="font-size: 11px;"></div><div>مهسا جونم ، خوب بودن حالت و خندون بودن لبت از هرچیز برا ما (من و مینا و کوثر ) مهم تره !&nbsp;<img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif" style="font-size: 11px;"></div><div>همین که یه کوچولو خنده اومد رو لبت برامون از ده تا بستنی که که قرار بود بعد از کلاس بخری و گفتی شب شده میترسم برم و یه روز دیگه میخرم و در رفتی از زیرش !!!!!<img src="http://mihanblog.com/public/public/rte/images_new/smiles/45.gif" style="font-size: 11px;"><span style="font-size: 11px;">&nbsp;با ارزش تره!!!</span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/11.gif" style="font-size: 11px;"></div><div>ولی بدون از زیر بستنی نمیتونی دربری !!!!!<img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif" style="font-size: 11px;"></div><div><span style="font-size: 11px;"><br></span></div><div><span style="font-size: 11px;"><br></span></div><div>روزاتون سرشار از اتفاقات جنجالی و قشنگ.<img src="http://mihanblog.com/public/public/rte/images_new/smiles/11.gif" style="font-size: 11px;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif" style="font-size: 11px;"><br><br><br>+تغییر موزیک وب!<br>لطفا پلی کنید!<br></div><div><br></div>
+
+
+
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="2.html">
+			خاطرات</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : پنجشنبه 28 مرداد 1395  | 10:24 ق.ظ  | نویسنده : <a href="../author/1224950.html">زهرا❤  </a> | <a target="_self" href="javascript:newComment(266)">نظرات  <script>setCommentCnt(266)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="../255.html">نقاشی بچه ها </a></div></div>
+</div>
+<div style="display:none"><h2><a href="../255.html">نقاشی بچه ها </a></h2></div>
+<div class=C-post><div class=CenterPost>
+
+
+
+<font size="2">سلام . <br>امروز کلاس داشتم . <br>صبح دیر رفتم !!! البته هنوز کلاسم شروع نشده بود. ولی باید زودتر میرفتم. <br>والا دیشب ساعت 4 خوابیدم. بایدم خواب بمونم !!!!!<br><br>جلسه ی قبل بهشون گفته بودم که جلسه ی بعد برگه ی A4 بیارین. اومدم که مهد ،خانم مدیر گفت یحیی یه بسته کاغذ A4 آورده ،گفته بقیش هدیه به خانم معلممون . <br>آخییییی ! چقدر آخه این بچه ها با محبتن!!!<br><br>یه پسر دیگه به اسم مهدی ،اصلا تو کلاس گوش به حرف نمیداد ،یه سره میخواست بره بیرون بازی ، خب بالاخره بچه ها رو که اذیت میکرد یکم دعواش کردم. تو خود کلاس باهام قهر کرد ، ولی وقتی کلاس تموم شد و اومدن بیرون برای استراحت و بازی ، روی وسایل بازی که میکرد ، میخندید و برام دست تکون میداد. <br>چقدر دلشون بی کینه و رئوفه !<br>چقدر دوست داشتنین ! چقدر حالم باهاشون خوبه ! با این که تو کلاس خیییلی حرف میزنم و دیگه نایی برام نمیمونه ، اما بعد از کلس همچنان خیییلی دوسشون دارم. <br><br>یه چیز خیلی بزرگ که دارم یادشون میدم اینه که نقاشیو با تمام احساس و خیالشون بکشن. <br>اول موضوعی که بهشون میدم و کامل تو ذهنشون بیارن و یکی از آرزوهاشونو با اون نقاشی تطبیق بدن و بعد بکشنش. <br>چقدر همه ی نقاشیاشون کلی داستان داره ....<br><br>مرسی خداحون بابت این لطفت به من. <br><br><br>وای وای ،فقد میخوام برم خونه و ولو شم.ینی چشمام دیگه توانی نداره برا باز موندن !!!!!<br><br>------------------------------------------------<br><br><font color="#FF0000">بعدن نوشت :<br><br><font color="#000000">داشتم ماجرای یحیی رو برای مامانم تعریف میکردم ، یادم افتاد که اینجا ننوشتم. <br>یحیی یه پسر ۶ ساله بود . بهش یاد دادم چطور یه مورچه ی کارتونی بکشه. بعد بهش گفتم که یه نقاشی برام بکش که توش مورچه داشته باشه. <br>بعد رفتم سراغ بقیه. وقتی برگشتم بالای سرش ، دیدم یه شکلی که معلوم نیست چی هست کشیده و توشو رنگ گرده . مورچه هم نداره !!!!!<br>بهش گفتم چی کشیدی؟<br>گفت خاله یه چیزی کشیدم که نمیدونم چی هست !!!!تازه توشو هم رنگ کردم !<img src="http://mihanblog.com/public/public/rte/images_new/smiles/22.gif"><br>خخخخ ینی واقعا میخواسنم از خنده بترکم ،ولی خیلی خودومو کنترل کردم ! بعد براش توضیح دادم که دقیقا باید اول چیکار کنه . <br><br>آخر کلاس که میخواستن دیگه وسایلشونو جمع کنن ، یحیی خیلی شیک برگشت به من گفت : به نظر میرسه که دیگه کارم تموم شده !!!!<br>خخخخ یه پسربچه ی ۶ ساله چه زبونی داره هاااااا ... <img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"><br></font></font>&nbsp;<br></font>
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="2.html">
+			خاطرات</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : چهارشنبه 13 مرداد 1395  | 11:07 ق.ظ  | نویسنده : <a href="../author/1224950.html">زهرا❤  </a> | <a target="_self" href="javascript:newComment(255)">نظرات  <script>setCommentCnt(255)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="../250.html">طیف نشری خطی</a></div></div>
+</div>
+<div style="display:none"><h2><a href="../250.html">طیف نشری خطی</a></h2></div>
+<div class=C-post><div class=CenterPost><font size="2"><b>امروز کلاس شیمی بد نبود .&nbsp;</b></font><div><font size="2"><b>یکم گیج بودم توش....</b></font></div><div><font size="2"><b>تمرکز نداشتم.</b></font></div><div><font size="2"><b>اولشم که طیف نشری خطی رو به کلی یادم رفت . اصلا انگار نه انگار من اینو دویست بار خوندم !!!!!</b></font></div><div><font size="2"><b><br></b></font></div><div><font size="2"><b>کلاس یکم زود تموم شد‌.دبیر که رفت ،مهسا زود اومدن دنبالش رفت .&nbsp;</b></font></div><div><font size="2"><b>من و مینا هم رفتیم یه بستنی بخریم یکم حالمون عوض شه.&nbsp;</b></font></div><div><font size="2"><b>تو راه حرفایی که باید میزدم بهشو زدم.&nbsp;</b></font></div><div><font size="2"><b>چهار تا بستنی قیفی شکلاتی خریدیم و اومدیم.&nbsp;</b></font></div><div><font size="2"><b>من که زیاد اهل این جور بستنیا نیستم نمیدونم چرا انگار خیلی بهم چسبید ...</b></font></div><div><font size="2"><b><br></b></font></div><div><font size="2"><b>خخخ آخر هفته ،پنجشنبه، روز دختره. اگه خدا بخواد با مینا و مهسا قرار بزاریم بریم کافه ی همیشگیمون .</b></font></div><div><font size="2"><b>خیییلی برامون خوبه بعد از این مدت.&nbsp;</b></font></div><div><font size="2"><b><br></b></font></div><div><font size="2"><b>خخخخ تو رو خدا مهسا رو :</b></font></div><div><font size="2"><b>داشتم تو ماشین جلوی فلافلی آهنگ نوایی شادمهرو میگوشیدم ، یوهو ...</b></font></div><div><ol><li><font size="2"><b>دیوونه ی این پلاک حفظ کردنا و فلافلی رفتناتم .</b></font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/21.gif" style="font-size: 11px;"></li></ol></div><div><font size="2"><b><br></b></font></div><div><font size="2"><b>خخخخ بابام بهم میگه زهرا نظرت چیه یه غذایی درست کنی ببینیم چی بلدی شما ؟!!!</b></font></div><div><font size="2"><b>منم گفتم چشم. یه شب تو همین هفته به صرف خورشت قیمه دعوتید اینجا. ...چی بگم خو!</b></font></div><div><font size="2"><b>(خورشت قیمه درست کردن هم از این به بعد دل میخواداااا .... )</b></font></div><div><font size="2"><b><br></b></font></div><div><font size="2"><b><br></b></font></div><div><font size="2"><b>+ پایان خیلی چیزا ....</b></font></div><div><font size="2"><b>++ آغاز سکوت ....</b></font></div><div><br></div><div><br></div><div><br></div><div><br></div><div><div>گفته بودی همیشه خواهی ماند، &nbsp;</div><div>سنگ بارید،شیشه خواهی ماند&nbsp;</div><div>&nbsp;</div><div>گفته بودی ترَک نخواهی خورد،&nbsp;</div><div>دین و دل از کسی نخواهی برد. .&nbsp;</div><div>&nbsp;<span style="font-size: 11px;">&nbsp;</span></div><div>&nbsp;</div><div>گفته بودی دچار باید بود،&nbsp;</div><div>مرد ِ این روزگار باید بود&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>گفته بودی،&nbsp;</div><div>ولی نشد انگار!&nbsp;</div><div>دست از این کودکانه‌ها بردار...&nbsp;</div><div>&nbsp;</div><div>#علیرضا_آذر</div></div><br>
+	<br><br>
+			طبقه بندی: <a href="2.html">
+			خاطرات</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : دوشنبه 11 مرداد 1395  | 10:58 ب.ظ  | نویسنده : <a href="../author/1224950.html">زهرا❤  </a> | <a target="_self" href="javascript:newComment(250)">نظرات  <script>setCommentCnt(250)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="../240.html">اولین جلسه ی کلاس نقاشی</a></div></div>
+</div>
+<div style="display:none"><h2><a href="../240.html">اولین جلسه ی کلاس نقاشی</a></h2></div>
+<div class=C-post><div class=CenterPost>
+<font size="2"><font color="#993300">اینم از اولین جلسه ی کلاس نقاشی.<br>واقعا چقدر کار کردن با بچه ها شیرینه.انقد حالم خوب بود وقتی باهاشون بودم.<img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"><br>همشون بهم گوش میکردن و حواسشونو جمع میکردن.<br>یه دختر کوچولویی بود به اسم هلیا. واقعا باورم نمیشه این دختر ۴ساله بتونه انقدر قشنگ چیزایی که یادش میدمو بکشه.<br>سرشار از استعداد بود خدایی.<img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"><br>سعی کردم محیطو براشون احساسی کنم. موسیقی بیکلام آرامشبخش گذاشتم. خیلی فضای قشنگی بود. <br>من نظرم اینه که مربی یا معلم باید ضمن درسی که به دانش آموزاش میده،مهارت ها و نکات زندگی رو هم هرچند کوتاه و مختصر بهشون بگه. <br>به خاطر همین من تو جلسه ی اول دوتا چیز غیر از درس نقاشی بهشون گفتم: اول اینکه نباید آشغال بریزیم تو کلاس یا هرجای دیگه.آشغال جاش سطل زباله س. دوم اینکه نباید همو مسخره کنیم. اگه کسی چیزیو بلد نیست،خب ما هم چیزای دیگه رو بلد نیستیم. و ...<br>البته اینا رو چون تو کلاس دیدیم براشون گفتم.همینطوری برنمیگردم چیزیو بگم .<img src="http://mihanblog.com/public/public/rte/images_new/smiles/10.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"><br><br><br><br>+خیلی گرمه خدایی. شعبه دوم جهنمه قم انگار !!!!<img src="http://mihanblog.com/public/public/rte/images_new/smiles/20.gif"><br>++کجایی؟؟<img src="http://mihanblog.com/public/public/rte/images_new/smiles/2.gif"></font></font>
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="2.html">
+			خاطرات</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : چهارشنبه 6 مرداد 1395  | 11:28 ق.ظ  | نویسنده : <a href="../author/1224950.html">زهرا❤  </a> | <a target="_self" href="javascript:newComment(240)">نظرات  <script>setCommentCnt(240)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="../235.html">مهمونی سه تایی</a></div></div>
+</div>
+<div style="display:none"><h2><a href="../235.html">مهمونی سه تایی</a></h2></div>
+<div class=C-post><div class=CenterPost>
+<div><span style="font-size: 11px;">امروز مینا و مهسا اومدن خونمون.&nbsp;</span></div><div><span style="font-size: 11px;">خیلی خوش گذشت خدایی. مسخره بازی و دیوونه بازی.&nbsp;</span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></div><div><span style="font-size: 11px;">ظهرم که رفتیم ناهار آب دوغ خیار خودمون درست کردیم و خوردیم. خخخ حس آشپز بودن بهمون دست داد. خخخ. مهسا پیازشو خورد میکرد ولی گریه هاشو من کردم! خخخخ چ کنم خو،به پیاز حساسم.ینی قلنبه قلنبه اشک میریختماااا</span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/15.gif"></div><div><span style="font-size: 11px;">وسطشم کلی آهنگ خوندیم و رقصیدیم. </span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"></div><div><span style="font-size: 11px;">کلللی بچه ها گیتار زدن و خوندیم و فیلم گرفتیم.&nbsp;</span></div><div><span style="font-size: 11px;">بعدشم که نشستیم دور هم دسر پان اسپانیا و چای و میوه خوردیم. وسطش کلی سوتی!</span></div><div><span style="font-size: 11px;">چون وقتی میومدی این دسرو از توی دیس بکشی توی ظرف,باید خیلی ماهرانه عمل میکردی وگرنه خورد میشد یا ممکن بود از دستت بیوفته روی فرش!</span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/42.gif"></div><div><span style="font-size: 11px;">خخخ اولش برا مینا که کشیدم خرد شد!</span></div><div><span style="font-size: 11px;">برا مهسا یکم جمع و جور تر. برا خودم که آخری بود عاالی. خخخ</span></div><div><span style="font-size: 11px;">دفعه ى دوم که اومدیم بکشیم اول برا مینا,تا برداشتمش, پقی افتاد روی فرش!!!!</span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/21.gif"></div><div><span style="font-size: 11px;">وااای داغون بودا!</span></div><div><span style="font-size: 11px;">خخخ وای وای بعدشم دابسمشامونو بگو</span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/24.gif">!</div><div><span style="font-size: 11px;">ینی وقتی ببینیش میمیری از خنده!</span></div><div><span style="font-size: 11px;">دابسمش با ساقیا ى ساسی و آهنگ افغانی جواد رضویان و...&nbsp;</span></div><div><span style="font-size: 11px;">ینی خودمون ترکیده بودیم از خنده.</span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/24.gif"></div><div><span style="font-size: 11px;">این دفعه چون زمان بیشتری بچه ها بودن, خیلی بیشتر خوش گذشت.&nbsp;</span></div><div><span style="font-size: 11px;">از ساعت 10صبح اومدن تا 4عصر. خیلی باحال بود خدایی.&nbsp;</span></div><div><span style="font-size: 11px;">البته مهساخانومو که با زور و قسم و آیه و تهدید! کشوندیمش آوردیم! والا!</span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/45.gif"></div><div><span style="font-size: 11px;"><br></span></div><div><span style="font-size: 11px;">#رژ</span></div><div><span style="font-size: 11px;">#شلوارک من</span></div><div><span style="font-size: 11px;">#همه ى امیرا!!!!</span></div><div><span style="font-size: 11px;">#آب دوغ خیار پر از خیار&nbsp;</span></div><div><span style="font-size: 11px;">#مهسا گوسفندی</span></div><div><span style="font-size: 11px;">#آندرانیک مینا اینا&nbsp;</span></div><div><span style="font-size: 11px;">#نون خشک</span></div><div><span style="font-size: 11px;">#ترشیده</span></div><div><span style="font-size: 11px;">#دابسمش مسخره&nbsp;</span></div><div><span style="font-size: 11px;"><br></span></div><div><span style="font-size: 11px;">خدایی خیییییییلی خوش گذشت.&nbsp;</span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/5.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/11.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/21.gif"></div><div><span style="font-size: 11px;"><br></span></div><div><span style="font-size: 11px;">روزاتون پر از اتفاقا و حسای قشنگ</span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"></div>
+
+
+
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="2.html">
+			خاطرات</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : یکشنبه 3 مرداد 1395  | 03:10 ب.ظ  | نویسنده : <a href="../author/1224950.html">زهرا❤  </a> | <a target="_self" href="javascript:newComment(235)">نظرات  <script>setCommentCnt(235)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+
+
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="../../post.html">صفحات</a></div></div>
+</div>
+<div class=C-post><div class=CenterPost>
+<style>.pging {    direction:rtl;    font-size:1.2em;    height:30px;    margin:40px 0 0;    color:#000000;    padding-bottom: 20px;    text-align: center;}
+.pging a:link, .pging a:visited {border:1px solid #000000;    display:inline-block;    margin:0 3px;    padding:1px 5px;    text-decoration:none;}
+.pging a:hover, .pging a:active {    color:#000000;}.pging a.current:link, .pging a.current:visited {    background-color:#000000;    border:1px solid #000000;    color:red;    cursor:text;}</style>
+<center>
+ <div class=pging><font face="Tahoma" style="font-size: 9pt">
+			تعداد کل صفحات : 10 ::     			<a href="2/page/1.html">
+			<font color="#000000"><b>1</b></font></a>  			<a href="2/page/2.html">
+			<font color="#000000"><span>2</span></font></a>  			<a href="2/page/3.html">
+			<font color="#000000"><span>3</span></font></a>  			<a href="2/page/4.html">
+			<font color="#000000"><span>4</span></font></a>  			<a href="2/page/5.html">
+			<font color="#000000"><span>5</span></font></a>  			<a href="2/page/6.html">
+			<font color="#000000"><span>6</span></font></a>  			<a href="2/page/7.html">
+			<font color="#000000"><span>7</span></font></a>  			<a href="2/page/8.html">
+			<font color="#000000"><i>...</i></font></a>  </font></div></center>
+</div></div>
+<div class=LowPost><div class=Comment>لطفا از دیگر صفحات نیز دیدن فرمایید</div></div>
+<div class=C-post><center><b><font size="1">.:</font></b>	<a href="http://mahskin.ir" target="_blank"> 
+	Weblog Themes By <b>M a h S k i n</b></a><b><font size="1">:.</font></b>
+</center>
+</div>
+
+</div>
+
+
+<div class=Sid>
+<div id=Sidebar>
+
+<div class=TopSid><div class=TopSid2>			
+<b>درباره وبلاگ</b></div></div>
+<div class=CenterSid><div class=li-Sid2>  <p align="center">
+<img src="../../../static.mihanblog.com/public/user_data/web_photo/485/1454354.jpg@3292"  /><br>سلام <br />
+اینجا روایت زندگی دختریست که روز هایش را زندگی میکند ...<br />
+<br />
+کنکوری 97 ✌<br />
+<br />
+روزگارتون پر از اتفاقات قشنگ ❤ <br />
+(افتتاح وب:تیر93).<br />
+در ضمن :<br />
+ اول : زمانی که کسی رو لینک میکنم ،بی تردید روی رفاقتش تو عالم وبلاگ نویسی حساب میکنم.<br />
+دوم :لطفا با ورود به وب اسپیکرتون رو هم روشن کنین . <br />
+در آخر :<br />
+سوم: <br />
+&quot;ZKZ + M &quot;<br />
+مدیر وب : زهرا<br />
+<br />
+<br />
+هیشکی نمیتونه بفهمه،که دلم از چی گرفته<br />
+هیشکی نمیتونه بفهمه،که صدام از چی گرفته<br />
+هیشکی نمیمونه تا بامن توی راهم همسفرش<br />
+ آخه میترسه که بامن با دل من دربدر شه<br />
+هیشکی نمیدونه که چشمام چرا همیشه خیس خیسه<br />
+ ،چرا هیشکی حتی ی نامه واسه من دیگه نمینویسه<br />
+هیشکی نمیدونه که قلبم تا حالا چن دفه شکسته<br />
+هیشکی نمیدونه سر راه اون تاحالا چن دفه نشسته...</p></div></div>
+<div class=LowSid></div>
+
+
+<div class="TopSid"><div class=TopSid2>جستجو</div></div>
+<div class=CenterSid>
+<center><form style="width:140px;font-size:9pt;font-family:Tahoma;text-align:center;border:1px dotted #bbbbbb;padding:5px;direction:rtl" target="_new" method=get action=http://www.google.com/search><a target="_blank" href="http://pichak.net/blogcod/google/"><img border=0 src="http://www.pichak.net/blogcod/google/g.gif"></a><input name=q size=12 style="border:1px solid #999999;background:#efefef;font-family:Tahoma"><br><br><input type="submit" name="btnG" value="جستجو" style="font-family:Tahoma"><br><input value="http://2onyaye-shad-ma.mihanblog.com" type=radio name=sitesearch checked>در این وبلاگ<br><input type=radio name=sitesearch value="">در كل اینترنت<input type=hidden name=ie value=UTF-8><input type=hidden name=oe value=UTF-8></form></center></div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>نویسندگان</div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../author/1224950.html">زهرا❤   311 </a></div></div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>ذکر ایام هفته</div></div>
+<div class=CenterSid>
+<p align="center"><script type=text/javascript src="http://PICHAK.net/zekr-rooz/show.php?urlweb=mahskin.ir&n=2"></script></p>
+</div>
+<div class=LowSid></div>
+
+
+		
+<div class="TopSid"><div class=TopSid2>ویژه ماه اسکین</div></div>
+<div class=CenterSid>
+<div class=li-Sid><a target="_blank" href="http://mahskin.ir">قالب وبلاگ</a></div>
+</div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>فال حافظ</div></div>
+<div class=CenterSid>
+<p align="center"><a title="فال حافظ" href="http://pIcHaK.net/hafez" target="_blank">
+<img alt="فال حافظ" src="http://pIcHaK.net/hafez/image/7.gif" border="0" width="120" height="168"></a></p>
+</div>
+<div class=LowSid></div>
+
+<div class=TopSid>
+<div class=TopSid2>
+<b>موضوعات</b></div></div>			
+<div class=CenterSid><div class=li-Sid>				
+<a href="3.html">طنز مدرسه  10 </a></div><div class=li-Sid>				
+<a href="1.html">گالری عکس  30 </a></div><div class=li-Sid>				
+<a href="2.html">خاطرات  100 </a></div></div>			
+<div class=LowSid></div>
+
+
+<div class="TopSid"><div class=TopSid2>آخرین مطالب</div></div>
+<div class=CenterSid>
+<div class=li-Sid><a href="../426.html">این روزا سخت تر ازونه که ...</a></div>
+<div class=li-Sid><a href="../425.html">عشق</a></div>
+<div class=li-Sid><a href="../424.html">خودتو دوست داشته باش</a></div>
+<div class=li-Sid><a href="../423.html">رفت تا 50 روز</a></div>
+<div class=li-Sid><a href="../421.html">زمستان است</a></div>
+<div class=li-Sid><a href="../420.html">بهش برسم</a></div>
+<div class=li-Sid><a href="../419.html">حوا</a></div>
+<div class=li-Sid><a href="../418.html">شجاع</a></div>
+<div class=li-Sid><a href="../417.html">کدومش؟</a></div>
+<div class=li-Sid><a href="../416.html">زندگی من</a></div>
+<div class=li-Sid><a href="../414.html">اینجا نمیمونم</a></div>
+<div class=li-Sid><a href="../413.html">این روزام...</a></div>
+<div class=li-Sid><a href="../411.html">هدفم </a></div>
+<div class=li-Sid><a href="../410.html">بزرگ شدم</a></div>
+<div class=li-Sid><a href="../408.html">بعد کنکور</a></div>
+</div>
+<div class=LowSid></div>
+
+
+<script src="http://mahskin.ir/img/fall.php" type="text/javascript" charset="UTF-8"></script>
+
+<BlogLinksBlock>
+<div class=TopSid><div class=TopSid2>
+<b>لینک دوستان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://sms-world.blogfa.com/">دنیای اس ام اس</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://sevomindaheyezendegi.blogfa.com/">گذر زمان چیزیو حل نکنه منو حل میکنه!!</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../../stylos.mihanblog.com/index.html">خودنویس</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../../baharearezu2.mihanblog.com/index.html">بهار آرزو٢</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../../ict-lameigorgani.mihanblog.com/index.html">تارنمای شخصی وحید</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://jina-shayan.mihanblog.com">❤دیاری پر از تنهایی❤</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.continue94.blogfa.com/">من ادامه میدم</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.hilda24.loxblog.com/">دست نوشته های بهار</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://razzz75.blogfa.com/">عشق</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://loveme6878.blogfa.com">عروس زمستون</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://doshize.blog.ir">دنیای یک دوشیزه چپ دست</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../../baharearezu.mihanblog.com/index.html">بهار آرزو</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../../zendeghimon-ghese-nist.mihanblog.com/index.html">زندگیمون قصه نیست و نبود</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../../bbb-af.mihanblog.com/index.html">غمهای یواشکی یه دخترتنها!</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../../yek-fenjan-sher.mihanblog.com/index.html">یک فنجان شعر</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../../www.cerat3.mihanblog.com/index.html">امر به معروف و نهی از منکر را اقامه کنید .امام خامنه ای</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../../www.daneshjoyezaban.mihanblog.com/index.html">گاه نوشت های یک دانشجوی زبان</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.joojooyeman123.blogfa.com/">dast nevis</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../../ehsasnevisi.mihanblog.com/index.html">احساس نویسی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../../2girls-mb.mihanblog.com/index.html">دیوونه بازیام</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../../newsad.mihanblog.com/index.html">از هر دری سخنی...</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://zahranik1366.mihanblog.com/">دریچه خیال</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.yedoostekhob.blogfa.com/">یه دوســت خوبـــــــــــ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://aramesh1417.blogfa.com/">کافه آرامش</a></div><div class=li-Sid><a title="قالب وبلاگ باران کارتونی" href="http://mahskin.ir/view/282.php">قالب وبلاگ فانتزی عاشقانه</a></div>
+<div class=li-Sid><a href="http://mahskin.ir">قالب وبلاگ</a></div>
+</div>
+<div class=LowSid></div>
+</BlogLinksBlock>
+
+
+<div class="TopSid"><div class=TopSid2>ربات مترجم</div></div>
+<div class=CenterSid>
+<center><script language="javascript" src="http://pichAk.Net/blogcod/dictionary/dic/cod2.php?width=1&border=777777&bgcolor=EFEFEF&tcolor=A82A11&urlweb=mahskin.ir"></script></center>
+</div>
+<div class=LowSid></div>
+
+
+
+
+
+
+<div class="TopSid"><div class=TopSid2>رتبه الکسا</div></div>
+<div class=CenterSid>
+<center><script language="javascript" src="http://picHak.NEt/alexa/code.php?urlweb=mahskin.ir&link=http://2onyaye-shad-ma.mihanblog.com&bgi=8&global=1&country=1&links=1&bgc=FFFFFF&borderw=1&borderc=D6D2B4"></script></center>
+</div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>پیوندهای روزانه</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://axtext.com" title="سلام ، خسته نباشید
+وبلاگ بسیار خوب و زیبایی دارید .
+پیشنهاد میکنم از سایت ما هم بازدید کنید. و با تایید لینک از ما حمایت کنید. 
+خیلی ممنون
+خدانگهدار">عکس پروفایل</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://lovelysms.ir/" title="سلام خوبی ؟ خوشحال میشم لینکم رو تایید کنی و بهم بگی تا لینکتو بزارم توی سایت :) حتما بهم خبر بده :))
+
+راستی منم امتحان دینیم اذیتم کرد :)">اس ام اس </a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://uupload.ir" title="سلام ، خسته نباشید
+وبلاگ بسیار خوب و زیبایی دارید .
+پیشنهاد میکنم برای آپلود فایل و عکس از سایت یو آپلود استفاده کنید.
+به صورت رایگان ، دائمی و سرعت بالا 
+لطفا لینک رو تایید کنید تا هم آدرس سایت رو داشته باشید و هم یه حمایتی بشه از ما
+خیلی ممنون
+خدانگهدار">آپلود فایل</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.cafealone.com" title="شعر,مینیمال,جملات فلسفی,داستان کوتاه">کافه تنهایی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../../www.nsadeghn.mihanblog.com/index.html" title="">محله صداقت</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://harfhai-yek-irani.blogfa.com/" title="جاااالب بود
+رمضانتون هم مبارک
+میگم اگه با تبادل لینک موافقی
+خبرم کن">یه ایرانی</a></div><div class=li-Sid><a href="http://mahskin.ir">قالب وبلاگ</a></div>
+</div>
+<div class=LowSid></div>
+
+
+<div class=TopSid><div class=TopSid2>
+<b>آرشیو مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../archive/1398/4.html"> تیر 1398 ، 1 </a></div><div class=li-Sid>
+<a href="../archive/1397/12.html"> اسفند 1397 ، 1 </a></div><div class=li-Sid>
+<a href="../archive/1397/11.html"> بهمن 1397 ، 1 </a></div><div class=li-Sid>
+<a href="../archive/1397/10.html"> دی 1397 ، 2 </a></div><div class=li-Sid>
+<a href="../archive/1397/9.html"> آذر 1397 ، 2 </a></div><div class=li-Sid>
+<a href="../archive/1397/8.html"> آبان 1397 ، 3 </a></div><div class=li-Sid>
+<a href="../archive/1397/6.html"> شهریور 1397 ، 3 </a></div><div class=li-Sid>
+<a href="../archive/1397/5.html"> مرداد 1397 ، 1 </a></div><div class=li-Sid>
+<a href="../archive/1397/4.html"> تیر 1397 ، 2 </a></div><div class=li-Sid>
+<a href="../archive/1397/3.html"> خرداد 1397 ، 8 </a></div><div class=li-Sid>
+<a href="../archive/1397/2.html"> اردیبهشت 1397 ، 8 </a></div><div class=li-Sid>
+<a href="../archive/1397/1.html"> فروردین 1397 ، 5 </a></div><div class=li-Sid>
+<a href="../archive/1396/10.html"> دی 1396 ، 8 </a></div><div class=li-Sid>
+<a href="../archive/1396/9.html"> آذر 1396 ، 6 </a></div><div class=li-Sid>
+<a href="../archive/1396/8.html"> آبان 1396 ، 6 </a></div><div class=li-Sid>
+<a href="../archive/1396/7.html"> مهر 1396 ، 1 </a></div><div class=li-Sid>
+<a href="../archive/1396/6.html"> شهریور 1396 ، 4 </a></div><div class=li-Sid>
+<a href="../archive/1396/5.html"> مرداد 1396 ، 2 </a></div><div class=li-Sid>
+<a href="../archive/1396/4.html"> تیر 1396 ، 6 </a></div><div class=li-Sid>
+<a href="../archive/1396/3.html"> خرداد 1396 ، 2 </a></div><div class=li-Sid>
+<a href="../archive/1396/2.html"> اردیبهشت 1396 ، 2 </a></div><div class=li-Sid>
+<a href="../archive/1396/1.html"> فروردین 1396 ، 1 </a></div><div class=li-Sid>
+<a href="../archive/1395/12.html"> اسفند 1395 ، 2 </a></div><div class=li-Sid>
+<a href="../archive/1395/11.html"> بهمن 1395 ، 5 </a></div><div class=li-Sid>
+<a href="../archive/1395/10.html"> دی 1395 ، 3 </a></div><div class=li-Sid>
+<a href="../archive/1395/9.html"> آذر 1395 ، 3 </a></div><div class=li-Sid>
+<a href="../archive/1395/8.html"> آبان 1395 ، 5 </a></div><div class=li-Sid>
+<a href="../archive/1395/6.html"> شهریور 1395 ، 11 </a></div><div class=li-Sid>
+<a href="../archive/1395/5.html"> مرداد 1395 ، 18 </a></div><div class=li-Sid>
+<a href="../archive/1395/4.html"> تیر 1395 ، 16 </a></div><div class=li-Sid>
+<a href="../archive/1395/3.html"> خرداد 1395 ، 20 </a></div><div class=li-Sid>
+<a href="../archive/1395/2.html"> اردیبهشت 1395 ، 10 </a></div><div class=li-Sid>
+<a href="../archive/1395/1.html"> فروردین 1395 ، 6 </a></div><div class=li-Sid>
+<a href="../archive/1394/12.html"> اسفند 1394 ، 6 </a></div><div class=li-Sid>
+<a href="../archive/1394/11.html"> بهمن 1394 ، 5 </a></div><div class=li-Sid>
+<a href="../archive/1394/10.html"> دی 1394 ، 1 </a></div><div class=li-Sid>
+<a href="../archive/1394/9.html"> آذر 1394 ، 5 </a></div><div class=li-Sid>
+<a href="../archive/1394/8.html"> آبان 1394 ، 4 </a></div><div class=li-Sid>
+<a href="../archive/1394/7.html"> مهر 1394 ، 5 </a></div><div class=li-Sid>
+<a href="../archive/1394/6.html"> شهریور 1394 ، 4 </a></div><div class=li-Sid>
+<a href="../archive/1394/5.html"> مرداد 1394 ، 8 </a></div><div class=li-Sid>
+<a href="../archive/1394/4.html"> تیر 1394 ، 6 </a></div><div class=li-Sid>
+<a href="../archive/1394/3.html"> خرداد 1394 ، 2 </a></div><div class=li-Sid>
+<a href="../archive/1394/2.html"> اردیبهشت 1394 ، 5 </a></div><div class=li-Sid>
+<a href="../archive/1394/1.html"> فروردین 1394 ، 3 </a></div><div class=li-Sid>
+<a href="../archive/1393/12.html"> اسفند 1393 ، 4 </a></div><div class=li-Sid>
+<a href="../archive/1393/11.html"> بهمن 1393 ، 3 </a></div><div class=li-Sid>
+<a href="../archive/1393/10.html"> دی 1393 ، 4 </a></div><div class=li-Sid>
+<a href="../archive/1393/9.html"> آذر 1393 ، 7 </a></div><div class=li-Sid>
+<a href="../archive/1393/8.html"> آبان 1393 ، 12 </a></div><div class=li-Sid>
+<a href="../archive/1393/7.html"> مهر 1393 ، 3 </a></div><div class=li-Sid>
+<a href="../archive/1393/6.html"> شهریور 1393 ، 4 </a></div><div class=li-Sid>
+<a href="../archive/1393/5.html"> مرداد 1393 ، 4 </a></div><div class=li-Sid>
+<a href="../archive/1393/4.html"> تیر 1393 ، 28 </a></div></div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>حامیان ماه اسکین</div></div>
+<div class=CenterSid>
+<div class=li-Sid><a target="_blank" href="http://mahskin.ir">قالب وبلاگ</a></div><div class=li-Sid><a target="_blank" href="http://mahskin.ir">قالب میهن بلاگ</a></div></div>
+<div class=LowSid></div>
+
+
+<div class="TopSid"><div class=TopSid2>ساعت</div></div>
+<div class=CenterSid>
+<p align="center"><script type=text/javascript src="http://pichak.net/blogcod/clock/show.php?urlweb=mahskin.ir&n=36"></script></p>
+</div>
+<div class=LowSid></div>
+
+
+<div class=TopSid><div class=TopSid2>
+<b>آمار سایت</b></div></div>
+<div class=CenterSid>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right></div>
+<div class=LowSid></div>	
+
+<div class="TopSid"><div class=TopSid2>امکانات وب</div></div>
+<div class=CenterSid>
+<div class=About>
+<div style="text-align:center">
+
+<audio preload="none" src="http://dl.irantaraneh1.ir/mp3/1530Aroosak.mp3" controls="controls" style="float: left;width: 100%;"></audio><br /><a href="http://irantaraneh1.ir" title="دانلود آهنگ جدید" target="_blank">دانلود آهنگ جدید</a>
+<br>
+
+</div>
+</div>
+</div>
+<div class=LowSid></div>
+
+
+</div></div></div>
+
+<div class=footer>
+
+<div class=Fo1>
+<a href="http://mahskin.ir/category/templates-mihanblog.php?tag=%D9%82%D8%A7%D9%84%D8%A8-%D9%88%D8%A8%D9%84%D8%A7%DA%AF-%D9%85%DB%8C%D9%87%D9%86-%D8%A8%D9%84%D8%A7%DA%AF" target="_blank">قالب میهن بلاگ</a> : <a href="http://mahskin.ir" target="_blank"> ماه اسکین </a> | Weblog Themes By : <a href="http://mahskin.ir" target="_blank"> M a h S k i n </a>
+</div>
+
+</div></div></div>
+
+</body><!-- Design by Mah Skin . Ir -->
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', '2onyaye-shad-ma.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

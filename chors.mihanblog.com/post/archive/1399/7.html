@@ -1,0 +1,1862 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc@rsd.html" />
+<script type="text/javascript" src="../../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1624277*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[2385]='0';commentCnt[2386]='0';commentCnt[2387]='0';commentCnt[2388]='0';commentCnt[2389]='0';commentCnt[2390]='0';commentCnt[2391]='0';commentCnt[2392]='0';commentCnt[2393]='0';commentCnt[2394]='0';commentCnt[2395]='0';commentCnt[2396]='0';commentCnt[2397]='0';commentCnt[2398]='0';commentCnt[2399]='0';commentCnt[2400]='0';commentCnt[2401]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[2390]='0';
+mihanblogDisLikeArrCnt[2390]='0';
+mihanblogLikeArrCnt[2395]='0';
+mihanblogDisLikeArrCnt[2395]='0';
+mihanblogLikeArrCnt[2397]='0';
+mihanblogDisLikeArrCnt[2397]='0';
+mihanblogLikeArrCnt[2398]='0';
+mihanblogDisLikeArrCnt[2398]='0';
+mihanblogLikeArrCnt[2399]='0';
+mihanblogDisLikeArrCnt[2399]='0';
+mihanblogLikeArrCnt[2400]='0';
+mihanblogDisLikeArrCnt[2400]='0';
+mihanblogLikeArrCnt[2401]='0';
+mihanblogDisLikeArrCnt[2401]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://chors.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://chors.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','2261');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','پنجشنبه 20 آذر 1399');
+	
+	setStatVar('today_view','102');
+	setStatVar('yesterday_view','134');
+	
+	setStatVar('this_month_view','3545');
+	setStatVar('last_month_view','7780');
+
+	setStatVar('total_view','548770');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (14:52)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://chors.mihanblog.com/statupdate/?data[refereruri]=http://chors.mihanblog.com/&data[postid]=&data[requesturi]=/post/archive/1399/7&data[sdate]=1607772295&data[hash]=9db28c2308bfa4babc601e3981baeeb4&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://chors.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://chors.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://chors.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://chors.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://chors.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://chors.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://chors.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://chors.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://chors.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://chors.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://chors.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://chors.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://chors.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://chors.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://chors.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://chors.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://chors.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://chors.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://chors.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://chors.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://chors.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://chors.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://chors.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://chors.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://chors.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://chors.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://chors.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://chors.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://chors.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://chors.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://chors.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://chors.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://chors.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://chors.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://chors.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+
+<head>
+<title>چورس روستای تاریخی و گردشگری - مطالب  مهر 1399</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="designer" content="Blog Skin">
+<meta name="author" content="یوسف غیورزاده چورسی">
+<meta name="language" content="Farsi">
+<meta name="designerUrl" content="http://www.blogskin.ir/">
+<script src="http://www.blogskin.ir/blog.js" language="javascript"></script>
+<meta name="description" content="چورس روستای تاریخی و گردشگری -  - چورس روستای تاریخی و گردشگری">
+<meta name="keywords" content="چورس روستای تاریخی و گردشگری,chors,, Blog, Weblog, Persian,Iran, Farsi, Weblogs, Blogskin">
+<link rel="alternate" type="application/rss+xml" title="چورس روستای تاریخی و گردشگری" href="../../rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title="چورس روستای تاریخی و گردشگری" href="../../atom/index.html" />
+<link href="http://blogskins.ir/46/style.css" type="text/css" rel="stylesheet">
+<script src="http://blogskins.ir/scroll.js" language="javascript"></script>
+<style>
+.top{background:url(http://blogskins.ir/46/top.jpg) no-repeat top right;height:168;width:100%}
+</style>
+<SCRIPT language="javascript">
+function checkform(){	
+if (blogskin.name.value =='')	{alert('لطفا نام خود را وارد كنید');	return false;	}
+if (blogskin.adres.value =='')	{alert('لطفا آدرس پست الكترونیك خود را وارد كنید');	return false;	}
+if (blogskin.msg.value =='')	{alert('لطفا متن ارسالی خود را وارد كنید');	return false;	}
+return true;}
+</SCRIPT>
+</head>
+
+<body>
+<div align=center id="ali"><div style="width:1003">
+<div class=blogskin-bg><div class=blogskin-back>
+<div class=blogskin>
+
+<div class=top>
+<div class=top-blogskin><div style="float:right;width:780">
+<div style="padding-top:15">
+<div class=topskin></div>
+<a href="../../../index.html">صفحه اول</a>
+<a href="../../list.html">آرشیو مطالب</a>|
+<a href="mailto:3409.ygayur@gmail.com">پست الكترونیك</a>|
+<a href="http://www.blogskin.ir" target="_blank">قالب وبلاگ</a>|
+<a href="http://www.bloghelp.ir" target="_blank">مرجع راهنمای وبلاگ نویسان</a>
+</div>
+
+</div>
+<div class=tarikh><br><br>امروز : <script language="javascript" src="http://blogskins.ir/date.php"></script></div>
+</div>
+
+<div class=titr>چورس روستای تاریخی و گردشگری</div><div class=des>دست در دست هم دهیم به مهر    میهن خویش راکنیم آباد</div></div>
+
+<div class=top-link>
+<div class=top-blogskin2>
+<div style="float:right;width:710px;direction:rtl; height:20px">
+<div style="padding:3 20 0 0">
+<a href="7.html#postz">آخرین مطالب</a>
+<a href="7.html#linkz">لینک دوستان</a>
+<a href="javascript:messageForm()" title="تماس با مدیران ">تماس با ما</a>
+</div></div>
+
+<form method="Get" action="http://google.com/search" class=sch><input name="sitesearch" value="chors.mihanblog.com" type="hidden">
+	<a href="../../rss/index.html" title="RSS"><img border="0" src="http://blogskins.ir/46/x.gif" width="25" height="20"></a>&nbsp;&nbsp;
+	<input type="text" name="q" size="21" class=txt>&nbsp;&nbsp;<input type="submit" value=" " class=but>
+</form>
+
+</div>
+</div>
+
+<div class=mainbg>
+
+<div class=mainr>
+
+<div class=menu> 
+
+<div class="tmenu b5"><div class=tmenu2>معرفی سایت</div></div>
+<div class=xmenu>
+<div class=xmenu2>
+<div style="text-align:center;"><img src="../../../../static.mihanblog.com/public/user_data/web_photo/542/1624277.jpg@2036"  /></div>
+<br>
+<br></div>
+		</div>
+<div class=bmenu></div>
+
+
+<div class="tmenu b6"><div class=tmenu2>نویسندگان</div></div>
+<div class=xmenu>
+<div class=xmenu1><a href="../../author/1351975.html"><img src="../../../../static.mihanblog.com/public/user_data/user_photo/451/1351975.jpg" style="width:16px;" /></a> <a href="../../author/1351975.html">یوسف غیورزاده چورسی</a></div></div>
+<div class=bmenu></div>
+<div class=tmenu><div class=tmenu2>ابر برچسب ها</div></div>
+<div class=xmenu>
+<div class=xmenu2><a href="../../tag/مفاخر+چورس.html" style="font-size:1em">
+		مفاخر چورس</a> <a href="../../tag/دبستان+مولوی+چورس.html" style="font-size:1em">
+		دبستان مولوی چورس</a> <a href="../../tag/دکتر+اصلان+آبادی.html" style="font-size:1.5em">
+		دکتر اصلان آبادی</a> <a href="../../tag/آناقیزلی+تپه+تاریخی+چورس.html" style="font-size:1em">
+		آناقیزلی تپه تاریخی چورس</a> <a href="../../tag/احداث+هتل+در+چورس.html" style="font-size:1.25em">
+		احداث هتل در چورس</a> <a href="../../tag/چورس.html" style="font-size:2em">
+		چورس</a> <a href="../../tag/شهدای+چورس.html" style="font-size:1em">
+		شهدای چورس</a> <a href="../../tag/مفاخرچورس.html" style="font-size:1.75em">
+		مفاخرچورس</a> <a href="../../tag/کارکنان+و+کارمندان+چورسی.html" style="font-size:1.25em">
+		کارکنان و کارمندان چورسی</a> <a href="../../tag/روستای+تاریخی+چورس.html" style="font-size:1em">
+		روستای تاریخی چورس</a> </div>
+</div>
+<div class=bmenu></div>
+<div class="tmenu b9"><div class=tmenu2>آمار سایت</div></div>
+<div class=xmenu>
+<div class=xmenu2>
+			بازدیدهای امروز : <span class=a><script>getStatVar('today_view');</script></span> نفر<br>
+بازدیدهای دیروز 
+			: <span class=a><script>getStatVar('yesterday_view');</script></span> نفر<br>
+			كل بازدیدها : <span class=a><script>getStatVar('total_view');</script></span> نفر<br>
+بازدید این ماه 
+			:<span class=a> <script>getStatVar('this_month_view');</script></span> نفر<br>
+بازدید ماه قبل 
+			: <span class=a><script>getStatVar('last_month_view');</script></span> نفر<br>
+تعداد نویسندگان 
+			: <span class=a><script>getStatVar('total_author');</script></span> عدد<br>
+كل مطالب ارسال شده: <span class=a><script>getStatVar('total_post');</script></span> عدد<br>
+آخرین بازدید : <span class=a><script>getStatVar('last_view_date');</script></span><br>
+آخرین بروز رسانی : <span class=a><script>getStatVar('modify_date');</script></span>
+</div>
+</div>
+<div class=bmenu></div>
+<div class="tmenu b2"><div class=tmenu2>امکانات جانبی</div></div>
+<div class=xmenu>
+<div class=xmenu2>
+<div id="c" style="text-align:center">
+<!-- Prayer Time developed by roostanet.ir--->
+ <script type='text/javascript' src='http://pt.roostanet.com/webTool.php?id=11&lng=45.2&lat=38.49&bc=FBFF91&tc=000000&loc=%DA%86%D9%88%D8%B1%D8%B3&brs=3&brc=FFA812&td=1'> </script>
+<!-- Prayer Time developed by roostanet.ir--->
+
+<br><a target="_blank" style="text-decoration:none;font-size:9pt" title="کد وبلاگ" href="http://www.bloghelp.ir">راهنمای وبلاگ نویسان</a><br><a target="_blank" style="text-decoration:none;font-size:9pt" title="ابزار وبلاگ" href="http://www.1abzar.com">ابزار رایگان وبلاگ</a>
+</div>
+</div>
+</div>
+<div class=bmenu></div>
+
+
+</div>
+</div>
+
+<div class=mainl>
+
+<div class=post>
+
+<!--------------- block sabet ---------------------->
+<blogskin><div class=ad1></div><div class=xpost><div class=page22>
+
+<a href="http://www.bloghelp.ir/?p=316" target="_blank">جهت اطلاع از تنظیمات و ویرایش این قالب اینجا را کلیک کنید</a>
+
+</div></div><div class=ad3><br></div></blogskin>
+<!--------------- block sabet ---------------------->
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=tpost><div class=title><a href="../../2400.html">یاد ایام.........باستانشهرچورس</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2400&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : چهارشنبه 30 مهر 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><img alt="چورس روستای تاریخی و گردشگری - یاد ایام.........چورس" class="n3VNCb" src="https://uupload.ir/files/k5s_photo_2018-01-26_19-09-09.jpg" data-noaft="1" style="width: 433px; height: 243.346px; margin: 0px;">
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2400)" > نظرات (<script>setCommentCnt(2400)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../../2401.html">با این شربت گیاهی ریه را کاملا پاکسازی کنید</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2401&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : سه شنبه 29 مهر 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> 
+<font size="7" face="Mihan-IransansBold">
+                            </font><div class="col-sm-8 col-sm-offset-2 col-xs-12 img" align="justify"><font size="7" face="Mihan-IransansBold"><img src="https://behdasht.news/images/news/167539/thumbs/167539.jpg" alt="با این شربت گیاهی ریه را کاملا پاکسازی کنید" title="با این شربت گیاهی ریه را کاملا پاکسازی کنید"></font></div><div align="justify"><font size="7" face="Mihan-IransansBold">                            </font></div><div class="text-short" align="justify"><font size="7" face="Mihan-IransansBold"> <font size="4">سیر فواید بی شماری دارد که می توان در سراسر دنیا یافت.</font></font></div><div align="justify"><font size="7" face="Mihan-IransansBold">
+                            
+							</font></div><p align="justify">
+	<font size="4" face="Mihan-IransansBold"><span style="font-size:12px;">به گزارش چورس نیوز،&nbsp;<span style="text-align: justify;">سیر
+ فواید بی شماری دارد که می توان در سراسر دنیا یافت. همچنین قرن هاست که 
+به عنوان یک ماده دارویی مورد استفاده قرار می گیرد. مصرف سیر با شکم خالی 
+از جوانب مختلف مورد بررسی قرار گرفته و نتایج متفاوت می باشد. قطعا 
+مادربزرگ های شما از خواص سیر، زیاد یاد می کنند و به استفاده از آن تاکید 
+دارند. اگر سیر به جای رشد در طبیعت، در آزمایشگاه آن را تولید می کردند به
+ طور یقین، به یکی از داروهای گران قیمت تبدیل می شد. معمولا افراد&nbsp;</span><em style="font-size: inherit; text-align: justify; background: inherit;">سیر</em><span style="text-align: justify;">&nbsp;را
+ در مصارف آشپزی استفاده می کنند اما بسیار از مردم، آن را به عنوان 
+داروهاخانگی به کار می برند. یکی از ترکیبات مهم سیر، آلیسین نام دارد که 
+موجب طعم تند و خاص&nbsp;</span><em style="font-size: inherit; text-align: justify; background: inherit;">سیر</em><span style="text-align: justify;">&nbsp;نیز می شود.</span></span></font></p><div align="justify"><font size="7" face="Mihan-IransansBold">
+</font></div><div style="font-size: 16px;" align="justify"><font size="7" face="Mihan-IransansBold">
+	</font></div><div align="justify"><font size="7" face="Mihan-IransansBold">
+</font></div><div style="font-size: 16px;" align="justify">
+	<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;"><map name="cnc"><area alt="پاکسازی ریه با سیر" coords="0,0,600,400" href="https://namnak.com/%D9%BE%D8%A7%DA%A9%D8%B3%D8%A7%D8%B2%DB%8C-%D8%B1%DB%8C%D9%87-%D8%A8%D8%A7-%D8%B3%DB%8C%D8%B1.p35788" shape="rect" style="cursor: default !important;"></map></span></font></div><div align="justify"><font size="7" face="Mihan-IransansBold">
+</font></div><div style="font-size: 16px;" align="justify">
+	<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;"><span style="font-size:11px;">بدون شک مصرف سیر با شکم خالی یک&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">آنتی بیوتیک</span></span>&nbsp;قوی
+ می باشد و در بسیاری از مطالعات این موضوع به اثبات رسیده که مصرف سیر قبل
+ از صبحانه اثربخشی بیشتری دارد زیرا باکتری ها بیشتر در معرض آن قرار می 
+گیرند و نمی توانند از خود در برابر سیر دفاع کنند.</span></span></font></div><div align="justify"><font size="7" face="Mihan-IransansBold">
+</font></div><h3 style="font-size: 18px; color: rgb(167, 32, 32) !important;" align="justify">
+	<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;"><span style="display: inline-block; color: rgb(255, 0, 0);">خواص سیر</span></span></font></h3><div align="justify"><font size="7" face="Mihan-IransansBold">
+</font><ul style="font-size: 16px; text-align: justify;"><li><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;سیر یک روش موثر برای از بین بردن مشکلات داخل شکم می باشد زیرا هضم و گوارش را بهبود می بخشد و بر روی اشتهای شما اثر مثبت دارد .</span></font></li><li><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;بسیاری از افراد که از&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">فشار خون بالا</span></span>&nbsp;رنج می برند، می توانند با استفاده از سیر علائم بیماری خود را بهبود ببخشند .</span></font></li><li><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;همچنین سیر بر جریان خون اثر مثبت دارد و از حملات قلبی جلوگیری می کند و مشکلات مربوط به کبد و مثانه را برطرف خواهد کرد.</span></font></li><li><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;بعضی از افراد اظهار دارند که مصرف سیر با شکم خالی به شدت روی برطرف کردن مشکلات عصبی و&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">کنترل استرس</span></span>&nbsp;موثر است و همچنین می تواند مشکلاتی مثل&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">اسهال</span></span>&nbsp;را از بین ببرد.</span></font></li><li><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;سیر از ترشح اسید معده جلوگیری می کند که معمولاً هنگام&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">استرس</span></span>&nbsp;بیشتر تولید می شود.</span></font></li><li><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;سیر یکی از قوی ترین&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">مواد غذایی</span></span>&nbsp;برای سم زدایی بدن محسوب می گردد و یک داروی تسکین دهنده می باشد.</span></font></li><li><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;بسیاری از متخصصان سیر را به عنوان جایگزین دارو پیشنهاد می کنند زیرا خواص آن اعجاب انگیز است.</span></font></li><li><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;سیر از بیماری هایی مثل تیفوس،&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">دیابت</span></span>،&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">افسردگی</span></span>&nbsp;و انواع سرطان جلوگیری می کند و همچنین&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">فشار خون</span></span>&nbsp;و&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">یبوست</span></span>&nbsp;را درمان می کند.</span></font></li><li><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;سیر همچنین برای مشکلات تنفسی مورد استفاده قرار می گیرد و از مشکلاتی مثل&nbsp;<em style="background: inherit; font-size: inherit;">برونشیت</em>،&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">برونشیت</span></span>&nbsp;مزمن، گرفتگی ریه ها، التهاب ریه، احتقان ریوی، سل ، آسم و&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">سرفه های خشک</span></span>&nbsp;جلوگیری می کند و آن ها را بهبود می بخشد.&nbsp;</span></font></li></ul><font size="7" face="Mihan-IransansBold">
+</font></div><h3 style="font-size: 18px; color: rgb(167, 32, 32) !important;" align="justify">
+	<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;"><span style="display: inline-block; color: rgb(255, 0, 0);">چگونگی استفاده از سیر برای مشکلات مختلف</span></span></font></h3><div align="justify"><font size="7" face="Mihan-IransansBold">
+</font><ul style="font-size: 16px; text-align: justify;"><li><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;برای برطرف کردن مشکلاتی مثل&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">گوش درد</span></span>&nbsp;، یک یا دو قطره از&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">آب سیر</span></span>&nbsp;را داخل گوش می چکانند.</span></font></li><li><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;همچنین برای&nbsp;<em style="background: inherit; font-size: inherit;">یبوست</em>&nbsp;مقداری سیر را با آب می جوشانند و به فرد می دهند تا از طریق آن بخور کند.</span></font></li><li><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;برای استفاده از سیر برای بهبود بیماری آسم باید 15 قطره آب داغ جوشانده سیر را بنوشید و همچنین می توانید مقداری&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">نعناع</span></span>&nbsp;به آن اضافه کنید تا بوی بهتری بگیرد.</span></font></li><li><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;برای
+ بیماری سل یک حبه سیر را روزانه مصرف کنید و همچنین می توانید یک سیر را 
+رورانه از هر راهی که مایل هستید، در وعده های غذایی خود بگنجانید و تقسیم 
+کنید.</span></font></li><li><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;بهتر است سیر را خام مصرف کنید.</span></font></li><li><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;همچنین می توانید با استفاده از سیر یک سس مناسب تهیه کنید.</span></font></li><li><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;اگر به هر کدام از بیماری های برونشیت مبتلا هستید ، می توانید سه قاشق غذاخوری&nbsp;<em style="background: inherit; font-size: inherit;">آب سیر</em>&nbsp;را
+ روزانه مصرف کنید. در این شرایط به 200 گرم سیر، 700 گرم شکر فرآوری شده و
+ هزار گرم آب نیاز دارید. اول از همه آب را با سیر بجوشانید و مقداری شکر 
+به آن اضافه کنید. همچنین می توانید خمیر سیر را روی ناحیه شکم برای برطرف 
+کردن درد یا بهبود&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">سرماخوردگی</span></span>&nbsp;بمالید.</span></font></li><li><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;مقدار کمی سیر با مشکلاتی مثل&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">زگیل</span></span>&nbsp;مبارزه می کند که کاملا بدون درد است.</span></font></li><li><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;بعضی از افراد از سیر برای از بین بردن درد استفاده می کنند و آن را روی ناحیه مورد نظر قرار می دهند.</span></font></li><li><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;بعضی
+ از حیوانات جان خود را با بو کردن سیر حفظ می کنند اما بعضی حیوانات دیگر 
+مثل حشره های موذی با بو کردن سیر جان خود را از دست می دهند زیرا&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">بوی سیر</span></span>&nbsp;برای آن ها سمی است.</span></font></li></ul><font size="7" face="Mihan-IransansBold">
+</font><font size="7" face="Mihan-IransansBold">
+</font></div><h3 style="font-size: 18px; color: rgb(167, 32, 32) !important;" align="justify">
+	<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;"><span style="display: inline-block; color: rgb(255, 0, 0);">پاکسازی ریه ها با استفاده از سیر</span></span></font></h3><div align="justify"><font size="7" face="Mihan-IransansBold">
+</font></div><div style="font-size: 16px;" align="justify">
+	<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;"><em style="background: inherit; font-size: inherit;"><em style="background: inherit; font-size: inherit;">مواد غذایی</em></em>&nbsp;مهم
+ سیر توسط مصرف خام آن، جذب بدن می شود .ترکیباتی که موجب تمیز کردن ریه ها
+ و دیگر اعضای بدن می شود. سیر حاوی مقادیر زیادی آنتی اکسیدان، ویتامین ها
+ و مواد معدنی است که از آسیب های رادیکال آزاد در بدن جلوگیری می کند . 
+رادیکال های آزاد منجر به آسیب رسیدن به سلول های بدن و افزایش خطر سرطان 
+می شود.</span></font></div><div align="justify"><font size="7" face="Mihan-IransansBold">
+</font></div><div style="font-size: 16px;" align="justify">
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;">خاصیت
+ آنتی باکتریال سیر در نابودی بسیاری از باکتری ها، ویروس ها و دیگر میکرو 
+ارگانیسم هایی که منجر به بیماری های تنفسی و مشکلاتی مانند آنفلوانزا و&nbsp;<em style="background: inherit; font-size: inherit;">سرماخوردگی</em>&nbsp;می
+ شوند، نقش مهمی دارد .خواص پاک کنندگی سیر تاثیر بسیاری روی فلزات سنگین 
+جمع شده در بدن دارد. افراد سیگاری و یا افرادی که سیگار را ترک کرده اند و
+ یا در معرض دود سیگار قرار دارند بهتر است سیر بیشتری مصرف نمایند زیرا 
+سیر در دفع سموم ناشی از دخانیات به بدن کمک زیادی می کند. محققان عقیده 
+دارند که مصرف منظم سیر می تواند باعث بهبود وضعیت بیمارانی باشد که از 
+بیماری های تنفسی مانند ذات الریه ،احتقان ریوی ، برونشیت، آسم،<em style="background: inherit; font-size: inherit;">سرماخوردگی</em>&nbsp;و سل و غیره رنج می برند.&nbsp;</span></font></div>
+	<h3 style="font-size: 18px; color: rgb(167, 32, 32) !important;">
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;"><span style="display: inline-block; color: rgb(255, 0, 0);">چگونه ریه ها را با سیر تمیز و پاکسازی کنیم ؟</span></span></font></h3>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;">برای
+ استفاده از مزایای سیر بهتر است که خود داروهای خانگی را تهیه کنید. در 
+این صورت می توانید به بهبود سلامت ریه ها و پاکسازی آنها از تمام آلودگی 
+ها امیدوار شوید.&nbsp;</span></font></div>
+	<h4 style="color: rgb(34, 32, 167) !important;">
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;"><span style="display: inline-block; color: rgb(0, 0, 255);">ترکیب سیر و&nbsp;<span style="text-decoration-line: none;" class="rl">آویشن</span>&nbsp;برای پاکسازی ریه ها</span></span></font></h4>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;">مخلوط سیر و&nbsp;<em style="background: inherit; font-size: inherit;">آویشن</em>&nbsp;سموم ریه ها را از بین می برد. خواص سیر با ترکیب اثرات ضد عفونی کننده&nbsp;<em style="background: inherit; font-size: inherit;">آویشن</em>&nbsp;موجب ارتقا سلامت ریه ها می شود.&nbsp;</span></font></div>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;"><span style="display: inline-block; color: rgb(51, 102, 255);"><span style="font-weight: 700;">مواد لازم</span></span></span></font></div>
+	<div><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;<span style="display: inline-block;">10 حبه سیر&nbsp;</span></span></font></div>
+	<div><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;3 شاخه آویشن تازه&nbsp;&nbsp;</span></font></div>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;"><span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">روغن زیتون</span></span>&nbsp;به میزان لازم</span></font></div>
+	<h5>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;"><span style="display: inline-block; color: rgb(51, 102, 255);">روش تهیه</span></span></font></h5>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;">حبه
+ های سیر را با هاون بکوبید تا به شکل خمیر آماده شود. سپس برگ های آویشن 
+تازه را به آن اضافه کنید و دوباره آن را بکوبید تا به صورت یکدست ترکیب 
+شوند. این ترکیب را در ظرف شیشه ای تمیز ریخته و روی آن را با&nbsp;<em style="background: inherit; font-size: inherit;">روغن زیتون</em>&nbsp;طبیعی بپوشانید. بعد از یک شب از این ترکیب استفاده کنید.</span></font></div>
+	<h5>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;"><span style="display: inline-block; color: rgb(51, 102, 255);">روش استفاده</span></span></font></h5>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;">اجازه
+ دهید تا یک شب از تهیه ترکیب سیر و آویشن سپری شود تا آویشن به خوبی در 
+سیر، مخلوط و خیس شود. صبح روز بعد یک قاشق غذاخوری از آن را به صورت ناشتا
+ میل کنید. مصرف روزانه و به مدت دو هفته از این داروی گیاهی، تاثیر بسیار 
+مفیدید در پاکسازی ریه ها خواهد داشت.</span></font></div><div><font size="7" face="Mihan-IransansBold">
+		&nbsp;</font></div>
+	<h4 style="color: rgb(34, 32, 167) !important;">
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;"><span style="display: inline-block; color: rgb(0, 0, 255);">شربت سیر، زنجبیل،&nbsp;<span style="text-decoration-line: none;" class="rl">پیاز</span>&nbsp;، زردچوبه و شکر</span></span></font></h4>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;">این
+ داروی خانگی از میزان بالای آنتی اکسیدان ها و ترکیبات سم زدا و ضدالتهابی
+ برخوردار است. مزایای موجد در این شربت باعث چند برابر شدن خواص سیر می 
+شود. زیرا&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">زنجبیل</span></span>&nbsp;،&nbsp;<em style="background: inherit; font-size: inherit;">پیاز</em>&nbsp;و&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">زرد چوبه</span></span>&nbsp;نیز
+ دارای خواص ضد ویروسی هستند که قدرت دفاعی و سیستم ایمنی بدن را تقویت می 
+کنند . این شربت گیاهی مواد زائد جمع شده در ریه ها را از بین می برند.&nbsp;</span></font></div>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;"><span style="display: inline-block; color: rgb(51, 102, 255);"><span style="font-weight: 700;">مواد لازم</span></span></span></font></div>
+	<div><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;3 حبه سیر له شده&nbsp;&nbsp;</span></font></div>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;">1 تکه ریشه&nbsp;<em style="background: inherit; font-size: inherit;">زنجبیل</em>&nbsp;تازه&nbsp;&nbsp;</span></font></div>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;">نیم کیلو پیاز&nbsp;&nbsp;</span></font></div>
+	<div><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;200 گرم شکر&nbsp;</span></font></div>
+	<div><font size="7" face="Mihan-IransansBold">
+		<span style="font-size:12px;">&nbsp;نیم لیتر آب&nbsp;</span></font></div>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;">زردچوبه 1 قاشق چای خوری</span></font></div>
+	<h5>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;"><span style="display: inline-block; color: rgb(51, 102, 255);">روش تهیه</span></span></font></h5>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;">آب و شکر را روی حرارت ملایم با یکدیگر مخلوط کنید. سپس پیازهای پوست کنده را اضافه کرده و هم بزنید. بعد از آن&nbsp;<em style="background: inherit; font-size: inherit;">زنجبیل</em>&nbsp;و
+ سیرهای له شده را نیز اضافه کنید و هم بزنید. بعد از جوشیدن شربت ، شعله 
+را کمتر کنید و مدام آن را هم بزنید تا آب ترکیب به نصف برسد.بعد از خاموش 
+کردن شعله، ترکیب را از صافی عبور داده و اجازه دهید تا خنک شود. این شربت 
+را در یخچال نگهداری کنید.&nbsp;</span></font></div>
+	<h4 style="color: rgb(34, 32, 167) !important;">
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;"><span style="display: inline-block; color: rgb(0, 0, 255);">روش مصرف</span></span></font></h4>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;">هر روز صبح به صورت ناشتا، یک قاشق غذاخوری از این شربت را میل کنید و یا اینکه آن را با&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">آب ولرم</span></span>&nbsp;مخلوط
+ کرده و بنوشید. دو هفته به طور مداوم از این شربت استفاده کنید و بعد از 
+آن، یک هفته استراحت کرده و دوباره مصرف آن را آغاز کنید.&nbsp;</span></font></div>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;">در
+ هر دو رش سیر یک عضو مهم در داروهای خانگی شما ه شمار می آید که موجب 
+پاکسازی ریه ها می شود. اما توجه داشته باشید این داروهای گیاهی را در کنار
+ سبک زندگی سالم استفاده نمائید.</span></font></div>
+	
+	<h3 style="font-size: 18px; color: rgb(167, 32, 32) !important;">
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;"><span style="color: rgb(34, 34, 34);">حتی الامکان از جوشاندن سیر خودداری کنید زیرا خواص دارویی آن را از بین میبرد.&nbsp;</span></span></font></h3>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;">البته قبل از هرگونه استفاده از سیر برای هر نوع بیماری باید با پزشک مشورت کنید.&nbsp;</span></font></div>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;">به یاد داشته باشید افرادی که به سیر&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">آلرژی</span></span>&nbsp;دارند، همیشه باید دو نکته مهم در نظر داشته باشند:&nbsp;</span></font></div>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;"><span style="display: inline-block; color: rgb(51, 102, 255);"><span style="font-weight: 700;">این افراد هرگز نباید سیر خام مصرف کنند.</span></span></span></font></div>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;">اگر هرگونه مشکلی را در پوست خود احساس کردند یا با&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">سردرد</span></span>&nbsp;و افزایش دمای بدن مواجه شدند، باید مصرف سیر را سریعتر قطع کنند. سیر باعث ایجاد عوارض جانبی در افرادی می شود که مبتلا به&nbsp;<span style="font-weight: 700;"><span style="text-decoration-line: none;" class="rl">ایدز</span></span>&nbsp;هستند.&nbsp;</span></font></div>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;">علاوه
+ بر تمام موارد بالا ممکن است بوکردن سیر برای بسیاری از افراد غیر قابل 
+تحمل باشد و به همین دلیل توصیه می شود که از مکمل های طبیعی سیر به شکل 
+قرص استفاده کنید تا از فواید آن بی نصیب نباشید.&nbsp;</span></font></div>
+	<div>
+		<font size="7" face="Mihan-IransansBold"><span style="font-size:12px;">به
+ یاد داشته باشید که سیر دارای خواص بی شماری می باشد اما در صورتی که آن 
+را منظم مصرف کنید. با مصرف روزانه سیر می توانید از خواص شفادهنده آن بهره
+ ببرید و زندگی خود را سالم تر از قبل کنید.</span></font></div>
+</div><font size="7" face="Mihan-IransansBold">
+
+
+</font>
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2401)" > نظرات (<script>setCommentCnt(2401)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../../2399.html">یاد ایام.........باستانشهرچورس</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2399&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : جمعه 25 مهر 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <img alt="چورس روستای تاریخی و گردشگری" class="n3VNCb" src="https://uupload.ir/files/xzgk_photo_2017-05-17_01-43-09.jpg" data-noaft="1" style="width: 383px; height: 215.438px; margin: 0px;">
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2399)" > نظرات (<script>setCommentCnt(2399)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../../2398.html">یاد ایام.........باستانشهرچورس</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2398&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : پنجشنبه 24 مهر 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> 
+<img src="http://uupload.ir/files/4guj_photo_2020-04-03_13-17-19.jpg" alt="" vspace="0" hspace="0" border="0" align="bottom">
+
+
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2398)" > نظرات (<script>setCommentCnt(2398)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../../2397.html">یاد ایام.........باستانشهرچورس</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2397&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : چهارشنبه 23 مهر 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div align="center"><img alt="چورس روستای تاریخی و گردشگری - یادایام............ باستانشهر چورس" class="n3VNCb" src="https://uupload.ir/files/18ct_photo_2020-04-03_13-30-30.jpg" data-noaft="1" style="width: 383px; height: 247.418px; margin: 0px;"></div>
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2397)" > نظرات (<script>setCommentCnt(2397)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../../2396.html">8 تأثیر جویدن آدامس بر بدن که نمی دانستید</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2396&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : سه شنبه 22 مهر 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <font size="3" face="Mihan-IransansBold">
+
+
+</font><div class="catTitleHolder" align="justify"><font size="3" face="Mihan-IransansBold" color="#3366FF">روزیاتو/ آدم ها در طول تاریخ چیزهای 
+مختلفی جویده اند: از صمغ گیاهی گرفته و موم تا آدامس. مثلاً پنج هزار سال 
+قبل مردم تکه هایی از صمغ درخت غان را می جویدند. صمغ خواص ضدعفونی کننده و
+ مزایای پزشکی دیگری دارد. آدامس های امروزی هم همینگونه هستند. آنچه روشن 
+است این است که این عادت چیزی فراتر از روشی برای خوشبو کردن دهان یا یک 
+سرگرمی موقت است.
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">در ادامه می خواهیم ببینیم جویدن آدامس چه تأثیری بر بدن دارد.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold">
+</font></div><h2 align="justify"><font size="3" face="Mihan-IransansBold" color="#CC0000">1- روی دندان ها تأثیر می گذارد</font></h2><div align="justify"><font size="3" face="Mihan-IransansBold" color="#CC0000">
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold" color="#CC0000">آثار مثبت: آدامس های بدون قند در از بین بردن باکتری ها مؤثر هستند و 
+می توانند مثل خمیر دندان عمل کنند. مصرف این آدامس ها باعث تولید بیشتر 
+بزاق دهان می شود که اسیدها و باقیمانده ی مواد غذایی را می شورد، در نتیجه
+ جلوی پوسیدگی دندان گرفته می شود. آدامس های بدون قند همچنین به دلیل 
+داشتن کلسیم و فسفات باعث تقویت لثه ها می شوند. </font></p><div align="justify"><font size="3" face="Mihan-IransansBold" color="#CC0000">
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold" color="#CC0000">آثار منفی: اما اگر آدامس حاوی قند باشد، مصرف آن آثار منفی ای بر سلامت
+ دندان ها خواهد داشت. باکتری هایی که درون حفره ی دهان زندگی می کنند، قند
+ موجود در آدامس را قبل از رسیدن به معده مصرف می کنند، در نتیجه روی دندان
+ ها پلاک تشکیل می شود. مصرف آدامس های قنددار به مرور باعث پوسیدگی دندان 
+ها هم می شود.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold">
+</font></div><h2 align="justify"><font size="3" face="Mihan-IransansBold">2- حافظه را تقویت می کند</font></h2><div align="justify"><font size="3" face="Mihan-IransansBold">
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">جویدن آدامس باعث افزایش ضربان قلب، جریان خون و اکسیژن رسانی به مغز می
+ شود. یکی از آثار مثبت این امر افزایش توانایی های شناختی است، به طوری که
+ هوشیاری، پردازش فکری، توانایی تصمیم گیری و حافظه بهبود می یابد. 
+متأسفانه آثار آن بلندمدت نیستند و فقط زمانی تأثیرگذار است که قبل از کار 
+چالش برانگیزی یا در حین آن آدامس بجوید.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold">
+</font></div><h2 align="justify"><font size="3" face="Mihan-IransansBold">3- به کاهش وزن کمک می کند</font></h2><div align="justify"><font size="3" face="Mihan-IransansBold">
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">آثار مثبت: جویدن آدامس گاهی می تواند باعث سرکوب اشتها شود. آدم ها 
+وقتی صبح ها آدامس می جوند، بعد از آن معمولاً کمتر احساس گرسنگی می کنند. 
+آدامس هم شیرین است هم کالری کمی دارد، به همین دلیل ممکن است کمک کند 
+تنقلات کمتری مصرف کنید. جویدن آدامس همچنین مصرف انرژی را بیشتر می کند، 
+سوخت و ساز را افزایش می دهد و باعث می شود بعد از خوردن غذا کمتر احساس بی
+ حالی کنید.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold">
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">آثار منفی: اما مصرف آدامس به عنوان یک کمک غذایی می تواند نتیجه ی عکس 
+داشته باشد. حرکت جویدن و تولید مداوم بزاق باعث می شود مغز تصور کند شما 
+واقعاً احساس گرسنگی می کنید. آدامس های نعنایی هم میل به خوردن تنقلات به 
+جای گزینه های سالم تری مثل میوه را بیشتر می کنند، چون بعد از مصرف آدامس 
+نعنایی میوه ها طعم ناخوشایندی در دهان پیدا می کنند. کسانی که آدامس می 
+جوند تعداد وعده های غذایی روزانه ی آن ها معمولاً کمتر است، اما در همان 
+دفعات غذای بیشتری می خورند، در نتیجه کالری بیشتری دریافت می کنند.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold">
+</font></div><h2 align="justify"><font size="3" face="Mihan-IransansBold" color="#3333FF">4- مشکلاتی برای فک ایجاد می کند</font></h2><div align="justify"><font size="3" face="Mihan-IransansBold" color="#3333FF">
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold" color="#3333FF">جویدن مداوم می تواند منجر به بروز اختلالی شود که مفصل های فک و عضلات 
+اطراف آن را تحت تأثیر قرار دهد. در اینصورت تمامی حرکات فک – از خوردن و 
+خندیدن گرفته تا حتی صحبت کردن – با درد شدیدی همراه می شود که گاهی تا 
+گردن و شانه ها ادامه می یابد. این خطر به ویژه زمانی تشدید می شود که در 
+هنگام اضطراب آدامس بجوید، چون آدم ها معمولاً وقتی عصبی هستند ناخودآگاه 
+دندان های خود را به هم فشار می دهند.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold">
+</font></div><h2 align="justify"><font size="3" face="Mihan-IransansBold" color="#CC0000">5- روی دستگاه گوارش تأثیر می گذارد</font></h2><div align="justify"><font size="3" face="Mihan-IransansBold" color="#CC0000">
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold" color="#CC0000">آثار مثبت: افزایش تولید بزاق دهان هنگام جویدن آدامس کمک زیادی به رفع 
+تهوع های صبحگاهی و ناشی از ماشین گرفتگی می کند. بعضی حتی اثربخشی جویدن 
+آدامس را از دارو بیشتر می دانند و می گویند به همان سرعت احتمال استفراغ، 
+شکم درد و حالت تهوع را کاهش می دهد، با اینکه بسیار ارزان تر از دارو است و
+ دسترسی به آن راحت تر هم هست.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold" color="#CC0000">
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold" color="#CC0000">آثار منفی: اما اگر معده ی حساسی دارید یا از سوء هاضمه رنج می برید 
+باید مراقب باشید. هنگام جویدن، مقدار کمی هوا هم بلعیده می شود، در نتیجه 
+معده پر از هوا می شود، مسأله ای که می تواند به نفخ بیانجامد. الکل های 
+قندی هم که اغلب از آن ها به عنوان شیرین کننده استفاده می شود مانند یک 
+ماده ی ملین عمل می کنند و باعث کرامپ (انقباضات غیرارادی و دردناک)، شکم 
+درد و اسهال می شوند.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold">
+</font></div><h2 align="justify"><font size="3" face="Mihan-IransansBold">6- سوزش معده را کم می کند</font></h2><div align="justify"><font size="3" face="Mihan-IransansBold">
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">جویدن آدامس بعد از خوردن غذا می تواند سطح اسیدها در مری را کم کند. 
+بزاق دهان باعث رقیق و خنثی شدن اسیدها بعد از خوردن غذای سنگین می شود. 
+همین امر ممکن است به کاهش رفلاکس اسید معده و سوزش معده کمک کند.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold">
+</font></div><h2 align="justify"><font size="3" face="Mihan-IransansBold">7- روی مغز تأثیر می گذارد</font></h2><div align="justify"><font size="3" face="Mihan-IransansBold">
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">آثار مثبت: جویدن آدامس هم اثر ضد اضطراب دارد هم روحیه را بهبود می 
+بخشد. مصرف آدامس باعث کاهش سطح کورتیزول یا همان هورمون اضطراب می شود و 
+حرکت ساده ی جویدن برای بیشتر آدم ها تأثیر آرامش بخش دارد. این کار باعث 
+رفع خستگی و اضطراب می شود و بهبود روحیه در طول روز می شود.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold">
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">آثار منفی: اما وارد شدن فشار مداوم به فک باعث افزایش تعداد و تناوب 
+میگرن ها و سردردهای تنشی می شود. در بدترین حالت، این امر می تواند منجر 
+به بروز سردردهای مزمن شود. پس اگر مستعد میگرن هستید، بهتر است به کلی از 
+مصرف آدامس خودداری کنید.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold">
+</font></div><h2 align="justify"><font size="3" face="Mihan-IransansBold" color="#3333FF">8- از عفونت گوش جلوگیری می کند</font></h2><div align="justify"><font size="3" face="Mihan-IransansBold" color="#3333FF">
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold" color="#3333FF">عفونت گوش زمانی رخ می دهد که باکتری ها در مجراهای متصل به بینی و گوش 
+ها انباشته شوند. این مشکل بیشتر در کودکان رخ می دهد. مصرف آدامس های حاوی
+ شیرین کننده ی طبیعی زایلیتول به جلوگیری از انباشت باکتری ها در این بخش 
+ها کمک می کند.</font></p>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2396)" > نظرات (<script>setCommentCnt(2396)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../../2395.html">نشست خبری نماینده شهرستان چایپاره و خوی با خبرنگاران شهرستان چایپاره </a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2395&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : یکشنبه 20 مهر 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div align="center"><img src="https://uupload.ir/files/kxst_image_2020_10_11-8_33_43_827_m3b.jpg" alt="" vspace="0" hspace="0" border="0" align="bottom"></div><div align="center"><br></div><div align="center"><font size="4" face="Mihan-IransansBold">اهم پاسخهای نماینده شورای اسلامی<br>۱-قبول و پذیرش انتقاد پذیری از طرف خبرنگاران<br>۲- عملکرد اصلی اقدام جدی در زیرساخت ها و راههای مواصلاتی <br>۳-تخصیص ۷میلیارد تومن وزیر نیرو برای&nbsp; شهرستان خوی<br>۴-دریافت قول کلنگ زنی بیمارستان چایپاره توسط دکتر نمکی <br>۵-اختصاص ۴۵ میلیارد تومان برای ۱۳درصد باقیمانده آبیاری بارانی اراضی کشاورزی چایپاره<br>۶-آغاز احداث سد غازان خوی و تامین آب شرب خوی و آب کشاورزی<br>۷-ساخت مینی پالایشگاه و تولیدی قیر با حضور سرمایه گذار چایپاره ای در شهرستان<br><br>۸-پیگیری مسایل زمینهای فنس زده و خانه باغ ها شهرستان با جلسه دادستان و رسیدن به راه حل مناسب<br>۹-الحاق خوی به منطقه آزاد <br>۱۰-مناطق ویژه اقتصادی باید دولت حمایت&nbsp; کند که مورد تایید دولت نیست.<br>۱۱-بابت راه اندازی کارخانه&nbsp; آجرسفال&nbsp; تمام اقدامات انجام شده و حاضر به فدای جانم در این راه هستم. که&nbsp; عده ای مخل در راه اندازی این کارخانه هستند.<br></font><br></div>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2395)" > نظرات (<script>setCommentCnt(2395)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../../2394.html">فرماندار چایپاره در کارگروه آرد و نان شهرستان:  هیچ‌گونه کمبود آرد و نان در چایپاره نداریم</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2394&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : یکشنبه 20 مهر 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <font size="4" face="Mihan-IransansBold">
+
+
+</font><div align="center"><font size="4" face="Mihan-IransansBold"><img src="https://uupload.ir/files/592e_image_2020_10_11-8_28_49_322_dx0.jpg" alt="" vspace="0" hspace="0" border="0" align="bottom"></font></div><div align="justify"><font size="4" face="Mihan-IransansBold"><br></font></div><div align="justify"><font size="4" face="Mihan-IransansBold">فرماندار چایپاره در کارگروه آرد و نان شهرستان: <br>هیچ‌گونه کمبود آرد و نان در چایپاره نداریم<br>♦️فرماندار چایپاره:<br>♦️ در وضع فعلے هیچ کمبود آرد و نان در شهرستان نداریم و در دو روز گذشته شایعات و جو روانے ایجاد شده موجب هجوم مردم به نانواها شده وطبیعتا این مسئله درخواست کاذب نان را افزایش داده است و براے آسایش مردم مقررگردیده تعدادے از نانوایان بعد از ظهر نیز به طبخ نان اقدام نمایند<br><br>&nbsp;در ادامه جلسه نیز تصمیمات لازم براے برخورد با متخلفان و احتکار کنندگان آرد و تسهیل در روند افزایش پخت نان&nbsp; با تغییر در سهمیه نانوایان مناطق با جمعیت بیشتر اتخاذ گردید.<br></font></div><div align="justify"><br></div>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2394)" > نظرات (<script>setCommentCnt(2394)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../../2393.html">کمبود آهن خود را با این خوراکی ها جبران کنید </a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2393&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : یکشنبه 20 مهر 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div align="justify"><font size="4" face="Mihan-IransansBold">برای آنکه کمبود آهن که با عنوان 
+فقر آهن شناخته می شود را جبران کنید، نیاز به قرص و مکمل دارید. اما 
+خوراکی ها هم جایگزین مناسبی برای این داروها هستند.                </font></div><div class="np-lead" align="justify">
+            </div><div align="justify"><font size="4" face="Mihan-IransansBold">
+                
+        </font></div><div class="overview-auto zxc1" align="justify">
+                    </div><div align="justify"><font size="4" face="Mihan-IransansBold">
+        
+        
+        
+            </font></div><div style="clear: both;" align="justify">  
+              <p align="justify"><font size="4" face="Mihan-IransansBold">به گزارش اقتصادنیوز به نقل از خراسان، «فقر آهن» 
+عارضه‌ای است که بسیاری از افراد به‌ویژه <font color="#CC0000">جامعه دختران و زنان با آن دست به
+ گریبان هستند و&nbsp;کم‌خونی&nbsp;ناشی از آن می‌تواند زمینه‌ساز ابتلا به 
+بیماری‌های مختلف شود.</font></font></p><font color="#CC0000">
+
+</font><p align="justify"><font size="4" face="Mihan-IransansBold" color="#CC0000"><strong>جایگزین مناسب قرص و مکمل آهن</strong></font></p><font color="#CC0000">
+
+</font><p align="justify"><font size="4" face="Mihan-IransansBold" color="#CC0000">خوراک پخته‌شده گردن گوسفند در شیر گاو هفته‌ای یک وعده</font></p><font color="#CC0000">
+
+</font><p align="justify"><font size="4" face="Mihan-IransansBold" color="#CC0000">عدس‌پلو با کشمش فراوان هفته‌ای یک وعده</font></p>
+
+<p align="justify"><font size="4" face="Mihan-IransansBold" color="#3333FF">روزانه ۷ عدد تمرهندی + ۲۱ عدد مویز + ۹ عدد آلوی خورشی</font></p><font color="#3333FF">
+
+</font><p align="justify"><font size="4" face="Mihan-IransansBold" color="#3333FF">رب انار (ملس) یک قاشق غذاخوری + سرکه سیب یک قاشق غذاخوری + شیره انگور
+ ۳ قاشق غذاخوری + یک استکان آب شاه‌توت کاملاً طبیعی مخلوط و میل شود.</font></p><font color="#3333FF">
+
+</font><p align="justify"><font size="4" face="Mihan-IransansBold" color="#3333FF">گوشت بلدرچین آب پز شده یا سوپ جو با گوشت گنجشک هفته‌ای یک وعده</font></p><font color="#3333FF">
+
+</font><p align="justify"><font size="4" face="Mihan-IransansBold" color="#3333FF">خوراک زبان گوسفند، ۷ عدد زیتون سیاه</font></p>
+
+<p align="justify"><font size="4" face="Mihan-IransansBold">آلبالو یا زغال‌اخته با گلپر فراوان در فصلش</font></p>
+
+<p align="justify"><font size="4" face="Mihan-IransansBold">بورانی اسفناج، برگ چغندر</font></p>
+
+<p align="justify"><font size="4" face="Mihan-IransansBold">خوراک آلواسفناج هفته‌ای یک وعده</font></p>
+
+<p align="justify"><font size="4" face="Mihan-IransansBold">سبزی خوردنی مرکب از کاسنی‌تر و تازه، تره، بولاغ‌اوتی‌تر و تازه، جعفری، برگ چغندر، نعناع تازه میل شود.</font></p>
+
+<p align="justify"><font size="4" face="Mihan-IransansBold">فسنجان گردو، بادام درختی، پسته هفته‌ای یک وعده</font></p>
+
+<p align="justify"><font size="4" face="Mihan-IransansBold">دمنوش میوه گل نسترن روزانه یک تا دو لیوان</font></p>
+            </div><font size="4" face="Mihan-IransansBold">
+
+
+</font>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2393)" > نظرات (<script>setCommentCnt(2393)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../../2392.html">کدام روغن برای مصرف سالم تر است؟</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2392&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : شنبه 19 مهر 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <font size="3">
+
+                        </font><div class="hm-html-editor-body" align="justify"><div align="justify"><font size="3" face="Mihan-IransansBold" color="#CC0000">&nbsp;روغن های خوراکی سرشار از چربی و کالری هستند؛ اما ترکیب شیمیایی و تأثیر آن ها بر سلامتی می توانند متفاوت باشند.
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold" color="#CC0000">روغن پخت وپز از مواد خام آشپزی است؛ اما اطلاعات متناقضی درباره ی 
+میزان تأثیر هرکدام از آن ها بر سلامتی وجود دارد. روغن های خوراکی انواع 
+مختلفی دارد؛ مثل نارگیل، روغن زیتون، روغن کانولا، آووکادو، آفتابگردان، 
+ذرت و...؛ اما کدام یک برای سلامتی مفید است و چگونه باید از آن ها استفاده
+ کرد؟</font></p>
+<p align="justify"><font size="3" face="Mihan-IransansBold" color="#3333FF">روغن های پخت وپز معمولا از دانه ها و میوه ها و به طور کلی غلات به روش
+ های مختلفی مثل کوبیدن یا خُردکردن یا فراوری تولید می شوند. به طور کلی، 
+روغن ها با ویژگی هایی مثل چربی اشباع فراوان و اسیدهای چرب غیراشباع با 
+پیوند یگانه و چندگانه شناخته می شوند. در سال های گذشته، روغن نارگیل که 
+90 درصد چربی اشباع دارد، در گروه ابرغذا قرار گرفته است. ابرغذاها معمولا 
+چربی کمتری دارند و انرژی بیشتری آزاد می کنند؛ اما همه گیر شناسان دانشگاه
+ هاروارد به آن «سم خالص» می گویند.</font></p>
+<p align="justify"><font size="3" face="Mihan-IransansBold" color="#CC0000">مصرف بیش از اندازه چربی اشباع (روزانه بیش از 20 گرم برای زنان و 30 
+گرم برای مردان) می تواند به تولید کلسترول بیشتر و درنتیجه، افزایش خطر 
+بیماری های قلبی بینجامد. مولکول های چربی از زنجیره های اسیدهای چربی 
+تشکیل شده اند که با پیوندهای یگانه (اشباع) یا پیوندهای دوگانه (غیراشباع)
+ به یکدیگر وصل شده اند. سه نوع اسید چرب وجود دارد: زنجیره ی کوتاه و 
+زنجیره ی متوسط و زنجیره ی بلند. اسیدهای چرب زنجیره ی کوتاه و زنجیره ی 
+متوسط به صورت مستقیم جذب جریان خون می شود و انرژی آزاد می کنند؛ اما 
+اسیدهای چرب زنجیره ی طولانی به کبد منتقل می شوند و سطح کلسترول خون را 
+افزایش می دهپد. پروفسور آلیس لیچتنستین، متخصص علوم تغذیه از دانشگاه 
+تافتس ماساچوست، دراین باره می گوید:</font></p>
+<p align="justify"><font size="3" face="Mihan-IransansBold">روغن نارگیل در سه یا چهار سال گذشته به محبوبیت زیادی دست یافته است و 
+ادعا می شود آثار ویژه ای دارد؛ اما با بررسی و مقایسه ی آن با روغن های 
+دیگر، می توان به چربی اشباع فراوان آن رسید و ادعاهای اولیه فاقد هرگونه 
+پشتوانه ی علمی هستند.</font></p>
+<p align="justify"><font size="3" face="Mihan-IransansBold">طبق اغلب آزمایش های کنترلی، روغن نارگیل سطح کلسترول مضر LDL 
+(لیپوپروتئین کم تراکم) را افزایش می دهد که رابطه ی مستقیمی با بیماری های
+ قلبی و سکته دارد. ناگفته نماند کلسترول مفید HDL (لیپوپروتئین پرتراکم) 
+را هم افزایش می دهد که در دفع LDL از جریان خون ایفای نقش می کند. یکی از 
+دلایل این فرایند وجود مقادیر بسیار زیاد اسید لوریک در روغن نارگیل است که
+ سطح HDL را بیشتر از LDL افزایش می دهد.</font></p>
+<p align="justify"><font size="3" face="Mihan-IransansBold">به عقیده ی تایلر والاس، متخصص علوم تغذیه، برخلاف ادعاها اسیدلوریک 
+سالم نیست. این ماده در دسته ی اسیدهای چرب C12 قرار می گیرد؛ یعنی 12 اتم 
+کربن دارد و در دسته ی اسیدهای چرب زنجیره متوسط قرار می گیرد؛ اما شباهت 
+زیادی به اسیدهای چرب زنجیره ی طولانی دارد و مانند آن ها رفتار می کند. 
+پس، می تواند به کبد منتقل و زمینه ساز بیماری های قلبی شود. به همین دلیل،
+ کارشناسان روغن هایی را توصیه می کنند که چربی اشباع کمی دارند؛ اما از 
+انواع دیگر چربی های سالم تر برخوردار هستند.</font></p>
+<p align="justify"><font size="3" face="Mihan-IransansBold" color="#CC0000">چربی غیراشباع پیوند دوگانه حاوی امگا 3 و امگا 6 و چربی غیراشباع پیوند
+ یگانه می توانند سطوح کلسترون را کاهش دهند و ویتامین ها و اسیدهای چرب 
+ضروری را تأمین کنند. این نوع چربی ها را می توان در انواع روغن های گیاهی 
+پیدا کرد؛ البته میزان دقیق چربی به نوع گیاه و فناوری تولید آن هم وابسته 
+است. برای مثال، استفاده از روغن زیتون به جای کره و مارگارین و مایونز می 
+تواند خطر بیماری های قلبی را به اندازه ی 5 تا 7 درصد کاهش دهد.</font></p><font color="#CC0000">
+</font><p align="justify"><font size="3" face="Mihan-IransansBold" color="#CC0000">طبق پژوهشی روی 100 هزار شرکت کننده در دوره ای 24 ساله، خطر بیماری های
+ قلبی در افرادی که روغن زیتون بیشتری مصرف کرده بودند، به اندازه ی 15 
+درصد کمتر از گروه های دیگر بود. یکی از دلایل عمده ی سالم بودن روغن 
+زیتون، اسیدهای غیرچرب پیوند یگانه هستند که از ویتامین ها و موادمعدنی و 
+پلی فنول های گیاهی تشکیل شده اند. روغن زیتون به عنوان سالم ترین روغن 
+گیاهی شناخته شده است. طبق پژوهشی، روغن زیتون اثرهای مفیدی بر میکروبیوم 
+شکمی و بیماری های قلبی می گذارد. همچنین، روغن زیتون اکسترا ویرجین (فوق 
+بکر) می تواند در پیشگیری از سرطان و دیابت نوع 2 مؤثر باشد.</font></p>
+<p align="justify"><font size="3" face="Mihan-IransansBold">از روغن زیتون بیشتر در رژیم غذایی مدیترانه ای استفاده می شود. این نوع
+ رژیم سرشار از سبزیجات و میوه ها و غلات است و کمترین چربی اشباع را دارد؛
+ به همین دلیل، رابطه ی مستقیم با کاهش خطر بیماری های قلبی دارد. بااین 
+حال به گفته ی پژوهشگران، ممکن است مزایای سلامتی این نوع رژیم به دلیل 
+دیگر اجزای آن باشند تا روغن زیتون. طبق شواهد، تنها مزیت روغن زیتون مستقل
+ از رژیم مدیترانه ای، قابلیت افزایش سطح کلسترول مفید بدن (HDL) است.</font></p>
+<p align="justify"><font size="3" face="Mihan-IransansBold" color="#3333FF">براساس پژوهش های انجام شده روی انواع روغن زیتون، مصرف روغن زیتون 
+اکسترا ویرجین یا فوق بکر رابطه ی مستقیمی با کاهش خطر بیماری های قلبی 
+دارد. روغن اکسترا ویرجین سرشار از آنتی اکسیدان و ویتامین E است؛ اما 
+انواع دیگر روغن زیتون پس از استخراج روغن فراوری می شوند؛ ازاین رو، برخی 
+موادمغذی خود را از دست می دهند. طبق نتایج امنیت غذایی اروپا در سال 2011،
+ از شاخصه های روغن زیتون می توان به کاهش تنش اکسایشی (نبود تعادل بین 
+رادیکال های آزاد و آنتی اکسیدان های بدن) و محافظت از سلول دربرابر 
+کلسترول بد LDL اشاره کرد. البته پژوهشگران استفاده از روغن زیتون اکسترا 
+ویرجین برای پخت وپز را کاملا تأیید نکرده اند و هنوز در حد فرضیه و ادعای 
+علمی است.</font></p>
+<p align="justify"><font size="3" face="Mihan-IransansBold"><br></font></p></div><font size="3">
+
+                            
+
+                        
+                            
+                                
+
+
+</font>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2392)" > نظرات (<script>setCommentCnt(2392)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../../2391.html">بهترین روش خوردن سیر خام که نمی دانستید </a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2391&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : دوشنبه 14 مهر 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <h1 class="fb news-title mt8 mb8 mr50 ml50" itemprop="name" align="justify"><font size="4" face="Mihan-IransansBold">بهترین روش مصرف سیر این است که سیر خام را به اندازه قرص 
+خرد کرده و با نوشیدنی مورد نظر خود مصرف کنید. از روش‌های دیگر مصرف 
+می‌توان به له کردن سیر بین دندان‌های آسیابی اشاره کرد.      
+      
+  
+    
+      
+                        </font></h1><div align="justify">
+                
+      
+    </div><div align="justify"><font size="4" face="Mihan-IransansBold">
+    
+    <span id="start-message-thm"></span>        </font></div><p align="justify"><font size="4" face="Mihan-IransansBold">شاید
+ خوردن سیر خام چندان خوش‌آیند نباشد، اما برای مهار و نابودی میکروب‌ها 
+موثر است. شاید این سوال برای شما پیش آمده باشد که بهترین روش مصرف سیر 
+چیست؟ در این مقاله به این سوال پاسخ خواهیم داد.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">در ابتدا توصیه می‌کنیم که از جویدن، قورت دادن و بلع یک حبه کامل سیر 
+اجتناب کنید. بلع یک حبه سیر می‌تواند باعث گیر کردن آن در گلوی شما شود. 
+برای مصرف سیر خام می‌توانید روش‌های زیر را امتحان کنید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">۱) نگینی کردن سیر</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">می‌توانید سیر را به اندازه قرص خرد کرده و آن را با نوشیدنی مورد نظر خود قورت دهید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">نکته: برای کاهش طعم سیر می‌توانید از اسموتی، میلک شیک یا دوغ کفیر استفاده کنید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">مصرف سیر نگینی شده بهترین روش مصرف سیر</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">۲) له کردن سیر</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">این روش در واقع از روش‌های خوردن سیر محسوب نمی‌شود، اما برای بهبود 
+عفونت‌های گلو، گوش و دهان بسیار موثر است. بدین منظور یک حبه کامل سیر را 
+میان دندان‌های آسیابی خود قرار دهید و به آرامی سیر را فشار دهید تا کمی 
+شکافته و ترک بخورد. آن را به هیچ وجه نجوید. این له کردن باعث فعال شدن 
+آلیسین موجود در سیر می‌شود. حدود یک دقیقه سیر را در دهان نگه داشته و سپس
+ آن را درآورید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">۳) سیر به همراه نان تست</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">سیر را کاملا له کرده و آن را به همراه ۲ قاشق چای‌خوری کره آب شده روی نان تست بمالید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">چرا باید سیر خام بخوریم؟</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">خب، پاسخ کوتاه به این سوال این است که سیر یک ماده ضد عفونی بسیار قوی است. از سیر می‌توان برای موارد درمانی زیر استفاده کرد:</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">سیاه سرفه</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">آماس پستان</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">سرماخوردگی و آنفولانزا</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">سرفه</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">گلو درد</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">فشار خون بالا</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">کاهش سطح کلسترول بد</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">از بین برنده کرم‌ها و انگل‌ها</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">تنظیم قند خون</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">عفونت گوش</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">افزایش جریان صفراوی</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">تحریک ایمنی</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">ضد میکروبی (حاوی آلیسین)</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">روش‌های اشتباه مصرف سیر خام</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">۱. جویدن سیر</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">جویدن سیر خام دندان‌‌های فولادی می‌خواهد! حال اگر بتوانید این کار را 
+انجام دهید، بزرگترین مشکلی که برای شما پیش خواهد آمد، مواجهه با طعم 
+نامطلوب گوگردی سیر است که در تمام سطوح دهان حس خواهد شد. فراموش نکنید که
+ سیر هم‌خانواده پیاز است!</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">۲. قورت دادن سیر درسته</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">شاید این کار عجیب به نظر برسد، اما واقعیت دارد. بسیاری از افراد برای 
+فرار کردن از طعم نامطلوب حاصل از جویدن سیر، آن را درسته قورت می‌دهند. 
+توصیه می‌کنیم این کار را نکنید. شواهد نشان داده است که بعضی افراد با 
+قورت دادن سیر درسته دچار خفگی و انسداد مری شده اند. از طرف دیگر، قورت 
+دادن درسته سیر مزیت چندانی برای سلامت بدن ندارد، چرا که هضم آن برای 
+دستگاه گوارش دشوار است.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">بهترین روش مصرف سیر پخته</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">پختن سیر کار اشتباهی نیست، اما باعث از بین رفتن آلیسین موجود در آن 
+می‌شود. حرارت باعث از بین رفتن آلیسین می‌شود. برای جلوگیری از از بین 
+رفتن کامل آلیسین در سیر پخته این روش را دنبال کنید:</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">ابتدا سیر خام را کاملا له کنید</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">حدود ۱۰ دقیقه صبر کنید تا ترکیبات سیر رها شود</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">در انتها سیر خام له شده را بر روی حرارت کم بپزید</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">نکته مهم؛ استفاده از سیر به عنوان یک چاشنی غذایی</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">برای بهره بردن از مزیت‌های سیر پخته برای سلامت بدن، سیر خام له شده را
+ در انتهای زمان پخت به غذا اضافه کنید. (وارد کردن سیر به ترکیب غذا در 
+ابتدای مراحل پخت مواد غذایی اشتباه است.)</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">سخن آخر</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">طبع سیر، گرم و خشک است. از خواص سیر خام می‌توان به درمان کورک‌های 
+بدن، کاهش کلسترول، پیشگیری از زوال عقل و درمان خروپف اشاره کرد.</font></p><font size="4" face="Mihan-IransansBold">
+
+
+</font>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2391)" > نظرات (<script>setCommentCnt(2391)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../../2390.html">این دمنوش هارا بخورید تا سیستم تنفسی شما تقویت شود</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2390&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : چهارشنبه 9 مهر 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div align="justify"><font size="4" face="Mihan-IransansBold">
+                            </font></div><div class="col-sm-8 col-sm-offset-2 col-xs-12 img" align="center"><font size="4" face="Mihan-IransansBold"><img src="https://behdasht.news/images/news/165241/thumbs/165241.jpg" alt="این دمنوش هارا بخورید تا سیستم تنفسی شما تقویت شود" title="این دمنوش هارا بخورید تا سیستم تنفسی شما تقویت شود"></font></div><div align="justify"><font size="4" face="Mihan-IransansBold">                            </font></div><div class="text-short" align="justify"><font size="4" face="Mihan-IransansBold"> یکی از علائم مهم کرونا مشکلات تنفسی است که با خوردن برخی دمنوش ها می توان سیستم تنفسی خود را تقویت کرد</font></div><div align="justify"><font size="4" face="Mihan-IransansBold">
+                            </font></div><div class="text" align="justify">
+							<div><font size="4" face="Mihan-IransansBold">
+	به گزارش <font color="#FF0000"><strong>چورس نیوز</strong> </font>، ابتلا به کووید-19 می‌تواند با 
+مشکلات تنفسی مختلفی برای بیماران مبتلا همراه باشد. حتی اگر به کووید-19 
+مبتلا شده و آن را پشت سر گذاشته باشید، باز هم ممکن است در ساعاتی از روز 
+دچار سرفه‌های ناگهانی، تنگی نفس یا خس‌خس سینه شوید.</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	&nbsp;</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	از این‌رو توصیه می‌کنیم که بهترین دمنوش‌ها برای تقویت سیستم تنفسی را 
+بشناسید تا بتوانید هم در صورت ابتلا به حساسیت پاییزی و هم در صورت ابتلا 
+به کووید-19 از آن‌ها استفاده کنید.</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	&nbsp;</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	&nbsp;دمنوش زنجبیل</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	زنجبیل برای کاهش التهاب در بدن، تنظیم قند خون و برطرف کردن حالت تهوع 
+موثر است. مصرف روزانه دمنوش زنجبیل می‌تواند به کاهش شدید التهاب در سیستم
+ تنفسی کمک و علایم تنگی نفس، سرفه و احساس سوزش یا خس‌خس سینه و گلو را 
+برطرف کند.</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	&nbsp;</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	روش تهیه دمنوش زنجبیل&nbsp;</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	می‌توانید یک تکه زنجبیل تازه را همراه با حدود یک بند انگشت چوب دارچین 
+داخل&nbsp; آب جوش بریزید و 20 دقیقه اجازه دهید تا این دمنوش روی حرارت 
+غیرمستقیم دم بکشد. سپس آن را با مقداری عسل و لیموترش تازه میل کنید.</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	&nbsp;</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	&nbsp;چای سبز</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	چای سبز سرشار از انواع آنتی‌اکسیدان‌هاست و مصرف منظم آن می‌تواند علاوه 
+بر کاهش احتمال ابتلا به دیابت نوع 2 و بیماری‌های قلبی، باعث بهبود شرایط 
+تنفسی در بیماران مبتلا به مشکلات تنفسی شود.</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	&nbsp;</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	&nbsp;روش تهیه دمنوش چای سبز&nbsp;</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	می‌توانید چای سبز را مانند چای سیاه دم کنید و روزانه یک تا دو فنجان از آن را همراه با مقداری عسل بنوشید.</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	&nbsp;</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	&nbsp;دمنوش شیرین‌بیان</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	از زمان‌های قدیم ریشه شیرین‌بیان برای درمان بیماری‌های مختلفی ازجمله 
+آسم و آلرژی مورد استفاده قرار می‌گرفته است. شما هم می‌توانید این روزها 
+از دمنوش شیرین‌بیان برای بهبود سیستم تنفسی در شرایط شیوع کرونا کمک 
+بگیرید.</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	&nbsp;</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	&nbsp;روش تهیه دمنوش شیرین بیان</font></div>
+<div><font size="4" face="Mihan-IransansBold">
+	مصرف روزانه بیش از یک فنجان دمنوش شیرین‌بیان می‌تواند عوارضی برای بدن 
+در پی داشته باشد. برای تهیه دمنوش شیرین‌بیان بهتر است که مقداری از ریشه 
+شیرین‌بیان را داخل 240 میلی‌لیتر آب جوش بریزید و 10 تا 20 دقیقه اجازه 
+دهید تا دمنوش شما آماده مصرف شود.</font></div>
+
+							
+														</div><font size="4" face="Mihan-IransansBold">
+
+
+</font>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2390)" > نظرات (<script>setCommentCnt(2390)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../../2389.html">بازنشستگی زودهنگام و اثرات آن بر مغز انسان</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2389&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : چهارشنبه 9 مهر 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div class="item-title" align="justify">
+						<font size="4" face="Mihan-IransansBold">بازنشستگی 
+زودهنگام و کمتر کار کردن یا اصلا کار نکردن، می تواند مزایای بزرگی مثل 
+کاهش استرس، رژیم های غذایی بهتر و خواب بیشتر به دنبال داشته باشد.
+				
+
+					 
+ </font></div><p align="justify"><font size="4" face="Mihan-IransansBold"><span style="color:#ff0000">به گزارش چورس نیوز،</span> طبق مطالعه اقتصادی
+ جدیدی که من به همراه آلن آدلمن، دانشجوی دوره دکترای خود انجام داده ایم،
+ کسانی که زودتر بازنشسته می شوند، دچار افول شناختی تسریع شده می شوند و 
+حتی ممکن است مرحله اولیه زوال عقل را تجربه کنند.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold"> 
+ </font></div><p align="justify"><font size="4" face="Mihan-IransansBold">به منظور تثبیت این یافته، ما تلاش های یک برنامه بازنشستگی روستایی را
+ که چین در سال 2009 راه اندازی کرده بود مورد بررسی قرار داده ایم. این 
+برنامه در اختیار کسانی قرار گرفته که اگر بعد از بازنشستگی رسمی در 60 
+سالگی از کار کردن دست می کشیدند، درآمد ثابتی برایشان در نظر گرفته می شد.
+ ما دریافتیم کسانی که در این برنامه مشارکت کرده و بازنشسته شده بودند، طی
+ یک یا دو سال بعد، نوعی زوال شناختی را که معادل یک افت هوش کلی 1.7 درصدی
+ به نسبت کل جمعیت است تجربه کرده اند. این افت معادل حدود سه امتیار آی 
+کیو است و می تواند برای کسی که از برنامه دارویی خاصی پیروی می کند یا در 
+برنامه ریزی های مالی شرکت دارد، شدیدتر نیز شود. بزرگ ترین تاثیر منفی در 
+زمینه ای رخ داده که «یادآوری با تاخیر» نامیده می شود و توانایی فرد را در
+ به یادآوردن چیزی که چند دقیقه پیش به آن اشاره شده اندازه گیری می کند. 
+تحقیقات عصب شناختی مشکلات در این حوزه را با یک مرحله اولیه از شروع زوال 
+عقل مرتبط می دانند.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold"> 
+ </font></div><p align="justify"><font size="4" face="Mihan-IransansBold"><strong>چرا این موضوع اهمیت دارد</strong></font></p><div align="justify"><font size="4" face="Mihan-IransansBold"> 
+ </font></div><p align="justify"><font size="4" face="Mihan-IransansBold">افول شناختی به این معنی است که چه وقت یک شخص در یادآوری، یادگیری 
+مطالب جدید، تمرکز یا اتخاذ تصمیماتی که بر زندگی روزمره شان تاثیر می 
+گذارد، مشکل پیدا می کنند. هر چند به نظر می آید که مقداری از این زوال 
+شناختی محصول فرعی اجتناب ناپذیر پیر شدن باشد، اما افول شناختی سریع تر، 
+می تواند پیامدهای نامطلوب را بر زندگی یک فرد عمیق تر کند.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold"> 
+ </font></div><p align="justify"><font size="4" face="Mihan-IransansBold">درک بهتر از دلایل این امر، پیامدهای مالی قدرتمندی به دنبال دارد. 
+مهارت های شناختی – روندهای ذهنی گردآوری و پردازش اطلاعات برای حل مشکلات،
+ سازگاری با موقعیت های مختلف و یادگیری از تجربیات- در تصمیم سازی بسیار 
+اهمیت دارند. این مهارت ها بر توانایی فرد در پردازش اطلاعات تاثیر می 
+گذارند و با کسب درآمد بیشتر و کیفیت بهتر زندگی مرتبط هستند.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold"> 
+ </font></div><p align="justify"><font size="4" face="Mihan-IransansBold">بازنشستگی زودهنگام و کمتر کار کردن یا اصلا کار نکردن، می تواند 
+مزایای بزرگی مثل کاهش استرس، رژیم های غذایی بهتر و خواب بیشتر به دنبال 
+داشته باشد ولی ما دریافته ایم که این اتفاق اثرات نامطلوب ناخواسته ای نیز
+ به همراه دارد، مثل انجام فعالیت های اجتماعی کمتر و صرف زمان کمتر در به 
+چالش کشیدن ذهن که پیامدهای مثبت آن را تحت الشعاع خود قرار می دهند.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold"> 
+ </font></div><p align="justify"><font size="4" face="Mihan-IransansBold">در حالی که طرح های بازنشستگی&nbsp; مثل 401(کی) و برنامه های مشابه در سایر
+ کشورها نوعا برای تضمین رفاه افراد در حال پیر شدن به اجرا گذاشته می 
+شوند، ولی تحقیق ما نشان می دهد که برای اجتناب از پیامدهای منفی قابل توجه
+ و ناخواسته ای که دارند، این برنامه ها به طراحی محتاطانه و دقیقی نیاز 
+دارند. مردم موقع ارزیابی موضوع بازنشستگی، باید مزایای آن را به همراه 
+تبعات منفی مهم از دست دادن ناگهانی فعالیت های ذهنی، در دو طرف ترازو قرار
+ دهند. یک راه حل خوب برای کاستن از این اثرات، تداوم حضور در فعالیت های 
+اجتماعی و استفاده از مغز به همان شیوه ای است که در سال های کار کردن از 
+آنها استفاده می کرده ایم.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold"> 
+  
+ </font></div><p align="justify"><font size="4" face="Mihan-IransansBold"><strong>آنچه هنوز ناشناخته است</strong></font></p><div align="justify"><font size="4" face="Mihan-IransansBold"> 
+ </font></div><p align="justify"><font size="4" face="Mihan-IransansBold">به این دلیل که ما از داده های مربوط به یک برنامه در چین استفاده می 
+کنیم، مکانیسم های اینکه چگونه بازنشستگی بر افول شناختی تاثیر می گذارد، 
+می تواند خاص این بستر جغرافیایی فرهنگی مشخص باشد و شاید ضرورتا به مردم 
+سایر کشورها قابل اطلاق نباشد. برای مثال تفاوت های فرهنگی یا دیگر سیاست 
+هایی که می توانند تضمینی باشند برای حمایت از افراد سالخورده، ممکن است 
+مانعی باشد بر سر راه برخی از اثرات منفی که ما به دلیل افزایش انزوای 
+اجتماعی و کاهش فعالیت های ذهنی سالخوردگان در مناطق روستایی چین شاهد بوده
+ ایم.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold"> 
+ </font></div><p align="justify"><font size="4" face="Mihan-IransansBold">از این روست که ما قطعا نمی توانیم بگوییم که این یافته ها به سایر 
+کشورها قابل تعمیم خواهد بود. ما به دنبال داده هایی از برنامه های 
+بازنشستگی سایر کشورها نظیر هند هستیم تا ببینیم آیا اثرات مشابهی داشته 
+اند یا چه تفاوت هایی با هم دارند.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold"> 
+  
+ </font></div><p align="justify"><font size="4" face="Mihan-IransansBold"><strong>&nbsp;ادامه تحقیقات</strong></font></p><div align="justify"><font size="4" face="Mihan-IransansBold"> 
+ </font></div><p align="justify"><font size="4" face="Mihan-IransansBold">تمرکز عمده آزمایشگاه تحقیقات اقتصادی که من اداره آن را در دست دارم، 
+درک بهتر دلایل و نتایج تغییرات در چیزی است که اقتصاددانان آن را «سرمایه 
+انسانی» – به خصوص مهارت های شناختی- در بستر کشورهای در حال توسعه می 
+دانند.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold"> 
+ </font></div><p align="justify"><font size="4" face="Mihan-IransansBold">ماموریت آزمایشگاه ما انجام این قبیل تحقیقات برای مطلع کردن 
+سیاستگذاران اقتصادی و قدرت بخشیدن به افراد در کشورهای کم درآمد برای 
+بیرون کشیدن خود از فقر است. یکی از راه های اصلی انجام این کار از سوی ما،
+ از طریق استفاده از برنامه های آزمایشی کنترل شده برای اندازه گیری تاثیر 
+یک مداخله خاص، مثل بازنشستگی زودهنگام یا دستیابی به وام های کوچک بر 
+پیامدهای تحصیلی، بهره وری و تصمیمات مرتبط با سلامت است.</font></p><font size="4" face="Mihan-IransansBold">
+
+
+</font>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2389)" > نظرات (<script>setCommentCnt(2389)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../../2388.html">مراسم صبحگاه مشترک نیروهای نظامی ؛ انتظامی ونیروهای بسیج در شهرستان چایپاره برگزار شد.</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2388&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : یکشنبه 6 مهر 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div><img src="http://uupload.ir/files/3l7g_1f2c0f5e-7ba5-414b-8e12-f8a2622c10e8.jpg" alt="" vspace="0" hspace="0" border="0" align="bottom"></div><div><br></div><div><div class="media-left"><div class="thumb"><a href="http://www.chaypareh-ag.ir/fa/news/detail/c304ab76-8c00-eb11-9c2b-000c29ce98ae/%d9%85%d8%b1%d8%a7%d8%b3%d9%85-%d8%b5%d8%a8%d8%ad%da%af%d8%a7%d9%87-%d9%85%d8%b4%d8%aa%d8%b1%da%a9-%d9%86%db%8c%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d9%86%d8%b8%d8%a7%d9%85%db%8c-%d8%9b-%d8%a7%d9%86%d8%aa%d8%b8%d8%a7%d9%85%db%8c-%d9%88%d9%86"> <font size="4" face="Mihan-IransansBold"><img src="http://www.chaypareh-ag.ir/Contents/News/Thumbnail/9dbef3cc-2ff0-4869-9b19-01698d0a3275.jpg" data-src="/Contents/News/Thumbnail/9dbef3cc-2ff0-4869-9b19-01698d0a3275.jpg" class="img-responsive img-rounded media-preview" alt=""> <span class="zoom-image"></span> </font></a></div></div><div align="justify"><font size="4" face="Mihan-IransansBold">به
+ گزارش<font color="#FF0000"> چورس نیوز</font> بمناسبت چهلمین سالگرددفاع مقدس 
+مراسم صبحگاه مشترک نیروهای نظامی ، انتطامی و نیروهای بسیج باحضور محمدی 
+ایروانلو فرماندار شهرستان ؛ حجت الاسلام والمسلمین جمشیدی امام جمعه 
+؛اعضای شورای تامین ومسئولین شهرستان در محل ناحیه مقاومت بسیج شهرستان 
+چایپاره برگزار شد.</font></div></div><div><br></div><br>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2388)" > نظرات (<script>setCommentCnt(2388)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../../2387.html">مثل آب خوردن لاغر شوید </a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2387&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : شنبه 5 مهر 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div class="l-np-title " align="justify"><font size="4" face="Mihan-IransansBold">ممکن است تابه‌حال 
+برای لاغری از روش‌های زیادی استفاده کرده باشید. ما امروز در این مطلب 
+به‌شما چند مواد خوراکی معرفی می‌کنیم که با ترکیب کردن آن‌ها با آب 
+می‌توانید لاغر شوید.
+
+                
+            
+                
+        </font></div><div class="overview-auto zxc1" align="justify">
+                    </div><div align="justify"><font size="4" face="Mihan-IransansBold">
+        
+        
+        
+              
+              </font></div><p align="justify"><font size="4" face="Mihan-IransansBold">به گزارش <font color="#FF0000">چورس نیوز </font>به نقل از بهداشت نیوز ،&nbsp;ممکن است 
+تابه‌حال برای لاغری از روش‌های <font color="#3333FF">زیادی استفاده کرده باشید. ما امروز در این
+ مطلب به‌شما چند مواد خوراکی معرفی می‌کنیم که با ترکیب کردن آن‌ها با آب 
+می‌توانید لاغر شوید.</font></font></p><div align="justify"><font size="4" face="Mihan-IransansBold" color="#3333FF">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold" color="#3333FF">دتوکس واتر یا آب سم‌زدا فقط برای سم‌زدایی زودگذر بدن نیست. مطالعات 
+نشان می‌دهد که آب سم‌زدا واقعاً به بدن شما کمک می‌کند تا از سموم خلاص 
+شود، وزن کم کرده و سطح انرژی را افزایش دهد.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">در این مطلب تعدادی دستورالعمل قرار داده‌ایم که می‌توانند میزان آب 
+روزانه بدن شما را ارتقا دهد و به هیدراته شدن بدن شما و لاغری کمک کند.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold" color="#CC0000"><strong>۱. آب با نمک غیر یددار</strong></font></p><div align="justify"><font size="4" face="Mihan-IransansBold" color="#CC0000">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold" color="#CC0000">برای تمیز کردن روده بزرگ و درمان یبوست مزمن توصیه می‌شود یک آب با نمک
+ غیریددار را امتحان کنید. همچنین بسیار مهم است که بدانید ما به نمک به 
+مقدار مناسب نیاز داریم و حذف کامل آن تصمیم چندان خوبی نیست. سدیم به شما 
+کمک می‌کند تا هنگامی که در خون حل می‌شود عملکرد صحیح اعصاب، عضلات و فشار
+ خون را حفظ کنید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold" color="#CC0000">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold" color="#CC0000">اگر دچار یبوست مزمن هستید یا حرکات بی نظمی در روده دارید، یک لیوان آب نمک را امتحان کنید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold" color="#CC0000">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold" color="#CC0000"><strong>دستور العمل:</strong></font></p><div align="justify"><font size="4" face="Mihan-IransansBold" color="#CC0000">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold" color="#CC0000">۲ قاشق چایخوری نمک دریایی غیر یددار و ۴ فنجان آب گرم را مخلوط کنید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold" color="#CC0000">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold" color="#CC0000">اگر می‌خواهید طعم آن بهتر شود، مقداری لیمو به آن اضافه کنید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold" color="#CC0000">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold" color="#CC0000">آن را در اسرع وقت با معده خالی بنوشید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold"><strong>۲. آب با سیر</strong></font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">دانش مدرن بسیاری از اثرات مفید سلامتی مرتبط با مصرف سیر را تأیید 
+می‌کند. این می‌تواند فشار خون را کاهش دهد، با بیماری مقابله کند، سطح 
+کلسترول را بهبود بخشد و بدن را از فلزات سنگین سم‌زدایی کند. این به دلیل 
+ترکیبات گوگردی است که هنگام خرد شدن سیر ایجاد می‌شود.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">اما می‌توانید همه این مزایای سلامتی را بدون خوردن آن دریافت کنید. می‌توانید آن را در یک نوشیدنی خوب امتحان کنید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold"><strong>دستورالعمل:</strong></font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">۲ قطعه سیر برداشته و آن‌ها را ورقه ورقه کنید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">۱۰ دقیقه صبر کنید و سپس آن‌ها را با ۵۰۰ میلی لیتر آب مخلوط کنید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">بگذارید حداقل ۲ ساعت بماند.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold"><strong>۳. آب با سیب و دارچین</strong></font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">سیب و دارچین هر دو می‌توانند به شما در کاهش وزن و تقویت سوخت و ساز 
+بدن کمک کنند. مخلوط کردن این ترکیبات مقداری آنتی اکسیدان مهم (از جمله 
+ویتامین‌های C و B) به رژیم غذایی شما اضافه می‌کند.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">دارچین فواید زیادی برای سلامتی دارد، از جمله کاهش کلسترول و مبارزه با دیابت.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold"><strong>دستور العمل:</strong></font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">۲ عدد سیب را برش بزنید. آن‌ها را به همراه ۲ چوب دارچین به یک پارچ آب اضافه کنید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">به مدت یک ساعت در یخچال قرار دهید تا طعم آن‌ها به آب اضافه شود.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold"><strong>۴. آب با مکعب‌های یخ خیار</strong></font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">اگر می‌خواهید از نوشیدن نوشابه چشم پوشی کنید، یک نوشیدنی تازه و خنک 
+با طعم خیار می‌تواند کمک کننده باشد. این یک آنتی اکسیدان طبیعی است و فقط
+ ۳۴ کالری در ۱ خیار بزرگ وجود دارد. می‌توانید خیار تازه اضافه کنید یا 
+فقط طعم نوشیدنی خود را بهبود ببخشید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">دستور العمل:</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">یک خیار را رنده یا خرد کنید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">خیار‌های رنده شده یا مکعب‌ها را فریز کنید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">وقتی احساس گرسنگی یا تشنگی می‌کنید، آن‌ها را به آب خود اضافه کنید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">همچنین می‌توانید برای بهبود طعم و مزه لیمو یا نعناع اضافه کنید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold"><strong>۵. آب با فلفل سیاه</strong></font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">اگر می‌خواهید بدن خود را سم‌زدایی کرده و مقداری وزن کم کنید فلفل سیاه
+ ماده بسیار خوبی است. مطالعات ادعا می‌کنند که این ماده دارای خواص آنتی 
+اکسیدانی است که می‌تواند به جلوگیری از التهاب، پیری زودرس و بیماری‌های 
+قلبی کمک کند. علاوه بر این، می‌تواند متابولیسم قند را بهبود بخشد و سطح 
+کلسترول را کاهش دهد.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold"><strong>دستورالعمل:</strong></font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">از مواد زیر استفاده کنید: نصف قاشق غذاخوری فلفل سیاه خرد شده، ۱ قاشق 
+غذاخوری زنجبیل رنده شده، ۱ قاشق غذاخوری عسل، ۱ لیمو و ۲ لیوان آب.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">فلفل را با زنجبیل رنده شده مخلوط کنید. حالا عسل را بریزید و همه چیز را خوب مخلوط کنید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">آب را بجوشانید و در لیوان‌ها بریزید. یک قاشق غذاخوری از مخلوط را به 
+یک لیوان آب اضافه کنید. آب نصف لیمو را اضافه کنید (اگر لیمو دوست دارید).
+ صبر نکنید تا سرد شود گرم بنوشید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold"><strong>۶. آب با رزماری</strong></font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">مزایای رزماری قابل توجه است. مطالعات نشان داد که ممکن است به بهبود 
+هضم، حافظه و سیستم ایمنی بدن کمک کند. دانشمندان همچنین دریافته اند که 
+رزماری ممکن است برای مغز شما مفید باشد و به عنوان نوعی محافظت عصبی عمل 
+کند. نوشیدن یک نوشیدنی همراه با این گیاه در دوز‌های کم می‌تواند عادت خوب
+ و مفیدی باشد.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold"><strong>دستور العمل:</strong></font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">یک ساقه رزماری تازه بگیرید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">یک لیمو را برداشته، پوست آن را جدا کرده و آن را ورقه ورقه کنید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">برش‌های لیمو و رزماری را در یک ظرف ۳۲ اونسی (۰.۹ لیتری) بریزید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">این نوشیدنی را حداقل به مدت ۲ ساعت (یا یک شب) در یخچال قرار دهید.</font></p><div align="justify"><font size="4" face="Mihan-IransansBold">
+
+</font></div><p align="justify"><font size="4" face="Mihan-IransansBold">تمامی مواردی که در مطلب گفته شد، علاوه بر سم‌زدایی و فواید دیگری که نام‌برده شد، به لاغری شما نیز کمک می‌کند.</font></p><font size="4" face="Mihan-IransansBold">
+
+
+</font>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2387)" > نظرات (<script>setCommentCnt(2387)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../../2386.html">پیام تبریک دانیالی بخشدار مرکزی شهرستان چایپاره به مناسبت فرا رسیدن 31 شهریور ماه و آغاز هفته دفاع مقدس</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2386&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : چهارشنبه 2 مهر 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> 
+
+<div class="newsContent"><p dir="RTL" style="margin: 0px 0px 8pt;" align="justify"><font size="4" face="Mihan-IransansBold" color="#CC0000"><span style="font-size:11pt"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"><br></span></span></span></span></font></p><p dir="RTL" style="margin: 0px 0px 8pt;" align="center"><font size="4" face="Mihan-IransansBold" color="#CC0000"><span style="font-size:11pt"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"><img src="http://uupload.ir/files/er0e_2cb8dc1c-7ebc-4d06-96c6-8cb20b4893da.jpg" alt="" vspace="0" hspace="0" border="0" align="bottom"></span></span></span></span></font></p><p dir="RTL" style="margin: 0px 0px 8pt;" align="justify"><font size="4" face="Mihan-IransansBold" color="#CC0000"><span style="font-size:11pt"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"><br></span></span></span></span></font></p><p dir="RTL" style="margin: 0px 0px 8pt;" align="justify"><font size="4" face="Mihan-IransansBold" color="#CC0000"><span style="font-size:11pt"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed">هشت
+ سال دفاع مقدس ملت سلحشور ایران در برابر همه زورگویان جهان، برگ زرینی 
+ازحماسه ملتی است که تا همیشه تاریخ، نه تنها ایرانیان بلکه همه ملت های 
+آزاده جهان به آن افتخار می کنند. </span></span></span></span></font></p><p dir="RTL" style="margin: 0px 0px 8pt;" align="justify"><font size="4" face="Mihan-IransansBold" color="#3333FF"><span style="font-size:11pt"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed">این
+ حادثه بزرگ و ماندگار توانست همه معادلات جهانی معمول در عرصه سیاسی، 
+نظامی، اجتماعی و فرهنگی را برهم زندو غرور و سرافرازی را برای مردم ایران 
+زمین برجای بگذارد. اینک که در ایام هفته دفاع مقدس، رایحه و عطر دل انگیز 
+شهدا در کشور ، استان،شهرستان و بخش عزیزمان به مشام می رسد، اینجانب 
+وظیفه&nbsp; خود می دانم این هفته را به خانواده های معظم شهدا و ایثارگران و 
+همه دلیرمردان عرصه&nbsp; ایثار و مقاومت تبریک عرض نمایم. </span></span></span></span></font></p><p dir="RTL" style="margin: 0px 0px 8pt;" align="justify"><font size="4" face="Mihan-IransansBold"><span style="font-size:11pt"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed">امیدوارم
+ خداوند متعال به همه ما توفیق عنایت کند تا در سایه رهنمودهای مقام معظم 
+رهبری راه شهدا و امام شهدا (ره&nbsp; ) را استمرار 
+بخشیم.&nbsp;&nbsp; <br></span></span></span></span></font></p><font size="4" face="Mihan-IransansBold"><span style="font-size:11pt"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br></span></span></span></span></font></div><div class="newsContent"><font size="4" face="Mihan-IransansBold"><span style="font-size:11pt"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; محسن
+ دانیالی&nbsp; <br></span></span></span></span></font><p dir="RTL" style="margin:0 0 8pt;text-align:right"><font size="4" face="Mihan-IransansBold"><span style="font-size:11pt"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"> &nbsp;&nbsp;&nbsp; بخشدار مرکزی شهرستان چایپاره</span></span></span></span></font></p></div>
+
+
+
+
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2386)" > نظرات (<script>setCommentCnt(2386)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../../2385.html">جلسه انجمن کتابخانه های عمومی در شهرستان چایپاره برگزار شد.</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2385&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : چهارشنبه 2 مهر 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <h4><br></h4><p dir="RTL" style="text-align:justify;margin:0 0 8pt"><font size="3"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"><span style="font-family:Calibri,sans-serif"><font color="#3333FF"><span style="font-family:&quot;Arial&quot;,sans-serif" lang="FA">به
+ گزارش چورس نیوز جلسه انجمن کتابخانه های عمومی به 
+منظور بررسی و رفع مشکلات کتابخانه های عمومی&nbsp; به ریاست محمدی ایروانلو 
+فرماندار شهرستان و با حضور مدیرکل کتابخانه های عمومی استان آذربایجانغربی
+ و باحضور سایر اعضاء درسالن جلسات فرمانداری برگزارشد.</span></font><span style="font-family:&quot;Arial&quot;,sans-serif" lang="FA"></span></span></span></span></span></span></span></span></font></p><p dir="RTL" style="text-align:justify;margin:0 0 8pt"><font size="3" color="#CC0000"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif" lang="FA">بنابه
+ این گزارش محمدی ایروانلو فرماندار شهرستان ضمن اشاره به اینکه کتاب 
+وکتابخوانی ابزار توسعه فرهنگ است عنوان کرد:با ترویج فرهنگ کتابخوانی و 
+تاثیر مستقیمی که بر افزایش آگاهی اجتماعی و توسعه فرهنگی یک شهرستان دارد 
+مانعی جدی بر افزایش آسیب های اجتماعی دارد.</span><span style="font-family:&quot;Arial&quot;,sans-serif" lang="FA"></span></span></span></span></span></span></span></span></font></p><p dir="RTL" style="text-align:justify;margin:0 0 8pt"><font size="3"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"><span style="font-family:Calibri,sans-serif"><font color="#CC0000"><span style="font-family:&quot;Arial&quot;,sans-serif" lang="FA">درادامه
+ رئیس انجمن کتابخانه های عمومی چایپاره گفت:&nbsp; با توجه به اینکه یکی از 
+شاخصه های فرهنگی هر شهرستان داشتن کتابخانه های عمومی است در این خصوص 
+لازم است مسئولین شهرستان جهت تقویت بنیه فضاهای مطالعاتی شهرستان ساخت 
+کتابخانه عمومی را در برنامه های خود داشته باشند.</span></font><span style="font-family:&quot;Arial&quot;,sans-serif" lang="FA"></span></span></span></span></span></span></span></span></font></p><p dir="RTL" style="text-align:justify;margin:0 0 8pt"><font size="3" color="#000099"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif" lang="FA">در پایان هریک از اعضاء انجمن نقطه نظرات و پیشنهادات خود را مطرح نمودند </span><span style="font-family:&quot;Arial&quot;,sans-serif" lang="FA"></span></span></span></span></span></span></span></span></font></p><font size="3" color="#000099"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"><span style="font-family:Calibri,sans-serif">&nbsp;<span style="font-family:&quot;Arial&quot;,sans-serif" lang="FA">گسترش
+ کتابخانه های عمومی شهرستان جهت تشویق هرچه بیشتر شهروندان به امر 
+کتابخوانی، شناسایی فضاهای مناسب جهت احداث کتابخانه های عمومی در سطح 
+شهرستان ، پیگیری جذب اعتبارجهت ساخت کتابخانه عمومی در حاجیلار از جمله 
+مباحث مطرح شده در این جلسه بود.</span></span></span></span></span></span></span></span></font>
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2385)" > نظرات (<script>setCommentCnt(2385)</script>)</a></div></div>
+
+<div id="postz">
+<div class=tpost-x >آخرین مطالب</div>
+<div class=xpost><div class=xpost2><a href="../../2424.html">یادایام............................ باستانشهرچورس</a></div>
+<div class=xpost2><a href="../../2423.html">یاد ایام.................................. باستانشهرچورس</a></div>
+<div class=xpost2><a href="../../2425.html">دیدار رئیس منابع طبیعی و آبخیزداری شهرستان با فرماندار چایپاره</a></div>
+<div class=xpost2><a href="../../2422.html">بیست و دومین جلسه ستاد پیشگیری و مبارزه با کرونا شهرستان چایپاره برگزار شد</a></div>
+<div class=xpost2><a href="../../2420.html">ملا نصرالدین</a></div>
+<div class=xpost2><a href="../../2421.html">یك_شب_برای_خدا </a></div>
+<div class=xpost2><a href="../../2419.html">پنجمین جلسه شورای هماهنگی ترافیک شهرستان چایپاره برگزارشد.</a></div>
+<div class=xpost2><a href="../../2418.html"> تولید کننده #واکسن_کرونا: زمستان سال آینده شرایط زندگی عادی می‌شود</a></div>
+<div class=xpost2><a href="../../2417.html">هشدار هواشناسی سطح زرد استان آذربایجانغربی  </a></div>
+<div class=xpost2><a href="../../2416.html">هفته #بارانی در کشور</a></div>
+<div class=xpost2><a href="../../2415.html">بیستمین جلسه ستادپیشگیری و مبارزه با کرونا شهرستان چایپاره برگزارشد.</a></div>
+<div class=xpost2><a href="../../8.html">مفاخرچورس</a></div>
+<div class=xpost2><a href="../../2413.html">دومین جلسه شورای توسعه و حمایت از تشکل های مردم نهاد شهرستان چایپاره برگزار شد.</a></div>
+<div class=xpost2><a href="../../2412.html">نوزدهمین جلسه ستادپیشگیری و مبارزه با ویروس کرونا شهرستان چایپاره برگزارگردید.</a></div>
+<div class=xpost2><a href="../../2411.html">یادایام.........................</a></div>
+<div class=xpost2><a href="../../2410.html">خواص درمانی عالی آویشن </a></div>
+<div class=xpost2><a href="../../2409.html">یادایام.........................</a></div>
+<div class=xpost2><a href="../../2408.html">25 نکته که از قاره آسیا که نمی‌دانید</a></div>
+<div class=xpost2><a href="../../2407.html">۱۰ باور غلط درباره کرونا که جانتان را به خطر می‌اندازد </a></div>
+<div class=xpost2><a href="../../2403.html">یاد ایام.........باستانشهرچورس</a></div>
+</div><div class=bpost-x></div></div>
+
+
+<script src="http://blogskins.ir/46/code.js"></script>
+	
+<div class="tmenu b3"><div class=tmenu2>آرشیو مطالب</div></div>
+<div class=xmenu>
+<div class=xmenu1><a href="9.html"> آذر 1399</a></div><div class=xmenu1><a href="8.html"> آبان 1399</a></div><div class=xmenu1><a href="7.html"> مهر 1399</a></div><div class=xmenu1><a href="6.html"> شهریور 1399</a></div><div class=xmenu1><a href="5.html"> مرداد 1399</a></div><div class=xmenu1><a href="4.html"> تیر 1399</a></div><div class=xmenu1><a href="3.html"> خرداد 1399</a></div><div class=xmenu1><a href="2.html"> اردیبهشت 1399</a></div><div class=xmenu1><a href="1.html"> فروردین 1399</a></div><div class=xmenu1><a href="../1398/12.html"> اسفند 1398</a></div><div class=xmenu1><a href="../1398/11.html"> بهمن 1398</a></div><div class=xmenu1><a href="../1398/10.html"> دی 1398</a></div><div class=xmenu1><a href="../1398/9.html"> آذر 1398</a></div><div class=xmenu1><a href="../1398/8.html"> آبان 1398</a></div><div class=xmenu1><a href="../1398/7.html"> مهر 1398</a></div><div class=xmenu1><a href="../1398/6.html"> شهریور 1398</a></div><div class=xmenu1><a href="../1398/5.html"> مرداد 1398</a></div><div class=xmenu1><a href="../1398/4.html"> تیر 1398</a></div><div class=xmenu1><a href="../1398/3.html"> خرداد 1398</a></div><div class=xmenu1><a href="../1398/2.html"> اردیبهشت 1398</a></div></div>
+<div class=bmenu></div>
+
+		
+
+
+<div class="tmenu b4"><div class=tmenu2>پیوند های روزانه</div></div>
+<div class=xmenu><div class=xmenu1><a target="_blank" href="http://azarandankhoy.blogfa.com/" title="">کارخانه خوراک دام و طیور آذران دن اورین خوی</a></div><div class=xmenu1><a target="_blank" href="http://setadjomeh.com/gharehziaedin?p_p_id=101_INSTANCE_kO79mekttcYQ&amp;p_p_lifecycle=0&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_id=column-1&amp;p_p_col_pos=4&amp;p_p_col_count=5&amp;_101_INSTANCE_kO79mekttcYQ_delta=12&amp;_101_INSTANCE_kO79mekttcYQ_keywords=&amp;_101_INSTANCE_kO" title="">ستاد نماز جمعه شهرستان چایپاره</a></div><div class=xmenu1><a target="_blank" href="http://chaypareh-ag.ir/" title="">#فرمانداری شهرستان چایپاره</a></div><div class=xmenu1><a target="_blank" href="http://fish.medu.ir" title="">فیش حقوقی فرهنگیان شهرستان چایپاره وکشور</a></div><div class=xmenu1><a target="_blank" href="http://uupload.ir" title="سلام ، خسته نباشید
+وبلاگ بسیار خوب و زیبایی دارید .
+پیشنهاد میکنم برای آپلود فایل و عکس از سایت یو آپلود استفاده کنید.
+به صورت رایگان ، دائمی و سرعت بالا 
+لطفا لینک رو تایید کنید تا هم آدرس سایت رو داشته باشید و هم یه حمایتی بشه از ما
+خیلی ممنون
+خدانگهدار">آپلود فایل</a></div><div class=xmenu1><a target="_blank" href="https://telegram.me/chorsNews" title="">درکانال تلگرامی چورس نیوز با ما همراه شوید</a></div><div class=xmenu1><a target="_blank" href="http://dehghani44.blogfa.com/" title="">وب آقای مرتضی دهقانی</a></div><div class=xmenu1><a target="_blank" href="../../../../chaypara.mihanblog.com/index.html" title="">وب آقای علی سلطانبیگی</a></div><div class=xmenu1><a target="_blank" href="http://chors.salehin.ir/" title="">سایت صالحین چورس چهارمین سایت برترکشور</a></div><div class=xmenu1><a href="http://www.blogskin.ir" target="_blank">قالب وبلاگ</a></div>
+<div class=xmenu1><a href="../../../linkdaily/index.html"><b>همه پیوندهای روزانه</b></a></div>
+<div class=xmenu1><a href="javascript:linkdailyForm()"><b>ارسال پیوند روزانه</b></a></div>
+</div>
+<div class=bmenu></div>
+<!------------block ----------------------->
+<div class="tmenu b2"><div class=tmenu2>امکانات جانبی</div></div>
+<div class=xmenu><div class=xmenu2>
+<center>
+blogskin
+</center>
+</div></div><div class=bmenu></div>
+<!------------block ----------------------->
+
+</div>
+</div>
+
+</div>
+
+<div class=footer>
+<div class=right>
+<div class=form>فرم تماس با ما</div>
+<div class=txt>
+<FORM METHOD="POST" ACTION="http://blogskins.ir/45/email.php" name="blogskin" onsubmit="return checkform()" target="_blank">
+
+<INPUT NAME="email" value="adres@yahoo.com" style="display:none">
+
+<div>نام و نام خانوادگی: <INPUT NAME="name" class=ii autocomplete="off"></div>
+<div>پست الكترونیك : <INPUT NAME="adres" class=ii autocomplete="off"></div>
+<div>	<TEXTAREA onfocus="javascript:;if (this.value =='در این قسمت متن خود را بنویسید.'){ this.value = ''}" name="msg" class=ix>در این قسمت متن خود را بنویسید.</TEXTAREA></div>
+<div><center><INPUT TYPE="image" src="http://blogskins.ir/46/send.jpg"></center></div>
+</FORM></div>
+</div>
+<div class=left id="linkz">
+<div class=linkz>
+<div class=titrx>لینک دوستان</div>
+<div class=zz>
+<div><div><a href="../../../link/index.html"><b>آرشیو پیوندها</b></a></div></div>
+<div><div><a target="_blank" href="http://azarandankhoy.blogfa.com/" title="">کارخانه آذران دن اورین خوی</a></div></div><div><div><a target="_blank" href="http://chors.salehin.ir/" title="">سایت صالحین چورس سایت برترکشور</a></div></div><div><div><a target="_blank" href="http://dehghani44.blogfa.com/" title="">وب آقای مرتضی دهقانی</a></div></div><div><div><a target="_blank" href="../../../../chaypara.mihanblog.com/index.html" title="">وب آقای علی سلطانبیگی</a></div></div>
+</div>
+</div>
+<div class=rss><br><a href="7.html#ali" title="بالای صفحه"><img border="0" src="http://blogskins.ir/46/x.gif" width="70" height="60"></a></div>
+
+<div class=down><div class=ft>
+تمام حقوق این وبلاگ و مطالب آن متعلق به 
+<a href="../../../index.html">چورس روستای تاریخی و گردشگری</a> می باشد.</div>
+</div></div>
+
+
+</div>
+</div></div></div></div><div id="seo">
+<h2><a href="http://www.blogskin.ir" title="قالب وبلاگ">قالب وبلاگ</a></h2>
+
+
+
+</div>
+<script type=text/javascript>document.getElementById('s'+'e'+'o').style.display='none';</script> </body></html>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'chors.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

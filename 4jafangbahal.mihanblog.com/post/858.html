@@ -1,0 +1,948 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc@rsd.html" />
+<script type="text/javascript" src="../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1154462*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','635');
+	setStatVar('total_author','5');
+	setStatVar('modify_date','یکشنبه 4 آبان 1399');
+	
+	setStatVar('today_view','17');
+	setStatVar('yesterday_view','140');
+	
+	setStatVar('this_month_view','2296');
+	setStatVar('last_month_view','1636');
+
+	setStatVar('total_view','439190');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (07:23)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://4jafangbahal.mihanblog.com/statupdate/?data[refereruri]=http://4jafangbahal.mihanblog.com/&data[postid]=858&data[requesturi]=/post/858&data[sdate]=1607832227&data[hash]=f7bc9895d403da82129601016e55c684&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[858]='2';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[858]='0';
+mihanblogDisLikeArrCnt[858]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://4jafangbahal.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://4jafangbahal.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://4jafangbahal.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://4jafangbahal.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://4jafangbahal.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://4jafangbahal.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://4jafangbahal.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://4jafangbahal.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://4jafangbahal.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://4jafangbahal.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://4jafangbahal.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://4jafangbahal.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://4jafangbahal.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://4jafangbahal.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://4jafangbahal.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://4jafangbahal.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://4jafangbahal.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META NAME="description" CONTENT="کل من علیها فان...">
+<META NAME="keywords" CONTENT="کل,علیها,فان,">
+<META NAME="DesignerUrl" CONTENT="http://Avazak.ir">
+<META NAME="Designer" CONTENT="AVAZAK">
+<link rel="alternate" type="application/rss+xml" title="˙·٠●❤ چار دختر جفنگ ❤●٠·˙ " href="rss/index.html" />
+<title>˙·٠●❤ چار دختر جفنگ ❤●٠·˙  - کل من علیها فان...</title>
+<link href="http://avazak.ir/Theme/style/661.css" type="text/css" rel="stylesheet">
+</style>
+
+</head>
+
+<body>
+<!--Design By : Avazak.ir-->
+<div align =center>
+<table border="0" cellspacing="0" cellpadding="0" class="Avazak">
+<tr><td colspan="3" class="page" dir="rtl">
+<div class="header">
+<h1>˙·٠●❤ چار دختر جفنگ ❤●٠·˙ </h1>
+<p class="subtitle">✿ مریم  ✿ مینا  ✿  فائزه ✿  ندا  ✿</p>
+<p class="menu"><a href="../index.html">صفحه اصلی</a> | 
+<a href="list.html">عناوین مطالب</a> | 
+<a href="javascript:messageForm()">تماس با من</a> | 
+<a title="قالب رایگان میهن بلاگ" href="http://www.avazak.ir/">طراح قالب</a>
+</p></div>
+</td></tr>
+	<!-- end header -->
+<!--Design By : Avazak.ir-->
+<td valign="top" dir="rtl">
+<div class="sidebar-l">
+
+<!--Design By : Avazak.ir-->
+
+<h3>آخرین مطالب</h3>
+<div class="Link"><a title="این داستان: همه چی با آب تمیز نمیشه!" href="866.html">این داستان: همه چی با آب تمیز نمیشه!</a></div>
+<div class="Link"><a title="دختری، تاج سر بابایی" href="865.html">دختری، تاج سر بابایی</a></div>
+<div class="Link"><a title="." href="864.html">.</a></div>
+<div class="Link"><a title="آقاجون" href="725.html">آقاجون</a></div>
+<div class="Link"><a title="چی دلم میخواست ؟" href="861.html">چی دلم میخواست ؟</a></div>
+<div class="Link"><a title="بهار خزان زده" href="860.html">بهار خزان زده</a></div>
+<div class="Link"><a title="آخرین بار..." href="859.html">آخرین بار...</a></div>
+<div class="Link"><a title="کل من علیها فان..." href="858.html">کل من علیها فان...</a></div>
+<div class="Link"><a title="یه عید متفاوت" href="856.html">یه عید متفاوت</a></div>
+<div class="Link"><a title="سندرم متن بی‌قرار" href="855.html">سندرم متن بی‌قرار</a></div>
+<div class="Link"><a title="!" href="852.html">!</a></div>
+<div class="Link"><a title="دنیای ویروسی" href="851.html">دنیای ویروسی</a></div>
+<div class="Link"><a title="ارغوان" href="850.html">ارغوان</a></div>
+<div class="Link"><a title="ترم ۵" href="849.html">ترم ۵</a></div>
+<div class="Link"><a title="شرم" href="845.html">شرم</a></div>
+<div class="Link"><a title="این روزای عجیب" href="840.html">این روزای عجیب</a></div>
+<div class="Link"><a title="هفته ای که قشنگ نبود " href="839.html">هفته ای که قشنگ نبود </a></div>
+<div class="Link"><a title="پاییزی که گذشت" href="837.html">پاییزی که گذشت</a></div>
+<div class="Link"><a title="سلفیش" href="835.html">سلفیش</a></div>
+<div class="Link"><a title="بیستم آذر" href="834.html">بیستم آذر</a></div>
+<div class="Link"><a title="دیالوگ های قشنگ شون " href="833.html">دیالوگ های قشنگ شون </a></div>
+<div class="Link"><a title="شمارو دعوت میکنیم به صبر" href="832.html">شمارو دعوت میکنیم به صبر</a></div>
+<div class="Link"><a title="ی نوری از امید هست ؟؟؟" href="830.html">ی نوری از امید هست ؟؟؟</a></div>
+<div class="Link"><a title="ادب از که آموختی؟" href="829.html">ادب از که آموختی؟</a></div>
+<div class="Link"><a title="قشنگیاا" href="828.html">قشنگیاا</a></div>
+<div class="Link"><a title="نمیدونی چقد دلم میخاد" href="827.html">نمیدونی چقد دلم میخاد</a></div>
+<div class="Link"><a title="سیمرغ" href="826.html">سیمرغ</a></div>
+<div class="Link"><a title="توییت 1" href="824.html">توییت 1</a></div>
+<div class="Link"><a title="گریه غرق خواهد کرد، اسب های آبی را..." href="821.html">گریه غرق خواهد کرد، اسب های آبی را...</a></div>
+<div class="Link"><a title="." href="819.html">.</a></div>
+<div class="FooterSid"></div>
+
+<!--Design By : Avazak.ir-->
+
+<h3>نویسندگان</h3>
+<div class="Link"><a title="نمایش همه نوشته های (مریم ، مینا ، فاعزه ، ندا ) " href="author/994564.html">(مریم ، مینا ، فاعزه ، ندا ) </a></div>
+<div class="Link"><a title="نمایش همه نوشته های ✿فائزه ✿ " href="author/1054537.html">✿فائزه ✿ </a></div>
+<div class="Link"><a title="نمایش همه نوشته های ✿ ندا ✿ " href="author/1059652.html">✿ ندا ✿ </a></div>
+<div class="Link"><a title="نمایش همه نوشته های ✿ مریم ✿ " href="author/1059653.html">✿ مریم ✿ </a></div>
+<div class="Link"><a title="نمایش همه نوشته های ✿ مینا  ✿" href="author/1079827.html">✿ مینا  ✿</a></div>
+<div class="FooterSid"></div>
+
+<!--Design By : Avazak.ir-->
+
+
+<!--Design By : Avazak.ir-->
+
+<h3>پیوندها</h3>
+<div class="Link"><a href="../../goldokhtar.mihanblog.com/index.html" title="" target="_blank" >❤گــــل دخـتـــــر❤</a></div>
+<div class="Link"><a href="../../2girls-mb.mihanblog.com/index.html" title="" target="_blank" >دیــــوونــه بـازیــــام...!</a></div>
+<div class="Link"><a href="../../hoghugheshahrvandi.mihanblog.com/index.html" title="" target="_blank" >حــــــقـــوق شهـــــرونــــــدی</a></div>
+<div class="Link"><a href="http://zj57.blogfa.com/" title="❤❤ گلستان ادب❤❤" target="_blank" >❤اعتدال در سایه اصلاحات❤</a></div>
+<div class="Link"><a href="http://ignore.blogfa.com/" title="" target="_blank" >کازت (مهتیسا)</a></div>
+<div class="Link"><a href="http://paghiamo.blogfa.com/" title="مهـــتیسا :)" target="_blank" >وقتی عکس هآ بآل در می آورند</a></div>
+<div class="Link"><a href="http://beindalil.blogfa.com/" title="(آجیـــهـ ندآ )" target="_blank" >وَرَبُّنَا الرَّحْمَنُ الْمُسْتَعَانُ</a></div>
+<div class="Link"><a href="../../marynamaki.mihanblog.com/index.html" title="http://marynamaki.mihanblog.com/" target="_blank" >پفـــــکـ نمکی !!!</a></div>
+<div class="Link"><a href="http://www.faceyourmanga.com/" title="" target="_blank" >ههههه !!</a></div>
+<div class="Link"><a href="../../sepideh76.mihanblog.com/index.html" title="" target="_blank" >STAR</a></div>
+<div class="Link"><a href="http://azjensesadegi.blogfa.com/" title="" target="_blank" >از جنس سادگی</a></div>
+<div class="Link"><a href="http://danesh-amuz.blogfa.com/#" title="" target="_blank" >(✿◠‿◠)خاطرات مدرسه ی ما(✿◠‿◠)</a></div>
+<div class="Link"><a href="../../toptoonandgenius.mihanblog.com/index.html" title="" target="_blank" >top toon (سارا برومند)</a></div>
+<div class="Link"><a href="../../soosisbandari.mihanblog.com/index.html" title="" target="_blank" >دو مثبت منفی نما  (سارا و فاطمه)</a></div>
+<div class="Link"><a href="http://apadanash.blogfa.com/" title="" target="_blank" >✔בنیـ ـایِ صـ ـورتـ ـیِ مـ ـن✔</a></div>
+<div class="Link"><a href="http://www.rzdm.blogfa.com/post/4" title="" target="_blank" >روزهای یک دانشجو معلم</a></div>
+<div class="Link"><a href="http://tobagalkhoda.blogfa.com/" title="" target="_blank" >تو بغل خدا</a></div>
+<div class="Link"><a href="http://www.esnmm.blogfa.com/" title="" target="_blank" >اســــلام نـــــــاب محمدی</a></div>
+<div class="Link"><a href="http://saeedeh-78.blogfa.com/#" title="" target="_blank" >هم نفس (سعیده جون)</a></div>
+<div class="Link"><a href="http://n-monadi.blogfa.com/" title="" target="_blank" >هم رنگ غروب (نرگس جون)</a></div>
+<div class="Link"><a href="http://www.utabnanaz.blogfa.com/" title="اولین یوتاب در گیلان" target="_blank" >یوتاب کوچولـــــ❤ــــو</a></div>
+<div class="Link"><a href="http://dostikhandon.blogfa.com" title="" target="_blank" >دوستی خندون</a></div>
+<div class="Link"><a href="http://mahtala.loxblog.com/" title="" target="_blank" >ماه طلا</a></div>
+<div class="Link"><a href="../../booooooooogh.mihanblog.com/index.html" title="http://booooooooogh.mihanblog.com/" target="_blank" >دختر مو حنایی</a></div>
+<div class="Link"><a href="http://asemane2khahar1.blogfa.com/" title="" target="_blank" >آسمانی</a></div>
+<div class="Link"><a href="http://www.dokhtarayesheytoon79.blogfa.com/" title="" target="_blank" >دخترای شیطووون</a></div>
+<div class="Link"><a href="../../elmi-adabi.mihanblog.com/index.html" title="علم...علم...علم..." target="_blank" >علم و ادب</a></div>
+<div class="Link"><a href="http://sm68.blogfa.com/" title="" target="_blank" >♥شکلک جقله و یالقوز♥</a></div>
+<div class="Link"><a href="http://www.g-f-g.blogfa.com/" title="برای شادی روحش صلوات بفرستید :(" target="_blank" >دختر باران &quot;به خدا پیوست&quot;</a></div>
+<div class="Link"><a href="http://yefenjoonkhande.blogfa.com/" title="" target="_blank" >یه فنجون خنده (یاس ، بچه پرو)</a></div>
+<div class="Link"><a href="http://aramdarya.blogfa.com/1392/05" title="" target="_blank" >خانم معلم و گوگولی ها !!!</a></div>
+<div class="Link"><a href="../../doostanboostan.mihanblog.com/index.html" title="" target="_blank" >❀دوستان بوستان❀</a></div>
+<div class="Link"><a href="http://mania1991.blogfa.com" title="" target="_blank" >مانیا جووون</a></div>
+<div class="Link"><a href="http://avizooon92.blogfa.com" title="" target="_blank" >آویزوووون خدا</a></div>
+<div class="Link"><a href="http://labkhaande-anar.blogfa.com/" title="" target="_blank" >دختر پرتقالی</a></div>
+<div class="Link"><a href="http://oni-atar.blogfa.com/" title="" target="_blank" >مریم و عاطفه جوووون</a></div>
+<div class="Link"><a href="../../booyekhakekhis.mihanblog.com/index.html" title="❤♡لـَبـ°ـخَـند رُو فَرآمــــوش°نَکٌن♡❤" target="_blank" >کوچه ای پراز یادخدا (هدی جوووون)</a></div>
+<div class="Link"><a href="http://zahra-vienna1.blogfa.com/" title="http://zahra-vienna1.blogfa.com/" target="_blank" >✘ دَفتَرچِه یِه دُختَر زِمِستُونی✘</a></div>
+<div class="Link"><a href="http://aang-zuko.loxblog.com" title="http://aang-zuko.loxblog.com" target="_blank" >آب خاك آتش باد(آریتی)</a></div>
+<div class="Link"><a href="http://adab8787.blogfa.com/" title="http://adab8787.blogfa.com/" target="_blank" >ツ❤❤ گلستان ادب❤❤ ツ</a></div>
+<div class="Link"><a href="http://iran-tanz.blogfa.com/" title="http://iran-tanz.blogfa.com/" target="_blank" >دنیای تفریح و سرگرمی</a></div>
+<div class="Link"><a href="../../www.hasankachalkhan.mihanblog.com/index.html" title="http://www.hasankachalkhan.mihanblog.com" target="_blank" >حسن کچل کچل زاده</a></div>
+<div class="Link"><a href="../index.html" title="اگه گفتی این تو چیه ؟؟؟ فضـــول نیا ..." target="_blank" >اگه گفتی این تو چیه ؟؟؟ فضـــول نیا ...</a></div>
+<div class="Link"><a href="http://4-girls-4.blogfa.com/" title="4-girls-4.blogfa.com/" target="_blank" >4دوست (غزل،هستی،عسل،خاطره)</a></div>
+<div class="Link"><a href="http://www.agha-ejazeh.blogfa.com " title="www.agha-ejazeh.blogfa.com" target="_blank" >آقا معلم كوچولوی آینده</a></div>
+<div class="Link"><a href="http://moalem-ko0cho0lo0.blogfa.com" title="http://moalem-ko0cho0lo0.blogfa.com" target="_blank" >معلم كوچولو (عقش مریم)</a></div>
+<div class="Link"><a href="../../sciencesenglish.mihanblog.com/index.html" title="" target="_blank" >دوستدار چیزای جالب(رها جوون)</a></div>
+<div class="Link"><a href="http://k-94.blogfa.com/" title="dostdashtanii.blogfa.com" target="_blank" >دوستداشتنی های من (كیانا جون)</a></div>
+<div class="Link"><a href="../../www.mashtypashty.mihanblog.com/index.html" title="" target="_blank" >بانمك نمكی زاده (لذت زندگی)</a></div>
+<div class="Link"><a href=" http://999545464363787.blogfa.com/ " title="http://999545464363787.blogfa.com/" target="_blank" >جوونانه (نوا جوون)</a></div>
+<div class="Link"><a href="http://www.kahkeshaneelm.blogfa.com" title="" target="_blank" >(هستی زهرا  فرشته )</a></div>
+<div class="Link"><a href="http://www.bisheh.com/Uploaded/PostFile/634440016249601250.pdf" title="" target="_blank" >بیگانه</a></div>
+<div class="Link"><a href="http://mhosein2011.blogfa.com/" title="http://mhosein2011.blogfa.com/" target="_blank" >من و تو</a></div>
+<div class="Link"><a href="http://maedeh-m.mihanblog.com/" title="http://maedeh-m.mihanblog.com/" target="_blank" >مائده جان</a></div>
+<div class="Link"><a href="http://www.god-is-god.blogfa.com/" title="" target="_blank" >نامه هایی به خدا</a></div>
+<div class="Link"><a href="http://www.mania1991.blogfa.com/" title="" target="_blank" >مانیـــــــــا جووووون</a></div>
+<div class="Link"><a href="http://dokhtarbaroooni.blogfa.com" title="dokhtarbaroooni.blogfa.com" target="_blank" >دختر بارووونی (ندا جوون)</a></div>
+<div class="Link"><a href="http://vpsvps.ir/" title="سرور مجازی" target="_blank">سرور مجازی</a>  | <a href="../../turkey1.mihanblog.com/index.html" title="تور ترکیه" target="_blank">تور ترکیه</a>  | <a href="../../xn--mgbbf2a5gua24g.mihanblog.com/index.html" title="تور بالی" target="_blank">تور بالی</a></div>
+<div class="Link"><a href="http://kharid4.com/?p=1612" title="کودک نخبه" target="_blank">کودک نخبه</a> | <a title="چت"  target="_blank" href="http://chatmihan.ir">چت</a> | <a href="http://persianagahi.com/سیر-و-سفر" title="سیر و سفر" target="_blank">سیر و سفر</a></div><div class="FooterSid"></div>
+
+<!--Design By : Avazak.ir-->
+
+
+<!--Design By : Avazak.ir-->
+
+
+<!--Design By : Avazak.ir-->
+
+<h3>سایت آوازک</h3>
+<div style="display: none">﻿<a href="http://hamdyar2.ir" title="همسریابی" target="_blank">همسریابی</a></div>
+<div class="Link">﻿<a href="http://clockwall.wrv.ir" title="خرید ساعت دیواری فانتزی" target="_blank" rel="follow">خرید ساعت دیواری فانتزی</a> | ﻿<a href="http://storenew.ir/buy/female-hours/" title="خرید ساعت مچی زنانه" target="_blank" rel="follow">خرید ساعت مچی زنانه</a></div>
+<div class="Link"><a target="_blank" title="دانلود اهنگ جدید" href="http://fardmusic.com/">دانلود آهنگ جدید</a></div>
+<div class="Link"><a target="_blank" title="اس ام اس عاشقانه" href="http://www.jahaniha.com/cat/sms/lovely-sms">اس ام اس عاشقانه</a> | <a target="_blank" title="چت" href="http://chatmelody.ir/">چت</a> | <a target="_blank" title="چت" href="http://alexachat.com/">چت</a></div>
+<div class="Link"><a target="_blank" title="چت" href="http://razchat.com/">چت</a> | <a href="http://e-mode.ir/" title="مدل لباس مجلسی" target="_blank">مدل لباس مجلسی</a></div>
+<div class="Link"><a href="http://www.tanhachat.com/" title="چت روم" target="_blank">چت روم</a> | <a href="../../xn--mgbl6eb.mihanblog.com/index.html" title="حمام و سرویس بهداشتی" target="_blank">حمام و سرویس بهداشتی</a></div><br>
+<p align="center"><a href="http://Avazak.ir/Ads/logo.htm" target="_blank"><img src="http://avazak.ir/Ads/Ads-Gallery2.gif" /></a><br>
+<div class="FooterSid"></div>
+
+<!--Design By : Avazak.ir-->
+
+<h3>طراح قالب: آوازک</h3>
+<center>
+[ <a title="قالب های آوازک" href="http://Avazak.ir/">طراح قالب: <a tite="ابزار وبلاگ نویسی" href="http://Avazak.ir">آوازک</a> ]<br/>
+</center>
+<div class="FooterSid"></div>
+
+</div>
+</td>
+	<!-- end sidebar-l -->
+	
+<!--Design By : Avazak.ir-->
+<td valign="top" dir="rtl">
+<div class="bodyposts">
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="post">
+<h2 class="Title"><a title="کل من علیها فان..." href="858.html">کل من علیها فان...</a></h2>
+<div class="Content">
+<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div style="text-align: center;">خداااا نمیخوای بس کنی؟</div><div style="text-align: center;">روزای تلخ و سیاه و غمگینمون کافی نبوده؟</div><div style="text-align: center;">باشه...</div><div style="text-align: center;">فقط کاش حداقل یکم مهلت بدی که بتونم هضمش کنم</div><div style="text-align: center;">به خودت قسم</div><div style="text-align: center;">این آدمیزادی که آفریدی انقدرا هم قوی نیست...</div>
+
+
+
+
+
+<br/>
+<b></b><br/>
+</div>
+<div class="date">
+<p class="r">[ دوشنبه 25 فروردین 1399 ]  [ 02:21 ق.ظ ]  [ ✿ مینا  ✿ ]</p>
+<p class="l"><a target="_self" href="javascript:newComment(858)">[ نظرات(<script>setCommentCnt(858)</script>) ]</p>
+</div></div>
+
+
+<div>
+</td>
+	<!-- end post -->
+	
+<!--Design By : Avazak.ir-->
+<td valign="top" dir="rtl">
+<div class="sidebar-r">
+
+<!--Design By : Avazak.ir-->
+
+<h3>درباره وبلاگ</h3>
+<center><img src="../../static.mihanblog.com/public/user_data/web_photo/385/1154462.jpg@7738"  /></center>
+<div class="About">اینجا یه وب شخصیه که ما توش خاطراتمونو می نویسیم تا موندگار بشن!<br />
+ و اکثرشون مربوط به اتفاقات مدرسه و دانشگاهه!<br />
+حقوق این وب مربوط به هر 4 تامون میشه.<br />
+ما برای خودمون و دوستامون خاطرات خوب میسازیم!<br />
+خنده همیشه شرط اوله و افسرده بازی نداریم! اما تا بخوایم میتونیم غر بزنیم...!!</div>
+<div class="FooterSid"></div>
+
+<!--Design By : Avazak.ir-->
+
+<h3>آرشیو ماهانه</h3>
+<div class="Link"><a title=" تیر 1399" href="archive/1399/4.html"> تیر 1399</a></div>
+<div class="Link"><a title=" خرداد 1399" href="archive/1399/3.html"> خرداد 1399</a></div>
+<div class="Link"><a title=" فروردین 1399" href="archive/1399/1.html"> فروردین 1399</a></div>
+<div class="Link"><a title=" اسفند 1398" href="archive/1398/12.html"> اسفند 1398</a></div>
+<div class="Link"><a title=" بهمن 1398" href="archive/1398/11.html"> بهمن 1398</a></div>
+<div class="Link"><a title=" دی 1398" href="archive/1398/10.html"> دی 1398</a></div>
+<div class="Link"><a title=" آذر 1398" href="archive/1398/9.html"> آذر 1398</a></div>
+<div class="Link"><a title=" آبان 1398" href="archive/1398/8.html"> آبان 1398</a></div>
+<div class="Link"><a title=" مهر 1398" href="archive/1398/7.html"> مهر 1398</a></div>
+<div class="Link"><a title=" شهریور 1398" href="archive/1398/6.html"> شهریور 1398</a></div>
+<div class="Link"><a title=" مرداد 1398" href="archive/1398/5.html"> مرداد 1398</a></div>
+<div class="Link"><a title=" تیر 1398" href="archive/1398/4.html"> تیر 1398</a></div>
+<div class="Link"><a title=" خرداد 1398" href="archive/1398/3.html"> خرداد 1398</a></div>
+<div class="Link"><a title=" اردیبهشت 1398" href="archive/1398/2.html"> اردیبهشت 1398</a></div>
+<div class="Link"><a title=" فروردین 1398" href="archive/1398/1.html"> فروردین 1398</a></div>
+<div class="Link"><a title=" اسفند 1397" href="archive/1397/12.html"> اسفند 1397</a></div>
+<div class="Link"><a title=" بهمن 1397" href="archive/1397/11.html"> بهمن 1397</a></div>
+<div class="Link"><a title=" دی 1397" href="archive/1397/10.html"> دی 1397</a></div>
+<div class="Link"><a title=" آذر 1397" href="archive/1397/9.html"> آذر 1397</a></div>
+<div class="Link"><a title=" آبان 1397" href="archive/1397/8.html"> آبان 1397</a></div>
+<div class="Link"><a title=" مهر 1397" href="archive/1397/7.html"> مهر 1397</a></div>
+<div class="Link"><a title=" شهریور 1397" href="archive/1397/6.html"> شهریور 1397</a></div>
+<div class="Link"><a title=" تیر 1397" href="archive/1397/4.html"> تیر 1397</a></div>
+<div class="Link"><a title=" خرداد 1397" href="archive/1397/3.html"> خرداد 1397</a></div>
+<div class="Link"><a title=" اردیبهشت 1397" href="archive/1397/2.html"> اردیبهشت 1397</a></div>
+<div class="Link"><a title=" فروردین 1397" href="archive/1397/1.html"> فروردین 1397</a></div>
+<div class="Link"><a title=" اسفند 1396" href="archive/1396/12.html"> اسفند 1396</a></div>
+<div class="Link"><a title=" دی 1396" href="archive/1396/10.html"> دی 1396</a></div>
+<div class="Link"><a href="archive.html">لیست آرشیوها</a></div>
+<div class="FooterSid"></div>
+
+<!--Design By : Avazak.ir-->
+
+<h3>آرشیو موضوعی</h3>
+<div class="Link"><a title="❤  خاطرات مدرسه دبیرستان نمونه دولتی" href="category/2.html">❤  خاطرات مدرسه دبیرستان نمونه دولتی - 93</a></div>
+<div class="Link"><a title="❤ جملات ادبی و پند و اندرز" href="category/6.html">❤ جملات ادبی و پند و اندرز - 52</a></div>
+<div class="Link"><a title="❤ چرند و جفنگ " href="category/3.html">❤ چرند و جفنگ  - 117</a></div>
+<div class="Link"><a title="❤ مناسبتی " href="category/4.html">❤ مناسبتی  - 111</a></div>
+<div class="Link"><a title="❤ خاطرات مدرسه راهنمایی شاهد " href="category/1.html">❤ خاطرات مدرسه راهنمایی شاهد  - 35</a></div>
+<div class="Link"><a title="❤ خاطرات مدرسه فرهنگ" href="category/7.html">❤ خاطرات مدرسه فرهنگ - 5</a></div>
+<div class="Link"><a title="❤ فوتوگرافی ها" href="category/8.html">❤ فوتوگرافی ها - 2</a></div>
+<div class="Link"><a title="❤ سیاسی" href="category/5.html">❤ سیاسی - 11</a></div>
+<div class="FooterSid"></div>
+
+<!--Design By : Avazak.ir-->
+
+
+		
+<!--Design By : Avazak.ir-->
+
+<h3>آمار وبلاگ</h3>
+<div class="Link">بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class="Link">بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class="Link">كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class="Link">بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class="Link">بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class="Link">تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class="Link">كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+<div class="FooterSid"></div>	
+
+<!--Design By : Avazak.ir-->
+
+<h3>لینک های ویژه</h3>
+<div class="Link"><a titl="انجمن وبلاگ نویسان" href="http://forum.avazak.ir">انجمن وبلاگ نویسان</a></div>
+<div class="Link"><a titl="اس ام اس جدید" href="http://20payamak.ir">اس ام اس عاشقانه</a></div>
+<div class="Link"><a titl="قالب رایگان" href="http://avazak.ir">قالب وبلاگ</a></div>
+<div class="Link"><a titl="کد آهنگ برای وبلاگ" href="http://music.avazak.ir">کد آهنگ</a></div>
+<div class="Link"><a titl="نغمه سرا" href="http://naghmehsara.ir">سایت عاشقانه</a></div>
+<div class="FooterSid"></div>
+
+<!--Design By : Avazak.ir-->
+
+<h3>دیگر امکانات</h3>
+<div class="custom">
+<center>
+
+
+
+
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/5.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/7.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/8.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/9.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/10.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/11.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/12.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/13.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/14.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/15.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/16.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/17.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/18.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/19.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/20.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/21.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/22.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/23.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/24.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/25.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/29.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/26.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/27.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/28.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/31.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/33.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/34.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/35.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/36.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/37.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/38.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/39.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/baby/40.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<a target="_blank" href= "http://www.nastaliqonline.ir">
+<img alt="خطاطی نستعلیق آنلاین" src="http://www.nastaliqonline.ir/images/nastaliqonline.png" width="142" height="65"></a>
+
+
+
+
+
+<!-- Begin RoozGozar.com - Online Users -->
+<script src="http://roozgozar.com/blogcode/online/roozgozar-code1.php?skin=violet&pos=l"></script>
+<div style="display:none; width:0; height:0;z-index:-50;visibility:hidden;" align="center"><a href="http://roozgozar.com/" target="_blank" title="روزگذر-ابزار رایگان وبلاگ">دریافت کد ابزار آنلاین</a></div>
+<!-- End RoozGozar - Online Users -->
+
+
+
+
+<center><script language="javascript" src="http://parsskin.com/random-text/shariati/cod4.js"></script></center><div style='display:none'><h1><a title='قالب وبلاگ' href='http://parsskin.com'>قالب وبلاگ</a></h1></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-----www.rojtools.r98.ir----->
+  <head> <link rel="SHORTCUT ICON" 
+href="http://www.messemoticons.be/emoticons/losse/handen/1.gif" 
+_mce_href="http://www.messemoticons.be/emoticons/losse/handen/1.gif" 
+/> </head>  <a target="_blank" href="http://rojtools.r98.ir" 
+_mce_href="http://rojtools.r98.ir"> کد آیکن نوار آدرس  
+</a><p><br /></p> <!------ 
+www.rojtools.r98.ir-------> 
+
+ <RB:Chat_Box>
+<RB:Chat_Field_Style:>
+<RB:Chat_Submit_Value:ارسال>
+[My_Chat_Box]
+</RB:Chat_Box> 
+
+
+
+
+</center>
+</div>
+<div class="FooterSid"></div>
+
+</div>
+</td></tr>
+	<!-- end sidebar-r -->
+	
+<!--Design By : Avazak.ir-->
+
+<tr><td colspan="3" class="Footer" dir="rtl">
+[ طراح قالب : <a tite="قالب وبلاگ" href="http://Avazak.ir">آوازک</a> | Theme By : <a title="قالب وبلاگ" href="http://Avazak.ir">Avazak.ir</a> ]
+</td></tr></table>
+<!-- end Footer -->
+
+<!--Design By : Avazak.ir-->
+</body>
+</html>
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', '4jafangbahal.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

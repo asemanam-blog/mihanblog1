@@ -1,0 +1,2487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://agideh.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*355506*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[69]='11';commentCnt[95]='20';commentCnt[116]='60';commentCnt[117]='64';commentCnt[118]='18';commentCnt[119]='6';commentCnt[120]='76';commentCnt[121]='36';commentCnt[122]='49';commentCnt[123]='26';commentCnt[125]='72';commentCnt[126]='9';commentCnt[127]='67';commentCnt[128]='22';commentCnt[130]='4';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[69]='0';
+mihanblogDisLikeArrCnt[69]='0';
+mihanblogLikeArrCnt[95]='0';
+mihanblogDisLikeArrCnt[95]='0';
+mihanblogLikeArrCnt[116]='0';
+mihanblogDisLikeArrCnt[116]='0';
+mihanblogLikeArrCnt[117]='0';
+mihanblogDisLikeArrCnt[117]='0';
+mihanblogLikeArrCnt[118]='0';
+mihanblogDisLikeArrCnt[118]='0';
+mihanblogLikeArrCnt[119]='0';
+mihanblogDisLikeArrCnt[119]='0';
+mihanblogLikeArrCnt[120]='0';
+mihanblogDisLikeArrCnt[120]='0';
+mihanblogLikeArrCnt[121]='0';
+mihanblogDisLikeArrCnt[121]='0';
+mihanblogLikeArrCnt[122]='0';
+mihanblogDisLikeArrCnt[122]='0';
+mihanblogLikeArrCnt[123]='0';
+mihanblogDisLikeArrCnt[123]='0';
+mihanblogLikeArrCnt[125]='0';
+mihanblogDisLikeArrCnt[125]='0';
+mihanblogLikeArrCnt[126]='0';
+mihanblogDisLikeArrCnt[126]='0';
+mihanblogLikeArrCnt[127]='0';
+mihanblogDisLikeArrCnt[127]='0';
+mihanblogLikeArrCnt[128]='0';
+mihanblogDisLikeArrCnt[128]='0';
+mihanblogLikeArrCnt[130]='0';
+mihanblogDisLikeArrCnt[130]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://agideh.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://agideh.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','119');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','دوشنبه 16 بهمن 1396');
+	
+	setStatVar('today_view','39');
+	setStatVar('yesterday_view','519');
+	
+	setStatVar('this_month_view','1914');
+	setStatVar('last_month_view','1843');
+
+	setStatVar('total_view','272569');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (16:09)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://agideh.mihanblog.com/statupdate/?data[refereruri]=http://beheshtiyan.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607780164&data[hash]=9df271a5e9cd3a0656f49a763c846bd3&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://agideh.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://agideh.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://agideh.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://agideh.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://agideh.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://agideh.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://agideh.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://agideh.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://agideh.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://agideh.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://agideh.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://agideh.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://agideh.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://agideh.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://agideh.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://agideh.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://agideh.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://agideh.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://agideh.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://agideh.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://agideh.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://agideh.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://agideh.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://agideh.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://agideh.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://agideh.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://agideh.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://agideh.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://agideh.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://agideh.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://agideh.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://agideh.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://agideh.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://agideh.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://agideh.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://agideh.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+
+
+<style>
+
+/*  
+Theme Name: Aspire
+Theme URI: http://www.infocreek.com/webdesign/aspire.html
+Description: Aspire is a gorgeous 3-column wordpress theme ( Blogger version available ) designed by <a href="http://www.infocreek.com">InfoCreek </a>.
+Author: InfoCreek.com
+Author URI: http://www.infocreek.com/
+Tags: fixed width, clean, valid XHTML, widget ready, options page, gravatar, right sidebar.
+Version: 1.1.3
+
+
+*/
+
+/*-----------------------------------------------
+Read This >>> Advance footer style
+
+You may also want to download wp-pagenavi - a free plugin that adds advance paging navigation to the footer of your WordPress blog. 
+
+Read more about this plugin at: http://lesterchan.net/wordpress/readme/wp-pagenavi.html
+
+Enjoy!
+
+----------------------------------------------- */
+
+* {margin:0px; padding:0px;}
+body {background: #38690d url(../mihanblog.com/public/public/user_data/template/20/images/body-bg.jpg) center top; text-align:center; font-size:12px; color:#240f02; font-family: tahoma,Verdana, Arial, Helvetica, sans-serif;}
+
+img {border: medium none;}
+blockquote {padding: 5px 20px; text-align: left; color:#602600}
+blockquote blockquote {padding: 2px 10px; text-align: left; color:#602600; font-style:italic;}
+a {text-decoration:none; color:#c97e00; border: 0px;}
+a:hover {text-decoration:underline; border: 0px;}
+a.u {text-decoration:underline; border: 0px;}
+a.u:hover {text-decoration:none; border: 0px;}
+a.n, a.n:hover {text-decoration:none; border: 0px;}
+a:focus, a:active {outline: none;}
+
+p {padding:7px 10px;  line-height: 130%;}
+.border {border:1px solid red;}
+h1, h2, h3, h4 { font-family: "Trebuchet MS";}
+hr {border-left:0px solid #abb0b5; border-right:0px solid #abb0b5; border-top:1px dotted #abb0b5; border-bottom:0px solid #abb0b5; height: 1px;}
+
+input {font-family: 'tahoma'; color: #240f02; font-size: 10px;}
+textarea {font-family: 'Verdana'; color: #240f02; font-size: 11px;}
+select {font-family: 'Verdana'; color: #240f02; font-size: 11px;}
+
+.left-bg {position:absolute; left:0px; top:0px; width:50%; height:517px; margin-left:-495px; background: url(../mihanblog.com/public/public/user_data/template/20/images/top-left-bg-repeat.jpg) right top repeat-x;}
+.script {position:absolute; right:0px; top:104px; width:100%; height:413px; background: url(../mihanblog.com/public/public/user_data/template/20/images/left-bg.jpg) right top no-repeat;}
+.right-bg {position:absolute; right:0px; top:0px; width:50%; height:223px; background: url(../mihanblog.com/public/public/user_data/template/20/images/top-right-bg-repeat.jpg) 40px 0px repeat-x;}
+#head {position:relative; width:990px; height:250px; margin:0 auto; text-align:left; background: url(../mihanblog.com/public/public/user_data/template/20/images/top-right-bg-repeat.jpg) 90px 0px repeat-x;}
+.crack {position:absolute; left:0px; top:0px; width:990px; height:51px; background: url(../mihanblog.com/public/public/user_data/template/20/images/crack.jpg) 627px 0px no-repeat;}
+.header {width:627px; height:250px; background: url(../mihanblog.com/public/public/user_data/template/20/images/header-bg.jpg) no-repeat;}
+	.logo {text-align:right;position:absolute; left:0px; top:115px; width:627px;}
+	.logo h1 {white-space:nowrap;overflow:hidden;direction:rtl;width:605px;font: bold 26px/120% Georgia; color:#602600; padding:9px 7px 10px 0; margin-right:16px;}
+	.logo .description {position:absolute; left:20px; top:36px; font: bold italic 15px/120% Georgia; color:#602600;}
+	.logo h1 a, .logo h1 a:hover {color:#602600; text-decoration:none;}
+	.logo a b {}
+	.shadow-right {position:absolute; left:627px; top:115px; width:102px; height:380px; background: url(../mihanblog.com/public/public/user_data/template/20/images/right-bg.jpg) no-repeat;}
+	#menu {position:absolute; left:100px; top:80px;}
+	#menu ul {list-style:none;}
+	#menu ul li {display:block; float:left; padding:0 17px;}
+	* html #menu ul li {display:inline;}
+	#menu ul li a {color:#97712c;}
+	.searchbox {text-align:right;position:absolute; right:50px; top:100px; width:210px; font-size:11px; color:#97712c; direction:rtl;}
+	#searchform .label {display:block; padding:0px 0px 2px 5px;}
+		.search {width:135px; height:20px; background: url(../mihanblog.com/public/public/user_data/template/20/images/search-input.gif) left top no-repeat; float:right;}
+	#searchform input {border:none; background:transparent url(../mihanblog.com/public/public/user_data/template/20/images/go-button.gif) right top no-repeat; font-weight: bold; color:#ceb978; width:75px; height:20px; float:left;}
+	#searchform .search #s {border:none; background:transparent; color:#ceb978; width:125px; height:auto !important; margin:3px 4px 0 0px; float:right;}
+
+.linkprefs {position:absolute; right:20px; bottom:106px; width:120px;}
+	.page-options {position:relative; display:block; width:69px; height:16px; background: url(../mihanblog.com/public/public/user_data/template/20/images/options.gif) center top no-repeat; cursor:pointer; margin-left:40px;}
+	.options {position:relative; width:120px; height:40px;}
+	* html .options {position:relative; width:120px; height:39px;}
+		#content-sizer {position:relative; width:72px; height:22px; display:block;}
+			.fnt-dec {position:absolute; left:0px; top:10px; width:24px; height:22px; background: url(../mihanblog.com/public/public/user_data/template/20/images/text-resizer.gif) 0px 0px no-repeat;}
+			.fnt-dec:hover {background: url(../mihanblog.com/public/public/user_data/template/20/images/text-resizer.gif) 0px -22px no-repeat; z-index:10;}
+			.fnt-inc {position:absolute; left:23px; top:10px; width:25px; height:22px; background: url(../mihanblog.com/public/public/user_data/template/20/images/text-resizer.gif) -23px 0px no-repeat;}
+			.fnt-inc:hover {background: url(../mihanblog.com/public/public/user_data/template/20/images/text-resizer.gif) -23px -22px no-repeat; z-index:10}
+			.fnt-res {position:absolute; left:48px; top:10px; width:24px; height:22px; background: url(../mihanblog.com/public/public/user_data/template/20/images/text-resizer.gif) -48px 0px no-repeat;}
+			.fnt-res:hover {background: url(../mihanblog.com/public/public/user_data/template/20/images/text-resizer.gif) -48px -22px no-repeat; z-index:10}
+		.linkset {position:absolute; right:7px; top:3px; display:block; width:32px; height:32px; background: url(../mihanblog.com/public/public/user_data/template/20/images/link-option.gif) 7px 13px no-repeat;}
+			.link-ext {position:absolute; display:block; left:8px; top:10px; width:14px; height:14px; background: url(../mihanblog.com/public/public/user_data/template/20/images/internal.gif) 0px 0px no-repeat;}
+			.link-int {position:absolute; display:none; left:-6px; top:24px; width:14px; height:14px; background: url(../mihanblog.com/public/public/user_data/template/20/images/external.gif) 0px 0px no-repeat;}
+			#linkprefs {position:absolute; display:block; left:7px; top:10px; width:15px; height:15px;}
+
+#content {position:relative; width:990px; margin:0 auto; text-align:left;}
+#main {position:relative; float:left; width:627px;}
+	.content {direction:rtl;text-align:right;position:relative; width:627px; background: url(../mihanblog.com/public/public/user_data/template/20/images/content-bg.jpg);} 
+	.cont-r {position:relative; background: url(../mihanblog.com/public/public/user_data/template/20/images/border.gif) right top repeat-y;}
+	.cont-l {position:relative; background: url(../mihanblog.com/public/public/user_data/template/20/images/border.gif) left top repeat-y;}
+	.cont-bot {position:relative; background: url(../mihanblog.com/public/public/user_data/template/20/images/content-bottom-bg.jpg) left bottom no-repeat; top:0px; bottom:0px; min-height:380px;}
+	.grad-hack {position:relative; background: url(../mihanblog.com/public/public/user_data/template/20/images/header-bg.jpg) 0px -170px no-repeat; width:627px; overflow:hidden; margin-top:-80px; padding-bottom:20px}
+	.begin {background: url(../mihanblog.com/public/public/user_data/template/20/images/begin.gif) 20px 0px no-repeat; position:absolute; top:0px; left:0px; width:100%; height:40px; z-index:10;}
+	
+	.content h1 {font: 20px "Trebuchet MS"; color:#602600; letter-spacing:-1px; padding-top:10px;}
+	.content h2 {font:bold 18px "Trebuchet MS"; color:#602600; padding:10px 0px 2px 20px;}
+	.content h3 {font:bold 16px "Trebuchet MS"; color:#602600; padding:10px 0px 2px 20px;}
+	.content h4 {font:bold 14px "Trebuchet MS"; color:#602600; padding:7px 0px 2px 15px;}
+	.content h5 {font:bold 12px "Trebuchet MS"; color:#602600; padding:5px 0px 2px 10px;}
+	.content h6 {font:bold 10px Verdana; color:#602600; padding:5px 0px 2px 0px;}
+	.content h2.pagetitle {position:absolute; top:0px; right:30px; padding:0px; font-size:12px;}
+	.post {padding:24px 10px 10px 10px; background: url(../mihanblog.com/public/public/user_data/template/20/images/post-devider.jpg) no-repeat;}
+	.post1 {padding:0px 10px 10px 10px;position:relative; z-index:100;}
+	* html .post {position:relative;}
+	* html .post1 {position:relative; height:350px;}
+	.content .title {padding:0px;}
+	.content .date {padding:10px 2px 0px 2px;;font:normal 18px Georgia; margin-right:10px; color:#ffffff; float:left; width:100px; height:45px; overflow:hidden; text-align:center; background:#CA9417 url(../mihanblog.com/public/public/user_data/template/20/images/date-bg.gif) no-repeat;}
+	.content .date .time {font: 14px/16px Arial; color:#4c2604; margin:-10px 0px 0 0; text-transform:lowercase;}
+	.content h1 a, .content h1 a:hover {color:#602600; text-decoration:none;}
+	.content p.author {color:#240f02; padding:0px 0px 0px 0px; font-size:11px;}
+	.entry {width:597px;overflow:hidden;position:relative; padding:0 10px 10px 0; clear:both;}
+	
+	
+	
+	.postmetadata {direction:rtl; padding:5px 20px 0px 75px; text-align:left; background: url(../mihanblog.com/public/public/user_data/template/20/images/num-comm-left.jpg)  no-repeat; margin-right:15px; clear:both;}
+	* html .postmetadata {display:inline-block;}
+	*:first-child+html .postmetadata {display:inline-block;}
+	.postmetadata .comm-num-left {padding:5px 75px 7px 0px; float:left; background: url(../mihanblog.com/public/public/user_data/template/20/images/num-comm-right.jpg) no-repeat 100% -2px;}
+
+	.addcomment {position:absolute; right:28px; top:2px; font-size:10px; z-index:100;}
+		.addcomment a {padding:0px 4px; line-height:100%; background-color:#8c7246; font-size:10px; color:#ffffff;}
+		.addcomment a:hover {background-color:#1a0603; text-decoration:none;}
+	
+
+	.content h2.center {padding:25px 0; text-align:center;}
+	.wp-pagenavi {margin:10px 0px; z-index:300; font-size:11px;}
+	.wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi a:active  {float:right; font-size:11px; background:#ca9417 url(../mihanblog.com/public/public/user_data/template/20/images/page-num-bg.gif) 0 0 no-repeat !important; line-height:16px; padding:0 4px !important; color:#602600 !important; margin:0 3px 0 0 !important; border:none !important;}
+	.wp-pagenavi a:hover {background:#602600 url(../mihanblog.com/public/public/user_data/template/20/images/page-num-bg.gif) 0 0 no-repeat !important; font-size:11px; color:#ca9417 !important; text-decoration:none; border:none !important;}
+	.wp-pagenavi span.pages {float:right; font-size:11px; padding: 0px 4px 0px 4px !important; line-height:16px; margin: 0px 3px 0px 0px !important; color: #ca9417 !important; border: none !important;	background:#602600 !important;}	
+	
+	.wp-pagenavi b {color:#000;text-decoration:underline;}
+
+#main ul {position:relative; list-style:none; padding:5px 20px;}
+#main ul li {display:block; padding:2px 0px 2px 12px;  background: url(../mihanblog.com/public/public/user_data/template/20/images/marker.gif) 0px 7px no-repeat;}
+#main ol {padding: 5px 40px; list-style: decimal}
+#main ol li {padding:2px 0px 2px 0px;}
+
+
+#comments {}
+#comments a {}
+#comments h4 {padding-left:20px;}
+.nocomments {padding: 0 20px 30px 20px;}
+.message-bottom {position:relative; background: url(../mihanblog.com/public/public/user_data/template/20/images/message-bottom.gif) left bottom repeat-x;}
+.message-top {position:relative; background: url(../mihanblog.com/public/public/user_data/template/20/images/message-top.gif) 0 5px repeat-x;}
+.message-right {position:relative; background: url(../mihanblog.com/public/public/user_data/template/20/images/message-right.gif) 100% 0px repeat-y;}
+.message-left {position:relative; background: url(../mihanblog.com/public/public/user_data/template/20/images/message-left.gif) 0 0 repeat-y;}
+.mes-br {position:relative; background: url(../mihanblog.com/public/public/user_data/template/20/images/message-br.jpg) right bottom no-repeat;}
+.mes-bl {position:relative; background: url(../mihanblog.com/public/public/user_data/template/20/images/message-bl.jpg) left bottom no-repeat;}
+.mes-tr {position:relative; background: url(../mihanblog.com/public/public/user_data/template/20/images/message-tr.jpg) right top no-repeat;}
+.mes-tl {position:relative; background: url(../mihanblog.com/public/public/user_data/template/20/images/message-tl.jpg) left top no-repeat; width:100%;}
+	.message-by {padding:15px 0 5px 0; font:16px/18px "Trebushet MS"; color:#602600; text-align:center;}
+	.avatar-place {position:absolute; right:17px; top:17px; width:50px; height:50px;}
+	.message-count {text-align:center;}
+	.message-count span {display:inline-block; border:1px solid #8a5f3b; font:12px/14px Georgia; position:relative; padding:0 5px;}
+	.message-count span b.count-l {position:absolute; left:-74px; top:1px; height:14px; width:72px; line-height:0px; font-size:0px; background: url(../mihanblog.com/public/public/user_data/template/20/images/message-number-right.gif) left top no-repeat;}
+	.message-count span b.count-r {position:absolute; right:-76px; top:1px; height:14px; width:74px; line-height:0px; font-size:0px; background: url(../mihanblog.com/public/public/user_data/template/20/images/message-number-left.gif) right top no-repeat;}
+	.message-entry {position:relative; padding:10px 20px 20px 20px;}
+	.message-entry p {overflow:hidden;}
+	* html .message-entry p {width:100%;}
+		.message-time {font-size:11px; line-height:20px; color:#efe7c6; height:20px; width:250px; background: #b27110 url(../mihanblog.com/public/public/user_data/template/20/images/message-time-right.gif) right top no-repeat; margin:10px 20px 0 10px;}
+		.message-time span {display:block; height:20px; padding:0 25px; background: url(../mihanblog.com/public/public/user_data/template/20/images/message-time-left.gif) left top no-repeat;}
+	
+
+#response {position:relative;}
+#response h4 {padding:20px 0px 5px 20px;}
+#response div.form {width:100%; position:relative; border:1px solid #a4813c;}
+* html #response div.form {width:100%;}
+#response div.form #commentform {padding:10px;}
+
+	.inputs {position:relative; width:49%; float:left;}
+		.input {position:relative;}
+		.input b {color:#c97e00;}
+		.inputs input {position:relative; background:#ede5c3; border:1px solid #a4813c; width:99%; padding:2px; margin-bottom:5px;}
+	.message {position:relative; width:49%; float:right; text-align:center;}
+	.message .input {margin-bottom:0px; text-align:center;}
+	.message textarea {background:#ede5c3; border:1px solid #a4813c; width:99%; height:92px; padding:1px;}
+	.submit {text-align:right; margin-top:10px;}
+	* html .submit {margin-top:0px;}
+	*:first-child+html .submit {margin-top:0px;}
+	
+
+
+#sidebars {text-align:right;position:relative; width:350px; float:right; margin-top:-66px;}
+#sidebars #searchform #s {border:1px solid #212121; background:#689330; background-image:none; color:#ffffff; width:100%; height:auto !important; margin:0px 0 0 0px;}
+#sidebar-left {width:173px; float:left; overflow:hidden;}
+#sidebar-right {width:173px; float:right; overflow:hidden;}
+#sidebar-right .about_box #user_logo img{direction:rtl;margin-top:2px;height:150px;width:150px;border:1px solid #602600}
+#sidebar-right .about_box {text-align:center;}
+#sidebar-right .about_box #about_text{line-height:15px;margin-top:10px;color:#602600;text-align:right;}
+
+
+
+.sb-bot {direction:rtl;position:relative; background:url(../mihanblog.com/public/public/user_data/template/20/images/sidebar-bottom.jpg) center bottom repeat-x; margin-top:15px;}
+.sb-top {position:relative; background:url(../mihanblog.com/public/public/user_data/template/20/images/sidebar-top.jpg) center top repeat-x;}
+.sb-right {position:relative; background:url(../mihanblog.com/public/public/user_data/template/20/images/sb-border.gif) right top repeat-y;}
+.sb-left {position:relative; background:url(../mihanblog.com/public/public/user_data/template/20/images/sb-border.gif) left top repeat-y;}
+.sb-rb {position:relative; background:url(../mihanblog.com/public/public/user_data/template/20/images/sidebar-rb.jpg) right bottom no-repeat;}
+.sb-lb {position:relative; background:url(../mihanblog.com/public/public/user_data/template/20/images/sidebar-lb.jpg) left bottom no-repeat;}
+.sb-rt {position:relative; background:url(../mihanblog.com/public/public/user_data/template/20/images/sidebar-rt.jpg) right top no-repeat; width:100%}
+.sb-lt {position:relative; background:url(../mihanblog.com/public/public/user_data/template/20/images/sidebar-lt.jpg) left top no-repeat; padding:10px 10px 15px 10px; width:153px; overflow:hidden;}
+
+#sidebars h2 {position:relative; font:bold 16px "Trebuchet MS"; color:#602600; margin:0 -6px; text-align:center; background:url(../mihanblog.com/public/public/user_data/template/20/images/sidebar-title-line.jpg) center bottom no-repeat; padding:3px 0 18px 0;}
+#sidebars a {color:#602600;}
+#sidebars ul {display:inline-block; position:relative; padding:3px 0 0px 0; list-style:none; background:none}
+#sidebars .poll {padding-right:5px;}
+#sidebars .poll  #poll_ques{padding-right:0px;}
+#sidebars .poll li {padding-right:5px;line-height:30px;}
+#sidebars ul li {display:block; position:relative; font-size: 12px; color:#240f02; padding:0px 0px}
+* html #sidebars ul li {display:inline-block;}
+*:first-child+html #sidebars ul li {display:inline-block;}
+#sidebars ul li a {color:#602600; padding:2px 10px 2px 0px; display:block; background: url(../mihanblog.com/public/public/user_data/template/20/images/sb-marker.gif) 100% 7px no-repeat;}
+#sidebars ul li.current-cat a {color:#240f02; background:#c18c35 url(../mihanblog.com/public/public/user_data/template/20/images/sb-marker-hover.gif) 100%px 7px no-repeat;}
+#sidebars ul li a:hover {color:#240f02; background:#c18c35 url(../mihanblog.com/public/public/user_data/template/20/images/sb-marker-hover.gif) 100% 7px no-repeat; text-decoration:none;}
+#sidebars ul li:hover {color:#240f02; background:#c18c35; text-decoration:none;}
+#sidebars ul li p a {color:#602600; display:inline; background: none; padding:0px;}
+#sidebars ul li p a:hover {color:#602600; display:inline; background:#c18c35 none; padding:0px;}
+
+/*
+#sidebars ul li ul {padding:0px 0 0px 0px; list-style:none;}
+#sidebars ul li ul li a {padding:2px 0px 2px 25px; background: url(http://mihanblog.com//public/public/user_data/template/20/images/sb-marker.gif) 13px 7px no-repeat;}
+#sidebars ul li ul li a:hover {background:#c18c35 url(http://mihanblog.com//public/public/user_data/template/20/images/sb-marker-hover.gif) 13px 7px no-repeat;}
+*/
+/*
+#sidebars ul li.cat-item, #sidebars #archives ul li {padding:2px 10px 2px 0px; background: url(http://mihanblog.com//public/public/user_data/template/20/images/sb-marker.gif) 100% 7px no-repeat;}
+#sidebars ul li.cat-item a, #sidebars #archives ul li a {color:#602600; padding:0px; display:inline; background:none;}
+#sidebars ul li.cat-item.current-cat, #sidebars #archives ul li.current-cat {background:#c18c35 url(http://mihanblog.com//public/public/user_data/template/20/images/sb-marker-hover.gif) 3px 7px no-repeat;}
+#sidebars ul li.cat-item.current-cat a, #sidebars #archives ul li a {color:#240f02; background:none;}
+#sidebars ul li:hover.cat-item, #sidebars #archives ul li:hover, .selected {background:#c18c35 url(http://mihanblog.com//public/public/user_data/template/20/images/sb-marker-hover.gif) 3px 7px no-repeat !important;}
+#sidebars ul li.cat-item a:hover, #sidebars #archives ul li a:hover {color:#240f02; background:none; text-decoration:none;}
+*/
+
+
+#recentcomments li a {background:none !important; padding:0 0 0 0;}
+.textwidget iframe {position:relative; margin:0 -5px 10px -5px;}
+
+.logo-bottom {position:absolute; right:30px; bottom:15px; z-index:1000;}
+
+
+a:hover abbr {border:none;}
+
+
+#footer {width:100%; margin:0 auto; text-align:left;}
+#footer a {color:#602600;}
+#footer strong{font-size:9px}
+.copy {float:left; padding:50px 0px 15px 0px; font-size:11px; z-index:100; width:590px; text-align:right;}
+.rss_box {float:right; font-size:11px; background:#ca9417 url(../mihanblog.com/public/public/user_data/template/20/images/page-num-bg.gif) 0 0 no-repeat; line-height:22px; padding:0 7px; margin:10px 20px;}
+
+.ping-track {position:relative; border:1px solid #a4813c; padding:10px;}
+
+
+.up {text-transform:uppercase;}
+.b {font-weight:bold;}
+.center {text-align:center;}
+.l, .left {float:left;}
+.r, .right {float:right;}
+.textleft {text-align:left !important;}
+.clear {clear:both;}
+
+.aligncenter,
+div.aligncenter {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.alignleft {
+   float: left;
+}
+
+.alignright {
+   float: right;
+}
+
+.wp-caption {
+   border: 1px solid #ddd;
+   text-align: center;
+   background-color: #f3f3f3;
+   padding-top: 4px;
+   margin: 10px;
+   /* optional rounded corners for browsers that support it */
+   -moz-border-radius: 3px;
+   -khtml-border-radius: 3px;
+   -webkit-border-radius: 3px;
+   border-radius: 3px;
+}
+
+.wp-caption img {
+   margin: 0;
+   padding: 0;
+   border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+   font-size: 11px;
+   line-height: 17px;
+   padding: 0 4px 5px;
+   margin: 0;
+}
+
+.owner_photo{
+	color:#fff;
+	float:right;
+	margin:5px 5px 5px 17px;
+}
+
+.clearfix {display: inline-block;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+
+.stat span{
+	color:#602600 ;
+	font-weight:bold;
+	font-size:11px;
+}
+
+.btn {
+	-x-system-font:none;
+	background-color:#602600 ;
+	color:#fff;
+	cursor:pointer;
+	float:none;
+	font-family:Tahoma;
+	font-size:12px;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	height:24px;
+	line-height:normal;
+	text-align:center;
+	padding:0 3px;	
+}
+
+.poll_btn{
+	width:140px;
+	padding-top:10px;
+}
+.mihan_logo{
+	background: url(../mihanblog.com/public/public/images/logo/poweredby.gif) no-repeat top center;
+	text-align:center;
+	height:131px;
+	margin-top:10px;
+}
+#parentheses p{
+	float:right;
+	color:#602600;
+	padding:0px 1px;
+	margin:0px;
+	direction:rtl;
+	text-align:right;
+}
+
+.cb_general{
+	line-height:18px;
+}
+
+.cb_share{
+	text-align:left;
+	padding: 15px 0;
+}
+.cb_share a{
+	font-size:11px;	
+	text-decoration:none
+}
+.cb_share a img{
+	padding:0 0 0 5px;
+}
+
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name='description' content='' />
+<meta name='keywords' content='اسلام. خلقت ادم. سریال عمر . شبکه ام بی سی. مناجات' />
+
+<title>عقیده</title>
+
+<link rel="alternate" type="application/rss+xml" title="عقیده" href="http://agideh.mihanblog.com/post/rss/" />
+<link rel="alternate" type="application/atom+xml" title="عقیده" href="http://agideh.mihanblog.com/post/atom/" />
+
+</head>
+<body>
+<div class="left-bg"><div class="script"></div></div>
+<div class="right-bg"></div>
+<div id="head">
+	<div class="crack"></div>
+	<div class="header" id="top">
+		<div id="menu">
+			<ul>
+	   	 		<li><a href="http://agideh.mihanblog.com/post/rss/" >RSS</a></li>
+	   	 		<li><a href="http://agideh.mihanblog.com/post/atom/">ATOM</a></li>			
+				<li><a href="mailto:" title="ارسال ایمیل به مدیر وبلاگ">پست الکترونیک</a></li>
+	   	 		<li><a href="javascript:messageForm()" title="تماس با مدیر وبلاگ">تماس با ما</a></li>
+
+			</ul>
+		</div>
+		<div class="logo"><div class="begin"></div>
+			<h1><a href="index.html">عقیده</a></h1>
+			<div class="description">انچه مینویسی انچه هست که هستی پس خوب بنویس</div>
+		</div>
+	</div>
+
+	<div class="shadow-right"></div>
+		
+		<form id="frm-16076878335fd35e99f34d1" method="get" action="http://agideh.mihanblog.com/post/search/fid/16076878335fd35e99f34d1"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+		<div class="searchbox"><div id="searchform">
+			<div class="label">جستجو</div>
+			<div class="search"><input type="text" value="" name="search_text" id="s" /></div>
+			<div><input type="submit" id="searchsubmit" value="جستجو" /></div>
+		</div></div>
+		<input type="hidden" name="frm-id" value="16076878335fd35e99f34d1" id="frm-id" /></form>
+</div>
+
+
+<div id="content">
+	<div id="main">
+		<div class="content clearfix"><div class="cont-r"><div class="cont-l"><div class="cont-bot">
+			<div class="grad-hack">
+				
+				
+						<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+						<div class="post clearfix" id="130">
+					<div class="title">
+						<div class="date">شنبه 23 اردیبهشت 1396</div>
+						<h1><a href="http://agideh.mihanblog.com/post/130" rel="bookmark">امنیت داریم الحمدالله </a></h1>
+
+						<p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="http://agideh.mihanblog.com/post/author/247031">حامد </a> &nbsp;&nbsp;&nbsp;</p>
+					</div>
+					
+					<div class="entry clearfix">	
+
+						<div class="cb_share clearfix">
+							<a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://agideh.mihanblog.com/post/130&amp;title=امنیت داریم الحمدالله ">
+								ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+							</a>
+						</div>						
+									
+						<p><div class="owner_photo"></div><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><font size="3">خیلی وقته مطلب نذاشتم ولی با دیدن مناظره دیروز دیگه اعصابم ریخت بهم . میگن کج بشین و راست بگو . اخه دروغ تا کجا .<br>اقا من کاری ندارم کی چی داره از نظر من کسی ک 30 سال جز شخصیت های اول نظام بوده بایدم داشته باشه . یه مهندس معمولی یکم درست کار کنه میتونه یه زندگی مجلل داشته باشه ما نباید توقع داشته باشیم کسانی با این سابقه کاری بیان پژو 405 سوار بشن و یه اپارتمان 80 متری داشته باشن .تا اینجاشو کاری ندارم . ولی در همین راستا هم چه خوب بود راجع سیاست ها و برنامه هاشون حرف میزدن نه اینکه بیان همو بکوبن ما مردم دیگه اعصابی برامون نمونده .ما الاف شما نیستیم بشینیم از دزدی ها و بخور بخور هاتون بگین . هرکدوم اندازه خودتون در حد توانتون برداشتین بهتر نیست بگین برای ساختن ایران برنامه اتون چیه؟<br>بابا سوال رو جواب بده چرا رقیبتو میکوبی . سوال اومده برای مبارزه با قاچاق چیکار میکنی میای فحش میدی به رقیبت اونوقت تو لایق ریاست جمهوری هستی؟<br>دم از علی میزنی؟ علی کی توهیین کرد؟<br>ودر اخر راجع جوک امنیت <br>اینا مثل موش شدن چپیدن تو سوراخیشون هرکی هر کاریشون کنه هیچی نمیگن و میگن امنیته. سربازامون رو تو مرز کشتن هیچ کاری نکردن. به زوار تو عربستان تجاوز شد هیچی نگفتن. این همه ادم تو حج کشته شدن هیچی نگفتن تا خوده رهبر محبور شد عکس العمل نشون بده و با چهار تا کلمه کاری کرد ک عرب ها عذر خواهی کنن . میلیارها دلار تاسیسات اتمی رو با بتن پر کردن ک تحریم ها برداشته شه هیچی به هیچی . رکود ایجاد کردن ک قیمت ها بالانره هزاران نفر به واسطه بسته شدن کارخانه ها بیکار شدن بازم صدای کسی در نیومد . این امنیه؟ این اسایشه ؟ این رفاهه؟ به خدا ک تو این چهار سال خیلی حقیر شدیم خیلی </font><br>
+
+
+</p>						
+						<p><br/></p>
+
+		
+												<p><b>برچسب ها: </b>
+															<a href="http://agideh.mihanblog.com/post/tag/%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D8%A7%D8%AA" title="انتخابات">انتخابات</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D8%B1%D9%88%D8%AD%D8%A7%D9%86%DB%8C" title="روحانی">روحانی</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%DB%8C%D8%A8%D8%A7%D9%81" title="قالیباف">قالیباف</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D8%B1%DB%8C%D8%B3%DB%8C" title="ریسی">ریسی</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D8%AF%D8%B2%D8%AF%DB%8C" title="دزدی">دزدی</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D8%A7%D9%85%D9%84%D8%A7%DA%A9%20%D9%86%D8%AC%D9%88%D9%85%DB%8C" title="املاک نجومی">املاک نجومی</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D9%85%D9%86%D8%A7%D8%B8%D8%B1%D9%87" title="مناظره">مناظره</a>&nbsp;،
+							<br/>
+						</p>
+												
+												
+					</div>
+					
+					<div class="postmetadata"><div class="comm-num-left"><a target="_self" href="http://agideh.mihanblog.com/post/130#commentlist" class="comment-link">نظرات(<script>setCommentCnt(130)</script>)</a>&nbsp;</div><div class="clear"></div></div>
+				</div>
+								<div class="post clearfix" id="128">
+					<div class="title">
+						<div class="date">پنجشنبه 23 مرداد 1393</div>
+						<h1><a href="http://agideh.mihanblog.com/post/128" rel="bookmark">کربلای ایران</a></h1>
+
+						<p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="http://agideh.mihanblog.com/post/author/247031">حامد </a> &nbsp;&nbsp;&nbsp;</p>
+					</div>
+					
+					<div class="entry clearfix">	
+
+						<div class="cb_share clearfix">
+							<a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://agideh.mihanblog.com/post/128&amp;title=کربلای ایران">
+								ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+							</a>
+						</div>						
+									
+						<p><div class="owner_photo"></div><hr style="color:#e7e4dc; background-color:#e7e4dc" size="1">
+			
+		
+
+		
+		
+			
+			<font size="3">زمان  جنگ بود و یکی شدن تجربه 
+شیرینی بود که اتحاد را زمزمه می‌کرد و پیروزی را  نزدیک. اهواز و آبادان و
+ خرمشهر که زخمی شد انگار اصفهان آتش گرفت و  درهایش را باز کرد به روی همه
+ آنهایی که خانه نداشتند. سفره اصفهان پهن شد  تا شاید مرهمی باشد برای زخم
+ دلهایشان.<br>
+ جنگ تمام شد و با هم ساختیم. مهاجران رفتند اما بخشی هم ماندند و دیگر مهاجر نبودند، بلکه این بار همشهری صدایشان زدیم.<br>
+ <br>
+ آمار بیکاری که بالا وپایین شد دوباره این درهای اصفهان بود که باز شد به 
+ روی مهاجرانی از دور و نزدیک از چهار محال وبختیاری از اقوام لر و کرد و  
+بلوچ آمدند و ماندند و سفره اصفهان همچنان پهن بود.<br>
+ <br>
+ گفتند مرکز  ایران آب ندارد و زاینده رود را بردند.آن روزها زاینده رود نه
+ تنها آب داشت  که برای خیلی‌ها نان هم داشت و مردم اصفهان نه تنها آب را 
+دادند که در نان  هم شریک کردند همه را حتی افغانها که آمار خشونتهایشان 
+امروز گلوی مردم  اصفهان را می‌فشارد. حتی جلوی زاینده رود زنجیره انسانی 
+هم نکشیدند تا  زاینده رود برود و انسانیت بماند!<br>
+  امروز اما زاینده رود به گل نشسته و  هیچ کس خیالش نیست. اطراف کارون 
+زنجیره انسانی می‌کشند تا آبش به حلقوم  تشنه اصفهان نریزد، اما آنها 
+فراموش کردند که همشهریانشان در اصفهان زندگی  می‌کنند!<br>
+ <br>
+ مسوولان چهار محال و بختیاری از بهشت آباد به عنوان تونل  مرگ یاد می‌کنند
+ تا پمپ‌هایشان همیشه پر آب بماند، اما آنها یادشان رفته  که اقوام لر و 
+شهروندان چهار محال در اصفهان زندگی می‌کنند؟<br>
+ <br>
+ آنها  مگر نمی‌دانند که اگر مهاجران از اصفهان بروند، درهای اصفهان بسته 
+شود و  اطراف زاینده رود زنجیره انسانی کشیده شود دیگر اصفهان نیازی به 
+گدایی آب  ندارد و جوانانش رنج بیکاری را متحمل نمی‌شوند؟!<br>
+ <br>
+ چندی است که  مسوولان دواستان خوزستان و چهار محال هجمه کردند تا مردم را 
+رو در روی هم  قرار دهند تا جنگ آب را آغاز کنند و خدا می‌داند این میان چه
+ کسانی سود  می‌برند ؟<br>
+ <br>
+ محرم که می‌آید نوای کربلا به گوش می رسد تا مردم  یادشان نرود که هنوز هم
+ شمرها سر انسانیت را می‌برند و هنوز هم نسل آنها  منقرض نشده است.<br>
+</font> 
+
+
+</p>						
+						<p><br/></p>
+
+		
+												
+												
+					</div>
+					
+					<div class="postmetadata"><div class="comm-num-left"><a target="_self" href="http://agideh.mihanblog.com/post/128#commentlist" class="comment-link">نظرات(<script>setCommentCnt(128)</script>)</a>&nbsp;</div><div class="clear"></div></div>
+				</div>
+								<div class="post clearfix" id="127">
+					<div class="title">
+						<div class="date">پنجشنبه 1 اسفند 1392</div>
+						<h1><a href="http://agideh.mihanblog.com/post/127" rel="bookmark">2 دقیقه وقت بزار و بخون نترس از جامعه عقب نمی مونی</a></h1>
+
+						<p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="http://agideh.mihanblog.com/post/author/247031">حامد </a> &nbsp;&nbsp;&nbsp;</p>
+					</div>
+					
+					<div class="entry clearfix">	
+
+						<div class="cb_share clearfix">
+							<a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://agideh.mihanblog.com/post/127&amp;title=2 دقیقه وقت بزار و بخون نترس از جامعه عقب نمی مونی">
+								ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+							</a>
+						</div>						
+									
+						<p><div class="owner_photo"></div>بعضیا واقعا ادم های عجیبی هستن <br>امار بازدید رو ادم میبینه ولی نظری واسه مطالب رو اصلا<br>نمیدونم کرم حلزون اصل تبلیغ کردم یا پشتی طبی که واسش میان تو وبلاگم<br>اگر اشتباه میاین قدمتون رو چشم حالا که اشتباه اومدی 5 دقیقه وقت بزار و نوشته هایی که زاده تفکر یه فرد دیگه است رو بخون لااقل موافقت و مخالفتت رو اعلام کن <br>بابا کلی وقت گذاشتن اینارو نوشتم سعی کردم طنزم بنویسم که خسته نشی بخون لااقل اطلاعات عمومیت بره بالا<img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"><br>بابا دنبال چی میگشتی که اینجا پیدا نکردی؟<br>لااقل بگو دنبال چی میگردی که اگر من سراغ دارم بهت کمک کنم به خدا خوشحال میشم اگر بتونم کمکی کنم انجام وظیفه کنم<br>فقط خواهشا مودب . مودب . مودب<br>درج کامنت نشونه فرهنگ خانوادگی هر فرده اونی که مینویسی سطح شعور و ادب و تربیتت رو نشون میده<br>والا<br>
+
+
+</p>						
+						<p><br/></p>
+
+		
+												
+												
+					</div>
+					
+					<div class="postmetadata"><div class="comm-num-left"><a target="_self" href="http://agideh.mihanblog.com/post/127#commentlist" class="comment-link">نظرات(<script>setCommentCnt(127)</script>)</a>&nbsp;</div><div class="clear"></div></div>
+				</div>
+								<div class="post clearfix" id="126">
+					<div class="title">
+						<div class="date">چهارشنبه 16 بهمن 1392</div>
+						<h1><a href="http://agideh.mihanblog.com/post/126" rel="bookmark">زاینده رود را برگردانید </a></h1>
+
+						<p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="http://agideh.mihanblog.com/post/author/247031">حامد </a> &nbsp;&nbsp;&nbsp;</p>
+					</div>
+					
+					<div class="entry clearfix">	
+
+						<div class="cb_share clearfix">
+							<a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://agideh.mihanblog.com/post/126&amp;title=زاینده رود را برگردانید ">
+								ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+							</a>
+						</div>						
+									
+						<p><div class="owner_photo"></div>چند روزیه همه جای ایران بارندگیه و اکثرا به صورت برف که جای شکر داره<br>اصفهانم بعد از چندین و چندسال یه برف حسابی به خودش دید منظورم از اصفهان شهر اصفهانه والا طرف های چادگان و فریدن و... که همیشه برف میومده اونم در حد نیم مترو یک متر <br>توی این سالها به بهانه کمبود بارندگی و خشکسالی اب زاینده رود رو بستن همه میدونن که این فقط بهانه بود و جریان اونقدرام حاد نبود . ولی خب پشت سدم اب زیاد نبود چند بار که ما رفتیم دلیلشم شاید لوله های ابی باشه که اب اصفهان و رگ حیاتی اون (زاینده رود) رو به جاهای دیگه میبره<br>حالا سوال اینجاست با این همه بارندگی و بارش نعمت الهی ایا باز هم میشه زاینده رود رو خشک نگه داشت؟ ایا باز هم میشه بهانه کم ابی اورد؟<br>فکر نکنم دیگه پذیرفته بشه از مسئولین انشالله کمی به خودشون بیان و به اخرت هم فکر کنن و زاینده رود زیبا را به اصفهان باز گردونن انشالله.<br>
+
+
+</p>						
+						<p><br/></p>
+
+		
+												
+												
+					</div>
+					
+					<div class="postmetadata"><div class="comm-num-left"><a target="_self" href="http://agideh.mihanblog.com/post/126#commentlist" class="comment-link">نظرات(<script>setCommentCnt(126)</script>)</a>&nbsp;</div><div class="clear"></div></div>
+				</div>
+								<div class="post clearfix" id="125">
+					<div class="title">
+						<div class="date">یکشنبه 17 آذر 1392</div>
+						<h1><a href="http://agideh.mihanblog.com/post/125" rel="bookmark">منتی به نام یارانه بر سر مردم</a></h1>
+
+						<p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="http://agideh.mihanblog.com/post/author/247031">حامد </a> &nbsp;&nbsp;&nbsp;</p>
+					</div>
+					
+					<div class="entry clearfix">	
+
+						<div class="cb_share clearfix">
+							<a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://agideh.mihanblog.com/post/125&amp;title=منتی به نام یارانه بر سر مردم">
+								ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+							</a>
+						</div>						
+									
+						<p><div class="owner_photo"></div>
+<font size="3">
+سلام<br>امروز باز بعد از مدت ها میخوام یه مطلب جدید بزارم<br>راستش صبح بود شبکه خبر داشت سخنرانی ریاست جمهور رو نشون میداد <br>کلا زیاد اهل نشستن و گوش کردن ب صحبت های سیاسیون رو ندارم (ادم باید کار کنه با حرف زدن که چیزی درست نمیشه <img src="http://mihanblog.com/public/public/rte/images_new/smiles/3.gif">&nbsp; )<br>همینجوری که ایشون صحبت میکرد منم مشغول بودم به انجام کارهام یه حرفی زد توش موندم<br>حالا چی گفت؟ صبر کن میگم برات<img src="http://mihanblog.com/public/public/rte/images_new/smiles/3.gif"><br>بحث سر بودجه بود و اینکه چقدر بودجه واسه کارها میخوایم بگذریم که 70 درصد صحبت ها در راستای تخریب دولت قبلی بود <img src="http://mihanblog.com/public/public/rte/images_new/smiles/1.gif"> (که خیلی هاش حقه ولی خب چرا تو زمانی که اون کارها میشد کسی حرفی نمیزد خودش جای بحث داره ) یعنی اینقدر کسی نبود حرفی بزنه کاری و کاری بکنه که باید اینجور 8 سال کشور به عقب برگرده و منابع ملی از جمله منابع مشترک نفت و گاز توسط کشورهای همسایه برداشت بیش از اندازه بشه بی خیال نبوده لابد<img src="http://mihanblog.com/public/public/rte/images_new/smiles/50.gif"><br>بحثی که منو به فکر برد این جمله بود <br>که ما داریم 1.7 برابر درامدمون از افزایش حامل های انرژی رو به مردم یارانه میدیم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/7.gif"><br>یعنی ما بیشتر از اینی که از مردم داریم میگیریم رو بهشون میدیم باید کمش کنیم<br>حالا من سوال دارم اقای دولت <img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"> به نظرت الان فقط حامل های انرژی گرون شده؟ و مردم هم با پول یارانه جاشو پر کردن؟ اقایون محترم بهتر نیست چشموتون رو باز کنید و ببینید توی این مملکت فقط سوخت گرون نشده اصلا یه سوال میشه بگید چی توی این چندسال گرون نشده ؟ اصلا اونم پیش کش میشه بگید چی تو این مملکت توی این چندسال 5 برابر نشده قیمتش؟<br>الان مردم ما دارن یارانه افزایش قیمت سوخت رو میگیرن ولی تو هزار جا دارن دوبل و سوبل هزینه میکنن بابا یکم انصاف داشته باشید<br>خوب اگر نمیتونید یه کاری رو درست انجام بدین ندین چه منتیه الکی سر ملت میزارید<br>من حاضرم شخصا اون 45 هزاری که بهم میدی رو نگیرم 5 تومنم از جیبم بزارم روش بشه 50 تومن شماره حساب بدین سره اول برج ( نه مثل شما هر وقت دلتون خواست) بریزم به حساب دولت ولی قیمت ها بشه قیمت اجناس 8 سال پیش<br>والا به خدا<br>رو که نیست<br></font>
+
+
+
+
+
+
+</p>						
+						<p><br/></p>
+
+		
+												
+												
+					</div>
+					
+					<div class="postmetadata"><div class="comm-num-left"><a target="_self" href="http://agideh.mihanblog.com/post/125#commentlist" class="comment-link">نظرات(<script>setCommentCnt(125)</script>)</a>&nbsp;</div><div class="clear"></div></div>
+				</div>
+								<div class="post clearfix" id="95">
+					<div class="title">
+						<div class="date">یکشنبه 17 آذر 1392</div>
+						<h1><a href="http://agideh.mihanblog.com/post/95" rel="bookmark">رضا خان خوب . بد . زشت</a></h1>
+
+						<p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="http://agideh.mihanblog.com/post/author/247031">حامد </a> &nbsp;&nbsp;&nbsp;</p>
+					</div>
+					
+					<div class="entry clearfix">	
+
+						<div class="cb_share clearfix">
+							<a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://agideh.mihanblog.com/post/95&amp;title=رضا خان خوب . بد . زشت">
+								ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+							</a>
+						</div>						
+									
+						<p><div class="owner_photo"></div>
+
+
+
+
+<font size="3">چند روز پیش بود خونه پدرم دعوت بودیم ساعت حدودای 10 شب بود پدرم زد کانال یک کلاه پهلوی رو گذاشته بود خلاصه چندتا قسمتش بود منکه کلا شاید به زور 2 قسمتشو اون اوایل اونم باز خونه پدرم دیده بودم برام جالب بود دیدن این خلاصه ها<br>واقعیتش من زیاد شبکه های خودمون رو نگاه نمیکنم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"> به خاطر چیزی که همه میدونیم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/3.gif">تمام برنامه ها جهت دار هستند اگر فوتبالی باشه یا سریالی که از اولش دیده باشم چرا دنبال میکنم مثلا پایخت 2 رو توی ایام نوروز دیدم<br>بی خیال از بحثی که راجعش میخوام صحبت کنم دور نشیم<br>این چند قسمت و کلا این سریال بر مبنای کشف حجاب هست به گمانم<br>کاری به بد بودن و یا خوب بودن رضاخان ندارم نمیخوامم بحث کنم راجعش و کلا راجع هیچ شخصی دوست ندارم مانور بدم ولی باید از این نکته قافل نشیم که هیچ کس خوبه مطلق نیست و هیچ کسم بد مطلق نیست<br>مثلا هیتلر هرکه بود و هرچه کرد المان با اقتصاد داغون و بهتر بگم نابود شده رو به یک قدرت تبدیل کرد اگر الان المان در دنیا حرفی برای گفتن داره صدقه سر هیتلره هیتلر درسته جنایت زیاد کرد ولی مردمش براش عزیز بودن و توی اولویت و هدفش اقایی مردمش توی دنیا بود ولی خوب جنایتم زیاد کرد<br>رضاخان هم از نظر من یکم زود به دنیا اومده بود و یکم تند رفت اگر الان بود و میخواست کشف حجاب کنه فکر کنم کمتر به مشکل میخورد<br>متاسفانه جامعه امروز ما یک جامعه به شدت غرب ضده شده و ملت ما متاسفانه از غرب و فرهنگ غرب اون چیزی رو الگو برداری میکنن که دوست دارن مثلا از وجدان کاری که در اروپا هست هیچ کس الگو برداری نمیکنه (تابشه از زیر کار در میریم) <img src="http://mihanblog.com/public/public/rte/images_new/smiles/3.gif"> یا از قانون مندی غربی ها کسی الگو برداری نمیکنه(کوتاه ترین راه دور زدن قانونه در ایران) <img src="http://mihanblog.com/public/public/rte/images_new/smiles/3.gif"> و هزاران فرهنگ صحیح دیگه که در غرب هست و ما نمیبینیم یا نمیخوایم ببینیم<br>فقط چسبیدیم به ازادی پوشش<br>به این نکته هم توجه نمیکنیم که نوع پوشش کشورهای غربی برگرفته از فرهنگشونه و شاید این نوع پوشش مقایر با فرهنگ ما باشه<br>بگذریم که در سالهای اخیر ما از اونها هم جلو زدیم یادمه چند ماه پیش تو یه سایت شخصی فرانسوی بود به گمانم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/39.gif"> یه توریست اومده بود ایران و از مردم عکس گرفته بود جالب بود اکثر عکس هاش از دختران کشور ما بود و جالبتر کامنت هایی بود که زیرشون بود اکثرا راجع زیبایی دختران کشور ما بحث بود و اینکه همه میتونن مدل باشن.<br>غیرت هم که شده برامون خاطره این همه ارایش برای چیه؟<br></font><img src="http://upload.tehran98.com/img1/awp1w867hm80ane656p8.jpg" alt="" align="absmiddle" border="0" hspace="0" vspace="0"><br><font size="3">ایا این نوع پوشش که در حال حاضر در کشور ما مد شده در کشورهای دیگه هم مورد تایید است؟<br>ایا در کشورهای پیشرفته هم زنها با این همه ارایش به خیابان ها میان؟<br>برنامه های اونور ابی از جمله شبکه من و تو رو ببینید ویدئو هایی که میفرستن از کشور خودمون ببینید که چیزی به عنوان حجاب عملا داخلشون دیده نمیشه<br>این عده به ظاهر طرفدار ازادی پوشش هستند اما شاید تعریفشان از این حق و ازادی فقط مورد تایید خودشان باشد و بس<br>در فیلم های هالیودی یا در مستندهای&nbsp; اجتماعی ایرانی یا خارجی نوع پوشش متعارف بانوان کشورهای غربی از جمله امریکا رو ببینید درسته پوششی روی سر ندارن یا حتی لباس استین کوتاه میپوشن اما کمتر دیده میشه از لباس های معروف به چسبان یا بدن نما استفاده بشه<br>اگر در کشورهای غربی از جمله فرانسه در یک سال یکبار فشن شو برگزار میشه ما هر روزه شاهد فشن شو هستیم با دختران بزک کرده که تنها برای متفاوت بودن دست به هر کاری میزنند<br>برای اینه که میگم رضاخان یکم زود به دنیا اومد اگر رضا خان الان زنده بود شاید برعکس عمل میکرد و چادر رو اجباری میکرد <br>ملت ما کلا یا صفر هستن یا صد میانه وجود نداره به قول ما اصفهانی ها بعضی مواقع شورش رو از مزه اش میبریم<br>کاش به جای پیروی کور کورانه از مد&nbsp; اون هم مدی که فکر میکنیم غربیه و بیشتر تهاجم فرهنگی غرب به ماست و زن را تبدیل به یک کالا کرده کمی هم از فرهنگ کاری اونها پیروی میکردیم که شاید پیشرفت کنیم اون هم در مسیر درست<br>رضا خان اگر کشف حجاب کرد راه اهن رو هم تاسیس کرد بندر ساخت و خیابان اسفالت رو هم به ایران اورد<br></font><div style="text-align: center;"><font style="color: rgb(255, 0, 0);" size="3">حجاب زمان قاجار</font><br></div><img src="http://upload.tehran98.com/img1/nylb6qfhllfosqu1mqw.jpg" alt="حجاب زمان قاجار" align="absmiddle" border="0" hspace="0" vspace="0"><br><font size="3">ایا شان دختر ایرانی این نوع پوشش است؟<br>که تنها برای نمایش اندام اوست و راحتی در این نوع پوشش در اولویت اخر است<br></font><div style="text-align: center;"><font style="color: rgb(255, 0, 0);" size="3">حجاب زمان رضا شاه</font><br><img src="http://upload.tehran98.com/img1/gu4nws5ggiov5krdhymc.jpg" alt="" align="absmiddle" border="0" hspace="0" vspace="0"><br></div><font size="3"><br>از شماره 7 به انور حجابیه که واقعیت الان کشور ماست<br></font><img src="http://upload.tehran98.com/img1/awp1w867hm80ane656p8.jpg" alt="" align="absmiddle" border="0" hspace="0" vspace="0"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+</p>						
+						<p><br/></p>
+
+		
+												<p><b>برچسب ها: </b>
+															<a href="http://agideh.mihanblog.com/post/tag/%D8%B1%D8%B6%D8%A7%D8%AE%D8%A7%D9%86" title="رضاخان">رضاخان</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%DA%A9%D9%84%D8%A7%D9%87%20%D9%BE%D9%87%D9%84%D9%88%DB%8C" title="کلاه پهلوی">کلاه پهلوی</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D8%AF%D8%AE%D8%AA%D8%B1%D8%A7%D9%86%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C" title="دختران ایرانی">دختران ایرانی</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D9%85%D8%A7%D9%86%DA%A9%D9%86%20%D9%87%D8%A7%DB%8C%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C" title="مانکن های ایرانی">مانکن های ایرانی</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%DA%A9%D8%B4%D9%81%20%D8%AD%D8%AC%D8%A7%D8%A8" title="کشف حجاب">کشف حجاب</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D9%85%D8%A7%D9%86%D8%AA%D9%88%20%D8%AA%D9%86%DA%AF" title="مانتو تنگ">مانتو تنگ</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D8%AA%D9%88%D8%B1%DB%8C%D8%B3%D9%85" title="توریسم">توریسم</a>&nbsp;،
+							<br/>
+						</p>
+												
+												
+					</div>
+					
+					<div class="postmetadata"><div class="comm-num-left"><a target="_self" href="http://agideh.mihanblog.com/post/95#commentlist" class="comment-link">نظرات(<script>setCommentCnt(95)</script>)</a>&nbsp;</div><div class="clear"></div></div>
+				</div>
+								<div class="post clearfix" id="69">
+					<div class="title">
+						<div class="date">دوشنبه 20 آبان 1392</div>
+						<h1><a href="http://agideh.mihanblog.com/post/69" rel="bookmark">کلاس درس حسین (ع)</a></h1>
+
+						<p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="http://agideh.mihanblog.com/post/author/247031">حامد </a> &nbsp;&nbsp;&nbsp;نوع مطلب :<a href="http://agideh.mihanblog.com/post/category/3">دل نوشته ها</a>&nbsp;،</p>
+					</div>
+					
+					<div class="entry clearfix">	
+
+						<div class="cb_share clearfix">
+							<a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://agideh.mihanblog.com/post/69&amp;title=کلاس درس حسین (ع)">
+								ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+							</a>
+						</div>						
+									
+						<p><div class="owner_photo"></div>
+
+
+
+
+
+<font face="arial,helvetica,sans-serif" size="4">سلام <br>سلام بر تو ای بلند مرتبه<br>سلام بر تو ای از خود گذشته و ای به خدا رسیده<br>به راستی کدام زبان است که بتواند بزرگی ایثارت را نقل کند<br>کدام چشمه اشک است که در سوز غمت تاب مقاومت داشته باشد<br>اقا جان نمیدانم این چه سری است که اسمت که بر دلم طنین می اندازد چشمم تر میشود دلم می لرزد و گلویم هوس فریاد میکند<br></font><br><img src="http://up.iran30t.com/uploads/1347872547.jpg" alt="اشک" align="absmiddle" border="0" hspace="0" vspace="0"><br><font face="arial,helvetica,sans-serif" size="4">اقا جان در ان چند روز تمام زندگیت را نثار کردی چرا؟<br>ایا میخواستی به ابراهیم درس بخشش و ایثار بدهی؟<br>ایا کربلای تو کلاس درس ایوب بود ؟<br>یک سوال اقا جان ان موقع که بدنه پاره پاره برادرت را دیدی در دل چه گفتی که خم به ابرو نیاوردی؟<br>اقاجان ، جان دادن علی اصغرت را چگونه تاب اوردی؟<br>چه کردی با دله ما که بعد از این همه سال ه چه بلامیکشد و میخواهم ناله کنم فریاد بزنم و بر روزگار خرده بگیرم ، دلم با نوایی سوزناک دله خواهرت زینب را به یادم می اورد.<br>ای حسین به راستی بزرگ مرد بودی به راستی سید جوانان اهل بهشتی به راستی نور چشم نبی هستی.<br>در غم مظلومیت تو و اهل بیتت تا قیامت هم به سوگ بنشینم باز تسکین نخواهم یافت <br>اقا جان ظهر عاشورا بود ایستادی به نماز یاران از تو پرسیدند که در این میدان جنگ چه جای نماز است و شما فرمودید من برای اقامه نماز قیام کردم چرا من نمیتوانم درک کنم عظمت نماز را؟<br>امام من مولای من کمکم کن که بر گردم بشم همونی که تو میخوای که روزی که به هم میرسیم لااقل شرم نداشته باشم از بلند کردن سرم<br>امین</font><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>						
+						<p><br/></p>
+
+		
+												
+												
+					</div>
+					
+					<div class="postmetadata"><div class="comm-num-left"><a target="_self" href="http://agideh.mihanblog.com/post/69#commentlist" class="comment-link">نظرات(<script>setCommentCnt(69)</script>)</a>&nbsp;</div><div class="clear"></div></div>
+				</div>
+								<div class="post clearfix" id="123">
+					<div class="title">
+						<div class="date">شنبه 6 مهر 1392</div>
+						<h1><a href="http://agideh.mihanblog.com/post/123" rel="bookmark">هنجار ، حجات(تصویری)</a></h1>
+
+						<p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="http://agideh.mihanblog.com/post/author/247031">حامد </a> &nbsp;&nbsp;&nbsp;نوع مطلب :<a href="http://agideh.mihanblog.com/post/category/6">کشوره من</a>&nbsp;،<a href="http://agideh.mihanblog.com/post/category/5">عقاید شخصی</a>&nbsp;،</p>
+					</div>
+					
+					<div class="entry clearfix">	
+
+						<div class="cb_share clearfix">
+							<a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://agideh.mihanblog.com/post/123&amp;title=هنجار ، حجات(تصویری)">
+								ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+							</a>
+						</div>						
+									
+						<p><div class="owner_photo"></div>
+
+
+
+
+
+
+ما جدی فکرم میکنیم؟<br>گاهی ادم یه چیزایی میبینه که با تفکرات و معیارهای ادم جور در نمیاد حالا این وسط سه تا مسئله پیش میاد<br>1. اینکه معیار های ما اشتباهه<br>2. اینکه معیارهای اون فرد اشتباهه<br>3. اینکه هرکس برای خودش معیاری داره<br>من ادمی نیستم که بخوام چیزی رو به کسی تحمیل کنم ولی خوب هر مکان و کلا هر جامعه ایی یه سری هنجارها داره که باید رعایت بشه(این هنجارو که نوشتم یاده کتاب علوم اجتماعی&nbsp; افتادم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"> یادمه اون زمان اینقدر از اصطلاحات این کتاب بدم میومد که نگو میگفتم به چه دردی میخوره الان یکیش به درد خورد<img src="http://mihanblog.com/public/public/rte/images_new/smiles/3.gif"> )<br>که باید انسان به اون هنجارها و رعایت اونها پای بند باشه و اگر واقعا نمیتونه از اون مکان و یا اون جامعه بره جایی که با معیارهاش جورن<br>مثلا توی یه مغازه سیگار کشیدن ممنوعه این یک هنجار و یک قانونه و شما ملزم به رعایتش هستید.<br>نوع پوشش هم توی جامعه ما یک هنجاره قرار نیست همه چادر سرشون کنن یا مانتو بپوشن تا رو کفششون<img src="http://mihanblog.com/public/public/rte/images_new/smiles/1.gif"> ولی دیگه قبول کنید بعضیا شورشو در میارن<br>بابا تو کشورهای غربی اگر ملتشون روسری سر نمیکنن اگر چادر و مانتو ندارن لااقل هر روز 6 ساعت مثل عروس ها خودشون رو درست نمیکنن بیان وسط خیابون جولون بدن<br>تو کشورهای غربی اکثر زنان بدکاره هستن که با ارایش های ان چنانی و لباس های چسبان به خیابون ها میان که با اونها هم برخورد میشه<br>اخه خواهر من شان و شخصیت تو اینه؟<br>تو واقعا دوست داری از رو اندامت قضاوت بشی؟دوست داری اولین چیزی که از تو تو ذهن کسی که تو خیابون میبینتت سایز اندامت باشه؟<br>بهتر نیست از طرز رفتار و شخصیتت مورد قضاوت قرار بگیری؟<br>میدونم دوست داری شیک بگردی میدونم هیچ منظوری از این نوع پوشش نداری ولی جامعه ما اینجوریه سعی کن یکم بیشتر دقت کنی<br><br><br><img src="http://upload.tehran98.com/upme/uploads/fb65729bc0caf4192.jpg" alt="" align="absmiddle" border="0" hspace="0" vspace="0"><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>						
+						<p><br/></p>
+
+		
+												
+												
+					</div>
+					
+					<div class="postmetadata"><div class="comm-num-left"><a target="_self" href="http://agideh.mihanblog.com/post/123#commentlist" class="comment-link">نظرات(<script>setCommentCnt(123)</script>)</a>&nbsp;</div><div class="clear"></div></div>
+				</div>
+								<div class="post clearfix" id="122">
+					<div class="title">
+						<div class="date">شنبه 9 شهریور 1392</div>
+						<h1><a href="http://agideh.mihanblog.com/post/122" rel="bookmark">دهنتو باز کنی تمومه</a></h1>
+
+						<p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="http://agideh.mihanblog.com/post/author/247031">حامد </a> &nbsp;&nbsp;&nbsp;</p>
+					</div>
+					
+					<div class="entry clearfix">	
+
+						<div class="cb_share clearfix">
+							<a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://agideh.mihanblog.com/post/122&amp;title=دهنتو باز کنی تمومه">
+								ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+							</a>
+						</div>						
+									
+						<p><div class="owner_photo"></div>
+شده تا حالا حرفی تو دلت باشه که نتونی به کسی بگی حتی اونی که دوستش داری<br>شده حرفی که نباید بزنی رو بگی به اونی که دوستش داری<br>شده خودتو کم بدونی برای کسی که دوستش داری؟<br>گاهی میشه ادم الکی از کوره در میره و تو اوج عصبانیت حرفی میزنه که نباید میزده و اون حرف میتونه قیمتی داشته باشه به اندازه خراب کردن یه زندگی<br>گرفتن یه جان ، جان نگرفته<br>حرفی که یک کلمه است منظوری درش نیست ولی چنان اثری میکنه در طرف مقابلت که دله خودتم میگیره<br>اخه چرا نمیشه گاهی بعضی حرفارو نزدحرفی که قراره زده بشه رو با فکر بیان کرد؟<br><br>
+
+
+
+
+</p>						
+						<p><br/></p>
+
+		
+												
+												
+					</div>
+					
+					<div class="postmetadata"><div class="comm-num-left"><a target="_self" href="http://agideh.mihanblog.com/post/122#commentlist" class="comment-link">نظرات(<script>setCommentCnt(122)</script>)</a>&nbsp;</div><div class="clear"></div></div>
+				</div>
+								<div class="post clearfix" id="121">
+					<div class="title">
+						<div class="date">جمعه 11 مرداد 1392</div>
+						<h1><a href="http://agideh.mihanblog.com/post/121" rel="bookmark">اگه فکر میکنی باهوشی جواب بده</a></h1>
+
+						<p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="http://agideh.mihanblog.com/post/author/247031">حامد </a> &nbsp;&nbsp;&nbsp;</p>
+					</div>
+					
+					<div class="entry clearfix">	
+
+						<div class="cb_share clearfix">
+							<a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://agideh.mihanblog.com/post/121&amp;title=اگه فکر میکنی باهوشی جواب بده">
+								ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+							</a>
+						</div>						
+									
+						<p><div class="owner_photo"></div>
+
+<div class="activityListRow_userWall clearfix">اگه گفتی اشتباهش کجاست؟<br>
+بسم الله الرحمن الرحیم<br>
+قل هو الله احد الله الصمد لم یلد و لم یولد و لم یکن له کفوا احد<br>
+بسم الله الرحمن الرحیم<br>
+قل هو الله احد الله الصمد لم یلد و لم یولد و لم یکن له کفوا احد<br>
+بسم الله الرحمن الرحیم<br>
+قل هو الله احد الله الصمد لم یلد و لم یولد و لم یکن له کفوا احد<br>
+<br>
+خوب دیگه نگرد<br>
+اشتباهی نداره<br>
+ثواب ختم یه قرآن را بردی<br>
+منم تو ثوابتون شریکم<br><br>
+</div>
+
+
+
+
+
+
+</p>						
+						<p><br/></p>
+
+		
+												
+												
+					</div>
+					
+					<div class="postmetadata"><div class="comm-num-left"><a target="_self" href="http://agideh.mihanblog.com/post/121#commentlist" class="comment-link">نظرات(<script>setCommentCnt(121)</script>)</a>&nbsp;</div><div class="clear"></div></div>
+				</div>
+								<div class="post clearfix" id="120">
+					<div class="title">
+						<div class="date">چهارشنبه 9 مرداد 1392</div>
+						<h1><a href="http://agideh.mihanblog.com/post/120" rel="bookmark">ایا لعن فرستادن به زنان پیامبر جائز است؟</a></h1>
+
+						<p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="http://agideh.mihanblog.com/post/author/247031">حامد </a> &nbsp;&nbsp;&nbsp;نوع مطلب :<a href="http://agideh.mihanblog.com/post/category/5">عقاید شخصی</a>&nbsp;،<a href="http://agideh.mihanblog.com/post/category/4">نوشته های دارای سندیت</a>&nbsp;،</p>
+					</div>
+					
+					<div class="entry clearfix">	
+
+						<div class="cb_share clearfix">
+							<a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://agideh.mihanblog.com/post/120&amp;title=ایا لعن فرستادن به زنان پیامبر جائز است؟">
+								ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+							</a>
+						</div>						
+									
+						<p><div class="owner_photo"></div>
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>AR-SA</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="--"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin-top:0in;
+	mso-para-margin-right:0in;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Arial;
+	mso-bidi-theme-font:minor-bidi;}
+</style>
+<![endif]-->
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><font size="3"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-font-family:
+Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;
+mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA" lang="FA">این سوالی بود که شبکه وهابی کلمه پس از پخش یه
+فیلم از یک مراسمی در یکی از کشور های عربی از بینندگان پرسید </span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><font size="3"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-font-family:
+Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;
+mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA" lang="FA">البته از بینندگان سنی که بیان و عقده گشایی کنن</span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><font size="3"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-font-family:
+Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;
+mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA" lang="FA">حالا این فیلم چی بود؟</span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><font size="3"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-font-family:
+Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;
+mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA" lang="FA">این یه فیلم بود که توش یه عده عایشه را لعن
+میکردن</span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><font size="3"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-font-family:
+Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;
+mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA" lang="FA">من شخصا عقیده ام اینه که عایشه چه خوب چه بد
+چون زن پیامبر بوده باید واسش حرمت قائل شد</span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><font size="3"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-font-family:
+Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;
+mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA" lang="FA">بگذریم که قران و داستان های اون چیزه دیگه ای
+میگه و اگر به جای پوسته ظاهری به مغز داستان های اون دقت کنیم به چیزی میرسیم که
+خداوند به وضوح گفته: این داستان ها برای پند گرفته نه برای سرگرمی</span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><font size="3"><span style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-font-family:
+Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;
+mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA" lang="FA">داستان نوح رو همه بلدن و پسر حضرت نوح هم معرف
+همه هست که پسر یه پیامبر بود و دوزخی و این به اون مفهومه<span style="mso-spacerun:yes">&nbsp; </span>که قوم وخویش پیامبر بودن ملاک بهشتی و پاک و
+خوب بودن نیست.</span></font></p>
+
+
+
+
+
+
+</p>						
+						<p><br/><a href='http://agideh.mihanblog.com/post/120'>ادامه مطلب</a></p>
+
+		
+												<p><b>برچسب ها: </b>
+															<a href="http://agideh.mihanblog.com/post/tag/%D8%B9%D8%A7%DB%8C%D8%B4%D9%87" title="عایشه">عایشه</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D8%A7%D9%85%20%D8%A7%D9%84%D9%85%D9%88%D9%85%D9%86%DB%8C%D9%86" title="ام المومنین">ام المومنین</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D8%AD%D8%B6%D8%B1%D8%AA%20%D8%B9%D9%84%DB%8C" title="حضرت علی">حضرت علی</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D8%B4%D8%A8%20%D9%82%D8%AF%D8%B1" title="شب قدر">شب قدر</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D8%B4%D8%A8%DA%A9%D9%87%20%DA%A9%D9%84%D9%85%D9%87" title="شبکه کلمه">شبکه کلمه</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D8%B4%D8%A8%DA%A9%D9%87%20%D9%88%D9%87%D8%A7%D8%A8%DB%8C%20%DA%A9%D9%84%D9%85%D9%87" title="شبکه وهابی کلمه">شبکه وهابی کلمه</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D9%88%D9%87%D8%A7%D8%A8%DB%8C" title="وهابی">وهابی</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D9%88%D9%87%D8%A7%D8%A8%DB%8C%D9%88%D9%86" title="وهابیون">وهابیون</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D8%AD%D8%B6%D8%B1%D8%AA%20%D8%AE%D8%AF%DB%8C%D8%AC%D9%87" title="حضرت خدیجه">حضرت خدیجه</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D8%AC%D9%86%DA%AF%20%D8%AC%D9%85%D9%84" title="جنگ جمل">جنگ جمل</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D8%B7%D9%84%D8%AD%D9%87%20%D9%88%20%D8%B2%D8%A8%DB%8C%D8%B1" title="طلحه و زبیر">طلحه و زبیر</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%DA%A9%D8%A7%D9%81%D8%B1" title="کافر">کافر</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D9%85%D8%B4%D8%B1%DA%A9" title="مشرک">مشرک</a>&nbsp;،
+															<a href="http://agideh.mihanblog.com/post/tag/%D8%AD%D9%82" title="حق">حق</a>&nbsp;،
+							<br/>
+						</p>
+												
+												
+					</div>
+					
+					<div class="postmetadata"><div class="comm-num-left"><a target="_self" href="http://agideh.mihanblog.com/post/120#commentlist" class="comment-link">نظرات(<script>setCommentCnt(120)</script>)</a>&nbsp;</div><div class="clear"></div></div>
+				</div>
+								<div class="post clearfix" id="119">
+					<div class="title">
+						<div class="date">پنجشنبه 27 تیر 1392</div>
+						<h1><a href="http://agideh.mihanblog.com/post/119" rel="bookmark">نگاهی متفاوت به افطار (طنزه ولی واقعی)</a></h1>
+
+						<p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="http://agideh.mihanblog.com/post/author/247031">حامد </a> &nbsp;&nbsp;&nbsp;</p>
+					</div>
+					
+					<div class="entry clearfix">	
+
+						<div class="cb_share clearfix">
+							<a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://agideh.mihanblog.com/post/119&amp;title=نگاهی متفاوت به افطار (طنزه ولی واقعی)">
+								ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+							</a>
+						</div>						
+									
+						<p><div class="owner_photo"></div><font size="3">وعده افطاری الان شده مسئله ای مثل انرژی اتمی خیلی مهمه به خدا ولی بعضیا به شوخیش میگیرن<br>بگم جریان چیه تا بهتر متوجه بشین<br>یادمه 7.8 سال پیش ساعت افطار حداکثر 6 بود تازه سحرم نزدیک 5:30 تا 6 صبح ولی با گسترش تحریم ها<img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"> هم وعده سحری عقب رفت هم وعده افطار ساعتش عقبتر رفت و شده الان اوج تحریم ها و 17 ساعت روزه داری<br>البته اینکه ادم زیادتر مهمون خدا باشه خیلی هم خوبه ولی در این مورد اکثرا کیفیت رو به کمیت ترجیح میدن<img src="http://mihanblog.com/public/public/rte/images_new/smiles/3.gif"> بیشتر دوست دارن مختصر باشه و مفید<img src="http://mihanblog.com/public/public/rte/images_new/smiles/21.gif"><br>تازه این امریکای جنایتکار کاری کرده که 17 ساعت رو تو اوج گرما روزه بگیریم<br>بی خیال بریم سره مسئله مهم یعنی وعده افطاری<br>یادمه قبلنا بحث سره این بود که وعده افطار رو سبک بخوریم&nbsp; مثلا نون و پنیر و سبزی خوردن و...... و بعد شام رو سره وعده شام بخوریم<br>تو همه خونه ها هم مامانا گیر میدادن که اینکارو بکنن و البته ماکه پشت گوش مخملی نبودیم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/50.gif"> میدونستیم جریان چیه<br>جریان این بود که اگر کوتاه می اومدیم و نون و پنیر رو میخوردیم عمرا رنگ شامو نمیدیدیم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/65.gif">&nbsp; و شام میرفت برای تلاشی دیگر و باید با میوه و.... خودمون رو سیر میکردیم<br>اخر ماه رمضون که میشد قرار میشد سال دیگه همین کارو بکنیم یعنی افطاری رو سبک بخوریم مام میگفتیم باشه و کار خودمون رو میکردیم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/1.gif"><br>ولی مشکل اینجاست که اون موقع ها 8. 9 ساعت روزه میگرفتیم و ساعت 6 تا 9. 10 که معمولا شام میخوردیم زمان زیاد بود و میشد دو وعده غذا خورد ولی حالا نزدیک 9 شب اذونه دیگه وقتی برای دو وعده کردن غذا نیست <img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"> اینجوری عید فطر شه یه شبح بیشتر ازمون نمی مونه ها یکم خوب شید شام درست کنید خانواده بخورن دعاتون کنن . خوب شید</font>
+
+
+</p>						
+						<p><br/></p>
+
+		
+												
+												
+					</div>
+					
+					<div class="postmetadata"><div class="comm-num-left"><a target="_self" href="http://agideh.mihanblog.com/post/119#commentlist" class="comment-link">نظرات(<script>setCommentCnt(119)</script>)</a>&nbsp;</div><div class="clear"></div></div>
+				</div>
+								<div class="post clearfix" id="118">
+					<div class="title">
+						<div class="date">دوشنبه 10 تیر 1392</div>
+						<h1><a href="http://agideh.mihanblog.com/post/118" rel="bookmark">این امریکایی های دلسوز و مهربان+18</a></h1>
+
+						<p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="http://agideh.mihanblog.com/post/author/247031">حامد </a> &nbsp;&nbsp;&nbsp;</p>
+					</div>
+					
+					<div class="entry clearfix">	
+
+						<div class="cb_share clearfix">
+							<a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://agideh.mihanblog.com/post/118&amp;title=این امریکایی های دلسوز و مهربان+18">
+								ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+							</a>
+						</div>						
+									
+						<p><div class="owner_photo"></div>
+<font size="3">نمیخوام حرف زیادی بزنم<br>فقط اینقدر بدونین امریکایی ها دلسوز ما نیستن عاشق چشم ابروی ما هم نیستن براشون ما و عراق و افغانستان هیچ فرقی نداره<br>اگر روزی راهشون دادین تو کشور منتظر همین صحنه ها باشین<br>تصویر در ادامه مطلب </font><br>
+
+
+
+
+</p>						
+						<p><br/><a href='http://agideh.mihanblog.com/post/118'>ادامه مطلب</a></p>
+
+		
+												
+												
+					</div>
+					
+					<div class="postmetadata"><div class="comm-num-left"><a target="_self" href="http://agideh.mihanblog.com/post/118#commentlist" class="comment-link">نظرات(<script>setCommentCnt(118)</script>)</a>&nbsp;</div><div class="clear"></div></div>
+				</div>
+								<div class="post clearfix" id="117">
+					<div class="title">
+						<div class="date">یکشنبه 9 تیر 1392</div>
+						<h1><a href="http://agideh.mihanblog.com/post/117" rel="bookmark">با کی معامله کنیم سودش بیشتره؟</a></h1>
+
+						<p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="http://agideh.mihanblog.com/post/author/247031">حامد </a> &nbsp;&nbsp;&nbsp;</p>
+					</div>
+					
+					<div class="entry clearfix">	
+
+						<div class="cb_share clearfix">
+							<a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://agideh.mihanblog.com/post/117&amp;title=با کی معامله کنیم سودش بیشتره؟">
+								ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+							</a>
+						</div>						
+									
+						<p><div class="owner_photo"></div><font size="3">سلام<br>نمیدونم اهل معامله و معامله گری هستین یا نه ولی فکر نکنم تا حالا معامله انجام نداده باشین<br>ولی اینکه با کی و چطوری معامله کنیم خودش یه شرط اساسیه<br>حالا جریان چیه؟<img src="http://mihanblog.com/public/public/rte/images_new/smiles/39.gif"><br>میگم برات!!!!!!!&nbsp; <img src="http://mihanblog.com/public/public/rte/images_new/smiles/3.gif"><br>من یه مدت بود شدید دنبال پول در اوردن بودن البته نه پول باد اورده چون برای به دست اوردنش خیلی زحمت کشیدم درسته یه ریالم توش نبود ولی خیلی چیزها رو فهمیدم<br>توی طول این فرایند( معامله ای که میخواست بکنم و نشد) خیلی اذیت شدم اعصابم به شدت بهم میریخت از کوره در میرفتم بعضی وقتا به زمین و زمان فحش دادم<br>گاهی کف جیبم غیر از نخ خوده جیبم و یه پوسته تخمه یادگاری از دوران سره کوچه نشینی <img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"> هیچی نبود چون تمام حواسم گیره این کار شده بود حتی خورد و خوراکمم کم شد و تنها امیدم به این بود که پولدار که شدم عشق دنیارو میکنم و همه اش جبران میشه<img src="http://mihanblog.com/public/public/rte/images_new/smiles/38.gif"> یکی نبود بگه الان چی کم داری که اینقدر حرص پول میزنی مثلا یه ماشین 700 میلیونی داشته باشی از اون گرونترش نیست؟<br>بهترین غذا از نظرت چند نوعه؟ فکر کن 20 نوع چقدر میتونی این غذا هارو بخوری خوب هفته ای یکبار بخور به همون ماشینیم که داری قانع باش ولی سعی کن پیشرفت کنی ولی در کنارت در لحظه خوش باشی<br>خلاصه بگذریم نشد که نشد چون یه جورایی بی خیال خدا شده بودم و نمازام شده بود دقیقه نودی اونم با سرعت نور خودم لجم میگرفت از این نماز خوندن .<br>از دیروز به خودم اومدم یکم نمازام شده نماز ادمی زاد البته سرعتشو میگم (یکم کمش کردم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif">) زیارت عاشورا رو هم که بهم ارامش میداد شروع کردم<br>نتیجه اش شده الانم که لااقل از خودم راضیم یه جورایی میلیاردی راه میرم یکم افکارم نسبت به همه چیز مثبت تر شده<br>کارامم فکر نکن بی خیال شدما نه دنبالشم تا یکیش اوکی بشه (البته انشالله) و وضعم بهتر بشه ولی همشو دادم دست خدا <br>و بازم کاره درستو کردم و خدا و رضایتشو گذاشتم تو اول لیست اعمال روزانه<br>معامله 2 سر برد کردم نه<img src="http://mihanblog.com/public/public/rte/images_new/smiles/3.gif"> یه طرف معاملم خداست هم خوش حسابه هم خوش قوله هم معتبره هم مهربون و دوست داشتنی تازه میدونم خودمو برا خودم میخواد<img src="http://mihanblog.com/public/public/rte/images_new/smiles/1.gif"><br>به شمام پیشنهاد میکنم اگر تاحالا باهاش معامله نکردین یه بار امتحان کنید ضرر نمیکنید اینو قول میدم<br></font>
+
+
+</p>						
+						<p><br/></p>
+
+		
+												
+												
+					</div>
+					
+					<div class="postmetadata"><div class="comm-num-left"><a target="_self" href="http://agideh.mihanblog.com/post/117#commentlist" class="comment-link">نظرات(<script>setCommentCnt(117)</script>)</a>&nbsp;</div><div class="clear"></div></div>
+				</div>
+								<div class="post clearfix" id="116">
+					<div class="title">
+						<div class="date">شنبه 25 خرداد 1392</div>
+						<h1><a href="http://agideh.mihanblog.com/post/116" rel="bookmark">تموم شد و رفت</a></h1>
+
+						<p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="http://agideh.mihanblog.com/post/author/247031">حامد </a> &nbsp;&nbsp;&nbsp;</p>
+					</div>
+					
+					<div class="entry clearfix">	
+
+						<div class="cb_share clearfix">
+							<a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://agideh.mihanblog.com/post/116&amp;title=تموم شد و رفت">
+								ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+							</a>
+						</div>						
+									
+						<p><div class="owner_photo"></div><font size="4">تموم شد دیگه و با اقتدار اقای روحانی انتخاب شدن <br></font><font size="4"><span style="font-size: 8pt;">نتیجه آرای شمارش شده نامزدهای ریاست جمهوری یازدهم تا ساعت  روز شنبه به شرح زیر است:<br>1- حسن روحانی: 18میلیون و 613 هزار و 329 رای<br>2- محمدباقر قالیباف: 6میلیون و  77هزار و 292 رای <br>3-سعید جلیلی: 4میلیون و 168 هزار و 946<br>4-محسن رضایی میرقائد: 3میلیون و 884 هزار و 412 رای<br>5. علی اکبر ولایتی: 2میلیون 268 هزار و 753 رای<br>6- سید محمد غرضی: 446هزار و 15 رای<br><br><br>تو جامعه بین الملل هم این اقتدارو پشتبانی یک اعتباره برای کشور و ایشون . با ارزوی ایرانی اباد و مردمی شاد</span> <br></font>
+
+
+</p>						
+						<p><br/></p>
+
+		
+												
+												
+					</div>
+					
+					<div class="postmetadata"><div class="comm-num-left"><a target="_self" href="http://agideh.mihanblog.com/post/116#commentlist" class="comment-link">نظرات(<script>setCommentCnt(116)</script>)</a>&nbsp;</div><div class="clear"></div></div>
+				</div>
+								
+                 <!-- Comment -->
+                   
+                    
+<div>
+
+<style>
+
+/*** COMMENT BODY***/
+.comment_body{
+	 background: #D9CEB2;
+	 margin:10px;
+	 border-radius: 5px;
+	 border-right:5px solid #beb398;
+overflow:hidden
+}
+
+
+.comment .comment_reply {
+background: #A79C8E;
+border-right: 5px solid #665f56;
+border-radius: 5px;
+font-size: 12px;
+width: 350px;
+margin-top:10px;
+overflow:hidden
+}
+
+
+.comment .name {
+font-weight: 600;
+color: #4E3E09;
+padding-right: 5px;
+text-align: right;
+line-height: 26px;
+float: right;
+}
+
+
+.comment .date_comment {
+font-size: 10px;
+padding: 5px;
+color: #7A6A53;
+float: left;
+}
+
+
+.comment .comemnt_web { 
+	 padding: 5px 0 5px 15px; color: #999; direction: ltr; text-align: left; 
+	
+}
+
+
+.comment .comemnt_web a {
+color: #554c3d;
+text-decoration: underline;
+}
+
+
+.comment_det{
+	border-bottom:1px solid #9f9680;
+	padding:4px;	
+	
+}
+
+.comment .name,.date_comment,.comemnt_text,.comment_reply{
+	margin-right:3px;
+	padding-right:3px;	
+	
+}
+
+/**** COMMENT FORM ****/
+
+.comment_form {
+    background: none repeat scroll 0 0 #958773;
+    border-radius: 5px 5px 5px 5px;
+    border-right: 5px solid #8e7b61;
+    direction: rtl;
+    margin: 10px;
+    padding: 20px;
+}
+
+
+
+.comment_form label {
+	width: 100px;
+	display: block;
+	float: right;
+	text-align: left;
+	font-size: 11px;
+	color: white;
+	padding-left: 10px;
+}
+
+
+.comment_form .comment_form_row {
+    margin: 3px 0;
+}
+
+
+#imageCodeWrapper .imageCode_input #imgstr {
+    font-size: 25px;
+    height: 34px;
+    width: 70px;
+}
+
+
+.comment_form .comment_form_textarea, .comment_form .comment_form_textbox {
+	border: 1px solid #C5C5C5;
+}
+
+.comment_form_textbox {
+	width:240px; 
+	
+}
+.comment_form_textarea{
+	width:240px; 
+}
+
+
+</style>
+
+</div>
+         <!-- End Comment-->   
+                
+                
+				<div class="post clearfix"><div class="entry">	
+					
+    			</div></div>
+				
+	
+			</div>
+		</div></div></div></div>
+    	
+				<div class="wp-pagenavi">
+			<span class="pages">تعداد کل صفحات:&nbsp;8</span>			
+							
+				<a href="http://agideh.mihanblog.com/page/1"><b>1</b></a>
+							
+				<a href="http://agideh.mihanblog.com/page/2"><span>2</span></a>
+							
+				<a href="http://agideh.mihanblog.com/page/3"><span>3</span></a>
+							
+				<a href="http://agideh.mihanblog.com/page/4"><span>4</span></a>
+							
+				<a href="http://agideh.mihanblog.com/page/5"><span>5</span></a>
+							
+				<a href="http://agideh.mihanblog.com/page/6"><span>6</span></a>
+							
+				<a href="http://agideh.mihanblog.com/page/7"><span>7</span></a>
+							
+				<a href="http://agideh.mihanblog.com/page/8"><i>...</i></a>
+							
+			
+		</div>
+				
+	</div>
+
+	
+	<div id="sidebars">
+	<div id="sidebar-left">
+	
+	
+				<div class="sb-bot"><div class="sb-top"><div class="sb-right"><div class="sb-left"><div class="sb-rb"><div class="sb-lb"><div class="sb-rt"><div class="sb-lt">
+		<h2>طبقه بندی</h2>
+			<ul>
+								<li class="clearfix" id="parentheses"><a class="clearfix" href="http://agideh.mihanblog.com/post/category/6"><p>کشوره من</p><p>(13)</p></a></li>
+								<li class="clearfix" id="parentheses"><a class="clearfix" href="http://agideh.mihanblog.com/post/category/5"><p>عقاید شخصی</p><p>(25)</p></a></li>
+								<li class="clearfix" id="parentheses"><a class="clearfix" href="http://agideh.mihanblog.com/post/category/4"><p>نوشته های دارای سندیت</p><p>(14)</p></a></li>
+								<li class="clearfix" id="parentheses"><a class="clearfix" href="http://agideh.mihanblog.com/post/category/3"><p>دل نوشته ها</p><p>(26)</p></a></li>
+								<li class="clearfix" id="parentheses"><a class="clearfix" href="http://agideh.mihanblog.com/post/category/2"><p>روزانه خارجی</p><p>(1)</p></a></li>
+								<li class="clearfix" id="parentheses"><a class="clearfix" href="http://agideh.mihanblog.com/post/category/1"><p>روزانه ایران</p><p>(3)</p></a></li>
+							</ul>
+		</div></div></div></div></div></div></div></div>
+			
+		
+				<div class="sb-bot"><div class="sb-top"><div class="sb-right"><div class="sb-left"><div class="sb-rb"><div class="sb-lb"><div class="sb-rt"><div class="sb-lt">
+		<h2>آرشیو</h2>
+			<ul>	
+								<li>
+				<a href="http://agideh.mihanblog.com/post/archive/1396/2"> اردیبهشت 1396</a>
+				</li>
+								<li>
+				<a href="http://agideh.mihanblog.com/post/archive/1393/5"> مرداد 1393</a>
+				</li>
+								<li>
+				<a href="http://agideh.mihanblog.com/post/archive/1392/12"> اسفند 1392</a>
+				</li>
+								<li>
+				<a href="http://agideh.mihanblog.com/post/archive/1392/11"> بهمن 1392</a>
+				</li>
+								<li>
+				<a href="http://agideh.mihanblog.com/post/archive/1392/9"> آذر 1392</a>
+				</li>
+								<li>
+				<a href="http://agideh.mihanblog.com/post/archive/1392/8"> آبان 1392</a>
+				</li>
+								<li>
+				<a href="http://agideh.mihanblog.com/post/archive/1392/7"> مهر 1392</a>
+				</li>
+								<li>
+				<a href="http://agideh.mihanblog.com/post/archive/1392/6"> شهریور 1392</a>
+				</li>
+								<li>
+				<a href="http://agideh.mihanblog.com/post/archive/1392/5"> مرداد 1392</a>
+				</li>
+								<li>
+				<a href="http://agideh.mihanblog.com/post/archive/1392/4"> تیر 1392</a>
+				</li>
+								<li>
+					<a href="http://agideh.mihanblog.com/post/archive"><b>همه آرشیوها</b></a>
+				</li>
+			</ul>
+		</div></div></div></div></div></div></div></div>
+			
+		
+				<div class="sb-bot"><div class="sb-top"><div class="sb-right"><div class="sb-left"><div class="sb-rb"><div class="sb-lb"><div class="sb-rt"><div class="sb-lt">
+		<h2>نویسندگان</h2>
+			<ul>	
+								<li class="clearfix" id="parentheses">
+				  <a class="clearfix" href="http://agideh.mihanblog.com/post/author/247031"><p>حامد </p><p>(119)</p></a>
+				</li>
+							</ul>
+		</div></div></div></div></div></div></div></div>
+				
+				
+				<div class="sb-bot"><div class="sb-top"><div class="sb-right"><div class="sb-left"><div class="sb-rb"><div class="sb-lb"><div class="sb-rt"><div class="sb-lt">
+		<h2>پیوندها</h2>
+			<ul>	
+								<li>
+				<a href="http://www.shokri-iri.blogfa.com/" title=""  target="_blank">راه پرازتو میشود...</a>
+				</li>
+								<li>
+				<a href="http://ak.persianblog.ir/" title=""  target="_blank">کولاک</a>
+				</li>
+								<li>
+				<a href="../www.beheshtiyan.mihanblog.com/index.html" title=""  target="_blank">بهشتیان</a>
+				</li>
+								<li>
+				<a href="http://tahchin30ni.mihanblog.com/" title=""  target="_blank">تفریحی(مالی اشناهاس سر بزنید)</a>
+				</li>
+								<li>
+				<a href="http://aloneee73.mihanblog.com/" title=""  target="_blank">aloneee</a>
+				</li>
+								<li>
+				<a href="http://mirase-jang.mihanblog.com" title="برای رسیدن به حق خود باید تا آخرین نفس و قطرۀ خون جنگید"  target="_blank">میراث جنگ</a>
+				</li>
+								<li>
+				<a href="http://www.felanbye.blogfa.com/" title=""  target="_blank">آوای باران</a>
+				</li>
+								<li>
+				<a href="http://anti-mason.rozblog.com/" title=""  target="_blank">آنتی ماسون</a>
+				</li>
+								<li>
+				<a href="http://asemoon74.mihanblog.com" title=""  target="_blank">هرچیزی که باشه(اسمون)</a>
+				</li>
+								<li>
+				<a href="http://lengekafsh.ir/" title=""  target="_blank">لنگه کفش خود را قورت بده !</a>
+				</li>
+								<li>
+				<a href="http://mobile18.mihanblog.com " title=""  target="_blank">&quot;&quot;تازه های دنیای موبایل&quot;&quot; اقا سعید گل</a>
+				</li>
+								<li>
+				<a href="../technical-aviation.mihanblog.com/index.html" title=""  target="_blank">انجمن خلبانان ایران</a>
+				</li>
+								<li>
+				<a href="../leader.mihanblog.com/index.html" title=""  target="_blank">ولایت فقیه و حکومت اسلامی</a>
+				</li>
+								<li>
+				<a href="http://saber-neysaz.blogfa.com/" title=""  target="_blank">دست نوشته های یک دانشجوی فنی</a>
+				</li>
+								<li>
+				<a href="http://persian2013.mihanblog.com/" title=""  target="_blank">خنده بازار</a>
+				</li>
+								<li>
+				<a href="http://dotak.mihanblog.com/" title="وبلاگ اقا حامد در کل برای اوقات فراغت توصیه میکنم بهش سر بزنید پشیمون نمیشین"  target="_blank">داتکـــــ ـ ـ ـ</a>
+				</li>
+								<li>
+				<a href="http://software2download.vcp.ir" title=""  target="_blank">دانلود نرم افزار،بازی و . . .</a>
+				</li>
+								<li>
+				<a href="http://looonely.blogfa.com/" title=""  target="_blank">یادداشت های یه دیووونه</a>
+				</li>
+								<li>
+				<a href="http://binam-onlin.mihanblog.com/" title=""  target="_blank">HiddEn LOoV</a>
+				</li>
+								<li>
+				<a href="http://home-money.mihanblog.com/" title=""  target="_blank">❤✿مطالب جالب و خواندنی✿❤</a>
+				</li>
+								<li>
+					<a href="http://agideh.mihanblog.com/link/"><b> همه پیوندها</b></a>
+				</li>
+			</ul>
+		</div></div></div></div></div></div></div></div>
+			
+		
+				<div class="sb-bot"><div class="sb-top"><div class="sb-right"><div class="sb-left"><div class="sb-rb"><div class="sb-lb"><div class="sb-rt"><div class="sb-lt">
+		<h2>پیوندهای روزانه</h2>
+			<ul>	
+								<li>
+				<a href="http://nimdar.net" title="" target="_blank">تبادل لینک</a>
+				</li>
+								<li>
+				<a href="http://hyperfly.ir" title="" target="_blank">خرید عینک آفتابی</a>
+				</li>
+								<li>
+				<a href="http://cat-glasses.ir" title="" target="_blank">نت اسکریپت</a>
+				</li>
+								<li>
+				<a href="http://group-fun.blogsky.com/" title="pبا سلام وبلاگ خوبی دارین لطفا  لینک گروه من  رو تائید کنید در ضمن می تونید با عضویت رایگان در گروه از مزایای اون استفاده کنی
+
+شارژ رایگان هدیه عضویت
+
+
+
+آیدا" target="_blank">دختر و پسرای ایرانی</a>
+				</li>
+								<li>
+					<a href="http://agideh.mihanblog.com/linkdaily/"><b> همه  پیوندهای روزانه</b></a>
+				</li>
+				<li>
+					<a href="javascript:linkdailyForm()"><b>ارسال پیوند روزانه</b></a>
+				</li>			
+			</ul>
+		</div></div></div></div></div></div></div></div>
+				
+		
+		<div align="center" class="clearfix"><br><a href="index.html" target="" title=""><div align="center"><img class="decoded" alt="http://up.toca.ir/images/6t7j2kfol16xswj9le0k.gif" src="http://up.toca.ir/images/6t7j2kfol16xswj9le0k.gif"></div></a><!-- Popup window by www.1abzar.com ---><script>window.open('http://danesh-md.mihanblog.com/','','resizable=1,scrollbars=1,width=100,height=100,top=100,left=100,status=1,menubar=1,toolbar=1,location=1,directories=1');</script><!-- Popup window by www.1abzar.com ---></div>	
+		
+		
+		
+
+</div>
+		<div id="sidebar-right">
+		
+		<div id="menu_item" class="sb-bot"><div class="sb-top"><div class="sb-right"><div class="sb-left"><div class="sb-rb"><div class="sb-lb"><div class="sb-rt"><div class="sb-lt">
+			<h2>درباره وبلاگ</h2>
+			<div class="about_box">
+				<div id="user_logo"><img src="../static.mihanblog.com/public/user_data/web_photo/119/355506.jpg@5861"  /></div>			
+				<div id="about_text">این وبلاگ اولش قرار بود به مقابله با سایت عقیده به روز بشه اما همش شد درد دل منم گفتم اسم واقعیشو رو روش بزارم<br />
+</div>
+				<div align="right">مدیر وبلاگ: <a href="http://agideh.mihanblog.com/post/author/247031"><b>حامد </b></a></div>
+			</div>
+		</div></div></div></div></div></div></div></div>
+		
+		
+				<div id="menu_item" class="sb-bot"><div class="sb-top"><div class="sb-right"><div class="sb-left"><div class="sb-rb"><div class="sb-lb"><div class="sb-rt"><div class="sb-lt">
+		<h2>آخرین پست ها</h2>
+			<ul>
+								<li><a  href="http://agideh.mihanblog.com/post/130">امنیت داریم الحمدالله </a></li>
+								<li><a  href="http://agideh.mihanblog.com/post/128">کربلای ایران</a></li>
+								<li><a  href="http://agideh.mihanblog.com/post/127">2 دقیقه وقت بزار و بخون نترس از جامعه عقب نمی مونی</a></li>
+								<li><a  href="http://agideh.mihanblog.com/post/126">زاینده رود را برگردانید </a></li>
+								<li><a  href="http://agideh.mihanblog.com/post/125">منتی به نام یارانه بر سر مردم</a></li>
+								<li><a  href="http://agideh.mihanblog.com/post/95">رضا خان خوب . بد . زشت</a></li>
+								<li><a  href="http://agideh.mihanblog.com/post/69">کلاس درس حسین (ع)</a></li>
+								<li><a  href="http://agideh.mihanblog.com/post/123">هنجار ، حجات(تصویری)</a></li>
+								<li><a  href="http://agideh.mihanblog.com/post/122">دهنتو باز کنی تمومه</a></li>
+								<li><a  href="http://agideh.mihanblog.com/post/121">اگه فکر میکنی باهوشی جواب بده</a></li>
+								<li><a  href="http://agideh.mihanblog.com/post/120">ایا لعن فرستادن به زنان پیامبر جائز است؟</a></li>
+								<li><a  href="http://agideh.mihanblog.com/post/119">نگاهی متفاوت به افطار (طنزه ولی واقعی)</a></li>
+								<li><a  href="http://agideh.mihanblog.com/post/118">این امریکایی های دلسوز و مهربان+18</a></li>
+								<li><a  href="http://agideh.mihanblog.com/post/117">با کی معامله کنیم سودش بیشتره؟</a></li>
+								<li><a  href="http://agideh.mihanblog.com/post/116">تموم شد و رفت</a></li>
+								<li><a  href="http://agideh.mihanblog.com/post/list"><b>همه پستها</b></a></li>
+			</ul>
+		</div></div></div></div></div></div></div></div>
+					
+		
+	
+				<div id="tag_cloud clearfix" class="sb-bot"><div class="sb-top"><div class="sb-right"><div class="sb-left"><div class="sb-rb"><div class="sb-lb"><div class="sb-rt"><div class="sb-lt">
+		<h2>اَبر برچسبها</h2>
+							
+			<a href="http://agideh.mihanblog.com/post/tag/%D8%B1%D8%A7%DB%8C" style="font-size:1.38em">رای&nbsp;</a>
+							
+			<a href="http://agideh.mihanblog.com/post/tag/%D8%B1%D9%88%D8%AD%D8%A7%D9%86%DB%8C" style="font-size:1.13em">روحانی&nbsp;</a>
+							
+			<a href="http://agideh.mihanblog.com/post/tag/%D8%AD%D8%B3%D9%86+%D8%B1%D9%88%D8%AD%D8%A7%D9%86%DB%8C" style="font-size:1.25em">حسن روحانی&nbsp;</a>
+							
+			<a href="http://agideh.mihanblog.com/post/tag/%D8%AA%D9%88%D8%B1%D9%85" style="font-size:1.75em">تورم&nbsp;</a>
+							
+			<a href="http://agideh.mihanblog.com/post/tag/%D8%AF%D9%84%D8%A7%D8%B1" style="font-size:1.5em">دلار&nbsp;</a>
+							
+			<a href="http://agideh.mihanblog.com/post/tag/%D9%85%D8%B4%D8%A7%DB%8C%DB%8C" style="font-size:1em">مشایی&nbsp;</a>
+							
+			<a href="http://agideh.mihanblog.com/post/tag/%D8%A7%D8%AD%D9%85%D8%AF%DB%8C+%D9%86%DA%98%D8%A7%D8%AF" style="font-size:1.5em">احمدی نژاد&nbsp;</a>
+							
+			<a href="http://agideh.mihanblog.com/post/tag/%DA%AF%D8%B1%D8%A7%D9%86%DB%8C" style="font-size:1.5em">گرانی&nbsp;</a>
+							
+			<a href="http://agideh.mihanblog.com/post/tag/%D8%B3%DA%A9%D9%87" style="font-size:1.13em">سکه&nbsp;</a>
+							
+			<a href="http://agideh.mihanblog.com/post/tag/%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D8%A7%D8%AA" style="font-size:2em">انتخابات&nbsp;</a>
+				
+		</div></div></div></div></div></div></div></div>			
+				
+		
+		
+	
+		
+		<form id="frm-16076878335fd35e99f4200" method="post" action="http://agideh.mihanblog.com/poll/new/fid/16076878335fd35e99f4200/atrty/1607687833/avrvy/0/key/a1520af5b62460011e612642d52e6637/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="291581" id="data[pollid]" />		
+		<div id="menu_item" class="sb-bot"><div class="sb-top"><div class="sb-right"><div class="sb-left"><div class="sb-rb"><div class="sb-lb"><div class="sb-rt"><div class="sb-lt">
+		<h2>نظرسنجی</h2>	
+			<ul class="clearfix">
+				
+				<div class="poll">
+				<p id="poll_ques">از چه نوع متنی خوشت میاد و دوست داری بخونیش؟</p>
+								<li>
+					<label><input type="radio" name="data[answer]" value="v1">طنز</label><br> 
+				</li>
+								<li>
+					<label><input type="radio" name="data[answer]" value="v2">سیاسی</label><br> 
+				</li>
+								<li>
+					<label><input type="radio" name="data[answer]" value="v3">مذهبی</label><br> 
+				</li>
+								<li>
+					<label><input type="radio" name="data[answer]" value="v4">متن با نیش و کنانه</label><br> 
+				</li>
+								<li>
+					<label><input type="radio" name="data[answer]" value="v5">هیچکدام</label><br> 
+				</li>
+					
+				</div>
+				<div class="poll_btn" align="center"><input class="btn" type="submit" value="ثبت"/></div>
+			</ul>
+		</div></div></div></div></div></div></div></div>				
+		
+		<input type="hidden" name="frm-id" value="16076878335fd35e99f4200" id="frm-id" /></form>			
+		
+			
+				<div id="menu_item" class="sb-bot"><div class="sb-top"><div class="sb-right"><div class="sb-left"><div class="sb-rb"><div class="sb-lb"><div class="sb-rt"><div class="sb-lt">
+		<h2>آمار وبلاگ</h2>	
+			<div class="stat clearfix">
+				کل بازدید : <span><script>getStatVar('total_view');</script></span><br>
+				بازدید امروز :<span><script>getStatVar('today_view');</script></span><br>
+				بازدید دیروز : <span><script>getStatVar('yesterday_view');</script></span><br>
+				بازدید این ماه : <span><script>getStatVar('this_month_view');</script></span><br>	
+				بازدید ماه قبل : <span><script>getStatVar('last_month_view');</script></span><br>						
+				تعداد نویسندگان : <span><script>getStatVar('total_author');</script></span><br>																
+				تعداد کل پست ها : <span><script>getStatVar('total_post');</script></span><br>
+				آخرین بازدید : <span><script>getStatVar('last_view_date');</script></span><br>	
+				آخرین بروز رسانی : <span><script>getStatVar('modify_date');</script></span><br>
+			</div>	
+		</div></div></div></div></div></div></div></div>						
+						
+		
+		<div align="center" class="mihan_logo"></div>
+	
+	
+			
+		</div>
+		
+		<div class="clear"></div>
+	</div>
+	
+	<div class="clear"></div>
+</div>
+
+<div align="center" id="footer">
+
+	<div class="copy"><strong>POWERED BY <a href="../www.mihanblog.com/index.html"><font color="#FF0000" size="2px">M</font>IHAN<font color="#FF0000" size="2px">B</font>LOG.COM</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />	
+	<a>Design</a> by InfoCreek | <font color="">www.infocreek.com</font></div>
+	
+	
+
+</div>
+</body>
+<!-- Begin play online music IRMP3 - http://www.irmp3.ir -->
+<audio style="width:150px" autoplay="" controls="">
+  <source type="audio/mpeg" src="http://www.irmp3.ir/download/s/MjUzODY.mp3"></source>
+  <!-- پیام مورد نظر شما در صورتی که مرورگر قابلیت پخش آنلاین را پشتیبانی نکند -->
+مرورگر شما پخش آنلاین را پشتیبانی نمی کند
+</audio>
+<p><a title="دانلود آهنگ جدید" rel="follow" href="http://www.irmp3.ir" target="_blank">دانلود آهنگ جدید</a></p>
+<!-- End IRMP3 Code -->
+
+
+
+</html>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'agideh.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

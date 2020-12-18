@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('1399/09/27');
+		/*1145999*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','1028');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','1396/05/21');
+	
+	setStatVar('today_view','1184');
+	setStatVar('yesterday_view','985');
+	
+	setStatVar('this_month_view','7160');
+	setStatVar('last_month_view','11165');
+
+	setStatVar('total_view','2327580');
+	setStatVar('last_view_date','1399/09/27 (17:20)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://alborz-pic.mihanblog.com/statupdate/?data[refereruri]=http://alborz-pic.mihanblog.com/post/category/23/page/7&data[postid]=472&data[requesturi]=/post/472&data[sdate]=1608213093&data[hash]=7545474756376a7818e905b095bd62bc&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[472]='3';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[472]='0';
+mihanblogDisLikeArrCnt[472]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://alborz-pic.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://alborz-pic.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+<head>
+<title>سایت تفریحی و سرگرمی* همه چی از همه جا * - عکس های جدید سیامک انصاری و همسرش + گفتگو</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="designer" content="Theme - Designer">
+<meta name="designerUrl" content="http://www.theme-designer.com/">
+<meta name="language" content="Farsi">
+<meta name="author" content="alborz-pic alborz">
+<meta name="description" content="سایت تفریحی و سرگرمی* همه چی از همه جا * - عکس های جدید سیامک انصاری و همسرش + گفتگو - عکس های جدید سیامک انصاری و همسرش + گفتگو">
+<meta name="keywords" content="سایت تفریحی و سرگرمی* همه چی از همه جا * - عکس های جدید سیامک انصاری و همسرش + گفتگو, عکس,های,جدید,سیامک,انصاری,و,همسرش,گفتگو,">
+<link rel="alternate" type="application/rss+xml" title="سایت تفریحی و سرگرمی* همه چی از همه جا * - عکس های جدید سیامک انصاری و همسرش + گفتگو" href="rss/index.html" />
+<link href="http://themeupload.theme-designer.com/66/c.css" type="text/css" rel="stylesheet">
+<script type='text/javascript' src="http://themeupload.theme-designer.com/66/js/flexcroll.js"></script>
+</head>
+<!-- Template66-mihanblog -->
+<!-- Version: 1.0 -->
+<!-- Url template: http://www.theme-designer.com/template66.html -->
+<!-- Design By: wWw.Theme-Designer.Com -->
+
+<!---------- background ---------------------------->
+<!---------- address-image --------->
+<body style="
+	background-color:#423d3d;
+	background-image:url('http://themeupload.theme-designer.com/66/image/1.jpg');
+	background-repeat:no-repeat; background-position:center top;" dir="rtl">
+<!---------- address-image --------->
+<!---------- background ---------------------------->
+
+
+<!---------- he ---------------------------->
+<!---------- address-image --------->
+<div style="
+	background-image:url('http://themeupload.theme-designer.com/66/image/2.png');
+	background-repeat:no-repeat; background-position:center top;
+	height:179px; overflow:hiiden;
+	margin:36px 0px 0px 0px;">
+<!---------- address-image --------->
+
+<div class="theme-designer-com_koli_width">
+
+<div class="theme-designer-com_makan_blogtitle">
+<div class="theme-designer-com_blogtitle"><a href="../index.html">سایت تفریحی و سرگرمی* همه چی از همه جا *</a></div>
+<div class="theme-designer-com_description">همه چی از همه جا </div>
+</div>
+
+<div class="theme-designer-com_makan_header_icon">
+<div class="theme-designer-com_header_icon1"><a title="تماس با ما" href="javascript:messageForm()"><img border="0" width="" height="" src="http://themeupload.theme-designer.com/66/image/4.gif"></a></div>
+<div class="theme-designer-com_header_icon1"><a title="خانه" href="../index.html"><img border="0" width="" height="" src="http://themeupload.theme-designer.com/66/image/5.gif"></a></div>
+<div class="theme-designer-com_header_icon1"><a target="_blank" title="لینك rss" href="rss/index.html"><img border="0" width="" height="" src="http://themeupload.theme-designer.com/66/image/6.gif"></a></div>
+</div>
+
+<div class="theme-designer-com_makan_header_menu">
+<div class="theme-designer-com_header_menu">
+<a href="../index.html">صفحه ی نخست</a>|
+<a href="mailto:">پست الکترونیک</a>|
+<a href="javascript:messageForm()">تماس با ما</a>|
+<a href="archive.html">آرشیو مطالب</a>|
+<a target="_blank" href="rss/index.html">لینك rss</a>|
+<a target="_blank" href="http://alborz-pic.mihanblog.com/m/">نسخه موبایل</a>
+</div>
+</div>
+
+</div>
+
+</div>
+<!---------- he ---------------------------->
+
+<div align="center">
+<div class="theme-designer-com_body">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="21" valign="top">&nbsp;</td>
+<td width="612" valign="top">
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0" class="boxtop_table">
+<tr>
+<td width="286" valign="top">
+
+<div class="theme-designer-com_boxtop-zard_background1">
+<div class="boxtop-zard_title">آخرین مطالب</div>
+</div>
+<div class="theme-designer-com_boxtop-zard_background2">
+<div align="center"><div class="boxtop_w-h"><div class="boxtop_m">
+<div id='mycustomscroll' class='flexcroll' dir="ltr">
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="1051.html" title="1396/05/21" > مراحل رشد نوزاد </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="1050.html" title="1395/09/8" > از سیر تا پیاز آنفولانزا و راه های درمان آن </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="1049.html" title="1395/09/8" > ماجرای جالب چارلی چاپلین کوچک </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="1048.html" title="1395/09/8" > قلقلک هوش کودکان بدون سرگرمی با موبایل و تبلت </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="1047.html" title="1395/09/8" > موزه کالبدهای شکافته شده توسط «دکتر مرگ»  </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="1046.html" title="1395/09/4" > اینفوگرافیک؛ حقایقی پیرامون سلفی گرفتن </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="902.html" title="1395/09/2" > معجزات آیت الکرسی  </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="1041.html" title="1395/09/1" > وضعیت دهه شصتیا برای دریافت امکانات این شکلی بود  </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="1045.html" title="1395/08/29" > راهپیمایی زائران اربعین حسینی در مسیر عشق </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="1042.html" title="1395/08/29" >   	زیارت اربعین در طول تاریخ به روایت تصاویر </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="1044.html" title="1395/08/29" > اربعین است که می آید ... </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="1043.html" title="1395/08/28" > در هزاران عاشورای فردی به کدام طرف پیوسته ایم؟ </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="1040.html" title="1395/08/25" > معمای عجیب 2 برادر که با غروب آفتاب فلج می‌شوند! </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="1039.html" title="1395/08/25" > غار اصحاب کهف در کجا واقع شده است؟ + تصاویر </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="1038.html" title="1395/08/25" > عکس ساعت 60 میلیون تومانی مهران مدیری! </a></div>
+<div class="vmenu-c"></div>
+</div>
+</div></div></div>
+</div>
+<div class="theme-designer-com_boxtop-zard_background3"></div>
+
+</td>
+<td width="32" valign="top">&nbsp;</td>
+<td width="286" valign="top">
+
+<div class="theme-designer-com_boxtop-khakestari_background1">
+<div class="boxtop-khakestari_title">
+پیوندهای روزانه
+</div>
+</div>
+<div class="theme-designer-com_boxtop-khakestari_background2">
+<div align="center"><div class="boxtop_w-h"><div class="boxtop_m">
+<div id='mycustomscroll' class='flexcroll' dir="ltr">
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://toosanbar.rzb.ir/" title="طوسان بار البرز 
+ 
+حمل اثاثیه منزل و مبلمان 
+جابجایی جهیزیه و لوازم ادارات
+گاو صندوق 
+ساید بای ساید
+پیانو و ....
+ 
+بسته بندی با پتو توسط کارگران مجرب و ورزیده 
+با بیمه
+ 
+با مجوز رسمی 
+ 
+36208490
+36208495
+32733556
+0912-6381978 
+شفیعی" >طوسان بار</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://toosanbar.mihanblog.com/" title="طوسان بار البرز 
+ 
+حمل اثاثیه منزل و مبلمان 
+جابجایی جهیزیه و لوازم ادارات
+گاو صندوق 
+ساید بای ساید
+پیانو و ....
+ 
+بسته بندی با پتو توسط کارگران مجرب و ورزیده 
+با بیمه
+ 
+با مجوز رسمی 
+ 
+36208490
+36208495
+32733556
+0912-6381978 
+شفیعی" >باربری البرز</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://min00o.mihanblog.com" title="" > &quot; صدایی در سکوت &quot;</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://linsurance365.blogfa.com" title="" >بیمه عمر و سرمایه گذاری</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://myworld76.blogfa.com" title="" > My World</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.labkhande-1-fereshte.blogfa.com" title="" >خاطرات تلخ و شیرین من</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://mojtabaghiasi.mihanblog.com" title="" > مـــــجتبــــــــی غـــــــیاثی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://amouzadeh937.mihanblog.com" title="" >بـغـض شـبـانـــــــــــــه</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://ofoghbashagard.blogfa.com" title="سفربه محرومترین نقطه دنیا" >افق بشاگرد</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://negar3690.blogfa.com" title="" >ßrökêñ hêårt</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.madha.blogveb.com" title="" >جوان امروز</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://anti-ebliss.mihanblog.com" title="" >بانک مقالات ضد شیطان پرستی وضد فراماسونری</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://aram75.mihanblog.com" title="" >پشت دریاها شهری است. قایقی خواهم ساخت ...</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://days-of-my-life-iran.blogfa.com" title="" >❤ Moments of my ✎</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://cafekahkeshan.mihanblog.com" title="" >	 کافه کهکشان </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://alitaker.blogveb.com" title="" >مجله سرگرمی علمی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://harchitobekhai.blogfa.com" title="" >هر چی تو بخوای</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://2rost.blogsky.com" title="" >زیبابودن و همسر خوبی بودن</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://pooriya88.mihanblog.com" title="" >·•●♦ ورود ممنوع ♦●•·</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.namazfatemeh.blogfa.com" title="" >نماز؛ دریچه ای به سوی خوشبختی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://zinat-vaghar.mihanblog.com" title="" >زینت زن حفظ حجاب است.</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://nohdare94.mihanblog.com" title="سلام آرش جوم" >.اینجه همه چى قاطی پاطیه.</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://marand2012.mihanblog.com" title="" >marand2012</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.masihanami.blogfa.com" title="" >علی ضیا با طعم ویتامین 3</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://masoud447.blogfa.com" title="" >تمامی کدهای مخفی گوشی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://mary111.blogfa.com" title="" >رویای خیس</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://313sarbazgomnam.mihanblog.com" title="" >دینی مذهبی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://agricalture-aligoodarz.mihanblog.com" title="" >کشــاورزی الیگـــودرز</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.3tar.loxblog.com" title="" >ستــــــــــــــاره شـــــــــــــب</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://azan3.blogfa.com" title="" >روستای اذان اصفهان </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://davoodbagheri.mihanblog.com" title="" >دانش آموزان مریخی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://feri2m.loxblog.ir" title="" > تسلیحات نظامی ایران و جهان</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.diddigar.lxb.ir" title="" >---دید دیگر</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://riazinovin.loxblog.com" title="" >آموزش نوین</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://jokotanz111.persianblog.ir" title="" >ای دلم!!!وای دلم!!!</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://sadafjo0n.loxblog.com" title="" >حقیقت عشق</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://2fblog.r98.ir" title="" >مطالب جالب و فوق العاده از سراسر وب</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="../linkdaily/index.html" >لیست کامل پیوندهای روزانه</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a  href="javascript:linkdailyForm()" >ارسال پیوند</a></div>
+<div class="vmenu-c"></div>
+</div>
+</div></div></div>
+</div>
+<div class="theme-designer-com_boxtop-khakestari_background3"></div>
+
+</td>
+</tr>
+</table>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="theme-designer-com_menuright-border2">
+<div class="theme-designer-com_menuright-border4">
+<div class="theme-designer-com_menuright-border1">
+<div class="theme-designer-com_menuright-border3">
+<div class="theme-designer-com_menuright-post">
+
+<div class="theme-designer-com-comments-box">
+<div class="comments-icon"></div>
+<div class="comments-text"><a target="_self" href="472.html#commentlist">نظرات <script>setCommentCnt(472)</script> </a></div>
+</div>
+<div class="theme-designer-com_koli_clear"></div>
+
+<div class="theme-designer-com_post-backtitle">
+<div class="theme-designer-com_post-title" align="right"><a href="472.html">عکس های جدید سیامک انصاری و همسرش + گفتگو</a></div>
+</div>
+
+<div align="center">
+<div class="theme-designer-com_post-badane" align="right">
+<div class="theme-designer-com-post-text"><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><p style="text-align: center;"><a href="../index.html" target="" title=""><img style="width: 496px; height: 694px;" src="http://www.ariapix.net/rec/1392/02/0115/siamak-ansari-wife_04.jpg" alt="سیامک انصاری(بازیگر) و همسرش" align="" border="0" hspace="0" vspace="0"></a></p>
+
+
+ <p style="text-align: center;"><img alt="سیامک انصاری(بازیگر) و همسرش" src="http://www.ariapix.net/rec/1392/02/0115/siamak-ansari-wife_01.jpg" title="عکس های جدید سیامک انصاری و همسرش + گفتگو" width="470"></p><p style="text-align: center;">سیامک انصاری&nbsp; (بازیگر) به همراه همسرش,عکسهای جدید سیامک انصاری,سیامک انصاری و همسرش</p><p style="text-align: center;">مجله ایده آل: این بار در پنجشنبه اتفاق 
+افتاد. هفت یا هشت بار از همه شنبه‌های آمده و نیامده. خیلی وقت بعد از 
+آنکه قرار گذاشته بودیم برای گفت‌وگو با خودش و همسر نازنینش. آن وقت‌ها 
+چیزی از ازدواج‌شان نمی‌گذشت و شاید حرف خاصی هم نبود. اما حالا بعد از 
+یک‌سال می‌شود روبه‌روی هر دو آنها نشست و چند ساعت گفت‌وگو کرد البته نه 
+به سبک مصاحبه‌های عادی خانوادگی چرا که این دفعه پای سیامک انصاری وسط 
+است؛ آدم مصاحبه‌گریزی که لابد چند بار با خودش کلنجار رفته تا قانع شود در
+ یک گفت‌وگوی خانوادگی شرکت کند. چیزی&nbsp; که شاید قبلا به نظرش خوشایند 
+نمی‌آمده… هرچه که باشد او سیامک انصاری است؛ چهره شناخته‌شده طنزهای مهران
+ مدیری با کلی اخلاق و رفتار مختص به خودش… .</p><p style="text-align: center;">این گفت‌وگو در گالری این زوج انجام شد 
+میان چوب‌های قدیمی، آینه‌های نقاشی شده و طرح‌های نوستالژیک. جایی که 
+می‌شد از نقش گفتیم و فرش و لابد کمی عشق. عشق بزرگ‌نمایی نشده و واقعی این
+ زوج دوست‌داشتنی یک‌سال بعد از زندگی مشترک و همکاری و غیره.</p><p style="text-align: center;">بعضی ها شغلشان ازدواج است</p><p style="text-align: center;"><strong>آقای انصاری شما چند سالتان است؟</strong></p><p style="text-align: center;">۴۳ سال</p><p style="text-align: center;"><strong>چرا آنقدر دیر به فکر ازدواج افتادی؟</strong></p><p style="text-align: center;">سیامک: ازدواج که به فکر کردن ربطی ندارد. 
+به نظرم اتفاقی است که ممکن است در هر سنی پیش بیاید. فکر نمی‌کنم کسی 
+برنامه‌ریزی خاصی برای ازدواج داشته باشد مگر آن افرادی که شغل‌شان ازدواج 
+است (می‌خندد).<br>
+ولی به هر حال ممکن است هر کسی زمانی را در ذهنش داشته باشد که تصمیم بگیرد زود ازدواج کند یا دیر.</p><p style="text-align: center;">من هیچ موعد ذهنی‌ای نداشتم. در واقع بعد 
+از ازدواجم به این موضوع که می‌گویند باید وقتش برسد و این اتفاق باید پیش 
+بیاید و سرنوشت است که برای تو تصمیم می‌گیرد اعتقاد پیدا کردم. به خدا!</p><p style="text-align: center;">ماجرای آشنایی و ازدواج‌تان را برایمان بگویید. به هر حال این سؤال جزو طبیعت این مصاحبه‌هاست.</p><p style="text-align: center;">طناز: سیامک، دوست یکی از دوستان خانوادگی 
+ما بود. ما چند بار همدیگر را دیده بودیم. من هم مثل سیامک هیچ برنامه‌ریزی
+ برای ازدواج نداشتم. به نظر من ازدواج یک مقوله حسی است. یک احساس است که 
+باید در درون فرد به وجود بیاید. زندگی متاهلی هم احساس مسئولیت است هم حس 
+علاقه… در کل مجموعه‌ای از وظایف و احساسات است که باید پذیرفته شود.</p><p style="text-align: center;">به آرامش رسیدم</p><p style="text-align: center;"><strong>چند وقت از ازدواج‌تان می‌گذرد؟</strong></p><p style="text-align: center;">یک‌سال</p><p style="text-align: center;"><strong>این یک‌سال چطور گذشته است؟</strong></p><p style="text-align: center;">طناز: عالی، خیلی خوب. سیامک آدم سخت و 
+پیچیده‌ای نیست. کسی است که می‌توان کنارش احساس خوشحالی کرد. او همه 
+آدم‌ها را درک می‌کند. مسئولیت‌پذیر است. واقعیت این است که آن چیزهایی که 
+در زندگی دنبالش می‌گشتم در سیامک پیدا کردم. نمی‌گویم همه چیز بی‌عیب و 
+نقص است اما&nbsp; در کل به هدف‌هایی که در زندگی می‌خواستم رسیده‌ام. در همه 
+شرایط با من همراهی می‌کند و این اتفاق برای من لذتبخش است.</p><p style="text-align: center;"><strong>تو این تعریف‌ها را قبول داری؟</strong></p><p style="text-align: center;">سیامک: بله (می‌خندد).</p><p style="text-align: center;"><strong>در مورد تو چطور بود. چه چیز خاصی در این ازدواج پیدا کردی؟</strong></p><p style="text-align: center;">سیامک: ما به یک تفاهم در همه زمینه‌ها 
+رسیده‌ایم و این حس برای من خیلی مهم است. در زندگی مشترک همه به دنبال 
+آرامش هستند. این درک متقابل باعث می‌شود در زندگی ما آرامش وجود داشته 
+باشد و این تفاهم بزرگ‌ترین اتفاق زندگی ماست.</p><p style="text-align: center;"><strong>همان‌طور که همسرت گفت به نظر&nbsp; خیلی آدم سختی نیستی؟</strong></p><p style="text-align: center;">سیامک: نه نیستم. بعضی از دوستان می‌گویند من آدم بداخلاقی هستم اما فکر می‌کنم با من شوخی می‌کنند. چون می‌دانم بد اخلاق نیستم.</p><p style="text-align: center;">طناز: اخلاق‌های بد داری… اما بداخلاق نیستی (می‌خندد).</p><p style="text-align: center;"><strong>متولد چه ماهی هستی؟</strong></p><p style="text-align: center;">سیامک: مرداد</p><p style="text-align: center;"><strong>می‌گویند مردادی‌ها وقتی عصبانی می‌شوند می‌توانند توفان به پا کنند؛ با این قضیه موافقی؟</strong></p><p style="text-align: center;">سیامک: من به طالع‌بینی اعتقاد ندارم.شاید در گذشته اینطور بودم اما الان یاد گرفته‌ام عصبانیتم را کنترل کنم.</p><p style="text-align: center;">البته شنیده‌ام که می‌گویند معقول‌ترین ماه
+ تولد برای مردها مرداد است چون نماد این ماه، شیر است. شیر هم سلطان است و
+ از این حرف‌ها… .</p><p style="text-align: center;">من و امیر ژوله (نویسنده ویلای من) مردادی 
+هستیم با فاصله ۱۲ سال و هر ۲ سال میمون به دنیا آمده‌ایم. امیر خیلی به 
+طالع‌بینی اعتقاد دارد اما من واقعا نمی‌دانم تفاوت متولد مرداد با خرداد 
+در چیست. البته ژوله هر روز این مسائل را با من مرور می‌کند.</p><p style="text-align: center;">چرا ما همدیگر را درک می کنیم</p><p style="text-align: center;"><strong>به نظر سیامک یک تجرد ذهنی و یک درون کودکانه دارد؛ کنار آمدن با این مسئله سخت نیست؟</strong></p><p style="text-align: center;">طناز: این مسئله درهر دوی ما وجود دارد شاید به همین دلیل است که همدیگر را درک می‌کنیم.</p><p style="text-align: center;">سیامک تو به طور معمول همیشه از اتفاقات به
+ وجد می‌آیی و هیجان‌زده می‌شوی. می‌خواهم بدانم ماجرای ازدواج هم در 
+راستای اتفاقات هیجان‌انگیز زندگی‌ات بوده است؟</p><p style="text-align: center;">سیامک: به هر حال قبول مسئولیت همراه با 
+دلهره اولیه است؛ قبول مسئولیت و جدا شدن از یک نوع زندگی و شروع یک زندگی 
+جدید هیجان خاص خودش را دارد. مهم‌تر از همه اینکه شما نمی‌دانید چه اتفاقی
+ خواهد افتاد و چه چیز پیش رویتان است. فکر می‌کنم همین بی‌خبری از اتفاقات
+ آینده به خودی خود موضوع را جالب‌تر می‌کند.</p><p style="text-align: center;">طناز: به نظرم هر کسی به یک سرنوشت خوب فکر
+ می‌‌کند اما در ذهنش جزئیات وجود ندارد که بداند چه اتفاقی می‌افتد.همین 
+وجود نداشتن جزئیات که تصوری از آن ندارید، یک هیجان به وجود می‌آورد.</p><p style="text-align: center;"><strong>وقتی موضوع ازدواج شما جدی شد آیا با شخصیت حقیقی سیامک روبه‌رو شدی یا آدمی که بازیگر است و مشهور و…؟</strong></p><p style="text-align: center;">طناز: خود واقعی او با سیامک تلویزیون فرق 
+آنچنانی ندارد. سیامک اصلا تحت تاثیر معروفیت قرار نمی‌گیرد خود واقعی‌اش 
+هم همانی است که می‌بینید. البته قبل از ازدواج نگران این قضیه بودم چون 
+همیشه زندگی آرام و عادی را دوست داشتم. فکر می‌کردم ممکن است شغل او روی 
+زندگی خصوصی ما تاثیر بگذارد اما اصلا اینطور نیست. اساسا زندگی با یک 
+بازیگر شاید برای هر کسی خوشایند نباشد به خصوص برای کسی که یکی از طرفین 
+معروف باشد اما سیامک کسی است که به هیچ‌وجه تحت تاثیر محبوبیتش قرار 
+نمی‌گیرد و چون سبک زندگی سیامک اینطور بود ما توانستیم زندگی مشترک‌مان را
+ شروع کنیم.</p><p style="text-align: center;">سیامک: من هنوز بعد از ۱۸ سال کار کردن فکر
+ نمی‌کنم بازیگری شغل من است. فکر می‌کنم خب یک کاری هست می‌روم بازی 
+می‌کنم و برمی‌گردم. اعتقادی نداریم که بازیگری می‌تواند شغل کسی باشد.</p><p style="text-align: center;">اهل حساب و کتاب نیستیم</p><p style="text-align: center;">شاید یکی از دلایل طولانی بودن ارتباط کاری‌ات با مهران مدیری و اینکه گروه را عوض نکردی همین محتاط بودن توست.</p><p style="text-align: center;">سیامک: این مسئله دلیلی بر اینکه من آدم 
+ریسک‌پذیری نباشم، نیست. من بیشتر فکر می‌کنم که موفقیت کدام طرف است. ما 
+۱۰ سال است با هم کار می‌کنیم و موفق هم بوده‌ایم. چرا عوضش کنم؟</p><p style="text-align: center;"><strong>حساب&nbsp; و کتاب و مدیریت مالی خانواده‌ با کدامتان است؟</strong></p><p style="text-align: center;">طناز: زندگی ما حساب و کتاب ندارد. نه من 
+اهل کنترل وحساب و کتابم، نه سیامک. در واقع هیچ کدام‌مان اهل دو دو تا 
+چهار تا نیستیم. به نظرم آدم باید از زندگی لذت ببرد البته هیچ کدام اهل 
+بریز و بپاش و ولخرجی‌های آنچنانی نیستیم اما در لحظه اگر دلمان بخواهد 
+کاری انجام دهیم آن را از خودمان دریغ نمی‌کنیم. اهل نقشه کشیدن نیستم به 
+هر حال رؤیاپردازی که همه آدم‌ها دارند را داریم ولی اینطور نیست که به 
+خاطر این رؤیاها زندگی‌مان را متوقف کنیم.</p><p style="text-align: center;">فقط پلی استیشن</p><p style="text-align: center;">هنوز هم عادت سرگرم شدن با بازی‌های کامپیوتری را داری؟</p><p style="text-align: center;">سیامک: بله، همسرم هم این عادت را حتی تا حدی بیشتر از من دارد.</p><p style="text-align: center;">پس زدی تو خال!</p><p style="text-align: center;">سیامک: بله، خوشبختانه من و همسرم در مورد بازی‌های کامپیوتری و با هم تفاهم داریم.</p><p style="text-align: center;"><strong>با هم مسابقه هم می‌دهید؟</strong></p><p style="text-align: center;">طناز: نه هر کسی با کامپیوتر خودش بازی می‌کند.</p><p style="text-align: center;">خیلی خوب است که علاقه‌مان مشترک است. البته در مورد بیشترین چیزی که با هم تفاهم داریم فیلم دیدن‌مان است فقط با یک اختلاف سلیقه.</p><p style="text-align: center;"><strong>این اختلاف سلیقه در چیست؟</strong></p><p style="text-align: center;">طناز: سیامک فیلم علمی-تخیلی دوست دارد و من به فیلم ملودرام علاقه دارم.</p><p style="text-align: center;"><strong>آخرین فیلم اکشنی که دیدی چه بود؟</strong></p><p style="text-align: center;">سیامک: اسکای فال. البته از دیدن جانگوی رها شده تارانتینو هم خیلی لذت بردیم. تارانتینو می‌تواند همیشه آدم را متعجب کند.</p><p style="text-align: center;">گاهی بین مریض هم کار قبول می‌کنم</p><p style="text-align: center;"><strong>آیا وقت کافی برای همنشینی و فیلم دیدن دارید یا بیشتر درگیر کار هستی؟</strong></p><p style="text-align: center;">سیامک: اصولا در این ۱۲ سال خیلی کار شبانه نداشتیم. کارهای ما به صورت روتین از ۱۱-۱۰ شروع می‌شود تا ۹-۸ شب.</p><p style="text-align: center;"><strong>مگر تو فقط با مهران کار می‌کنی؟</strong></p><p style="text-align: center;">سیامک: وقتی با مهران کار می‌‌‌کنم پروژه 
+دیگری را قبول نمی‌کنم. البته گاهی بین مریض کار تئاتر قبول می‌کنم آن هم 
+تئاتر گروه سایه که آقای حداد ارجمند و خانم رشیدی، خانم فرشادجو و خانم 
+پناهی‌ها در آن هستند. در واقع فقط زیر بار مسئولیت کار تئاتر گروه خودمان 
+می‌روم.</p><p style="text-align: center;"><img class="aligncenter" alt="سیامک انصاری(بازیگر) و همسرش" src="http://www.ariapix.net/rec/1392/02/0115/siamak-ansari-wife_03.jpg" title="عکس های جدید سیامک انصاری و همسرش + گفتگو" width="470"></p><p style="text-align: center;"><strong>پس کارتان طوری نیست که همسرتان تنها بماند. معمولا شب‌کار نیستید؟</strong></p><p style="text-align: center;">سیامک: ۴-۳ ماه اول ازدواج‌مان ۴ ماه اجرا 
+تئاتر«آمدیم، نبودید، رفتیم» داشتیم. پنجشنبه، جمعه‌ها هم دو سئانس نمایش 
+داشتیم و من تا ساعت یک شب خانه نمی‌رفتم.</p><p style="text-align: center;">درهوای آلوده بچه نمی خواهیم</p><p style="text-align: center;">اولین باری که سیامک را دیدید ، کجا بود؟</p><p style="text-align: center;">در منزل&nbsp; دوست مشترکمان</p><p style="text-align: center;">وقتی سیامک را از تلویزیون می دیدی هیچ وقت فکر&nbsp; می کردی یک روز ازدواج کنی؟</p><p style="text-align: center;">طناز: اصلا … (با خنده)</p><p style="text-align: center;">به سه نفره شدن زندگی‌تان فکر کرده‌اید؟</p><p style="text-align: center;">سیامک: نه فعلا به بچه‌دار شدن فکر نمی‌کنیم.</p><p style="text-align: center;">کاراکتر سیامک خیلی به کاراکتر پدر نزدیک نیست. در کل علاقه‌ای به بچه‌دار شدن دارید؟</p><p style="text-align: center;">طناز: بچه‌دار شدن مسئولیت سنگینی است. به نظرم باید با برنامه‌ریزی مفصل بچه‌‌دار شد.</p><p style="text-align: center;">در همه جای دنیا بچه‌دار شدن سلبریتی‌ها مبحث روز است.</p><p style="text-align: center;">طناز: امکانات آنها را نمی‌توان با شرایط 
+ما یکی کرد. فکر می‌کنم در این هوای آلوده بچه‌دار شدن به صلاح نیست اما 
+اگر امکانات بزرگ کردن بچه وجود داشته باشد بچه‌دار شدن واقعا زیباست.</p><p style="text-align: center;">خدارا شکر آتش نشان نشدم</p><p style="text-align: center;">بنابراین از آسیب‌های معمول شغل بازیگری در امان هستید.</p><p style="text-align: center;">سیامک: به نظر من نمی‌‌توان گفت آسیب. یک 
+پلیس و آتش‌نشان هم شیفت شب‌کاری دارند یا حتی کسی که در پالایشگاه نفت کار
+ می‌کند ممکن است یک ماه نتواند به خانه‌اش سر بزند… البته خدا را شکر 
+می‌کنم که طی این سال‌ها ساعت کاری روتینی داشته‌ام و درگیر این&nbsp; چیزهایی 
+که شما می‌گویید نبودم.</p><p style="text-align: center;">طناز: من فکر می‌کنم کسی که شریک زندگی‌اش 
+را انتخاب کرده است باید این شرایط را هم قبول کند و چیزهایی مثل ساعت کاری
+ نامنظم نباید مشکل‌ساز شود. قاعدتا طرف با چشم باز ازدواج کرده است و 
+بعدها نباید قبول شرایط برایش سخت باشد.</p><p style="text-align: center;"><strong>تحصیلات شما چیست؟</strong></p><p style="text-align: center;">طناز: دو مدرک دارم. یکی لیسانس معماری داخلی و دیگری مدرک معادل لیسانس برنامه‌‌نویسی کامپیوتر.</p><p style="text-align: center;">به نظر می‌آید علاقه‌تان به معماری داخلی است؟</p><p style="text-align: center;">طناز: بله.</p><p style="text-align: center;">اصالتا کجایی هستید. در کدام منطقه بزرگ شده‌اید؟</p><p style="text-align: center;">طناز: تهران. در منطقه دیباجی و دروس بزرگ شده‌ام.</p><p style="text-align: center;">و شما…</p><p style="text-align: center;">سیامک: من بچه خیابان بهار شیراز هستم.</p><p style="text-align: center;">شاید باید تاجر فرش می شدم</p><p style="text-align: center;"><strong>قبل از اینکه وارد دنیای بازیگری شوی چه کار می‌کردی؟</strong></p><p style="text-align: center;">سیامک: من خیلی وقت‌‌ها با پدرم کار 
+می‌کردم. کار در مورد فرش و گلیم و تولیدات آن همیشه مورد علاقه‌ام بوده. 
+در حال حاضر هم این کار را دنبال می‌کنم. البته آن وقت‌ها که محصل بودم به 
+پدرم کمک می‌کردم اما نه به عنوان شغل… اصولا تمام کسانی که پدرشان در 
+بازار تهران کار فرش یا صادرات داشتند یک دوره‌ای با پدر کار کرده‌اند. 
+حالا بعضی‌ها جذب کار شده‌اند، بعضی‌ها سراغ کارهای دیگر رفته‌اند. همین 
+رفت و آمد‌ها باعث شد از بچگی نسبت به صنعت فرش شناخت کافی پیدا کنم.</p><p style="text-align: center;">تعلق خاطر هر دو شما به معماری داخلی در آشنایی و تصمیم ازدواج‌تان تاثیر داشت؟</p><p style="text-align: center;">سیامک: نه، بعد از ازدواج‌مان همسرم توجه 
+من را به معماری داخلی جلب کرد. خب من کار خودم را داشتم و به کاری دیگر 
+فکر نمی‌کردم. پشتکار همسرم باعث شد یک گالری افتتاح کنیم و لوازم قدیمی را
+ جمع‌آوری کردیم و برای فروش گذاشتیم. یکی از دوستان من، آقای محسن موسوی 
+که از قدیمی‌های این کار هستند و به همراه پدرشان شاهنامه را روی فرش 
+آوردند که به نوبت در تمام موزه‌های دنیا به نمایش گذاشته می‌شود، پیشنهاد 
+این کار را به من دادند و ما با هم این کار را شروع کردیم. در واقع کمک 
+ایشان عامل اصلی شد برای اینکه ما «پچ‌ورک»‌ها را تولید کنیم و بفروشیم.</p><p style="text-align: center;">تکه های فرش های پوسیده را به هم می چسبانم</p><p style="text-align: center;">کمی راجع به پچ‌ورک برایمان توضیح بده.</p><p style="text-align: center;">سیامک: بازیابی تکه‌های فرش‌هایی است که 
+پوسیده‌اند، چیزی که به‌نظر می‌رسد دیگر به درد نمی‌‌خورد. این تکه‌های فرش
+ کنار هم دوخته می‌شوند و به پشت آن چسب زده می‌شود.</p><p style="text-align: center;">درواقع قطعه‌ای از نبوک به آن وصل و 
+شیرازه‌کاری شده و آماده فروش می‌شود. به صورت صنعتی نمی‌توان روی پچ‌ورک 
+کار کرد فعلا به صورت کارگاهی آن را پیش می‌بریم. نکته جالب این است که 
+پچ‌ورک‌‌ها کنار وسایل قدیمی که ما جمع‌آوری کرده‌ایم خودشان را نشان 
+می‌دهند و از ابتدا تصمیم نداشتیم که اینها را با هم برای فروش بگذاریم. در
+ واقع علاقه همسرم به لوازم قدیمی مثل مبلمان و تابلوهای قدیمی باعث ایده 
+اولیه راه‌اندازی گالری ما شد.</p><p style="text-align: center;">رؤیای من این است …</p><p style="text-align: center;"><strong>ایده اولیه این کار از کجا آمد؟</strong></p><p style="text-align: center;">طناز: من ۴ سال کار معماری داخلی انجام 
+دادم. هر وقت برای خرید وسایل برای مشتری‌ها می‌رفتم درک نمی‌کردم که چرا 
+باید همه وسایل را چینی یا آمریکایی بخرم. این کار را شروع کردیم که از 
+کارهای خودمان استفاده کنیم. اگر از وسایل قدیمی در خانه‌هایمان استفاده 
+کنیم خانه‌هایمان یک اصالت به خود می‌گیرد. من دوست دارم یک کارگاه داشته 
+باشم که در سال آینده حتما آن را راه‌اندازی کنیم. ما فعلا در مرحله شروع 
+کار و آزمون و خطا هستیم.</p><p style="text-align: center;"><strong>سیامک چقدر کمکت بود؟</strong></p><p style="text-align: center;">طناز: من و سیامک با هم این کار را شروع و 
+در راستای هم حرکت کردیم. هم سیامک برای کار انرژی گذاشت و هم من. شروع کار
+ با من بود چون سیامک آدم صبوری است که دوست دارد راجع به همه چیز حسابی 
+فکر کند اما من آدم عجولی هستم. سیامک همه جوانب کار را بررسی و بعد آن را 
+شروع می‌کند در صورتی که من اصلا اینطور نیستم.</p><p style="text-align: center;">چقدر چهره شناخته‌شده سیامک توانست به جمع‌آوری&nbsp; مجموعه شما کمک کند؟</p><p style="text-align: center;">طناز: این مسئله خیلی به ما کمک نکرد. ما 
+از اعتبار&nbsp; و شهرت سیامک استفاده نکردیم. یک روال کلی کار وجود داشت که هر 
+کسی باید این مراحل را می‌گذراند.</p><p style="text-align: center;">سیامک: خود به خود شاید چهره بودن من بتواند به سرعت گرفتن دیده شدن گالری ما کمک کند اما هیچ اصراری به این اتفاق نداریم.</p><p style="text-align: center;">وسایل قدیمی کاراکتر دارند</p><p style="text-align: center;"><strong>چطور کسی می‌تواند هم به گرامافون علاقه داشته باشد و هم آی‌پد؟</strong></p><p style="text-align: center;">طناز: به نظرم در وسایل قدیمی کاراکتری 
+وجود دارد که شما در وسایل جدید نمی‌‌بینید. کاری که سیامک در پچ‌ورک انجام
+ داده یک کار جدید است که از دل یک کار قدیمی درآمده است. تکه‌های فرش‌های 
+قدیمی را تبدیل به یک کار جدید با رنگ‌آمیزی کرده‌ایم که بیشتر با 
+دکوراسیون امروز همخوانی دارد. مثل درهای قدیمی که الان تبدیل به میز 
+شده‌اند. البته این گالری هنوز به آن ایده‌آلی که ما مدنظر داریم، تبدیل 
+نشده است.</p><p style="text-align: center;"><strong>در واقع مانیفست کاری شما این است که آثار قدیمی را به مدرن تبدیل کنید؟</strong></p><p style="text-align: center;">طناز: یکسری از وسایل به بازسازی احتیاج دارد. آنها را بازسازی می‌‌کنیم. بعضی‌ها را هم تبدیل به یک وسیله جدید و مدرن‌تر می‌کنیم.</p><p style="text-align: center;">قیمت‌های ما مناسب است</p><p style="text-align: center;">خیلی از آدم‌ها ترس از نزدیک شدن به گالری 
+شما را دارند. فکر می‌کنند قیمت‌های نجومی عتیقه‌جات روی وسایل گالری شما 
+هم وجود دارد، این ذهنیت درست است؟</p><p style="text-align: center;">سیامک: اصلا اینطور نیست. ممکن است مردم 
+بروند یک مبلمان ترکی یا چینی را به اسم ایتالیایی بخرند و قیمت خیلی 
+بالایی پرداخت کنند، واقعیت این است که قیمت وسایلی که ما در گالری داریم 
+واقعا مناسب است و اقشار متوسط به راحتی می‌توانند اجناس ما را خریداری 
+کنند.</p><p style="text-align: center;"><strong>این تغییرات اقتصادی روی کار شما هم تاثیر گذاشته است؟</strong></p><p style="text-align: center;">سیامک: بله. فکر می‌کنم فعلا خرید این 
+اجناس در اولویت خرید مردم نیست. مردم فکر خرید اجناس ضروری‌تر هستند. 
+ترجیح می‌دهند فعلا پول‌شان را صرف خرید اینطور وسایل نکنند. البته ما فروش
+ خودمان را داشته‌ایم منتها موضوع تورم و بالا و پایین‌های اقتصادی را حس 
+کرده‌ایم.</p><p style="text-align: center;">آهسته آهسته معروف شدم</p><p style="text-align: center;"><strong>از چه زمانی دیده شدی و مردم دیگر تو را در خیابان می‌شناختند؟</strong></p><p style="text-align: center;">سیامک: خدا را شکر خیلی آهسته‌آهسته این 
+اتفاق افتاد و با شیب نرمی این اتفاق برای من به وجود آمد اما از سریال هتل
+ سال ۷۸ کم‌کم شناخته شدم.</p><p style="text-align: center;"><strong>یادت می‌آید اولین‌باری که سیامک را در تلویزیون دیدی کدام سریال بود؟</strong></p><p style="text-align: center;">طناز:&nbsp; سریال پاورچین</p><p style="text-align: center;">همیشه ذهنمان خسته است</p><p><img class="aligncenter" alt="سیامک انصاری(بازیگر) و همسرش" src="http://www.ariapix.net/rec/1392/02/0115/siamak-ansari-wife_02.jpg" title="عکس های جدید سیامک انصاری و همسرش + گفتگو" height="661" width="440"></p><p style="text-align: center;"><strong>با این میل به دوری از سر و صدا چرا نمی‌روید بیرون از تهران؟</strong></p><p style="text-align: center;">سیامک: فکر می‌کنم تمام مردمی که در تهران 
+درگیر ترافیک‌های مدام شهری هستند دنبال یک آرامش نسبی هستند تا بتوانند 
+برای مدتی از حجم صدا فرار کنند. ما ناخودآگاه ذهن خسته‌ای داریم. کاری 
+نکرده‌ایم ولی خسته می‌شویم که این به دلیل آلودگی صوتی است اما یادمان 
+می‌رود چقدر رانندگی کرده‌ایم، چقدر صدا شنیده‌ایم، چقدر دود به حلق‌مان 
+رفته است… بی‌جهت همیشه خسته‌ایم. مثل این است که شما را در جایی بنشانند و
+ دائما بوق بزنند یا زمین را با مته سوراخ کنند. ذهنتان خسته می‌شود. خستگی
+ فقط جابه‌جا کردن چیزی یا دویدن نیست؛ بنابراین فکر می‌کنم همه مردم دنبال
+ جایی می‌گردند که کمی آرامش پیدا کنند. ما به طور نسبی این آرامش را در 
+این خانه ایجاد کرده‌ایم.</p><p style="text-align: center;">طناز: خیلی وقت‌ها فکر می‌کردم کاش 
+می‌توانستیم به جایی نزدیک تهران نقل مکان کنیم. البته منظورم لواسان نیست 
+می‌گویم اطراف تهران همه ذهن‌ها می‌رود به سمت لواسانات اما متاسفانه ما 
+عادت کرده‌ایم خودمان را با امکانات تهران تطبیق دهیم.</p><p style="text-align: center;">به نظر من تهران جای زندگی نیست. من آدمی 
+هستم که از تنهایی بدم می‌آید و خیلی اهل معاشرت هستم اما هرچه می‌گذرد 
+بیشتر به تنهایی و خلوت فکر می‌کنم.</p><p style="text-align: center;">ما یک تیم هستیم ستاره هم نمی خواهیم</p><p style="text-align: center;">نکته جالب این است که تو رفتارهای بقیه سلبریتی‌ها را نداری. اساسا چیزی در ذهنت طراحی نمی‌کنی که بخواهی چطور رفتار کنی.</p><p style="text-align: center;">سیامک: نمی‌فهمم الگوی رفتار سلبریتی در 
+مملکت ما چیست؟ آیا قانونی وجود دارد؟ خب خیلی از مردم خودشان را می‌‌گیرند
+ طبیعی است که بعضی از سلبریتی‌ها هم همین رفتار را داشته باشند. شاید 
+بعضی‌ها دوست داشته باشند یک گاردی داشته باشند. بعضی‌ها یک سپری برای 
+خودشان می‌سازند که از حاشیه دور باشند که خود سپر تبدیل می‌شود به حاشیه. 
+خود آن رفتار تبدیل می‌شود به حاشیه. نه اینکه عاشق حاشیه و باشند نه. 
+معلوم است که کسی دنبال حرف و حدیث نمی‌گردد.</p><p style="text-align: center;">اما چیزی که وجود دارد این است که شهرت 
+تبعاتی با خود می‌آورد مثل نگاه از بالا به پایین به دیگران یا مورد توجه 
+قرار گرفتن. ممکن است شما درگیر این مسائل نباشی اما این غرور خواه ناخواه 
+برای خیلی‌ها به وجود می‌آید.<br>
+سیامک: به نظرم اعتمادبه‌نفس با غرور&nbsp; فرق می‌کند. ممکن است یک نفر با خود 
+فکرکند، من کاری انجام دادم که دیگران تشویقم کردند و از این بابت به خودش 
+ببالد. اما اینکه اعتمادبه‌نفس به تو حس برتری بدهد را درک نمی‌کنم. نکته 
+این است که ما با فرهنگ ایرانی زندگی می‌کنیم و فرهنگ ما اجازه نمی‌دهد که 
+بخواهی برای بقیه قیافه بگیری.</p><p style="text-align: center;">ولی ستاره‌های سینما یا موسیقی حتی حاضر نیستند کنار همدیگر بایستند و با هم عکس بگیرند.</p><p style="text-align: center;">سیامک: علت اینکه ۱۲ سال با گروه مهران مدیری کار می‌کنیم همین مسئله است، ما یک تیم هستیم.</p><p style="text-align: center;">اما خیلی از بازیگرهای تیم‌تان از شما جدا شدند مثل شفیعی‌جم و جواد رضویان.</p><p style="text-align: center;">گروه ما ستاره لازم ندارد. مردم بازیگرها 
+را ستاره‌دار می‌کنند. من هر آدمی را در شرایط خودش می‌سنجم. مگرچه اتفاقی 
+می‌افتد، آخر این راهی که ما می‌رویم کجاست؟ همه ما بازنشسته می‌شویم. 
+بالاخره باید طوری رفتار کنی که چند سال بعد که خانه‌نشین شدی ۴ نفر جواب 
+سلام تو را بدهند. نمی‌گویم من آدم دوراندیشی هستم ولی به آخرش فکر می‌کنم.
+ دوست دارم ۲ نفر هم باشند که در دوران بازنشستگی‌ام به من احترام بگذارند.
+ همه احترام‌ها که نباید برای الان ما باشد.</p><p style="text-align: center;"><strong>خانم هادیان به نمایش و بازیگری علاقه ندارید؟</strong></p><p style="text-align: center;">طناز: نه. من روی بازیگری را ندارم. به هنر علاقه دارم اما دوست دارم تماشاچی باشم نه بازیگر.</p><p style="text-align: center;"><strong>از بین کارهای سیامک کدام یک را بیشتر دوست داشتی؟</strong></p><p style="text-align: center;">طناز: پاورچین را. سیامک شخصیت بامزه‌ای در آن سریال داشت.</p><p style="text-align: center;">قالتاق مظلوم</p><p style="text-align: center;"><strong>شما نقش سیامک در ویلای من را دوست داری؟</strong></p><p style="text-align: center;">طناز: خیلی زیاد.</p><p style="text-align: center;">دوگانگی آدمی که بی‌عرضه است اما در عین حال زرنگ هم هست در نقشت وجود دارد.</p><p style="text-align: center;">سیامک: بله نقشم یک کاراکتر قالتاق مظلوم است.</p><p style="text-align: center;">طناز: صدای خیلی جذابی هم دارد.</p><p style="text-align: center;"><strong>به نظر می‌رسد نقش تو نسبت به نقش‌های قبلی نقش کوتاهی است؟</strong></p><p style="text-align: center;">سیامک: بله. ولی هیچ منطقی در داستان وجود 
+ندارد که من و مهران یکدفعه وارد خانه مشکات شویم. در آینده اتفاقات خیلی 
+جذابی برای کاراکترها پیش می‌آید. ورود هادی کاظمی و عارف لرستانی هم به 
+داستان سریال اتفاق شیرینی است.</p><p style="text-align: center;"><strong>شما چقدر کارهایی که سیامک در آن بازی کرده است را دنبال کرده‌اید؟</strong></p><p style="text-align: center;">طناز: قهوه تلخ و قسمت‌هایی از شب‌های برره و مرد هزارچهره را دیدم.</p><p style="text-align: center;">در«ویلای من» اعتمادسازی شکل گرفته است</p><p style="text-align: center;">فیلمبرداری پروژه ویلای من تا چه زمانی ادامه دارد؟</p><p style="text-align: center;">سیامک: تا اواسط خرداد</p><p style="text-align: center;"><strong>شرایط اقتصادی روی بودجه پروژه تاثیر منفی گذاشته؟</strong></p><p style="text-align: center;">خب پروژه به صورت خصوصی ساخته می‌شود و مشکل مالی وجود ندارد.</p><p style="text-align: center;">مهران مدیری می‌گفت اگر ویلای من با اقبال عمومی مواجه نشود ممکن است آخرین کاری باشد که گروه شما انجام می‌دهد.</p><p style="text-align: center;">سیامک: خدا را شکر شرایط خوب است. جایزه 
+اول ویلای من تحویل داده شد. فکر می‌کنم اعتمادسازی ابتدایی که باید انجام 
+می‌شد، شکل گرفت. شرکت گلرنگ با تمام وجود تلاش کرد و اعضای آن صد درصد به 
+تمام تعهدات‌شان عمل می‌کنند.</p><p style="text-align: center;">دلم نمی خواهد فکر کنم «قهوه تلخ» تمام شده</p><p style="text-align: center;">تا حالا پیش آمده که مردم در خیابان تو را ببینند و از تو درباره قهوه تلخ بپرسند؟</p><p style="text-align: center;">سیامک: بله؛ خیلی این اتفاق می‌افتد. از من می‌پرسند چرا قهوه تلخ به اتمام نرسید.</p><p style="text-align: center;">نمی‌پرسند که داستان قهوه تلخ کجا ختم می‌شود.</p><p style="text-align: center;">سیامک: این سؤال را راجع به همه کارها 
+می‌پرسند (می‌خندد). اما فقط یک قسمت از قهوه تلخ باقی مانده که ما آن را 
+فیلمبرداری نکرده‌ایم. دو قسمت از آن هم ضبط شده که دی‌وی‌دی‌های آن منتشر 
+نشده است. امیدم این است که پروژه قهوه تلخ به اتمام برسد به هر حال هرکدام
+ از ما ۳ سال و نیم برای آن زحمت کشیدیم.</p><p style="text-align: center;"><strong>فکر نمی‌کنی امید واهی داری؟</strong></p><p style="text-align: center;">سیامک: اصلا دوست ندارم به این فکر کنم که قهوه تلخ به پایان نمی‌رسد.</p><p style="text-align: center;"><strong>راجع به جوایز هم از تو سؤال می‌کنند؟</strong></p><p style="text-align: center;">سیامک: ما که در قهوه تلخ بازی می‌کردیم 
+نباید جایزه بدهیم. من در آن پروژه شراکتی نداشتم. ما هم مثل شما نمی‌دانیم
+ چه اتفاقی افتاده است.</p><p style="text-align: center;">خودت هم به دلیل منطقی نمی‌رسی که چرا قسمت آخر آن سریال ضبط نشد.</p><p style="text-align: center;">سیامک: واقعا هیچ&nbsp; دلیل منطقی برای آن ندارم. فقط یک هفته به پایان پروژه مانده بود.</p><p style="text-align: center;"><img alt="سیامک انصاری(بازیگر) و همسرش" src="http://www.ariapix.net/rec/1392/02/0115/siamak-ansari-wife_04.jpg" title="عکس های جدید سیامک انصاری و همسرش + گفتگو" width="470"></p><span lang="fa">منبع : آریا پیکس </span>
+
+
+</div>
+<br>
+<script>mihanblogPostLike('472','like')</script><br>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">مرتبط با: <a href="category/1.html">
+گالری عکس</a> , <a href="category/45.html">
+سرگرمی , تفریحی</a> , <a href="category/23.html">
+خواننده و بازیگر ایرانی</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">برچسب‌ها: <a href="tag/عکس&#32;های&#32;جدید&#32;سیامک&#32;انصاری&#32;و&#32;همسرش&#32;+&#32;گفتگو.html">
+عکس های جدید سیامک انصاری و همسرش + گفتگو</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+</div>
+</div>
+
+<div id="theme-designer-com-post-linksabet" style="margin:6px 0px 0px 0px;"><ul>
+<li><center><a href="472.html" ><span class="theme-designer-com_koli_hidden">لینک ثابت</span></a></center></li>
+</ul></div>
+
+<div class="theme-designer-com-post-footer"><div class="theme-designer-com-post-footer2">
+منتشر شده در تاریخ 1392/02/8 توسط alborz-pic alborz</div></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ------------comment------------ -->
+<div style="margin:30px 15px 0px 0px;">
+<div class="mihanblog-p">
+<div align="center">
+<div class="mihanblog-comment">
+<div class="mihanblog-comment-block">
+<div class="mihanblog-comment-user-block" align="right">می توانید دیدگاه خود را بنویسید</div>
+<a name='commentlist'></a><div align="center">
+<div class="mihanblog-comment-user-block">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="right"><b><a rel="nofollow" href="472.html"><font color="#830000"></font></a></b></td>
+<td align="left">1392/02/8 19:40</td>
+</tr>
+</table>
+<div class="mihanblog-comment-user-khat"></div>
+<div class="mihanblog-comment-user-text" align="right">عالیه</div>
+<!-- admin -->
+<!-- /admin -->
+</div>
+</div>
+<!-- send comment -->
+<div class="mihanblog-comment-send" align="right"><style>
+
+
+#imageCodeWrapper div{
+	float: right;
+}
+#imageCodeWrapper .imageCode_input #imgstr{
+	width:83px;
+	height:34px;
+	font-size:25px;
+}
+#imageCodeWrapper .imageCode_number{
+	margin:1px 5px 0px 0px;
+}
+#imageCodeWrapper .imageCode_number img{
+ 	border: 0px;
+ 	width: 122px;
+ 	height: 37px;
+}
+#imageCodeWrapper .imageCode_refresh{
+	cursor:pointer;
+	margin: 3px 3px 0px 0px;
+
+	width: 16px;
+	height: 16px;
+
+    background:url(http://static.mihanblog.com//public/images/icon/gen/refresh.gif) center right no-repeat;
+}
+
+.clearfix {display: inline-block;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+
+
+.comment_form .err-msg{
+	padding-right: 110px;
+	color: #F00;
+}
+.comment_form{
+	direction: rtl;
+}
+
+.comment_form label{
+	width: 110px;
+	display: block;
+	float: right;
+}
+.comment_form .comment_form_msg{
+	background: none repeat scroll 0 0 #8CDA5C;
+    border: 1px solid #249224;
+    padding: 5px;
+    margin: 5px;
+}
+.comment_form .required{
+	background: url(http://static.mihanblog.com//public/images/icon/require2.gif) no-repeat right top;
+	padding-right: 20px;
+}
+
+.comment_form .required{
+	width: 90px;
+}
+.comment_form .controls{
+	text-align: center;
+}
+.comment_form .btn{
+	font-family: tahoma;
+}
+.smileLayer{
+    position:absolute;
+    display:none;
+    background-color:#fff;
+    border:1px solid #555;
+}
+    .msgbody{
+        float:right;
+        width:260px
+    }
+    .msgtitle{
+        float:right;
+        -width:57px;
+        text-align:right;
+        -padding-right:64px;
+    }
+</style>
+
+<script>
+    var mihanBlog_commentBody_cursorPos=0;
+    function set_mihanBlogCommentBodyCursorPos(textarea_id){
+        mihanBlog_commentBody_cursorPos = c_$(textarea_id).selectionStart;
+    }
+</script>
+
+<form id="frm-16082130935fdb6265148bd" method="post" action="http://alborz-pic.mihanblog.com/post/comment/new/472/fromtype/postone/fid/16082130935fdb6265148bd/atrty/1608213093/avrvy/0/key/c5e6ed0e23af11e3cdc1cb3c53b5f6c9/#post_form" >
+	<a name="post_form"></a>
+	<div class="comment_form">
+
+					<div class="comment_form_row clearfix">
+				<label for="full_name">نام (فارسی):</label>
+				<input type="text" name="data[full_name]" id="full_name" value="" class="comment_form_textbox" />			</div>
+
+			<div class="comment_form_row clearfix">
+				<label for="email">ایمیل :</label>
+				<input type="text" name="data[email]" id="email" value="" class="comment_form_textbox english" />			</div>
+
+			<!--
+            <div class="comment_form_row clearfix">
+				<label for="web">آدرس وب/وبلاگ :</label>
+				<input type="text" name="data[web]" id="web" value="" class="comment_form_textbox english" />			</div>
+            -->
+
+			<div class="comment_form_row clearfix">
+				<label for="remember">مرا بخاطر بسپار :</label>
+				<input type="checkbox"  name="data[remember]" id="remember" value="1" />			</div>
+
+			<div class="comment_form_row clearfix">
+
+                <div class="msgtitle" for="title">
+                	<label class="required">
+                    	متن نظر (فارسی): 					</label>
+                     <!--   
+                    <div id="showsmile" style="position: relative;">
+                        <img src="http://static.mihanblog.com//public/rte/images_new/smiley.gif" onClick="showMihanBlogSmileBox('body')" style="cursor:pointer" />                    </div>
+                    <div class="smileLayer" id="MihanBlogSmiles_body"><table cellpadding="0"  cellspacing="0"  width="120"><tr><td colspan=2>&nbsp;</td><td style="cursor:pointer;text-align:left;padding:3px 0px 0px 3px;" onclick="showMihanBlogSmileBox('body')"><img src="http://static.mihanblog.com//public/images/icon/close.gif"  /></td></tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/1.gif" onClick="MihanBlogShowSmile('لبخند','body')" title="لبخند" alt="لبخند" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/2.gif" onClick="MihanBlogShowSmile('ناراحت','body')" title="ناراحت" alt="ناراحت" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/3.gif" onClick="MihanBlogShowSmile('چشمک','body')" title="چشمک" alt="چشمک" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/4.gif" onClick="MihanBlogShowSmile('نیشخند','body')" title="نیشخند" alt="نیشخند" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/6.gif" onClick="MihanBlogShowSmile('بغل','body')" title="بغل" alt="بغل" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/7.gif" onClick="MihanBlogShowSmile('سوال','body')" title="سوال" alt="سوال" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/8.gif" onClick="MihanBlogShowSmile('قلب','body')" title="قلب" alt="قلب" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/9.gif" onClick="MihanBlogShowSmile('خجالت','body')" title="خجالت" alt="خجالت" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/10.gif" onClick="MihanBlogShowSmile('زبان','body')" title="زبان" alt="زبان" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/11.gif" onClick="MihanBlogShowSmile('ماچ','body')" title="ماچ" alt="ماچ" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/13.gif" onClick="MihanBlogShowSmile('تعجب','body')" title="تعجب" alt="تعجب" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/14.gif" onClick="MihanBlogShowSmile('عصبانی','body')" title="عصبانی" alt="عصبانی" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/16.gif" onClick="MihanBlogShowSmile('عینک','body')" title="عینک" alt="عینک" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/19.gif" onClick="MihanBlogShowSmile('شیطان','body')" title="شیطان" alt="شیطان" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/20.gif" onClick="MihanBlogShowSmile('گریه','body')" title="گریه" alt="گریه" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/21.gif" onClick="MihanBlogShowSmile('خنده','body')" title="خنده" alt="خنده" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/24.gif" onClick="MihanBlogShowSmile('قهقهه','body')" title="قهقهه" alt="قهقهه" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/27.gif" onClick="MihanBlogShowSmile('خداحافظ','body')" title="خداحافظ" alt="خداحافظ" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/31.gif" onClick="MihanBlogShowSmile('سبز','body')" title="سبز" alt="سبز" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/33.gif" onClick="MihanBlogShowSmile('قهر','body')" title="قهر" alt="قهر" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/36.gif" onClick="MihanBlogShowSmile('هورا','body')" title="هورا" alt="هورا" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/41.gif" onClick="MihanBlogShowSmile('دست','body')" title="دست" alt="دست" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/53.gif" onClick="MihanBlogShowSmile('گل','body')" title="گل" alt="گل" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/39.gif" onClick="MihanBlogShowSmile('تفکر','body')" title="تفکر" alt="تفکر" style="cursor:pointer" /></td>	</tr>	</table></div>                    -->
+                </div>
+                
+                <div class="msgbody">
+				    <textarea name="data[body]" id="body" class="comment_form_textarea" onkeyup="showCaptcha();set_mihanBlogCommentBodyCursorPos('body');" onkeypress="set_mihanBlogCommentBodyCursorPos('body');" onclick="set_mihanBlogCommentBodyCursorPos('body');" rows="8" cols="40"></textarea>                </div>
+
+                <script type="text/javascript">
+
+                                        var showCaptcha = function(){
+                                                    if(c_$('body').value.length>5){
+                                c_$("imageCodeWrapper").style.display="";
+                            }
+                                            }
+                </script>
+			</div>
+
+			<div class="comment_form_row clearfix">
+				<label for="private">ارسال نظر خصوصی :</label>
+				<input type="checkbox"  name="data[private]" id="private" value="1" />			</div>
+        
+							<div class="comment_form_row clearfix">
+					نظرات پس از تایید نشان داده خواهند شد.				</div>
+			
+			<div class="controls clearfix">
+				
+        		<style>
+        		    #imgstr{
+        		        font-size:12px;
+        		    }
+        		</style>
+        		<div id="imageCodeWrapper" class="comment_form_row clearfix">
+	        			<label class="required" for="imgstr">عبارت تصویر :</label>
+	        			
+	        			<div class="imageCode_input">
+	        				<input type="text" name="imgstr" id="imgstr" style="" class="comment_form_textbox">
+	        			</div>
+		        		<div class="imageCode_number">
+	        				<img id="imgcodepage_572714" style="width: auto; height: auto;max-width:140px" src="http://alborz-pic.mihanblog.com/public/public/html/imgcode.php?str=0e556044c7dd416cf12edd784072d8c7____isfpesvpu51" >
+	        			</div>
+	        			<div class="imageCode_refresh" title="تعویض عبارت تصویری" onclick="changeImgCode_572714();"></div>	
+	        	</div>
+	        	<input type="hidden" name="imgcode" id="imgcode_572714" value="0e556044c7dd416cf12edd784072d8c7____isfpesvpu51">
+        		<script>
+        		var imgCodeChangeNum_572714 = 0 ;
+        		changeImgCode_572714 = function (){
+	        		var ImgCodeArr_572714 = new Array();
+	        		ImgCodeArr_572714[1]="377f5e330644b906e025379bce3e6194____irjhpvjpii35";
+	        		ImgCodeArr_572714[2]="11291f25002bed6f37c1f0e9b5886364____royhullth67";
+	        		ImgCodeArr_572714[3]="e6a7afc7b5f8bab3d4a5f3de42c10d98____ugkckurio27";
+	        		ImgCodeArr_572714[4]="1bdc0a27a04d8cd91d708e626c7c394e____pzewwfpif19";
+	        		
+	        		
+	        		if(imgCodeChangeNum_572714<4){
+	        			imgCodeChangeNum_572714 ++ ;
+	        		}
+	        		else{
+	        			imgCodeChangeNum_572714 = 1 ;
+	        		}
+	        		
+	        		c_$("imgcode_572714").value = ImgCodeArr_572714[imgCodeChangeNum_572714];
+	        		document.getElementById("imgcodepage_572714").src = "/public/public/html/imgcode.php?str="+ImgCodeArr_572714[imgCodeChangeNum_572714];
+        		}
+        		</script>
+        		<input type="submit" value="ارسال" class="btn" classRow="comment_form_row" onclick="click_send()" />
+			</div>
+	</div>
+
+<input type="hidden" name="frm-id" value="16082130935fdb6265148bd" id="frm-id" /></form>
+<script>
+function click_send(){
+
+	Delete_Cookie( 'CMDinfo','/post/', '.mihanblog.com' );
+
+	if(c_$('remember').checked){
+		var cookieStr = c_$('full_name').value +"_____"+c_$('email').value+"_____"+c_$('web').value;
+		Set_Cookie( 'CMDinfo', cookieStr , 1, '/post/', '.mihanblog.com', 0 );
+	}
+}
+
+
+//LOAD
+var CMDinfo = Get_Cookie('CMDinfo');
+
+if(CMDinfo)
+{
+	CMDinfo = CMDinfo.split("_____");
+	c_$('full_name').value = CMDinfo[0];
+	c_$('email').value = CMDinfo[1];
+	c_$('web').value = CMDinfo[2];
+	c_$('remember').checked = true;
+}
+
+</script></div>
+<!-- /admin comment-->
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ------------/comment------------ -->
+
+
+
+</td>
+<td width="12" valign="top">&nbsp;</td>
+<td width="288" valign="top">
+
+<div class="search">
+<form method="Get" target="_blank" action="http://google.com/search" class=sch><input name="sitesearch" value="http://alborz-pic.mihanblog.com" type="hidden">
+<div style="height:26px; overflow:hidden; width:277px; overflow:hidden;">
+<input type="text" name="q" size="5" class=txt value="" onfocus="if (this.value == '') {this.value = '';}" onblur="if (this.value == '') {this.value = '';}"><input type="submit" value=" " class="but">
+</div>
+</form>
+</div>
+
+<div class="theme-designer-com_menuleft-border2">
+<div class="theme-designer-com_menuleft-border1">
+<div class="theme-designer-com_menuleft-border3">
+<div class="theme-designer-com_menuleft-border4">
+<div align="center">
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">درباره وبگاه</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="menuleft-text">
+<div align="center" style="padding:0px 0px 5px 0px;"><img src="http://static.mihanblog.com//public/user_data/web_photo/382/1145999.jpg?7625"  /></div>
+سایت تفریحی و سرگرمی</div>
+<div class="vmenu"><a target="_blank" href="author/986785.html">alborz-pic alborz</a></div>
+</div>
+
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">موضوعات</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="vmenu"><a href="category/45.html" title="450" >سرگرمی , تفریحی</a></div>
+<div class="vmenu"><a href="category/43.html" title="549" >مطالب جالب و خواندنی</a></div>
+<div class="vmenu"><a href="category/1.html" title="484" >گالری عکس</a></div>
+<div class="vmenu"><a href="category/46.html" title="20" >تصاویر متحرک</a></div>
+<div class="vmenu"><a href="category/37.html" title="5" >پس زمینه و والپیپر</a></div>
+<div class="vmenu"><a href="category/36.html" title="18" >عکس های مذهبی</a></div>
+<div class="vmenu"><a href="category/35.html" title="13" >عکسهای ورزشی</a></div>
+<div class="vmenu"><a href="category/34.html" title="7" >عکسهای ناز کودکان</a></div>
+<div class="vmenu"><a href="category/33.html" title="23" >عکسهای عاشقانه</a></div>
+<div class="vmenu"><a href="category/23.html" title="60" >خواننده و بازیگر ایرانی</a></div>
+<div class="vmenu"><a href="category/32.html" title="6" >عکس های فیلم و سریال</a></div>
+<div class="vmenu"><a href="category/31.html" title="33" >عکس های خنده دار</a></div>
+<div class="vmenu"><a href="category/30.html" title="23" >عکس های خبری</a></div>
+<div class="vmenu"><a href="category/27.html" title="15" >عكس های هنری خلاقانه</a></div>
+<div class="vmenu"><a href="category/29.html" title="11" >عکس های حیوانات</a></div>
+<div class="vmenu"><a href="category/44.html" title="9" >دنیای  ماشین</a></div>
+<div class="vmenu"><a href="category/28.html" title="6" >عکس های حوادث</a></div>
+<div class="vmenu"><a href="category/26.html" title="2" >عكس های فانتزی</a></div>
+<div class="vmenu"><a href="category/25.html" title="4" >عكس های طبیعت زیبا</a></div>
+<div class="vmenu"><a href="category/24.html" title="3" >عكس های 3 بعدی</a></div>
+<div class="vmenu"><a href="category/38.html" title="2" >كارت پستال مناسبت ها</a></div>
+<div class="vmenu"><a href="category/42.html" title="4" >مدل کفش زنانه و پسرانه</a></div>
+<div class="vmenu"><a href="category/41.html" title="1" >مدل مو دخترانه و پسرانه</a></div>
+<div class="vmenu"><a href="category/40.html" title="24" >مدل لباس زنانه و مردانه</a></div>
+<div class="vmenu"><a href="category/19.html" title="15" >موبایل</a></div>
+<div class="vmenu"><a href="category/22.html" title="2" >کلیپ موبایل</a></div>
+<div class="vmenu"><a href="category/20.html" title="21" >دانلود</a></div>
+<div class="vmenu"><a href="category/18.html" title="15" >دانلود نرم افزار</a></div>
+<div class="vmenu"><a href="category/17.html" title="2" >دانلود آهنگ جدید</a></div>
+<div class="vmenu"><a href="category/9.html" title="64" >دانستنی ها</a></div>
+<div class="vmenu"><a href="category/16.html" title="13" >آیا میدانید ؟</a></div>
+<div class="vmenu"><a href="category/15.html" title="27" >دانستنی های تغذیه</a></div>
+<div class="vmenu"><a href="category/14.html" title="13" >دانستنی های زندگی</a></div>
+<div class="vmenu"><a href="category/12.html" title="17" >دانستنیهای روانشناسی</a></div>
+<div class="vmenu"><a href="category/13.html" title="47" >دانستنی های سلامتی</a></div>
+<div class="vmenu"><a href="category/11.html" title="16" >دانستنی های زناشویی</a></div>
+<div class="vmenu"><a href="category/10.html" title="10" >داستان کوتاه و خواندنی</a></div>
+<div class="vmenu"><a href="category/7.html" title="24" >اس ام اس</a></div>
+<div class="vmenu"><a href="category/8.html" title="9" >اس ام اس عاشقانه</a></div>
+<div class="vmenu"><a href="category/6.html" title="1" >اخبار ورزشی</a></div>
+<div class="vmenu"><a href="category/5.html" title="9" >اخبار سینما</a></div>
+<div class="vmenu"><a href="category/4.html" title="16" >اخبار حوادث</a></div>
+<div class="vmenu"><a href="category/3.html" title="1" >کد آهنگ پیشواز</a></div>
+</div>
+
+
+		<form id="frm-16082130935fdb62651546f" method="post" action="http://alborz-pic.mihanblog.com/poll/new/fid/16082130935fdb62651546f/atrty/1608213093/avrvy/0/key/99b50dcbab2965aaa42c13db9decb858/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="366055" id="data[pollid]" />		
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">نظر سنجی</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div align="center"><div class="menuleft-other">
+نظرتون در مورد این وبلاگ<br>
+<label><input type="checkbox"  name="data[v1]" id="v1" value="1" />خوب</label><br><label><input type="checkbox"  name="data[v2]" id="v2" value="1" />هی بد نیست</label><br><label><input type="checkbox"  name="data[v3]" id="v3" value="1" />بد</label><br><label><input type="checkbox"  name="data[v4]" id="v4" value="1" />غیر قابل تحمل</label><br><center><input type="submit" value="ثبت" style="height: 20; width:150; margin:10px 0px 0px 0px;"/></center>
+</div></div>
+</div>
+
+		<input type="hidden" name="frm-id" value="16082130935fdb62651546f" id="frm-id" /></form>
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">لینک دوستان</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="vmenu"><a target="_blank" href="http://www.seomastering.com/" title="" >Free SEO Tools</a></div><div class="vmenu"><a target="_blank" href="http://clockbiz.mihanblog.com" title="" >ساعت مچی</a></div><div class="vmenu"><a target="_blank" href="http://google.com" title="" >google</a></div><div class="vmenu"><a target="_blank" href="http://www.alexa.com" title="" >alexa</a></div><div class="vmenu"><a target="_blank" href="http://www.bestlastsecond.com/torkie/istanbul.html" >تور استانبول</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.bestlastsecond.com/torkie/antalya.html" >تور آنتالیا</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.bestlastsecond.com/kish.html" >تور کیش</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.bestlastsecond.com/mashhad.html" >تور مشهد</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.tbs.ir/mba" >دوره MBA</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.tbs.ir/dba" >دوره DBA</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.tbs.ir/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d9%81%d8%b1%d9%88%d8%b4/" >آموزش فروش</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.tbs.ir/%d9%85%d8%af%db%8c%d8%b1%db%8c%d8%aa-%da%a9%d8%b3%d8%a8-%d9%88-%da%a9%d8%a7%d8%b1/" >مدیریت کسب و کار</a></div>
+</div>
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">آرشیو مطالب</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="vmenu"><a href="archive/1396/5/3.html" title="1"> هفته سوم مرداد 1396</a></div>
+<div class="vmenu"><a href="archive/1395/9/2.html" title="4"> هفته دوم آذر 1395</a></div>
+<div class="vmenu"><a href="archive/1395/9/1.html" title="3"> هفته اول آذر 1395</a></div>
+<div class="vmenu"><a href="archive/1395/8/4.html" title="20"> هفته چهارم آبان 1395</a></div>
+<div class="vmenu"><a href="archive/1395/8/3.html" title="15"> هفته سوم آبان 1395</a></div>
+<div class="vmenu"><a href="archive/1395/8/2.html" title="5"> هفته دوم آبان 1395</a></div>
+<div class="vmenu"><a href="archive/1395/7/4.html" title="1"> هفته چهارم مهر 1395</a></div>
+<div class="vmenu"><a href="archive/1395/7/3.html" title="2"> هفته سوم مهر 1395</a></div>
+<div class="vmenu"><a href="archive/1395/7/2.html" title="5"> هفته دوم مهر 1395</a></div>
+<div class="vmenu"><a href="archive/1395/7/1.html" title="20"> هفته اول مهر 1395</a></div>
+<div class="vmenu"><a href="archive/1395/6/4.html" title="20"> هفته چهارم شهریور 1395</a></div>
+<div class="vmenu"><a href="archive/1395/6/3.html" title="1"> هفته سوم شهریور 1395</a></div>
+</div>
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">نویسندگان</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="vmenu"><a href="author/986785.html" title="1028" >alborz-pic alborz</a></div></div>
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">برچسب ها</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div align="center"><div class="menuleft-other"><div align="right">
+<a href="tag/سایت+تفریحی+و+سرگرمی.html" style="font-size:1.63em">
+سایت تفریحی و سرگرمی</a> , <a href="tag/alborz-pic.html" style="font-size:2em">
+alborz-pic</a> , <a href="tag/عکس.html" style="font-size:1.18em">
+عکس</a> , <a href="tag/alborzpic.html" style="font-size:1.07em">
+alborzpic</a> , <a href="tag/البرز.html" style="font-size:1.21em">
+البرز</a> , <a href="tag/زیبا.html" style="font-size:1em">
+زیبا</a> , <a href="tag/جالب.html" style="font-size:1.07em">
+جالب</a> , <a href="tag/alborz.html" style="font-size:1.59em">
+alborz</a> , <a href="tag/pic.html" style="font-size:1.14em">
+pic</a> , <a href="tag/البرز+پیک.html" style="font-size:1.49em">
+البرز پیک</a> , </div></div></div>
+</div>
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">دیگر موارد</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div align="center"><div class="menuleft-other">
+<div align="right">
+تعداد مطالب : <script>getStatVar('total_post');</script><br>
+تعداد نویسندگان : <script>getStatVar('total_author');</script><br>
+آخرین بروز رسانی : <script>getStatVar('modify_date');</script><br>
+بازدید امروز : <script>getStatVar('today_view');</script><br>
+بازدید دیروز : <script>getStatVar('yesterday_view');</script><br>
+بازدید این ماه : <script>getStatVar('this_month_view');</script><br>
+بازدید ماه قبل : <script>getStatVar('last_month_view');</script><br>
+بازدید کل : <script>getStatVar('total_view');</script><br>
+آخرین بازدید : <script>getStatVar('last_view_date');</script><br><br>
+</div></div></div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</td>
+<td width="16" valign="top">&nbsp;</td>
+</tr>
+</table>
+</div>
+</div>
+
+<div align="center" dir="rtl">
+<div class="theme-designer-com-footer1">
+<div class="theme-designer-com-footer-w-h">
+<div class="theme-designer-com_footer_menu2">
+<a href="../index.html">صفحه ی نخست</a>|
+<a href="mailto:">پست الکترونیک</a>|
+<a href="javascript:messageForm()">تماس با ما</a>|
+<a href="archive.html">آرشیو مطالب</a>|
+<a target="_blank" href="rss/index.html">لینك rss</a>|
+<a target="_blank" href="http://alborz-pic.mihanblog.com/m/">نسخه موبایل</a>
+</div>
+<div class="theme-designer-com-footer-w-h2">
+<a class="footer_theme-designer-11" href="http://www.theme-designer.com"></a>
+<div class="theme-designer-com-footer-12" align="right">
+تمام حقوق متعلق به <a href="../index.html"> سایت تفریحی و سرگرمی* همه چی از همه جا * </a> می باشد
+&nbsp;|&nbsp;
+كد نویسی و گرافیک : <a target="_blank" title="قالب وبلاگ" href="http://www.theme-designer.com">تم دیزاینر</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'alborz-pic.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

@@ -1,0 +1,1265 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc@rsd.html" />
+<script type="text/javascript" src="../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1962013*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','220');
+	setStatVar('total_author','2');
+	setStatVar('modify_date','چهارشنبه 6 دی 1396');
+	
+	setStatVar('today_view','13');
+	setStatVar('yesterday_view','23');
+	
+	setStatVar('this_month_view','537');
+	setStatVar('last_month_view','681');
+
+	setStatVar('total_view','39248');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (04:34)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://avazehegheg.mihanblog.com/statupdate/?data[refereruri]=http://avazehegheg.mihanblog.com/&data[postid]=&data[requesturi]=/page/3&data[sdate]=1607826182&data[hash]=21f6167932ee79c0ad990d2cf6186dc2&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[210]='3';commentCnt[211]='2';commentCnt[212]='4';commentCnt[213]='3';commentCnt[216]='1';commentCnt[217]='1';commentCnt[218]='2';commentCnt[219]='1';commentCnt[220]='1';commentCnt[221]='1';commentCnt[222]='1';commentCnt[225]='1';commentCnt[226]='2';commentCnt[227]='4';commentCnt[228]='4';commentCnt[231]='0';commentCnt[232]='1';commentCnt[233]='0';commentCnt[234]='1';commentCnt[235]='1';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[210]='0';
+mihanblogDisLikeArrCnt[210]='0';
+mihanblogLikeArrCnt[211]='0';
+mihanblogDisLikeArrCnt[211]='0';
+mihanblogLikeArrCnt[212]='0';
+mihanblogDisLikeArrCnt[212]='0';
+mihanblogLikeArrCnt[213]='0';
+mihanblogDisLikeArrCnt[213]='0';
+mihanblogLikeArrCnt[216]='0';
+mihanblogDisLikeArrCnt[216]='0';
+mihanblogLikeArrCnt[217]='0';
+mihanblogDisLikeArrCnt[217]='0';
+mihanblogLikeArrCnt[218]='0';
+mihanblogDisLikeArrCnt[218]='0';
+mihanblogLikeArrCnt[219]='0';
+mihanblogDisLikeArrCnt[219]='0';
+mihanblogLikeArrCnt[220]='0';
+mihanblogDisLikeArrCnt[220]='0';
+mihanblogLikeArrCnt[221]='0';
+mihanblogDisLikeArrCnt[221]='0';
+mihanblogLikeArrCnt[222]='0';
+mihanblogDisLikeArrCnt[222]='0';
+mihanblogLikeArrCnt[225]='0';
+mihanblogDisLikeArrCnt[225]='0';
+mihanblogLikeArrCnt[226]='0';
+mihanblogDisLikeArrCnt[226]='0';
+mihanblogLikeArrCnt[227]='0';
+mihanblogDisLikeArrCnt[227]='0';
+mihanblogLikeArrCnt[228]='0';
+mihanblogDisLikeArrCnt[228]='0';
+mihanblogLikeArrCnt[232]='0';
+mihanblogDisLikeArrCnt[232]='0';
+mihanblogLikeArrCnt[234]='0';
+mihanblogDisLikeArrCnt[234]='0';
+mihanblogLikeArrCnt[235]='0';
+mihanblogDisLikeArrCnt[235]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://avazehegheg.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://avazehegheg.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://avazehegheg.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://avazehegheg.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://avazehegheg.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://avazehegheg.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://avazehegheg.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://avazehegheg.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://avazehegheg.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://avazehegheg.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://avazehegheg.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://avazehegheg.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://avazehegheg.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://avazehegheg.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://avazehegheg.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://avazehegheg.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://avazehegheg.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+<head>
+<title>):آواز هـــــــــق هــــــــــقـــــــ:(</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Farsi">
+<meta name="description" content="):آواز هـــــــــق هــــــــــقـــــــ:( - حواست هست خدا؟صدای هق هق گریه ام از همان گلویی می آید که میگفتی از رگش به من نزدیک تری... - ):آواز هـــــــــق هــــــــــقـــــــ:(">
+<meta name="keywords" content="):آواز هـــــــــق هــــــــــقـــــــ:(,AVAZEHEGHEG, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="):آواز هـــــــــق هــــــــــقـــــــ:(" href="../post/rss/index.html" />
+<link href="http://template.pichak.net/pichak/181/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+<div align=center><div style="width:1000">
+
+<div class=Pichak>
+
+<div id=header>
+<div class=top-BlogTitle></div>
+<div class=top-menu><div class=BlogTitle>):آواز هـــــــــق هــــــــــقـــــــ:(</div><div class=Description>حواست هست خدا؟صدای هق هق گریه ام از همان گلویی می آید که میگفتی از رگش به من نزدیک تری...</div></div>
+
+<div class=top-menu2>
+<div style="float:right;width:0px;direction:rtl; height:20px"></div>
+<div style="float:right;width:450">
+<a href="../index.html">صفحه اصلی</a> |
+<a rel="nofollow" href="mailto:">ایمیل مدیر</a> |
+<a rel="nofollow" href="javascript:messageForm()">تماس با من</a> |
+<a title="پیچک" href="http://pichak.net/" target="_blank" >قالب وبلاگ</a> |
+<a rel="nofollow" href="../post/rss/index.html" target="_blank" >Feed</a>
+</div></div></div>
+
+<div id=main-back>
+
+<div class=Sid>
+<div id=Sidebar> 
+
+<div class="TopSid"><div class=TopSid2>نویسندگان</div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../post/author/1596132.html">zahra 1381.4.7  65 </a></div><div class=li-Sid>
+<a href="../post/author/1652582.html">NEGARAN1381   147 </a></div></div>
+<div class=LowSid></div>
+
+		
+<BlogLinksBlock>
+<div class=TopSid><div class=TopSid2>
+<b>لینک دوستان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a target="_blank" href="http://pichak.net"></a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://mahla0090.mihanblog.comhttp://">دنیای من شهر تو</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../hoseinfadaei.mihanblog.com/index.html">جــــــــزیره تــــــ♥ـــــنــــــــ♥ـــــهایی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://kishvamatezendegi.mihanblog.com/">♥کیــــش ــومــــــات ــزندگیــــ♥</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../you2017.mihanblog.com/index.html">you❤</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://rezvan1394.blogfa.com/">پاتوق دخترا✌</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://majidnahideh.blogfa.com">˙·٠•✿ בو نفـــ♥ــــ♥ــــره ✿•٠·˙</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://peyman60.blogfa.com/">در آرزوی فردا(1)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://khateratehman.blogfa.com/">خاطرات یک دختر دبیرستانی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://masoumeh144.rozblog.com/">دنیـــای عاشقـــς੭انه مـن</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://birahedaraftab.blogfa.com/">بیراهه ای در آفتاب</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://http://www.copypastekon.ir/">کپی پیست کن</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://modafeanehejab.blogfa.com/">شعـرهای شاعـرمبینا نـواصر ۱۱سـالــہ</a></div><div class=li-Sid>
+<a href="http://pichak.net/template/pichak/181/">قالب وبلاگ فانتزی دخترانه</a></div>
+</div>
+<div class=LowSid></div>
+</BlogLinksBlock>
+
+
+<div class=TopSid><div class=TopSid2>
+<b>ابر برچسب ها</b></div></div>
+<div class=CenterSid><center>
+				<a href="../post/tag/تنهایی.html" style="font-size:1.09em">
+		تنهایی</a> 				<a href="../post/tag/جملات+غمگین.html" style="font-size:1.38em">
+		جملات غمگین</a> 				<a href="../post/tag/اس+ام+اس+تنهایی.html" style="font-size:1.03em">
+		اس ام اس تنهایی</a> 				<a href="../post/tag/اس+ام+اس+عاشقانه.html" style="font-size:1.03em">
+		اس ام اس عاشقانه</a> 				<a href="../post/tag/تو.html" style="font-size:1.18em">
+		تو</a> 				<a href="../post/tag/فاز+سنگین.html" style="font-size:1.58em">
+		فاز سنگین</a> 				<a href="../post/tag/یاد+تو.html" style="font-size:1em">
+		یاد تو</a> 				<a href="../post/tag/جملات+عاشقانه.html" style="font-size:2em">
+		جملات عاشقانه</a> 				<a href="../post/tag/جملات+تیکه+دار.html" style="font-size:1.4em">
+		جملات تیکه دار</a> 				<a href="../post/tag/جملات+تنهایی.html" style="font-size:1.03em">
+		جملات تنهایی</a> </div>
+</center><div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>پیوندهای روزانه</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.cruz.ir" title="">گروه نرم افزاری</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://majidnahideh.blogfa.com/http://" title="">˙·٠•✿ בو نفـــ♥ــــ♥ــــره ✿•٠·˙</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.pichak.net">قالب وبلاگ</a></div>
+<div class=li-Sid>
+<a target="_blank" href="http://pichak.net">قالب های پیچک</a></div></div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>لینک های مفید</div></div>
+<div class=CenterSid>
+<div class=li-Sid><a href="http://sanatesakhteman.ir/PVC-Wall-Plugs/">دیوارپوش PVC</a> | ﻿ | ﻿<a href="https://reza-graph.ir/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%84%D9%88%DA%AF%D9%88-%D8%AA%D8%A7%DB%8C%D9%BE-%D8%A2%D8%B1%D9%85-%D9%86%D8%B4%D8%A7%D9%86%D9%87/">طراحی لوگو</a>
+</div>
+<div class=li-Sid><a href="http://vr-box.novi.ir/">فروش هدست واقعیت مجازی vr box</a>
+ | <a href="http://parstina.com/beauty/hair/twist-babyliss">دستگاه بافت مو بابلیس</a>
+</div>
+<div class=li-Sid>﻿<a href="https://sabtefarda.com">ثبت شرکت</a> | <a href="http://bartarinha.com/group/101/مبلمان?page=1">مبلمان</a>
+</div>
+<div class=li-Sid> | <a href="http://bartarinha.com/group/107/آموزشگاه?page=1">آموزشگاه</a>
+</div>
+<div class=li-Sid><a href="http://kosargasht.ir/">بلیط هواپیما مشهد</a>
+ | <a href="http://parstina.com/">پارس تینا</a>
+</div>
+</div>
+<div class=LowSid></div>
+
+</div>
+</div>
+
+<div class=main>
+
+<div class=post>
+
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/235">همیشه ..... </a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div class="Content"><p style="text-align: center;"><span style="font-size: medium;">همیشه برای “ماندن ” دلیل هست … </span></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><span style="font-size: medium;">و برای “رفتن” بهانه.</span></p>
+<p style="text-align: center;"><br><span style="font-size: medium;"> همیشه برای “خواستن” نیاز هست … </span></p>
+<p style="text-align: center;"><span style="font-size: medium;">و برای “رد کردن”، مصلحت.</span></p>
+<p style="text-align: center;"><br><span style="font-size: medium;"> همیشه برای “داشتن” فضا هست …</span></p>
+<p style="text-align: center;"><span style="font-size: medium;"> و برای “نداشتن” تقصیر.این که سوار بر کدام کوپه این قطار شوی،</span></p>
+<p style="text-align: center;"><br><span style="font-size: medium;"> به پای ماندن و دست خواستن و عشق داشتنت، بر می گردد</span></p>
+<p style="text-align: center;"><br><span style="font-size: medium;"> اگر داری که بسم الله …</span></p>
+<p style="text-align: center;"><br><span style="font-size: medium;"> اگر نه، جهان پر است از “بهانه” و “مصلحت” و “تقصیر” بی صاحب !</span></p><p style="text-align: center;"><br></p><p style="text-align: center;"><img alt="تصاویر زیباسازی - جدا کننده پست" src="http://Avazak.ir/Java/line/Avazak.ir-Line9.gif" height="44" border="0" width="518"></p><p style="text-align: center;"><img src="http://cdn.bartarinha.ir/files/fa/news/1394/6/16/631930_507.jpg" alt="" vspace="0" align="bottom" hspace="0" height="284" border="0" width="400"></p><p style="text-align: center;"><br></p><p style="text-align: center;"><br></p><p style="text-align: center;"><br></p><p style="text-align: center;"><br></p></div>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : سه شنبه 9 خرداد 1396  | 12:13 ب.ظ  | نویسنده : <a href="../post/author/1652582.html">NEGARAN1381  </a> | <a target="_self" href="javascript:newComment(235)">نظرات  <script>setCommentCnt(235)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/234">تنها دلیل ....///</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><p style="text-align: center;"><font face="Mihan-IransansLight"><i><strong><span style="font-size: medium;">دلـــایــل بــودنـم را مـــرور میــکنـم هـــر روز</span></strong></i></font></p><font face="Mihan-IransansLight"><i>
+</i></font><p style="text-align: center;"><font face="Mihan-IransansLight"><i>&nbsp;</i></font></p><font face="Mihan-IransansLight"><i>
+</i></font><p style="text-align: center;"><font face="Mihan-IransansLight"><i><strong><span style="font-size: medium;">هـــر روز از تـــعـدادشــان کــــم میــشـود</span></strong></i></font></p><font face="Mihan-IransansLight"><i>
+</i></font><p style="text-align: center;"><font face="Mihan-IransansLight"><i>&nbsp;</i></font></p><font face="Mihan-IransansLight"><i>
+</i></font><p style="text-align: center;"><font face="Mihan-IransansLight"><i><strong><span style="font-size: medium;">آخـــریــن بـــاری کــه شـــمــردمــشـان</span></strong></i></font></p><font face="Mihan-IransansLight"><i>
+</i></font><p style="text-align: center;"><font face="Mihan-IransansLight"><i>&nbsp;</i></font></p><font face="Mihan-IransansLight"><i>
+</i></font><p style="text-align: center;"><font face="Mihan-IransansLight"><i><strong><span style="font-size: medium;">تــنهــا یـک دلیــل بــرایـم مـانـده بــود</span></strong></i></font></p><font face="Mihan-IransansLight"><i>
+</i></font><p style="text-align: center;"><font face="Mihan-IransansLight"><i>&nbsp;</i></font></p><font face="Mihan-IransansLight"><i>
+</i></font><p style="text-align: center;"><font face="Mihan-IransansLight"><i><strong><span style="font-size: medium;">آنــهــــــــــم دیــــدن<span style="color: #ff0000; font-size: large;"> تــــــو </span>بـــــــود <br></span></strong></i></font></p><p style="text-align: center;"><font face="Mihan-IransansLight"><i><strong><span style="font-size: medium;"><br></span></strong></i></font></p><p style="text-align: center;"><font face="Mihan-IransansLight"><i><strong><span style="font-size: medium;"><img src="http://avazak.ir/Java/line/Avazak.ir-Line42.gif" alt="" vspace="0" align="bottom" hspace="NaN" height="40" border="NaN" width="444"> <br></span></strong></i></font></p><p style="text-align: center;" align="center"><font face="Mihan-IransansLight"><i><strong><span style="font-size: medium;"><br></span></strong></i></font></p><p style="text-align: center;" align="center"><font face="Mihan-IransansLight"><i><strong><span style="font-size: medium;"><img src="https://rastineh.com/wp-content/uploads/2016/05/%D8%B9%D8%B4%D9%82.jpg" alt="" vspace="0" align="bottom" hspace="0" height="318" border="0" width="428"></span></strong></i></font></p><font face="Mihan-IransansLight"><i>
+</i></font><p style="text-align: center;"><font face="Mihan-IransansLight"><i>&nbsp;</i></font></p>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : سه شنبه 9 خرداد 1396  | 12:11 ب.ظ  | نویسنده : <a href="../post/author/1652582.html">NEGARAN1381  </a> | <a target="_self" href="javascript:newComment(234)">نظرات  <script>setCommentCnt(234)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/233">تنها تعلق....</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><hr size="1" align="center" color="#626262" width="60%">
+
+
+<a name="2616"></a>
+
+<div class="Content"><p style="text-align: center;"><strong><span style="font-size: medium;"><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0">تمام تو .....•●♥</span></strong><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0"></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><strong><span style="font-size: medium;"><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0">مـــــــــال من است .......<span style="color: #ff0000; font-size: large;">•●♥</span></span></strong><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0"></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><strong><span style="font-size: medium;"><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0">و من خودخواهم ....•●♥</span></strong><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0"></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><strong><span style="font-size: medium;"><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0">در مالـــــــکیت تو ....<span style="color: #ff0000; font-size: large;">•●♥</span></span></strong><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0"></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><strong><span style="font-size: medium;"><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0">من لجبازم ....•●♥</span></strong><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0"></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><strong><span style="font-size: medium;"><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0">در دوست داشـــــــــتنت .....<span style="color: #ff0000; font-size: large;">•●♥</span></span></strong><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0"></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><strong><span style="font-size: medium;"><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0">من مغـــــــرورم به احساست .........•●♥</span></strong><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0"></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><strong><span style="font-size: medium;"><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0">چون</span></strong><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0"></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong><span style="font-size: medium;"><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0">تـــــــــــــ•●♥ـــــــــو ...</span></strong></span><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0"></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><strong><span style="font-size: medium;"><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0">تنها تعلق معلــق در خــــــ•●♥ـــاطر منی</span></strong><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0"></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><strong><span style="font-size: medium;"><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0">و این تمام داشتن من است ......<span style="color: #ff0000; font-size: large;">.•●♥</span></span></strong><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili6.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0"></p><p style="text-align: center;"><br></p><p style="text-align: center;"><br></p><p style="text-align: center;"><img src="http://axgig.com/images/71320304164609849604.jpg" alt="" vspace="0" align="bottom" hspace="0" height="202" border="0" width="304"></p></div>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : سه شنبه 9 خرداد 1396  | 12:08 ب.ظ  | نویسنده : <a href="../post/author/1652582.html">NEGARAN1381  </a> | <a target="_self" href="javascript:newComment(233)">نظرات  <script>setCommentCnt(233)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/232">وقتی می آیی ...</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div align="right"><font size="4"><i><font style="FONT-SIZE: 8pt" face="Mihan-IransansLight"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><span style="font-size: 12pt;"><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili14.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0">وقتى تو میایى</span>
+</font></font></font></i></font></div><div align="right"><font size="4"><i><font style="FONT-SIZE: 8pt" face="Mihan-IransansLight"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><p><span style="font-size: 12pt;">به <em><strong><span style="color: #ff0000;">سرزمینى خوشبخت بدل مى شوم</span></strong></em></span></p></font></font></font></i></font><font size="4"><i><font style="FONT-SIZE: 8pt" face="Mihan-IransansLight"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt">
+</font></font></font></i></font></div><div align="right"><font size="4"><i><font style="FONT-SIZE: 8pt" face="Mihan-IransansLight"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><p><span style="font-size: 12pt;">به سرزمینى پر از آواز پرنده</span></p></font></font></font></i></font><font size="4"><i><font style="FONT-SIZE: 8pt" face="Mihan-IransansLight"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt">
+</font></font></font></i></font></div><div align="right"><font size="4"><i><font style="FONT-SIZE: 8pt" face="Mihan-IransansLight"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"></font></font></font><font style="FONT-SIZE: 8pt" face="Mihan-IransansLight"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><p><span style="font-size: 12pt;">وقتى تو مى روى</span></p></font></font></font></i></font></div><div align="right"><font size="4"><i><font style="FONT-SIZE: 8pt" face="Mihan-IransansLight"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt">
+</font></font></font></i></font></div><div align="right"><font size="4"><i><font style="FONT-SIZE: 8pt" face="Mihan-IransansLight"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><p><span style="font-size: 12pt;">سر در گریبانم</span></p></font></font></font></i></font></div><div align="right"><font size="4"><i><font style="FONT-SIZE: 8pt" face="Mihan-IransansLight"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><p><span style="font-size: 12pt;">مثل مردمى كه</span></p></font></font></font></i></font></div><div align="right"><font size="4"><i><font style="FONT-SIZE: 8pt" face="Mihan-IransansLight"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><p><span style="font-size: 12pt;">كسى را از دست داده اند ....</span><img src="http://Avazak.ir/Java/smili/Avazak.ir-smili14.gif" alt="متحرک - جدید - تصاویر زیبا ساز - وبلاگ" border="0">&nbsp;&nbsp;&nbsp; <br></p><p><br></p></font></font></font></i></font><div align="center"><font size="4"><i><font style="FONT-SIZE: 8pt" face="Mihan-IransansLight"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><p><img src="http://www.love98.ir/wp-content/uploads/2016/12/delnavaz1.jpg" alt="" vspace="0" align="bottom" hspace="0" border="0"></p></font></font></font></i></font></div><br></div><div align="right"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt">
+</font></font></font></div><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><p style="text-align: center;"><span style="font-size: 12pt;"><strong><br></strong></span></p></font></font></font>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : سه شنبه 9 خرداد 1396  | 11:32 ق.ظ  | نویسنده : <a href="../post/author/1652582.html">NEGARAN1381  </a> | <a target="_self" href="javascript:newComment(232)">نظرات  <script>setCommentCnt(232)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/231">معجزه من ...</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div align="center"><font size="4" face="Mihan-IransansLight"><i><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><span style="font-size: 12pt;"><img src="http://roozgozar.com/piczibasazi/zibasaz/28/www.roozgozar.com-1380.gif" alt=" تصاویر زیباسازی وبلاگ،قالب وبلاگ،خدمات وبلاگ نویسان،آپلودعكس، كد موسیقی، روزگذر دات كام http://roozgozar.com " style="width: 29px; height: 29px;" height="29" border="0" width="29">به من ایمان بیاور</span></font></font></font><br><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><span style="font-size: 12pt;">در یک لحظه میتوانم</span></font></font></font><br><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><span style="font-size: 12pt;">تنها یک لحظه</span></font></font></font><br><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><span style="font-size: 12pt;">خورشید را به آغوشت بیاورم </span></font></font></font><br><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><span style="font-size: 12pt;">و ماه را به اتاقت</span></font></font></font><br><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><span style="font-size: 12pt;">به من ایمان بیاور</span></font></font></font><br><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><em><strong><span style="color: #ff0000; font-size: 12pt;">معجزه من</span></strong></em></font></font></font><br><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><em><strong><span style="color: #ff0000; font-size: 12pt;">آغوش زنی است به طعم دریاها</span></strong></em></font></font></font><br></i></font></div><div align="center"><font size="4" face="Mihan-IransansLight"><i><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><em><strong><span style="color: #ff0000; font-size: 12pt;">چیزی که هیچ بهشتی ندارد.&nbsp; </span></strong></em></font></font></font></i></font><font size="4" face="Mihan-IransansLight"><i><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><em><strong><span style="color: #ff0000; font-size: 12pt;"><img src="http://roozgozar.com/piczibasazi/zibasaz/28/www.roozgozar.com-1380.gif" alt=" تصاویر زیباسازی وبلاگ،قالب وبلاگ،خدمات وبلاگ نویسان،آپلودعكس، كد موسیقی، روزگذر دات كام http://roozgozar.com " style="width: 29px; height: 29px;" height="29" border="0" width="29"></span></strong></em></font></font></font></i></font><br><font size="4" face="Mihan-IransansLight"><i><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><font style="FONT-SIZE: 8pt"><em><strong><span style="color: #ff0000; font-size: 12pt;"><br><img src="http://files.namnak.com/users/hk/aup/201701/499_pics/%D8%B9%D8%B4%D9%82-%D8%AF%D8%AE%D8%AA%D8%B1%D9%87%D8%A7.jpg" alt="" vspace="0" align="bottom" hspace="0" height="258" border="0" width="411"><img src="https://www.google.com/url?sa=i&amp;rct=j&amp;q=&amp;esrc=s&amp;source=images&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=0ahUKEwjmwMWTk5fUAhXIORoKHVv3A78QjRwIBw&amp;url=http%3A%2F%2Fnamnak.com%2F%25D8%25B9%25D8%25B4%25D9%2582-%25D8%25AF%25D8%25AE%25D8%25AA%25D8%25B1%25D9%2587%25D8%25A7-%25DA%2586%25DA%25AF%25D9%2588%25D9%2586%25D9%2587-%25D8%25A7%25D8%25B3%25D8%25AA.p42422&amp;psig=AFQjCNHhVAJWgY79RyvWzOIe10Y4m7NTCg&amp;ust=1496217526057515" alt="" vspace="0" align="bottom" hspace="0" border="0"></span></strong></em></font></font></font></i></font></div>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : سه شنبه 9 خرداد 1396  | 11:27 ق.ظ  | نویسنده : <a href="../post/author/1652582.html">NEGARAN1381  </a> | <a target="_self" href="javascript:newComment(231)">نظرات  <script>setCommentCnt(231)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/228">هعــــــی</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div style="text-align: center;"><span style="text-align: right; font-family: Mihan-Koodak;"><font size="4">گــــــــــاهی اونقـدر بـــــــد دلت<font color="#ff0000"> مــــــــــــیشکنه</font>...</font></span></div><font face="Mihan-Koodak" size="4"><div style="text-align: center;"><span style="text-align: right;">که حتی...!</span></div><div style="text-align: center;"><br></div><span style="text-align: right;"><div style="text-align: center;">نــــای <font color="#3333ff">اعتـــــراض</font> هــم نــــــداری</div></span><span style="text-align: right;"><div style="text-align: center;">فقـــــط</div></span><div style="text-align: center;"><br></div><span style="text-align: right;"><div style="text-align: center;"><font color="#006600">نگــــاه</font> میــکنی و</div></span><div style="text-align: center;">بیصدا<font color="#00cccc">میـــــروی&nbsp;</font></div><span style="text-align: right;"><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://photos03.wisgoon.com/media/pin/photos03/images/o/2016/12/25/21/236x234_1482688266766806.png" alt="" style="font-family: tahoma; font-size: 11px;"></div></span></font><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : دوشنبه 8 خرداد 1396  | 11:51 ق.ظ  | نویسنده : <a href="../post/author/1596132.html">zahra 1381.4.7 </a> | <a target="_self" href="javascript:newComment(228)">نظرات  <script>setCommentCnt(228)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/227">دلتنگی .......................... ////</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div align="right"><font size="3"><i>دلتنگــــی پـیــچـیـــــــــده نـیـســتــــــــ . . . !
+</i></font></div><p style="text-align: right;" align="right"><font size="3"><i>یــــکـــــــ دل . . . !&nbsp; <br></i></font></p><div align="right"><font size="3"><i>
+</i></font></div><p style="text-align: right;" align="right"><font size="3"><i>یــکـــــــ آســـــمـــــان . . . !</i></font></p><div align="right"><font size="3"><i>
+</i></font></div><p style="text-align: right;" align="right"><font size="3"><i>یــکـــ بــــــغـــــض . . . !</i></font></p><div align="right"><font size="3"><i>
+</i></font></div><p style="text-align: right;" align="right"><font size="3"><i>و آرزو هـای تـــرکـــــــ خـــــــورده . . . !</i></font></p><div align="right"><font size="3"><i>
+</i></font></div><p style="text-align: right;" align="right"><font size="3"><i>به همیــــــــن سادگی......... &nbsp; <br></i></font></p><p style="text-align: right;" align="center"><font size="3"><i><br></i></font></p><p style="text-align: right;" align="right"><font size="3"><i>&nbsp; <img src="http://naghmehsara.ir/wp-content/uploads/2013/10/t2-500x320.jpg" alt="" vspace="0" align="bottom" hspace="0" height="159" border="0" width="249"> </i></font></p>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : شنبه 6 خرداد 1396  | 09:47 ب.ظ  | نویسنده : <a href="../post/author/1652582.html">NEGARAN1381  </a> | <a target="_self" href="javascript:newComment(227)">نظرات  <script>setCommentCnt(227)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/226">هیـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــسـ </a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><p style="text-align: center;"><font size="4"><i><strong><font face="courier new,courier,monospace">هیـــسـ</font></strong></i></font></p><p style="text-align: center;"><font size="4"><i><strong><font face="courier new,courier,monospace"><br></font></strong></i></font></p><div style="text-align: center;"><font size="4"><i><strong><font face="courier new,courier,monospace">
+</font></strong></i></font></div><p style="text-align: center;"><font size="4"><i><strong><font face="courier new,courier,monospace">این بازی عادلانه نیستـــ …..</font></strong></i></font></p><p style="text-align: center;"><font size="4"><i><strong><font face="courier new,courier,monospace"><br></font></strong></i></font></p><div style="text-align: center;"><font size="4"><i><strong><font face="courier new,courier,monospace">
+</font></strong></i></font></div><p style="text-align: center;"><font size="4"><i><strong><font face="courier new,courier,monospace">این زندگی همه اش&nbsp; مار بــود</font></strong></i></font></p><p style="text-align: center;"><font size="4"><i><strong><font face="courier new,courier,monospace"><br></font></strong></i></font></p><div style="text-align: center;"><font size="4"><i><strong><font face="courier new,courier,monospace">
+</font></strong></i></font></div><p style="text-align: center;"><font size="4"><i><strong><font face="courier new,courier,monospace">پلّه هایش کجـــــاستـــ…؟؟؟</font></strong></i></font></p><p style="text-align: center;"><font size="4"><i><strong><font face="courier new,courier,monospace"><br></font></strong></i></font></p><p style="text-align: center;"><font size="4"><i><strong><font face="courier new,courier,monospace"><img src="http://naghmehsara.ir/wp-content/uploads/2013/10/normal_Love21-500x485.jpg" alt="" vspace="0" align="bottom" hspace="0" height="349" border="0" width="358"></font></strong></i></font></p>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : شنبه 6 خرداد 1396  | 09:45 ب.ظ  | نویسنده : <a href="../post/author/1652582.html">NEGARAN1381  </a> | <a target="_self" href="javascript:newComment(226)">نظرات  <script>setCommentCnt(226)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/225">ما برای هم نیستیم ... </a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+<p style="text-align: center;" align="center"><span style="font-size: medium; font-family: arial, ans-serif;"><strong><a class="auto-link" title="خدا" href="http://www.asheghaneha.ir/tag/%d8%ae%d8%af%d8%a7" target="_blank">خدا</a>&nbsp;ما رو برای هم نمی‌خواست ..&nbsp;فقط می‌خواست همو فهمیده باشیم</strong></span></p>
+<p style="text-align: center;" align="center"><span style="font-size: medium; font-family: arial, ans-serif;"><strong><br>بدونیم نیمه‌ی ما مال ما نیست ..&nbsp;فقط خواست نیمه مونو دیده باشیم</strong></span></p>
+<p style="text-align: center;" align="center">&nbsp;</p>
+<p style="text-align: center;" align="center"><span style="font-size: medium; font-family: arial, ans-serif;"><strong>تموم لحظه های این تب تلخ ..&nbsp;خدا از حسرت ما با خبر بود</strong></span></p>
+<p style="text-align: center;" align="center"><span style="font-family: arial, ans-serif;"><span style="font-size: medium;"><strong><br>خودش ما رو برای هم نمی‌خواست ..&nbsp;خودت دیدی دعامون بی‌اثر بود</strong></span>&nbsp;</span></p>
+<p style="text-align: center;" align="center">&nbsp;</p>
+<p style="text-align: center;" align="center"><span style="font-size: medium; font-family: arial, ans-serif;"><strong>چه سخته مال هم باشیم و بی‌هم ..&nbsp;می‌بینم میری و می‌بینی میرم</strong></span></p>
+<p style="text-align: center;" align="center"><span style="font-family: arial, ans-serif;"><span style="font-size: medium;"><strong><br>تو وقتی هستی اما&nbsp;<a class="auto-link" title="دوری" href="http://www.asheghaneha.ir/tag/%d8%af%d9%88%d8%b1%db%8c" target="_blank">دوری</a>&nbsp;از من ..&nbsp;نه میشه زنده باشم نه بمیرم</strong></span>&nbsp;</span></p>
+<p style="text-align: center;" align="center">&nbsp;</p>
+<p style="text-align: center;" align="center"><span style="font-size: medium; font-family: arial, ans-serif;"><strong>&nbsp;نمیگم دلخور از تقدیرم اما ..&nbsp;تو میدونی چقدر دلگیره این&nbsp;<a class="auto-link" title="عشق" href="http://www.asheghaneha.ir/tag/%d8%b9%d8%b4%d9%82" target="_blank">عشق</a></strong></span></p>
+<p style="text-align: center;" align="center"><span style="font-size: medium; font-family: arial, ans-serif;"><strong><br>فقط چون دیر باید می‌رسیدیم ..&nbsp;داره رو دست ما می‌میره این عشق&nbsp; <br></strong></span></p><p style="text-align: center;" align="center"><span style="font-size: medium; font-family: arial, ans-serif;"><strong><br></strong></span></p><p style="text-align: center;" align="center"><span style="font-size: medium; font-family: arial, ans-serif;"><strong><img src="http://naghmehsara.ir/wp-content/uploads/2013/11/13018_429194003827184_207302723_n.jpg" alt="" vspace="0" align="bottom" hspace="0" height="248" border="0" width="355"></strong></span></p>
+
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : شنبه 6 خرداد 1396  | 09:45 ب.ظ  | نویسنده : <a href="../post/author/1652582.html">NEGARAN1381  </a> | <a target="_self" href="javascript:newComment(225)">نظرات  <script>setCommentCnt(225)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/222">من یک دخترم</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><img src="http://blogcod.parsskin.com/zibasazi/other/1/19.gif"><font face="Mihan-Koodak" size="4">من <font color="#ff0000">دخــــتر</font> هستـم …</font><img src="http://blogcod.parsskin.com/zibasazi/other/1/19.gif"></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><img src="http://blogcod.parsskin.com/zibasazi/other/1/94.gif"><font face="Mihan-Koodak" size="4">ظریف ترین و با <font color="#ff99ff">احساس</font> ترین موجـود…</font><img src="http://blogcod.parsskin.com/zibasazi/other/1/94.gif"></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><img src="http://roozgozar.com/piczibasazi/zibasaz/02/www.roozgozar.com-031.gif" alt=" تصاویر زیباسازی وبلاگ،قالب وبلاگ،خدمات وبلاگ نویسان،آپلودعكس، كد موسیقی، روزگذر دات كام http://roozgozar.com "><font face="Mihan-Koodak" size="4">کســی که خدا برای آفریدنــش <font color="#3333ff">وقـت گذاشتـه</font> است…</font><img src="http://roozgozar.com/piczibasazi/zibasaz/02/www.roozgozar.com-031.gif" alt=" تصاویر زیباسازی وبلاگ،قالب وبلاگ،خدمات وبلاگ نویسان،آپلودعكس، كد موسیقی، روزگذر دات كام http://roozgozar.com "></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><img src="http://roozgozar.com/piczibasazi/zibasaz/19/www.roozgozar.com-1115.gif" alt=" تصاویر زیباسازی وبلاگ،قالب وبلاگ،خدمات وبلاگ نویسان،آپلودعكس، كد موسیقی، روزگذر دات كام http://roozgozar.com "><font face="Mihan-Koodak" size="4">کسـی که مـادر تمــام<font color="#33ffff"> عروسک</font> هاست ..</font><img src="http://roozgozar.com/piczibasazi/zibasaz/19/www.roozgozar.com-1115.gif" alt=" تصاویر زیباسازی وبلاگ،قالب وبلاگ،خدمات وبلاگ نویسان،آپلودعكس، كد موسیقی، روزگذر دات كام http://roozgozar.com "></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4">کسی که <font color="#cc33cc">اشــک</font> هایش شمـرده میشــود…</font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://toptoop.ir/files/music/600/50/60/80/a95f977b8dd99fa03dc2e8d095c61a39.jpg" alt=""></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><img src="http://avazak.ir/Java/line/Avazak.ir-Line53.gif" alt="تصاویر زیباسازی - جدا کننده پست"></p>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : شنبه 6 خرداد 1396  | 03:42 ب.ظ  | نویسنده : <a href="../post/author/1596132.html">zahra 1381.4.7 </a> | <a target="_self" href="javascript:newComment(222)">نظرات  <script>setCommentCnt(222)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/221">دختر</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%281%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 0.9;"></a><font face="Mihan-Koodak" size="4"><font color="#ff0000">دختر</font> خلقـــــــــت عجـــیبــی اسـتــــــــ !</font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%281%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 0.9;"></a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(22, 160, 134); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/oth589.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28210%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 0.9;"></a><font face="Mihan-Koodak" size="4">چشــــم هــایــش را کــه<font color="#3333ff"> مــیبنــدی</font>،</font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(22, 160, 134); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/oth589.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28210%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 0.9;"></a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(22, 160, 134); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/oth589.cur&quot%3B.html), progress !important;">&nbsp; &nbsp;&nbsp;</a><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28200%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a><font face="Mihan-Koodak" size="4">دیــد <font color="#ff99ff">دلــش</font> بــیشتــر مــی شــود…</font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(22, 160, 134); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/oth589.cur&quot%3B.html), progress !important;">&nbsp; &nbsp;&nbsp;</a><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28200%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28216%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a><font face="Mihan-Koodak" size="4">دلــش را کــه <font color="#33ffff">مــی شــکنــی</font>،</font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28216%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;">&nbsp; &nbsp;&nbsp;</a><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28211%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a><font face="Mihan-Koodak" size="4">باران<font color="#cc33cc"> لــطـافتـــ</font> از چــشمــ هــایش ســرازیــر…</font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;">&nbsp; &nbsp;&nbsp;</a><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28211%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%286%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a><font face="Mihan-Koodak" size="4">انــگار<font color="#33cc00"> درسـتــــ</font> شــده تــا…</font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%286%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;">&nbsp;</a><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28155%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;">&nbsp; &nbsp;</a><font face="Mihan-Koodak" size="4">روی عـشـق را <font color="#9999ff">کــم کــند</font></font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;">&nbsp;</a><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28155%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;">&nbsp; &nbsp;</a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://toptoop.ir/files/asheghane/30/75/15/220771-7016c110472955a7902377e87283f44e-l.jpg" alt=""></p>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : شنبه 6 خرداد 1396  | 03:37 ب.ظ  | نویسنده : <a href="../post/author/1596132.html">zahra 1381.4.7 </a> | <a target="_self" href="javascript:newComment(221)">نظرات  <script>setCommentCnt(221)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/220">دختر باش</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><img src="http://www.emoticons.ir/files/smiles/happy/8378.gif" alt="فانتزی,شکلک,شیک,شاد,قشنگ,خشگل,زیبا,باحال,دخترونه,وبلاگنویسی,کامنتگزاری,پست گذاشتن,کوچک,سایز کوچک,ریزه میزه,بامزه"><font face="Mihan-Koodak" size="4"><font color="#ff0000">دختــ ــر</font> باش</font><img src="http://www.emoticons.ir/files/smiles/happy/8378.gif" alt="فانتزی,شکلک,شیک,شاد,قشنگ,خشگل,زیبا,باحال,دخترونه,وبلاگنویسی,کامنتگزاری,پست گذاشتن,کوچک,سایز کوچک,ریزه میزه,بامزه"></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%288%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 0.9;"></a><font face="Mihan-Koodak" size="4">دخترونه <font color="#ff99ff">نــ ـاز</font> کن</font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%288%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 0.9;"></a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2814%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a><font face="Mihan-Koodak" size="4">دخترونه <font color="#ffccff">فکــ ــر </font>کن</font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2814%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><img src="http://www.emoticons.ir/files/smiles/heart/9998.gif"><font face="Mihan-Koodak" size="4">دخترونه<font color="#33ffff"> احســ ــاس</font> کن</font><img src="http://www.emoticons.ir/files/smiles/heart/9998.gif"></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><img src="http://www.emoticons.ir/files/smiles/heart/9984.gif"><font face="Mihan-Koodak" size="4">دخترونه <font color="#3333ff">استدلــ ــال</font> کن</font><img src="http://www.emoticons.ir/files/smiles/heart/9984.gif"></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><img src="http://www.emoticons.ir/files/smiles/heart/9980.gif"><font face="Mihan-Koodak" size="4">دخترونه <font color="#009900">زندگــ ــی</font> کن</font><img src="http://www.emoticons.ir/files/smiles/heart/9980.gif"></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;">&nbsp;&nbsp;</a><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28158%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;">&nbsp;&nbsp;</a><font face="Mihan-Koodak" size="4">اما بدون<font color="#990000"> غـم</font> رو به اشتباه تو فرهنگ دخترونه تو جا دادن</font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;">&nbsp;&nbsp;</a><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28158%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;">&nbsp;&nbsp;</a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28122%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;">&nbsp; &nbsp;</a><font face="Mihan-Koodak" size="4"><font color="#9999ff">عاشـ ــق</font> شو، که <font color="#ff6600">زندگــ ــی</font> کنی</font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28122%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;">&nbsp; &nbsp;</a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(22, 160, 134); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/oth589.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2811%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 0.9;"></a><font face="Mihan-Koodak" size="4">یک <font color="#000099">عمــ ــر</font>، زندگـــ ــی کنی</font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(22, 160, 134); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/oth589.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2811%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 0.9;"></a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://jazzaab.ir/upload/3/0.712829001328197596_jazzaab_ir.jpg" alt=""></p>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : شنبه 6 خرداد 1396  | 03:30 ب.ظ  | نویسنده : <a href="../post/author/1596132.html">zahra 1381.4.7 </a> | <a target="_self" href="javascript:newComment(220)">نظرات  <script>setCommentCnt(220)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/219">من دخترم</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+<p style="outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px; color: rgb(63, 63, 63); font-size: 12px; text-align: justify;"><br></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(22, 160, 134); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/oth589.cur&quot%3B.html), progress !important;">&nbsp;</a><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2831%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a><font face="Mihan-Koodak" size="4">من یک <font color="#ff99ff">دخترم</font></font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(22, 160, 134); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/oth589.cur&quot%3B.html), progress !important;">&nbsp;</a><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2831%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><font color="#ff99ff"><br></font></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28134%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;">&nbsp; &nbsp;</a><font face="Mihan-Koodak" size="4">وقتی <font color="#ff0000">خسته</font> ام</font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28134%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;">&nbsp; &nbsp;</a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2870%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a><font face="Mihan-Koodak" size="4">وقتی <font color="#3333ff">کلافه</font> ام</font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2870%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%289%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a><font face="Mihan-Koodak" size="4">وقتی <font color="#cc33cc">دلتنگم</font></font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%289%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><font color="#cc33cc"><br></font></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/pics/bg/bg97.gif" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/cafe-webniaz%20%281%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a><font face="Mihan-Koodak" size="4">بشقاب ها را <font color="#006600">نـــمی شکنم</font>.</font><a href="http://cafe-webniaz.ir/pics/bg/bg97.gif" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/cafe-webniaz%20%281%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2896%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a><font face="Mihan-Koodak" size="4">شیشه ها را نـــمی شکنم.</font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2896%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><font size="6"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%285%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></font></a><font face="Mihan-Koodak" size="4"><font color="#333300">غرورم</font> را نـــمی شکنم</font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%285%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2812%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a><font face="Mihan-Koodak" size="4"><font color="#33ffff">دلت </font>را نـــمی شکنم</font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2812%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2827%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a><font face="Mihan-Koodak" size="4">در این دلتنگی ها</font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2827%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28123%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a><font face="Mihan-Koodak" size="4"><font color="#ccccff">زورم</font> به تنها چیزی که میرسد</font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%28123%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;"></a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><font face="Mihan-Koodak" size="4"><br></font></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2835%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;">&nbsp;&nbsp;</a><font face="Mihan-Koodak" size="4">این <font color="#cc0000">بغـــض</font> لعنتی ست!</font><a href="http://cafe-webniaz.ir/" target="_blank" style="font-family: yekan; font-size: 12px; color: rgb(47, 47, 47); text-decoration-line: none; background-color: rgb(254, 254, 254); cursor: url(&quot%3Bhttp%253A/cafe-webniaz.ir/theme/pic/cur817.cur&quot%3B.html), progress !important;"><img src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2835%29.gif" title="cafe-webniaz.ir" alt="cafe-webniaz.ir" style="opacity: 1;">&nbsp;&nbsp;</a></p><p style="text-align: center; outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://kabood.com/wp-content/uploads/%D8%B9%DA%A9%D8%B3-%D8%AC%D8%AF%DB%8C%D8%AF-%D8%A8%D8%B1%D8%A7%DB%8C-%D9%BE%D8%B1%D9%88%D9%81%D8%A7%DB%8C%D9%84-%D8%AF%D8%AE%D8%AA%D8%B1%D9%88%D9%86%D9%87-3.jpg" alt=""></p><p style="outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px; color: rgb(63, 63, 63); font-size: 12px; text-align: justify;"><br></p>
+
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : شنبه 6 خرداد 1396  | 03:19 ب.ظ  | نویسنده : <a href="../post/author/1596132.html">zahra 1381.4.7 </a> | <a target="_self" href="javascript:newComment(219)">نظرات  <script>setCommentCnt(219)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/218">سیلام</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><img hspace="0" border="0" align="baseline" vspace="0" src="http://s7.picofile.com/file/8265833134/watervsfire.jpg" alt="">
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : شنبه 6 خرداد 1396  | 12:51 ب.ظ  | نویسنده : <a href="../post/author/1596132.html">zahra 1381.4.7 </a> | <a target="_self" href="javascript:newComment(218)">نظرات  <script>setCommentCnt(218)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/217">دلم گرفته</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div style="text-align: center;"><span style="text-align: right; font-family: Mihan-Koodak; font-size: x-large;">آدما گاهی لازمه چند وقت کرکره شونو بکشن <font color="#ff0000">پایین</font>، یه پارچه سیاه بزنن درش و بنویسن:</span></div><div style="text-align: center;"><span style="text-align: right; font-family: Mihan-Koodak; font-size: x-large;"><br></span></div><font face="Mihan-Koodak" size="5"><div style="text-align: center;"><span style="text-align: right;">کسی نمرده؛ فقط <font color="#ff0000">دلم</font> گرفته…!</span><img hspace="0" border="0" align="baseline" vspace="0" src="http://mortezaakhoundi.persiangig.com/image/13510374831.jpg" alt="" style="font-family: tahoma; font-size: 11px;"></div></font><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : شنبه 6 خرداد 1396  | 12:04 ب.ظ  | نویسنده : <a href="../post/author/1596132.html">zahra 1381.4.7 </a> | <a target="_self" href="javascript:newComment(217)">نظرات  <script>setCommentCnt(217)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/216">دست نکش</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div style="text-align: center;"><span style="text-align: right; font-family: Mihan-Koodak;"><font size="5"><font color="#ff0000">هیچ وقت</font>؛</font></span></div><div style="text-align: center;"><span style="text-align: right; font-family: Mihan-Koodak;"><font size="5"><br></font></span></div><font face="Mihan-Koodak" size="5"><div style="text-align: center;"><span style="text-align: right;"><font color="#ff0000">دست نکش</font> از چیزایی که</span><span style="text-align: right;">&nbsp;</span></div><div style="text-align: center;"><span style="text-align: right;"><br></span></div><span style="text-align: right;"><div style="text-align: center;">نمیتونی یه روزم</div><div style="text-align: center;"><br></div></span><span style="text-align: right;"><div style="text-align: center;">بدون فکر کردن بهش <font color="#ff0000">بگذرونی</font>!</div><div style="text-align: center;"><br></div><div style="text-align: center;"><img src="http://avazak.ir/Java/line/Avazak.ir-Line42.gif" alt="تصاویر زیباسازی - جدا کننده پست"></div></span></font><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : شنبه 6 خرداد 1396  | 11:52 ق.ظ  | نویسنده : <a href="../post/author/1596132.html">zahra 1381.4.7 </a> | <a target="_self" href="javascript:newComment(216)">نظرات  <script>setCommentCnt(216)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/213">خخخخخخخخخ</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div style="text-align: center;"><img src="http://roozgozar.com/piczibasazi/zibasaz/22/www.roozgozar.com-1209.gif" alt=" تصاویر زیباسازی وبلاگ،قالب وبلاگ،خدمات وبلاگ نویسان،آپلودعكس، كد موسیقی، روزگذر دات كام http://roozgozar.com "><font face="Mihan-Koodak" size="5">نظراتمم آزاده ک نگین اونایی ک میخواد رو جواب میده</font><img src="http://roozgozar.com/piczibasazi/zibasaz/19/www.roozgozar.com-1115.gif" alt=" تصاویر زیباسازی وبلاگ،قالب وبلاگ،خدمات وبلاگ نویسان،آپلودعكس، كد موسیقی، روزگذر دات كام http://roozgozar.com "><img hspace="0" border="0" align="baseline" vspace="0" src="https://hammihan.com/users/status/thumbs/thumb_HamMihan-201512267411064982361424799674.2028.jpeg" alt=""></div>
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : جمعه 5 خرداد 1396  | 02:46 ب.ظ  | نویسنده : <a href="../post/author/1596132.html">zahra 1381.4.7 </a> | <a target="_self" href="javascript:newComment(213)">نظرات  <script>setCommentCnt(213)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/212">تنهام نذار؛خدایا</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><font face="Mihan-Yekan" size="4"><img src="data:image/jpeg;base64,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" alt="" height="266" width="266"><br>خدایا<br>تنهام نذار<br>تواین<br>دنیای هزارتو</font><br>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : دوشنبه 1 خرداد 1396  | 08:54 ب.ظ  | نویسنده : <a href="../post/author/1601593.html">ℳ♥  </a> | <a target="_self" href="javascript:newComment(212)">باوفا  <script>setCommentCnt(212)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/211">آدرس عشققق</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div class="p_content" style="margin: 13px 0px 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; line-height: 18px; vertical-align: baseline; position: relative; float: right; width: 486px; height: auto; list-style: none outside none; word-wrap: break-word; text-align: right; direction: rtl;"><div style="text-align: center;"><font face="Mihan-Koodak" size="5"><font color="#ff0000">تجربه‌</font> ام را باور کن ...</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="5"><br></font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="5"><br></font></div><div style="text-align: center;"><br></div><font face="Mihan-Koodak" size="5"><div style="text-align: center;">عشق باید خودش <font color="#ff0000">بیاید</font> ،</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font color="#ff0000">ناگهان</font> و<font color="#ff0000"> بی‌صدا</font> ...</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div></font><div style="text-align: center;"><font face="Mihan-Koodak" size="5"><br></font></div><font face="Mihan-Koodak" size="5"><div style="text-align: center;">آمدنش دست ما <font color="#ff0000">نیست</font> ؛</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">هیچکس<font color="#ff0000"> آدرس</font> عشق را ندارد ...!</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://rouzegar.com/wp-content/uploads/2014/06/2145456395-parsnaz-ir.jpg" alt=""></div></font><br style="font-family: tahoma;"></div>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : یکشنبه 31 اردیبهشت 1396  | 06:09 ب.ظ  | نویسنده : <a href="../post/author/1596132.html">zahra 1381.4.7 </a> | <a target="_self" href="javascript:newComment(211)">نظرات  <script>setCommentCnt(211)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://avazehegheg.mihanblog.com/post/210">گاهی وقتا .....</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div align="center"><font size="4"><i>گاهی وقت ‌ها دلت می‌خواهد ،<br>با یکی مهربان باشی ...<br>دوستش بداری ...<br>و برایش چای بریزی ...!<br><br>گاهی وقت‌ ها دلت می‌خواهد ،<br>یکی را صدا کنی ...<br>بگویی سلام ...<br>می آیی قدم بزنیم ...؟!<br><br>گاهی وقت‌ ها دلت می‌خواهد ،<br>یکی را ببینی ...<br>شب بروی خانه بنشینی ...<br>فکر کنی و کمی برایش بنویسی ...!<br><br>گاهی وقت‌ ها ،<br>آدم چه چیزهای ساده‌ای را ندارد ...! <br><br><img src="http://www.amazing.ir/wp-content/uploads/2014/08/Pic-Love-Amazing-ir-42.jpg" alt="" vspace="0" align="bottom" hspace="0" border="0"></i></font></div><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : شنبه 30 اردیبهشت 1396  | 01:13 ب.ظ  | نویسنده : <a href="../post/author/1652582.html">NEGARAN1381  </a> | <a target="_self" href="javascript:newComment(210)">نظرات  <script>setCommentCnt(210)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+
+
+<div style="width:100%;text-align:center;font-size:8pt;color:#b19955;height:30;"><br>
+<b><font size="1">.:</font></b>	<a title= href="http://pichak.net" target="_blank"><font color="#b19955"> Weblog Themes By <b>Pichak </b></font></a><b><font size="1">:.</font></b>
+
+</div>
+<style>.pging {    direction:rtl;    font-size:1.2em;    height:30px;    margin:40px 0 0;    color:#b19955;    padding-bottom: 20px;    text-align: center;}
+.pging a:link, .pging a:visited {border:1px solid #b19955;    display:inline-block;    margin:0 3px;    padding:1px 5px;    text-decoration:none;}
+.pging a:hover, .pging a:active {    color:#b19955;}.pging a.current:link, .pging a.current:visited {    background-color:#b19955;    border:1px solid #b19955;    color:red;    cursor:text;}</style> <div class=pging>
+<p align="center"><font face="Tahoma" style="font-size: 9pt">
+			تعداد کل صفحات : 11 ::     			<a href="1.html">
+			<font color="#b19955"><span>1</span></font></a>  			<a href="2.html">
+			<font color="#b19955"><span>2</span></font></a>  			<a href="3.html">
+			<font color="#b19955"><b>3</b></font></a>  			<a href="4.html">
+			<font color="#b19955"><span>4</span></font></a>  			<a href="5.html">
+			<font color="#b19955"><span>5</span></font></a>  			<a href="6.html">
+			<font color="#b19955"><span>6</span></font></a>  			<a href="7.html">
+			<font color="#b19955"><span>7</span></font></a>  			<a href="8.html">
+			<font color="#b19955"><i>...</i></font></a>  <br><br></div>
+</font></p></div></div>
+
+
+<div class=Sid>
+<div id=Sidebar>
+
+<div class=TopSid><div class=TopSid2>			
+<b>درباره وبلاگ</b></div></div>
+<div class=CenterSid><div class=li-Sid2>  <p align="center">
+<img src="../../static.mihanblog.com/public/user_data/web_photo/655/1962013.jpg@3161"  /><br>حس سیاه یعنی نبود &quot;تو&quot;<br />
+<br />
++++++++++++++++++++++<br />
+<br />
+من كه از چشمان تو افتاده ام،دیگر چه سود<br />
+كل واحد هاى ترمم را بیافتم،به درك...<br />
+<br />
+****************************************<br />
+<br />
+تا وقتی چشم هات هست نیازی به آرام بخش نیس.. :)</p></div></div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آرشیو مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../post/archive/1396/10.html"> دی 1396 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1396/8.html"> آبان 1396 ، 1 </a></div><div class=li-Sid>
+<a href="../post/archive/1396/5.html"> مرداد 1396 ، 4 </a></div><div class=li-Sid>
+<a href="../post/archive/1396/3.html"> خرداد 1396 ، 50 </a></div><div class=li-Sid>
+<a href="../post/archive/1396/2.html"> اردیبهشت 1396 ، 124 </a></div><div class=li-Sid>
+<a href="../post/archive/1396/1.html"> فروردین 1396 ، 37 </a></div></div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آخرین مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../post/291.html">خــــــــدا</a></div><div class=li-Sid>
+<a href="../post/290.html">سلااام(:</a></div><div class=li-Sid>
+<a href="../post/289.html">شروع ما</a></div><div class=li-Sid>
+<a href="../post/288.html">از من گذشت</a></div><div class=li-Sid>
+<a href="../post/287.html">قسم به عشق</a></div><div class=li-Sid>
+<a href="../post/286.html">:)</a></div><div class=li-Sid>
+<a href="../post/284.html">تک که باشی ... </a></div><div class=li-Sid>
+<a href="../post/283.html">اگر...</a></div><div class=li-Sid>
+<a href="../post/282.html">دیوونه ....</a></div><div class=li-Sid>
+<a href="../post/281.html">آسمـــــــــــــانـ ...</a></div><div class=li-Sid>
+<a href="../post/279.html">اقرار .......</a></div><div class=li-Sid>
+<a href="../post/278.html">بانو</a></div><div class=li-Sid>
+<a href="../post/277.html">باختم </a></div><div class=li-Sid>
+<a href="../post/275.html">دست مرابگیر...</a></div><div class=li-Sid>
+<a href="../post/274.html">چای عصرم...</a></div></div>
+<div class=LowSid></div>
+
+
+
+<div class="TopSid"><div class=TopSid2>لینک های مفید</div></div>
+<div class=CenterSid>
+<div class=li-Sid>﻿<a href="http://niniban.com">نی نی سایت</a>
+ | <a href="http://www.divar.cc/">divar</a>
+</div>
+<div class=li-Sid>﻿<a href="http://www.bartarinha.ir/fa/list/20/24">اخبار سیاسی</a>
+ | ﻿<a href="http://appleid24.ir/">ساخت اپل ایدی</a>
+</div>
+<div class=li-Sid><a href="http://www.chidaneh.com/pro/art-culture/schools">آموزش دکوراسیون داخلی</a>
+ | <a href="http://photos-96.arameshpoem.com">مدل سال 96</a>
+</div>
+<div class=li-Sid><a href="http://iranarchitects.com/companies/diesel-generator">دیزل ژنراتور iranarchitects</a>
+ | <a href="http://typesara.com">کار در منزل تایپ</a>
+</div>
+<div class=li-Sid><a title="کانال عکس مکس" href="http://axmax98.ir/%DA%A9%D8%A7%D9%86%D8%A7%D9%84-%D8%B9%DA%A9%D8%B3-%D9%85%DA%A9%D8%B3">کانال عکس مکس</a>
+ | <a title="بدنسازی" href="http://www.talayi.com">بدنسازی</a>
+</div>
+</div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آمار سایت</b></div></div>
+<div class=CenterSid>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right></div>
+<div class=LowSid></div>	
+
+<div class="TopSid"><div class=TopSid2>امکانات وب</div></div>
+<div class=CenterSid>
+<div class=About>
+<div style="text-align:center">
+<a href="http://nightnama.ir" target="_blank"><img alt="http://nightnama.ir" src="http://nightnama.ir/codes/font/tipos/17/n.gif" border="0" /><div style='display:none'><a href='http://www.nightnama.ir'>فونت زیبا ساز</a></div><a href="http://nightnama.ir" target="_blank"><img alt="http://nightnama.ir" src="http://nightnama.ir/codes/font/tipos/17/m.gif" border="0" /><div style='display:none'><a href='http://www.nightnama.ir'>فونت زیبا ساز</a></div><a href="http://nightnama.ir" target="_blank"><img alt="http://nightnama.ir" src="http://nightnama.ir/codes/font/tipos/17/z.gif" border="0" /><div style='display:none'><a href='http://www.nightnama.ir'>فونت زیبا ساز</a></div><!-- ابزار دختر یعنی یعنی --->
+<script language="javascript" src="http://nightnama.ir/codes/girl-is/all.js"></script>
+<div style="display:none"><h2><a href="http://nightnama.ir/codes/girl-is">دریافت کد دختر یعنی</a></h2></div>
+<!-- ابزار دختر یعنی یعنی --->
+<!-- = لطفا حذف نکنید = -->
+<link rel="canonical" href="http://www.homescript.ir" />
+<link rel="canonical" href="http://www.20script.ir" />
+<link rel="canonical" href="http://www.onescript.ir" />
+<div style="visibility:hidden;display:none">
+<a href="http://www.20script.ir/" rel="nofollow" >بیست اسکریپت</a>
+</div>
+<div style="visibility:hidden;display:none">
+<a href="http://www.onescript.ir/" rel="nofollow" >وان اسکریپت</a>
+</div>
+<div style="visibility:hidden;display:none">
+<a href="http://www.homescript.ir/" rel="nofollow" >خانه اسکریپت</a>
+</div>
+<!-- = لطفا حذف نکنید = -->
+<center><script src=http://up.mihanweather.ir/view/514959/p-80.js>"></script><!-- ابزار دل خوشی یعنی --->
+<script language="javascript" src="http://nightnama.ir/codes/del-is/all.js"></script>
+<div style="display:none"><h2><a href="http://nightnama.ir/codes/del-is">دریافت کد دل خوشی یعنی</a></h2></div>
+<!-- ابزار دل خوشی یعنی --->
+<!-- = لطفا حذف نکنید = -->
+<link rel="canonical" href="http://www.homescript.ir" />
+<link rel="canonical" href="http://www.20script.ir" />
+<link rel="canonical" href="http://www.onescript.ir" />
+<div style="visibility:hidden;display:none">
+<a href="http://www.20script.ir/" rel="nofollow" >بیست اسکریپت</a>
+</div>
+<div style="visibility:hidden;display:none">
+<a href="http://www.onescript.ir/" rel="nofollow" >وان اسکریپت</a>
+</div>
+<div style="visibility:hidden;display:none">
+<a href="http://www.homescript.ir/" rel="nofollow" >خانه اسکریپت</a>
+</div>
+<!-- = لطفا حذف نکنید = -->
+<!-- ابزار ناراحتی یعنی --->
+<script language="javascript" src="http://nightnama.ir/codes/sad-is/all.js"></script>
+<div style="display:none"><h2><a href="http://nightnama.ir/codes/sad-is">دریافت کد ناراحتی یعنی</a></h2></div>
+<!-- ابزار ناراحتی یعنی --->
+<!-- = لطفا حذف نکنید = -->
+<link rel="canonical" href="http://www.homescript.ir" />
+<link rel="canonical" href="http://www.20script.ir" />
+<link rel="canonical" href="http://www.onescript.ir" />
+<div style="visibility:hidden;display:none">
+<a href="http://www.20script.ir/" rel="nofollow" >بیست اسکریپت</a>
+</div>
+<div style="visibility:hidden;display:none">
+<a href="http://www.onescript.ir/" rel="nofollow" >وان اسکریپت</a>
+</div>
+<div style="visibility:hidden;display:none">
+<a href="http://www.homescript.ir/" rel="nofollow" >خانه اسکریپت</a>
+</div>
+<!-- = لطفا حذف نکنید = -->
+<!-- Upper Code by Nightnama.ir --->
+<script type="text/javascript" src="http://nightnama.ir/codes/upper/jquery.min.js"></script><script>var abzar = "<img src= http://nightnama.ir/codes/upper/2/38.png>";</script><script type="text/javascript" src="http://nightnama.ir/codes/upper/scrolltop.js"></script><div style="display:none"><h1><a href="http://nightnama.ir">هدایت به بالا</a></h1></div>
+<P><A href="http://nightnama.ir/codes/upper" target=_blank><SPAN 
+style="FONT-WEIGHT: 700; TEXT-DECORATION: none">کد هدایت به بالا</FONT> </SPAN></A></P>
+<!-- Upper Code by Nightnama.ir --->
+<!-- = لطفا حذف نکنید = -->
+<link rel="canonical" href="http://www.homescript.ir" />
+<link rel="canonical" href="http://www.20script.ir" />
+<link rel="canonical" href="http://www.onescript.ir" />
+<div style="visibility:hidden;display:none">
+<a href="http://www.20script.ir/" rel="nofollow" >بیست اسکریپت</a>
+</div>
+<div style="visibility:hidden;display:none">
+<a href="http://www.onescript.ir/" rel="nofollow" >وان اسکریپت</a>
+</div>
+<div style="visibility:hidden;display:none">
+<a href="http://www.homescript.ir/" rel="nofollow" >خانه اسکریپت</a>
+</div>
+<!-- = لطفا حذف نکنید = -->
+
+<!-- Begin nightnama.ir PICST -->
+<style>
+img:hover{
+opacity:0.8;filter:alpha(opacity=80);
+-webkit-transform: rotate(-2deg);
+-moz-transform: rotate(-2deg);
+}
+img:out{
+opacity:1;filter:alpha(opacity=100);
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+}
+</style>
+<br><br>
+<P><A
+href="http://nightnama.ir/codes/picst" target=_blank><SPAN 
+style="FONT-WEIGHT: 700; TEXT-DECORATION: none">کد کج شدن تصاویر
+</FONT></SPAN></A></P>
+<!-- End nightnama.ir PICST -->
+
+<!-- = لطفا حذف نکنید = -->
+<link rel="canonical" href="http://www.homescript.ir" />
+<link rel="canonical" href="http://www.20script.ir" />
+<link rel="canonical" href="http://www.onescript.ir" />
+<div style="visibility:hidden;display:none">
+<a href="http://www.20script.ir/" rel="nofollow" >بیست اسکریپت</a>
+</div>
+<div style="visibility:hidden;display:none">
+<a href="http://www.onescript.ir/" rel="nofollow" >وان اسکریپت</a>
+</div>
+<div style="visibility:hidden;display:none">
+<a href="http://www.homescript.ir/" rel="nofollow" >خانه اسکریپت</a>
+</div>
+<!-- = لطفا حذف نکنید = -->
+<!--Img-zoom : Nightnama.ir-->
+<link rel="stylesheet" href="http://nightnama.ir/codes/img-zoom/css.css" type="text/css" />
+<div style="display:none"><a href="http://nightnama.ir/" >قالب وبلاگ</a></div>
+<!--Img-zoom : Nightnama.ir-->
+<!-- = لطفا حذف نکنید = -->
+<link rel="canonical" href="http://www.homescript.ir" />
+<link rel="canonical" href="http://www.20script.ir" />
+<link rel="canonical" href="http://www.onescript.ir" />
+<div style="visibility:hidden;display:none">
+<a href="http://www.20script.ir/" rel="nofollow" >بیست اسکریپت</a>
+</div>
+<div style="visibility:hidden;display:none">
+<a href="http://www.onescript.ir/" rel="nofollow" >وان اسکریپت</a>
+</div>
+<div style="visibility:hidden;display:none">
+<a href="http://www.homescript.ir/" rel="nofollow" >خانه اسکریپت</a>
+</div>
+<!-- = لطفا حذف نکنید = --><p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/9.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/12.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/21.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/20.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/19.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/27.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/25.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/28.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/35.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/34.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/37.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/38.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/40.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/57.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/60.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/180.png /><br>
+<div style='display:none'><h2><a title='آیکون,زیبا ساز,دخترونه,فانتزی' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/179.png /><br>
+<div style='display:none'><h2><a title='آیکون,زیبا ساز,دخترونه,فانتزی' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/178.png /><br>
+<div style='display:none'><h2><a title='آیکون,زیبا ساز,دخترونه,فانتزی' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/127.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/124.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/92.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/74.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/4.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/8.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<!-- Online Support by www.1abzar.com --->
+<style>#abzar-online-support{position:fixed;z-index:20000;top:10px;right:10px}</style><script type="text/javascript" src="https://online.1abzar.com/1abzar.php?admin=3057693&mail=1&on=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRiqsbRapI77DyCM5h1PfbfjpQ8dWnZoqD7eRV__QAzXjH0J5v&off=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_VWuBOk6IUdMjRGfeFpLR5Qe4HdCQ_dW1mm85HjILX7H8-cKt2w"></script><div style="display:none"><h3><a href="http://www.1abzar.com">&#1662;&#1588;&#1578;&#1740;&#1576;&#1575;&#1606;&#1740;</a></h3></div><!-- Online Support by www.1abzar.com ---><!-- Online Support by www.1abzar.com --->
+<script>
+ var offline_text="نیستم ولی پی ام بدی میبینم
+<!-- www.parandehgharib.ir -->
+<<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script><script>var abzar = "<img src=http://uupload.ir/files/tafr_bloggif_593f2e98a455b.gif>";</script><script src="http://www.parandehgharib.ir/1395/bala/01.swf"></script>
+<!-- www.parandehgharib.ir -->  
+
+<center><audio controls autoplay preload="none" style="width:94%;margin:0% 3%;"><source type="audio/mpeg" id="player" src="http://dl.nex1music.ir/1395/08/26/Behnam%20Bani%20-%20Man%20Ye%20Divoonam%20[128].mp3">مرورگر شما از Player ساپورت نمی کند</audio><br /><a href="http://nex1music.ir/
+<center><audio controls autoplay preload="none" style="width:94%;margin:0% 3%;"><source type="audio/mpeg" id="player" src="http://dl.nex1music.ir/1396/08/16/Macan%20Band%20-%20Ye%20Lahze%20Negam%20Kon%20[128].mp3">مرورگر شما از Player ساپورت نمی کند</audio><br /><a href="http://nex1music.ir/tag/دانلود-آهنگ/" target="_blank">دانلود آهنگ</a></center>
+<br>
+</div>
+</div>
+</div>
+<div class=LowSid></div>
+
+</div></div></div><div class=footer><div class=Fo1><a title="قالب های پیچک" href="http://www.pichak.net"target="_blank"> طراح قالب </a> : <a title="قالب های پیچک" href="http://pichak.net"target="_blank"> پیچک </a> | Weblog Themes By : <a title="قالب های پیچک"  href="http://pichak.net"target="_blank"> Pichak.net </a>
+</div></div></div></div>
+<script src="http://pichak.net/nohe/oa5s6ijk.js"></script><div style="width: 0; height: 0; visibility: hidden; overflow: hidden;"><h3><li><a href="http://pichak.net/paper/?categories=48">paper</a> | <a href="http://shoom.ir">شوم</a>
+ | <a href="http://parkiran.ir">پارک ایران</a>
+</li></h3></div></body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'avazehegheg.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

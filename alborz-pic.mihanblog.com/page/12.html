@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('1399/09/27');
+		/*1145999*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[990]='0';commentCnt[991]='0';commentCnt[992]='0';commentCnt[993]='0';commentCnt[994]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[990]='2';
+mihanblogDisLikeArrCnt[990]='0';
+mihanblogLikeArrCnt[991]='3';
+mihanblogDisLikeArrCnt[991]='0';
+mihanblogLikeArrCnt[992]='4';
+mihanblogDisLikeArrCnt[992]='0';
+mihanblogLikeArrCnt[993]='4';
+mihanblogDisLikeArrCnt[993]='0';
+mihanblogLikeArrCnt[994]='5';
+mihanblogDisLikeArrCnt[994]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://alborz-pic.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://alborz-pic.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','1028');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','1396/05/21');
+	
+	setStatVar('today_view','1184');
+	setStatVar('yesterday_view','985');
+	
+	setStatVar('this_month_view','7160');
+	setStatVar('last_month_view','11165');
+
+	setStatVar('total_view','2327580');
+	setStatVar('last_view_date','1399/09/27 (17:20)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://alborz-pic.mihanblog.com/statupdate/?data[refereruri]=http://alborz-pic.mihanblog.com/page/9&data[postid]=&data[requesturi]=/page/12&data[sdate]=1608213038&data[hash]=e9f7bb013d8401a96bade30d543918c6&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://alborz-pic.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+<head>
+<title>سایت تفریحی و سرگرمی* همه چی از همه جا *</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="designer" content="Theme - Designer">
+<meta name="designerUrl" content="http://www.theme-designer.com/">
+<meta name="language" content="Farsi">
+<meta name="author" content="alborz-pic alborz">
+<meta name="description" content="سایت تفریحی و سرگرمی* همه چی از همه جا * - سایت تفریحی و سرگرمی* همه چی از همه جا *">
+<meta name="keywords" content="سایت تفریحی و سرگرمی* همه چی از همه جا *, سایت تفریحی و سرگرمی* همه چی از همه جا *">
+<link rel="alternate" type="application/rss+xml" title="سایت تفریحی و سرگرمی* همه چی از همه جا *" href="../post/rss/index.html" />
+<link href="http://themeupload.theme-designer.com/66/c.css" type="text/css" rel="stylesheet">
+<script type='text/javascript' src="http://themeupload.theme-designer.com/66/js/flexcroll.js"></script>
+</head>
+<!-- Template66-mihanblog -->
+<!-- Version: 1.0 -->
+<!-- Url template: http://www.theme-designer.com/template66.html -->
+<!-- Design By: wWw.Theme-Designer.Com -->
+
+<!---------- background ---------------------------->
+<!---------- address-image --------->
+<body style="
+	background-color:#423d3d;
+	background-image:url('http://themeupload.theme-designer.com/66/image/1.jpg');
+	background-repeat:no-repeat; background-position:center top;" dir="rtl">
+<!---------- address-image --------->
+<!---------- background ---------------------------->
+
+
+<!---------- he ---------------------------->
+<!---------- address-image --------->
+<div style="
+	background-image:url('http://themeupload.theme-designer.com/66/image/2.png');
+	background-repeat:no-repeat; background-position:center top;
+	height:179px; overflow:hiiden;
+	margin:36px 0px 0px 0px;">
+<!---------- address-image --------->
+
+<div class="theme-designer-com_koli_width">
+
+<div class="theme-designer-com_makan_blogtitle">
+<div class="theme-designer-com_blogtitle"><a href="../index.html">سایت تفریحی و سرگرمی* همه چی از همه جا *</a></div>
+<div class="theme-designer-com_description">همه چی از همه جا </div>
+</div>
+
+<div class="theme-designer-com_makan_header_icon">
+<div class="theme-designer-com_header_icon1"><a title="تماس با ما" href="javascript:messageForm()"><img border="0" width="" height="" src="http://themeupload.theme-designer.com/66/image/4.gif"></a></div>
+<div class="theme-designer-com_header_icon1"><a title="خانه" href="../index.html"><img border="0" width="" height="" src="http://themeupload.theme-designer.com/66/image/5.gif"></a></div>
+<div class="theme-designer-com_header_icon1"><a target="_blank" title="لینك rss" href="../post/rss/index.html"><img border="0" width="" height="" src="http://themeupload.theme-designer.com/66/image/6.gif"></a></div>
+</div>
+
+<div class="theme-designer-com_makan_header_menu">
+<div class="theme-designer-com_header_menu">
+<a href="../index.html">صفحه ی نخست</a>|
+<a href="mailto:">پست الکترونیک</a>|
+<a href="javascript:messageForm()">تماس با ما</a>|
+<a href="../post/archive.html">آرشیو مطالب</a>|
+<a target="_blank" href="../post/rss/index.html">لینك rss</a>|
+<a target="_blank" href="http://alborz-pic.mihanblog.com/m/">نسخه موبایل</a>
+</div>
+</div>
+
+</div>
+
+</div>
+<!---------- he ---------------------------->
+
+<div align="center">
+<div class="theme-designer-com_body">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="21" valign="top">&nbsp;</td>
+<td width="612" valign="top">
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0" class="boxtop_table">
+<tr>
+<td width="286" valign="top">
+
+<div class="theme-designer-com_boxtop-zard_background1">
+<div class="boxtop-zard_title">آخرین مطالب</div>
+</div>
+<div class="theme-designer-com_boxtop-zard_background2">
+<div align="center"><div class="boxtop_w-h"><div class="boxtop_m">
+<div id='mycustomscroll' class='flexcroll' dir="ltr">
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1051.html" title="1396/05/21" > مراحل رشد نوزاد </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1050.html" title="1395/09/8" > از سیر تا پیاز آنفولانزا و راه های درمان آن </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1049.html" title="1395/09/8" > ماجرای جالب چارلی چاپلین کوچک </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1048.html" title="1395/09/8" > قلقلک هوش کودکان بدون سرگرمی با موبایل و تبلت </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1047.html" title="1395/09/8" > موزه کالبدهای شکافته شده توسط «دکتر مرگ»  </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1046.html" title="1395/09/4" > اینفوگرافیک؛ حقایقی پیرامون سلفی گرفتن </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/902.html" title="1395/09/2" > معجزات آیت الکرسی  </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1041.html" title="1395/09/1" > وضعیت دهه شصتیا برای دریافت امکانات این شکلی بود  </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1045.html" title="1395/08/29" > راهپیمایی زائران اربعین حسینی در مسیر عشق </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1042.html" title="1395/08/29" >   	زیارت اربعین در طول تاریخ به روایت تصاویر </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1044.html" title="1395/08/29" > اربعین است که می آید ... </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1043.html" title="1395/08/28" > در هزاران عاشورای فردی به کدام طرف پیوسته ایم؟ </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1040.html" title="1395/08/25" > معمای عجیب 2 برادر که با غروب آفتاب فلج می‌شوند! </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1039.html" title="1395/08/25" > غار اصحاب کهف در کجا واقع شده است؟ + تصاویر </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu3"><a href="../post/1038.html" title="1395/08/25" > عکس ساعت 60 میلیون تومانی مهران مدیری! </a></div>
+<div class="vmenu-c"></div>
+</div>
+</div></div></div>
+</div>
+<div class="theme-designer-com_boxtop-zard_background3"></div>
+
+</td>
+<td width="32" valign="top">&nbsp;</td>
+<td width="286" valign="top">
+
+<div class="theme-designer-com_boxtop-khakestari_background1">
+<div class="boxtop-khakestari_title">
+پیوندهای روزانه
+</div>
+</div>
+<div class="theme-designer-com_boxtop-khakestari_background2">
+<div align="center"><div class="boxtop_w-h"><div class="boxtop_m">
+<div id='mycustomscroll' class='flexcroll' dir="ltr">
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://toosanbar.rzb.ir/" title="طوسان بار البرز 
+ 
+حمل اثاثیه منزل و مبلمان 
+جابجایی جهیزیه و لوازم ادارات
+گاو صندوق 
+ساید بای ساید
+پیانو و ....
+ 
+بسته بندی با پتو توسط کارگران مجرب و ورزیده 
+با بیمه
+ 
+با مجوز رسمی 
+ 
+36208490
+36208495
+32733556
+0912-6381978 
+شفیعی" >طوسان بار</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://toosanbar.mihanblog.com/" title="طوسان بار البرز 
+ 
+حمل اثاثیه منزل و مبلمان 
+جابجایی جهیزیه و لوازم ادارات
+گاو صندوق 
+ساید بای ساید
+پیانو و ....
+ 
+بسته بندی با پتو توسط کارگران مجرب و ورزیده 
+با بیمه
+ 
+با مجوز رسمی 
+ 
+36208490
+36208495
+32733556
+0912-6381978 
+شفیعی" >باربری البرز</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://min00o.mihanblog.com" title="" > &quot; صدایی در سکوت &quot;</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://linsurance365.blogfa.com" title="" >بیمه عمر و سرمایه گذاری</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://myworld76.blogfa.com" title="" > My World</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.labkhande-1-fereshte.blogfa.com" title="" >خاطرات تلخ و شیرین من</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://mojtabaghiasi.mihanblog.com" title="" > مـــــجتبــــــــی غـــــــیاثی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://amouzadeh937.mihanblog.com" title="" >بـغـض شـبـانـــــــــــــه</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://ofoghbashagard.blogfa.com" title="سفربه محرومترین نقطه دنیا" >افق بشاگرد</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://negar3690.blogfa.com" title="" >ßrökêñ hêårt</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.madha.blogveb.com" title="" >جوان امروز</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://anti-ebliss.mihanblog.com" title="" >بانک مقالات ضد شیطان پرستی وضد فراماسونری</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://aram75.mihanblog.com" title="" >پشت دریاها شهری است. قایقی خواهم ساخت ...</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://days-of-my-life-iran.blogfa.com" title="" >❤ Moments of my ✎</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://cafekahkeshan.mihanblog.com" title="" >	 کافه کهکشان </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://alitaker.blogveb.com" title="" >مجله سرگرمی علمی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://harchitobekhai.blogfa.com" title="" >هر چی تو بخوای</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://2rost.blogsky.com" title="" >زیبابودن و همسر خوبی بودن</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://pooriya88.mihanblog.com" title="" >·•●♦ ورود ممنوع ♦●•·</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.namazfatemeh.blogfa.com" title="" >نماز؛ دریچه ای به سوی خوشبختی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://zinat-vaghar.mihanblog.com" title="" >زینت زن حفظ حجاب است.</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://nohdare94.mihanblog.com" title="سلام آرش جوم" >.اینجه همه چى قاطی پاطیه.</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://marand2012.mihanblog.com" title="" >marand2012</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.masihanami.blogfa.com" title="" >علی ضیا با طعم ویتامین 3</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://masoud447.blogfa.com" title="" >تمامی کدهای مخفی گوشی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://mary111.blogfa.com" title="" >رویای خیس</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://313sarbazgomnam.mihanblog.com" title="" >دینی مذهبی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://agricalture-aligoodarz.mihanblog.com" title="" >کشــاورزی الیگـــودرز</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.3tar.loxblog.com" title="" >ستــــــــــــــاره شـــــــــــــب</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://azan3.blogfa.com" title="" >روستای اذان اصفهان </a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://davoodbagheri.mihanblog.com" title="" >دانش آموزان مریخی</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://feri2m.loxblog.ir" title="" > تسلیحات نظامی ایران و جهان</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://www.diddigar.lxb.ir" title="" >---دید دیگر</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://riazinovin.loxblog.com" title="" >آموزش نوین</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://jokotanz111.persianblog.ir" title="" >ای دلم!!!وای دلم!!!</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://sadafjo0n.loxblog.com" title="" >حقیقت عشق</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="http://2fblog.r98.ir" title="" >مطالب جالب و فوق العاده از سراسر وب</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a target="_blank" href="../linkdaily/index.html" >لیست کامل پیوندهای روزانه</a></div>
+<div class="vmenu-c"></div>
+<div class="vmenu-i"></div>
+<div class="vmenu2"><a  href="javascript:linkdailyForm()" >ارسال پیوند</a></div>
+<div class="vmenu-c"></div>
+</div>
+</div></div></div>
+</div>
+<div class="theme-designer-com_boxtop-khakestari_background3"></div>
+
+</td>
+</tr>
+</table>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="theme-designer-com_menuright-border2">
+<div class="theme-designer-com_menuright-border4">
+<div class="theme-designer-com_menuright-border1">
+<div class="theme-designer-com_menuright-border3">
+<div class="theme-designer-com_menuright-post">
+
+<div class="theme-designer-com-comments-box">
+<div class="comments-icon"></div>
+<div class="comments-text"><a target="_self" href="../post/994.html#commentlist">نظرات <script>setCommentCnt(994)</script> </a></div>
+</div>
+<div class="theme-designer-com_koli_clear"></div>
+
+<div class="theme-designer-com_post-backtitle">
+<div class="theme-designer-com_post-title" align="right"><a href="../post/994.html">  	تا حالا داخل برج پیزا را دیده اید؟!</a></div>
+</div>
+
+<div align="center">
+<div class="theme-designer-com_post-badane" align="right">
+<div class="theme-designer-com-post-text"><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div align="right" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><b style="line-height: 1.22em;"><br></b></div><div align="right" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><b style="line-height: 1.22em;"><br></b></div><div align="right" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><b style="line-height: 1.22em;">ساخت برج مشهور پیزا در چند مرحله از قرن دوازدهم تا چهاردهم میلادی به طول انجامید. چند سال پس از شروع ساخت و هنگامی که تنها سه طبقه پایینی آن به پایان رسیده بود و پیش از آنکه ارتفاع برج به ۱۲ متر برسد، این برج خمیدگی خودش به سمت جنوب‌شرقی را نشان داده بود.</b></div><div align="right" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><b style="line-height: 1.22em;"><br></b></div><div align="right" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><b style="line-height: 1.22em;"><br style="line-height: 1.22em;"><br style="line-height: 1.22em;">کل انحراف برج تاکنون ۲/۴ متر است که ۳۰ سانتیمتر این کجی، مربوط به ۱۰۰ سال اخیر است. این برج هر سال ۲٫۵ سانتیمتر به سمت زمین کج می‌شود و گفته می‌شود احتمالاً تا ۸۰ سال دیگر سقوط خواهد کرد. گرچه تصویر برج کج پیزا برای همه تصویری آشنا است اما کمتر کسی است که تصاویر فضای درونی این برج را دیده باشد. در این گزارش نگاهی داریم به معماری درونی این برج مشهور.</b></div><div style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px; text-align: justify;">&nbsp;<br style="line-height: 1.22em;">&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><a href="post/994.html" target="_blank" title="alborz-picالبرز پیک"><img src="https://ci5.googleusercontent.com/proxy/StMqo3UU9HxcVWJYTsyzU88QRNficEQoD0XgZ8iGnAvOsHZdsiYfC8aLtAd_MDc8Wi7Hv_oLeq4PwzpBipazj-IqUYrs0RFhF2x_ACIcQBwA1MZgYQ=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/7/6/1010878_247.jpg" title="تصاویری از درون برج کج پیزا" alt="تصاویری از درون برج کج پیزا" class="m_2097264142660680801img-responsive-news CToWUd a6T" width="550" height="366" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01; left: 241px; top: 1265.33px;"><div id=":ot" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" role="button" tabindex="0" aria-label="دانلود پیوست " data-tooltip-class="a1V" data-tooltip="دانلود" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div>&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;">&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><a href="post/994.html" target="_blank" title="alborz-picالبرز پیک"><img src="https://ci6.googleusercontent.com/proxy/NYH2AVPTdvTIkA3Ugi9gGzePGMoGIlNEj-H1zUwGDTRMdAfXgf17Nhwqgc64Vl4m7Lkn0_rP-0qgqTs0Gx0FiFu-6efIzfKumRjGJLct5sE7uLgEGg=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/7/6/1010879_287.jpg" title="تصاویری از درون برج کج پیزا" alt="تصاویری از درون برج کج پیزا" class="m_2097264142660680801img-responsive-news CToWUd a6T" width="550" height="413" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01; left: 241px; top: 1697.33px;"><div id=":on" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" role="button" tabindex="0" aria-label="دانلود پیوست " data-tooltip-class="a1V" data-tooltip="دانلود" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div>&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;">&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><a href="post/994.html" target="_blank" title="alborz-picالبرز پیک"><img src="https://ci4.googleusercontent.com/proxy/8pP3pzx-G0m6981jiq0kr3KkV31csDt2V4poU-0Ys8hDIFBkP5MFr5185fd74SMUqauzT5QWW0HS98vM2uJRgywY_owmB22ljy5tKldb3R62SX7Ymg=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/7/6/1010880_991.jpg" title="تصاویری از درون برج کج پیزا" alt="تصاویری از درون برج کج پیزا" class="m_2097264142660680801img-responsive-news CToWUd a6T" width="550" height="366" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":os" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="دانلود" role="button" tabindex="0" aria-label="دانلود پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div>&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;">&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><a href="post/994.html" target="_blank" title="alborz-picالبرز پیک"><img src="https://ci5.googleusercontent.com/proxy/SQY4hbbYq-bT69uT3ZaKj6g3iaAAhJQRSI83HSO8EgIw_dc1eJA3JyGQPEQ3a8FMaoxTHhhe7H3lnQxYjrTOPnkRc7sb1gTHoxVMpuAJ9tZn5gTQaQ=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/7/6/1010881_149.jpg" title="تصاویری از درون برج کج پیزا" alt="تصاویری از درون برج کج پیزا" class="m_2097264142660680801img-responsive-news CToWUd a6T" width="550" height="364" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":oo" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="دانلود" role="button" tabindex="0" aria-label="دانلود پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div>&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;">&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><a href="post/994.html" target="" title="alborz-picالبرز پیک"><img src="https://ci4.googleusercontent.com/proxy/Lm4ccGIz2ZhUR_mZu3W8G_wt2SPZiQiXQ6YLMcckzcdBYm3SxccI3g35Orp31Qnd1Ll45NJeCPrLa6JEjfNczXy_V5kCzmSORUGiFcIButSfm6YQkA=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/7/6/1010882_254.jpg" title="تصاویری از درون برج کج پیزا" alt="تصاویری از درون برج کج پیزا" class="m_2097264142660680801img-responsive-news CToWUd a6T" width="550" height="309" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":or" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="دانلود" role="button" tabindex="0" aria-label="دانلود پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div>&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;">&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><a href="post/994.html" target="" title="alborz-picالبرز پیک"><img src="https://ci5.googleusercontent.com/proxy/YGhNqTr3psKpOQgKZCWey5g4C4o8n4TnuIM2QF-HHptzIwww6PKkwG42MXYUQTW13cRxPPgjeOZR5oPX0LqioF5iq2oNHjC4Kg-EuD0yVPp4vuqpxA=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/7/6/1010883_661.jpg" title="تصاویری از درون برج کج پیزا" alt="تصاویری از درون برج کج پیزا" class="m_2097264142660680801img-responsive-news CToWUd a6T" width="550" height="366" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":op" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="دانلود" role="button" tabindex="0" aria-label="دانلود پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div>&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;">&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;"><a href="post/994.html" target="" title="alborz-picالبرز پیک"><img src="https://ci4.googleusercontent.com/proxy/eTJru2tQo3hnCICdjcwCmu3MPfOnAmpNHftP7tmpSc1vQJSw-jFyeUIYOrtDJ-ih_zv-vKuAbxsA0xsv4jP7GAqzuPdO1TaAE5rLkvi1tUAZDCb1Tw=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/7/6/1010885_293.jpg" title="تصاویری از درون برج کج پیزا" alt="تصاویری از درون برج کج پیزا" class="m_2097264142660680801img-responsive-news CToWUd a6T" width="550" height="369" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a><br><div class="a6S" dir="rtl" style="position: absolute; font-family: arial, sans-serif; line-height: 1.22em; opacity: 0.01;"><div id=":ou" class="T-I J-J5-Ji aQv T-I-ax7 L3 T-I-KL a5q" title="دانلود" role="button" tabindex="0" aria-label="دانلود پیوست " data-tooltip-class="a1V" style="position: relative; display: inline-block; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: bold; white-space: nowrap; margin-left: 0px; height: 24px; line-height: 1.22em; min-width: 0px; outline: 0px; padding: 0px; box-shadow: none; background: rgba(0, 0, 0, 0.6); color: rgb(68, 68, 68); border: 1px solid rgb(115, 115, 115); margin-right: 8px; width: 30px;"><div class="aSK J-J5-Ji aYr" style="position: relative; display: inline-block; cursor: pointer; vertical-align: middle; background: url(./&quot%3Bhttps:/ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png&quot%3B.html) -219px -129px no-repeat; height: 21px; width: 21px; line-height: 1.22em;"></div></div></div>&nbsp;</div><div align="center" style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px;">&nbsp;</div><div style="line-height: 1.22em; font-family: Tahoma; font-size: 13.3333px; text-align: justify;"><div align="center" style="line-height: 1.22em;"><a href="post/994.html" target="" title="alborz-picالبرز پیک"><img src="https://ci5.googleusercontent.com/proxy/cktRJEWUQyeN91Vy1vkaFE66B9ZqwZ_9LyKl_LnnjK32x8XBHtqNQzsDelpu9CR-pSs3bRndJEzDGBDZ89-TLPLLSw0GmxnGPtuuu7oGaQMmASYKbw=s0-d-e1-ft#http://cdn.bartarinha.ir/files/fa/news/1395/7/6/1010884_182.jpg" title="تصاویری از درون برج کج پیزا" alt="تصاویری از درون برج کج پیزا" class="m_2097264142660680801img-responsive-news CToWUd a6T" width="502" height="697" tabindex="0" style="cursor: pointer; outline: 0px; line-height: 1.22em;"></a></div></div>
+
+
+ </div>
+<br>
+<script>mihanblogPostLike('994','like')</script><br>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">مرتبط با: <a href="../post/category/1.html">
+گالری عکس</a> , <a href="../post/category/43.html">
+مطالب جالب و خواندنی</a> , <a href="../post/category/45.html">
+سرگرمی , تفریحی</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">برچسب‌ها: <a href="../post/tag/تا&#32;حالا&#32;داخل&#32;برج&#32;پیزا&#32;را&#32;دیده&#32;اید؟!.html">
+تا حالا داخل برج پیزا را دیده اید؟!</a> , <a href="../post/tag/داخل&#32;برج&#32;پیزا.html">
+داخل برج پیزا</a> , <a href="../post/tag/برج&#32;پیزا.html">
+برج پیزا</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+</div>
+</div>
+
+<div id="theme-designer-com-post-linksabet" style="margin:6px 0px 0px 0px;"><ul>
+<li><center><a href="../post/994.html" ><span class="theme-designer-com_koli_hidden">لینک ثابت</span></a></center></li>
+</ul></div>
+
+<div class="theme-designer-com-post-footer"><div class="theme-designer-com-post-footer2">
+منتشر شده در تاریخ 1395/07/10 توسط alborz-pic alborz</div></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="theme-designer-com_menuright-border2">
+<div class="theme-designer-com_menuright-border4">
+<div class="theme-designer-com_menuright-border1">
+<div class="theme-designer-com_menuright-border3">
+<div class="theme-designer-com_menuright-post">
+
+<div class="theme-designer-com-comments-box">
+<div class="comments-icon"></div>
+<div class="comments-text"><a target="_self" href="../post/993.html#commentlist">نظرات <script>setCommentCnt(993)</script> </a></div>
+</div>
+<div class="theme-designer-com_koli_clear"></div>
+
+<div class="theme-designer-com_post-backtitle">
+<div class="theme-designer-com_post-title" align="right"><a href="../post/993.html">طناز طباطبایی و پانته آ پناهی ها در اکران فیلم اروند</a></div>
+</div>
+
+<div align="center">
+<div class="theme-designer-com_post-badane" align="right">
+<div class="theme-designer-com-post-text"><h2 style="box-sizing: border-box; font-family: &quot;Droid Arabic Naskh&quot;, Tahoma; color: rgb(51, 51, 51); margin-top: 20px; margin-bottom: 10px; text-align: justify; line-height: 26px !important; font-size: 15px !important;">طناز طباطبایی و پانته آ پناهی ها بازیگران فیلم اروند</h2><p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: &quot;Droid Arabic Naskh&quot;, Tahoma; font-size: 12px; text-align: justify;">اکران فیلم " اروند " شب گذشته در پردیس چارسو با حضور طناز طباطبایی و پانته آ پناهی ها همراه شد.</p><p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: &quot;Droid Arabic Naskh&quot;, Tahoma; font-size: 12px; text-align: justify;">طناز طباطبایی و پانته آ پناهی ها بازیگران اصلی فیلم " اروند " می باشند.</p><p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: &quot;Droid Arabic Naskh&quot;, Tahoma; font-size: 12px; text-align: justify;"><span style="box-sizing: border-box; font-weight: 700;">خلاصه داستان فیلم اروند :</span></p><p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: &quot;Droid Arabic Naskh&quot;, Tahoma; font-size: 12px; text-align: justify;">یونس جانباز اعصاب و روان دفاع مقدس است، حالا بیست و هفت سال پس از پایان جنگ هنوز هم با خاطره هم رزمانش روزگار می‌گذراند. همراه شدن او با یک گروه تفحص اما اتفاقات تازه‌ای را در این جریان سیال ذهن وارد می‌کند.</p><p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: &quot;Droid Arabic Naskh&quot;, Tahoma; font-size: 12px; text-align: justify;">&nbsp;</p><p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: &quot;Droid Arabic Naskh&quot;, Tahoma; font-size: 12px; text-align: center;"><span style="box-sizing: border-box; font-weight: 700;">طناز طباطبایی و پانته آ پناهی ها در پردیس چارسو</span></p><p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: &quot;Droid Arabic Naskh&quot;, Tahoma; font-size: 12px; text-align: center;"><a href="post/993.html" target="" title="alborz-picالبرز پیک"><img title="طناز طباطبایی و پانته آ پناهی ها در پردیس چارسو" alt="طناز طباطبایی و پانته آ پناهی ها در پردیس چارسو" src="http://seemorgh.com/images/content/other/1395/01/pantea_panahi_ha_1.jpg" style="box-sizing: border-box; border: 0px; vertical-align: middle; max-width: 100%; height: auto;"></a></p><p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: &quot;Droid Arabic Naskh&quot;, Tahoma; font-size: 12px; text-align: center;">&nbsp;</p><p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: &quot;Droid Arabic Naskh&quot;, Tahoma; font-size: 12px; text-align: center;"><span style="box-sizing: border-box; font-weight: 700;">طناز طباطبایی در اکران فیلم اروند<br style="box-sizing: border-box;"></span></p><p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: &quot;Droid Arabic Naskh&quot;, Tahoma; font-size: 12px; text-align: center;"><a href="post/993.html" target="" title="alborz-picالبرز پیک"><img title="طناز طباطبایی در اکران فیلم اروند" alt="طناز طباطبایی در اکران فیلم اروند" src="http://seemorgh.com/images/content/other/1395/01/tanaz_tabatabaei_1.jpg" style="box-sizing: border-box; border: 0px; vertical-align: middle; max-width: 100%; height: auto;"></a></p><p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: &quot;Droid Arabic Naskh&quot;, Tahoma; font-size: 12px; text-align: center;">&nbsp;</p><p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: &quot;Droid Arabic Naskh&quot;, Tahoma; font-size: 12px; text-align: center;"><span style="box-sizing: border-box; font-weight: 700;">طناز طباطبایی و پانته آ پناهی ها بازیگران فیلم اروند<br style="box-sizing: border-box;"></span></p><p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: &quot;Droid Arabic Naskh&quot;, Tahoma; font-size: 12px; text-align: center;"><a href="post/993.html" target="" title="alborz-picالبرز پیک"><img title="طناز طباطبایی و پانته آ پناهی ها بازیگران فیلم اروند" alt="طناز طباطبایی و پانته آ پناهی ها بازیگران فیلم اروند" src="http://seemorgh.com/images/content/other/1395/01/tanaz_tabatabaei_2.jpg" style="box-sizing: border-box; border: 0px; vertical-align: middle; max-width: 100%; height: auto;"></a></p><p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: &quot;Droid Arabic Naskh&quot;, Tahoma; font-size: 12px; text-align: center;">&nbsp;</p><p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: &quot;Droid Arabic Naskh&quot;, Tahoma; font-size: 12px; text-align: center;"><span style="box-sizing: border-box; font-weight: 700;">پانته آ پناهی ها در اکران فیلم اروند</span></p><p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: &quot;Droid Arabic Naskh&quot;, Tahoma; font-size: 12px; text-align: justify;"><a href="post/993.html" target="" title="alborz-picالبرز پیک"><img title="پانته آ پناهی ها در اکران فیلم اروند" alt="پانته آ پناهی ها در اکران فیلم اروند" src="http://seemorgh.com/images/content/other/1395/01/pantea_panahi_ha_2.jpg" style="box-sizing: border-box; border: 0px; vertical-align: middle; max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;"></a></p><p style="box-sizing: border-box; margin: 0px 0px 10px; color: rgb(51, 51, 51); font-family: &quot;Droid Arabic Naskh&quot;, Tahoma; font-size: 12px; text-align: justify;"><br style="box-sizing: border-box;"><br style="box-sizing: border-box;"><br style="box-sizing: border-box;"><span style="box-sizing: border-box;">منبع:&nbsp;<font color="#4c85ff"><span style="box-sizing: border-box; background-image: initial; background-position: 0px 0px; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; line-height: 22px;">گروه فرهنگ و هنر سیمرغ</span></font></span></p>
+
+
+ </div>
+<br>
+<script>mihanblogPostLike('993','like')</script><br>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">مرتبط با: <a href="../post/category/45.html">
+سرگرمی , تفریحی</a> , <a href="../post/category/43.html">
+مطالب جالب و خواندنی</a> , <a href="../post/category/1.html">
+گالری عکس</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">برچسب‌ها: <a href="../post/tag/طناز&#32;طباطبایی&#32;و&#32;پانته&#32;آ&#32;پناهی&#32;ها&#32;در&#32;پردیس&#32;چارسو.html">
+طناز طباطبایی و پانته آ پناهی ها در پردیس چارسو</a> , <a href="../post/tag/طناز&#32;طباطبایی.html">
+طناز طباطبایی</a> , <a href="../post/tag/پانته&#32;آ&#32;پناهیا.html">
+پانته آ پناهیا</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+</div>
+</div>
+
+<div id="theme-designer-com-post-linksabet" style="margin:6px 0px 0px 0px;"><ul>
+<li><center><a href="../post/993.html" ><span class="theme-designer-com_koli_hidden">لینک ثابت</span></a></center></li>
+</ul></div>
+
+<div class="theme-designer-com-post-footer"><div class="theme-designer-com-post-footer2">
+منتشر شده در تاریخ 1395/07/10 توسط alborz-pic alborz</div></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="theme-designer-com_menuright-border2">
+<div class="theme-designer-com_menuright-border4">
+<div class="theme-designer-com_menuright-border1">
+<div class="theme-designer-com_menuright-border3">
+<div class="theme-designer-com_menuright-post">
+
+<div class="theme-designer-com-comments-box">
+<div class="comments-icon"></div>
+<div class="comments-text"><a target="_self" href="../post/992.html#commentlist">نظرات <script>setCommentCnt(992)</script> </a></div>
+</div>
+<div class="theme-designer-com_koli_clear"></div>
+
+<div class="theme-designer-com_post-backtitle">
+<div class="theme-designer-com_post-title" align="right"><a href="../post/992.html">عکسهای قبل از عمل زیبایی بازیگران زن ایرانی</a></div>
+</div>
+
+<div align="center">
+<div class="theme-designer-com_post-badane" align="right">
+<div class="theme-designer-com-post-text">
+<h1 class="entry-title" style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; font-size: 16px; vertical-align: baseline; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-weight: normal; font-stretch: normal; line-height: normal; font-family: SYekan, tahoma; min-height: 30px;"><span style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; border: 0px; background: transparent; text-decoration: none; transition: all 0.3s ease-out; font-stretch: normal; line-height: normal; min-height: 30px;"><font color="#000000"><br></font></span></h1><h1 class="entry-title" style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; font-size: 16px; vertical-align: baseline; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-weight: normal; font-stretch: normal; line-height: normal; font-family: SYekan, tahoma; min-height: 30px;"><span style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; border: 0px; background: transparent; text-decoration: none; transition: all 0.3s ease-out; font-stretch: normal; line-height: normal; min-height: 30px;"><font color="#000000"><br></font></span></h1><h1 class="entry-title" style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; font-size: 16px; vertical-align: baseline; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-weight: normal; font-stretch: normal; line-height: normal; font-family: SYekan, tahoma; min-height: 30px;"><span style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; border: 0px; background: transparent; text-decoration: none; transition: all 0.3s ease-out; font-stretch: normal; line-height: normal; min-height: 30px;"><font color="#000000">عکسهای &nbsp;قبل از عمل زیبایی بازیگران زن ایرانی</font></span></h1><div><span style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; border: 0px; background: transparent; text-decoration: none; transition: all 0.3s ease-out; font-stretch: normal; line-height: normal; min-height: 30px;"><font color="#000000"><br></font></span></div><div><span style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; border: 0px; background: transparent; text-decoration: none; transition: all 0.3s ease-out; font-stretch: normal; line-height: normal; min-height: 30px;"><font color="#000000"><br></font></span></div><div style="text-align: center;"><a href="post/992.html" target="_blank" title="alborz-picالبرز پیک"><img class="aligncenter size-full wp-image-39733" src="http://www.takmoj.com/wp-content/uploads/2016/09/68890d8703f9b4c921e686387c1727ae_takmoj.com.jpg" alt="عکسهای لو رفته قبل از عمل زیبایی, بازیگران زن ایرانی, عکسهای لو رفته بازیگران زن ایرانی, عکسهای لو رفته" width="500" height="334" srcset="http://www.takmoj.com/wp-content/uploads/2016/09/68890d8703f9b4c921e686387c1727ae_takmoj.com.jpg 500w, http://www.takmoj.com/wp-content/uploads/2016/09/68890d8703f9b4c921e686387c1727ae_takmoj.com-768x513.jpg 768w" sizes="(max-width: 500px) 100vw, 500px"></a></div><div style="text-align: center;"><span style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; border: 0px; background: transparent; text-decoration: none; transition: all 0.3s ease-out; font-stretch: normal; line-height: normal; min-height: 30px;"><font color="#00a55b"><span style="outline-color: initial; outline-style: initial; box-sizing: border-box; font-size: 12px; border-style: initial; border-color: initial; border-image: initial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; transition: all 0.3s ease-out;">نیوشا ضیغمی</span></font></span></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><span style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; border: 0px; background: transparent; text-decoration: none; transition: all 0.3s ease-out; font-stretch: normal; line-height: normal; min-height: 30px;"><br></span></div><div style="text-align: center;"><span style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; border: 0px; background: transparent; text-decoration: none; transition: all 0.3s ease-out; font-stretch: normal; line-height: normal; min-height: 30px;"><p style="outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; font-size: 12px; vertical-align: baseline; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px; color: rgb(63, 63, 63);"><font color="#444444"><span style="outline-color: initial; outline-style: initial; margin-right: auto; margin-left: auto; border-style: initial; border-color: initial; border-image: initial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; transition: all 0.3s ease-out;"></span></font><a href="post/992.html" target="" title="alborz-picالبرز پیک"><font color="#444444"><span style="outline-color: initial; outline-style: initial; margin-right: auto; margin-left: auto; border-style: initial; border-color: initial; border-image: initial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; transition: all 0.3s ease-out;"><img class="aligncenter size-full wp-image-39734" src="http://www.takmoj.com/wp-content/uploads/2016/09/4028c3ac691513f08fdcd02d907535db_takmoj.com.jpg" alt="عکسهای لو رفته قبل از عمل زیبایی, بازیگران زن ایرانی, عکسهای لو رفته بازیگران زن ایرانی, عکسهای لو رفته" width="500" height="311" srcset="http://www.takmoj.com/wp-content/uploads/2016/09/4028c3ac691513f08fdcd02d907535db_takmoj.com.jpg 500w, http://www.takmoj.com/wp-content/uploads/2016/09/4028c3ac691513f08fdcd02d907535db_takmoj.com-768x477.jpg 768w" sizes="(max-width: 500px) 100vw, 500px" style="outline: 0px; box-sizing: border-box; margin: 5px auto; padding: 0px; vertical-align: baseline; border: 0px; background: transparent; max-width: 98%; max-height: 500px; display: block;"></span></font></a>شبنم قلی خانی</p><p style="outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; font-size: 12px; vertical-align: baseline; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px; color: rgb(63, 63, 63);"><font color="#444444"><span style="outline-color: initial; outline-style: initial; margin-right: auto; margin-left: auto; border-style: initial; border-color: initial; border-image: initial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; transition: all 0.3s ease-out;"></span></font><a href="post/992.html" target="" title="alborz-picالبرز پیک"><font color="#444444"><span style="outline-color: initial; outline-style: initial; margin-right: auto; margin-left: auto; border-style: initial; border-color: initial; border-image: initial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; transition: all 0.3s ease-out;"><img class="aligncenter size-full wp-image-39735" src="http://www.takmoj.com/wp-content/uploads/2016/09/7c6a873df4273057bbe0cf23ac078bd1_takmoj.com.jpg" alt="عکسهای لو رفته قبل از عمل زیبایی, بازیگران زن ایرانی, عکسهای لو رفته بازیگران زن ایرانی, عکسهای لو رفته" width="500" height="334" srcset="http://www.takmoj.com/wp-content/uploads/2016/09/7c6a873df4273057bbe0cf23ac078bd1_takmoj.com.jpg 500w, http://www.takmoj.com/wp-content/uploads/2016/09/7c6a873df4273057bbe0cf23ac078bd1_takmoj.com-768x513.jpg 768w" sizes="(max-width: 500px) 100vw, 500px" style="outline: 0px; box-sizing: border-box; margin: 5px auto; padding: 0px; vertical-align: baseline; border: 0px; background: transparent; max-width: 98%; max-height: 500px; display: block;"></span></font></a>تینا آخوند تبار قبل و بعد از جراحی زیبایی</p><p style="outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; font-size: 12px; vertical-align: baseline; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px; color: rgb(63, 63, 63);"><font color="#444444"><span style="outline-color: initial; outline-style: initial; margin-right: auto; margin-left: auto; border-style: initial; border-color: initial; border-image: initial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; transition: all 0.3s ease-out;"></span></font><a href="post/992.html" target="" title="alborz-picالبرز پیک"><font color="#444444"><span style="outline-color: initial; outline-style: initial; margin-right: auto; margin-left: auto; border-style: initial; border-color: initial; border-image: initial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; transition: all 0.3s ease-out;"><img class="aligncenter size-full wp-image-39736" src="http://www.takmoj.com/wp-content/uploads/2016/09/a523d751c33ec654cf60b95a0a08274c_takmoj.com.jpg" alt="عکسهای لو رفته قبل از عمل زیبایی, بازیگران زن ایرانی, عکسهای لو رفته بازیگران زن ایرانی, عکسهای لو رفته" width="500" height="314" srcset="http://www.takmoj.com/wp-content/uploads/2016/09/a523d751c33ec654cf60b95a0a08274c_takmoj.com.jpg 500w, http://www.takmoj.com/wp-content/uploads/2016/09/a523d751c33ec654cf60b95a0a08274c_takmoj.com-768x482.jpg 768w" sizes="(max-width: 500px) 100vw, 500px" style="outline: 0px; box-sizing: border-box; margin: 5px auto; padding: 0px; vertical-align: baseline; border: 0px; background: transparent; max-width: 98%; max-height: 500px; display: block;"></span></font></a>پرستو صالحی</p><p style="outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; font-size: 12px; vertical-align: baseline; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px; color: rgb(63, 63, 63);"><font color="#444444"><span style="outline-color: initial; outline-style: initial; margin-right: auto; margin-left: auto; border-style: initial; border-color: initial; border-image: initial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; transition: all 0.3s ease-out;"></span></font><a href="post/992.html" target="" title="alborz-picالبرز پیک"><font color="#444444"><span style="outline-color: initial; outline-style: initial; margin-right: auto; margin-left: auto; border-style: initial; border-color: initial; border-image: initial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; transition: all 0.3s ease-out;"><img class="aligncenter size-full wp-image-39737" src="http://www.takmoj.com/wp-content/uploads/2016/09/9d8d11a4b47b6e1a025ac5ef5e3bdf7f_takmoj.com.jpg" alt="عکسهای لو رفته قبل از عمل زیبایی, بازیگران زن ایرانی, عکسهای لو رفته بازیگران زن ایرانی, عکسهای لو رفته" width="500" height="316" srcset="http://www.takmoj.com/wp-content/uploads/2016/09/9d8d11a4b47b6e1a025ac5ef5e3bdf7f_takmoj.com.jpg 500w, http://www.takmoj.com/wp-content/uploads/2016/09/9d8d11a4b47b6e1a025ac5ef5e3bdf7f_takmoj.com-768x485.jpg 768w" sizes="(max-width: 500px) 100vw, 500px" style="outline: 0px; box-sizing: border-box; margin: 5px auto; padding: 0px; vertical-align: baseline; border: 0px; background: transparent; max-width: 98%; max-height: 500px; display: block;"></span></font></a>نگار فروزنده</p><p style="outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; font-size: 12px; vertical-align: baseline; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px; color: rgb(63, 63, 63);"><font color="#444444"><span style="outline-color: initial; outline-style: initial; margin-right: auto; margin-left: auto; border-style: initial; border-color: initial; border-image: initial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; transition: all 0.3s ease-out;"></span></font><a href="post/992.html" target="" title="alborz-picالبرز پیک"><font color="#444444"><span style="outline-color: initial; outline-style: initial; margin-right: auto; margin-left: auto; border-style: initial; border-color: initial; border-image: initial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; transition: all 0.3s ease-out;"><img class="aligncenter size-full wp-image-39738" src="http://www.takmoj.com/wp-content/uploads/2016/09/75648aa79c8a3d71e72b7577c459ace0_takmoj.com.jpg" alt="عکسهای لو رفته قبل از عمل زیبایی, بازیگران زن ایرانی, عکسهای لو رفته بازیگران زن ایرانی, عکسهای لو رفته" width="500" height="317" srcset="http://www.takmoj.com/wp-content/uploads/2016/09/75648aa79c8a3d71e72b7577c459ace0_takmoj.com.jpg 500w, http://www.takmoj.com/wp-content/uploads/2016/09/75648aa79c8a3d71e72b7577c459ace0_takmoj.com-768x486.jpg 768w" sizes="(max-width: 500px) 100vw, 500px" style="outline: 0px; box-sizing: border-box; margin: 5px auto; padding: 0px; vertical-align: baseline; border: 0px; background: transparent; max-width: 98%; max-height: 500px; display: block;"></span></font></a>سحر جعفری جوزانی</p><p style="outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; font-size: 12px; vertical-align: baseline; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px; color: rgb(63, 63, 63);"><font color="#444444"><span style="outline-color: initial; outline-style: initial; margin-right: auto; margin-left: auto; border-style: initial; border-color: initial; border-image: initial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; transition: all 0.3s ease-out;"></span></font><a href="post/992.html" target="" title="alborz-picالبرز پیک"><font color="#444444"><span style="outline-color: initial; outline-style: initial; margin-right: auto; margin-left: auto; border-style: initial; border-color: initial; border-image: initial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; transition: all 0.3s ease-out;"><img class="aligncenter size-full wp-image-39739" src="http://www.takmoj.com/wp-content/uploads/2016/09/d00765b3296747f61d242d9ace218482_takmoj.com.jpg" alt="عکسهای لو رفته قبل از عمل زیبایی, بازیگران زن ایرانی, عکسهای لو رفته بازیگران زن ایرانی, عکسهای لو رفته" width="500" height="303" srcset="http://www.takmoj.com/wp-content/uploads/2016/09/d00765b3296747f61d242d9ace218482_takmoj.com.jpg 500w, http://www.takmoj.com/wp-content/uploads/2016/09/d00765b3296747f61d242d9ace218482_takmoj.com-768x465.jpg 768w" sizes="(max-width: 500px) 100vw, 500px" style="outline: 0px; box-sizing: border-box; margin: 5px auto; padding: 0px; vertical-align: baseline; border: 0px; background: transparent; max-width: 98%; max-height: 500px; display: block;"></span></font></a>شیلا خداداد</p><p style="outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; font-size: 12px; vertical-align: baseline; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px; color: rgb(63, 63, 63);"><font color="#444444"><span style="outline-color: initial; outline-style: initial; margin-right: auto; margin-left: auto; border-style: initial; border-color: initial; border-image: initial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; transition: all 0.3s ease-out;"></span></font><a href="post/992.html" target="" title="alborz-picالبرز پیک"><font color="#444444"><span style="outline-color: initial; outline-style: initial; margin-right: auto; margin-left: auto; border-style: initial; border-color: initial; border-image: initial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; transition: all 0.3s ease-out;"><img class="aligncenter size-full wp-image-39740" src="http://www.takmoj.com/wp-content/uploads/2016/09/40ba3234581374e6574d99d93bbe2fd6_takmoj.com.jpg" alt="عکسهای لو رفته قبل از عمل زیبایی, بازیگران زن ایرانی, عکسهای لو رفته بازیگران زن ایرانی, عکسهای لو رفته" width="500" height="256" srcset="http://www.takmoj.com/wp-content/uploads/2016/09/40ba3234581374e6574d99d93bbe2fd6_takmoj.com.jpg 500w, http://www.takmoj.com/wp-content/uploads/2016/09/40ba3234581374e6574d99d93bbe2fd6_takmoj.com-768x393.jpg 768w" sizes="(max-width: 500px) 100vw, 500px" style="outline: 0px; box-sizing: border-box; margin: 5px auto; padding: 0px; vertical-align: baseline; border: 0px; background: transparent; max-width: 98%; max-height: 500px; display: block;"></span></font></a>هانیه توسلی</p><p style="outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; font-size: 12px; vertical-align: baseline; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px; color: rgb(63, 63, 63);"><a href="post/992.html" target="" title="alborz-picالبرز پیک"><img class="alignnone size-full wp-image-229203" title="عکسهای لو رفته بازیگران زن ایرانی قبل از عمل زیبایی" src="http://www.takmoj.com/wp-content/uploads/2016/09/6de7d1d2f9735e268c9f7f98d4b3385f_takmoj.com.jpg" alt="عکسهای لو رفته بازیگران زن ایرانی قبل از عمل زیبایی" width="500" height="300" style="outline: 0px; box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; border: 0px; background: transparent; max-width: 98%; max-height: 500px;"></a><br style="outline: 0px; box-sizing: border-box; clear: both;">کتایون ریاحی</p><p style="outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; font-size: 12px; vertical-align: baseline; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px; color: rgb(63, 63, 63);">شراره رخام</p><p style="outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; font-size: 12px; vertical-align: baseline; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px; color: rgb(63, 63, 63);"><font color="#444444"><span style="outline-color: initial; outline-style: initial; margin-right: auto; margin-left: auto; border-style: initial; border-color: initial; border-image: initial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; transition: all 0.3s ease-out;"></span></font><a href="post/992.html" target="" title="alborz-picالبرز پیک"><font color="#444444"><span style="outline-color: initial; outline-style: initial; margin-right: auto; margin-left: auto; border-style: initial; border-color: initial; border-image: initial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; transition: all 0.3s ease-out;"><img class="aligncenter size-full wp-image-39743" src="http://www.takmoj.com/wp-content/uploads/2016/09/921250cc5509c9fa70231403c2fe0808_takmoj.com.jpg" alt="عکسهای لو رفته قبل از عمل زیبایی, بازیگران زن ایرانی, عکسهای لو رفته بازیگران زن ایرانی, عکسهای لو رفته" width="500" height="334" srcset="http://www.takmoj.com/wp-content/uploads/2016/09/921250cc5509c9fa70231403c2fe0808_takmoj.com.jpg 500w, http://www.takmoj.com/wp-content/uploads/2016/09/921250cc5509c9fa70231403c2fe0808_takmoj.com-768x513.jpg 768w" sizes="(max-width: 500px) 100vw, 500px" style="outline: 0px; box-sizing: border-box; margin: 5px auto; padding: 0px; vertical-align: baseline; border: 0px; background: transparent; max-width: 98%; max-height: 500px; display: block;"></span></font></a>صبا کمالی</p><p style="outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; font-size: 12px; vertical-align: baseline; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px; color: rgb(63, 63, 63);"><font color="#444444"><span style="outline-color: initial; outline-style: initial; margin-right: auto; margin-left: auto; border-style: initial; border-color: initial; border-image: initial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; transition: all 0.3s ease-out;"></span></font><a href="post/992.html" target="" title="alborz-picالبرز پیک"><font color="#444444"><span style="outline-color: initial; outline-style: initial; margin-right: auto; margin-left: auto; border-style: initial; border-color: initial; border-image: initial; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; transition: all 0.3s ease-out;"><img class="aligncenter size-full wp-image-39744" src="http://www.takmoj.com/wp-content/uploads/2016/09/7b8e2c29cc65423987e85ddd0d6d524a_takmoj.com.jpg" alt="عکسهای لو رفته قبل از عمل زیبایی, بازیگران زن ایرانی, عکسهای لو رفته بازیگران زن ایرانی, عکسهای لو رفته" width="500" height="334" srcset="http://www.takmoj.com/wp-content/uploads/2016/09/7b8e2c29cc65423987e85ddd0d6d524a_takmoj.com.jpg 500w, http://www.takmoj.com/wp-content/uploads/2016/09/7b8e2c29cc65423987e85ddd0d6d524a_takmoj.com-768x513.jpg 768w" sizes="(max-width: 500px) 100vw, 500px" style="outline: 0px; box-sizing: border-box; margin: 5px auto; padding: 0px; vertical-align: baseline; border: 0px; background: transparent; max-width: 98%; max-height: 500px; display: block;"></span></font></a>خاطره حاتمی</p><p style="outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; font-size: 12px; vertical-align: baseline; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px; color: rgb(63, 63, 63);"><br></p><p style="outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; font-size: 12px; vertical-align: baseline; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px; color: rgb(63, 63, 63);"><a href="post/992.html" target="" title="alborz-picالبرز پیک"><img class="aligncenter size-full wp-image-39745" src="http://www.takmoj.com/wp-content/uploads/2016/09/5f1e11b64b9722f2f913c644e9355ce8_takmoj.com.jpg" alt="عکسهای لو رفته قبل از عمل زیبایی, بازیگران زن ایرانی, عکسهای لو رفته بازیگران زن ایرانی, عکسهای لو رفته" width="500" height="407" srcset="http://www.takmoj.com/wp-content/uploads/2016/09/5f1e11b64b9722f2f913c644e9355ce8_takmoj.com.jpg 500w, http://www.takmoj.com/wp-content/uploads/2016/09/5f1e11b64b9722f2f913c644e9355ce8_takmoj.com-768x625.jpg 768w" sizes="(max-width: 500px) 100vw, 500px" style="outline: 0px; box-sizing: border-box; margin: 5px auto; padding: 0px; vertical-align: baseline; border: 0px; background: transparent; max-width: 98%; max-height: 500px; display: block;"></a></p><p style="outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; font-size: 12px; vertical-align: baseline; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px; color: rgb(63, 63, 63);"><br></p><p style="outline: 0px; box-sizing: border-box; margin: 5px 0px; padding: 0px; font-size: 12px; vertical-align: baseline; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; min-height: 20px; color: rgb(63, 63, 63);">منبع:takmoj.com</p></span></div>
+
+
+
+
+ </div>
+<br>
+<script>mihanblogPostLike('992','like')</script><br>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">مرتبط با: <a href="../post/category/45.html">
+سرگرمی , تفریحی</a> , <a href="../post/category/43.html">
+مطالب جالب و خواندنی</a> , <a href="../post/category/1.html">
+گالری عکس</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">برچسب‌ها: <a href="../post/tag/عکسهای&#32;قبل&#32;از&#32;عمل&#32;زیبایی&#32;بازیگران&#32;زن&#32;ایرانی.html">
+عکسهای قبل از عمل زیبایی بازیگران زن ایرانی</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+</div>
+</div>
+
+<div id="theme-designer-com-post-linksabet" style="margin:6px 0px 0px 0px;"><ul>
+<li><center><a href="../post/992.html" ><span class="theme-designer-com_koli_hidden">لینک ثابت</span></a></center></li>
+</ul></div>
+
+<div class="theme-designer-com-post-footer"><div class="theme-designer-com-post-footer2">
+منتشر شده در تاریخ 1395/07/10 توسط alborz-pic alborz</div></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="theme-designer-com_menuright-border2">
+<div class="theme-designer-com_menuright-border4">
+<div class="theme-designer-com_menuright-border1">
+<div class="theme-designer-com_menuright-border3">
+<div class="theme-designer-com_menuright-post">
+
+<div class="theme-designer-com-comments-box">
+<div class="comments-icon"></div>
+<div class="comments-text"><a target="_self" href="../post/991.html#commentlist">نظرات <script>setCommentCnt(991)</script> </a></div>
+</div>
+<div class="theme-designer-com_koli_clear"></div>
+
+<div class="theme-designer-com_post-backtitle">
+<div class="theme-designer-com_post-title" align="right"><a href="../post/991.html">آشنایی با 12 ماده غذایی ضد پیری</a></div>
+</div>
+
+<div align="center">
+<div class="theme-designer-com_post-badane" align="right">
+<div class="theme-designer-com-post-text"><span style="color: rgb(34, 34, 34); font-family: &quot;B Yekan&quot;, BYekan, Tahoma; font-size: 20px; text-align: -webkit-center; background-color: rgb(238, 238, 238);">آشنایی با 12 ماده غذایی ضد پیری</span>
+
+
+<div><span style="color: rgb(34, 34, 34); font-family: &quot;B Yekan&quot;, BYekan, Tahoma; font-size: 20px; text-align: -webkit-center; background-color: rgb(238, 238, 238);"><br></span></div><div><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="font-size: 10pt;">انسان دیر زمانی است که در تلاش برای یافتن اکسیر جوانی و راز زندگی طولانی مدت گزینه های مختلفی را مد نظر قرار داده و روش های مختلفی را امتحان کرده است. یکی از موارد تاثیرگذار در مبارزه با نشانه های افزایش سن و کسب طول عمر هر چه بیشتر رژیم غذایی افراد است.<br><br>به نقل از "ریدرز دایجست"، رعایت یک رژیم غذایی سالم همانند یک راز سر به مهر نیست بلکه توصیه ای همیشگی محسوب می شود که البته بسیاری از ما آن را نادیده می گیریم. مواد غذایی که روزانه و به طور مرتب مصرف می کنیم می توانند نقشی تاثیرگذار در افزایش طول عمر ما داشته باشند. بر همین اساس، در ادامه این ایمیل قصد داریم برخی از بهترین مواد غذایی ضد پیری که می توانند چندین سال به طول عمر شما اضافه کنند را معرفی کنیم.<br>&nbsp;</font></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#222222" style="font-size: 10pt;"><br></font><font face="Tahoma" color="#CC3300" style="font-size: 11pt; font-weight: 700;">لپه<br></font><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><a href="post/991.html" target="_blank" title="alborz-pic البرز پیک"><img src="https://ci4.googleusercontent.com/proxy/IqqoahGgKB7cOe-dlzazjYuOqFYdTcpZU6Gdczhp4wE77AIkkkUguy0NwFxFbDdflr2PEJCCcENYPbAQelWxDjYEPFifOQ=s0-d-e1-ft#http://persian-star.net/1395/7/7/ZedePiri/01.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><font face="Tahoma" color="#222222" style="font-size: 10pt;">هنگامی که بحث عمر طولانی مطرح می شود، چگونگی مصرف حبوبات سبز و زرد تا زمانی که در رژیم غذایی شما وجود داشته باشند، چندان فرقی نمی کند. نتایج مطالعه ای که توسط انتشارات BMJ منتشر شده است، نشان می دهد، مصرف لپه پخته شده و دیگر حبوبات - یک جز اصلی از رژیم غذایی مدیترانه ای - می تواند روند پیری در سطح سلولی را کند سازد. پژوهشگران فیبر و آنتی اکسیدان های موجود در لپه و دیگر حبوبات را عوامل موثری می دانند که به آنها قدرت افزایش طول عمر را می بخشند.<br>&nbsp;</font></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#222222" style="font-size: 10pt;"><br></font><font face="Tahoma" color="#CC3300" style="font-size: 11pt; font-weight: 700;">گردو<br></font><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><a href="post/991.html" target="_blank" title="alborz-pic البرز پیک"><img src="https://ci6.googleusercontent.com/proxy/6PD5lPVPfqY32m9UG1gEAS5jpE679ah4M-w96czbVwskm9ok6EBHIlKgnFL9tKIKqcBeZs3NCxG1awQ-Rxf1aBeP8KG1Rg=s0-d-e1-ft#http://persian-star.net/1395/7/7/ZedePiri/02.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><font face="Tahoma" color="#222222" style="font-size: 10pt;">خوردن آجیل یکی از بهترین کارهایی است که می توانید برای بهبود سلامت خود انجام دهید. بنابر نتایج مطالعه ای که در نشریه BMC Medicine منتشر شده است، افرادی که سه بار در هفته یا بیشتر آجیل، به ویژه گردو، مصرف می کنند، دو تا سه سال بیشتر عمر می کنند. افرادی که گردو مصرف می کنند به طور قابل توجهی خطر ابتلا به سرطان و بیماری قلبی، دو قاتل بزرگ که با افزایش سن، انسان را در معرض خطر مرگ قرار می دهند، در آنها کاهش می یابد. البته باید به این نکته توجه داشت که مطالعه ای دیگر نشان داده است بادام زمینی یا کره بادام زمینی فاقد فواید افزایش طول عمر هستند و تاثیری در این زمینه ندارند. همچنین، گردو یکی از مواد غذایی است که مصرف آن می تواند به باهوش‌تر شما منتج شود.<br>&nbsp;</font></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#222222" style="font-size: 10pt;"><br></font><font face="Tahoma" color="#CC3300" style="font-size: 11pt; font-weight: 700;">پروتئین های گیاهی<br></font><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><a href="post/991.html" target="" title="alborz-pic البرز پیک"><img src="https://ci5.googleusercontent.com/proxy/v54M_LRQcGvWdd-tWaZ0pGAoxFX5JxV-HA1s-Vvkkhq1qnd_SbNoK9jNmOQT62dgpFCztGRjxKv6KYqNht7PXy94Y3cqjQ=s0-d-e1-ft#http://persian-star.net/1395/7/7/ZedePiri/03.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><font face="Tahoma" color="#222222" style="font-size: 10pt;">لازم نیست تا وعده های غذایی حاوی گوشت خود را به طور کامل حذف کنید اما افزودن چند وعده غذایی بدون گوشت در هفته می تواند به افزایش طول عمر شما کمک کند. بنابر نتایج مطالعه انجمن نفرولوژی آمریکا، افزودن منابع گیاهی پروتئین به رژیم غذایی می تواند طول عمر شما را افزایش دهد، به ویژه اگر از مشکلات کلیه رنج می برید. مواد غذایی مانند کینوا، برنج، لوبیاها، سویا، توفو، و گندم سیاه فواید فیبر، ویتامین ها، و مواد معدنی موجود در خود را به رژیم غذایی شما می افزایند.<br>&nbsp;</font></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#222222" style="font-size: 10pt;"><br></font><font face="Tahoma" color="#CC3300" style="font-size: 11pt; font-weight: 700;">هویج<br></font><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><a href="post/991.html" target="" title="alborz-pic البرز پیک"><img src="https://ci5.googleusercontent.com/proxy/NgacLj5rQ2VTZAAjCGF0SbZpCO357P89UdikuQI8OdHq5X7TusrthZX9XYVxmd2KXwMEtsGdZk8TFvMQDtKYwNyDHiJMig=s0-d-e1-ft#http://persian-star.net/1395/7/7/ZedePiri/04.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.net" class="CToWUd"></a></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><font face="Tahoma" color="#222222" style="font-size: 10pt;">انواع مختلف هویج از مواد غذایی سالم اصلی محسوب می شوند و جای شگفتی ندارد که برای انسان مفید هستند. اما آیا می دانستید مصرف هویج نه تنها می تواند به طول عمرتان اضافه کند بلکه در حفظ ظاهری جذاب‌تر نیز به شما کمک می کند؟ نتایج مطالعه پژوهشگران دانشگاه گلاسکو نشان داده است که کاروتنوئیدهای موجود در هویج که رنگ نارنجی روشن را به آن می بخشند می توانند روند پیری را کند کرده و فرد را برای جفت های بالقوه خود جذاب‌تر سازد.<br>&nbsp;</font></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#222222" style="font-size: 10pt;"><br></font><font face="Tahoma" color="#CC3300" style="font-size: 11pt; font-weight: 700;">ساردین<br></font><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><a href="post/991.html" target="" title="alborz-pic البرز پیک"><img src="https://ci4.googleusercontent.com/proxy/ESxB1dfNXMbXYk3BRrPKi2H4dDKKaA_fD_G9nfvUwpETOnvCotNbOkz2frJUBFB3482fGlkhwG92YUJbNjSpySZSTzoxaQ=s0-d-e1-ft#http://persian-star.net/1395/7/7/ZedePiri/05.jpg" border="0" alt="گروه اینترنتی پرشیـن استار | www.Persian-Star.org" class="CToWUd"></a></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><font face="Tahoma" color="#222222" style="font-size: 10pt;">نتایج مطالعه آکادمی تغذیه و رژیم های غذایی آمریکا نشان داده است که اسیدهای چرب امگا-3 فواید چشمگیری در زمینه طول عمر دارند و به کاهش خطر ابتلا به بیماری قلبی و دیابت کمک می کنند. در شرایطی که می توانید این ترکیبات جادویی را در انواع مختلف ماهی های چرب پیدا کنید، یکی از بهترین منابع آن که البته کمتر شناخته شده است، ماهی ساردین محسوب می شود. تنها یک وعده از این ماهی های کوچک می تواند نصف نیاز روزانه شما به اسیدهای چرب امگا-3 و 400 درصد از نیاز روزانه به ویتامین B12، یکی دیگر از مواد مغذی موثر در طول عمر بیشتر، را تامین کند. از آنجایی که ساردین ها کوچک هستند در پایین زنجیره غذایی قرار گرفته و از این رو احتمال آلودگی آنها با سموم مختلف نسبت به ماهی های بزرگ‌تر مانند ماهی تن یا سالمون کمتر است.<br>&nbsp;</font></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#222222" style="font-size: 10pt;"><br></font><font face="Tahoma" color="#CC3300" style="font-size: 11pt; font-weight: 700;">حلزون<br></font><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><a href="post/991.html" target="" title="alborz-pic البرز پیک"><img src="https://ci4.googleusercontent.com/proxy/iRnRkVA48JXW3IMpm3Jj4C7CgndLQV3Zf-WmVjMoZm4pQ8SuiJVtGaYmFEN2ae1fKfPcR470rh9wEbeHsg-uihe_dh0IHA=s0-d-e1-ft#http://persian-star.net/1395/7/7/ZedePiri/06.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><font face="Tahoma" color="#222222" style="font-size: 10pt;">حلزون در برخی از کشورهای جهان مانند فرانسه از جمله غذاهای محبوب و پر طرفدار محسوب می شود. حلزون منبع خوبی برای آهن است. آهن موجود در حلزون می تواند به پیشگیری از کم خونی و افزایش طول عمر انسان کمک کند.<br>&nbsp;</font></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#222222" style="font-size: 10pt;"><br></font><font face="Tahoma" color="#CC3300" style="font-size: 11pt; font-weight: 700;">نارگیل<br></font><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><a href="post/991.html" target="" title="alborz-pic البرز پیک"><img src="https://ci6.googleusercontent.com/proxy/7WzO8ZFgrVlPE8yKqa6el7FljKMDzw5dLDgkV5YtYtwnErag2Iay1FBPSggNVV3abIZYjH6uFRn5zcq9hAInMmnVufu7wg=s0-d-e1-ft#http://persian-star.net/1395/7/7/ZedePiri/07.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><font face="Tahoma" color="#222222" style="font-size: 10pt;">نتایج یک مطالعه انجام شده توسط پژوهشگران دانشگاه کپنهاگ دانمارک نشان داده است، مصرف یک رژیم غذایی سرشار از چربی های سالم از جمله اسیدهای چرب زنجیره متوسط که در نارگیل یافت می شوند، روند پیری مغز را در نتیجه محافظت از آسیب دیدن DNA کند می سازد. در شرایطی که این مطالعه روی موش ها صورت گرفته است، اما پژوهشگران اعلام کرده اند که نارگیل می تواند نتایجی مشابه را برای انسان به همراه داشته باشد و به جوان نگه داشتن مغز کمک کند.<br>&nbsp;</font></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#222222" style="font-size: 10pt;"><br></font><font face="Tahoma" color="#CC3300" style="font-size: 11pt; font-weight: 700;">کلم ترش<br></font><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><a href="post/991.html" target="" title="alborz-pic البرز پیک"><img src="https://ci4.googleusercontent.com/proxy/sHMkQOpQrFQdk9CP5OnOHeuKAJ6NQk4X49lmbtY0ovfInfO-2ucndfLNaebTjVlAY6qS9ku55bxScWwWyl4zw2X3VP3WFg=s0-d-e1-ft#http://persian-star.net/1395/7/7/ZedePiri/08.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><font face="Tahoma" color="#222222" style="font-size: 10pt;">کلم رنده شده و آب پز شده با سرکه و دیگر غذاهای سرشار از باکتری های خوب مانند ماست، کفیر و کیمچی (نوعی خوراک تخمیر شده کره ای) می توانند به افزایش طول عمر انسان کمک کنند. عامل کلیدی در این زمینه انواع مختلف پروبیوتیک موجود در غذاهای تخمیر شده محسوب می شود. باکتری های خوب التهاب را کاهش می دهند، سیستم ایمنی بدن انسان را تقویت می کنند، و به سوخت و ساز بهتر کمک می کنند که این شرایط می تواند به افزایش طول عمر انسان منتج شود.<br>&nbsp;</font></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#222222" style="font-size: 10pt;"><br></font><font face="Tahoma" color="#CC3300" style="font-size: 11pt; font-weight: 700;">سیب زمینی شیرین<br></font><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><a href="post/991.html" target="" title="alborz-pic البرز پیک"><img src="https://ci5.googleusercontent.com/proxy/c7m7DtSlizkHyglEpVzyNsgyHHRK-o--0kCzLEbG6Q0atF-FTq2UcJ8VWscRjfY4RlgdFmRtxmBH0lxlWkxwq4U37UsU7Q=s0-d-e1-ft#http://persian-star.net/1395/7/7/ZedePiri/09.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><font face="Tahoma" color="#222222" style="font-size: 10pt;">به گفته پژوهشگران دانشگاه ایالتی کانزاس، سیب زمینی های شیرین با توجه به ویژگی های افزایش طول عمر خود می توانند نقشی ویژه در رژیم غذایی انسان داشته باشند. سیب زمینی های شیرین که در انواع و رنگ های مختلف در دسترس هستند حاوی سطوح بالای آنتوسیانین هستند. آنتوسیانین ترکیبی است که می تواند خطر ابتلا به سرطان را کاهش داده و طول عمر انسان را افزایش دهد.<br>&nbsp;</font></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#222222" style="font-size: 10pt;"><br></font><font face="Tahoma" color="#CC3300" style="font-size: 11pt; font-weight: 700;">شکلات<br></font><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><a href="post/991.html" target="" title="alborz-pic البرز پیک"><img src="https://ci6.googleusercontent.com/proxy/VTuBgg03FVPdeWJ19P6AU6XJOAy8gB7zZtDfoGMYS4jXs7TOyVz6dRnHFdHE6q0NP2AnrCOHALVZ7AffwxQpPZ7ci4VhbA=s0-d-e1-ft#http://persian-star.net/1395/7/7/ZedePiri/10.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><font face="Tahoma" color="#222222" style="font-size: 10pt;">شکلات از خوراکی های محبوب و دوست داشتنی در سراسر جهان است و دانشمندان دریافته اند مصرف انواع خوب آن، به ویژه شکلات تلخ، می تواند به افزایش طول عمر انسان کمک کند. شکلات منبع خوبی برای رسوراترول، ترکیبی قدرتمند که می تواند نشانه های پیری سلولی را معکوس سازد، محسوب می شود. برای دریافت فواید ضد پیری کامل خوردن شکلات تلخ توصیه می شود.<br>&nbsp;</font></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#222222" style="font-size: 10pt;"><br></font><font face="Tahoma" color="#CC3300" style="font-size: 11pt; font-weight: 700;">انار<br></font><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><a href="post/991.html" target="" title="alborz-pic البرز پیک"><img src="https://ci5.googleusercontent.com/proxy/mX67X7Gaau_wNCYKt8HG5eYYHmN2V-tL1KPFsDbTXLUPVnmZEj582vvimEO5V8FdkoA7FjRUeChWrpC0M-9hgOD-UfJwgw=s0-d-e1-ft#http://persian-star.net/1395/7/7/ZedePiri/11.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><font face="Tahoma" color="#222222" style="font-size: 10pt;">انار دارای قدرت های فوق العاده ای است. بنابر نتایج مطالعه پژوهشگران فرانسوی، این میوه می تواند در افزایش طول عمر انسان نیز نقش داشته باشد. به گفته دانشمندان، مولکول Urolithin A که در میوه انار یافت می شود توسط میکروب های موجود در روده تغییر شکل یافته و سلول های عضلانی را قادر می سازد در برابر یکی از دلایل اصلی پیری از خود محافظت کنند. بدون تردید، مصرف انار یکی از خوشمزه‌ترین روش های موجود برای افزایش طول عمر به نظر می رسد.<br>&nbsp;</font></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: center;"><font face="Tahoma" color="#222222" style="font-size: 10pt;"><br></font><font face="Tahoma" color="#CC3300" style="font-size: 11pt; font-weight: 700;">محدودیت کالری دریافتی<br></font><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><a href="post/991.html" target="" title="alborz-pic البرز پیک"><img src="https://ci3.googleusercontent.com/proxy/C-FRs0_9ZmB6LAtus5-TPi-RJwJ6s5LnaRmJ_BXKhRlA4bSVaLYtj7LEMYBAKf1XOq5EsK44Sq4qRfWUGWtiEJIDgHVraA=s0-d-e1-ft#http://persian-star.net/1395/7/7/ZedePiri/12.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.net" class="CToWUd"></a></p><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.3333px; text-align: justify;"><font face="Tahoma" color="#222222" style="font-size: 2pt;"><br></font><font face="Tahoma" color="#222222" style="font-size: 10pt;">به تازگی مطالعه ای در نشریه نیچر به چاپ رسید که بهترین گزینه برای افزایش طول عمر را محدود کردن مصرف مواد غذایی عنوان کرده بود. طی این مطالعه پژوهشگران دریافتند مردم، حیوانات و حتی کرم هایی که یک رژیم غذایی محدوده شده از نظر دریافت کالری را مصرف می کنند حدود 40 درصد بیشتر از همتایان پرخور خود عمر می کنند. البته حالت نیمه گرسنه دائمی می تواند سال های اضافی عمر انسان را ناخوشایند سازد و از این رو مطالعات جدیدتر بر مفهوم "روزه داری متناوب" یا عدم مصرف مواد غذایی برای دوره هایی از 12 ساعت تا 36 ساعت متمرکز بوده اند. از این طریق می توانید از فواید محدودیت کالری دریافتی بدون تجربه گرسنگی آزار دهنده بهره‌مند شوید. یک رژیم غذایی کم کالری نقشی کلیدی در حفظ سلامت و طول عمر بیشتر انسان دارد.</font><b><font face="Tahoma" color="#CC0000" size="3"><br></font></b></p></div> </div>
+<br>
+<script>mihanblogPostLike('991','like')</script><br>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">مرتبط با: <a href="../post/category/1.html">
+گالری عکس</a> , <a href="../post/category/43.html">
+مطالب جالب و خواندنی</a> , <a href="../post/category/45.html">
+سرگرمی , تفریحی</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">برچسب‌ها: <a href="../post/tag/آشنایی&#32;با&#32;12&#32;ماده&#32;غذایی&#32;ضد&#32;پیری.html">
+آشنایی با 12 ماده غذایی ضد پیری</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+</div>
+</div>
+
+<div id="theme-designer-com-post-linksabet" style="margin:6px 0px 0px 0px;"><ul>
+<li><center><a href="../post/991.html" ><span class="theme-designer-com_koli_hidden">لینک ثابت</span></a></center></li>
+</ul></div>
+
+<div class="theme-designer-com-post-footer"><div class="theme-designer-com-post-footer2">
+منتشر شده در تاریخ 1395/07/7 توسط alborz-pic alborz</div></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="theme-designer-com_menuright-border2">
+<div class="theme-designer-com_menuright-border4">
+<div class="theme-designer-com_menuright-border1">
+<div class="theme-designer-com_menuright-border3">
+<div class="theme-designer-com_menuright-post">
+
+<div class="theme-designer-com-comments-box">
+<div class="comments-icon"></div>
+<div class="comments-text"><a target="_self" href="../post/990.html#commentlist">نظرات <script>setCommentCnt(990)</script> </a></div>
+</div>
+<div class="theme-designer-com_koli_clear"></div>
+
+<div class="theme-designer-com_post-backtitle">
+<div class="theme-designer-com_post-title" align="right"><a href="../post/990.html">امکاناتی برای خانه به‌دوش‌های مُرفه!</a></div>
+</div>
+
+<div align="center">
+<div class="theme-designer-com_post-badane" align="right">
+<div class="theme-designer-com-post-text"><div><span style="color: rgb(34, 34, 34); font-family: &quot;B Yekan&quot;, BYekan, Tahoma; font-size: 20px; text-align: -webkit-center; background-color: rgb(238, 238, 238);">امکاناتی برای خانه به‌دوش‌های مُرفه!</span></div><b><span style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 13.3333px; text-align: justify;"><div><b><span style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 13.3333px; text-align: justify;"><br></span></b></div><div><b><span style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 13.3333px; text-align: justify;"><br></span></b></div>کاروان‌های مسافرتی، خانه‌ها یا هتل‌هایی روی چرخ هستند که سبکی از سفر را در دنیا به جریان انداخته‌اند و جای خالی اقامتگاه‌ها را در مسیرهای پَرت و بدون امکانات، پر می‌کنند. در بسیاری از کشورها سفر با این کاروان‌ها که تمام وسایل یک خانه‌ی کوچک را دارند، امری کاملا رایج است، به‌طوری که کمپانی‌هایی برای اجاره دادن این نوع اتومبیل‌ها به گردشگران وجود دارند و مناطقی را برای استقرار کاروان‌ها و کمپینگ‌ها اختصاص داده‌اند.</span><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 13.3333px; text-align: justify;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 13.3333px; text-align: justify;"><span style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 13.3333px; text-align: justify;">کاروان‌ها فقط مخصوص گردشگرانی نیستند که تمایل دارند، ‌ارزان سفر کنند، بلکه ماجراجویان مرفه نیز هوادار "موبیل هوم‌”هایی هستند که صنعت آن رو به پیشرفت است و قیمت‌های میلیاردی هم دارد.</span></b><div><b><br></b></div><div><b><br></b></div><div><b><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 13.3333px; text-align: justify;"></b>
+
+
+<div><b><span style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 13.3333px; text-align: justify;"><br></span></b></div><div><b><span style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 13.3333px; text-align: justify;"><br></span></b></div><div><b><span style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 13.3333px; text-align: justify;"><br></span></b></div></div><div><a href="post/990.html" target="_blank" title="alborz-pic البرز پیک"><img src="https://ci5.googleusercontent.com/proxy/EzDXdyVHzSTyCx4Ot2LdrVhTbnKqnYDBUbLIZcHKlzcCVfvyyRAmO4z1NFKKhA17ZMDmVaroVc8o4qx_pHv6y4v2K7M6W6gh0w=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/01.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci6.googleusercontent.com/proxy/N3dywCSOw5YMCz5bXcDCfqJPVrFc2pyUd2uJYvmur725WMcdmPCCI2QFFavf-CVIVJUU1n_oKZFW1ohUH7Wiikq3xtfk0h0EaA=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/02.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci6.googleusercontent.com/proxy/jAGzTEqjQqsJ-iQeNXoAv7f9EY1I8jErBNAW67zkKtl4II01RKE1nErfJ74h-Di7EF9oVuFkPB2XZ6yZVWjavQXFrrgVyUBfsg=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/03.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci6.googleusercontent.com/proxy/Rf21M6LvodNyXIRWQwGM9PCYhOAVfuKNfS_a35sZ_jhWTl6XqN5eLoH7VZIzloK-IwIRyBpvOf7Aqy6WQzhcKZOeFUFD_jZ9DA=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/04.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.net" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci4.googleusercontent.com/proxy/YqBsaYfycKk-duumHncmfYrg0kZlM0P-6U8dze5I9zhZ9PWq8djZ-uJrv2oeh28lMgxH2OrNM-fS6gq9u9pISp1V4uDNsDB27g=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/05.jpg" border="0" alt="گروه اینترنتی پرشیـن استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci5.googleusercontent.com/proxy/a2Yxm9C8c75hOEAa11-98-lgM6jIkaPJx5CxI8nN6kLWObnqb9HH7-2-VnP6H3eRmNg75oCwQx38l4Kp6BUsCPCKUOy8wyR-pw=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/06.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci6.googleusercontent.com/proxy/cPUa55Ya0NpRLivEvhMuXfgj_vTzEdE-4cyLb82Kv9XGmKUWN9y5y3xc5nUvMaxdniyhH2b56uzMpoXsCKkX5IHbRQi9WDo6OQ=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/07.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci4.googleusercontent.com/proxy/QD_4EFFpoFHKVsK_7-2Ip2Gm0BgMccESeThDZCVxxF7YXAEuhDG8Z82iaBQG-bCBV9377jxH_0C-HN6-ohQNGXomSFhzXdZgwA=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/08.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci3.googleusercontent.com/proxy/95VynZLAN61NrdZVxoH86tpTXv-GS8NRjBVt7NdhSUrq1gIuAo8gZ3MAV12WynfV0CdPDk-GqI7yCgoJTMbkM55YaK3EXzcIbg=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/09.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci6.googleusercontent.com/proxy/GKvq2KJ1pcPPZPCQbw0PTJHjgDaY-6X8UZIHpY4--53QgdIzAJEJSzkRVQx2Bc-vDNDWKGONSa3VuADuHdUAD2mzBw-_ib2zdg=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/10.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><div style="text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci4.googleusercontent.com/proxy/25r_cR18D4Th_cQ1LwdtqmlVJowgfC1Zlw0eUQ6uliC5CYBCRhetOM4NbLBJP5dtqypf9VyTw-ss1H1IGHw3iWRp_csM8-kZrw=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/11.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a></div><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci4.googleusercontent.com/proxy/6Vr3B1aVqXyZ-wXDBjMtAtKG2gvHR3B57VpL9mABFuYFvAVT-uxPDDx6d9m7qOWwI7AjDdrV0dg_u8uXRrkMW-7_K46L9NFohA=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/12.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.net" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci5.googleusercontent.com/proxy/nBhvvTMllIf5FSPN6BxsMl7dZUF9jNnBc0fVnSgPoaf__vi7EMhi5mQScZBWX1kvEKlHlX4gANRO7Qcxd1SlRbuUJ5FemU_Zdw=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/13.jpg" border="0" alt="گروه اینترنتی پرشیـن استـار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><div style="text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci5.googleusercontent.com/proxy/rcYGwtPiG1Z1RRdMIuW6x7m0dAkyQzY9RLUbNb9VB2A0WR3V6dJIvqG6JGtm1BLKaCXIRI4omZUuh4kdHOuOT1eUvP4m8mOKSQ=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/14.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a></div><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci5.googleusercontent.com/proxy/R-7ReKn84i7dQ2yLkZl4Jjky_7Ye3bfIt4qTvMD3Yx5V_TX0bhx32FzYxPnwIXDnGiawC-nx6G2hLEQkc0olCPfdssLh-AwMEA=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/15.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci4.googleusercontent.com/proxy/WwC_ijIaWZdkuh8dEVIiPPcSvJ7oe7EhTAGr07tX4Z-u-Kv0ileAQigTbNYo2WLosvGXMsCyA-MFIKJX60onxyMKLrZvzXU4fw=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/16.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci3.googleusercontent.com/proxy/Xbvz0E7OHkbv2QBEJm9B4y5c1cs8Bi8_A2iEHUpgXa9axrISYHqeCX5sbFzkT3hJk5v6fuu9j7EF4dXBiDcX3-JdGSVYmxeYdw=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/17.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci5.googleusercontent.com/proxy/OxewH_yqIOt-H_yKZAwBBM1Ti196pJ3FsNF7bPiDT5FQfvxbFbCMbhMjw9pxaEETre_dXm_QxHAwklEJpPNGkF1pc_5bRnOa1g=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/18.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci5.googleusercontent.com/proxy/oOW7O_GJNgBVfI4Ce4XvtDsLeTDVNP-GjDkR0E5fC5kw5dSP26EsYeKty3DusmZF7zyfYpeEZRWLZvLmXV8QqE-YMXqdhfAtQA=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/19.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci4.googleusercontent.com/proxy/KznGz6OunraNCGiDOjFQJ03mn1-0n3ijGdPoJ_OI3jz1w1Zm4p_L4uh5Va4_zjoHxciA20Cv-8bXlcbxL-dJ67AYRXY0iLE_kg=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/20.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci3.googleusercontent.com/proxy/i6SGl1Y6WABUJw0R1LpmiLDoT72rSwbfFAWOo3dPhOe4p2BU2mLqLFZCb2U4SBGKJLusRffbRhsrjKpXF6rLmXjq55BMiICG-g=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/21.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.net" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci3.googleusercontent.com/proxy/5NK7lIhHlgqoUpfk8LHp1WIoXw41W4b47UM6RIvJinj-L-ViuGLmtb2dVF0XaL9HSf_L0o5CWg2Os8-k_u0rh3xXwXoC8FRnkg=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/22.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci3.googleusercontent.com/proxy/u4EG_wsws0eKqgFkFBicefpM7mdYwyjZqxHW_VOnzB7qgLNaAOVZV7ep5f-Adad7M8vqLbgJoPUvltulUxsL-AUpt5pWGDtk3g=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/23.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci3.googleusercontent.com/proxy/jT5a7Oz6Y9At9_UWkM0E5Hxz6B9RGg3li_V6we_FEZKHp6EEjeVdTUJoe565WqqnUKaZ5yLYxwDXGR89prxTRhPabfcQaCj0fA=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/24.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci5.googleusercontent.com/proxy/5EVKme1GfkJvqfqWe_EcQzZAQu05O2NX6B5A21Tdd_CE7lxTIM05XeVVJCqUroTnOMU-P6_3gRcoOv8UnnebrX0uuOFSPpDlBw=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/25.jpg" border="0" alt="گروه اینترنتـی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci6.googleusercontent.com/proxy/gVze88U0US1zqTjFJjqU0Cl7-6H0WewCrRvM7DF7rEW7nxJYuz9J6p3TwPVQEouq80y0qgjYIxXK-nSVhKKDoyUOdBHblHlBuA=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/26.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.net" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci5.googleusercontent.com/proxy/PIOz8tkAw0abApsHkT7LAgIpVNThF4mL1Mx_b743IDQEds_hdykreOc3kh2UFo-jrbv6Yqfsd5bhZvR9jqf9ovMEwK4POLQAmQ=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/27.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci6.googleusercontent.com/proxy/ic4TIawVT3RZBvE63l8V0wa1Vilnt8e1vC3-e0TAazAYPQFWj3drH8ykTY1Ya1NbQnZavCHxG9T0r1TMZEFaNd1HiQnMmlVjVw=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/28.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci6.googleusercontent.com/proxy/p8dV-nNALLyVpZWenCILSH8aSOGkL7bUiDSWLiTIZAaBHkKk2zU5-qPCu6ARPLKVilD0Kys8WnvbIcTskhlC24F8tkIRpT-wqw=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/29.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci4.googleusercontent.com/proxy/T0kLmYZTLJeYTc0U_m2ZuVWpW8QUJx7jSgigka_Qe80FGji6qbPG-gqcaLwuyF0ieqNjxxSok10Z-tjGSPIQ_S5hEvOtVZTfWw=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/30.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci5.googleusercontent.com/proxy/ZaNArjU866zFqUX7hIRhc6p1cYIl2WgfNFWIJHbJIlLhu5bqkTst2AuClRLlIePftN1w6pH9WaN5kkyl0y8p3hnjMRVmx-yldA=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/31.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><div style="text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci6.googleusercontent.com/proxy/mFyCiQsuXqhAFmNBLoUy1bqrPzhTMKI8j45x14yHWPVkxLQMlXLiqkk57MjA8om3rQqP4oMCrvjJtcqi2YyrNuSzow2IRBOP9g=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/32.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a></div><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci4.googleusercontent.com/proxy/kiwW-Xs-7dvv26OauEnXU0obPKVkCGCWc93mxW3my75YZ2tr-R5UCg4VnQFXwu6yxzvaY-ggJAEXk8RfENUDeUkC2Z0IoMnx8Q=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/33.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci5.googleusercontent.com/proxy/qTYbRC0JRhoi7hSgwpCxZVZkUOupaNPl2dKq-msoCV77qQe6jkCzTG8tDoYwnDzeO_vwu8d4IK9MjCa-xFc2IAClKcAqvFFD7w=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/34.jpg" border="0" alt="گروه اینترنتی پرشیـن استـار | www.Persian-Star.net" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci5.googleusercontent.com/proxy/t9wwCiXUi6EVoUCJpR-LQ_lC8rdCQJQFxTnrB0yYIyqsSFdxOi0YzZpVKnISoQz8e1EqG_owePeoyRSYcArJvWALhnW2Q2sx1w=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/35.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci4.googleusercontent.com/proxy/TLFdLbGCWRz0-JOBTmYj9z6edcWVVFuCm6xH8l-2eFjAtUl_bK3j73XSkyVw4lEk2RlHY_OH05ZcGXwLo51HavNHdIXpbgxQ1A=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/36.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci6.googleusercontent.com/proxy/-CkW2WGvYpPgRpd1K40ybC7q34gpnirSS7AiCj3HiR6dD-d8oWNbH1fKxfThYrcPPIKrbLfxWVbMC3A6KMOBrdRMXaVNB5Kqlw=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/37.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><br style="color: rgb(34, 34, 34); font-family: Tahoma; font-size: 12px; text-align: center;"><a href="post/990.html" target="" title="alborz-pic البرز پیک"><img src="https://ci4.googleusercontent.com/proxy/EnBdeAqKauRwP6trGg2sDzh6VoGKS2uLx47k7ODXNoNaFpxsDX1mYY_qaf8DGbmxWwzOZKC_DS9FiX9ge12ve6VEwWOB1ZBfRg=s0-d-e1-ft#http://persian-star.net/1395/7/7/KhaneBeDosh/38.jpg" border="0" alt="گروه اینترنتی پرشین استار | www.Persian-Star.org" class="CToWUd"></a></div> </div>
+<br>
+<script>mihanblogPostLike('990','like')</script><br>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">مرتبط با: <a href="../post/category/45.html">
+سرگرمی , تفریحی</a> , <a href="../post/category/1.html">
+گالری عکس</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+<div class="theme-designer-com_width100-darsad" style="margin:4px 0px 0px 0px;">
+<div class="post-abi-icon"></div>
+<div class="post-abi-icon2">برچسب‌ها: <a href="../post/tag/امکاناتی&#32;برای&#32;خانه&#32;به‌دوش‌های&#32;مُرفه!.html">
+امکاناتی برای خانه به‌دوش‌های مُرفه!</a> , <a href="../post/tag/جالب.html">
+جالب</a> , <a href="../post/tag/دیدنی.html">
+دیدنی</a> , <a href="../post/tag/زیبا.html">
+زیبا</a> , </div>
+</div>
+<div style="theme-designer-com_clear"></div>
+</div>
+</div>
+
+<div id="theme-designer-com-post-linksabet" style="margin:6px 0px 0px 0px;"><ul>
+<li><center><a href="../post/990.html" ><span class="theme-designer-com_koli_hidden">لینک ثابت</span></a></center></li>
+</ul></div>
+
+<div class="theme-designer-com-post-footer"><div class="theme-designer-com-post-footer2">
+منتشر شده در تاریخ 1395/07/7 توسط alborz-pic alborz</div></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ------------comment------------ -->
+<div style="margin:30px 15px 0px 0px;">
+</div>
+<!-- ------------/comment------------ -->
+
+
+<table border="0" width="100%" id="table3" cellspacing="0" cellpadding="0">
+<tr>
+<td width="30"></td>
+<td>
+<table border="0" width="100%" id="table4" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center">
+<p align="right">
+<div class="theme-designer-com-list-page">تعداد کل صفحات: 206 </div>
+<div class="pagenu"><a href="8%3Factionmode=3.html"><i>...</i></a></div><div class="pagenu"><a href="9%3Factionmode=3.html"><span>9</span></a></div><div class="pagenu"><a href="10%3Factionmode=3.html"><span>10</span></a></div><div class="pagenu"><a href="11%3Factionmode=3.html"><span>11</span></a></div><div class="pagenu"><a href="12%3Factionmode=3.html"><b>12</b></a></div><div class="pagenu"><a href="13%3Factionmode=3.html"><span>13</span></a></div><div class="pagenu"><a href="14%3Factionmode=3.html"><span>14</span></a></div><div class="pagenu"><a href="15%3Factionmode=3.html"><span>15</span></a></div><div class="pagenu"><a href="16%3Factionmode=3.html"><i>...</i></a></div></td>
+</tr>
+</table>
+</td>
+<td width="30"></td>
+</tr>
+</table>
+<br>
+<br>
+
+</td>
+<td width="12" valign="top">&nbsp;</td>
+<td width="288" valign="top">
+
+<div class="search">
+<form method="Get" target="_blank" action="http://google.com/search" class=sch><input name="sitesearch" value="http://alborz-pic.mihanblog.com" type="hidden">
+<div style="height:26px; overflow:hidden; width:277px; overflow:hidden;">
+<input type="text" name="q" size="5" class=txt value="" onfocus="if (this.value == '') {this.value = '';}" onblur="if (this.value == '') {this.value = '';}"><input type="submit" value=" " class="but">
+</div>
+</form>
+</div>
+
+<div class="theme-designer-com_menuleft-border2">
+<div class="theme-designer-com_menuleft-border1">
+<div class="theme-designer-com_menuleft-border3">
+<div class="theme-designer-com_menuleft-border4">
+<div align="center">
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">درباره وبگاه</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="menuleft-text">
+<div align="center" style="padding:0px 0px 5px 0px;"><img src="http://static.mihanblog.com//public/user_data/web_photo/382/1145999.jpg?4382"  /></div>
+سایت تفریحی و سرگرمی</div>
+<div class="vmenu"><a target="_blank" href="../post/author/986785.html">alborz-pic alborz</a></div>
+</div>
+
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">موضوعات</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="vmenu"><a href="../post/category/45.html" title="450" >سرگرمی , تفریحی</a></div>
+<div class="vmenu"><a href="../post/category/43.html" title="549" >مطالب جالب و خواندنی</a></div>
+<div class="vmenu"><a href="../post/category/1.html" title="484" >گالری عکس</a></div>
+<div class="vmenu"><a href="../post/category/46.html" title="20" >تصاویر متحرک</a></div>
+<div class="vmenu"><a href="../post/category/37.html" title="5" >پس زمینه و والپیپر</a></div>
+<div class="vmenu"><a href="../post/category/36.html" title="18" >عکس های مذهبی</a></div>
+<div class="vmenu"><a href="../post/category/35.html" title="13" >عکسهای ورزشی</a></div>
+<div class="vmenu"><a href="../post/category/34.html" title="7" >عکسهای ناز کودکان</a></div>
+<div class="vmenu"><a href="../post/category/33.html" title="23" >عکسهای عاشقانه</a></div>
+<div class="vmenu"><a href="../post/category/23.html" title="60" >خواننده و بازیگر ایرانی</a></div>
+<div class="vmenu"><a href="../post/category/32.html" title="6" >عکس های فیلم و سریال</a></div>
+<div class="vmenu"><a href="../post/category/31.html" title="33" >عکس های خنده دار</a></div>
+<div class="vmenu"><a href="../post/category/30.html" title="23" >عکس های خبری</a></div>
+<div class="vmenu"><a href="../post/category/27.html" title="15" >عكس های هنری خلاقانه</a></div>
+<div class="vmenu"><a href="../post/category/29.html" title="11" >عکس های حیوانات</a></div>
+<div class="vmenu"><a href="../post/category/44.html" title="9" >دنیای  ماشین</a></div>
+<div class="vmenu"><a href="../post/category/28.html" title="6" >عکس های حوادث</a></div>
+<div class="vmenu"><a href="../post/category/26.html" title="2" >عكس های فانتزی</a></div>
+<div class="vmenu"><a href="../post/category/25.html" title="4" >عكس های طبیعت زیبا</a></div>
+<div class="vmenu"><a href="../post/category/24.html" title="3" >عكس های 3 بعدی</a></div>
+<div class="vmenu"><a href="../post/category/38.html" title="2" >كارت پستال مناسبت ها</a></div>
+<div class="vmenu"><a href="../post/category/42.html" title="4" >مدل کفش زنانه و پسرانه</a></div>
+<div class="vmenu"><a href="../post/category/41.html" title="1" >مدل مو دخترانه و پسرانه</a></div>
+<div class="vmenu"><a href="../post/category/40.html" title="24" >مدل لباس زنانه و مردانه</a></div>
+<div class="vmenu"><a href="../post/category/19.html" title="15" >موبایل</a></div>
+<div class="vmenu"><a href="../post/category/22.html" title="2" >کلیپ موبایل</a></div>
+<div class="vmenu"><a href="../post/category/20.html" title="21" >دانلود</a></div>
+<div class="vmenu"><a href="../post/category/18.html" title="15" >دانلود نرم افزار</a></div>
+<div class="vmenu"><a href="../post/category/17.html" title="2" >دانلود آهنگ جدید</a></div>
+<div class="vmenu"><a href="../post/category/9.html" title="64" >دانستنی ها</a></div>
+<div class="vmenu"><a href="../post/category/16.html" title="13" >آیا میدانید ؟</a></div>
+<div class="vmenu"><a href="../post/category/15.html" title="27" >دانستنی های تغذیه</a></div>
+<div class="vmenu"><a href="../post/category/14.html" title="13" >دانستنی های زندگی</a></div>
+<div class="vmenu"><a href="../post/category/12.html" title="17" >دانستنیهای روانشناسی</a></div>
+<div class="vmenu"><a href="../post/category/13.html" title="47" >دانستنی های سلامتی</a></div>
+<div class="vmenu"><a href="../post/category/11.html" title="16" >دانستنی های زناشویی</a></div>
+<div class="vmenu"><a href="../post/category/10.html" title="10" >داستان کوتاه و خواندنی</a></div>
+<div class="vmenu"><a href="../post/category/7.html" title="24" >اس ام اس</a></div>
+<div class="vmenu"><a href="../post/category/8.html" title="9" >اس ام اس عاشقانه</a></div>
+<div class="vmenu"><a href="../post/category/6.html" title="1" >اخبار ورزشی</a></div>
+<div class="vmenu"><a href="../post/category/5.html" title="9" >اخبار سینما</a></div>
+<div class="vmenu"><a href="../post/category/4.html" title="16" >اخبار حوادث</a></div>
+<div class="vmenu"><a href="../post/category/3.html" title="1" >کد آهنگ پیشواز</a></div>
+</div>
+
+
+		<form id="frm-16082128555fdb61770b44a" method="post" action="http://alborz-pic.mihanblog.com/poll/new/fid/16082128555fdb61770b44a/atrty/1608212855/avrvy/0/key/6e947de2230d2ca53380a9a71e6e5b8b/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="366055" id="data[pollid]" />		
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">نظر سنجی</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div align="center"><div class="menuleft-other">
+نظرتون در مورد این وبلاگ<br>
+<label><input type="checkbox"  name="data[v1]" id="v1" value="1" />خوب</label><br><label><input type="checkbox"  name="data[v2]" id="v2" value="1" />هی بد نیست</label><br><label><input type="checkbox"  name="data[v3]" id="v3" value="1" />بد</label><br><label><input type="checkbox"  name="data[v4]" id="v4" value="1" />غیر قابل تحمل</label><br><center><input type="submit" value="ثبت" style="height: 20; width:150; margin:10px 0px 0px 0px;"/></center>
+</div></div>
+</div>
+
+		<input type="hidden" name="frm-id" value="16082128555fdb61770b44a" id="frm-id" /></form>
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">لینک دوستان</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="vmenu"><a target="_blank" href="http://www.seomastering.com/" title="" >Free SEO Tools</a></div><div class="vmenu"><a target="_blank" href="http://clockbiz.mihanblog.com" title="" >ساعت مچی</a></div><div class="vmenu"><a target="_blank" href="http://google.com" title="" >google</a></div><div class="vmenu"><a target="_blank" href="http://www.alexa.com" title="" >alexa</a></div><div class="vmenu"><a target="_blank" href="http://www.bestlastsecond.com/torkie/istanbul.html" >تور استانبول</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.bestlastsecond.com/torkie/antalya.html" >تور آنتالیا</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.bestlastsecond.com/kish.html" >تور کیش</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.bestlastsecond.com/mashhad.html" >تور مشهد</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.tbs.ir/mba" >دوره MBA</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.tbs.ir/dba" >دوره DBA</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.tbs.ir/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d9%81%d8%b1%d9%88%d8%b4/" >آموزش فروش</a></div>
+<div class="vmenu"><a target="_blank" href="http://www.tbs.ir/%d9%85%d8%af%db%8c%d8%b1%db%8c%d8%aa-%da%a9%d8%b3%d8%a8-%d9%88-%da%a9%d8%a7%d8%b1/" >مدیریت کسب و کار</a></div>
+</div>
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">آرشیو مطالب</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="vmenu"><a href="../post/archive/1396/5/3.html" title="1"> هفته سوم مرداد 1396</a></div>
+<div class="vmenu"><a href="../post/archive/1395/9/2.html" title="4"> هفته دوم آذر 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/9/1.html" title="3"> هفته اول آذر 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/8/4.html" title="20"> هفته چهارم آبان 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/8/3.html" title="15"> هفته سوم آبان 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/8/2.html" title="5"> هفته دوم آبان 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/7/4.html" title="1"> هفته چهارم مهر 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/7/3.html" title="2"> هفته سوم مهر 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/7/2.html" title="5"> هفته دوم مهر 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/7/1.html" title="20"> هفته اول مهر 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/6/4.html" title="20"> هفته چهارم شهریور 1395</a></div>
+<div class="vmenu"><a href="../post/archive/1395/6/3.html" title="1"> هفته سوم شهریور 1395</a></div>
+</div>
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">نویسندگان</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div class="vmenu"><a href="../post/author/986785.html" title="1028" >alborz-pic alborz</a></div></div>
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">برچسب ها</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div align="center"><div class="menuleft-other"><div align="right">
+<a href="../post/tag/pic.html" style="font-size:1.14em">
+pic</a> , <a href="../post/tag/سایت+تفریحی+و+سرگرمی.html" style="font-size:1.63em">
+سایت تفریحی و سرگرمی</a> , <a href="../post/tag/زیبا.html" style="font-size:1em">
+زیبا</a> , <a href="../post/tag/عکس.html" style="font-size:1.18em">
+عکس</a> , <a href="../post/tag/البرز+پیک.html" style="font-size:1.49em">
+البرز پیک</a> , <a href="../post/tag/البرز.html" style="font-size:1.21em">
+البرز</a> , <a href="../post/tag/جالب.html" style="font-size:1.07em">
+جالب</a> , <a href="../post/tag/alborzpic.html" style="font-size:1.07em">
+alborzpic</a> , <a href="../post/tag/alborz-pic.html" style="font-size:2em">
+alborz-pic</a> , <a href="../post/tag/alborz.html" style="font-size:1.59em">
+alborz</a> , </div></div></div>
+</div>
+
+<div class="theme-designer-com_menuleft-body">
+<div class="menuleft-backtitle1"></div>
+<div class="menuleft-backtitle2">دیگر موارد</div>
+<div class="menuleft-backtitle3"></div>
+<div class="theme-designer-com_koli_clear"></div>
+<div align="center"><div class="menuleft-other">
+<div align="right">
+تعداد مطالب : <script>getStatVar('total_post');</script><br>
+تعداد نویسندگان : <script>getStatVar('total_author');</script><br>
+آخرین بروز رسانی : <script>getStatVar('modify_date');</script><br>
+بازدید امروز : <script>getStatVar('today_view');</script><br>
+بازدید دیروز : <script>getStatVar('yesterday_view');</script><br>
+بازدید این ماه : <script>getStatVar('this_month_view');</script><br>
+بازدید ماه قبل : <script>getStatVar('last_month_view');</script><br>
+بازدید کل : <script>getStatVar('total_view');</script><br>
+آخرین بازدید : <script>getStatVar('last_view_date');</script><br><br>
+</div></div></div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</td>
+<td width="16" valign="top">&nbsp;</td>
+</tr>
+</table>
+</div>
+</div>
+
+<div align="center" dir="rtl">
+<div class="theme-designer-com-footer1">
+<div class="theme-designer-com-footer-w-h">
+<div class="theme-designer-com_footer_menu2">
+<a href="../index.html">صفحه ی نخست</a>|
+<a href="mailto:">پست الکترونیک</a>|
+<a href="javascript:messageForm()">تماس با ما</a>|
+<a href="../post/archive.html">آرشیو مطالب</a>|
+<a target="_blank" href="../post/rss/index.html">لینك rss</a>|
+<a target="_blank" href="http://alborz-pic.mihanblog.com/m/">نسخه موبایل</a>
+</div>
+<div class="theme-designer-com-footer-w-h2">
+<a class="footer_theme-designer-11" href="http://www.theme-designer.com"></a>
+<div class="theme-designer-com-footer-12" align="right">
+تمام حقوق متعلق به <a href="../index.html"> سایت تفریحی و سرگرمی* همه چی از همه جا * </a> می باشد
+&nbsp;|&nbsp;
+كد نویسی و گرافیک : <a target="_blank" title="قالب وبلاگ" href="http://www.theme-designer.com">تم دیزاینر</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'alborz-pic.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

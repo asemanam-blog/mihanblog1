@@ -1,0 +1,2864 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://baftanymamanazam.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1355161*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[801]='39';commentCnt[823]='7';commentCnt[825]='0';commentCnt[826]='0';commentCnt[827]='2';commentCnt[828]='0';commentCnt[829]='0';commentCnt[830]='7';commentCnt[831]='1';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[801]='0';
+mihanblogDisLikeArrCnt[801]='0';
+mihanblogLikeArrCnt[823]='0';
+mihanblogDisLikeArrCnt[823]='0';
+mihanblogLikeArrCnt[825]='0';
+mihanblogDisLikeArrCnt[825]='0';
+mihanblogLikeArrCnt[826]='0';
+mihanblogDisLikeArrCnt[826]='0';
+mihanblogLikeArrCnt[827]='0';
+mihanblogDisLikeArrCnt[827]='0';
+mihanblogLikeArrCnt[828]='0';
+mihanblogDisLikeArrCnt[828]='0';
+mihanblogLikeArrCnt[829]='0';
+mihanblogDisLikeArrCnt[829]='0';
+mihanblogLikeArrCnt[830]='0';
+mihanblogDisLikeArrCnt[830]='0';
+mihanblogLikeArrCnt[831]='0';
+mihanblogDisLikeArrCnt[831]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://baftanymamanazam.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://baftanymamanazam.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','542');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','سه شنبه 6 آبان 1399');
+	
+	setStatVar('today_view','393');
+	setStatVar('yesterday_view','741');
+	
+	setStatVar('this_month_view','19405');
+	setStatVar('last_month_view','21866');
+
+	setStatVar('total_view','3397617');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (14:54)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://baftanymamanazam.mihanblog.com/statupdate/?data[refereruri]=http://blogdooni.mihanblog.com/post/tag/%D9%88%D8%A8%D9%84%D8%A7%DA%AF%D9%86%D9%88%DB%8C%D8%B3%DB%8C&data[postid]=&data[requesturi]=/&data[sdate]=1607772615&data[hash]=beeb48eb1e52315fea623269be8c7ce0&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://baftanymamanazam.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://baftanymamanazam.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://baftanymamanazam.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://baftanymamanazam.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+
+
+	      
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8
+<META NAME="description" CONTENT="آموزش و ترویج  شکر گذاری و  مثبت اندیشی و آموزش قلاب بافی و بافتنی و آموزش نقشه خوانی قلاب بافی و توری بافی و تزیینات بافتنی . بافتن وسایل منزل ،  و بافت انواع لباس ها  .بافت لباسهای پسرانه و مردانه  و بافت گل و گیاه و غیره .">
+<META NAME="keywords" CONTENT="آموزش بافتنی - آموزش بافت انواع پیچ و تور بافی - علائم بافتنی و قلاب بافی - بافت شال و کلاه و ژاکت و بلوز و دامن - بافت لباسهای فانتزی - عروسک بافی- آموزش تصویری بافتنی - آموزش متنی بافتنی - بافتنی های مامان اعظم . معرفی سایتهای بافتنی و معرفی سایتهای قلاب بافی - دلنوشته - تقاضای عفو - آموزش نقشه خوانی در بافتنی و قلاب بافی  -قلاب بافی مامان اعظم- ماشین بافتنی- میل قلاب بافی - بافتنی با دو میل و پنج میل بافی ">
+<META NAME="DesignerUrl" CONTENT="http://Avazak.ir">
+<META NAME="Designer" CONTENT="AVAZAK">
+<link rel="alternate" type="application/rss+xml" title="  «  بـافـتـنـی هـای مـامـان  اعـظـم   »  " href="http://baftanymamanazam.mihanblog.com/post/rss/" />
+<title>  «  بـافـتـنـی هـای مـامـان  اعـظـم   »  </title>
+<link href="http://avazak.ir/Theme/style/473.css" type="text/css" rel="stylesheet">
+</style>
+
+</head>
+
+<body>
+
+<!--Design By : Avazak.ir-->
+<div align =center>
+<table border="0" width="1000" cellspacing="0" cellpadding="0" class="Avazak">
+<tr><td colspan="3" class="page" dir="rtl" >
+<div  class ="header" >
+<h1>  «  بـافـتـنـی هـای مـامـان  اعـظـم   »  </h1></a>
+<p class="subtitle">(((  هنر سرمایه من است ، دوستش دارم .  )))</a>
+<p class="menu"><a href="index.html">صفحه اصلی</a>   
+
+      https://telegram.me/Baftanymamanazam    لینک تلگرام ما را  از اینجا کپی کنید و در تلگرام  آموزشهای جدید رو ببینید .    
+     
+<a href="http://baftanymamanazam.mihanblog.com/post/list"></a> 
+<a title"ابزار تماس با ما" href="http://www.avazak.ir/abzar/contact1/mail/?email=javascript:messageForm()"></a> 
+<a title="قالب وبلاگ رایگان" href="http://avazak.ir/"></a>
+</div>
+</td></tr>
+
+<!-- end header -->
+<!--Design By : Avazak.ir-->
+<td width="200" valign="top" dir="rtl" >
+
+
+
+<div class="sidebar-l">
+
+
+	    <form id="frm-16076153465fd2437240bbf" method="get" action="http://baftanymamanazam.mihanblog.com/post/search/fid/16076153465fd2437240bbf"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+	       <li>
+	           <h2>جستجو</h2>
+	           <input type="text" name="search_text"/>	
+	           <input type="submit" value="صنـــدوقچۀ بافتنی ها"/>
+	       </li>
+	   <input type="hidden" name="frm-id" value="16076153465fd2437240bbf" id="frm-id" /></form> </b>
+
+
+
+<h1>آخرین مطالب</h1>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/831">دستکش قلاببافی بی انگشت</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/823">سرویس رو میزی (سبد نان+جا دستمال لول _جا قاشقی)</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/826">ست آریشی سنتی2 (سبد گل سرها و  سطل آرایشی )</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/830">پادری_ رومیزی ( برگهای پاییزی )</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/829">جا سوزنی کاکتوس</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/828">آویز قلب منگوله ای پشت در</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/827">بلوز قلاببافی زنانه با مدل سرخسی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/825">ست آرایشی سنتی 1 ( کیف آرایشی- جا دستمال لول)</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/824">فروش دست بافته های مامان اعظم </a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/820">کشباف قلاب بافی(1) و شال اسکی مردانه</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/822">کلاه گیس دار </a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/819">چهل تکه بافی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/816">زیپ دوزی به بافتنی (3) بازیافت ژاکت جلو باز</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/817">زیپ دوزی به بافتنی (4) بازیافت بلوزهای بافتنی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/818">زیپ دوزی به بافتنی (2)  جلو بسته</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/815">زیپ دوزی به بافتنی (1)</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/814">مدل پفکی(1)</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/812"> فیلم آموزش مدل پروانه </a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/64">کت یقه خشتی آستین سه ربع (بافته شده با ماشین بافتنی)</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/66">شنل سه گوشه قلاب بافی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/808">جیب اریب در ژاکتهای جلوباز </a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/807">کمربند بندکی برگدار </a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/2">سرفصل وبلاگم...   </a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/806">سر بطری قلاب بافی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/805">منگوله آویز پرده ( یک نوع شرابه)</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/804">پدر تمام روزهایم </a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/803">تولد امیر مؤمنان علی علیه السلام مبارک</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/801">سرفصل وبلاگم...   </a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/802">سارافون یقه خشتی موتیف دار +دامن گل سر خود (2)</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/796">الهی العفو ...</a></div>
+<div class="FooterSid"></div>
+
+<h1 >  " نویسنده "  </h1> 
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/author/1148067">اعظم عربشاهی دلویی  </a></div>
+<br>
+<div class="FooterSid"></div>
+<!--Design By : Avazak.ir-->
+
+
+<h1>پیوندهای دوستان</h1>
+<div class="Link"><a href="http://ghoranisade.ir" title="" target="_blank" >کلام وحی</a></div>
+<div class="Link"><a href="http://aftab92.mihanblog.com/" title="" target="_blank" >دلمشغولی های یک مامان</a></div>
+<div class="Link"><a href="http://shahdadgasht.blogfa.com/" title="" target="_blank" >سفرنامه خاطرات(شهداده)</a></div>
+<div class="Link"><a href="http://ghanunjazb.mihanblog.com/" title="" target="_blank" >قانون جذب (سپیده و آفتاب)</a></div>
+<div class="Link"><a href="http://elhamkashani08.blogfa.com" title="" target="_blank" >تزیینات خانۀ من</a></div>
+<div class="Link"><a href="http://allatt.persianblog.ir" title="" target="_blank" >گلهای بهشتی</a></div>
+<div class="Link"><a href="http://mysweethome.mihanblog.com/" title="" target="_blank" >خانه مریم بانو</a></div>
+<div class="Link"><a href="http://shahab-moradi.ir" title="" target="_blank" >شهاب مرادی</a></div>
+<div class="Link"><a href="http://boghcheterme.persianblog.ir/" title="" target="_blank" >ردّ پای دریا</a></div>
+<div class="Link"><a href="http://shirazjanome.com/post.aspx?id=41" title="" target="_blank" >فروشگاه چرخ خیاطی و بافتنی کاظم پور</a></div>
+<div class="Link"><a href="http://naderkhan.mihanblog.com" title="" target="_blank" >لیمو ترش</a></div>
+<div class="Link"><a href="http://sarbooland.blogfa.com/" title="" target="_blank" >وبلاگ وارش</a></div>
+<div class="Link"><a href="http://janemoshtagh.mihanblog.com/" title="" target="_blank" >جان مشتاق</a></div>
+<div class="Link"><a href="http://baraneghasedak.ir/" title="" target="_blank" >باران قاصدک</a></div>
+<div class="Link"><a href="http://www.pixelgraphic.blogfa.com/" title="" target="_blank" >پیکسل گرافیک</a></div>
+<div class="Link"><a href="http://music88.mihanblog.com/" title="" target="_blank" >جدید ترین آهنگهای ایرانی</a></div>
+<div class="Link"><a href="http://bebenazgol.mihanblog.com" title="" target="_blank" >بافتنی های ناز مامان دو قلو ها</a></div>
+<div class="Link"><a href="../shahdadgasht.mihanblog.com/index.html" title="" target="_blank" >شهدادگشت</a></div>
+<div class="Link"><a href="http://atredarchin.blogfa.com/" title="" target="_blank" >عطر دارچین</a></div>
+<div class="Link"><a href="http://jazbrule.blogfa.com/" title="" target="_blank" >قانون جذب</a></div>
+<div class="Link"><a href="http://baroobachz.mihanblog.com/" title="بندۀ خدا" target="_blank" >بوی خاک</a></div>
+<div class="Link"><a href="http://www.rozegarno.blogsky.com/" title="" target="_blank" >روزگار نو</a></div>
+<div class="Link"><a href="http://www.bazmiliya.blogfa.com/" title="" target="_blank" >بزم ایلیا</a></div>
+<div class="Link"><a href="http://zebayema.blogfa.com/" title="" target="_blank" >زیبای ما</a></div>
+<div class="Link"><a href="http://zange-tafriih.mihanblog.com/" title="" target="_blank" >زنگ تفریح</a></div>
+<div class="Link"><a href="http://m-z-m.niniweblog.com/" title="" target="_blank" >توت فرنگی</a></div>
+<div class="Link"><a href="http://honarashpazi.mihanblog.com/" title="" target="_blank" >هنر آشپزی</a></div>
+<div class="Link"><a href="http://honarkadehyas.mihanblog.com/" title="" target="_blank" >هنرکدۀ یاس</a></div>
+<div class="Link"><a href="http://setareh47.blogfa.com/" title="" target="_blank" >اوقات فراغت یک معلم</a></div>
+<div class="Link"><a href="http://iranianhandmade.mihanblog.com/" title="" target="_blank" >هنرستان ( هنرهای دستی )</a></div>
+<div class="Link"><a href="http://crafts.blogfa.com/" title="" target="_blank" >من دوست دارم تو هم دوست داری؟؟؟</a></div>
+<div class="Link"><a href="http://banoo1392.blogfa.com/" title="" target="_blank" >کارهای هنری بانو و ایده های زیبا</a></div>
+<div class="Link"><a href="http://rozeflower.blogsky.com/#" title="" target="_blank" >دفتر هنری گل رز ( الهام  جون)</a></div>
+<div class="Link"><a href="http://66mdavodm66.blogfa.com/" title="" target="_blank" >خونۀ من( مریم خانم تبریزی)</a></div>
+<div class="Link"><a href="http://nasrinr.mihanblog.com/" title="" target="_blank" >آشپزخانۀ خانوادۀ سبز</a></div>
+<div class="Link"><a href="http://azinhonar.blogfa.com/" title="" target="_blank" >از هر هنری سخنی</a></div>
+<div class="Link"><a href="http://glass-wishes.blogsky.com" title="" target="_blank" >آرزوهای شیشه ای</a></div>
+<div class="Link"><a href="http://kosarschool1.blogfa.com/" title="" target="_blank" >حرفه در زندگی</a></div>
+<div class="Link"><a href="http://doniaiehanane.blogsky.com/" title="" target="_blank" >دنیای حنانه</a></div>
+<div class="Link"><a href="http://khooneyema.ir" title="صدیقه" target="_blank" >خونه ی ما</a></div>
+<div class="Link"><a href="http://iranianhandmade.persianblog.ir/" title="" target="_blank" >هنرستان</a></div>
+<div class="Link"><a href="http://baftanymamanazam.blogfa.com/" title="" target="_blank" >بافتنی های مامان اعظم                                                  ( خاطره ای در بلاگفا ! )</a></div>
+<div class="Link" style="font-size:7pt"><a rel="follow" title="قالب وبلاگ" href="http://tools.avazak.ir/?cat=theme&item=473" target="_blank">قالب وبلاگ</a> | <a rel="follow" href="http://mashhad724.ir" title="رزرو هتل مشهد" target="_blank">رزرو هتل مشهد</a></div>
+
+<div class="FooterSid"></div>
+
+
+<h1>پیوندهای دوستان</h1>
+<div class="Link"><a href="http://yon.ir/AA8ez" target="_blank" title="سلام. ممنونم که پرچم وبلاگ نویسی رو بالا نگه داشتید :)
+
+سایت نویسور راه اندازی شده تا پست های شما بیشتر خونده بشن،.
+
+باید اعلام کنم که بعد از دوماه فعالیت 1000 تایی شدیم.
+
+دعوت میکنم تشریف بیارید به لینک زیر و فصل نو ی وبلاگ نویسی تون رو شروع کنید.
+yon.ir/AA8ez
+
+منتظر پست هاتون در نویسور هستیم :)" >ــ وبـلاگ نویسی بهـترــ</a></div>
+<div class="Link"><a href="http://netcabinet.ir/" target="_blank" title="" >نت کابینت - طراحی کابینت و دکوراسیون</a></div>
+<div class="Link"><a href="http://asru.mihanblog.com/" target="_blank" title="" >باران یعنی تو برگردی</a></div>
+<div class="Link"><a href="http://pariyaaskari.blogfa.com/" target="_blank" title="" >دنیای علم </a></div>
+<div class="Link"><a href="http://www.takazmoniha.ir/" target="_blank" title="" >تک آزمونی ها</a></div>
+<div class="Link"><a href="http://farangisbahar14.persianblog.ir/" target="_blank" title="" >موج های فیروزه ای</a></div>
+<div class="Link"><a href="http://www.sayah45.com/" target="_blank" title="" >مجلۀ اینترنتی سایه بونک</a></div>
+<div class="Link"><a href="http://ghalamflower.blogfa.com/#" target="_blank" title="" >اسامی متحرک ( گل نوشته )</a></div>
+<div class="Link"><a href="http://www.art-ideas.ir/" target="_blank" title="" >ایده های هنری / مجله هنر و خلاقیت </a></div>
+<div class="Link"><a href="http://ghalbdarya.blogfa.com/" target="_blank" title="" >عشق اگه اینه </a></div>
+<div class="Link"><a href="http://www.tabloandishe.ir/" target="_blank" title="" >تابلوی تبلیغات اندیشه</a></div>
+<div class="Link"><a href="http://beheshtart.mihanblog.com/" target="_blank" title="" >کلبۀ هنری &quot; بهشت &quot;</a></div>
+<div class="Link"><a href="http://Dnis.ir" target="_blank" title="دوست خوبم سلام.
+وبلاگ زیبا و مفیدی دارین. مطالبتون جالبه.
+خوشحال میشیم که به عنوان نویسنده در سایت دنیس فعالیت کنید تا علاوه بر داشتن بازدید بالا برای مطالبتون، با کسب امتیاز هدیه نقدی دریافت کنید و از امکانات حرفه ای سایت دنیس استفاده کنید.
+با ثبت نام 500 امتیاز بگیرید و با ارسال هر مطلب و کسب امتیاز بیشتر، بدون قرعه کشی برنده جایزه نقدی سایت دنیس بشین.
+صمیمانه منتظر حضور گرم شما در سایت دنیس هستیم.
+ارادتمند - مدیریت دنیس
+Dnis.ir" >شبکه اشتراک مطلب دنیس</a></div>
+<div class="Link"><a href="http://atrekhoda.com" target="_blank" title="آرامشــبخش ترین و عاشقانه ترین ها را اینجا بخوانید
+
+با عطر خدا همراه باشید" >عطر خدا ، آرامش خدایی</a></div>
+<div class="Link"><a href="http://www.4banu.com/" target="_blank" title="" > برای بانو</a></div>
+<div class="Link"><a href="http://rah-e-zendegi.mihanblog.com/" target="_blank" title="" >راه زندگی </a></div>
+<div class="Link"><a href="http://solmaz61.blogfa.com" target="_blank" title="" >من.. هنر.. خلاقیت </a></div>
+<div class="Link"><a href="http://002015.blogfa.com/" target="_blank" title="" >ایستگاه هنر </a></div>
+<div class="Link"><a href="http://ashpazivatazeen.mihanblog.com" target="_blank" title="" >آشپزی و تزیین</a></div>
+<div class="Link"><a href="http://www.pajoohe.com" target="_blank" title="" >پژوهشکدۀ باقرالعلوم</a></div>
+<div class="Link"><a href="http://ranginkamanekhoda.blogfa.com" target="_blank" title="" >نعمت های خدا </a></div>
+<div class="Link"><a href="http://womanart-2.blogfa.com" target="_blank" title="" >جمع آسمانی ما</a></div>
+<div class="Link"><a href="http://womanart.blogfa.com" target="_blank" title="" >تو فقط لیلی باش </a></div>
+<div class="Link"><a href="http://www.cloob.com/c/thaqalayn_qaravan/110248581" target="_blank" title="" >کاروان ثقلین</a></div>
+<div class="Link"><a href="http://zohoor-313.blogfa.com" target="_blank" title="" >ظهور - 313</a></div>
+<div class="Link"><a href="http://rangirangi.com" target="_blank" title="" >رنگی رنگی </a></div>
+<div class="Link"><a href="http://shokoohebaftan.mihanblog.com/" target="_blank" title="" >شکوه بافتن </a></div>
+<div class="Link"><a href="http://benamesalam.mihanblog.com/" target="_blank" title="" >سلام ...</a></div>
+<div class="Link"><a href="http://newview.blog.ir" target="_blank" title="" >نگاهی تازه</a></div>
+<div class="Link"><a href="http://crocheted110.blogfa.com/" target="_blank" title="" >دنیای قلاب بافی همراه با الگو (صدف)</a></div>
+<div class="Link"><a href="http://kolbe-namadi.blogfa.com/" target="_blank" title="" >کلبه نمدی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/linkdaily/">آرشیو پیوندهای روزانه</a></div>
+<div class="FooterSid"></div>
+<!--Design By : Avazak.ir-->
+
+
+<!--Design By : Avazak.ir-->
+<!--Design By : Avazak.ir-->
+</b>
+<h1>برچسب ها</h1>
+<span dir="ltr">
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%DA%A9%D8%A7%D8%B1%D9%87%D8%A7%DB%8C+%D8%AF%D8%B3%D8%AA%DB%8C">کارهای دستی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%B2%DB%8C%D9%88%D8%B1%D8%A2%D9%84%D8%A7%D8%AA+%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C">زیورآلات بافتنی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%85%D9%88%D8%AA%DB%8C%D9%81+%D8%A8%D8%A7%D9%81%DB%8C">موتیف بافی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A7%D9%84%D9%84%D9%87+%D9%85%DB%8C+%D8%AF%D8%A7%D9%86%D8%AF+%D8%A7%D9%86%DA%86%D9%87+%D8%A7%D9%86%D8%AC%D8%A7%D9%85+%D9%85%DB%8C+%D8%AF%D9%87%DB%8C%D9%85">الله می داند انچه انجام می دهیم</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%81%DB%8C%D9%84%D9%85+%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C">فیلم آموزش بافتنی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%AA%D8%B2%DB%8C%DB%8C%D9%86%D8%A7%D8%AA+%DA%A9%D8%A7%D9%85%D9%88%D8%A7%DB%8C%DB%8C">تزیینات کاموایی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%AA%D8%B2%DB%8C%DB%8C%D9%86%D8%A7%D8%AA+%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C">تزیینات بافتنی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/kniting+men">kniting men</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%87%D9%86%D8%B1+%D9%88+%DA%A9%D8%A7%D8%B1%D9%87%D8%A7%DB%8C+%D8%AF%D8%B3%D8%AA%DB%8C">هنر و کارهای دستی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C+%D8%A8%D9%87+%DA%A9%D9%88%D8%AF%DA%A9%D8%A7%D9%86">آموزش بافتنی به کودکان</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%DA%AF%D8%A7%D9%85+%D8%A8%D9%87+%DA%AF%D8%A7%D9%85+%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C">آموزش گام به گام بافتنی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/J%27adore+Muhammad">J'adore Muhammad</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A3%D9%86%D8%A7+%D8%A3%D8%AD%D8%A8+%D9%85%D8%AD%D9%85%D8%AF+%D8%B5%D9%84%DB%8C+%D8%A7%D9%84%D9%84%D9%87+%D8%B9%D9%84%DB%8C%D9%87+%D9%88+%D8%A2%D9%84%D9%87">أنا أحب محمد صلی الله علیه و آله</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%87%D9%86%D8%B1%D9%87%D8%A7+%D9%88+%DA%A9%D8%A7%D8%B1%D9%87%D8%A7%DB%8C+%D8%AF%D8%B3%D8%AA%DB%8C">هنرها و کارهای دستی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%DA%AF%D9%84+%D9%86%D8%B1%DA%AF%D8%B3+%D9%82%D9%84%D8%A7%D8%A8+%D8%A8%D8%A7%D9%81%DB%8C">آموزش گل نرگس قلاب بافی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C+%D8%A8%D8%A7+%D8%AF%D9%88+%D9%85%DB%8C%D9%84">بافتنی با دو میل</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/I+Love+Mohammad">I Love Mohammad</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%AE%D9%84%D8%A7%D9%82%DB%8C%D8%AA">خلاقیت</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%B3%D8%B1+%D8%A7%D9%86%D8%AF%D8%A7%D8%AE%D8%AA%D9%86+%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C">سر انداختن بافتنی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%87%D9%86%D8%B1+%D9%88+%DA%A9%D8%A7%D8%B1%D8%AF%D8%B3%D8%AA%DB%8C">هنر و کاردستی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%B3%D8%B1+%D8%A7%D9%86%D8%AF%D8%A7%D8%AE%D8%AA%D9%86+%D8%AA%D8%B2%DB%8C%DB%8C%D9%86%DB%8C+%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C">سر انداختن تزیینی بافتنی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A7%D8%B1%D8%A7%D8%A6%D9%87+%D9%85%D8%AF%D9%84+%D8%A7%D8%B2+%D8%B3%D8%A7%DB%8C%D8%AA%D9%87%D8%A7%DB%8C+%D8%AF%DB%8C%DA%AF%D8%B1+%D8%9B+%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%D8%A7%D8%B2+%D9%85%D8%A7%D9%85%D8%A7%D9%86+%D8%A7%D8%B9%D8%B8%D9%85">ارائه مدل از سایتهای دیگر ؛ آموزش از مامان اعظم</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C+%D9%88+%D9%82%D9%84%D8%A7%D8%A8+%D8%A8%D8%A7%D9%81%DB%8C">بافتنی و قلاب بافی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A8%D8%A7%D9%81%D9%86%D8%AF%DA%AF%DB%8C+%D8%A2%D9%82%D8%A7%DB%8C%D8%A7%D9%86">بافندگی آقایان</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C">بافتنی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%DA%AF%D9%84+%D9%86%D8%B1%DA%AF%D8%B3+%D9%82%D9%84%D8%A7%D8%A8+%D8%A8%D8%A7%D9%81%DB%8C">گل نرگس قلاب بافی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%AA%D9%82%D8%A7%D8%B6%D8%A7%DB%8C+%D8%B9%D9%81%D9%88">تقاضای عفو</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%87%D9%86%D8%B1+%D9%87%D8%A7%DB%8C+%D8%AF%D8%B3%D8%AA%DB%8C">هنر های دستی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87">دلنوشته</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%87%D9%86%D8%B1+%D9%88+%D8%AE%D9%84%D8%A7%D9%82%DB%8C%D8%AA">هنر و خلاقیت</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%AE%D9%84%D8%A7%D9%82%DB%8C%D8%AA+%D8%AF%D8%B1+%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C">خلاقیت در بافتنی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C">آموزش بافتنی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%85%D8%B1%D8%AF%D8%A7%D9%86+%D8%A8%D8%A7%D9%81%D9%86%D8%AF%D9%87">مردان بافنده</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C+%D9%88+%D9%82%D9%84%D8%A7%D8%A8+%D8%A8%D8%A7%D9%81%DB%8C">آموزش بافتنی و قلاب بافی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%D9%87%D9%86%D8%B1%D9%87%D8%A7%DB%8C+%D8%AF%D8%B3%D8%AA%DB%8C">آموزش هنرهای دستی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%87%D9%81%D8%AA%D9%87+%D8%B3%D9%84%D8%A7%D9%85%D8%AA+%D9%85%D8%B1%D8%AF%D8%A7%D9%86+%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C+%28+%D8%B3%D9%85%D8%A7%29">هفته سلامت مردان ایرانی ( سما)</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%D9%85%D9%82%D8%AF%D9%85%D8%A7%D8%AA%DB%8C+%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C">آموزش مقدماتی بافتنی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%DA%A9%D8%A7%D8%B1%D8%AF%D8%B3%D8%AA%DB%8C+%D9%88+%D8%AE%D9%84%D8%A7%D9%82%DB%8C%D8%AA">کاردستی و خلاقیت</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%D9%82%D9%84%D8%A7%D8%A8+%D8%A8%D8%A7%D9%81%DB%8C">آموزش قلاب بافی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%D9%86%D9%82%D8%B4%D9%87+%D8%AE%D9%88%D8%A7%D9%86%DB%8C+%D9%88+%D8%B9%D9%84%D8%A7%D8%A6%D9%85+%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C">آموزش نقشه خوانی و علائم بافتنی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A8%D8%B3%D9%85+%D8%A7%D9%84%D9%84%D9%87+%D8%A7%D9%84%D8%B1%D8%AD%D9%85%D9%86+%D8%A7%D9%84%D8%B1%D8%AD%DB%8C%D9%85">بسم الله الرحمن الرحیم</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%DA%A9%D8%A7%D8%B1%D8%AF%D8%B3%D8%AA%DB%8C">کاردستی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%D9%82%D9%84%D8%A7%D8%A8+%D8%A8%D8%A7%D9%81%DB%8C+%D9%88+%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C">آموزش قلاب بافی و بافتنی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%85%D8%AF%D9%84%D9%87%D8%A7%DB%8C+%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C">مدلهای بافتنی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%B9%D8%B1%D9%88%D8%B3%DA%A9+%D8%A8%D8%A7%D9%81%DB%8C">عروسک بافی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%D9%85%D9%82%D8%AF%D9%85%D8%A7%D8%AA%DB%8C+%D9%82%D9%84%D8%A7%D8%A8+%D8%A8%D8%A7%D9%81%DB%8C">آموزش مقدماتی قلاب بافی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%DA%AF%D9%84%D9%87%D8%A7%DB%8C+%DA%A9%D8%A7%D9%85%D9%88%D8%A7%DB%8C%DB%8C">گلهای کاموایی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%82%D9%84%D8%A7%D8%A8+%D8%A8%D8%A7%D9%81%DB%8C">قلاب بافی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%87%D9%86%D8%B1%D9%87%D8%A7%DB%8C+%D8%AF%D8%B3%D8%AA%DB%8C">هنرهای دستی</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C+%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C">بافتنی ایرانی</a></div>
+<div class="FooterSid"></div>
+<!--Design By : Avazak.ir-->
+<h1>سایت آوازک</h1>
+<div style="display: none">|﻿<a rel="follow" href="http://hamsarha.tarlog.com" 
+<div class="Link" style="font-size:7pt">﻿<a rel="follow" href="http://music-tak.ir/tag/%D9%85%D9%87%D8%AF%DB%8C-%D9%85%D9%82%D8%AF%D9%85/" title=" 
+
+<div class="Link" style="font-size:7pt"><a title="چت | چت روم فارسی | چتروم فارسی" href="http://www.redchat.ir/" target="_blank">چت روم</a></div><div class="FooterSid"></div>
+<!--Design By : Avazak.ir-->
+<h1>طراح قالب: آوازک</h1>
+<div style="text-align: Center"  >
+[ <a title="قالب های آوازک" href="http://Avazak.ir/">طراح قالب: <a tite="ابزار وبلاگ نویسی" href="http://Avazak.ir">آوازک</a> ]<br>
+<div class="FooterSid"></div>
+</td>
+	<!-- end sidebar-l -->
+<!--Design By : Avazak.ir-->
+<td width="550" valign="top" dir="rtl" >
+<div class="bodyposts">
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		
+
+
+
+
+
+<div class="post">             
+<a name="801"></a>
+<div class="Title"><a href="http://baftanymamanazam.mihanblog.com/post/801">سرفصل وبلاگم...   </a></div>
+ <b><div class="Content"><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+
+
+<div align="center">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font color="#663333">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font face="georgia,times new roman,times,serif">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</font></font><div class="Content" align="center"><font size="5" face="times new roman,times,serif" color="#663333"><b><font size="4">این وبلاگ در ستاد سازماندهی پایگاه های اینترنتی وزارت فرهنگ و ارشاد اسلامی<br><br>&nbsp;جمهوری اسلامی ایران ثبت گردیده است .</font><br></b></font><font size="5" color="#663333">&nbsp;</font><img src="http://uupload.ir/files/s9h_besm3.gif" alt="" align="bottom" vspace="0" hspace="0" border="0"><font color="#663333"></font><div style="text-align: center;"><font size="5" face="georgia,times new roman,times,serif" color="#663333"><strike><br><img src="http://uupload.ir/files/pwmz_73068740767461128132.jpg" alt="" align="bottom" width="503" vspace="0" hspace="0" height="360" border="0"><br><br></strike></font></div><div style="text-align: center;"><font size="5" face="georgia,times new roman,times,serif" color="#663333"><br><strong>الله&nbsp; می داند ؛ </strong><strong>آنچه انجام میدهید.</strong></font><div style="text-align: center;"><font size="5" face="georgia,times new roman,times,serif" color="#663333"><strong><br></strong></font></div><font size="5" face="georgia,times new roman,times,serif" color="#663333"><img src="http://uupload.ir/files/apn1_img06513681.jpg" alt="" align="bottom" width="332" vspace="0" hspace="0" height="223" border="0"><strong><br><br></strong><strong><strong>بیایم با افتخار به <font color="#CC6600">« ایرانِ » </font>خود بیاندیشیم <br><br><br>و با خودباوری و خلّاقیت در هر کاری ،<br><br><br>[ حتّی <font color="#CC6600">« بافتنی ایرانی » </font>مثل <font color="#CC6600">« فرش ایرانی »</font></strong></strong><strong><strong><strong><strong><font color="#CC6600"> </font>دارای</strong></strong> ]<br><br><br>&nbsp;&nbsp; یک&nbsp; برند معروف و جهانی شویم .<br></strong></strong></font><br><img src="http://uupload.ir/files/cufp_003.png" alt="" align="bottom" vspace="0" hspace="0" border="0"><br><br><br><font size="3"><br></font><font size="5" face="georgia,times new roman,times,serif" color="#663333"><font size="3"><a href="https://telegram.me/Baftanymamanazam" target="_blank" title="http://baftanymamanazam.mihanblog.com">https://telegram.me/Baftanymamanazam</a></font><font size="3"><br></font><font size="2"><b><br></b></font></font></div></div><font face="georgia,times new roman,times,serif" color="#663333">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</font><font color="#663333">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div align="center">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font size="3" face="times new roman,times,serif" color="#663300">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</font><div class="Content" align="center">
+
+
+
+
+
+
+
+<div align="center"><font size="3" face="times new roman,times,serif" color="#663300"><br></font><div align="center"><font size="3" face="times new roman,times,serif" color="#663300"><br><br></font>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font size="3" face="times new roman,times,serif" color="#663300">((در این دنیا هیچ بودم،هیچ نکردم و دانستم که هیچ نمی دانم . الا هو...))</font><font size="3" face="times new roman,times,serif" color="#663300"><br>نامم اعظم ؛
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+صاحبخانه ام ، آقا امام رضا علیه السّلام . <br></font><div align="center"><font size="3" face="times new roman,times,serif" color="#663300">&nbsp;روانشناسی که بیشتر هنرمنده تا روانشناس<br></font></div><font size="3" face="times new roman,times,serif" color="#663300">&nbsp;و هنرمندی 
+که بیشتر هنر دوسته تا هنرمند و <br>دلتنگی شاکر که بیشتر شاکره تا دلتنگ.<br>چرا که با مشغول شدن&nbsp; غمهایم قابل تحمل و <br>یا فراموش&nbsp; می شوند.<br><br>"مولا علی علیه السلام " فرموده اند :<br><br>(&nbsp; نَفسِ خود را به کاری واگمار ... وگرنه او تو را به کاری وا می گمارد.!!) <br></font></div></div></div><font size="3" face="times new roman,times,serif" color="#663300">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br></p>
+<br><br>
+طبقه بندی: <a href="http://baftanymamanazam.mihanblog.com/post/category/15">
+دعا و مناجات و تقاضای عفو</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/6">
+مناسبت ها و دلنوشته ها </a>، <br>برچسب ها:<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A8%D8%B3%D9%85%20%D8%A7%D9%84%D9%84%D9%87%20%D8%A7%D9%84%D8%B1%D8%AD%D9%85%D9%86%20%D8%A7%D9%84%D8%B1%D8%AD%DB%8C%D9%85" >بسم الله الرحمن الرحیم</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C" >بافتنی ایرانی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A7%D9%84%D9%84%D9%87%20%D9%85%DB%8C%20%D8%AF%D8%A7%D9%86%D8%AF%20%D8%A7%D9%86%DA%86%D9%87%20%D8%A7%D9%86%D8%AC%D8%A7%D9%85%20%D9%85%DB%8C%20%D8%AF%D9%87%DB%8C%D9%85" >الله می داند انچه انجام می دهیم</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/J'adore&#32;Muhammad" >J'adore Muhammad</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/I&#32;love&#32;Mohammad" >I love Mohammad</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A3%D9%86%D8%A7%20%D8%A3%D8%AD%D8%A8%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%B5%D9%84%DB%8C%20%D8%A7%D9%84%D9%84%D9%87%20%D8%B9%D9%84%DB%8C%D9%87%20%D9%88%20%D8%A2%D9%84%D9%87" >أنا أحب محمد صلی الله علیه و آله</a>، 
+<br></div>          
+<div class ="date"> 
+<p class="r">[ دوشنبه 30 فروردین 1395 ]  [ 09:40 ب.ظ ]  [ اعظم عربشاهی دلویی   ]
+<p class="l"><span dir="rtl" > <a target="_self" href="javascript:newComment(801)">[ 
+صنـــدوقچۀ نظــــــرات(<script>setCommentCnt(801)</script>) ]</a></div></div>
+<br>
+
+
+
+
+
+
+
+<div class="post">             
+<a name="831"></a>
+<div class="Title"><a href="http://baftanymamanazam.mihanblog.com/post/831">دستکش قلاببافی بی انگشت</a></div>
+ <b><div class="Content">
+
+<span style="background-color: rgb(255, 255, 255);"><font color="#009900">
+
+
+
+<font size="4"><b><font face="times new roman,times,serif">
+</font></b></font></font></span><div>
+</div><div><span style="background-color: rgb(255, 255, 255);"><font color="#009900"><font size="4"><b><font face="times new roman,times,serif"><br></font></b></font></font></span></div><div align="center"><span style="background-color: rgb(255, 255, 255);"><font color="#009900"><font size="4"><b><font face="times new roman,times,serif">دستکش بی انگشت ( ساق دست )<br></font></b></font></font></span></div><div align="center"><span style="background-color: rgb(255, 255, 255);"><font color="#009900"><font size="4"><b><font face="times new roman,times,serif"><br></font></b></font></font></span></div><div align="center"><span style="background-color: rgb(255, 255, 255);"><font color="#009900"><font size="4"><b><font face="times new roman,times,serif"><br></font></b></font></font></span></div><div align="center"><span style="background-color: rgb(255, 255, 255);"><font color="#009900"><font size="4"><b><font face="times new roman,times,serif"><img src="http://uupload.ir/files/5vwu_fingerless_gloves.png" alt="" vspace="0" hspace="0" border="0" align="bottom"></font></b></font></font></span></div><div align="center"><span style="background-color: rgb(255, 255, 255);"><font color="#009900"><font size="4"><b><font face="times new roman,times,serif"><br></font></b></font></font></span></div><div align="center"><span style="background-color: rgb(255, 255, 255);"><font color="#009900"><font size="4"><b><font face="times new roman,times,serif"><br></font></b></font></font></span></div><div align="center"><span style="background-color: rgb(255, 255, 255);"><font color="#009900"><font size="4"><b><font face="times new roman,times,serif">یا دستکش با پنج انگشت کامل؟</font></b></font></font></span></div><div align="center"><span style="background-color: rgb(255, 255, 255);"><font color="#009900"><font size="4"><b><font face="times new roman,times,serif"><br></font></b></font></font></span></div><div align="center"><span style="background-color: rgb(255, 255, 255);"><font color="#009900"><font size="4"><b><font face="times new roman,times,serif"><br></font></b></font></font></span></div><div align="center"><font size="3"><span style="background-color: rgb(255, 255, 255);"><font color="#009900"><font face="times new roman,times,serif">مبینا خانم ،</font></font><font color="#009900"><font face="times new roman,times,serif"><font color="#009900"><font face="times new roman,times,serif"> چون در بخش نظرات</font></font> بطور خصوصی در مورد آموزش<br> سارافون&nbsp; کمک خواسته بودید ؛ نمی شد پاسخ بدهم .<br> اگرنظرعمومی می فرستادید ؛ در همان نظرات پاسخ می دادم<br> پس اینجا روش جستجو در وبلاگم را می نویسم .<br>درطرف چپ صفحه در کادر جستجو کلمه<u> سارافون</u> را بنویس تا <br>همه آموزشهای مربوط به سارافون در یک پنجره باز شود . <br>روی هر کدام کلیک کنی ، آموزش آن برایتان باز خواهد شد.<br></font><font face="times new roman,times,serif"><br></font></font></span></font></div><div align="center"><span style="background-color: rgb(255, 255, 255);"><font color="#009900"><font size="4"><b><font face="times new roman,times,serif"><br></font></b></font></font></span></div><span style="background-color: rgb(255, 255, 255);"><font color="#009900"><font size="4"><b><font face="times new roman,times,serif">
+
+
+
+
+
+
+
+
+
+</font></b></font>
+
+
+
+
+
+
+
+</font>
+
+
+
+</span><br><a href='http://baftanymamanazam.mihanblog.com/post/831'>ادامه مطلب</a><br></p>
+<br><br>
+طبقه بندی: <a href="http://baftanymamanazam.mihanblog.com/post/category/25">
+آموزش قلاب بافی</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/34">
+ارائه مدلها از " سایتهای دیگر"</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/35">
+ ارائه آموزش متنی از "مامان اعظم"</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/16">
+کلاه و شالگردن - جوراب و دستکش</a>، <br>برچسب ها:<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%AF%D8%B3%D8%AA%DA%A9%D8%B4%20%D9%82%D9%84%D8%A7%D8%A8%D8%A8%D8%A7%D9%81%DB%8C" >دستکش قلاببافی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%87%D9%86%D8%B1%D9%87%D8%A7%DB%8C%20%D8%AF%D8%B3%D8%AA%DB%8C" >هنرهای دستی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C%20%D9%88%20%D9%82%D9%84%D8%A7%D8%A8%D8%A8%D8%A7%D9%81%DB%8C" >آموزش بافتنی و قلاببافی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%DA%A9%D8%A7%D8%B1%D9%87%D8%A7%DB%8C%20%D8%AF%D8%B3%D8%AA%DB%8C" >کارهای دستی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%DA%AF%D8%B1%D9%85%DA%A9%D9%86" >گرمکن</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%84%D8%A8%D8%A7%D8%B3%20%DA%AF%D8%B1%D9%85" >لباس گرم</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%B5%D9%86%D8%A7%DB%8C%D8%B9%20%D8%AF%D8%B3%D8%AA%DB%8C" >صنایع دستی</a>، 
+<br></div>          
+<div class ="date"> 
+<p class="r">[ یکشنبه 28 مهر 1398 ]  [ 11:27 ق.ظ ]  [ اعظم عربشاهی دلویی   ]
+<p class="l"><span dir="rtl" > <a target="_self" href="javascript:newComment(831)">[ 
+صندوقچه نظرات(<script>setCommentCnt(831)</script>) ]</a></div></div>
+<br>
+
+
+
+
+
+
+
+<div class="post">             
+<a name="823"></a>
+<div class="Title"><a href="http://baftanymamanazam.mihanblog.com/post/823">سرویس رو میزی (سبد نان+جا دستمال لول _جا قاشقی)</a></div>
+ <b><div class="Content"><font size="4" face="times new roman,times,serif" color="#CC0000">
+
+
+
+</font><div align="center"><font size="4" face="times new roman,times,serif" color="#CC0000"><br></font></div><div align="center"><font size="4" face="times new roman,times,serif" color="#CC0000"><b>با مرور آموزشهای قبلی <br><br>و با بازیافت قوطی های خالی رب یا کمپوت ؛<br><br> میشه این ست میز آشپزخانه راهم بافت&nbsp; </b><br><br><img src="http://uupload.ir/files/xa4t_20170228_145048.jpg" alt="" width="504" vspace="0" hspace="0" height="315" border="0" align="bottom"><br><br><br><b><a href="http://baftanymamanazam.mihanblog.com/post/826" target="_blank" title="">http://baftanymamanazam.mihanblog.com/post/826</a></b></font></div><font size="4" face="times new roman,times,serif" color="#CC0000">
+
+
+
+
+
+
+
+
+
+
+</font><br><a href='http://baftanymamanazam.mihanblog.com/post/823'>ادامه مطلب</a><br></p>
+<br><br>
+طبقه بندی: <a href="http://baftanymamanazam.mihanblog.com/post/category/75">
+دست بافته های من</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/29">
+حاشیه بافی</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/4">
+تزئینات بافتنی</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/14">
+بافت وسایل منزل</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/3">
+مدلهای قلاب بافی</a>، <br>برچسب ها:<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%B3%D8%A8%D8%AF%20%D9%86%D8%A7%D9%86%20%D9%82%D9%84%D8%A7%D8%A8%D8%A8%D8%A7%D9%81%DB%8C" >سبد نان قلاببافی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%AC%D8%A7%20%D9%82%D8%A7%D8%B4%D9%82%DB%8C%20%D9%82%D9%84%D8%A7%D8%A8%D8%A8%D8%A7%D9%81%DB%8C" >جا قاشقی قلاببافی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%AC%D8%A7%20%D8%AF%D8%B3%D8%AA%D9%85%D8%A7%D9%84%20%D8%B1%D9%88%D9%84%20%D9%82%D9%84%D8%A7%D8%A8%D8%A8%D8%A7%D9%81%DB%8C" >جا دستمال رول قلاببافی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%B3%D8%AA%20%D8%AA%D9%88%D8%AA%20%D9%81%D8%B1%D9%86%DA%AF%DB%8C%20%D9%82%D9%84%D8%A7%D8%A8%D8%A8%D8%A7%D9%81%DB%8C" >ست توت فرنگی قلاببافی</a>، 
+<br>دنبالک ها:<a href="http://baftanymamanazam.mihanblog.com/post/826"  target="_blank">ست آریشی سنتی2 (سبد گل سرها و سطل آرایشی )</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/825"  target="_blank">ست آرایشی سنتی 1 ( کیف آرایشی- جا دستمال لول)</a>، 
+<br></div>          
+<div class ="date"> 
+<p class="r">[ یکشنبه 30 اردیبهشت 1397 ]  [ 10:50 ب.ظ ]  [ اعظم عربشاهی دلویی   ]
+<p class="l"><span dir="rtl" > <a target="_self" href="javascript:newComment(823)">[ 
+صندوقچه نظرات(<script>setCommentCnt(823)</script>) ]</a></div></div>
+<br>
+
+
+
+
+
+
+
+<div class="post">             
+<a name="826"></a>
+<div class="Title"><a href="http://baftanymamanazam.mihanblog.com/post/826">ست آریشی سنتی2 (سبد گل سرها و  سطل آرایشی )</a></div>
+ <b><div class="Content">
+
+
+<div align="center"><strong></strong><font size="5" face="georgia,times new roman,times,serif"><strong><span style="color: rgb(51, 204, 255);"><span><span>بیایید با بافت یک سبد گل سرها و یک سطل آشغال قلاببافی<br></span></span></span></strong></font><p style="text-align: center;"><font size="5" face="georgia,times new roman,times,serif"><span style="color: rgb(0, 204, 255);"><font><strong><font>&nbsp;</font></strong></font></span></font></p><p style="text-align: center;"><font size="5" face="georgia,times new roman,times,serif"><span style="color: rgb(0, 204, 255);"><font><strong><font></font>یک<span style="color: rgb(0, 153, 255);"> <font color="#33CCFF">مجموعۀ</font><span style="color: rgb(0, 204, 255);"><font> آرایشیِ ساخت وطن (ایرانی)&nbsp; داشته باشین.</font></span></span></strong></font></span></font></p><p style="text-align: left;"><font face="arial,helvetica,sans-serif"><br></font></p><div style="text-align: center;"><img src="http://uupload.ir/files/lq0f_63148914115506547546.jpg" alt="" width="532" vspace="0" hspace="0" height="606" border="0" align="bottom"><br><br><br><br><br><br><b><font size="4" face="georgia,times new roman,times,serif"><span style="color: rgb(0, 204, 255);"><font><font><font>و با استفاده از «« خر مهره های »» ایرانی&nbsp; ؛ </font></font><font>که با رنگ اعجاز آور<br><br>&nbsp;آبی فیروزه ای خودشون چشم نوازی می کنن ؛ به کارتان جلوۀ سنتی بدین.<br><br> &nbsp; قلاببافی کیف وجا دستمال لول رو یاد گرفتین </font></font></span></font></b><b><font size="4" face="georgia,times new roman,times,serif"><span style="color: rgb(0, 204, 255);"><font><font><b><font size="4" face="georgia,times new roman,times,serif"><span style="color: rgb(0, 204, 255);"><font><font>در پست قبل</font></font></span></font></b> به این آدرس<img src="http://mihanblog.com/public/public/rte/images_new/smiles/104.gif"><br><br></font></font></span></font></b></div><b><font size="4" face="times new roman,times,serif"><a href="http://baftanymamanazam.mihanblog.com/post/825" target="_blank" title="">http://baftanymamanazam.mihanblog.com/post/825</a></font></b></div>
+
+
+
+
+
+
+
+
+<br><a href='http://baftanymamanazam.mihanblog.com/post/826'>ادامه مطلب</a><br></p>
+<br><br>
+طبقه بندی: <a href="http://baftanymamanazam.mihanblog.com/post/category/75">
+دست بافته های من</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/25">
+آموزش قلاب بافی</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/40">
+کاربرد اشکال هندسی در بافتنی</a>، <br>برچسب ها:<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%B3%D8%A8%D8%AF%20%DA%AF%D9%84%20%D8%B3%D8%B1%20%D9%82%D9%84%D8%A7%D8%A8%D8%A8%D8%A7%D9%81%DB%8C" >سبد گل سر قلاببافی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%B3%D8%B7%D9%84%20%D8%A2%D8%B4%D8%BA%D8%A7%D9%84%20%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C%20%D9%82%D9%84%D8%A7%D8%A8%D8%A8%D8%A7%D9%81%DB%8C" >سطل آشغال آرایشی قلاببافی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%B3%D8%AA%20%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C%20%D8%B1%D9%88%D9%85%DB%8C%D8%B2%DB%8C%20%D9%82%D9%84%D8%A7%D8%A8%D8%A8%D8%A7%D9%81%DB%8C" >ست آرایشی رومیزی قلاببافی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D9%82%D9%84%D8%A7%D8%A8%D8%A8%D8%A7%D9%81%DB%8C" >آموزش قلاببافی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%87%D9%86%D8%B1%D9%87%D8%A7%DB%8C%20%D8%AF%D8%B3%D8%AA%DB%8C" >هنرهای دستی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%DA%A9%D8%A7%D8%B1%D8%AF%D8%B3%D8%AA%DB%8C" >کاردستی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%88%D8%B3%D8%A7%DB%8C%D9%84%20%D8%A7%D8%AA%D8%A7%D9%82%20%D8%AE%D9%88%D8%A7%D8%A8" >وسایل اتاق خواب</a>، 
+<br></div>          
+<div class ="date"> 
+<p class="r">[ یکشنبه 30 اردیبهشت 1397 ]  [ 10:41 ب.ظ ]  [ اعظم عربشاهی دلویی   ]
+<p class="l"><span dir="rtl" > <a target="_self" href="javascript:newComment(826)">[ 
+صندوقچه نظرات(<script>setCommentCnt(826)</script>) ]</a></div></div>
+<br>
+
+
+
+
+
+
+
+<div class="post">             
+<a name="830"></a>
+<div class="Title"><a href="http://baftanymamanazam.mihanblog.com/post/830">پادری_ رومیزی ( برگهای پاییزی )</a></div>
+ <b><div class="Content">
+
+<font color="#FF9900"><b><font face="times new roman,times,serif" size="5">
+</font></b></font><div align="center"><font color="#FF9900"><b><font face="times new roman,times,serif" size="5">جلای&nbsp; رنگهای&nbsp; پاییزی&nbsp; در منزل <br></font></b></font></div><div align="center"><font color="#FF9900"><b><font face="times new roman,times,serif" size="5"><br></font></b></font></div><div align="center"><font color="#FF9900"><b><font face="times new roman,times,serif" size="5"><br></font></b></font></div><div align="center"><font color="#FF9900"><b><font face="times new roman,times,serif" size="5"><img src="http://uupload.ir/files/wfga_20160719_050216.jpg" alt="" hspace="0" border="0" align="bottom" vspace="0"></font></b></font></div><div align="center"><font color="#FF9900"><b><font face="times new roman,times,serif" size="5"><br></font></b></font></div><div align="center"><font color="#FF9900"><b><font face="times new roman,times,serif" size="5"><br></font></b></font></div><div align="center"><font color="#FF9900"><b><font face="times new roman,times,serif" size="5">فرشینه ای از برگهای پاییزی<br></font></b></font></div><div align="center"><font color="#FF9900"><b><font face="times new roman,times,serif" size="5"><br></font></b></font></div><div align="center"><font color="#FF9900"><b><font face="times new roman,times,serif" size="5"><br></font></b></font></div><div align="center"><div align="center"><font color="#FF9900"><b><font face="times new roman,times,serif" size="5"><img src="http://uupload.ir/files/t9a4_maxresdefault.jpg" alt="" hspace="0" border="0" align="bottom" vspace="0"><br></font></b></font></div><div align="center"><font color="#FF9900"><b><font face="times new roman,times,serif" size="5"><br></font></b></font></div><div align="center"><font color="#FF9900"><b><font face="times new roman,times,serif" size="5">https://telegram.me/Baftanymamanazam</font></b></font></div></div><font color="#FF9900"><b><font face="times new roman,times,serif" size="5">
+
+
+
+
+</font></b></font>
+
+
+
+<br><a href='http://baftanymamanazam.mihanblog.com/post/830'>ادامه مطلب</a><br></p>
+<br><br>
+طبقه بندی: <a href="http://baftanymamanazam.mihanblog.com/post/category/79">
+بافتن گل و گیاه</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/44">
+رومیزی ها</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/24">
+موتیـف  بافی</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/4">
+تزئینات بافتنی</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/14">
+بافت وسایل منزل</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/25">
+آموزش قلاب بافی</a>، <br>برچسب ها:<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%BE%D8%A7%D8%AF%D8%B1%DB%8C%20%D9%82%D9%84%D8%A7%D8%A8%D8%A8%D8%A7%D9%81%DB%8C" >پادری قلاببافی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%B1%D9%88%D9%85%DB%8C%D8%B2%DB%8C%20%D9%82%D9%84%D8%A7%D8%A8%D8%A8%D8%A7%D9%81%DB%8C" >رومیزی قلاببافی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%86%D9%82%D8%B4%D9%87%20%D8%A8%D8%B1%DA%AF%20%D9%BE%D8%A7%DB%8C%DB%8C%D8%B2%DB%8C%20%D9%82%D9%84%D8%A7%D8%A8%D8%A8%D8%A7%D9%81%DB%8C" >نقشه برگ پاییزی قلاببافی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%87%D9%86%D8%B1%D9%87%D8%A7%DB%8C%20%D8%AF%D8%B3%D8%AA%DB%8C" >هنرهای دستی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D9%82%D9%84%D8%A7%D8%A8%D8%A8%D8%A7%D9%81%DB%8C%20%D9%88%20%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C" >آموزش قلاببافی و بافتنی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%81%D8%B1%D8%B4%20%D9%82%D9%84%D8%A7%D8%A8%D8%A8%D8%A7%D9%81%DB%8C" >فرش قلاببافی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A8%D8%B1%DA%AF%20%D9%82%D9%84%D8%A7%D8%A8%D8%A8%D8%A7%D9%81%DB%8C" >برگ قلاببافی</a>، 
+<br></div>          
+<div class ="date"> 
+<p class="r">[ چهارشنبه 19 مهر 1396 ]  [ 06:50 ب.ظ ]  [ اعظم عربشاهی دلویی   ]
+<p class="l"><span dir="rtl" > <a target="_self" href="javascript:newComment(830)">[ 
+صندوقچه نظرات(<script>setCommentCnt(830)</script>) ]</a></div></div>
+<br>
+
+
+
+
+
+
+
+<div class="post">             
+<a name="829"></a>
+<div class="Title"><a href="http://baftanymamanazam.mihanblog.com/post/829">جا سوزنی کاکتوس</a></div>
+ <b><div class="Content">
+
+
+<div align="center"><br><br><br><img src="http://uupload.ir/files/stlk_dsc_0061.jpg" alt="" hspace="0" border="0" align="bottom" vspace="0"></div>
+
+
+
+
+
+
+
+
+<br><a href='http://baftanymamanazam.mihanblog.com/post/829'>ادامه مطلب</a><br></p>
+<br><br>
+طبقه بندی: <a href="http://baftanymamanazam.mihanblog.com/post/category/66">
+آموزشهای مقدماتی</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/79">
+بافتن گل و گیاه</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/4">
+تزئینات بافتنی</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/14">
+بافت وسایل منزل</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/25">
+آموزش قلاب بافی</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/50">
+کاردستی  و خلاقیت</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/37">
+آموزش بافتنی به افراد مبتدی و کودکان</a>، <br>برچسب ها:<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%AC%D8%A7%20%D8%B3%D9%88%D8%B2%D9%86%DB%8C%20%D9%82%D9%84%D8%A7%D8%A8%D8%A8%D8%A7%D9%81%DB%8C" >جا سوزنی قلاببافی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%DA%A9%D8%A7%DA%A9%D8%AA%D9%88%D8%B3%20%D8%AC%D8%A7%D8%B3%D9%88%D8%B2%D9%86%DB%8C" >کاکتوس جاسوزنی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%AC%D8%A7%D8%B3%D9%88%D8%B2%D9%86%DB%8C%20%D8%A8%D9%87%20%D8%B4%DA%A9%D9%84%20%DA%A9%D8%A7%DA%A9%D8%AA%D9%88%D8%B3" >جاسوزنی به شکل کاکتوس</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D9%82%D9%84%D8%A7%D8%A8%D8%A8%D8%A7%D9%81%DB%8C" >آموزش قلاببافی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C" >آموزش بافتنی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D9%87%D9%86%D8%B1%D9%87%D8%A7%DB%8C%20%D8%AF%D8%B3%D8%AA%DB%8C" >هنرهای دستی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%DA%AF%D9%84%20%D9%88%DA%AF%DB%8C%D8%A7%D9%87%20%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C" >گل وگیاه بافتنی</a>، 
+<br>دنبالک ها:<a href="http://http://baftanymamanazam.mihanblog.com/post/250"  target="_blank">جاسوزنی  کیک فنجانی</a>، 
+<br></div>          
+<div class ="date"> 
+<p class="r">[ شنبه 15 مهر 1396 ]  [ 09:29 ق.ظ ]  [ اعظم عربشاهی دلویی   ]
+<p class="l"><span dir="rtl" > <a target="_self" href="javascript:newComment(829)">[ 
+صندوقچه نظرات(<script>setCommentCnt(829)</script>) ]</a></div></div>
+<br>
+
+
+
+
+
+
+
+<div class="post">             
+<a name="828"></a>
+<div class="Title"><a href="http://baftanymamanazam.mihanblog.com/post/828">آویز قلب منگوله ای پشت در</a></div>
+ <b><div class="Content">
+<font color="#FF0000"><b><font size="5" face="times new roman,times,serif">
+</font></b></font><div align="center"><font color="#FF0000"><b><font size="5" face="times new roman,times,serif"><br>حسن این آویزهای پشت دری منگوله دار به اینه که<br><br> هر وقت از خونه خارج می شید ...<br><br><br><img src="http://uupload.ir/files/i339_20170622_132304.jpg" alt="" vspace="0" hspace="0" border="0" align="bottom"><br><br>می تونید برای اعضای خانواده کاغذ نامه و سفارشها <br><br>و پیامهای خودتونو لا به لایی منگوله ها قرار بدید . <br></font></b></font></div><font color="#FF0000"><b><font size="5" face="times new roman,times,serif">
+
+
+
+
+</font></b></font>
+
+<br><a href='http://baftanymamanazam.mihanblog.com/post/828'>ادامه مطلب</a><br></p>
+<br><br>
+طبقه بندی: <a href="http://baftanymamanazam.mihanblog.com/post/category/4">
+تزئینات بافتنی</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/35">
+ ارائه آموزش متنی از "مامان اعظم"</a>، <br>برچسب ها:<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%88%DB%8C%D8%B2%20%D9%85%D9%86%DA%AF%D9%88%D9%84%D9%87%20%D8%A7%DB%8C%20%D9%BE%D8%B4%D8%AA%20%D8%AF%D8%B1" >آویز منگوله ای پشت در</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%AA%D8%B2%DB%8C%DB%8C%D9%86%D8%A7%D8%AA%20%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C" >تزیینات بافتنی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C" >آموزش بافتنی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%DA%A9%D8%A7%D8%B1%20%D8%AF%D8%B3%D8%AA%DB%8C%20%D9%88%20%D9%87%D9%86%D8%B1" >کار دستی و هنر</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%AF%D9%85%D9%86%DA%AF%D9%88%D9%84%D9%87%20%D9%87%D8%A7" >کاربردمنگوله ها</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%AA%D9%88%D8%B1%D9%87%D8%A7%DB%8C%20%D9%BE%D9%84%D8%A7%D8%B3%D8%AA%DB%8C%DA%A9%DB%8C" >تورهای پلاستیکی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%20%DA%A9%D9%88%D8%A8%20%D8%AA%D8%B2%DB%8C%DB%8C%D9%86%DB%8C" >دیوار کوب تزیینی</a>، 
+<br></div>          
+<div class ="date"> 
+<p class="r">[ شنبه 17 تیر 1396 ]  [ 08:20 ق.ظ ]  [ اعظم عربشاهی دلویی   ]
+<p class="l"><span dir="rtl" > <a target="_self" href="javascript:newComment(828)">[ 
+صندوقچه نظرات(<script>setCommentCnt(828)</script>) ]</a></div></div>
+<br>
+
+
+
+
+
+
+
+<div class="post">             
+<a name="827"></a>
+<div class="Title"><a href="http://baftanymamanazam.mihanblog.com/post/827">بلوز قلاببافی زنانه با مدل سرخسی</a></div>
+ <b><div class="Content">
+<font size="5"><b><font color="#FFCC00" face="times new roman,times,serif">
+
+
+</font></b></font><div align="center"><font size="5"><b><font color="#FFCC00" face="times new roman,times,serif">انواع مدلهای سرخسی علاوه بر بافتنی در قلاببافی هم یافت می شن <br><br><img src="http://uupload.ir/files/jz92_20170411_155253.jpg" alt="" vspace="0" hspace="0" border="0" align="bottom"><br><br>و از زیبایی خاصی بر خوردارن <br></font></b></font></div><font size="5"><b><font color="#FFCC00" face="times new roman,times,serif">
+
+
+
+
+
+
+
+
+</font></b></font>
+
+<br><a href='http://baftanymamanazam.mihanblog.com/post/827'>ادامه مطلب</a><br></p>
+</div>          
+<div class ="date"> 
+<p class="r">[ دوشنبه 29 خرداد 1396 ]  [ 10:57 ب.ظ ]  [ اعظم عربشاهی دلویی   ]
+<p class="l"><span dir="rtl" > <a target="_self" href="javascript:newComment(827)">[ 
+نظرات(<script>setCommentCnt(827)</script>) ]</a></div></div>
+<br>
+
+
+
+
+
+
+
+<div class="post">             
+<a name="825"></a>
+<div class="Title"><a href="http://baftanymamanazam.mihanblog.com/post/825">ست آرایشی سنتی 1 ( کیف آرایشی- جا دستمال لول)</a></div>
+ <b><div class="Content"><div align="center"><div align="center"><font color="#33CCFF"><b><font face="times new roman,times,serif" size="5">کیف آرایشی و جا دستمالی با رنگ سنتی&nbsp; رو در این پست </font><font face="times new roman,times,serif" size="5"><br></font></b></font></div><font color="#33CCFF"><b><font face="times new roman,times,serif" size="5"><strong><br><br><br><img src="http://uupload.ir/files/lq0f_63148914115506547546.jpg" alt="" align="bottom" border="0" width="485" vspace="0" hspace="0" height="456"><br><br><br>&nbsp;و سبد گل سرها&nbsp; رو در پست بعدی </strong>بیاموزید </font></b></font></div><font color="#33CCFF"><b><font face="times new roman,times,serif" size="5">
+
+
+</font></b></font><br><a href='http://baftanymamanazam.mihanblog.com/post/825'>ادامه مطلب</a><br></p>
+<br><br>
+طبقه بندی: <a href="http://baftanymamanazam.mihanblog.com/post/category/75">
+دست بافته های من</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/4">
+تزئینات بافتنی</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/14">
+بافت وسایل منزل</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/25">
+آموزش قلاب بافی</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/45">
+دو رنگه یا چند رنگه بافی</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/40">
+کاربرد اشکال هندسی در بافتنی</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/35">
+ ارائه آموزش متنی از "مامان اعظم"</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/64">
+آموزش اصطلاحات بافتنی و قلاب بافی</a>، <a href="http://baftanymamanazam.mihanblog.com/post/category/63">
+آموزش  نقشه خوانی و علائم بافتنی و قلاب بافی</a>، <br>برچسب ها:<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%B3%D8%AA%20%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C%20%D8%A8%D8%A7%D8%B1%D9%86%DA%AF%20%D8%B3%D9%86%D8%AA%DB%8C" >ست آرایشی بارنگ سنتی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%DA%A9%DB%8C%D9%81%20%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C%20%D9%82%D9%84%D8%A7%D8%A8%20%D8%A8%D8%A7%D9%81%DB%8C" >کیف آرایشی قلاب بافی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D9%82%D9%84%D8%A7%D8%A8%20%D8%A8%D8%A7%D9%81%DB%8C" >آموزش قلاب بافی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%AC%D8%A7%20%D8%AF%D8%B3%D8%AA%D9%85%D8%A7%D9%84%20%DA%A9%D8%A7%D8%BA%D8%B0%DB%8C%20%D9%84%D9%88%D9%84%20%D9%82%D9%84%D8%A7%D8%A8%D8%A8%D8%A7%D9%81%DB%8C" >جا دستمال کاغذی لول قلاببافی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A8%D8%A7%D8%B2%DB%8C%D8%A7%D9%81%D8%AA%20%D9%82%D9%88%D8%B7%DB%8C%20%D8%B1%D8%A8" >بازیافت قوطی رب</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D9%87%D9%86%D8%B1%D9%87%D8%A7%DB%8C%20%D8%AF%D8%B3%D8%AA%DB%8C" >آموزش هنرهای دستی</a>، 
+<a href="http://baftanymamanazam.mihanblog.com/post/tag/%DA%A9%D8%A7%D8%B1%D9%87%D8%A7%DB%8C%20%D8%AF%D8%B3%D8%AA%DB%8C" >کارهای دستی</a>، 
+<br></div>          
+<div class ="date"> 
+<p class="r">[ سه شنبه 26 اردیبهشت 1396 ]  [ 01:30 ب.ظ ]  [ اعظم عربشاهی دلویی   ]
+<p class="l"><span dir="rtl" > <a target="_self" href="javascript:newComment(825)">[ 
+صندوقچه نظرات(<script>setCommentCnt(825)</script>) ]</a></div></div>
+<br>
+
+<p align="center"><font face="Georgia" style="font-size: 15pt"> 
+<b> .: تعداد کل صفحات 68 :. <b>
+<a href="http://baftanymamanazam.mihanblog.com/page/1"> [  <b>1</b>  ]</a> <b>
+<a href="http://baftanymamanazam.mihanblog.com/page/2"> [  <span>2</span>  ]</a> <b>
+<a href="http://baftanymamanazam.mihanblog.com/page/3"> [  <span>3</span>  ]</a> <b>
+<a href="http://baftanymamanazam.mihanblog.com/page/4"> [  <span>4</span>  ]</a> <b>
+<a href="http://baftanymamanazam.mihanblog.com/page/5"> [  <span>5</span>  ]</a> <b>
+<a href="http://baftanymamanazam.mihanblog.com/page/6"> [  <span>6</span>  ]</a> <b>
+<a href="http://baftanymamanazam.mihanblog.com/page/7"> [  <span>7</span>  ]</a> <b>
+<a href="http://baftanymamanazam.mihanblog.com/page/8"> [  <i>...</i>  ]</a> <br>
+</p></div></td>	
+<!-- end post -->
+
+
+<!--Design By : Avazak.ir-->
+<td width="200" valign="top" dir="rtl" >
+<div class="sidebar-r">
+<!--Design By : Avazak.ir-->
+<h1>درباره وبلاگ</h1>
+<div class="About">
+<div style="text-align: justify"  >
+<img src="../static.mihanblog.com/public/user_data/web_photo/452/1355161.jpg@8118"  /><div align=center >   </div>
+به یاری خدا ؛ این وبلاگ برای دومین بار <br />
+و  با  مساعدت  &quot; میهن بلاگ &quot;  به جهت  <br />
+ارائه مدلها   و  آموزش بافتنی  و  به  نیت<br />
+پرداخت  زکات  هنرها  و  دانـسته هایم ؛<br />
+و ... هم به عنوان خیراتی به روح<br />
+&quot; مادر  عزیزم &quot;  ساخته شده .<br />
+     تا چه قبول افتد و چه در نظر آید.<br />
+<br />
+<br />
+««« دوستان عزیز »»»<br />
+<br />
+با عرض معذرت :<br />
+« امکان ایمیل کردن آموزش برای افراد <br />
+بصورت خصوصی وجود نداره .»<br />
+امکان پاسخگویی به نظرات خصوصی وجود ندارد.<br />
+لطفاً بصورت خصوصی پیام نگذارید .<br />
+<br />
+**********<br />
+شما برای نوشتن نظراتتان ملزم به داشتن<br />
+وبلاگ یا نوشتن ایمیل خودتان نیستید؛<br />
+اما لطفاً نامی برای نظرات خود بنویسید.<br />
+<br />
+**********<br />
+بعضی آموزش ها در مراحل مختلفی و  در <br />
+چند پست جداگانه آموزش داده شده تا<br />
+ از طولانی شدن مطالب پیشگیری بشه .<br />
+لطفاً برای یافتن پست های دنباله دار از<br />
+ کادر جستجوی وب در ستون دست چپ<br />
+ استفاده کنید . مثلاً  اسم پستی را که <br />
+در آن هستید و می خواهید پست های <br />
+مرتب دیگرش را پیدا کنید در کادر جستجو <br />
+بنویسید  : مثل ؛ سارافون بالا تنه کوتاهِ گرد <br />
+و کلید جستجو را بزنید . پنجره ای باز خواهد<br />
+شد و تمام پست های مربوط به آن آموزش<br />
+خواهد آمد . روی هر یک از آن ها که کلیک کنید <br />
+در پنجره ای مجزا  باز خواهد شد .  <br />
+</div> </div> 
+<div class="FooterSid"></div>
+<!--Design By : Avazak.ir-->
+<h1>آرشیو ماهانه</h1>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1398/7"> مهر 1398</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1397/2"> اردیبهشت 1397</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1396/7"> مهر 1396</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1396/4"> تیر 1396</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1396/3"> خرداد 1396</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1395/12"> اسفند 1395</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1395/11"> بهمن 1395</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1395/9"> آذر 1395</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1395/5"> مرداد 1395</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1395/3"> خرداد 1395</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1395/2"> اردیبهشت 1395</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1395/1"> فروردین 1395</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1394/12"> اسفند 1394</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1394/11"> بهمن 1394</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1394/10"> دی 1394</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1394/9"> آذر 1394</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1394/8"> آبان 1394</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1394/7"> مهر 1394</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1394/6"> شهریور 1394</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1394/5"> مرداد 1394</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1394/4"> تیر 1394</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1394/3"> خرداد 1394</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive/1394/2"> اردیبهشت 1394</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/archive">لیست آرشیوها</a></div>
+<div class="FooterSid"></div>
+<!--Design By : Avazak.ir-->
+<h1> "  صنــــدوقچۀ بافــتنی ها </h1>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/15">دعا و مناجات و تقاضای عفو - 53</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/6">مناسبت ها و دلنوشته ها  - 157</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/76">فیلم های آموزش بافتنی - 12</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/66">آموزشهای مقدماتی - 69</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/75">دست بافته های من - 18</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/69">معرفی وبلاگ ها - 5</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/70">جداول سایز بندی - 8</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/79">بافتن گل و گیاه - 9</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/49"> هنر بازیافت - 13</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/44">رومیزی ها - 7</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/30">تور ی بافتن - 27</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/31">ضخیم  بافی - 12</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/24">موتیـف  بافی - 26</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/29">حاشیه بافی - 14</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/21">شـنل و پانچو - 12</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/51">بافت زیور آلات - 27</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/19">بافتنی پسرانه - 33</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/4">تزئینات بافتنی - 177</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/20">بافتنی دخترانه - 81</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/18">بافتنـی  مردانه - 37</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/17">بافتنیهای زنانه - 41</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/22">لباس مجلسی - 11</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/57">گره های تزیینی - 21</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/56">شال سه گوشه - 9</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/42">آلبوم قلاب بافی - 10</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/12">مدلهای بافتنی - 54</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/43">آلبوم بافتنی ها - 12</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/71">مدلهای برجسته  - 14</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/28">تحقیق و تفحّص - 23</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/14">بافت وسایل منزل - 66</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/53">بازیافت بافتنی ها - 12</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/32">بافته های دوستان - 30</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/25">آموزش قلاب بافی - 116</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/38">بافتنی و سلامتی - 12</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/3">مدلهای قلاب بافی - 46</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/50">کاردستی  و خلاقیت - 68</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/60">شناخت ابزار بافتنی - 23</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/8">آموزش ماشین بافی - 8</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/48">آموزش عروسک بافی - 19</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/11">مدلهای ماشین بافی - 8</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/27"> مشاوره و روانشناسی - 19</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/46">آموزش مدلهای حصیری - 6</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/5">آموزش  بافتنی با دو میل - 102</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/61">آموزش بافت انواع پیچها - 15</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/45">دو رنگه یا چند رنگه بافی - 21</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/41">کاربرد دایره های جادویی - 21</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/36">علائم قلاب بافی و بافتنی - 32</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/62">آموزش بافت انواع کشبافت - 14</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/58">اندازه گیری برای بافتنی ها - 15</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/47">آموزش مدلهای لانه زنبوری - 5</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/78">انواع یقه ها  و  سجاف یقه ها - 9</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/81">انواع آستین ها - 1</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/54"> بالشت پتو  و  روتختی بافتنی - 11</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/55">ارائۀ نقشه از &quot; مامان اعظم &quot; - 16</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/34">ارائه مدلها از &quot; سایتهای دیگر&quot; - 174</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/9">بافتنی با سه یا پنج میل بافتنی - 18</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/68"> Spool weaving یا قرقره بافی  - 7</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/40">کاربرد اشکال هندسی در بافتنی - 25</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/59">معرفی سایتها و وبلاگهای بافتنی - 17</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/35"> ارائه آموزش متنی از &quot;مامان اعظم&quot; - 159</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/67">آموزش بافت با کارگاه یا آسان بافت  - 7</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/33">بافتنی های  اقوام  ایرانی و دیگر ملل - 12</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/16">کلاه و شالگردن - جوراب و دستکش - 49</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/52">ریشه بافی یا ریشه زنی بافتنی ها - 4</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/74">انواع سر انداختن بافتنی و قلاب بافی - 15</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/77">انواع کور کردن  بافتنـــی و قلاب بـــافی - 6</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/64">آموزش اصطلاحات بافتنی و قلاب بافی - 29</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/37">آموزش بافتنی به افراد مبتدی و کودکان - 37</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/73">روش اتصال موتیفهای مختلف به یکدیگر - 1</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/63">آموزش  نقشه خوانی و علائم بافتنی و قلاب بافی - 12</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/65">کاربرد &quot; بافت رجهای کوتاه &quot; یا  Knitting short row  - 10</a></div>
+<div class="Link"><a href="http://baftanymamanazam.mihanblog.com/post/category/72">محاسبۀ تعداد دونه های بافتنی متناسب با ضخامت کاموا - 5</a></div>
+<div class="FooterSid"></div>
+<!--Design By : Avazak.ir-->
+
+		<form id="frm-16076153465fd2437241f50" method="post" action="http://baftanymamanazam.mihanblog.com/poll/new/fid/16076153465fd2437241f50/atrty/1607615346/avrvy/0/key/7dd68f3f4a47becc0bf6e3ce38ac7a1e/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="291782" id="data[pollid]" />		
+<h1>نظر سنجی</h1>
+<div style="text-align: Center" >  دوستان من... با شرکت در این نظر سنجی ؛ مرا در شناخت علایق خویش یاری دهید. ممنون<br>
+<div style="text-align: Right" dir="rtl" > <label><input type="checkbox"  name="data[v1]" id="v1" value="1" />  فقط ارائه بافته های مامان اعظم </label><br> 
+ <label><input type="checkbox"  name="data[v2]" id="v2" value="1" />  آموزش تصویری مدلهای بافتنی</label><br> 
+ <label><input type="checkbox"  name="data[v3]" id="v3" value="1" />  آموزش متنی  مدلهای بافتنی</label><br> 
+ <label><input type="checkbox"  name="data[v4]" id="v4" value="1" />  ارائۀ  مدل  از سایتهای  دیگر </label><br> 
+ <label><input type="checkbox"  name="data[v5]" id="v5" value="1" />   فقط  ارائۀ  مدلهای بافتنی  </label><br> 
+ <label><input type="checkbox"  name="data[v6]" id="v6" value="1" />  معرفی سایتهای بافتنی</label><br> 
+<div align="center"><input type="submit" value="ارسال به صندوقچۀ نظرات" class="btn"/></div>
+<div class="FooterSid"></div>
+
+		<input type="hidden" name="frm-id" value="16076153465fd2437241f50" id="frm-id" /></form><!--Design By : Avazak.ir-->
+<cb:block_stat>
+
+
+
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=3532401&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=3532401" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code -->
+
+
+
+
+
+<h1>لینک های ویژه</h1>
+<div class="Link"><a titl="انجمن وبلاگ نویسان" href="http://forum.avazak.ir">انجمن وبلاگ نویسان</a></div>
+<div class="Link"><a titl="اس ام اس جدید" href="http://20payamak.ir">اس ام اس عاشقانه</a></div>
+<div class="Link"><a titl="قالب رایگان" href="http://avazak.ir">قالب وبلاگ</a></div>
+<div class="Link"><a titl="کد آهنگ برای وبلاگ" href="http://music.avazak.ir">کد آهنگ</a></div>
+
+<div class="FooterSid"></div>
+<!--Design By : Avazak.ir-->
+<div class="custom">
+<h1>دیگر امکانات</h1>
+<div align="center"><img src = "http://s6.picofile.com/file/8237545750/azam_arab_shahi2.gif" alt ="http://s6.picofile.com/file/8237545750/azam_arab_shahi2.gif.gif"
+width = "197"height = "250">
+
+
+
+
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=3533793&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=3533793" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code -->
+
+
+
+
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=3533798&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=3533798" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code -->
+
+
+
+
+
+
+
+<!-- Begin ToolsIR.com Oghat code -->
+<script src="http://oghat.toolsir.com/azan.php?mod=6&border=3&az=1&city=11-17" type="text/javascript"></script><div style="display:none;"><h2><a href="http://www.toolsir.com/">دریافت کد اوقات شرعی</a></h2></div>
+<!-- End ToolsIR.com Oghat code -->
+
+
+
+
+
+
+
+
+
+<!---Start www.20tools.com Per Tools---><script type='text/javascript' src='http://www.20tools.com/upper/scroll.js'></script><br><font face="Times New Roman"><a target="_blank" href="http://www.20tools.com"><span style="font-size: 9pt; text-decoration: none"></span></a> <a target="_blank" href="http://www.20tools.com/upper"><span style="font-size: 9pt; text-decoration: none"></span></a></font><br><div style="display:none"><a href=http://www.20tools.com/upper>کد پرش به بالای صفحه وب</a></div><script type='text/javascript' >document.write ("<scr"+"ipt type='text/javascript' src='http://www.20tools.com/upper/scroll.php?module=20&side=right' ></s"+"cript>");</script><!---End www.20tools.com UpPer Tools--->
+
+
+
+
+
+<!-- start logo cod off http://aftab92.mihanblog.com/ --><p align="center"><p align="center"><a href="http://aftab92.mihanblog.com/" target="_blank"><img border="0" src="http://rozup.ir/up/ilovely/back_banner120_3.gif" width="120" height="240" alt="دلمشغولی های یک مامان"></a></p><!--finish logo cod off http://aftab92.mihanblog.com/ -->
+
+<div style='display:none;'><li><a href='http://PicHaK.NeT/online-user'>کد نمایش افراد آنلاین</a></li></li></div>
+<script type='text/JavaScript'>
+var oulb= 'http://PicHaK.NeT/online-user/';
+function CheckBrowser(){
+if(navigator.appName == "Microsoft Internet Explorer")	{
+document.write('<scrip'+'t src="'+oulb+'js/jquery.min.js"></s'+'cript><scrip'+'t src="'+oulb+'js/js.php?c=2&t=2"></s'+'cript>');return true;}document.write('<scrip'+'t src="'+oulb+'cod.php?c=2&t=2"></s'+'cript>');
+return false; }</script>
+<script type='text/JavaScript'>CheckBrowser()</script>
+
+
+
+</div></div>
+<div class="FooterSid"></div>
+</td></tr>
+</div></div>
+	<!-- end sidebar-r -->
+<!--Design By : Avazak.ir-->
+<tr><td width="1000" colspan="3" class="Footer" dir="rtl">
+[ <a title="قالب وبلاگ" href="http://Avazak.ir/">طراح قالب: <a tite="قالب وبلاگ" href="http://Avazak.ir">آوازک</a> | <a title="قالب وبلاگ" href="http://Avazak.ir">Theme By Avazak.ir</a> | <a title="قالب وبلاگ رایگان" href="http://avazak.ir/?feed=rss2">rss</a> ]<br>
+</td></tr></table></div></div>
+<!-- end Footer -->
+<!--Design By : Avazak.ir-->
+<div style="display:none;"><a title="مجله اینترنتی دانستنی ها" href="http://danestaniha.net
+
+</body>
+
+
+</html>
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'baftanymamanazam.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

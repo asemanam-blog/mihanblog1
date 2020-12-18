@@ -1,0 +1,2355 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc@rsd.html" />
+<script type="text/javascript" src="../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1624277*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[8]='297';commentCnt[2365]='0';commentCnt[2366]='0';commentCnt[2367]='0';commentCnt[2368]='0';commentCnt[2369]='0';commentCnt[2370]='0';commentCnt[2371]='0';commentCnt[2372]='0';commentCnt[2373]='0';commentCnt[2374]='0';commentCnt[2375]='0';commentCnt[2376]='0';commentCnt[2377]='0';commentCnt[2378]='0';commentCnt[2379]='0';commentCnt[2380]='0';commentCnt[2381]='0';commentCnt[2382]='0';commentCnt[2383]='0';commentCnt[2384]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[8]='0';
+mihanblogDisLikeArrCnt[8]='1';
+mihanblogLikeArrCnt[2366]='0';
+mihanblogDisLikeArrCnt[2366]='0';
+mihanblogLikeArrCnt[2369]='0';
+mihanblogDisLikeArrCnt[2369]='0';
+mihanblogLikeArrCnt[2370]='0';
+mihanblogDisLikeArrCnt[2370]='0';
+mihanblogLikeArrCnt[2371]='0';
+mihanblogDisLikeArrCnt[2371]='0';
+mihanblogLikeArrCnt[2374]='0';
+mihanblogDisLikeArrCnt[2374]='0';
+mihanblogLikeArrCnt[2377]='0';
+mihanblogDisLikeArrCnt[2377]='0';
+mihanblogLikeArrCnt[2379]='0';
+mihanblogDisLikeArrCnt[2379]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://chors.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://chors.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','2261');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','پنجشنبه 20 آذر 1399');
+	
+	setStatVar('today_view','102');
+	setStatVar('yesterday_view','134');
+	
+	setStatVar('this_month_view','3545');
+	setStatVar('last_month_view','7780');
+
+	setStatVar('total_view','548770');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (14:52)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://chors.mihanblog.com/statupdate/?data[refereruri]=http://chors.mihanblog.com/&data[postid]=&data[requesturi]=/page/3&data[sdate]=1607772294&data[hash]=43791dab925005a2e8498968931aa62a&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://chors.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://chors.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://chors.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://chors.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://chors.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://chors.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://chors.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://chors.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://chors.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://chors.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://chors.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://chors.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://chors.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://chors.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://chors.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://chors.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://chors.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://chors.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://chors.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://chors.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://chors.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://chors.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://chors.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://chors.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://chors.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://chors.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://chors.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://chors.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://chors.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://chors.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://chors.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://chors.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://chors.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://chors.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://chors.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+
+<head>
+<title>چورس روستای تاریخی و گردشگری</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="designer" content="Blog Skin">
+<meta name="author" content="یوسف غیورزاده چورسی">
+<meta name="language" content="Farsi">
+<meta name="designerUrl" content="http://www.blogskin.ir/">
+<script src="http://www.blogskin.ir/blog.js" language="javascript"></script>
+<meta name="description" content="چورس روستای تاریخی و گردشگری -  - چورس روستای تاریخی و گردشگری">
+<meta name="keywords" content="چورس روستای تاریخی و گردشگری,chors,, Blog, Weblog, Persian,Iran, Farsi, Weblogs, Blogskin">
+<link rel="alternate" type="application/rss+xml" title="چورس روستای تاریخی و گردشگری" href="../post/rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title="چورس روستای تاریخی و گردشگری" href="../post/atom/index.html" />
+<link href="http://blogskins.ir/46/style.css" type="text/css" rel="stylesheet">
+<script src="http://blogskins.ir/scroll.js" language="javascript"></script>
+<style>
+.top{background:url(http://blogskins.ir/46/top.jpg) no-repeat top right;height:168;width:100%}
+</style>
+<SCRIPT language="javascript">
+function checkform(){	
+if (blogskin.name.value =='')	{alert('لطفا نام خود را وارد كنید');	return false;	}
+if (blogskin.adres.value =='')	{alert('لطفا آدرس پست الكترونیك خود را وارد كنید');	return false;	}
+if (blogskin.msg.value =='')	{alert('لطفا متن ارسالی خود را وارد كنید');	return false;	}
+return true;}
+</SCRIPT>
+</head>
+
+<body>
+<div align=center id="ali"><div style="width:1003">
+<div class=blogskin-bg><div class=blogskin-back>
+<div class=blogskin>
+
+<div class=top>
+<div class=top-blogskin><div style="float:right;width:780">
+<div style="padding-top:15">
+<div class=topskin></div>
+<a href="../index.html">صفحه اول</a>
+<a href="../post/list.html">آرشیو مطالب</a>|
+<a href="mailto:3409.ygayur@gmail.com">پست الكترونیك</a>|
+<a href="http://www.blogskin.ir" target="_blank">قالب وبلاگ</a>|
+<a href="http://www.bloghelp.ir" target="_blank">مرجع راهنمای وبلاگ نویسان</a>
+</div>
+
+</div>
+<div class=tarikh><br><br>امروز : <script language="javascript" src="http://blogskins.ir/date.php"></script></div>
+</div>
+
+<div class=titr>چورس روستای تاریخی و گردشگری</div><div class=des>دست در دست هم دهیم به مهر    میهن خویش راکنیم آباد</div></div>
+
+<div class=top-link>
+<div class=top-blogskin2>
+<div style="float:right;width:710px;direction:rtl; height:20px">
+<div style="padding:3 20 0 0">
+<a href="3.html#postz">آخرین مطالب</a>
+<a href="3.html#linkz">لینک دوستان</a>
+<a href="javascript:messageForm()" title="تماس با مدیران ">تماس با ما</a>
+</div></div>
+
+<form method="Get" action="http://google.com/search" class=sch><input name="sitesearch" value="chors.mihanblog.com" type="hidden">
+	<a href="../post/rss/index.html" title="RSS"><img border="0" src="http://blogskins.ir/46/x.gif" width="25" height="20"></a>&nbsp;&nbsp;
+	<input type="text" name="q" size="21" class=txt>&nbsp;&nbsp;<input type="submit" value=" " class=but>
+</form>
+
+</div>
+</div>
+
+<div class=mainbg>
+
+<div class=mainr>
+
+<div class=menu> 
+
+<div class="tmenu b5"><div class=tmenu2>معرفی سایت</div></div>
+<div class=xmenu>
+<div class=xmenu2>
+<div style="text-align:center;"><img src="../../static.mihanblog.com/public/user_data/web_photo/542/1624277.jpg@3126"  /></div>
+<br>
+<br></div>
+		</div>
+<div class=bmenu></div>
+
+
+<div class="tmenu b6"><div class=tmenu2>نویسندگان</div></div>
+<div class=xmenu>
+<div class=xmenu1><a href="../post/author/1351975.html"><img src="../../static.mihanblog.com/public/user_data/user_photo/451/1351975.jpg" style="width:16px;" /></a> <a href="../post/author/1351975.html">یوسف غیورزاده چورسی</a></div></div>
+<div class=bmenu></div>
+<div class=tmenu><div class=tmenu2>ابر برچسب ها</div></div>
+<div class=xmenu>
+<div class=xmenu2><a href="../post/tag/مفاخر+چورس.html" style="font-size:1em">
+		مفاخر چورس</a> <a href="../post/tag/احداث+هتل+در+چورس.html" style="font-size:1.25em">
+		احداث هتل در چورس</a> <a href="../post/tag/دبستان+مولوی+چورس.html" style="font-size:1em">
+		دبستان مولوی چورس</a> <a href="../post/tag/شهدای+چورس.html" style="font-size:1em">
+		شهدای چورس</a> <a href="../post/tag/مفاخرچورس.html" style="font-size:1.75em">
+		مفاخرچورس</a> <a href="../post/tag/آناقیزلی+تپه+تاریخی+چورس.html" style="font-size:1em">
+		آناقیزلی تپه تاریخی چورس</a> <a href="../post/tag/چورس.html" style="font-size:2em">
+		چورس</a> <a href="../post/tag/دکتر+اصلان+آبادی.html" style="font-size:1.5em">
+		دکتر اصلان آبادی</a> <a href="../post/tag/کارکنان+و+کارمندان+چورسی.html" style="font-size:1.25em">
+		کارکنان و کارمندان چورسی</a> <a href="../post/tag/روستای+تاریخی+چورس.html" style="font-size:1em">
+		روستای تاریخی چورس</a> </div>
+</div>
+<div class=bmenu></div>
+<div class="tmenu b9"><div class=tmenu2>آمار سایت</div></div>
+<div class=xmenu>
+<div class=xmenu2>
+			بازدیدهای امروز : <span class=a><script>getStatVar('today_view');</script></span> نفر<br>
+بازدیدهای دیروز 
+			: <span class=a><script>getStatVar('yesterday_view');</script></span> نفر<br>
+			كل بازدیدها : <span class=a><script>getStatVar('total_view');</script></span> نفر<br>
+بازدید این ماه 
+			:<span class=a> <script>getStatVar('this_month_view');</script></span> نفر<br>
+بازدید ماه قبل 
+			: <span class=a><script>getStatVar('last_month_view');</script></span> نفر<br>
+تعداد نویسندگان 
+			: <span class=a><script>getStatVar('total_author');</script></span> عدد<br>
+كل مطالب ارسال شده: <span class=a><script>getStatVar('total_post');</script></span> عدد<br>
+آخرین بازدید : <span class=a><script>getStatVar('last_view_date');</script></span><br>
+آخرین بروز رسانی : <span class=a><script>getStatVar('modify_date');</script></span>
+</div>
+</div>
+<div class=bmenu></div>
+<div class="tmenu b2"><div class=tmenu2>امکانات جانبی</div></div>
+<div class=xmenu>
+<div class=xmenu2>
+<div id="c" style="text-align:center">
+<!-- Prayer Time developed by roostanet.ir--->
+ <script type='text/javascript' src='http://pt.roostanet.com/webTool.php?id=11&lng=45.2&lat=38.49&bc=FBFF91&tc=000000&loc=%DA%86%D9%88%D8%B1%D8%B3&brs=3&brc=FFA812&td=1'> </script>
+<!-- Prayer Time developed by roostanet.ir--->
+
+<br><a target="_blank" style="text-decoration:none;font-size:9pt" title="کد وبلاگ" href="http://www.bloghelp.ir">راهنمای وبلاگ نویسان</a><br><a target="_blank" style="text-decoration:none;font-size:9pt" title="ابزار وبلاگ" href="http://www.1abzar.com">ابزار رایگان وبلاگ</a>
+</div>
+</div>
+</div>
+<div class=bmenu></div>
+
+
+</div>
+</div>
+
+<div class=mainl>
+
+<div class=post>
+
+<!--------------- block sabet ---------------------->
+<blogskin><div class=ad1></div><div class=xpost><div class=page22>
+
+<a href="http://www.bloghelp.ir/?p=316" target="_blank">جهت اطلاع از تنظیمات و ویرایش این قالب اینجا را کلیک کنید</a>
+
+</div></div><div class=ad3><br></div></blogskin>
+<!--------------- block sabet ---------------------->
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=tpost><div class=title><a href="../post/8.html">مفاخرچورس</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/8&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : جمعه 23 آبان 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div align="justify"><font size="2"><font face="Mihan-IransansBold">سلام دوستان،<font size="5" color="#990000">مفاخرچورس</font>،<font size="3" color="#000099">در بالای صفحه اول ثابت خواهدبود.</font>جهت استفاده مطالب دیگر مدنظر داشته باشید.</font></font></div><font size="1"><span style="color: #990000;"><span style="font-size: medium;">استاد
+ بزرگوار جناب آقای رشید اصلان آبادی رییس اداره فرهنگ ماکوو از اولین 
+معلمان چورس ویکی از بانیان ساخت مسجد جامع چورس و پدر خانواده ای که همه 
+فرزندانشان از مفاخرچورسند.<br></span></span></font><div align="center"><div align="justify"><font face="Mihan-IransansBold"><span style="font-size: medium;">1-</span><span style="font-size: medium;"><font color="#000099"><font size="5">آقای
+مهندس حمید جعفری</font> </font>از خیرین ساکن تهران درآبادانی چورس،مشاورعالی بیمه ای، معاون وزیر صنایع،معدن،مشاورعالی کمسیون اجتماعی مجلس شورای اسلامی،صاحب 
+امتیازوسهامدارعمده بزرگترین شرکت های خدمات بیمه ای در ایران و........</span></font><br></div><div align="right"><span style="font-size: medium;"></span><span style="font-size: medium;"><font face="Mihan-IransansBold">2-</font><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"><font face="Mihan-IransansBold"><font size="5" color="#000099">آقای حاج حمید اشرفی </font>از خیرین بزرگ ساکن خوی در آبادانی چورس وسابقه 19سال عضواتاق بازرگانی</font></span></span></span></span></span></span></div><div align="right"><br><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"></span></span></span></span></span></span></div><div align="right"><span style="font-size: medium;"><font face="Mihan-IransansBold">3</font><font size="4" face="Mihan-IransansBold">-<span style="font-size: medium;"><span style="font-size: medium;"><font size="5" color="#000099">آقای حاج حسن مصیب زاده </font>ازخیرین بزرگ ساکن تهران در آبادانی چورس</span></span></font></span><br><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"></span></span></span></span></span></span><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"></span></span></span></span></span></span></div><font size="3"><a href="../post/8.html" target="" title=""><span style="font-size: xx-large;"><span style="color: #cc0000; font-size: large;">لطفابقیه اسامی</span><span style="color: #cc0000;"> <span style="font-size: large;">رادرادامه مطلب </span></span></span></a><a href="../post/8.html" target="" title=""><span style="color: #800000; font-size: large;">مشاهده فرمایید.</span></a></font></div>
+<p style="text-align: center;"><span style="color: #800000; font-size: large;"></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-size:medium;"></span><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"></span></span></span></span></span></span><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"><br>3-مرحوم آقای حاج اکبرهلالی از خیرین بزرگوار که محل بیمارستان چورس وقف ایشان می باشد.<br></span></span></span>
+<p style="text-align: justify;"><br><span style="font-size: medium;">4-<span style="font-size: medium;">سردار پاسدار جبراییل عارف نیا فرمانده فرهنگی سپاه استان</span></span></p><p style="text-align: justify;"><span style="font-size: medium;">5-</span><span style="font-size: medium;"><span style="font-size: medium;">استاددکترناصراصلان آبادی فوق تخصص آنژیوگرافی بیمارستانهای تبریز</span></span>
+</p>
+<span style="font-size: medium;">6-</span><span style="font-size: medium;">آقای ایوب ایوبی شهرداربخش فیرورق خوی</span> <span style="font-size: medium;">رییس سابق شورای اسلامی خوی،نامزدودوره نمایندگی مجلس شورای اسلامی واستاددانشگاههای خوی</span><br><br><br><span style="font-size: medium;">7- مهندس رحیم مهدی نژاد</span><span style="font-size: medium;"><span style="font-size: medium;"> کارشناس ارشد</span></span><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;">عمران</span></span> </span> رییس اداره فنی ،مهندسی سازمان راه وشهرسازی استان آذربایجانشرقی</span><br><br><span style="font-size: medium;">8-استاد مجید قاسمی رییس اداره آموزش وپرورش شهرستان چایپاره سال 68\65</span><br><br><span style="font-size: medium;">9-</span><span style="font-size: medium;"></span><span style="font-size: medium;">استاددکتریوسف حسن زاده استاددانشگاههای تبریز<br></span><span style="font-size: medium;"></span><span style="font-size: medium;"><span style="font-size: medium;"></span></span><br><span style="font-size: medium;"><span style="font-size: medium;">10</span>-</span><span style="font-size:medium;">استادناصر رحیمی استاد دانشگاههای خوی</span><br><br><br><span style="font-size:medium;">11-آقای جبراییل آهنگری شهردارقره ضیاالدین وفرماندارانزل</span><br><br><span style="font-size:medium;">12-</span><span style="font-size: medium;"><span style="font-size: medium;">استاددکتر سعید اصلان آبادی فوق تخصص جراحی کودکان بیمارستانهای تبریز<br><br></span></span><span style="font-size:medium;">13-آقای جعفر علیزاده سرتیپ خلبان</span><br><br><span style="font-size:medium;">14-دکتر علی حسن پور استاد دانشگاههای ارومیه</span><br><br><span style="font-size:medium;">15-دکترسیروس پوررحیم در بیمارستانهای تبریز</span><br><br><span style="font-size:medium;">16-دکتر سجاد ولیزاده دکترای تربیت بدنی از کانادا</span><br><br><span style="font-size:medium;">17-دکتر لیلا متولی متخصص بیمارستان تخصصی شهرستان خوی</span><br><br><span style="font-size:medium;">18-آقای جعفر آهنگری مدرس دانشگاه</span><br><br><span style="font-size:medium;">19-دکتر حسن اصلان آبادی متخصص قلب و عروق وداخلی درشهرستان خوی</span><br><br><span style="font-size:medium;">20-آقای غلامحسین پورمحمد سرهنگ خلبان</span><br><br><span style="font-size:medium;">21-آقای عباسعلی یوسف زاده سرهنگ خلبان</span><br><br><span style="font-size:medium;">22-<span style="font-size:medium;">دکتر حسین اصلان آبادی استاد دانشگاههای تبریز</span></span><br><br><span style="font-size:medium;">23<span style="font-size:small;">-<font size="3">آقای علی سلطانبیگی کارشناس ارشد زمین شناسی در سازمان راه و شهرسازی استان آذربایجانشرقی</font></span></span><br><br><span style="font-size:medium;">24-حاج آقا میرزا یحیی ایوب زاده رییس شورای چورس و شورای شهرستان چایپاره</span><br><br><span style="font-size:medium;">25-حاج آقا میرزا حیدر محمدجعفری معاون فرهنگی زندان خوی</span><br><br><span style="font-size:medium;">26-آقای مهندس رمضان اکبری آذر رییس سابق جهاد کشاورزی شهرستان چایپاره</span><br><br><span style="font-size:medium;">27-<span style="font-size:medium;">آقای حاج مصطفی طاهری سرتیپ خلبان</span></span><br><br><span style="font-size:medium;">28 دکتررضا جعفری در تهران</span><br><br><span style="font-size:medium;">29-دکتر هاتف ملازاده دندانپزشک</span><br><br><span style="font-size:medium;">30-آقای مهندس محمود حسن پور معاون شبکه بهداشت شهرستان خوی</span><br><br><span style="font-size:medium;">31-دکتر مرحوم حمید شکورزاده</span><br><br><span style="font-size:medium;">32-</span><span style="font-size:small;">آقای&nbsp; مرحوم حاج جعفرجعفرپورپدر سردارشهید قنبر جعفرپوروجانبازو بانی ساخت مسجد جامع</span><br><br><span style="font-size:medium;">33-</span><span style="font-size:medium;">استادعباس حسن زاده دبیرنمونه ریاضی شهرستانهای خوی وچایپاره</span>
+<p><span style="font-size:medium;">34- دکتر خانم سمیرا مظاهری دکترای داروسازی</span><br><br><span style="font-size:medium;">35- دکتر امیر سلطان بیگی دکترای زراعت</span><br><br><span style="font-size:medium;">36-آقای سعید اشرفی استاد دانشگاه</span><br><br><span style="font-size:medium;">&nbsp;37-خانم اشرفی دکتر زنان و زایمان در خوی</span><br><br><span style="font-size:medium;">38-آقای میلاد حسین پور دانشجوی پزشکی</span><br><br><span style="font-size:medium;">39-خانم طاووس طاهری استاد دانشگاه</span><br><br><span style="font-size:medium;">40-خانم فاطمه محمدرضایی دانشجوی پزشکی دانشگاه تهران</span><br><br><span style="font-size:medium;">41-آقای محمد متولی دانشجوی پزشکی</span><br><br><span style="font-size:medium;">42-دکتر اکبر شیرزاد استاد دانشگاه(دکتری آب شناسی)</span><br><br><span style="font-size:medium;">43-دکترحسن بهروان متخصص دندانپزشکی</span><br><br><span style="font-size:medium;">44-آقای حاج محمد طاهری مدیر عامل شرکت حمل ونقل</span><br><br><span style="font-size:medium;">45-آقای امیر ملا زاده دانشجوی دامپزشکی</span><br><br><span style="font-size:medium;">46<font size="3">-حجت الاسلام حاج آقاسعیدطالبی نیا </font></span><font size="3">معاون فرهنگی  و عضو شورای دانشگاه دفاع ملی كشور </font><br><br><span style="font-size:medium;">47-آقای سعید شکورزاده بخشدارسابق خداآفرین</span> <span style="font-size:medium;">ومسوول سیاسی فرمانداری خوی</span><br><span style="font-size:medium;">48-دکترمسعود علیپور دکترای زمین شناسی در سازمان زمین شناسی کشور</span><span style="font-size:medium;">وهیات علمی دانشگاه شاهرود</span><br><br><span style="font-size:medium;">49- آقای اردشیر یوسف زاده کار شناس ارشد و مسوول نقشه وسیستم اطلاعات جغرافیایی در استانداری آذربایجانغربی</span><br><br><span style="font-size:medium;">50-دکتر ناصرطاهری در تبریز</span><br><br><span style="font-size:medium;">51-دکتر حسن طاهری در تبریز</span><br><br><span style="font-size:medium;">52-خانم الهام دهقانی دانشجوی پزشکی</span><br><br><span style="font-size:medium;">53-خانم پورمحمددانشجوی پزشکی</span><br><br><span style="font-size:medium;">54-سرهنگ اشرفی از فرماندهان زرهی ارتش</span><br><br><span style="font-size:medium;">55-حجت الاسلام اکبرطالبی نیاتهیه کننده رادیومعارف</span><br><br><span style="font-size:medium;">56-مهندس پریرو رئیس جهاد قوروق و مسئول امورباغبانی جهادخوی</span><br><br><span style="font-size:medium;">57-سرداراحمدجعفرپور</span><br><br><span style="font-size:medium;">58-آزاده سرافرازنقی عباسلویی</span><br><br><span style="font-size:medium;">59-آزاده سر افراز قادرجعفرپور</span><span style="font-size:medium;">وقاضی دادگستری در ارومیه</span><br><span style="font-size:medium;">60-آقای محرم زینال زاده کارشناس ارشدو رییس آب و فاضلاب روستایی شهرستان چایپاره</span><br><br><span style="font-size:medium;">61-جناب سرهنگ حیدر شفیعی فرمانده نیروی انتظامی شهرستان پلدشت</span><br><br><span style="font-size:medium;">62-سرهنگ پاسدارمهدی جعفر پور رییس هیات مدیره سهام عدالت شهرستان خوی</span><br><br><span style="font-size:medium;">63-مرحوم خلبان علی طالب نوه سی</span><br><br><span style="font-size:medium;">64- -خانم اشرفی دندانپزشک در تبریز</span><br><br><span style="font-size:medium;">65-آقای شهرام احمدپوردانشجوی دکتری در رشته معارف</span><br><br><span style="font-size:medium;">66-آقای رضا معصومی نژاد دانشجوی دکتری در دانشگاه تبریز</span><br><br><span style="font-size:medium;">67-جناب سرهنگ علیرضا اسماعیل نژاد رییس پلیس راه شهرستان ماکو</span><br><span style="font-size:medium;">68-خانم جعفر پور دانشجوی دکترای دارو سازی</span><br><br><span style="font-size:medium;">69-آقای صمدشکورزاده رییس بانک ملت</span><br><br><span style="font-size:medium;">70-آقای منوچهر رضازاده سردفترشماره 388در تهران و عضوانجمن سر دفتران</span><br><br><span style="font-size:medium;">71- آقای مهدی شکورزاده معاون تولیدات پتروشیمی در تهران</span><br><br><span style="font-size:medium;">72-آقای امیر شکورزاده دندانپزشک در تبریز</span><br><br><span style="font-size:medium;">73-آقای مسعود اصلان آبادی&nbsp; مدیر عامل شرکت پشتیبانی و فنی ومهندسی بهسامان ملت و عضو هیت مدیره</span><br><span style="font-size:medium;">74-آقای مهدی فرجی دانشجوی دکتری فیزیک</span><br><br><span style="font-size:medium;">75-آقای میکاییل رزمخواه مسوول حراست دانشگاه شهیدبهشتی ارومیه</span></p>
+<p><span style="font-size:medium;">76-حمزه جعفر پور دکترای تغدیه-بیمارستان عارفیه ارومیه</span></p>
+<p><span style="font-size:medium;">77-جعفر جعفر پور دانشجوی پزشکی</span></p>
+<p><span style="font-size:medium;">78-</span><span style="font-size:medium;">دکتر اکبر سلیمان نژاد استاد دانشگاه</span></p>
+<p><span style="font-size:medium;">79-آقای بهزادسلطانبیگی دانشجوی دکتری ژئوتکنیک(گرایشی ازمهندسی عمران)</span></p>
+<p><span style="font-size:medium;">80-خانم تیمورزاده استاددانشگاه در پیام نورخوی</span></p>
+<p><span style="font-size:medium;">81-آقای حسینی استاددر دانشگاه پیام نورخوی</span></p>
+<p><span style="font-size:medium;">82-خانم دکترفضلی استاددانشگاه فرهنگیان</span></p>
+<p><span style="font-size:medium;">83-سرهنگ پاسدارآقای علی فضلی</span></p>
+<p><span style="font-size:medium;">84-آقای فیروزنژادنجف استاددانشگاههای آزادوفرهنگیان تبریزومولف چندین کتاب</span></p>
+<p><span style="font-size:medium;">85-آقای رادفرمعاون سیاسی استانداری آذربایجانغربی</span></p>
+<p><span style="font-size:medium;">86-دکترمیرمهدی سیداشرفی متخصص جراحی فک وصورت واستاددانشگاه</span></p>
+<p><span style="font-size:medium;">87-دکترمیرحجت سیداشرفی متخصص گوش،حلق،بینی در بیمارستان امام خمینی ارومیه</span></p>
+<p><span style="font-size:medium;">89-آقای میرسجادسیداشرفی مدیرکل سازمان ملی زمین ومسکن ایران</span></p>
+<p><span style="font-size:medium;">90-دکترمیرمصطفی سیداشرفی دکترای حقوق بین الملل</span></p>
+<p><span style="font-size:medium;">91-آقای غفارجعفرپورجانبازدفاع مقدس وفرهنگی</span></p>
+<p><span style="font-size:medium;">92-آقای فکری رییس اتحادیه زنبورداران شهرستان خوی</span></p>
+<p><span style="font-size:medium;">93-آقای محمد سلطانبیگی وکیل پایه یک دادگستری درخوی</span></p>
+<p><span style="font-size:medium;">94-آقای مهندس فانی ازنامزدهای نمایندگی مجلس شورای اسلامی</span></p>
+<p><span style="font-size:medium;">95-آقای جلیل حسن پورمعاون بیمه ایران در تبریز</span></p>
+<p><span style="font-size:medium;">96-</span><span style="font-size:medium;">آقای جلیل محمدرضائی کارشناس ارشد مهندسی مکانیک شاغل در کارخانه آمیکو که چندین بار موفق به کسب مقام کشوری در رشته طراحی شده اند </span></p>
+<p><span style="font-size:medium;">97-</span><span style="font-size:medium;">خانم شکورنژاد معاون بانک در تهران</span></p>
+<p><span style="font-size:medium;">98-</span> <span style="font-size:medium;">آقای</span><span style="font-size:medium;"> رضا طاهری مهندسی الکترونیک در پایگاه شکاری تبریز</span></p>
+<p><span style="font-size:medium;">99-</span><span style="font-size:medium;"><span style="font-size:medium;">آقای </span>یوسف تقی زاده کارخانه دار سرامیک و کاشی در خوی و هم در ماکو </span></p>
+<p><br><span style="font-size:medium;">100-</span><span style="font-size:medium;"><span style="font-size:medium;">آقای </span>یوسف طاهری کارخانه داردر خوی</span></p>
+<p><span style="font-size:medium;">101-</span><span style="font-size:medium;"><span style="font-size:medium;">آقای</span></span><span style="font-size:medium;"> سلطان بیگی&nbsp; کارخانه دار کاشی</span><span style="font-size:medium;"> وسرامیک</span></p>
+<p><span style="font-size:medium;">102-</span><span style="font-size:medium;">آقای</span> <span style="font-size:medium;">اوجاقی کارشناس باغداری در اداره کل جهاد کشاورزی استان</span></p>
+<p><span style="font-size:medium;">103-</span><span style="font-size:medium;">بیش از 80 درصد اصناف بازار عسل خوی چورسی هستند.</span></p>
+<p><span style="font-size:medium;">104-</span><span style="font-size:medium;">مرحوم
+ حاجی یعقوب اشرفی جند سال زنبور دار نمونه کشور واتحادیه زنبورداری استان و
+ خوی را ایشان تاسیس&nbsp; و جند سالی ریس هیت مدیره اتحادیه و خیلی ها با حمایت
+ ایشان زنبور دار شدند و صنعت زنبورداری را از ایشان یاد گرفتند و سیستم 
+گرمایشی مسجد جامع جورس در سال 1377توسط ایشان سوفاژ شد.</span></p>
+<p><span style="font-size:medium;">105-</span><span style="font-size:medium;"><span style="font-size:medium;">آقای </span></span><span style="font-size:medium;">جبرئیل شهبازی مسول حراست شهرداری قره ضیالدین</span></p>
+<p><span style="font-size:medium;">106-</span><span style="font-size:medium;">آقای پیمان یوسفی گزارشگر فوتبال صداوسیما</span></p>
+<p><span style="font-size:medium;">107</span>-<span style="font-size:medium;">خانم پریسا اسحقی دانشجوی پزشکی دانشگاه تهران با رتبه</span><span style="font-size:medium;">167</span></p>
+<p><span style="font-size:medium;">108-</span><span style="font-size:medium;">آقای </span><span style="font-size:medium;">حمید حسن پور تاجر فرش در بازار تهران</span></p>
+<p><span style="font-size:medium;"><span>109-</span></span><span style="font-size:medium;"><span>حجت الاسلام چمران محمد جعفری کارشناس ارشد و سردفتر دار در ارومیه </span></span></p>
+<p><span style="font-size:medium;"><span>110-</span></span><span style="font-size:medium;">دکتر بهزاد فیاض پور دندان پزشک در تبریز</span></p>
+<p><span style="font-size:medium;">111-</span><span style="font-size:medium;">یاسین حسن پور مدیر فروش شرکت آرمان فراز پیمان تهران(شرکت ساخت آسانسور) </span></p>
+<p><span style="font-size:medium;">112-زهراجعفرپوردانشجوی پزشکی</span></p>
+<p><span style="font-size:medium;">113-آقای مجیدجعفری دارای مدرک 
+کارشناسی و کارشناسی ارشد مهندسی مکانیک سیالات و کارشناسی ارشد MBA بوده و
+ هم اکنون علاوه بر فعالیت اقتصادی در زمینه واردات و صادرات در دانشگاه 
+علمی و کاربردی تدریس مینماید.</span></p>
+<p><span style="font-size:medium;">114-آقاى عمران اکبرزاده معدنکار نمونه
+ منطقه واستان و کارخانه دارهستند. والان به طورمستقیم برای صدنفر 
+وبطورغیرمستقیم برای 400نفردربالای کوه اشتغال زایی و سنگ کاری نمای مسجد 
+فاطمیه(س) راهزینه اش را تقبل نموده اند.<br></span></p>
+<p style="text-align:justify;"><span style="font-size:medium;">115-دكتر مجید اصلان آبادی استاد علوم پایه دانشگاه علوم پزشكی تبریزمعاون دانشكده پزشكی </span></p>
+<p style="text-align:justify;"><span style="font-size:medium;">116-اقای دکتر عزیزخیری زاده سردفترخانه شماره 10خوی.دکترای حقوق ازدانشگاه مدرس تهران وعضوهیئت علمی دانشگاه مدرس و استاد دانشگاه.</span></p>
+<p style="text-align:justify;"><span style="font-size:medium;">117-خانم مهری خیری زاده دفتریار واستاد دانشگاه شهرستان مهاباد وفوق لیسانس زبان وادبیات عرب و لیسانس حقوق</span></p>
+<p style="text-align:justify;"><span style="font-size:medium;">118-دکتر رحیم بشیری رییس بانک مسکن و مدرس دانشگاه،</span></p>
+<p style="text-align:justify;"><span style="font-size:medium;">119-<span style="font-size:medium;">مهندس شهرام بشیری مدیر شرکت دارویی محیا دارو استان آ.غ</span></span></p>
+<p style="text-align:justify;"><span style="font-size:medium;"><span style="font-size:medium;">120-<span style="font-size:medium;"><span style="font-size:medium;">،مهندس اتا بشیری مجری صدا و سیمای استان آ.شرقی</span></span></span></span></p>
+<p style="text-align:justify;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;">121-<span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;">،مهندس وحید بشیری بازرس شرکت کاسترول</span></span></span></span></span></span></span></span></p>
+<p style="text-align:justify;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;">122-<span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;">،دکتر علی بشیری استاد دانشگاه</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p><p style="text-align:justify;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;">123-سردار پاسدار اکبر فضلی در ارومیه</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p><p style="text-align:justify;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;">124<font size="3">-حاج قربان حسین پور سابقه 26 سال معاون مخابران خوی و قره ضیاء الدین و 2 سال رئیس مخابرات خوی</font></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p><p style="text-align:justify;"><font size="3"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;"><span style="font-size:medium;">125-</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>دکتر فرهاد رنجدوست دکترای داروسازی از دانشگاه تبریز</font></p><p style="text-align:justify;"><font size="3">126- آقای حیدر آهنگری بخشدار مرکزی شهرستان شوط</font></p><p style="text-align:justify;"><font size="3">127-آقای فیروز عبدالهی چورسی سردار باز نشسته و کارشناس ارشددادگستری <br></font></p><p style="text-align:justify;"><font size="3"> </font><br><font size="3">128-مهندس خلیل عبدالهی کارشناس ارشد وقائم مقام کارخانه تراکتور سازی تبریز</font></p><p style="text-align:justify;"><font size="3">129-جلیل عبدالهی از مدیران ارشد مسکن و شهر سازی تبریز</font></p><p style="text-align:justify;"><font size="3">130-دکترسمیرا عبدالهی متخصص بیهوشی در تهران</font></p><p style="text-align:justify;"><font size="3">131-دکترسونیا عبدالهی متخصص طب اورژانسی</font></p><p style="text-align:justify;"><font size="3">132-دکتر کاوه عبدالهی دامپزشک در تبریز</font></p><p style="text-align:justify;"><font size="3">133-مهندس جواد عبدالهی شاغل در تراکتورسازی تبریز</font></p><p style="text-align:justify;"><font size="3">134-مهندس آریا عبدالهی برق دانشگاه تبریز</font></p><p style="text-align:justify;"><font size="3">135-استاد صالح جلال زاده کارشناس ارشد ادبیات جزء اولین فوق لیسانس هاس چورس</font></p><p style="text-align:justify;"><font size="3">136-سرهنگ رضا طاهری در تبریز</font></p><p style="text-align:justify;"><font size="3">137-</font><font size="3">آقای مهندس محسن اسحقی. مهندسی برق دانشگاه تبریز</font></p><p style="text-align:justify;"><font size="3">138-مهندس ابراهیم فکری اول هیت علمی دانشگاه اورمیه</font></p><p style="text-align:justify;"><font size="3">139– </font><font size="3">عسکر موسی پور مدیر کل معاونت بانک ملت کشور</font></p><p style="text-align:justify;"><font size="3">140-</font><font size="3"><font size="3">دکتر ابراهیم سید اشرفی <br></font></font></p><p style="text-align:justify;"><font size="3"><font size="3">141-</font></font><font size="3"><font size="3"><font size="3"><font size="3">دکتر 
+یحیی فکری اول دانشجوی پزشکی تخصصی دانمارک <br></font></font></font></font></p><p style="text-align:justify;"><font size="3"><font size="3"><font size="3"><font size="3">142-</font></font></font></font><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"> مهندس امیر فکری اول برق 
+تبریز <br></font></font></font></font></font></font></font></font></p><p style="text-align:justify;"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3">143-</font></font></font></font></font></font></font></font><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3">جواد فکری اول دانشجوی پزشکی تخصصی <br></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></p><p style="text-align:justify;"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3">144-</font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3">خانم دکتر لیلا فکری اول دکترا فیزیک استاد دانشگاه تهران <br></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></p><p style="text-align:justify;"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3">
+145-مهندس یاسر مظاهری ماشین سازی اراک <br></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></p><p style="text-align:justify;"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3">145-</font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3">جبرائیل رزمخواه کارشناس آزمایشگاه نیروی دریایی ارتش جمهوری اسلامی ایران در رشت<br>
+146-سعید رزمخواه کارشناس معوقات بانک رسالت تبریز<br>
+147-فاطمه رزمخواه دکتر مامایی در بیمارستان پلدشت <br></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></p><p style="text-align:justify;"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3"><font size="3">148-سرهنگ سپیده طاهری کارشناس ارشد علوم آزمایشگاهی در ارتش<br></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></p><p style="text-align:justify;"><font size="3"><br></font></p><p style="text-align:justify;"><font size="3"><br></font></p>
+<p style="text-align:justify;"><span style="font-size:14pt;color:#0000ff;">در
+ پایان چون بدون اجازه ازعزیزان بزرگواربه درج اسامی مفاخرچورس نموده ام در
+ صورت هر گونه انتقادو پیشنهاد از طرف محترمان هستم . از تمامی دوستان در 
+خواست می کنم افراد فراموش شده را یاد آوردی کرده تا بتوانیم از این طریق 
+از زحمات این عزیزان تشکری کرده باشیم.به امید آبادانی روستایم</span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(8)" > نظرات (<script>setCommentCnt(8)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2384.html">قابلیت‌های جدید شبکه شاد</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2384&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : یکشنبه 30 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div align="justify"><font size="4" face="Mihan-IransansBold">حضوروغیاب: در کلاس‌های آنلاین به صورت #خودکار هر ۷دقیقه حضور دانش‌آموز ثبت می‌شود.</font><br><br><font size="4" face="Mihan-IransansBold">ارتباط زنده یکطرفه: هرفردی می‌تواند برای افراد آن گروه ارتباط #لایو_یکطرفه ایجاد کند.</font><br><br><font size="4" face="Mihan-IransansBold">ارتباط زنده دوطرفه: این سرویس با هدف برگزاری جلسات آنلاین مدیران، برگزاری #جلسات_اولیاومربیان، برگزاری کلاس‌های تعاملی ایجاد شده‌ است.</font><br><br><font size="4" face="Mihan-IransansBold">تماس صوتی دوسویه: این سرویس این امکان را فراهم می‌کند که معلم یا مدیر با کاربران #تماس_صوتی رایگان برقرار کنند.</font><br><br><font size="4" face="Mihan-IransansBold">تکالیف دانش‌آموزان: این سرویس برای معلم #شامل ۳بخش تکالیف درجریان، تکالیف به اتمام رسیده و ثبت #تکلیف جدید ارائه شده است.</font><br><br><font size="4" face="Mihan-IransansBold">آزمون شاد اپ: آزمون ساز شاد قابلیت برگزاری #آزمون‌های_تشریحی و تستی را دارد.
+
+
+</font></div>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2384)" > نظرات (<script>setCommentCnt(2384)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2383.html">پیام علامه حسن حسن زاده آملی به تمام حاضران در فضای مجازی</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2383&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : یکشنبه 30 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <font size="4" face="Mihan-IransansBold"><font color="#CC0000">دستوالعمل دوازده بندی حضرت علامه حسن زاده آملی به تمام حاضران در دنیای مجازی را مطالعه فرمایید.</font><br>که در گروه دوستان نیز مورد توجه قرار می گیرد.<br><br><font color="#3333FF">۱- حق را با یاد کردن و تکرار کردنش زنده کنید.<br><br>۲- باطل را با ترک کردنش نابود کنید.<br><br>۳- از تصاویر حرام و غیرشرعی پرهیز کنید.</font><br><br>۴- از بحث‌های بیهوده بپرهیزید.<br><br>۵- از جوک‌هایی که دین و عبادات و مقدسات و اشخاص و ملت‌ها و قومیت‌ها را مسخره می‌کند، بپرهیزید.<br><br>۶- مصدر نقل شایعات نباشید و قبل از نقل و انتشار هر حدیث یا روایت یا داستان و خبری از صحت آن مطمئن شوید.<br>۷- بگذارید آن کلامی که می‌فرستید به‌نفع شما گواهی دهد نه علیه‌تان.<br><br>۸- خودتان را کلید خیر و قفل شر قرار دهید.<br><br>۹- هر متنی و پیامی که می‌فرستید به‌منزله تأیید و با امضای شما است. نگو که به من رسیده و کپی کرده‌ام.<br><br><font color="#3333FF">۱۰- تمام سعی خودتان را برای استفاده بهینه از این فناوری به کار گیرید و از آن برای دعوت الی اللّه و امر به معروف و نهی از منکر و آموزش مسائل دینی و فرهنگی و علمی و آموزشی استفاده کنید یعنی به‌عنوان یک اصلاحگر به‌تمام معنا، و نیت خودتان را درست و خالصانه کنید.<br><br>۱۱- برای بیان حق مجاملات و رودربایستی را کنار بگذارید، دین و حق بر هر چیز مقدم و شایسته‌تر هستند.<br><br>۱۲- تصویر پروفایل شما و پیام‌هایتان معرف شخصیت شماست.</font><br><br><br></font>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2383)" > نظرات (<script>setCommentCnt(2383)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2379.html">بهترین پست سال شناخته شد </a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2379&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : جمعه 28 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> 
+<div align="center"><font size="3" face="Mihan-IransansBold">ﺩﺭﺧﺘﻬﺎ ﻣﯿﻤﯿﺮﻧﺪ؛</font><br><font size="3" face="Mihan-IransansBold">ﻋﺪﻩ ﺍﯼ ﻋﺼﺎ ﻣﯽ ﺷﻮﻧﺪ ﻭ ﺩﺳﺘﯽ ﺭﺍ ﻣﯽ ﮔﯿﺮﻧﺪ ؛</font><br><font size="3" face="Mihan-IransansBold">ﻋﺪﻩ ﺍﯼ ﺗﺒﺮ ﻣﯽ ﺷﻮﻧﺪ ﺑﺮ ﻧﺴﻞ ﺧﻮﯾﺶ ؛</font><br><font size="3" face="Mihan-IransansBold">ﻋﺪﻩ ﺍﯼ ﭼﻮﺏ ﮐﺒﺮﯾﺖ ﻣﯽ ﺷﻮﻧﺪ ﺑﺮﺍﯼ ﺳﻮﺯﺍﻧﺪﻥ ﺗﺒﺎﺭ ﺧﻮﺩ</font><br><font size="3" face="Mihan-IransansBold">ﻭ .......</font><br><br><font size="3" face="Mihan-IransansBold">ﻋﺪﻩ ﺍﯼ ﺗﺨﺘﻪ ﺳﯿﺎﻩ ﻣﯿﺸﻮﻧﺪ ﺑﺮﺍﯼ ﺗﻌﻠﯿﻢ ﺍﻧﺪﯾﺸﻪ ﻫﺎ .</font><br><font size="3" face="Mihan-IransansBold">ﺷﻤﺎ ﺍﮔﺮ ﺩﺭﺧﺖ ﺑﻮﺩﯾﺪ ﺍﺯ ﮐﺪﺍﻡ ﺟﻨﺲ ﺑﻮﺩﯾﺪ؟؟</font><br><font size="3" face="Mihan-IransansBold">ﻫﯿﭻ ﮐﺲ ﺍﻧﺘﺨﺎﺏ ﻧﮑﺮﺩﻩ ﮐﻪ ﺑﺎ ﭼﻪ ﻗﯿﺎﻓﻪ ﺍﯼ ﺩﺭ ﭼﻪ ﺧﺎﻧﻮﺍﺩﻩ</font><br><font size="3" face="Mihan-IransansBold">ﺍﯼ ﻭ ﺑﺎ ﭼﻪ ﺷﺮﺍﯾﻄﯽ ﺑﺪﻧﯿﺎ ﺑﯿﺎﯾﺪ</font><br><font size="3" face="Mihan-IransansBold">ﻫﯿﭽﮑﺲ ﺭﺍ ﺑﺨﺎﻃﺮ ﻫﯿﭻ ﭼﯿﺰﺵ ﺗﺤﻘﯿﺮ ﯾﺎ ﻣﺴﺨﺮﻩ ﻧﮑﻨﯿﻢ ....</font><br><font size="3" face="Mihan-IransansBold">ﺩﺭ ﺑﺎﺭﻩ ﺩﯾﮕﺮﺍﻥ ﻗﻀﺎﻭﺕ ﻧﮑﻨﯿﻢ ...</font><br><font size="3" face="Mihan-IransansBold">ﻫﻤﺎﻥ ﺍﻧﺪﺍﺯﻩ ﮐﻪ ﺑﻪ ﯾﮏ ﻣﺪﯾﺮ ، ﻣﻬﻨﺪﺱ ، ﺩﮐﺘﺮ ﺍﺣﺘﺮﺍﻡ ﻣﯽ</font><br><font size="3" face="Mihan-IransansBold">ﮔﺬﺍﺭﯾﻢ</font><br><font size="3" face="Mihan-IransansBold">ﺑﻪ ﻫﻤﺎﻥ ﺍﻧﺪﺍﺯﻩ ﺑﻪ ﯾﮏ ﮐﺎﺭﮔﺮ ، ﺭﻓﺘﮕﺮ ، ﻣﺴﺘﺨﺪﻡ ﻫﻢ ﺍﺣﺘﺮﺍﻡ</font><br><font size="3" face="Mihan-IransansBold">ﺑﮕﺬﺍﺭﯾﻢ .</font><br><font size="3" face="Mihan-IransansBold">&nbsp;ﺧﻮﺩﻣﺎﻥ ﺭﺍ ﺍﺯ ﻫﯿﭽﮑﺲ ﺑﺮﺗﺮ ﻧﺒﯿﻨﯿﻢ ...</font><br><font size="3" face="Mihan-IransansBold">ﺧﺎﮐﯽ ﺑﺎﺷﯿﻢ ،</font><br><font size="3" face="Mihan-IransansBold">ﻣﺎ ﻭﺟﻮﺩﻣﺎﻥ ﺍﺯ ﮔﻞ ﺳﺎﺧﺘﻪ ﺷﺪﻩ .....</font><br><font size="3" face="Mihan-IransansBold">ﭘﺲ ﻫﻤﯿﺸﻪ ﺧﺎﮐﯽ ﺑﺎﺷﯿﻢ ﺗﺎ ﺑﻮﯼ ﻧﺎﺏ ﺁﺩﻣﯿﺰﺍﺩ ﺑﺪﻫﯿﻢ ....</font><br><font size="3" face="Mihan-IransansBold">ﺻﻮﺭﺕ ﺯﯾﺒﺎ ﺭﻭﺯﯼ ﭘﯿﺮ ....</font><br><font size="3" face="Mihan-IransansBold">ﭘﻮﺳﺖ ﺧﻮﺏ ﺭﻭﺯﯼ ﭼﺮﻭﮎ ...</font><br><font size="3" face="Mihan-IransansBold">ﺍﻧﺪﺍﻡ ﺧﻮﺏ ﺭﻭﺯﯼ ﺧﻤﯿﺪﻩ ....</font><br><font size="3" face="Mihan-IransansBold">ﻣﻮﯼ ﺯﯾﺒﺎ ﺭﻭﺯﯼ ﺳﻔﯿﺪ ﺧﻮﺍﻫﺪ ﺷﺪ .</font><br><font size="3" face="Mihan-IransansBold">ﺗﻨﻬﺎ ﻗﻠﺐ ﺯﯾﺒﺎﺳﺖ ﮐﻪ ﺯﯾﺒﺎ ﺧﻮﺍﻫﺪ ﻣﺎﻧﺪ .</font><br><br></div>
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2379)" > نظرات (<script>setCommentCnt(2379)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2381.html">مدافعان بی ادعای آموزش وتربیت</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2381&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : پنجشنبه 27 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div align="justify"><font size="4" face="Mihan-IransansBold" color="#3333FF">&nbsp;بی صدا به مدرسه آمدند.</font><font color="#3333FF"><br><font size="4" face="Mihan-IransansBold">همان هایی&nbsp; که مدتهاست مورد تیر طعنه‌ها و تهمتها بودند</font><br><font size="4" face="Mihan-IransansBold">همانها که آنها را&nbsp; عافیت طلب و راحت طلب خطاب کردند .</font><br><font size="4" face="Mihan-IransansBold">&nbsp;به کلاس‌هایی رفتند&nbsp; که فقط یک یا دو دانش آموز داشت و برایش ناگفته ها را گفتند .</font><br><font size="4" face="Mihan-IransansBold">مظلومانه و بی ادعا </font><br><font size="4" face="Mihan-IransansBold">نه مدافع&nbsp; لقب گرفتند نه ایثارگر.</font></font><br><font size="4" face="Mihan-IransansBold" color="#990000">در کلاس‌هایی که&nbsp; در اوج گرما حتی چرخش یک&nbsp; پنکه هم دیده نمی شد. </font><font color="#990000"><br><font size="4" face="Mihan-IransansBold">نه نگهبانی&nbsp; در ورودی مدرسه بود که از ورود کسی جلوگیری کند نه خبری از حفاظهای نایلونی بود،نه آهنگی داشتند و نه رقصی،نه فیلمی و نه عکسی،.</font><br><font size="4" face="Mihan-IransansBold">و بسیاری از کسانی که تا دیروز معلمین را بخاطر تعطیلی شماتت می‌کردند از ترس بیماری جرات نکردند فرزندانشان را به مدرسه بفرستند.</font></font><br><br><font size="4" face="Mihan-IransansBold">سیصد گل سرخ یک گل نصرانی</font><br><br><font size="4" face="Mihan-IransansBold">ما را ز سر بریده می‌ترسانی؟</font><br><br><font size="4" face="Mihan-IransansBold">گر ما ز سر بریده می‌ترسیدیم</font><br><br><font size="4" face="Mihan-IransansBold">در محفل عاشقان نمی‌رقصیدیم</font><br><br><font size="4" face="Mihan-IransansBold" color="#FF0000">تقدیم به مدافعان همیشه عاشق عرصه تعلیم و تربیت</font></div>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2381)" > نظرات (<script>setCommentCnt(2381)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2382.html">دومین جلسه کارگروه فرهنگے اجتماعے در شهرستان چایپاره برگزار شد.</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2382&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : پنجشنبه 27 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <br><p dir="RTL" style="margin: 0px 0px 8pt;" align="justify"><font size="4" face="Mihan-IransansBold"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed">به
+ گزارش <font color="#FF0000">چورس نیوز</font>دومین جلسه کارگروه فرهنگے اجتماعے 
+شهرستان چایپاره با موضوع پیگیرے و اجراے مصوبات کارگروه فرهنگے اجتماعے 
+درسال ۹۸ و ارائه گزارش اعضا درخصوص اجراے مصوبات ابلاغے ،به ریاست محمدے 
+ایروانلو فرماندار شهرستان واعضاے جلسه در سالن جلسات فرماندارے برگزار شد.</span></span></span></span></span></span></font></p><p dir="RTL" style="margin: 0px 0px 8pt;" align="justify"><font size="4" face="Mihan-IransansBold"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed">بنابه
+ این گزارش محمدے ایروانلو فرماندار شهرستان باتبیین وتشریح اهمیت وضرورت 
+برگزارے کارگروه فرهنگے اجتماعے در شهرستان گفت :در جلسات کارگروه فرهنگے و
+ اجتماعے شهرستان باید چالش هاے این حوزه مورد بررسے قرار گیرد لذا در این 
+راستا همراهے و همفکرے دستگاه هاے اجرایے شهرستان جهت اجراے برنامه هاے 
+مدون در این حوزه باید به طور ویژه مورد توجه قرار گیردوے در ادامه خواستار
+ اجراے مصوبات و ارسال عملکرد دستگاه هاے اجرایے عضو به دبیرخانه کارگروه 
+شد.</span></span></span></span></span></span></font></p><div align="justify"><font size="4" face="Mihan-IransansBold"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed">درادامه
+ این جلسه&nbsp; وضعیت اجراے مصوبات قبلے کارگروه مورد بررسے قرار گرفت و هریڪ 
+از اعضا توضیحات و نظرات خود را در خصوص مسائل مطرح شده بیان نمودند.</span></span></span></span></span></span></font></div><div align="justify"><font size="4" face="Mihan-IransansBold"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"><br></span></span></span></span></span></span></font></div><div align="center"><font size="4" face="Mihan-IransansBold"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"><img src="http://uupload.ir/files/7zhn_c5808dc7-7301-4759-ba7f-9a87d0dfd614.jpg" alt="" vspace="0" hspace="0" border="0" align="baseline"></span></span></span></span></span></span></font></div>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2382)" > نظرات (<script>setCommentCnt(2382)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2380.html"> ساخت نخستین مرکز #گردشگری_نمکی در آذربایجان‌‌‌غربی</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2380&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : پنجشنبه 27 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <font size="4" face="Mihan-IransansBold">مدیرکل میراث‌فرهنگی و گردشگری استان خبر داد:<br><br>پیش‌بینی می‌شود این طرح در صورت جذب اعتبارات و تسهیلات تا بهمن ماه #سال_آینده در منطقه گردشگری بند اورمیه به بهره‌برداری برسد.<br><br>در این مرکز ۱۰ #سوئیت_اقامتی با مصالحی از جمله نمک ساخته و در واقع این مرکز اولین مرکز گردشگری نمکی دست‌کند ایران محسوب می‌شود.<br><br>ساخت نخستین خط #زیپ‌لاین استان، نخستین خط زیب‌لاین دوچرخه‌سواری و بلندترین #تاب_سنتی ایران با ارتفاع ۶۰ متر در این مجموعه پیش‌بینی شده است.</font>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2380)" > نظرات (<script>setCommentCnt(2380)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2378.html">هشدار جدید پلیس فتا فرماندهی انتظامی  آذربایجان غربی</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2378&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : پنجشنبه 27 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div align="justify"><font size="4" face="Mihan-IransansBold" color="#6600CC">کلاهبرداری از&nbsp; سایت دیوار</font><br><font size="4" face="Mihan-IransansBold">&nbsp;<font color="#CC0000"> اخیرا کلاهبرداران در فضای مجازی اقدام به ارسال پیامک هایی برای درج کنندگان آگهی های تبلیغاتی در سایت دیوار با عنوان "برای باقی ماندن عضویت شما در سایت دیوار جهت تمدید آگهی بایستی مبلغ هزار تومان واریز نمایید در غیراینصورت حساب کاربری شما از سایت دیوار غیرفعال میگردد برای پرداخت به لینک زیر مراجعه فرمائید" می نمایند </font></font><br><font size="4" face="Mihan-IransansBold" color="#000099">لذا پلیس فتا از شهروندان محترم درخواست مینماید به هیچ عنوان بر روی لینک های مربوطه که از طریق پیامک ارسال می گردد، کلیک ننمایند.</font><font color="#000099"><br><font size="4" face="Mihan-IransansBold">این مقام انتظامی افزود: کلاهبرداران اینترنتی با استفاده از این لینک های آلوده کاربران را به درگاه های جعلی هدایت نموده و حساب های بانکی آنان را سرقت می نمایند.</font></font><br><font size="4" face="Mihan-IransansBold" color="#FF0000">هشدارهای پلیسی:</font><br><font size="4" face="Mihan-IransansBold">1- کاربران گرامی به پیامک های دریافتی از طریق سر شماره و شماره تلفن های اپراتورهای همراه اول،ایرانسل و رایتل جهت تمدید آگهی تبلیغات در سایت دیوار اعتماد نکنید .</font><br><font size="4" face="Mihan-IransansBold">2-از هرگونه کلیک بر روی لینک هایی که از طریق شبکه های اجتماعی و پیامکهای تلفن همراه دریافت می گردد خودداری کنند.</font><br><font size="4" face="Mihan-IransansBold">3-در صورت تراکنش ناموفق نسبت به انتقال پول به حساب دیگر اقدام و یا کارت عابربانک خود را غیر فعال نمایید.</font></div>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2378)" > نظرات (<script>setCommentCnt(2378)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2377.html">بازدید سرزده فرماندار از مدارس در شهرستان چایپاره</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2377&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : یکشنبه 23 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> 
+<h4><br></h4><h4><img src="http://uupload.ir/files/meb6_ce2e8f5b-6ff6-47ec-a3f4-443d9c4b189e.jpg" alt="" vspace="0" hspace="0" border="0" align="bottom"></h4><p dir="RTL" style="margin: 0px 0px 8pt;" align="right"><font size="4" face="Mihan-IransansBold" color="#3333FF"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed">به
+ گزارش <font color="#FF0000">چورس نیوز</font>&nbsp; محمدی ایروانلو فرماندار شهرستان 
+ازنحوه اجرای دستورالعملهای بهداشتی</span></span></span></span></span></span></font></p><p dir="RTL" style="margin: 0px 0px 8pt;" align="right"><font size="4" face="Mihan-IransansBold" color="#3333FF"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed">جهت پیشگیری از بیماری کرونا درمدارس 
+از مدرسه ابتدایی خیر ساز قاسم زاده و دبیرستان دخترانه معرفت بازدید</span></span></span></span></span></span></font></p><p dir="RTL" style="margin: 0px 0px 8pt;" align="right"><font size="4" face="Mihan-IransansBold" color="#3333FF"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"> 
+کردند.</span></span></span></span></span></span></font></p><div align="right"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif" lang="FA"><font size="4" face="Mihan-IransansBold">&nbsp;رئیس
+ ستاد پیشگیری و مبارزه با ویروس کرونا باتاکید برالزام رعایت پروتکلهای 
+بهداشتی در</font></span></span></span></span></span></span></span></span></div><div align="justify"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif" lang="FA"><font size="4" face="Mihan-IransansBold"> <br></font></span></span></span></span></span></span></span></span></div><div align="justify"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif" lang="FA"><font size="4" face="Mihan-IransansBold">مدارس گفت : همه مدارس باید دستورات ابلاغی ستاد پیشگیری و 
+مبارزه با کرونا را رعایت کنند تا <br></font></span></span></span></span></span></span></span></span></div><div align="justify"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif" lang="FA"><font size="4" face="Mihan-IransansBold"><br></font></span></span></span></span></span></span></span></span></div><div align="justify"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif" lang="FA"><font size="4" face="Mihan-IransansBold">بتوانیم زمینه آموزش سالم را برای دانش 
+آموزان&nbsp; فراهم سازیم . </font><br></span></span></span></span></span></span></span></span></div><div><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif" lang="FA"><br></span></span></span></span></span></span></span></span></div><div><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif" lang="FA"><br></span></span></span></span></span></span></span></span></div><div><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Arial&quot;,sans-serif" lang="FA"><br></span></span></span></span></span></span></span></span></div>
+
+
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2377)" > نظرات (<script>setCommentCnt(2377)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2376.html">بازدید فرماندار از فرایند سرمایه گذاری؛ ساماندهی و بازسازی حمام باستانی بیکجوان درشهرستان چایپاره</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2376&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : شنبه 22 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <h4><br></h4><p dir="RTL" style="margin: 0px 0px 8pt;" align="justify"><font size="4" face="Mihan-IransansBold" color="#FF6666"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed">به
+ گزارش چورس نیوز فرماندار شهرستان 
+بهمراه شهردار رئیس اداره میراث فرهنگی شهرستان ازروند سرمایه گذاری 
+وساماندهی وبازسازی حمام باستانی بیکجوان بازدید کردند.</span></span></span></span></span></span></font></p><div align="justify"><font size="4" face="Mihan-IransansBold" color="#3366FF"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed">بنا
+ به این گزارش این بنای باستانی که متعلق به دوره قاجار بوده و از شاخص 
+ترین و کم نظیرترین ظرفیت های باستانی و گردشگری شهرستان چایپاره میباشد ؛ 
+جهت فعالسازی ظرفیت های گردشگری شهرستان توسط میراث فرهنگی به بخش خصوصی 
+واگذار شده دراین بنای تاریخی قرار است غذاهای منحصر بفرد سنتی شهرستان 
+واقامتگاه وی آی پی کوتاه مدت ؛ برای گردشگران داخلی و خارجی ارائه خدمات 
+شود.</span></span></span></span></span></span></font></div>
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2376)" > نظرات (<script>setCommentCnt(2376)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2375.html">دومین جلسه کارگروه اشتغال و سرمایه گذاری در شهرستان چایپاره برگزار شد</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2375&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : شنبه 22 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> 
+
+
+<div class="container"><div class="row"><div class="col-md-9"><div class="col-inner"><font size="4" face="Mihan-IransansBold"><br></font><p dir="RTL" style="text-align:justify;margin:0 0 8pt"><font size="4" face="Mihan-IransansBold" color="#3333FF"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed">به
+ گزارش روابط فرمانداری چایپاره دومین جلسه کارگروه اشتغال و سرمایه گذاری 
+با موضوع تسهیلات کرونا ؛تسهیلات اشتغال خانگی و بررسی موانع در خصوص 
+پرداخت تسهیلات اشتغال روستایی به ریاست محمدی ایروانلو فرماندارشهرستان و 
+اعضای جلسه در سالن جلسه فرمانداری برگزار گردید .‌‌‌‌‌</span></span></span></span></span></span></font></p><p dir="RTL" style="text-align:justify;margin:0 0 8pt"><font size="4" face="Mihan-IransansBold" color="#CC0000"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed">&nbsp;بنا
+ به این گزارش محمدی ایروانلو فرماندار شهرستان برلزوم اهتمام دستگاه های 
+مسئول به منظور برنامه ریزی هرچه بهتر جهت اطلاع رسانی و&nbsp; همکاری لازم در 
+جهت روند پرداخت تسهیلات کرونا و جذب حداکثری اعتبارات به شهرستان 
+تاکیدکردند.</span></span></span></span></span></span></font></p><p dir="RTL" style="text-align:justify;margin:0 0 8pt"><font size="4" face="Mihan-IransansBold" color="#3366FF"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed">فرماندارچایپاره
+ درادامه با تاکید بر همکاری بانک ها در پرداخت تسهیلات&nbsp; گفت : همه باید 
+تلاش کنیم که مردم و بنگاه های اقتصادی آسیب دیده از ویروس کرونا از این 
+تسهیلات برخوردار شوند.</span></span></span></span></span></span></font></p><p dir="RTL" style="text-align:justify;margin:0 0 8pt"><font size="4" face="Mihan-IransansBold" color="#3366FF"><span style="font-size:11pt"><span style="text-justify:kashida"><span style="text-kashida:0"><span style="line-height:107%"><span style="direction:rtl"><span style="unicode-bidi:embed">◽️وی
+ در ادامه از عملکرد ضعیف دستگاه های اجرائی در معرفی داوطلبین دریافت 
+تسهیلات انتقاد کرد و گفت: دستگاه های اجرائی موظف هستند تا با پیگیری های 
+لازم نسبت به معرفی واجدین شرایط به سیستم بانکی اقدام نمایند.</span></span></span></span></span></span></font></p></div></div></div></div>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2375)" > نظرات (<script>setCommentCnt(2375)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2373.html">پیام علامه حسن حسن زاده آملی به تمام حاضران در فضای مجازی </a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2373&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : یکشنبه 16 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div align="justify"><font size="4" face="Mihan-IransansBold">دستوالعمل دوازده بندی حضرت علامه حسن زاده آملی به تمام حاضران در دنیای مجازی را مطالعه فرمایید.</font><br><font size="4" face="Mihan-IransansBold">که در گروه دوستان نیز مورد توجه قرار می گیرد</font><br><br><font size="4" face="Mihan-IransansBold">۱- حق را با یاد کردن و تکرار کردنش زنده کنید.</font><br><br><font size="4" face="Mihan-IransansBold">۲- باطل را با ترک کردنش نابود کنید.</font><br><br><font size="4" face="Mihan-IransansBold">۳- از تصاویر حرام و غیرشرعی پرهیز کنید.</font><br><font size="4" face="Mihan-IransansBold">۴- از بحث‌های بیهوده بپرهیزید.</font><br><br><font size="4" face="Mihan-IransansBold">۵- از جوک‌هایی که دین و عبادات و مقدسات و اشخاص و ملت‌ها و قومیت‌ها را مسخره می‌کند، بپرهیزید.</font><br><font size="4" face="Mihan-IransansBold">۶- مصدر نقل شایعات نباشید و قبل از نقل و انتشار هر حدیث یا روایت یا داستان و خبری از صحت آن مطمئن شوید.</font><br><font size="4" face="Mihan-IransansBold">۷- بگذارید آن کلامی که می‌فرستید به‌نفع شما گواهی دهد نه علیه‌تان.</font><br><br><font size="4" face="Mihan-IransansBold">۸- خودتان را کلید خیر و قفل شر قرار دهید.</font><br><br><font size="4" face="Mihan-IransansBold">۹- هر متنی و پیامی که می‌فرستید به‌منزله تأیید و با امضای شما است. نگو که به من رسیده و کپی کرده‌ام.</font><br><br><font size="4" face="Mihan-IransansBold">۱۰- تمام سعی خودتان را برای استفاده بهینه از این فناوری به کار گیرید و از آن برای دعوت الی اللّه و امر به معروف و نهی از منکر و آموزش مسائل دینی و فرهنگی و علمی و آموزشی استفاده کنید یعنی به‌عنوان یک اصلاحگر به‌تمام معنا، و نیت خودتان را درست و خالصانه کنید.</font><br><br><font size="4" face="Mihan-IransansBold">۱۱- برای بیان حق مجاملات و رودربایستی را کنار بگذارید، دین و حق بر هر چیز مقدم و شایسته‌تر هستند.</font><br><br><font size="4" face="Mihan-IransansBold">۱۲- تصویر پروفایل شما و پیام‌هایتان معرف شخصیت شماست.</font><br></div><br><br>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2373)" > نظرات (<script>setCommentCnt(2373)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2374.html">جزئیات طرح جدید مجلس درباره سهمیه بندی بنزین | سامانه‌ای برای فروش بنزین افرادی که خودرو ندارند</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2374&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : شنبه 15 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <h1 class="title" align="justify"><font size="3" face="Mihan-IransansBold"><br></font></h1><div align="justify"><font size="3" face="Mihan-IransansBold">
+            
+        
+            </font></div><p class="introtext" itemprop="description" align="justify"><font size="3" face="Mihan-IransansBold">محمدرضا پور ابراهیمی نماینده مجلس گفت: پیشنهاد ما اصلاح قانون و اختصاص سهمیه به هر فرد است، نه خودرو.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold">
+            
+        </font></div><div class="item-body" align="justify"><div class="itemPlayer0">
+                        </div></div><div align="justify"><font size="3" face="Mihan-IransansBold">
+                        
+                        </font></div><div class="video-download" align="justify">
+                            </div><p align="justify"><font size="3" face="Mihan-IransansBold">به گزارش همشهری آنلاین محمدرضا 
+پورابراهیمی رئیس کمیسیون اقتصادی مجلس در برنامه دست خط بیان کرد: 
+پیشنهادی را مطرح کردیم که الان در شرایط کنونی استفاده از یارانه هایی که 
+در اقتصاد کشور بارها بدان اشاره شده به صورت نابرابر بهره گرفته می شود؛ 
+یعنی کسی که ماشین بیشتر و خودروی بیشتر دارد، یارانه بیشتری دریافت می 
+کند. اگر بخواهیم خلاصه پیشنهاد را بیان کنیم این است بجای اینکه به هر 
+خودروی سهمیه بدهیم، به هر فردی سهمیه بدهیم یعنی بگوییم هر ایرانی چه 
+میزان یارانه از بنزین دارد، چه خودرو دارد و چه خودرو ندارد.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold"> 
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold"><img alt="" src="https://media.hamshahrionline.ir/d/2020/09/04/4/4489542.jpg" width="454" height="302"></font></p><div align="justify"><font size="3" face="Mihan-IransansBold"> 
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">وی افزود: آن که استفاده می کند که استفاده می کند و آن که استفاده نمی 
+کند بتواند از مابه التفاوت یارانه خود بر اساس روش علمی و تخصصی استفاده 
+کند.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold"> 
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">&nbsp;پورابراهیمی در پاسخ به این سوال مجری برنامه دست خط که آیا این طرح 
+شدنی است؟&nbsp;گفت:&nbsp;&nbsp;روی این کار کرده‌ایم و کار کارشناسی انجام شده و این به 
+عدالت نزدیک تر است. می تواند مصرف سوخت را به نرخ منطقی‌تر برساند. قطعاً 
+اثر مثبت در ایجاد فضایی دارد که در مدیریت انرژی و حامل های انرژی مطرح می
+ شود.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold"> 
+</font></div><h2 align="justify"><font size="3" face="Mihan-IransansBold">طرح جدید سهمیه‌بندی بنزین برای دولت بار مالی ندارد</font></h2><div align="justify"><font size="3" face="Mihan-IransansBold"> 
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">احمد امیرآبادی فراهانی، عضو هیئت رئیسه مجلس شورای اسلامی نیز با اشاره
+ به طرح مجلس مبنی بر تغییر سهمیه بندی بنزین از خودرو به خانوار به باشگاه
+ خبرنگاران گفت: ما طرح تغییر سهمیه بندی بنزین را در مجلس دهم قبل از 
+گرانی بنزین ارائه کرده بودیم که روزانه یک لیتر بنزین به ازای همه مردم 
+تعلق گیرد به نحوی که کارت بانکی سرپرست خانوارها شارژ شود، اما متاسفانه 
+این طرح با عدم موافقت رئیس جمهور مواجه شد.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold"> 
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">وی افزود: بر اساس طرح جدید، دولت باید مبلغ بنزین را با نرخ آزاد به 
+حساب مردم واریز کند، البته طبق بررسی‌های ما این امر هیچ بار مالی برای 
+دولت ندارد و در واقع بنزین به جای خودرو به نفرات اختصاص می‌یابد.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold"> 
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">امیرآبادی فراهانی تأکید کرد تنها ۵ درصد افراد تحت پوشش کمیته امداد و 
+بهزیستی دارای وسیله نقلیه هستند و طرح تغییر سهمیه بندی بنزین از خودرو به
+ خانوار به نفع خانوارهای دهک پایین خواهد بود.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold"> 
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">عضو هیئت رئیسه مجلس افزود: مرکز پژوهش‌های مجلس تاکنون ۶ بار طرح مذکور
+ را مورد بررسی قرار داده و بنده نیز بارها با ارگان‌های مختلف و کارشناسان
+ صحبت کرده‌ام و اجرایی سازی این طرح هیچ مشکلی ایجاد نخواهد کرد و اگر این
+ طرح به تصویب مجلس و شورای نگهبان برسد یک خانواده سه نفره ۹۰ لیتر بنزین 
+با قیمت ۱۵۰۰ تومان دریافت خواهند کرد.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold"> 
+</font></div><h2 align="justify"><font size="3" face="Mihan-IransansBold">سامانه ای برای فروش بنزین افرادی که خودرو ندارند</font></h2><div align="justify"><font size="3" face="Mihan-IransansBold"> 
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">جعفر قادری عضو کمیسیون برنامه و &nbsp;بودجه مجلس نیز درباره طرح مذکور گفت:
+ برخی خانوارها خودرویی ندارند، بنابراین اگر بنزین بر اساس تخصیص به اشخاص
+ سهمیه بندی شود دهک‌های کم درآمد نیز می‌توانند از سهم بنزین برخوردار 
+شوند.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold"> 
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">وی افزود: تصویب این طرح می‌تواند موجب انگیزه در افراد برای کاهش &nbsp;مصرف
+ بنزین &nbsp;شود و این امر اثرات مثبت زیست محیطی را به دنبال خواهد داشت، 
+همچنین این طرح باعث افزایش صادرات &nbsp;می‌شود.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold"> 
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">بر اساس طرح&nbsp;فوق اگر افراد تمام سهمیه خود را استفاده نکنند، سهمیه باقی
+ مانده از طریق سامانه‌های بانکی، قابل واگذاری به دیگران خواهد بود و یا 
+در آخر هر ماه به شرکت پالایش و پخش بازمی‌گردد و معادل قیمت متوسط ماهانه 
+آزاد بنزین در کارت بانکی صاحب خودرو شارژ می‌شود تا بتواند کالای ایرانی 
+خریداری کند.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold"> 
+</font></div><h2 align="justify"><font size="3" face="Mihan-IransansBold">افراد باید بتوانند بنزین خود را در بورس عرضه کنند&nbsp;</font></h2><div align="justify"><font size="3" face="Mihan-IransansBold"> 
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">مالک شریعتی سخنگوی کمیسیون انرژی مجلس درباره این طرح گفت: انتظار 
+داریم با تصویب و اجرای طرح مبتنی بر تخصیص سهمیه بنزین به هر خانوار به 
+ازای هر کدملی، کاهش آثار تورمی در دهک‌های پایین‌تر، کاهش فاصله طبقاتی و 
+ضریب جینی در اقتصاد ملی از نتایج مهم طرح «سهمیه بندی بنزین سرانه خانوار»
+ باشد.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold"> 
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">سخنگوی کمیسیون انرژی مجلس &nbsp;گفت: پیش بینی شده سامانه‌ای برای فروش بنزین افرادی که خودرو ندارند درنظر گرفته شود.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold"> 
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">فریدون عباسی، رئیس کمیسیون &nbsp;انرژی مجلس نیز گفت: طبیعتا همه افراد کشور
+ دارای خودرو نیستند و وقتی بنزین تنها در اختیار افراد دارای وسیله شخصی 
+که از دهک‌های بالای جامعه هستند قرار می‌گیرد، یعنی امتیازی تنها به بخش 
+محدودی از جامعه تعلق گرفته است.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold"> 
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">وی افزود: بهتر است که تخصیص بنزین بر اساس کد ملی و به همه افراد کشور 
+تعلق گیرد و حتما باید تدبیری شود که افراد بدون خودرو بتوانند سهم خود را 
+در بورس و یا &nbsp;به روش‌های دیگر عرضه کنند.</font></p><div align="justify"><font size="3" face="Mihan-IransansBold"> 
+</font></div><p align="justify"><font size="3" face="Mihan-IransansBold">به نظر می‌رسد که طرح «تغییر سهمیه بندی بنزین از خودرو به خانوار» در 
+صورت تصویب می‌تواند عدالت را در حوزه سهمیه بندی بنزین برقرار کند، اما 
+باید دید طرحی که چندین سال است با نام‌ها و اشکال مختلف مطرح می‌شود و 
+هربار به در بسته می‌خورد، این بار عملیاتی خواهد شد؟.</font></p><font size="3" face="Mihan-IransansBold">
+
+
+</font>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2374)" > نظرات (<script>setCommentCnt(2374)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2372.html">4 مرحله ابتلا به کرونا را بشناسیم</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2372&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : شنبه 15 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div align="justify"><font size="4" face="Mihan-IransansBold" color="#990000">الکساندر چوچالین متخصص ارشد #بیماری‌های_ریه روسیه معتقد است دوره ابتلا و بیماری کووید-۱۹، چهار مرحله‌ای است</font><font color="#990000"><br><br><font size="4" face="Mihan-IransansBold">مرحله اول احساس سرماخوردگی عادی که تقریباً #تاثیر خاصی نداشته و بین ۷ تا ۹ روز به طول می‌انجامد.</font></font><br><font size="4" face="Mihan-IransansBold" color="#CC0000">&nbsp;در مرحله دوم که از روز نهم آغاز شده و تا روز #چهاردهم ادامه پیدا می‌کند، نقطه تحولی در بیماری به وجود می‌آید که طی آن سلول‌های بدن به دلیل #التهاب_ویروسی ریه از بین می‌رود.</font><font color="#CC0000"><br><font size="4" face="Mihan-IransansBold">به گفته این متخصص در صورت عدم تشخیص سریع و دقیق وضعیت، بیمار وارد مرحله سوم می‌شود که طی آن بیماری و #تنگی_نفس شدت می‌گیرد.</font><br><font size="4" face="Mihan-IransansBold">&nbsp;در مرحله چهارم #ایمنی_بدن بیمار به طور کامل سرکوب می‌شود و بیماری‌های دیگر نیز به سراغش خواهند آمد.</font></font></div>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2372)" > نظرات (<script>setCommentCnt(2372)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2371.html">یاد ایام.........باستانشهرچورس</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2371&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : سه شنبه 11 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <img src="http://uupload.ir/files/uso_image_.jpg" alt="" vspace="0" hspace="0" border="0" align="bottom">
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2371)" > نظرات (<script>setCommentCnt(2371)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2368.html">میلیاردر‌های مشهور چند سال طول کشید تا پول پارو کنند</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2368&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : دوشنبه 10 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> 
+<font size="4" face="Mihan-IransansBold">طبق تحلیل صورت گرفته روی فهرست میلیاردر‌های سال ۲۰۲۰ وبسایت فوربس توسط شرکت انگلیسی OLBGT، معمولاً ۲۱ سال طول می‌کشد که تا یک میلیاردر برای اولین بار ثروت خود را به میلیارد برساند. برخی، اما مانند مارک زاکربرگ، مدیرعامل فیسبوک، سرعت بیشتری در این مسیر داشته اند و برای بعضی هم مانند وارن بافت کمی بیشتر طول کشید تا توانستند ثروت خود را میلیاردی کنند.</font><br><div align="justify"><div align="justify"><font size="4" face="Mihan-IransansBold"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/95.gif">وارن بافت فلسفه‌ی محافظه کارانه‌ای برای سرمایه گذاری دارد که شاید او را به ثروت زیادی رسانده باشد، اما روند کندی داشته است. برای بافت ۲۳ سال طول کشید تا توانست میلیاردر شود.</font><br><font size="4" face="Mihan-IransansBold">بیل گیتس از زمان پایه گذاری شرکت مایکروسافت ۱۲ سال طول کشید تا بیل گیتس توانستند میلیاردر شود.</font><br><font size="4" face="Mihan-IransansBold"><font size="4" face="Mihan-IransansBold"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/95.gif"></font>لری الیسون ۹ سال بعد از تأسیس شرکت اوراکل میلیاردر شد.</font><br><font size="4" face="Mihan-IransansBold"><font size="4" face="Mihan-IransansBold"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/95.gif"></font>سرگی برین و لری پیج، پایه گذاران گوگل ۶ سال طول کشید تا میلیاردر شوند.</font><br><font size="4" face="Mihan-IransansBold"><font size="4" face="Mihan-IransansBold"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/95.gif"></font>جف بزوس نه تنها ثروتمندترین فرد دنیا است بلکه موفق شد رکورد کوتاه‌ترین زمان میلیاردر شدن را هم تقریباً بشکند. برای بزوس فقط ۵ سال طول کشید تا میلیاردر شود.</font><br><font size="4" face="Mihan-IransansBold"><font size="4" face="Mihan-IransansBold"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/95.gif"></font>مارک زاکربرگ شاید ۴ سال بعد از ثبت نام در دانشگاه هاروارد از آن فارغ التحصیل نشد، اما همانقدر طول کشید تا به جمع میلیاردر‌های دنیا بپیوندد./باشگاه خبرنگاران </font><br></div><br></div>
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2368)" > نظرات (<script>setCommentCnt(2368)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2370.html">&quot;حر بن یزید ریاحی&quot; و &quot;عمر سعد&quot;</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2370&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : یکشنبه 9 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <font size="4" face="Mihan-IransansBold">مرحوم حاج محمد اسماعیل دولابی:<br>گویند "حر بن یزید ریاحی" اولین کسی بود که آب را به روی امام بست و اولین کسی شد که خونش را برای او داد.<br>"عمر سعد" هم اولین کسی بود که به امام نامه نوشت و دعوتش کرد برای آنکه رهبرشان شود و اولین کسی شد که تیر را به سمت او پرتاب کرد!<br>&nbsp;کی می‌داند آخر کارش به کجا می‌رسد؟<br>دنیا دار ابتلاست...<br><font color="#990000">&nbsp;با هر امتحانی چهره‌ای از ما آشکار می‌شود، چهره‌ای که گاهی خودمان را شگفت‌زده می‌کند. <br>چطور می‌شود در این دنیا بر کسی خرده گرفت و خود را ندید؟<br>&nbsp;می‌گویند خداوند داستان ابلیس را تعریف کرد تا بدانی که نمی‌شود به عبادتت، به تقربت، به جایگاهت اطمینان کنی. </font><br><font color="#000099">خدا هیچ تعهدی برای آنکه تو همان که هستی بمانی، نداده است.<br>شاید به همین دلیل است که سفارش شده، وقتی حال خوبی داری و می‌خواهی دعا کنی، یادت نرود "عافیت" و "عاقبت به خیری‌ات" را بطلبی...</font><br><br><br></font>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2370)" > نظرات (<script>setCommentCnt(2370)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2369.html">عاشورای حسینی در #باستانشهر #چورس</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2369&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : یکشنبه 9 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div align="center"><img src="http://uupload.ir/files/n7wj_photo_2020-08-30_21-39-51.jpg" alt="" vspace="0" hspace="0" border="0" align="baseline"></div><div align="center"><br></div><div align="center"><br></div><div align="center"><img src="http://uupload.ir/files/1v5z_photo_2020-08-30_21-40-24.jpg" alt="" vspace="0" hspace="0" border="0" align="baseline"></div><div align="center"><br></div><div align="center"><img src="http://uupload.ir/files/i1g6_photo_2020-08-30_21-40-32.jpg" alt="" vspace="0" hspace="0" border="0" align="baseline"></div><div align="center"><br></div><div align="center"><img src="http://uupload.ir/files/fkjo_photo_2020-08-30_21-40-43.jpg" alt="" vspace="0" hspace="0" border="0" align="baseline"></div><div align="center"><br></div>
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2369)" > نظرات (<script>setCommentCnt(2369)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2366.html">یاد ایام.........باستانشهرچورس</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2366&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : یکشنبه 2 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <img src="http://uupload.ir/files/bvt_image_2020_8_22-11_15_40_215_9gd.jpg" alt="" vspace="0" hspace="0" border="0" align="bottom">				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2366)" > نظرات (<script>setCommentCnt(2366)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2365.html">ماه محرم است </a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2365&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : شنبه 1 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div align="center"><font size="4" face="Mihan-IransansBold" color="#CC0000">ماه محرم است </font><font color="#CC0000"><br><font size="4" face="Mihan-IransansBold">خوش بحال کسانی که</font><br><font size="4" face="Mihan-IransansBold">هم زنجیر میزنند !!</font><br><font size="4" face="Mihan-IransansBold">و هم&nbsp; زنجیری از پای گرفتاری باز میکنند ..</font><br><font size="4" face="Mihan-IransansBold">&nbsp;هم سینه میزنند !!</font></font><br><font size="4" face="Mihan-IransansBold" color="#3333FF">و هم سینه ی دردمندی را&nbsp; از غم و آه نجات میدهند ..</font><font color="#3333FF"><br><font size="4" face="Mihan-IransansBold">&nbsp;هم اشک میریزند !! </font><br><font size="4" face="Mihan-IransansBold">و هم اشک از چهره ی انسانی پاک میکنند ..</font><br><font size="4" face="Mihan-IransansBold">&nbsp;هم سفره می اندازند !!</font><br><font size="4" face="Mihan-IransansBold">هم نان از سفره کسی نمیبرند ..</font><br><br><font size="4" face="Mihan-IransansBold">&nbsp;آنوقت با افتخار میگویند : </font></font><br><font size="6" face="Mihan-IransansBold" color="#009900">" یاحسین "
+
+
+</font></div>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2365)" > نظرات (<script>setCommentCnt(2365)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="../post/2367.html">#کمک_مومنانه #محرم_متفاوت </a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=chors.mihanblog.com/post/2367&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : شنبه 1 شهریور 1399</div></div></div>
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div align="center"><font size="4" face="Mihan-IransansBold" color="#3333FF">کانال #مردمی&nbsp; و حامی #نیازمندان </font><font color="#3333FF"><br><font size="4" face="Mihan-IransansBold">&nbsp;#چورس_نیوز&nbsp; آمادگی دریافت&nbsp; احسانات</font></font><br><font size="4" face="Mihan-IransansBold">&nbsp;و کمکهای #دوستداران و عاشقان&nbsp; ابا عبدالله الحسین که سالهای،گذشته <br></font></div><div align="center"><font size="4" face="Mihan-IransansBold"> #نذر و #احسان میکردند و امسال بعلت کرونا نمی توانند می باشد <br></font></div><div align="center"><font size="4" face="Mihan-IransansBold">تا در میان #نیازمندان #واقعی تقسیم کند.</font><br><br><font size="4" face="Mihan-IransansBold">تا توانی رفع غم از چهره غمناک کن</font><br><br><font size="4" face="Mihan-IransansBold">در جهان گریاندن آسان است اشکی پاک کن </font><br><br><font size="4" face="Mihan-IransansBold" color="#3333FF">#منتظر #یاری <font color="#009900">#سبزتان</font> #هستیم.</font><br><br><font size="4" face="Mihan-IransansBold" color="#009900">#کمک_مومنانه </font><font color="#009900"><br><font size="4" face="Mihan-IransansBold">#محرم_متفاوت
+
+
+</font></font></div>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط یوسف غیورزاده چورسی</div></div>
+<div class=nz><a target="_self" href="javascript:newComment(2367)" > نظرات (<script>setCommentCnt(2367)</script>)</a></div></div>
+
+<div id="postz">
+<div class=tpost-x >آخرین مطالب</div>
+<div class=xpost><div class=xpost2><a href="../post/2424.html">یادایام............................ باستانشهرچورس</a></div>
+<div class=xpost2><a href="../post/2423.html">یاد ایام.................................. باستانشهرچورس</a></div>
+<div class=xpost2><a href="../post/2425.html">دیدار رئیس منابع طبیعی و آبخیزداری شهرستان با فرماندار چایپاره</a></div>
+<div class=xpost2><a href="../post/2422.html">بیست و دومین جلسه ستاد پیشگیری و مبارزه با کرونا شهرستان چایپاره برگزار شد</a></div>
+<div class=xpost2><a href="../post/2420.html">ملا نصرالدین</a></div>
+<div class=xpost2><a href="../post/2421.html">یك_شب_برای_خدا </a></div>
+<div class=xpost2><a href="../post/2419.html">پنجمین جلسه شورای هماهنگی ترافیک شهرستان چایپاره برگزارشد.</a></div>
+<div class=xpost2><a href="../post/2418.html"> تولید کننده #واکسن_کرونا: زمستان سال آینده شرایط زندگی عادی می‌شود</a></div>
+<div class=xpost2><a href="../post/2417.html">هشدار هواشناسی سطح زرد استان آذربایجانغربی  </a></div>
+<div class=xpost2><a href="../post/2416.html">هفته #بارانی در کشور</a></div>
+<div class=xpost2><a href="../post/2415.html">بیستمین جلسه ستادپیشگیری و مبارزه با کرونا شهرستان چایپاره برگزارشد.</a></div>
+<div class=xpost2><a href="../post/8.html">مفاخرچورس</a></div>
+<div class=xpost2><a href="../post/2413.html">دومین جلسه شورای توسعه و حمایت از تشکل های مردم نهاد شهرستان چایپاره برگزار شد.</a></div>
+<div class=xpost2><a href="../post/2412.html">نوزدهمین جلسه ستادپیشگیری و مبارزه با ویروس کرونا شهرستان چایپاره برگزارگردید.</a></div>
+<div class=xpost2><a href="../post/2411.html">یادایام.........................</a></div>
+<div class=xpost2><a href="../post/2410.html">خواص درمانی عالی آویشن </a></div>
+<div class=xpost2><a href="../post/2409.html">یادایام.........................</a></div>
+<div class=xpost2><a href="../post/2408.html">25 نکته که از قاره آسیا که نمی‌دانید</a></div>
+<div class=xpost2><a href="../post/2407.html">۱۰ باور غلط درباره کرونا که جانتان را به خطر می‌اندازد </a></div>
+<div class=xpost2><a href="../post/2403.html">یاد ایام.........باستانشهرچورس</a></div>
+</div><div class=bpost-x></div></div>
+
+
+<div class=ad1></div>
+<div class=xpost>
+<div class=page22>
+			(تعداد کل صفحات:114)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			<a href="1.html">[<span>1</span>]</a>&nbsp;&nbsp;			<a href="2.html">[<span>2</span>]</a>&nbsp;&nbsp;			<a href="3.html">[<b>3</b>]</a>&nbsp;&nbsp;			<a href="4.html">[<span>4</span>]</a>&nbsp;&nbsp;			<a href="5.html">[<span>5</span>]</a>&nbsp;&nbsp;			<a href="6.html">[<span>6</span>]</a>&nbsp;&nbsp;			<a href="7.html">[<span>7</span>]</a>&nbsp;&nbsp;			<a href="8.html">[<i>...</i>]</a>&nbsp;&nbsp;</div>
+			</div><div class=ad3><br></div>
+<script src="http://blogskins.ir/46/code.js"></script>
+	
+<div class="tmenu b3"><div class=tmenu2>آرشیو مطالب</div></div>
+<div class=xmenu>
+<div class=xmenu1><a href="../post/archive/1399/9.html"> آذر 1399</a></div><div class=xmenu1><a href="../post/archive/1399/8.html"> آبان 1399</a></div><div class=xmenu1><a href="../post/archive/1399/7.html"> مهر 1399</a></div><div class=xmenu1><a href="../post/archive/1399/6.html"> شهریور 1399</a></div><div class=xmenu1><a href="../post/archive/1399/5.html"> مرداد 1399</a></div><div class=xmenu1><a href="../post/archive/1399/4.html"> تیر 1399</a></div><div class=xmenu1><a href="../post/archive/1399/3.html"> خرداد 1399</a></div><div class=xmenu1><a href="../post/archive/1399/2.html"> اردیبهشت 1399</a></div><div class=xmenu1><a href="../post/archive/1399/1.html"> فروردین 1399</a></div><div class=xmenu1><a href="../post/archive/1398/12.html"> اسفند 1398</a></div><div class=xmenu1><a href="../post/archive/1398/11.html"> بهمن 1398</a></div><div class=xmenu1><a href="../post/archive/1398/10.html"> دی 1398</a></div><div class=xmenu1><a href="../post/archive/1398/9.html"> آذر 1398</a></div><div class=xmenu1><a href="../post/archive/1398/8.html"> آبان 1398</a></div><div class=xmenu1><a href="../post/archive/1398/7.html"> مهر 1398</a></div><div class=xmenu1><a href="../post/archive/1398/6.html"> شهریور 1398</a></div><div class=xmenu1><a href="../post/archive/1398/5.html"> مرداد 1398</a></div><div class=xmenu1><a href="../post/archive/1398/4.html"> تیر 1398</a></div><div class=xmenu1><a href="../post/archive/1398/3.html"> خرداد 1398</a></div><div class=xmenu1><a href="../post/archive/1398/2.html"> اردیبهشت 1398</a></div></div>
+<div class=bmenu></div>
+
+		
+
+
+<div class="tmenu b4"><div class=tmenu2>پیوند های روزانه</div></div>
+<div class=xmenu><div class=xmenu1><a target="_blank" href="http://azarandankhoy.blogfa.com/" title="">کارخانه خوراک دام و طیور آذران دن اورین خوی</a></div><div class=xmenu1><a target="_blank" href="http://setadjomeh.com/gharehziaedin?p_p_id=101_INSTANCE_kO79mekttcYQ&amp;p_p_lifecycle=0&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_id=column-1&amp;p_p_col_pos=4&amp;p_p_col_count=5&amp;_101_INSTANCE_kO79mekttcYQ_delta=12&amp;_101_INSTANCE_kO79mekttcYQ_keywords=&amp;_101_INSTANCE_kO" title="">ستاد نماز جمعه شهرستان چایپاره</a></div><div class=xmenu1><a target="_blank" href="http://chaypareh-ag.ir/" title="">#فرمانداری شهرستان چایپاره</a></div><div class=xmenu1><a target="_blank" href="http://fish.medu.ir" title="">فیش حقوقی فرهنگیان شهرستان چایپاره وکشور</a></div><div class=xmenu1><a target="_blank" href="http://uupload.ir" title="سلام ، خسته نباشید
+وبلاگ بسیار خوب و زیبایی دارید .
+پیشنهاد میکنم برای آپلود فایل و عکس از سایت یو آپلود استفاده کنید.
+به صورت رایگان ، دائمی و سرعت بالا 
+لطفا لینک رو تایید کنید تا هم آدرس سایت رو داشته باشید و هم یه حمایتی بشه از ما
+خیلی ممنون
+خدانگهدار">آپلود فایل</a></div><div class=xmenu1><a target="_blank" href="https://telegram.me/chorsNews" title="">درکانال تلگرامی چورس نیوز با ما همراه شوید</a></div><div class=xmenu1><a target="_blank" href="http://dehghani44.blogfa.com/" title="">وب آقای مرتضی دهقانی</a></div><div class=xmenu1><a target="_blank" href="../../chaypara.mihanblog.com/index.html" title="">وب آقای علی سلطانبیگی</a></div><div class=xmenu1><a target="_blank" href="http://chors.salehin.ir/" title="">سایت صالحین چورس چهارمین سایت برترکشور</a></div><div class=xmenu1><a href="http://www.blogskin.ir" target="_blank">قالب وبلاگ</a></div>
+<div class=xmenu1><a href="../linkdaily/index.html"><b>همه پیوندهای روزانه</b></a></div>
+<div class=xmenu1><a href="javascript:linkdailyForm()"><b>ارسال پیوند روزانه</b></a></div>
+</div>
+<div class=bmenu></div>
+<!------------block ----------------------->
+<div class="tmenu b2"><div class=tmenu2>امکانات جانبی</div></div>
+<div class=xmenu><div class=xmenu2>
+<center>
+blogskin
+</center>
+</div></div><div class=bmenu></div>
+<!------------block ----------------------->
+
+</div>
+</div>
+
+</div>
+
+<div class=footer>
+<div class=right>
+<div class=form>فرم تماس با ما</div>
+<div class=txt>
+<FORM METHOD="POST" ACTION="http://blogskins.ir/45/email.php" name="blogskin" onsubmit="return checkform()" target="_blank">
+
+<INPUT NAME="email" value="adres@yahoo.com" style="display:none">
+
+<div>نام و نام خانوادگی: <INPUT NAME="name" class=ii autocomplete="off"></div>
+<div>پست الكترونیك : <INPUT NAME="adres" class=ii autocomplete="off"></div>
+<div>	<TEXTAREA onfocus="javascript:;if (this.value =='در این قسمت متن خود را بنویسید.'){ this.value = ''}" name="msg" class=ix>در این قسمت متن خود را بنویسید.</TEXTAREA></div>
+<div><center><INPUT TYPE="image" src="http://blogskins.ir/46/send.jpg"></center></div>
+</FORM></div>
+</div>
+<div class=left id="linkz">
+<div class=linkz>
+<div class=titrx>لینک دوستان</div>
+<div class=zz>
+<div><div><a href="../link/index.html"><b>آرشیو پیوندها</b></a></div></div>
+<div><div><a target="_blank" href="http://azarandankhoy.blogfa.com/" title="">کارخانه آذران دن اورین خوی</a></div></div><div><div><a target="_blank" href="http://chors.salehin.ir/" title="">سایت صالحین چورس سایت برترکشور</a></div></div><div><div><a target="_blank" href="http://dehghani44.blogfa.com/" title="">وب آقای مرتضی دهقانی</a></div></div><div><div><a target="_blank" href="../../chaypara.mihanblog.com/index.html" title="">وب آقای علی سلطانبیگی</a></div></div>
+</div>
+</div>
+<div class=rss><br><a href="3.html#ali" title="بالای صفحه"><img border="0" src="http://blogskins.ir/46/x.gif" width="70" height="60"></a></div>
+
+<div class=down><div class=ft>
+تمام حقوق این وبلاگ و مطالب آن متعلق به 
+<a href="../index.html">چورس روستای تاریخی و گردشگری</a> می باشد.</div>
+</div></div>
+
+
+</div>
+</div></div></div></div><div id="seo">
+<h2><a href="http://www.blogskin.ir" title="قالب وبلاگ">قالب وبلاگ</a></h2>
+
+
+
+</div>
+<script type=text/javascript>document.getElementById('s'+'e'+'o').style.display='none';</script> </body></html>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'chors.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

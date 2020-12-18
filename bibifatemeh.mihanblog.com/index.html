@@ -1,0 +1,903 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://bibifatemeh.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*847610*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[60]='1';commentCnt[61]='0';commentCnt[64]='12';commentCnt[65]='13';commentCnt[66]='8';commentCnt[67]='10';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[60]='4';
+mihanblogDisLikeArrCnt[60]='0';
+mihanblogLikeArrCnt[61]='4';
+mihanblogDisLikeArrCnt[61]='0';
+mihanblogLikeArrCnt[64]='1';
+mihanblogDisLikeArrCnt[64]='0';
+mihanblogLikeArrCnt[65]='1';
+mihanblogDisLikeArrCnt[65]='0';
+mihanblogLikeArrCnt[66]='1';
+mihanblogDisLikeArrCnt[66]='0';
+mihanblogLikeArrCnt[67]='2';
+mihanblogDisLikeArrCnt[67]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://bibifatemeh.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://bibifatemeh.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','58');
+	setStatVar('total_author','2');
+	setStatVar('modify_date','یکشنبه 2 فروردین 1394');
+	
+	setStatVar('today_view','9');
+	setStatVar('yesterday_view','27');
+	
+	setStatVar('this_month_view','611');
+	setStatVar('last_month_view','633');
+
+	setStatVar('total_view','145832');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (15:01)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://bibifatemeh.mihanblog.com/statupdate/?data[refereruri]=http://moje-sorkh.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607776516&data[hash]=ced99b4f6f00b6849edf18dc93eca72e&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://bibifatemeh.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://bibifatemeh.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://bibifatemeh.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://bibifatemeh.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://bibifatemeh.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://bibifatemeh.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://bibifatemeh.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://bibifatemeh.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://bibifatemeh.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://bibifatemeh.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://bibifatemeh.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://bibifatemeh.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://bibifatemeh.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://bibifatemeh.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://bibifatemeh.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://bibifatemeh.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- کدنویسی و گرافیک : ثامن تم | هرگونه سوء استفاده از کد و طرح ها و تغییر نام طراح شرعا حرام می باشد -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="حضرت زهرا سلام الله علیها بی بی فاطمه فاطمیه مادرم زهرا مادر رضیه زکیه مطالب خواندنی درباره حضرت زهرا مطالب جدید خطبه فدکیه ویژگیهای حضرت زهرا"/>
+<meta name="keywords" content="حضرت زهرا سلام الله علیها بی بی فاطمه فاطمیه مادرم زهرا مادر رضیه زکیه مطالب خواندنی درباره حضرت زهرا مطالب جدید خطبه فدکیه ویژگیهای حضرت زهرا"/> 
+<link rel="alternate" type="application/rss+xml" title="بی بی فاطمه سلام الله علیها" href="http://bibifatemeh.mihanblog.com/post/rss/" />
+<link rel="alternate" type="application/atom+xml" title="بی بی فاطمه سلام الله علیها" href="http://bibifatemeh.mihanblog.com/post/atom/" />
+<title>بی بی فاطمه سلام الله علیها</title>
+<script type="text/javascript" src="http://webtools.samentheme.ir/st/contact/contactform/files/jquery.js"></script>
+<style type="text/css">@import url("http://webtools.samentheme.ir/st/contact/contactform/files/jquery.fancybox-1.3.4.css");</style>
+<link href="http://tem.samentheme.ir/f/h-fatemeh2/st-style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+<div id="Samentheme">
+<div id="Header_ST">
+
+<div class="Top_Link_ST">
+<div class="Li_ST"><a href="index.html">صفحه نخست</a></div>
+<div class="Li_ST"><a id="form-ps" href="http://webtools.samentheme.ir/st/contact/contactform/index.php?email=farshad_noruzi70@yahoo.com">ارتباط با ما</a></div>
+<div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/atom/">Atom</a></div>
+<div class="Li_ST"><a target="_blank" href="http://samentheme.ir/">طراح قالب مذهبی</a></div>
+<div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/rss/">خوراک مطالب</a></div>
+</div>
+
+<div class="BlogTitle_ST"><a href="index.html">بی بی فاطمه سلام الله علیها</a></div>
+<div class="BlogDesceription_ST">یا زهرا</div>
+<div class="clr"></div>
+</div>
+
+<div class="Content_ST">
+<div class="Modir"><marquee scrollamount="2" scrolldelay="2" direction="right"> اَللّهمَّ صَلِّ عَلی فاطِمَةِ و أبیها و بَعلِها و بَنیها و السِرِّ المُستودَعِ فیها بِعَدَدِ ما أحاطَ بهِ عِلمُك</marquee></div>
+
+<table width="1000" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="250" valign="top">
+    <div class="Side_ST">
+    <!--  ابتدای منو های سمت راست  -->
+    
+    
+    <div class="Side1_ST">درباره ما</div>
+    <div class="Side2_ST"><div style="text-align:center;"><img src="../static.mihanblog.com/public/user_data/web_photo/283/847610.jpg@6296"  /></div><div style="text-align:center;">حضرت حیدر به نام فاطمه حساس بود<br />
+خلقت از روز ازل مدیون عطر یاس بود<br />
+ای که بستی راه رادرکوچه ها برفاطمه<br />
+گردنت را میشکست آنجااگرعباس بود<br />
+این وبلاگ تحت عنوان بی بی فاطمه سلام الله علیها مرجعی غنی در مورد حضرت زهرا (س) لطفا با ارسال مطالب به آدرس ایمیل مدیر وبلاگ ما را در غنی سازی این وبلاگ یاری کنید. <br />
+((((**عزیزانی که تمایل به همکاری و درج مطلب در این وبلاگ را دارند، با آدرس زیر تماس بگیرند تا نام کاربری و دسترسی لازم جهت درج مطلب به آن عزیزان داده شود.**))))<br />
+farshad_noruzi70@yahoo.com</div></div><div class="Side3_ST"></div>
+    
+<div class="Side1_ST">لوگوی ما</div>
+    <div class="Side2_ST">
+
+<p align="center"><a href="index.html" target="_blank"><img border="0" src="http://s5.picofile.com/file/8117764150/6BD1D4E506E1_34.jpg"  width="200" alt="بی بی فاطمه سلام الله علیها"  height="200"></a><br><input onclick="this.select()" type="text" width="356" name="T1" size="15" value='<!-- start logo cod off http://bibifatemeh.mihanblog.com/ --><p align="center"><p align="center"><a href="http://bibifatemeh.mihanblog.com/" target="_blank"><img border="0" src="http://s5.picofile.com/file/8117764150/6BD1D4E506E1_34.jpg"  width="200" height="200" alt="بی بی فاطمه سلام الله علیها"></a></p><!--finish logo cod off http://bibifatemeh.mihanblog.com/ -->' dir="ltr" ></p><div style="display:none"><a href="http://blogers.ir">وبلاگ</a>-<a href="http://blogers.ir/cod/make-logo-banner-cod/">کد لوگو و بنر</a></div>
+
+</div><div class="Side3_ST"></div>
+    
+    <div class="Side1_ST">نویسندگان</div>
+    <div class="Side2_ST">
+    <div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/author/709972"><img src="../static.mihanblog.com/public/user_data/user_photo/237/709972.jpg" style="width:16px;" /></a><a href="http://bibifatemeh.mihanblog.com/post/author/709972" >فرشاد نوروزی(57)</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/author/1021308"></a><a href="http://bibifatemeh.mihanblog.com/post/author/1021308" >حمیدرضا سعدی(1)</a></div>    </div><div class="Side3_ST"></div>
+    
+    
+ 
+    
+    
+    <BlogLinkDumpBlock>
+    <div class="Side1_ST">پیوندهای روزانه</div>
+    <div class="Side2_ST">
+    <div class="Li_ST"><a href="http://themes-market.ir/" title="با سلام و احترام
+واقعا وبلاگ زیبایی ساخته اید. وبلاگی کارآمد و در عین حال بسیار مفید و خلاقانه. خیلی خوشحالم وبلاگ شما رو دیدم.
+ممنون میشوم اگر لینک ما را هم تایید بفرمایید.
+با تشکر" target="_blank">قالب وردپرس</a></div><div class="Li_ST"><a href="http://photo44religious.blogfa.com" title="" target="_blank">جامع ترین گالری عکسهای مذهبی و اسلامی</a></div><div class="Li_ST"><a href="http://mohebehmahdi.blogfa.com/" title="" target="_blank">محبان مهدی (عج)</a></div><div class="Li_ST"><a href="http://fadak20.mihanblog.com/" title="" target="_blank">*پـــــــــــــرده *اســــــــــــــــرار*</a></div><div class="Li_ST"><a href="http://ehsanrastgar.blogfa.com/" title="" target="_blank">منتقد(نه مخالف)، مستقل(نه جناحی)</a></div><div class="Li_ST"><a href="http://www.javidpanah.blogfa.com/" title="" target="_blank">جاوید وب</a></div><div class="Li_ST"><a href="http://daryayeerfan.blogfa.com/" title="" target="_blank">دریای عرفان</a></div><div class="Li_ST"><a href="http://banoozahra.blogfa.com/" title="" target="_blank">بانو زهرا سلام الله علیها</a></div><div class="Li_ST"><a href="http://14mah.parsiblog.com/" title="" target="_blank">قرآن و اهل بیت تنها راه نجات</a></div><div class="Li_ST"><a href="http://www.astaneh1.blogfa.com" title="" target="_blank">آستانه (حضرت زهرا)</a></div><div class="Li_ST"><a href="http://shefaaat.blogfa.com" title="" target="_blank">میشه شفاعتم کنی پسر خاله</a></div><div class="Li_ST"><a href="http://www.yafatemehzahra.blogfa.com/" title="" target="_blank">یا فاطمه الزهرا</a></div><div class="Li_ST"><a href="http://ketabghanoon.mihanblog.com" title="" target="_blank">کتاب قانون</a></div><div class="Li_ST"><a href="../nasimvelayat.mihanblog.com/index.html" title="" target="_blank">نسیم ولایت</a></div><div class="Li_ST"><a href="http://kalbolheidar.blogfa.com/" title="" target="_blank">زاکرین اهل بیت</a></div><div class="Li_ST"><a href="http://daryayeerfan.blogfa.com/" title="" target="_blank">دریایی ترین</a></div><div class="Li_ST"><a href="http://dahar.mihanblog.com/" title="" target="_blank">چنار ناز</a></div><div class="Li_ST"><a href="http://www.farhangyar.ir" title="" target="_blank">فرهنگ یار</a></div><div class="Li_ST"><a href="../moje-sorkh.mihanblog.com/index.html" title="" target="_blank">موج سرخ</a></div><div class="Li_ST"><a href="../www.bahardin.mihanblog.com/index.html" title="" target="_blank">بهار دین</a></div><div class="Li_ST"><a href="http://www.hasanmojtaba.ir" title="" target="_blank">امام حسن مجتبی علیه السلام</a></div>    <div><a href="http://bibifatemeh.mihanblog.com/linkdaily/"><center><b>.: تمام پیوندها :.</b></center></a></div>
+    <div><a href="javascript:linkdailyForm()"><center><b>.: ارسال پیوند روزانه :.</b></center></a></div>
+    </div><div class="Side3_ST"></div>
+        
+    
+        <div class="Side1_ST">صفحات جانبی</div>
+    <div class="Side2_ST">
+    <div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/extrapage/masaeb" >معرفی کتاب</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/extrapage/esmeasemani" >اسم آسمانی</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/extrapage/sojdeh" >اولین کسی که بعد از ولادت سجده کرد</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/extrapage/jashneaseman" >جشن میلاد در آسمان</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/extrapage/sokhanbamadar" >اولین کسی که در رحم مادر سخن گفت:</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/extrapage/keramat" >کرامات و فضائل نزد خداوند و پیامبر</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/extrapage/vigegihahadis" >تعدادی از ویژگیهای حضرت زهرا (سلام الله علیها) در احادیث</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/extrapage/vijegihaquran" >تعدادی از ویژگیهای حضرت زهرا (سلام الله علیها) در قرآن</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/extrapage/esmat" >عصمت حضرت فاطمه (س)</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/extrapage/fadak" >خطبه فدکیه</a></div>    </div><div class="Side3_ST"></div>
+        
+    
+        <div class="Side1_ST">آماروبلاگ</div>
+    <div class="Side2_ST">
+    <div class="Li_ST">کل بازدید : <script>getStatVar('total_view');</script></div>
+    <div class="Li_ST">بازدید امروز :<script>getStatVar('today_view');</script></div>
+    <div class="Li_ST">بازدید دیروز : <script>getStatVar('yesterday_view');</script></div>
+    <div class="Li_ST">بازدید این ماه : <script>getStatVar('this_month_view');</script></div>
+    <div class="Li_ST">بازدید ماه قبل : <script>getStatVar('last_month_view');</script></div>
+    <div class="Li_ST">تعداد نویسندگان : <script>getStatVar('total_author');</script></div>
+    <div class="Li_ST">تعداد کل پست ها : <script>getStatVar('total_post');</script></div>
+    <div class="Li_ST">آخرین بازدید : <script>getStatVar('last_view_date');</script></div>
+    <div class="Li_ST">آخرین بروز رسانی : <script>getStatVar('modify_date');</script></div>
+    </div><div class="Side3_ST"></div>
+        
+    
+    <div class="Side1_ST">Page Rank</div>
+    <div class="Side2_ST"><div align="center">
+
+
+<cb:block_search>
+<style type="text/css">//Ashoora.ir|GooglePR Begins</style><center><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/grank/png.js"></script>  <script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/grank/check.php?url=http://bibifatemeh.mihanblog.com/&img=10"></script></center><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1662;&#1740;&#1580; &#1585;&#1606;&#1705; &#1711;&#1608;&#1711;&#1604;</a><style type="text/css">//Ashoora.ir|GooglePR Ends</style>
+
+<style type="text/css">//Ashoora.ir|Faraj Begins</style>
+<div align="center"><object classid="clsid:D27CDB6E-AE6D-11CF-96B8-444553540000" id="obj1" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" border="0" width="150" height="51">
+<param name="movie" value="http://www.ashoora.biz/mazhabi-projects/faraj/smallwidth_faraj.swf">
+<param name="wmode" value="transparent">
+<embed src="http://www.ashoora.biz/mazhabi-projects/faraj/smallwidth_faraj.swf" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" name="obj1" width="150" height="51"></object>
+</div>
+<style type="text/css">a.ashoora_tool_link{display:none}</style><a href="http://www.ashoora.ir/" class="ashoora_tool_link">دعای فرج</a><style type="text/css">//Ashoora.ir|Faraj Ends</style>
+						
+
+    </div></div><div class="Side3_ST"></div>
+
+      <div class="Side1_ST">اوقات شرعی</div>
+    <div class="Side2_ST"><div align="center">
+    <style type="text/css">//Ashoora.ir|Oghat Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/oghat/javas-change-shahr.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/oghat/date.php?color1=000000&color2=F30A36&color3=FFFFFF&size=10px&size2=7px&style=none&width=160&shahr=12&selected=1,1,1,1,1,1"></script><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1575;&#1608;&#1602;&#1575;&#1578; &#1588;&#1585;&#1593;&#1740;</a><style type="text/css">//Ashoora.ir|Oghat Ends</style>
+    </div></div><div class="Side3_ST"></div>
+
+
+    </div></td>
+    <td width="500" valign="top">
+    <div class="Post_ST">
+    
+    
+    
+        <div class="Post1_ST"><center>مطالب اخیر وبگاه</center></div>
+    <div class="Post2_ST">
+    <marquee onmouseover="this.stop()" onmouseout="this.start()" direction="up" scrollamount="2" style="height:120px;">
+    <div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/67" title="یکشنبه 2 فروردین 1394">رضیه ...</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/66" title="سه شنبه 23 دی 1393">محسن پر!</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/65" title="دوشنبه 22 دی 1393">چادر خاکی ...</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/64" title="چهارشنبه 25 تیر 1393">علی اکبر علیه السلام</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/61" title="شنبه 2 فروردین 1393">بهار</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/60" title="چهارشنبه 28 اسفند 1392">کلیپی بسیار زیبا در مدح دوازده امام علیهم السلام</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/59" title="جمعه 23 اسفند 1392">بشنو از نی ....</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/57" title="پنجشنبه 28 شهریور 1392">مهر مادری</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/55" title="یکشنبه 9 تیر 1392">محبان مهدی! او خواهد آمد</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/54" title="دوشنبه 27 خرداد 1392">چرا شیعیان نمی توانند حضرت مهدی (عج) را زیارت کنند و فیض دیدار ایشان از آنها گرفته شده است؟</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/53" title="شنبه 14 اردیبهشت 1392">معصوم سوّم - حضرت فاطمه زهراء (ع ) </a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/52" title="جمعه 13 اردیبهشت 1392">مناجات</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/51" title="سه شنبه 10 اردیبهشت 1392">ولادت با سعادت سرور و سالار زنان عالم، بانو زهرا سلام الله عیها مبارک باد </a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/50" title="چهارشنبه 4 اردیبهشت 1392">حضرت ام البنین سلام الله علیها</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/49" title="شنبه 31 فروردین 1392">با لباس خونین وارد محشر می شود!</a></div>    </marquee>
+    </div><div class="Post3_1_ST"></div>
+        
+    
+    		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<script>mihanblogPostLike('67','like')</script>    <div class="Post1_ST"><a href="http://bibifatemeh.mihanblog.com/post/67">رضیه ...</a></div>
+    <div class="Post2_ST"> <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<div><span style="font-size: 23.6892108917236px;">کور بودی و ندیدی پسرم می لرزید؟</span></div><div><span style="font-size: 23.6892108917236px;">دستهای حسنم دورو برم می لرزید؟</span></div><div><span style="font-size: 23.6892108917236px;"><br></span></div><div><span style="font-size: 23.6892108917236px;">کور بودی که سرم گوشه دیوار گرفت</span></div><div><span style="font-size: 23.6892108917236px;">ابرویم خون شد و چشمان ترم می لرزید؟</span></div><div><span style="font-size: 23.6892108917236px;"><br></span></div><div><span style="font-size: 23.6892108917236px;">حسنم دست به زیر بغلم می برد و&nbsp;</span></div><div><span style="font-size: 23.6892108917236px;">وقت برخواستنم هم کمرم می لرزید؟</span></div><div><span style="font-size: 23.6892108917236px;"><br></span></div><div><span style="font-size: 23.6892108917236px;">شهر با ضربه تو دور سرم می چرخید</span></div><div><span style="font-size: 23.6892108917236px;">چند ثانیه ندیدی که سرم می لرزید؟</span></div><div><span style="font-size: 23.6892108917236px;"><br></span></div><div><span style="font-size: 23.6892108917236px;">تازدی از وسط کوچه مسیرم گم شد</span></div><div><span style="font-size: 23.6892108917236px;">چند باری به زمین خورد پرم می لرزید</span></div><div><span style="font-size: 23.6892108917236px;"><br></span></div><div><span style="font-size: 23.6892108917236px;">چند روزی نگذشته است تو یادت رفته؟</span></div><div><span style="font-size: 23.6892108917236px;">زدی بودی و تنم پشت درم می لرزید</span></div><div><span style="font-size: 23.6892108917236px;"><br></span></div><div><span style="font-size: 23.6892108917236px;">تو لگد می زدی و داشت لگد می زد حیف</span></div><div><span style="font-size: 23.6892108917236px;">محسنم داشت به داد تو برم می لرزید</span></div><div><span style="font-size: 23.6892108917236px;"><br></span></div><div><span style="font-size: 23.6892108917236px;">بی مروت تو ندیدی که به هنگام زدن</span></div><div><span style="font-size: 23.6892108917236px;">وسط خاک وجود پدرم می لرزید؟﻿</span></div>
+
+    <br><br>
+    <div class="Edameh_ST"><a href="http://bibifatemeh.mihanblog.com/post/67">ادامه مطلب...</a></div><div class="clr"></div>
+        </div><div class="Post3_ST"> نویسنده فرشاد نوروزی در 
+	03:21 ب.ظ | <a style="color:#F00; text-decoration:blink;" target="_self" href="http://bibifatemeh.mihanblog.com/post/67#commentlist" class="comment-link">نظرات(<script>setCommentCnt(67)</script>)</a></div>
+    
+    
+    
+
+
+    <script>mihanblogPostLike('66','like')</script>    <div class="Post1_ST"><a href="http://bibifatemeh.mihanblog.com/post/66">محسن پر!</a></div>
+    <div class="Post2_ST"> <font size="3"><img src="http://moujahed.persiangig.com/image/new_folder/shahadate%20hazrate%20zahra%20-%20mediume.jpg" alt="" align="bottom" border="0" height="459" hspace="0" vspace="0" width="691"><br><br>درد سر، بین گذر، چند نفر و یک مادر<br>شده هر قافیه ام یک غزل در آور<br><br>ای که از کوچه شهر پدرت می گذری<br>امنیت نیست از این کوچه سریعتر بگذر<br><br>دیشب از داغ شما فال گرفتم آمد<br>دوش می آمد و رخساره نگویم بهتر<br><br>من به هر کوچه خاکی که قدم بگذارم،<br>نا خداگاه به یاد تو می افتم مادر<br><br>چه شده قافیه ها باز به جوش آمده اند<br>دم در، فضه خبر، مادر و در، محسن پر!<br></font><br>
+
+
+    <br><br>
+    <div class="Edameh_ST"><a href="http://bibifatemeh.mihanblog.com/post/66">ادامه مطلب...</a></div><div class="clr"></div>
+        </div><div class="Post3_ST"> نویسنده فرشاد نوروزی در 
+	02:58 ب.ظ | <a style="color:#F00; text-decoration:blink;" target="_self" href="http://bibifatemeh.mihanblog.com/post/66#commentlist" class="comment-link">نظرات(<script>setCommentCnt(66)</script>)</a></div>
+    
+    
+    
+
+
+    <script>mihanblogPostLike('65','like')</script>    <div class="Post1_ST"><a href="http://bibifatemeh.mihanblog.com/post/65">چادر خاکی ...</a></div>
+    <div class="Post2_ST"> <img src="http://habibi72.persiangig.com/image/weblog/fatemieh1h.jpg" alt="" align="bottom" border="0" height="452" hspace="0" vspace="0" width="634"><br>زیر باران دوشنبه بعد از ظهر<br><br>اتفاقی مقابلم رخ داد<br><br>وسط کوچه ناگهان دیدم<br><br>زن همسایه بر زمین افتاد<br><br>سیب‌ها روی خاک غلطیدند<br><br>چادرش در میان گرد و غبار<br><br>قبلا این صحنه را... نمی‌دانم<br><br>در من انگار می‌شود تکرار<br><br>آه سردی کشید، حس کردم<br><br>کوچه آتش گرفت از این آه<br><br>و سراسیمه گریه در گریه<br><br>پسر کوچکش رسید از راه<br><br>گفت: آرام باش! چیزی نیست<br><br>به گمانم فقط کمی کمرم...<br><br>دست من را بگیر، گریه نکن<br><br>مرد گریه نمی‌کند پسرم<br><br>چادرش را تکاند، با سختی<br><br>یا علی گفت و از زمین پا شد<br><br>پیش چشمان بی‌تفاوت ما<br><br>ناله‌هایش فقط تماشا شد<br><br>صبح فردا به مادرم گفتم<br><br>گوش کن! این صدای روضه‌ی کیست<br><br>طرف کوچه رفتم و دیدم<br><br>در و دیوار خانه‌ای مشکی است<br>&nbsp;<br>****<br><br>با خودم فکر می‌کنم حالا<br><br>کوچه ما چقدر تاریک است<br><br>گریه، مادر، دوشنبه، در، کوچه<br><br>راستی! فاطمیه نزدیک است... <br>    <br><br>
+    <div class="Edameh_ST"><a href="http://bibifatemeh.mihanblog.com/post/65">ادامه مطلب...</a></div><div class="clr"></div>
+        </div><div class="Post3_ST"> نویسنده فرشاد نوروزی در 
+	11:07 ب.ظ | <a style="color:#F00; text-decoration:blink;" target="_self" href="http://bibifatemeh.mihanblog.com/post/65#commentlist" class="comment-link">نظرات(<script>setCommentCnt(65)</script>)</a></div>
+    
+    
+    
+
+
+    <script>mihanblogPostLike('64','like')</script>    <div class="Post1_ST"><a href="http://bibifatemeh.mihanblog.com/post/64">علی اکبر علیه السلام</a></div>
+    <div class="Post2_ST"> 
+<!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+
+<p class="MsoNormal" dir="RTL"><b><font face="tahoma,arial,helvetica,sans-serif" size="4">شبیه ترین فرد به پیامبر (ص)</font></b></p><p class="MsoNormal" dir="RTL"><br></p><p class="MsoNormal" dir="RTL"><font face="tahoma,arial,helvetica,sans-serif" size="3"><img src="http://www.google.com/url?sa=i&amp;source=images&amp;cd=&amp;docid=BLf-uFDqq-gADM&amp;tbnid=ZXqJCezL7fPsSM:&amp;ved=0CAUQjBw&amp;url=http%3A%2F%2Fwww.maddahi.com%2Fwp-content%2Fuploads%2F2011%2F11%2F22082983496173580417.jpg&amp;ei=aXfGU5yuHY2Y1AWslICABw&amp;psig=AFQjCNHngYd75C0tVlRTlkGoYPCi5zLvsg&amp;ust=1405602025564235" alt="" align="bottom" border="0" height="398" hspace="0" vspace="0" width="508"></font></p><p class="MsoNormal" dir="RTL"><font face="tahoma,arial,helvetica,sans-serif" size="3">خضر عشاق گرم دیدن بود</font></p><font face="tahoma,arial,helvetica,sans-serif" size="3">
+
+</font><p class="MsoNormal" dir="RTL"><font face="tahoma,arial,helvetica,sans-serif" size="3">اشک آمد آب را گم کرد</font></p><font face="tahoma,arial,helvetica,sans-serif" size="3">
+
+</font><p class="MsoNormal" dir="RTL"><font face="tahoma,arial,helvetica,sans-serif" size="3">علی اکبر که بر زمین افتاد</font></p><font face="tahoma,arial,helvetica,sans-serif" size="3">
+
+</font><p class="MsoNormal" dir="RTL"><font face="tahoma,arial,helvetica,sans-serif" size="3">آسمان آفتاب را گم کرد</font></p><font face="tahoma,arial,helvetica,sans-serif" size="3">
+
+</font><p class="MsoNormal" dir="RTL"><font face="tahoma,arial,helvetica,sans-serif" size="3">خواست تا خیمه پر کشد اما</font></p><font face="tahoma,arial,helvetica,sans-serif" size="3">
+
+</font><p class="MsoNormal" dir="RTL"><font face="tahoma,arial,helvetica,sans-serif" size="3">شیر زخمی عقاب را گم کرد</font></p><font face="tahoma,arial,helvetica,sans-serif" size="3">
+
+</font><p class="MsoNormal" dir="RTL"><font face="tahoma,arial,helvetica,sans-serif" size="3">آنقدر زخم روی زخم آمد</font></p><font face="tahoma,arial,helvetica,sans-serif" size="3">
+
+</font><p class="MsoNormal" dir="RTL"><font face="tahoma,arial,helvetica,sans-serif" size="3">که عدو هم حساب را گم کرد</font></p><font face="tahoma,arial,helvetica,sans-serif" size="3">
+
+</font><p class="MsoNormal" dir="RTL"><font face="tahoma,arial,helvetica,sans-serif" size="3">پدر آمد به یاریش برود</font></p><font face="tahoma,arial,helvetica,sans-serif" size="3">
+
+</font><p class="MsoNormal" dir="RTL"><font face="tahoma,arial,helvetica,sans-serif" size="3">من بمیرم رکاب را گم کرد</font></p><font face="tahoma,arial,helvetica,sans-serif" size="3">
+
+</font><p class="MsoNormal" dir="RTL"><font face="tahoma,arial,helvetica,sans-serif" size="3">پسر بو تراب بین تراب</font></p><font face="tahoma,arial,helvetica,sans-serif" size="3">
+
+</font><p class="MsoNormal" dir="RTL"><font face="tahoma,arial,helvetica,sans-serif" size="3">نوه بو تراب را گم کرد</font></p><font face="tahoma,arial,helvetica,sans-serif" size="3">
+
+</font><p class="MsoNormal" dir="RTL"><font face="tahoma,arial,helvetica,sans-serif" size="3">جلد قرآن خویش پیدا کرد</font></p><font face="tahoma,arial,helvetica,sans-serif" size="3">
+
+</font><p class="MsoNormal" dir="RTL"><font face="tahoma,arial,helvetica,sans-serif" size="3">برگه های کتاب را گم کرد</font></p>
+
+    <br><br>
+    <div class="Edameh_ST"><a href="http://bibifatemeh.mihanblog.com/post/64">ادامه مطلب...</a></div><div class="clr"></div>
+        </div><div class="Post3_ST"> نویسنده فرشاد نوروزی در 
+	04:34 ب.ظ | <a style="color:#F00; text-decoration:blink;" target="_self" href="http://bibifatemeh.mihanblog.com/post/64#commentlist" class="comment-link">نظرات(<script>setCommentCnt(64)</script>)</a></div>
+    
+    
+    
+
+
+    <script>mihanblogPostLike('61','like')</script>    <div class="Post1_ST"><a href="http://bibifatemeh.mihanblog.com/post/61">بهار</a></div>
+    <div class="Post2_ST"> 
+<font size="3"><font size="4">امیر المومنین خطاب به حضرت زهرا سلام الله علیها:</font><br><font size="6"><font size="5">زهرا<br>هنگام بهار است گل لاله و نسرین<br>از خاک در آیند و تو در خاک چرایی؟<br>زهرا<br>چندان به سر قبر تو بنشینم و گریم<br>شاید که بهار آید و از خاک درآیی</font><br><br></font></font><img src="http://s5.picofile.com/file/8117686900/16023_175.jpg" alt="" height="346" align="bottom" border="0" vspace="0" width="462" hspace="0"><br>
+
+
+
+
+    <br><br>
+    <div class="Edameh_ST"><a href="http://bibifatemeh.mihanblog.com/post/61">ادامه مطلب...</a></div><div class="clr"></div>
+    <div class="Tags_ST">برچسب ها : <a href="http://bibifatemeh.mihanblog.com/post/tag/%D8%A8%D9%82%DB%8C%D8%B9">بقیع</a> ،<a href="http://bibifatemeh.mihanblog.com/post/tag/%D8%AD%D8%B6%D8%B1%D8%AA%20%D8%B2%D9%87%D8%B1%D8%A7">حضرت زهرا</a> ،<a href="http://bibifatemeh.mihanblog.com/post/tag/%D9%81%D8%A7%D8%B7%D9%85%D9%87">فاطمه</a> ،</div>    </div><div class="Post3_ST"> نویسنده فرشاد نوروزی در 
+	03:13 ق.ظ | <a style="color:#F00; text-decoration:blink;" target="_self" href="http://bibifatemeh.mihanblog.com/post/61#commentlist" class="comment-link">نظرات(<script>setCommentCnt(61)</script>)</a></div>
+    
+    
+    
+
+
+    <script>mihanblogPostLike('60','like')</script>    <div class="Post1_ST"><a href="http://bibifatemeh.mihanblog.com/post/60">کلیپی بسیار زیبا در مدح دوازده امام علیهم السلام</a></div>
+    <div class="Post2_ST"> 
+<b><font size="4">کلیپی بسیار زیبا در مدح دوازده امام علیهم السلام</font></b><br><h1 class="clearfix">ائمتی و سادتی اثناعشر    </h1><br>
+		<!--AparatShow-->
+				<div style="display:none">[http://www.aparat.com/v/YOgSV]</div>
+                <div class="aparatFrame">
+                    <iframe frameborder=0  allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" width="435" height="290" src="http://www.aparat.com/video/video/embed/videohash/YOgSV/vt/frame"> </iframe>
+                </div>
+
+		<!--eoAparatShow-->
+				<br><br>    <br><br>
+    <div class="Edameh_ST"><a href="http://bibifatemeh.mihanblog.com/post/60">ادامه مطلب...</a></div><div class="clr"></div>
+    <div class="Tags_ST">برچسب ها : <a href="http://bibifatemeh.mihanblog.com/post/tag/%D8%A7%D8%A6%D9%85%D8%AA%DB%8C%20%D9%88%20%D8%B3%D8%A7%D8%AF%D8%AA%DB%8C%20%D8%A7%D8%AB%D9%86%D8%A7%D8%B9%D8%B4%D8%B1">ائمتی و سادتی اثناعشر</a> ،<a href="http://bibifatemeh.mihanblog.com/post/tag/%DA%A9%D9%84%DB%8C%D9%BE%20%D9%85%D8%B0%D9%87%D8%A8%DB%8C">کلیپ مذهبی</a> ،<a href="http://bibifatemeh.mihanblog.com/post/tag/%D8%B2%D9%87%D8%B1%D8%A7">زهرا</a> ،<a href="http://bibifatemeh.mihanblog.com/post/tag/%D9%81%D8%A7%D8%B7%D9%85%D9%87">فاطمه</a> ،<a href="http://bibifatemeh.mihanblog.com/post/tag/%D8%B9%D9%84%DB%8C">علی</a> ،<a href="http://bibifatemeh.mihanblog.com/post/tag/%D8%AD%D8%B3%DB%8C%D9%86">حسین</a> ،<a href="http://bibifatemeh.mihanblog.com/post/tag/%D8%AD%D8%B3%D9%86">حسن</a> ،</div>    </div><div class="Post3_ST"> نویسنده فرشاد نوروزی در 
+	02:19 ق.ظ | <a style="color:#F00; text-decoration:blink;" target="_self" href="http://bibifatemeh.mihanblog.com/post/60#commentlist" class="comment-link">نظرات(<script>setCommentCnt(60)</script>)</a></div>
+    
+    
+    
+
+
+        
+  
+<div class="Page_Nomber_ST"><a href="http://bibifatemeh.mihanblog.com/page/1"><b>1</b></a><a href="http://bibifatemeh.mihanblog.com/page/2"><span>2</span></a><a href="http://bibifatemeh.mihanblog.com/page/3"><span>3</span></a><a href="http://bibifatemeh.mihanblog.com/page/4"><span>4</span></a><a href="http://bibifatemeh.mihanblog.com/page/5"><span>5</span></a><a href="http://bibifatemeh.mihanblog.com/page/6"><span>6</span></a><a href="http://bibifatemeh.mihanblog.com/page/7"><span>7</span></a><a href="http://bibifatemeh.mihanblog.com/page/8"><i>...</i></a></div>
+    
+    
+    <!--  مسلمان ؛ حذف یا تغییر نام طراح و کدنویس شرعا حرام می باشد...  -->
+    <div class="Designer_ST"><p>طراحی و کدنویسی قالب : <a href="http://samentheme.ir/" target="_blank">علیرضاحقیقت</a> - <a href="http://samentheme.ir/" target="_blank">ثامن تم</a></p><p>Web Template By : <a href="http://samentheme.ir/" target="_blank">Samentheme.ir</a></p></div>
+    </div></td>
+    <td width="250" valign="top">
+    <div class="Side_ST">
+    <!--  ابتدای منو های سمت چپ  -->
+
+<div class="Side1_ST">روزشمار ایام فاطمیه</div>
+    <div class="Side2_ST"><div align="center">
+
+<style type="text/css">//Ashoora.ir|Fatemieh Begins</style><div align="center"><script type="text/javascript"src="http://www.ashoora.biz/mazhabi-projects/fatemieh/fatemieh.php?mod=6"></script></div><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1585;&#1608;&#1586;&#1588;&#1605;&#1575;&#1585; &#1601;&#1575;&#1591;&#1605;&#1740;&#1607;</a><style type="text/css">//Ashoora.ir|Fatemieh Ends</style>
+
+    </div></div><div class="Side3_ST"></div>
+    
+        <div class="Side1_ST">موضوعات مطالب</div>
+    <div class="Side2_ST">
+    <div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/category/3">ویدئوها</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/category/2">اشعار</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/category/1">روایات</a></div>    </div><div class="Side3_ST"></div>
+        
+    
+        <div class="Side1_ST">آرشیو مطالب</div>
+    <div class="Side2_ST">
+    <div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/archive/1394/1"> فروردین 1394</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/archive/1393/10"> دی 1393</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/archive/1393/4"> تیر 1393</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/archive/1393/1"> فروردین 1393</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/archive/1392/12"> اسفند 1392</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/archive/1392/6"> شهریور 1392</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/archive/1392/4"> تیر 1392</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/archive/1392/3"> خرداد 1392</a></div><div class="Li_ST"><a href="http://bibifatemeh.mihanblog.com/post/archive/1392/2"> اردیبهشت 1392</a></div>    </div><div class="Side3_ST"></div>
+        
+    
+        <div class="Side1_ST">پیوندهای وبگاه</div>
+    <div class="Side2_ST">
+    <div class="Li_ST"><a target="_blank" href="http://religious01.persianblog.ir/">مذهبی دانلود</a></div><div class="Li_ST"><a target="_blank" href="http://hamedshakernezhad.blogfa.com/">وبلاگ تخصصی حاج حامد شاکرنژاد</a></div><div class="Li_ST"><a target="_blank" href="http://doostqurani.rzb.ir/">دوست قرآنی</a></div><div class="Li_ST"><a target="_blank" href="http://www.taherehomidi.blogfa.com/">*•..•* گوهری در صدف *•..•*</a></div><div class="Li_ST"><a target="_blank" href="http://mojtabamajd.blogfa.com">شمسه</a></div><div class="Li_ST"><a target="_blank" href="http://ketab-allah.blogfa.com/">.::. دانلود نرم افزارهای مذهبی .::.</a></div><div class="Li_ST"><a target="_blank" href="http://mahdisanei.blogfa.com/">قرآن کتاب راهنما</a></div><div class="Li_ST"><a target="_blank" href="http://navayehosein.persianblog.ir/">جواد مقدم و مدایح زیبای امام حسین(ع)از جواد مقدم</a></div><div class="Li_ST"><a target="_blank" href="http://abubekr.blogfa.com/">شناخت چهره وافی ابوبکر</a></div><div class="Li_ST"><a target="_blank" href="http://madare-saddat.blogfa.com/">بسم رب الزهـــــــــــــــراء</a></div><div class="Li_ST"><a target="_blank" href="http://noahmadi313.blogfa.com/">منظرگاه مدیریتی مهدی منتظران</a></div><div class="Li_ST"><a target="_blank" href="http://banooyedoalam.blogfa.com/">بانوی دو عالم</a></div><div class="Li_ST"><a target="_blank" href="http://zahra12zahra.blogfa.com">*السلام علیک یا فاطمة الزهراء*</a></div><div class="Li_ST"><a target="_blank" href="http://babasirat.mihanblog.com/">بصیرت</a></div><div class="Li_ST"><a target="_blank" href="http://yazahra1020.blogfa.com/">حضرت زهرا</a></div><div class="Li_ST"><a target="_blank" href="http://hosseinjan.mihanblog.com/">حسین جان</a></div><div class="Li_ST"><a target="_blank" href="http://fatemiyeh1431.blogfa.com/">حضرت فاطمه زهرا سلام الله علیها</a></div>    </div><div class="Side3_ST"></div>
+        
+    
+    <!--  مسلمان ؛ حذف یا تغییر نام طراح و کدنویس شرعا حرام می باشد...  -->
+    <div class="Side1_ST">طراح قالب</div>
+    <div class="Side2_ST">
+    <div align="center"><a href="http://samentheme.ir/" target="_blank"><img src="http://samentheme.ir/uploads/st/samentheme120x60.jpg" width="120" height="60" alt="ثامن تم" /></a></div>
+    </div><div class="Side3_ST"></div>
+    
+    
+        <div class="Side1_ST">برچسب‌ها</div>
+    <div class="Side2_ST">
+    <a href="http://bibifatemeh.mihanblog.com/post/tag/%D9%81%D8%B6%D8%A7%DB%8C%D9%84+%D8%B4%DB%8C%D8%B9%DB%8C%D8%A7%D9%86" style="font-size:1em">فضایل شیعیان</a>, <a href="http://bibifatemeh.mihanblog.com/post/tag/%D8%B4%D8%B9%D8%B1" style="font-size:1.2em">شعر</a>, <a href="http://bibifatemeh.mihanblog.com/post/tag/%D8%B9%D9%84%DB%8C" style="font-size:1.2em">علی</a>, <a href="http://bibifatemeh.mihanblog.com/post/tag/%D8%AD%D8%B6%D8%B1%D8%AA+%D8%B2%D9%87%D8%B1%D8%A7" style="font-size:1.6em">حضرت زهرا</a>, <a href="http://bibifatemeh.mihanblog.com/post/tag/%D9%82%DB%8C%D8%A7%D9%85%D8%AA" style="font-size:1.2em">قیامت</a>, <a href="http://bibifatemeh.mihanblog.com/post/tag/%D9%81%D8%A7%D8%B7%D9%85%D9%87" style="font-size:2em">فاطمه</a>, <a href="http://bibifatemeh.mihanblog.com/post/tag/%D8%B2%D9%87%D8%B1%D8%A7" style="font-size:1.8em">زهرا</a>, <a href="http://bibifatemeh.mihanblog.com/post/tag/%D8%AD%D8%B6%D8%B1%D8%AA+%D9%81%D8%A7%D8%B7%D9%85%D9%87" style="font-size:1.2em">حضرت فاطمه</a>, <a href="http://bibifatemeh.mihanblog.com/post/tag/%D8%A8%DB%8C+%D8%A8%DB%8C+%D9%81%D8%A7%D8%B7%D9%85%D9%87" style="font-size:1.4em">بی بی فاطمه</a>, <a href="http://bibifatemeh.mihanblog.com/post/tag/%D8%B5%D8%A7%D8%AD%D8%A8+%D8%A7%D9%84%D8%B2%D9%85%D8%A7%D9%86" style="font-size:1.4em">صاحب الزمان</a>,     </div><div class="Side3_ST"></div>
+        
+<div class="Side1_ST">روایت مظلومیت حضرت زهرا سلام الله علیها</div>
+    <div class="Side2_ST"><div align="center">
+<script language="javascript" src="http://blogskins.ir/tools/player/?pl=3&file=http://uploadazad.com/uploads/izl0_mohebaan%5B1%5D.mp3@http://uploadazad.com/uploads/ze5o_aqasi-fatimazahra.mp3@http://uploadazad.com/uploads/xyor_ali.fani.golbarge.kabood.mp3.320kbps_www.mohebaan.ir%5B1%5D.mp3@http://uploadazad.com/uploads/pqiu_karimi_shab_2_fatemye_92_alhadi-3%5B1%5D.mp3&start=1"></script>
+   </div></div><div class="Side3_ST"></div>
+
+<div class="Side1_ST">لوگوی دوستان</div>
+    <div class="Side2_ST">
+<center><a target="_blank" href="http://reyhan86.mihanblog.com/" ><img alt="زهرا ریحانه النبی" src="http://upload7.ir/images/78353735947428560351.jpg" width="150" height="150" border="0px"></a></center>
+
+<!-- start logo cod off http://fatemiyoon.blogveb.com --><p align="center"><p align="center"><a href="http://fatemiyoon.blogveb.com" target="_blank"><img border="0" src="http://s2.picofile.com/file/7878549244/BNFatemiyoon.gif"  width="120" height="60" alt="پایگاه اینترنتی فاطمیون"></a></p><!--finish logo cod off http://fatemiyoon.blogveb.com -->
+
+</div><div class="Side3_ST"></div>
+
+    
+    
+		    
+    
+    
+    </div></td>
+  </tr>
+</table>
+
+<div id="Footer_ST">تمامی حقوق برای مدیر وبگاه محفوظ است ؛ هرگونه کپی برداری از مطالب تنها با ذکر منبع و ذکر یک صلوات مجاز است...</div>
+
+</div></div>
+</body>
+</html>
+<!-- کدنویسی و گرافیک : ثامن تم | هرگونه سوء استفاده از کد و طرح ها و تغییر نام طراح شرعا حرام می باشد --><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'bibifatemeh.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

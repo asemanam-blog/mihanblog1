@@ -1,0 +1,1320 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://amirdt.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*873142*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[348]='55';commentCnt[377]='10';commentCnt[378]='14';commentCnt[379]='10';commentCnt[380]='12';commentCnt[382]='28';commentCnt[383]='7';commentCnt[384]='9';commentCnt[385]='22';commentCnt[390]='3';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[348]='0';
+mihanblogDisLikeArrCnt[348]='0';
+mihanblogLikeArrCnt[377]='0';
+mihanblogDisLikeArrCnt[377]='0';
+mihanblogLikeArrCnt[378]='0';
+mihanblogDisLikeArrCnt[378]='0';
+mihanblogLikeArrCnt[379]='0';
+mihanblogDisLikeArrCnt[379]='0';
+mihanblogLikeArrCnt[380]='0';
+mihanblogDisLikeArrCnt[380]='0';
+mihanblogLikeArrCnt[382]='0';
+mihanblogDisLikeArrCnt[382]='0';
+mihanblogLikeArrCnt[383]='0';
+mihanblogDisLikeArrCnt[383]='0';
+mihanblogLikeArrCnt[384]='0';
+mihanblogDisLikeArrCnt[384]='0';
+mihanblogLikeArrCnt[385]='0';
+mihanblogDisLikeArrCnt[385]='0';
+mihanblogLikeArrCnt[390]='0';
+mihanblogDisLikeArrCnt[390]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://amirdt.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://amirdt.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','359');
+	setStatVar('total_author','4');
+	setStatVar('modify_date','یکشنبه 29 فروردین 1395');
+	
+	setStatVar('today_view','9');
+	setStatVar('yesterday_view','19');
+	
+	setStatVar('this_month_view','941');
+	setStatVar('last_month_view','996');
+
+	setStatVar('total_view','199460');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (06:35)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://amirdt.mihanblog.com/statupdate/?data[refereruri]=http://icehell.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607828817&data[hash]=bf4039e2ff1c6f43b18cb135363c8717&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://amirdt.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://amirdt.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://amirdt.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://amirdt.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://amirdt.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://amirdt.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://amirdt.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://amirdt.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://amirdt.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://amirdt.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://amirdt.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://amirdt.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://amirdt.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://amirdt.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://amirdt.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://amirdt.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<title>امید ناامیدی های من</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="<-BlogAuthor->">
+<meta name="language" content="Farsi">
+<meta name="description" content="امید ناامیدی های من - آرامش سهم قلبیست که در تصرف خداست - امید ناامیدی های من">
+<meta name="keywords" content="امید ناامیدی های من,amirdt, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="امید ناامیدی های من" href="http://amirdt.mihanblog.com/post/rss/" />
+<link href="http://vatanskin.com/theme/28/style.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div align=center><div style="width:1000">
+
+<div class=Pichak>
+
+<div id=header>
+<div class=top-BlogTitle></div>
+<div class=top-menu><div class=BlogTitle>امید ناامیدی های من</div><div class=Description>آرامش سهم قلبیست که در تصرف خداست</div></div>
+
+
+<div class=top-menu2>
+
+<div style="float:right;width:0px;direction:rtl; height:20px"></div>
+<div style="float:right;width:500">
+﻿<a href="index.html">صفحه اصلی</a> |
+<a href="javascript:messageForm()">تماس با من</a> |
+<a href="mailto:amir.dt4u@yahoo.com">ایمیل مدیر</a> |
+<a title="قالب وبلاگ جنوب" href="http://www.vatanskin.com/view/28.php">قالب وبلاگ</a> |
+<a href="http://amirdt.mihanblog.com/post/rss/" target="_blank" >Feed</a>
+</div>
+</div></div>
+
+<div id=main-back>
+
+<div class=Sid>
+<div id=Sidebar> 
+
+<div class=TopSid><div class=TopSid2>			
+<b>درباره وبلاگ</b></div></div>
+<div class=CenterSid><div class=li-Sid2>  <p align="center">
+<img src="../static.mihanblog.com/public/user_data/web_photo/292/873142.jpg@2734"  /><br>telegram.me/amirtafti2<br />
+گاهـ ـی حجـ ـم ِ دلــــتنـگی هایـ ـم<br />
+<br />
+آن قــَ ـــ ـدر زیـاد میشود<br />
+<br />
+که دنیــــا<br />
+<br />
+با تمام ِ وسعتش<br />
+<br />
+برایـَم تنگ میشود ...<br />
+<br />
+... دلتنــگـم...<br />
+<br />
+دلتنـــــگ کسی کـــــه<br />
+<br />
+گردش روزگــــارش به من که رسیــــد از<br />
+<br />
+حرکـت ایستـاد...<br />
+<br />
+دلتنگ کسی که دلتنگی هایم را ندید...<br />
+<br />
+دلتنگ ِ خود َم...<br />
+<br />
+خودی که مدتهــــ ــــ ــاست گم کـر د ه ام ...<br />
+</p></div></div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>نویسندگان</div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/author/733900">امیرحسین   337 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/author/739696">مهناز   4 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/author/802085">علیرضا   9 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/author/804786">مهرناز   9 </a></div></div>
+<div class=LowSid></div>
+
+
+		
+<div class=TopSid>
+<div class=TopSid2>
+<b>موضوعات</b></div></div>			
+<div class=CenterSid><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/24">رازهای موفقیت  1 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/23">شما عظیمتر از آنی هستید که می اندیشید  10 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/2">دست نوشته  83 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/18">دلتنگی  22 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/20">بیوگرافی  6 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/12">خاطرات  3 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/5">عشقولانه  12 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/4">جملات زیبا  15 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/1">اشعار پدرم  6 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/21">نکاتی درباره قرآن  8 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/3">جملات انرژی بخش  10 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/11">جملات دکتر شریعتی  61 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/10">توصیه های پزشکی  2 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/6">خواص سوره های قرآن  9 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/9">عجیب و دیدنی از همه جا  8 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/22">داستانهای کوتاه و آموزنده  21 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/25">نوشته های طنز  و خنده دار  1 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/13">بهترین ماسک ها برای پوست  2 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/8">خواص میوه ها و گیاهان دارویی  20 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/17">کرم های پاک کننده برای پوست  1 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/7">توصیه های مفید برای پوست و مو  17 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/15">ماسک های زیبایی و تاثیر آن بر پوست  1 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/14">بهترین ماسک ها برای پوستهای چرب  2 </a></div><div class=li-Sid>				
+<a href="http://amirdt.mihanblog.com/post/category/16">انواع ماسک برای پوستهای خشک و معمولی  2 </a></div></div>			
+<div class=LowSid></div>
+
+﻿<div class="TopSid"><div class=TopSid2>حامیان وطن اسکین</div></div>
+<div class=CenterSid>
+<div class=li-Sid><a href="http://modelmoo2014.jadidweblog.com/?p=536">رنگ مو 2014</a>
+ | <a href="http://www.mahansharge.com">خرید شارژ از ماهان شارژ</a>
+</div>
+<div class=li-Sid><a href="http://ipacodoors.ir/">کرکره ضد سرقت</a>
+ | <a href="http://1hamrah.com/direct-charge.php">خرید شارژ مستقیم ایرانسل</a>
+</div>
+<div class=li-Sid><a href="http://behinpayam.com">سامانه اس ام اس</a>
+ | <a href="http://bartarinha.com/group/107/%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DA%AF%D8%A7%D9%87">آموزشگاه</a>
+</div>
+<div class=li-Sid><a href="http://rangemoo2014.jadidblog.com/?p=3217">رنگ موی قرمز</a>
+</div>
+<div class=li-Sid><a href="http://www.sakhtemoon.com/Air-Handling-Unit/Companies">ایر واشر</a>
+ | <a href="http://achilandoors.com">درب اتوماتیک</a></div>
+</div>
+<div class=LowSid></div>
+<BlogLinksBlock>
+<div class=TopSid><div class=TopSid2>
+<b>لینک دوستان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://kheshtakabad.blogfa.com/">خچتک آباد</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://alone-heartsss.mihanblog.com/">♥ قلبـــــــهای تنــــــــها ♥</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../sokotporfaryad.mihanblog.com/index.html">❤❤ سکوت پرفریاد ❤❤</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://shaberoyaieman.blogfa.com/">عشق رویایی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../www.saygollove.mihanblog.com/index.html">مرداب آرزوهای رنگی من</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../submit.mihanblog.com/index.html">ثبت سایت در گوگل</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://hozkhoone.blogfa.com/">**حوض خونه**</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://1371and1379.blogfa.com/">*دیواری از جنس شیشه*</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://hadi-maryam-islam.blogfa.com/">خــــــدایـــــــــاتــنهامــــــون نزار</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://yedokhtaretanha79.blogfa.com/">dokhtare sheytoooooon</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../sky-2012.mihanblog.com/index.html">♥ آسمان پر ستاره شیراز ♥ وبلاگ متنوع و جالب ♥</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://hafedel.blogfa.com/category/2">دست نوشته های من</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://link118.com">تبادل لینک</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://buy-a-watch.mihanblog.com">خرید ساعت مچی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.saatforoshi.ir">ساعت مچی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://exchange.wrist-watch.ir/">ساعت دیواری</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://nooshidani.ir/">سایت آشپزی نوشیدنی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.atefeh7387.blogfa.com/">✿سکوت مبهم✿</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://delshaki.blogfa.com/">غرور اشک (نگین)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://yalanduunya.persianblog.ir/">ღღღ.. منشور عشق بازی من..ღღღ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://aynos.blogfa.com/">....::بامهای کاهگلی:::...(سونیا)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.bito-b.blogfa.com/">عاشقانه ها تقدیم به تو (بهناز)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.amir0017.blogfa.com">♚♚در هم برهم♚♚ (امیر)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.hotlove92.blogfa.com/">کلبه ی رویاهای قشنگ (پریا)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../passthenight.mihanblog.com/index.html">کی گفته زن ضعیف است</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://just-tanhaiy.blogfa.com/">امپراطور جهان زن  (مینا)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://liver72.blogfa.com/">برو این بار بی برگشت....</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.me-myteacher.blogfa.com/">♥منُ معلمم♥</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://darjostojooyeto.persianblog.ir/">در جستجوی تو..</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.nazi-saba.blogfa.com/">̶G̶̶i̶̶r̶̶l̶̶s̶̶ ̶̶W̶̶i̶̶n̶̶t̶̶e̶̶r̶</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.myshore.blogfa.com/">فریاد بی صدای من (هانیه)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.delshekasteh-nafas.blogfa.com/">دل شکسته (نفس)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../icehell.mihanblog.com/index.html">ice Hell (پارسا)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://hohhoo.mihanblog.com/">جوک.طنز (نازنین)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.reza00121.blogfa.com/">یه روز خوب میاد (رضا)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://honey78h.blogfa.com/">عشق (هانیه)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.kodakbache.blogfa.com/">♥یه حرفایی...همیشه هست♥</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../www.eshghekhoda73.mihanblog.com/index.html">حرف دل یک جوان (طاهره)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://21548.mihanblog.com/">تنهاترین معشوق:خدا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://eshghkhamush.blogfa.com/">عشق خاموش (الهه)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.nastaran9160.blogfa.com/">**شمع دل افروز** (فاطمه)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://sqdfmf.blogfa.com/">شکنجه گر - وقتی شکنجه گر تویی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.7183.blogfa.com/">غبار بی سوار (وجیهه)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../del-shekastam.mihanblog.com/index.html">دلشکسته (فریما دلتنگ)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://manhastam91.blogfa.com/">تارا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://sahardarya90.blogfa.com">روزهای شلوغ و بامزه من (سحر)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.rainii.blogfa.com/">روزهای بارانی (باران)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.arezobedel.blogfa.com/">یه آرزو به دل (زهرا)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://masha.blogfa.com/">بار الها بال پروازم ببخش (مولود)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://sepidpar.mihanblog.com/">دلنوشته های یک نسل سوخته (سپیدپر)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.safarekalamat.blogfa.com/">سفر عاشقانه کلمات (مجید)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://solmazjoon.blogfa.com/">به تو نفرین به خودم به تموم خاطرات˙·٠•●♥ (سولماز)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://zohreh-love.blogfa.com/">عشق گمشده (زهره)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.rohe-tabdar.blogfa.com/">روزهــ ــا ی بــ ــارانــ ــی (آزاده)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://parastoo16.blogfa.com/">:&quot;:دخترکی بادلی شکسته:&quot;: (ریحانه)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://hdiana.blogfa.com/">&quot;آدمی باید از نو زاده شود&quot; (دیانا)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://swallo.blogfa.com/">چرا عشق؟ (ماری)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://mania1991.blogfa.com/">تبسم تلخ (مانیا)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://mohamadashena.blogfa.com/">خانه تنهایی 365 (محمد رضا)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://zohreh-na.blogfa.com/">دل نوشته های یه عاشق (مهتاب)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://rayanehmohammad.mihanblog.com/">**کلبه تاریک من** (ناهید)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://tanineghorbat.blogfa.com/">به رنگ خدا (مرضیه قاسمی)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.bezanbesalamati.blogfa.com/">جای خالی..</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../azarzamani.mihanblog.com/index.html">شعر و ترانه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://violinwinter.blogfa.com">♪♫v¡õĻίή ώίηtέя ♫♪  (نسترن)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://alonegirl-14.blogfa.com/">❤ Sky Angel ❤ (سارا)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../a-moradi68.mihanblog.com/index.html">*:.*:.یادگــــــــــــــــار دلیــــــــــــــــــ*:.*:  (عارفه)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../batovalitanha.mihanblog.com/index.html">با تو ولی تنها  (رضا)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://onegirl-setareha.blogfa.com/">دخترکی از جنس ستاره ها  (سارا)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.hasti710.blogfa.com/">ته سیگار (هستی)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://motenaferaam.blogfa.com/">ازت متنفرم (ساناز)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://shininemo.mihanblog.com">stArGiRl (نرگس)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.fatemeh7357.blogfa.com/">فقط بخاطر تنها عشقم (فاطمه)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.fargol1370.blogfa.com/">شاید عشق....شاید نفرت (فرگل)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.game-only.mihanblog.com">تبادل لینک.</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.ye-ashegh91.blogfa.com/">یه عاشق تنها (نسرین)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.manotosport.ir/">من و تو اسپورت (علی)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.manotanhaim.blogfa.com/">من و تنهاییم (مهناز)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ghasedak23.mihanblog.com/">پاییز در قلب من  (نسیم)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../hamechizjaleb.mihanblog.com/index.html">✖ خـُـבآیـآ مـَלּ בیگــَر بآزے نمے کـُـنـَمــ.. ✖ (سحر)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.honey313.blogfa.com/">عسل تلخ (زینب)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.sonya02.blogfa.com/">my love god (الیسا)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://takotanhabito90021.blogfa.com/">رفیق گریه های من (نگار)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../passthenight.mihanblog.com/index.html">رمز شب متولد میشود (هدیه)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../black-whitelife2.mihanblog.com/index.html">زندگی سیاه و سفید  (فاطمه)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.asheghetaaam.blogfa.com/">پاتوق مهربون ها (فاطمه)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.111maedeh.blogfa.com/">این نیـــز بگــــــذرد (ماِءده)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.saranaznazi.blogfa.com/">۩♠♠♠۩٭٭٭سارانازنازیی٭٭٭۩♠♠♠۩</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.sunbow.ir">سمیرا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://lengekafsh.ir/">لنگه کفش خود را قورت بده ! (حمید)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.asheghetaaam.blogfa.com/">&quot;پاتوق مهربون ها&quot;  (فاطمه)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://goonos.blogfa.com/">تو عشق منی  (الهه)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://angel74alon.blogfa.com/">ღکـلـبه تنــ♥ ــهایی فــ ـرشتهღ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.dokhidioone.blogfa.com/">㋡ CRazY GiRL ㋡ (نگارینا)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.liver6167.blogfa.com/">ای همه ی وجود من (پریسا)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://evane-mohabat.mihanblog.com/">ღ ❤ ღ کـلبــه مــحــبــتღ ❤ ღ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://yekbande.blogfa.com/">یه دیوونه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.saniya-1372.blogfa.com/">***گذشته ی من***  (سانیا)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.asheghoone90.blogfa.com/">قاصدک  (تنها)</a></div><div class=li-Sid><a title="قالب وبلاگ جنوب" href="http://www.vatanskin.com/view/28.php">قالب وبلاگ جنوب</a></div>
+<div class=li-Sid><a href="http://vatanskin.com/mihanblog.php">قالب میهن بلاگ</a></div></div>
+<div class=LowSid></div>
+</BlogLinksBlock>
+
+
+
+
+<div class=TopSid><div class=TopSid2>
+<b>پیوندهای روزانه</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://taranetanhaeii.blogfa.com/" title="">ترانه تنهایی </a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://myeyes.ir" title="">فروش عینک آفتابی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.samennews.ir" title="سلام وبلاگ خیلی خوبی داری دوست داری به عنوان خبر نگار افتحاری تو سایت  خبرگزاری فعالیت کنی
+موفق باشی">قرارگاه خبری تحلیلی ثامن نیوز</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.patoghdl21.com" title="">دانلود فیلم و سریال و موزیک</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.mehdi7592.blogfa.com" title="سلام دوست عزیز وبلاگ خیلی خوبی دارین.مهدی هستم با وبلاگی درباره ی سرورمان،امام زمان(عج).ازتون درخواست دارم كه وبلاگم رو جهت گسترش مهدویت با عنوان حضرت مهدی(عج) لینك كنید و به وبلاگم بیاین و بهم بگین كه با چه عنوانی لینكتون كنم.اگر از تواشیح خوشتون میاد باید بهتون بگم كه دیروز سه تا از بهترین تواشیح های موجود  در باره ی امام زمان گذاشتم،حتما بیاین و استفاده كنید.با مطالبی همچون(دانلود مولودی حضرت سجاد-دانلود مولودی حضرت عباس-دانلود مولودی امام حسین-پیشگویی های آداموس-پیشگویی های واقع شده-لطف وجود حضرت مهدی و ...)بروزم.درخواست دیگه هم ازتون دارم،اگر تونستین به وبلاگم امتیاز بدین.خدانگهدار.">حضرت مهدی(عج)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.payam-resan.net" title="با سلام
+وبلاگ جالب با مطالب قابل انتشار وخوبی دارین
+یک امکان فوق العاده برای مطالب شما
+پیام رسان مجری ارسال مطالب شما به 200 هزار نفر رایگان
+
+پیام رسان برای مجله شماره 43 خود لینک مطلب رایگان می پذیرد
+
+
+http://www.payam-resan.net/">پیام رسان</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://rain24.blogsky.com" title="">معرفی بازی آنلاین,کلیپ و عکس جالب</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://only-heart.mihanblog.com" title="">قـ ــــ ــلب تنـ ــــــ ــها(شیدا)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.taaj.ir" title="مرجع نیازمندی های ایرانی ، ثبت آگهی رایگان">آگهی رایگان اینترنتی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.top700.com" title="گاهی شانس فقط یک بار به آدم رو میاره پس باید قدرش رو دونست بهترین فرصت زندگی شما برای ثروتمند شدن مجموعه ای بی نظیر برای اولین بار در ایران برای کسانی که می خواهند بهتر زندگی کنند و از کمترین وقت و هزینه بیشترین سود را ببرند.برای آگاهی از جزییات بیشتر به لینک زیر مراجعه کنید.
+http://www.top700.com">$سایت تخصصی کسب درآمد از اینترنت$</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://tolueidigar.mihanblog.com/" title="سلام.از وبلاگتون خوشم اومد...شما هم به وب من سر بزنید و اگه خوب بود لینکم کنید و به وبم بیایید در وب من و وب خود را در قسمت لینکدونی ثبت کنید...با تشکر از شما...
+
+
+
+«alireza»  امضاء
+
+http://tolueidigar.mihanblog.com/
+طلوعی دیگر در راه است">درخواست</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://skied1383.mihanblog.com" title="وبلاگ خبری روز...
+
+خبرهای روز ایران و جهان، مستندترین و معتبرترین اخبار روز دنیا را هر روز صبح در این سایت بخوانید.
+
+خبرهای روز ایران و جهان.">خبرهای روز</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.ghorany.com/quran.htm" title="">قرآن آنلاین</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.freesmile.ir" title="سایتی پر از شکلک برای وبلاگ شما ، برای استفاده از شکلک ها بر روی شکلک مورد نظر کلیک کنید">Free smileys</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.top700.com" title="گاهی شانس فقط یک بار به آدم رو میاره پس باید قدرش رو دونست بهترین فرصت زندگی شما برای ثروتمند شدن مجموعه ای بی نظیر برای اولین بار در ایران برای کسانی که می خواهند بهتر زندگی کنند و از کمترین وقت و هزینه بیشترین سود را ببرند.برای آگاهی از جزییات بیشتر به لینک زیر مراجعه کنید.
+http://www.top700.com">$سایت تخصصی کسب درآمد از اینترنت$</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://novinsoftware.com/" title="با سلام
+دوست من وبلاگی خوبی داری از مطالب وبلاگت استفاده کردم امیدوارم بیشتر رو وبلاگت کار کنی همچنین سال نو را به شما و خانواده محترمتان تبریک عرض مینمایم.
+به سایت ما هم سر بزن خوشحال میشم سایت من یک سایت نرم افزاری دانلود جدیدترین نرم افزار های روز دنیا است نوین نرم افزار منتظرت هستم حتما بیا نظرتم بده.
+به امید دیدار
+http://novinsoftware.com">دانیال</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ar2020.mihanblog.com" title="سلام
+واقعا وبلاگ عالی و جالبی دارین
+
+اگه دنبال کسب درآمد واقعی و 100% تضمینی از اینترنت هستین به وبلاگ من مراجعه فرمایید
+
+ضرر نخواهید کرد
+
+همچنین اگر قصد تبادل لینک هم دارید مرا با نام و آدرس زیر لینک کنید و بعد هم در نظرات وبلاگ من خبر بدید تا شما را لینک کنم
+
+نام : کسب درآمد واقعی از اینترنت
+آدرس : ar2020.mihanblog.com
+
+به امید دیدار">احمد بذرافشان</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.p30gap.mihanblog.com" title="سلام
+به وبم یه سری بزن  http://p30gap.mihanblog.com/   اگر خوشت امد لینکم کن با نام  پی سی گپ !.!.!.! بعد بهم خبر بده تا کم تر از 1یا 2 ساعت لینکت کنم">پی سی گپ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../www.shoara-1300.mihanblog.com/index.html" title="با سلام....
+وبلاگتون خیلی خوبه و البته جای تحسین داره.
+به وب من هم بیا و نظر بده:
+shoara-1300.mihanblog">بوستان شاعران</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.b-a-shabestar.blogfa.com" title="تائید کن بعد بیا اینجا لینک خودت رو ثبت کن اتوماتیک :
+-------
+http://b-a-shabestaar.blogfa.com/page/link
+-------
+اینم آدرس سایتمون :
+-------
+www.b-a-shabestar.blogfa.com
+-------">.::مطالب جالب در مورد حجاب::.</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.top700.com" title="گاهی شانس فقط یک بار به آدم رو میاره پس باید قدرش رو دونست بهترین فرصت زندگی شما برای ثروتمند شدن مجموعه ای بی نظیر برای اولین بار در ایران برای کسانی که می خواهند بهتر زندگی کنند و از کمترین وقت و هزینه بیشترین سود را ببرند.برای آگاهی از جزییات بیشتر به لینک زیر مراجعه کنید.
+http://www.top700.com">$سایت تخصصی کسب درآمد از اینترنت$</a></div><div class=li-Sid><a href="http://vatanskin.com/mihanblog.php">قالب میهن بلاگ</a></div>
+</div>
+<div class=LowSid></div>
+
+
+</div>
+</div>
+
+<div class=main>
+
+<div class=post>
+
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://amirdt.mihanblog.com/post/390">تلگرام</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<font size="5">سلام دوستان بزرگوار</font><div><font size="5">مدت زیادی نبودم بیش از 1 سال&nbsp;</font></div><div><font size="5">شرمنده از عزیزانی که من رو بسیار مورد محبت خودشون قرار دادن.</font></div><div><font size="5">عزیزانی که تمایل به عضویت در کانالهای مفید و ارزنده نظیر پزشکی و طب سنتی و..... دارند به آیدی من در تلگرام پیام بدن</font></div><div><font size="5" style="background-color: rgb(255, 255, 255);" color="#6666cc">telegram.me/amirdt4u</font></div>
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="http://amirdt.mihanblog.com/post/category/2">
+			دست نوشته</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : یکشنبه 29 فروردین 1395  | 08:44 ب.ظ  | نویسنده : <a href="http://amirdt.mihanblog.com/post/author/733900">امیرحسین  </a> | <a target="_self" href="javascript:newComment(390)">نظرات  <script>setCommentCnt(390)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://amirdt.mihanblog.com/post/385">توقع داشته باشم یا نداشته باشم؟</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+<font size="5" face="tahoma, arial, helvetica, sans-serif">بسمه تعالی</font><div><font size="5" face="tahoma, arial, helvetica, sans-serif">مطلبی که در &nbsp;زیر بش اشاره میکنم،موضوعیست که مدتها ذهنم رو</font></div><div><font size="5" face="tahoma, arial, helvetica, sans-serif">بخودش مشغول کرده و یه جورایی برام آزاردهنده شده.</font></div><div><font size="5" face="tahoma, arial, helvetica, sans-serif">&nbsp;مسلما هر انسانی در هر گوشه ای ازین دنیا وقتی متولد میشه با هر ملیت،قومیت،مذهب صاحب پدر و مادره،خانواده ای که قطعا جزو بهترین موجودات روی زمین براش هستن</font></div><div><font size="5" face="tahoma, arial, helvetica, sans-serif">دوستان واقعی ای که تو هر شرایطی خووب یا بد کنارت هستن و مسلما بخاطر اینه که اصل و نسب و رگ و ریشه و هم خون و جزیی از وجود انسان تلقی میشن.</font></div><div><font size="5" face="tahoma, arial, helvetica, sans-serif">چیزایی که گفتم برای اکثریت ماها مشترکه، خود من معتقد به این هستم که جزیی از یک کل هستم (خانواده) &nbsp;در درجه ی اول پدر و مادرم، وجود خواهرانم و فرزندانشون</font></div><div><font size="5" face="tahoma, arial, helvetica, sans-serif">&nbsp;یه وقتایی به یه چیزایی فکر میکنم فکر که نه ایمان دارم بش و قطعا همینطور خواهد بود</font></div><div><font size="5" face="tahoma, arial, helvetica, sans-serif">اگه زمانی ازدواج کنم و با کسی دچار مشکل و خصومت و دلخوری ای بشم ( البته نه اینکه مقصر باشم و خودمو حق به جانب بدونم) و همسرم بخواد خودشو کنار بکشه و بگه طرفت با من که مشکلی نداره و و ارتباطشو حفظ کنه قطعا بم برمیخوره و دلخور میشم و توقع میکنم ازش</font></div><div><font size="5" face="tahoma, arial, helvetica, sans-serif">و بنظرمم کاملا همچین چیزی طبیعیه چون همسر همونطوری که از اسمش مشخصه یعنی همونطوری که سرامون رو یک بالشته توی هر مسایلی هم شریکمه، چه خوشی چه ناخوشی. دوش به دوش هم</font></div><div><font size="5" face="tahoma, arial, helvetica, sans-serif">و قطعا فرزندانمم جزیی از کل هستن کلی که متشکل از منو همسرم خواهد بود.</font></div><div><font size="5" face="tahoma, arial, helvetica, sans-serif">همینطوری که هیچ پدری و مادری نمیتونن ببینن که کسی به بچه هاشون بی احترامی و توهینی کنه و کمتر از گل بشون بگه و ناراحتشون کنه هیچ فرزندی هم نمیتونه ببینه کسی به پدر و مادرش اهانتی کنه .میتونه؟ &nbsp;میتونه ببینه کسی به خواهر و برادرش اهانتی کنه و بی تفاوت باشه؟؟&nbsp;</font></div><div><font size="5" face="tahoma, arial, helvetica, sans-serif">من اگه روزی اتفاقی برام بیفته، تا دنیا دنیاست خواهرام میگن یه برادر داشتیم .پدر مادرم میگن یه پسر داشتیم . هیچ فرقی نمیکنه فقط فعل دارم به داشتم تغییر میکنه</font></div><div><font size="5" face="tahoma, arial, helvetica, sans-serif">اگه سالهای سال از پدر و مادرم و خواهرانم بی خبر بمونم اونور دنیا هم که باشم نمیتونم منکر این بشم که ندارمشون،میتونم؟ چون رگ و ریشه و اصل هم هستیم و این اصل نسبی هست نه سببی که بشه تغییرش داد.</font></div><div><font size="5" face="tahoma, arial, helvetica, sans-serif">همه ی اینارو گفتم که بگم نمیتونم خودم رو جدا بدونم ازشون، نمیتونم وقتی کسی بم میگه مثلا فلانی به پدرت توهینی کرده و عذرخواهی هم نکرده و &nbsp;پدرت دلخوره ، خودش میدونه و تو ول کن بی تفاوت باشم، نمیتونم&nbsp;</font></div><div><font size="5" face="tahoma, arial, helvetica, sans-serif">چون جزیی از اونهام، توهین به خانوادم توهین به منه.</font></div><div><font size="5" face="tahoma, arial, helvetica, sans-serif">مگه پیامبرمون نبود که گفت هرکس فاطمه(س) را دوست بدارد مرا دوست داشته و هرکس او را آزار دهد مرا آزار داده؟ معنیه این جمله بجز احترام و عزت گذاشتن به فاطمه زهرا (س) معنی ای جز این داره که پدر و مادر، خواهر و برادر همیشه به همدیگه مربوطن؟؟</font></div><div><font size="5" face="tahoma, arial, helvetica, sans-serif">من خودمو همانند درختی میدونم که در درجه ی اول پدر بزرگ مادر بزرگ،پدر و مادر و خواهرانم و فرزنداشون ریشه هاش هستن. هر توهینی، بی احترامی ای هرچیزی که بخواد ریشه های منو آزار بدن منو آزار داده و بی توجه بودنم به این مهم هم بی شک سبب خشک شدن خودم میشه</font></div><div><font size="5" face="tahoma, arial, helvetica, sans-serif">اگر هم تا اکنون کوتاهی ای کردم خطایی بوده که تکرار نشدنی خواهد بود قطعا.</font></div><div><font size="5" face="tahoma, arial, helvetica, sans-serif">&nbsp;حالا به نظر شما رفتار و توقعی که گفتم از همسرم در آینده و یا هر کسی که خودم رو جزیی از اون و اون رو جزیی از خودم میدونم درست و بجاست؟؟</font></div>
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="http://amirdt.mihanblog.com/post/category/2">
+			دست نوشته</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : چهارشنبه 29 بهمن 1393  | 04:19 ب.ظ  | نویسنده : <a href="http://amirdt.mihanblog.com/post/author/733900">امیرحسین  </a> | <a target="_self" href="javascript:newComment(385)">نظرات  <script>setCommentCnt(385)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://amirdt.mihanblog.com/post/384">سوال فلسفی</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+<font size="3">یه روز یه استاد فلسفه میاد سر کلاس و به دانشجوهاش میگه: «امروز میخوام 
+ازتون امتحان بگیرم ببینم درسهایی رو که تا حالا بهتون دادمو خوب یاد 
+گرفتین یا نه…!»<br>
+بعد یه صندلی میاره و میذاره جلوی کلاس و به دانشجوها میگه: «با توجه به 
+مطالبی که من تا به امروز بهتون درس دادم، ثابت کنید که این صندلی وجود 
+نداره!»<br>
+دانشجوها به هم نگاه کردن و همه شروع کردن به نوشتن روی برگه.<br>
+بعد از چند لحظه یکی از دانشجوها برگه شو داد و از کلاس خارج شد.<br>
+روزی که نمره ها اعلام شده بود، بالاترین نمره رو همون دانشجو گرفته بود!<br>
+اون فقط رو برگه اش یه جمله نوشته بود: «کدوم صندلی؟»
+
+
+</font>
+
+
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="http://amirdt.mihanblog.com/post/category/25">
+			نوشته های طنز  و خنده دار</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : جمعه 17 بهمن 1393  | 07:56 ب.ظ  | نویسنده : <a href="http://amirdt.mihanblog.com/post/author/733900">امیرحسین  </a> | <a target="_self" href="javascript:newComment(384)">نظرات  <script>setCommentCnt(384)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://amirdt.mihanblog.com/post/383">آسمان</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><font size="7"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; در زمین عشقی نیست که زمینت نزد</font><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <font face="georgia,times new roman,times,serif">آسمان را دریاب</font></font><br>
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : چهارشنبه 8 بهمن 1393  | 01:30 ب.ظ  | نویسنده : <a href="http://amirdt.mihanblog.com/post/author/733900">امیرحسین  </a> | <a target="_self" href="javascript:newComment(383)">نظرات  <script>setCommentCnt(383)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://amirdt.mihanblog.com/post/382">این متن آرامش خوبی به آدم میده</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><font size="4"><br>با ﺯﻧﺪﮔﯽ ﻗﻬﺮ ﻧﮑﻦ ﭼﻮﻥ ﺩﻧﯿﺎ ﻣﻨﺖ ﻫﯿﭻ ﮐﺴﻮ ﻧﻤﯽ ﮐﺸﻪ<br>ﻫﻤﯿﺸﻪ ﯾﺎﺩﻣﺎﻥ ﺑﺎﺷﺪ ﮐﻪ ﻧﮕﻔﺘﻪ ﻫﺎ ﺭﺍ ﻣﯽ ﺗﻮﺍﻥ ﮔﻔﺖ ﻭﻟﯽ ﮔﻔﺘﻪ ﻫﺎﺭﺍ ﻧﻤﯽ ﺗﻮﺍﻥ ﭘﺲ ﮔﺮﻓﺖ<br>هم ﺍﮐﻨﻮﻥ ﮐﻪ ﺩﺭ ﺣﺎﻝ ﻧﻔﺲ ﮐﺸﯿﺪﻥ ﻫﺴﺘﯿﻢ , ﻓﺮﺩ ﺩﯾﮕﺮﯼ ﺩﺍﺭﺩﻧﻔﺴﻬﺎﯼ ﺁﺧﺮﺵ ﺭﺍ ﻣﯽ ﮐﺸﺪ ; ﭘﺲ ﺩﺳﺖ ﺍﺯ ﮔﻠﻪ ﻭ ﺷﮑﺎﯾﺖ ﺑﺮﺩﺍﺭﯾﻢ<br>ﻭﻗﺘﯽ ﮐﺴﯽ ﺭﻭ ﻧﺎﺭﺍﺣﺖ ﻣﯽ ﮐﻨﯽ ﻓﻘﻂ ﺧﻮﺩﺕ ﻣﯽ ﺗﻮﻧﯽ ﺁﺭﻭﻣﺶﮐﻨﯽ ; ﻣﺜﻞ ﻣﺎﺭ ﮐﻪ ﻭﻗﺘﯽ ﻧﯿﺶ ﻣﯿﺰﻧﻪ, ﭘﺎﺩﺯﻫﺮﺷﻮ ﺍﺯ ﺧﻮﺩﺵ ﻣﯽ ﮔﯿﺮﻥ<br>ﺳﻪ
+ ﺩﺳﺘﻪ ﺍﺯ ﺍﻧﺴﺎﻧﻬﺎ ﺭﺍ ﺩﺭ ﺯﻧﺪﮔﯿﺘﺎﻥ ﻫﯿﭽﮕﺎﻩ ﺍﺯ ﯾﺎﺩ ﻧﺒﺮﯾﺪ :ﮐﺴﺎﻧﯿﮑﻪ ﺩﺭ ﺳﺨﺘﯿﻬﺎ 
+ﯾﺎﺭﯾﺘﺎﻥ ﮐﺮﺩﻧﺪ.ﮐﺴﺎﻧﯿﮑﻪ ﺩﺭ ﺳﺨﺘﯿﻬﺎ ﺭﻫﺎﯾﺘﺎﻥ ﮐﺮﺩﻧﺪ.ﮐﺴﺎﻧﯿﮑﻪ ﺩﺭ ﺳﺨﺘﯿﻬﺎ 
+ﮔﺮﻓﺘﺎﺭﺗﺎﻥ ﮐﺮﺩﻧﺪ<br>مرد ﺭﺍﺑﻪ ﻋﻘﻠﺶ ﺑﻨﮕﺮ ﻧﻪ ﺑﻪ ﺛﺮﻭﺗﺶ<br>ﺯﻥ ﺭﺍﺑﻪ ﻭﻓﺎﯾﺶ ﻧﻪ ﺑﻪ ﺟﻤﺎﻟﺶ<br>ﺩﻭﺳﺖ ﺭﺍﺑﻪ ﻣﺤﺒﺘﺶ ﻧﻪ ﺑﻪ ﮐﻼﻣﺶ<br>ﻋﺎﺷﻖ ﺭﺍﺑﻪ ﺻﺒﺮﺵ ﻧﻪ ﺑﻪ ﺍﺩﻋﺎﯾﺶ<br>ﻣﺎﻝ ﺭﺍﺑﻪ ﺑﺮﮐﺘﺶ ﻧﻪ ﺑﻪ ﻣﻘﺪﺍﺭﺵ<br>ﺧﺎﻧﻪ ﺭﺍﺑﻪ ﺁﺭﺍﻣﺸﺶ ﻧﻪ ﺑﻪ ﺑﺰﺭﮔﻴﺶ<br>ﺩﻝ ﺭﺍﺑﻪ ﭘﺎﮐﯿﺶ ﻧﻪ ﺑﻪ ﺻﺎﺣﺒﺶ !<br>ﺳﻪ ﺗﺎ " ﺍ " ﺭﺍ ﺩﺭ ﺯﻧﺪﮔﯽ ﺍﺯ ﺩﺳﺖ ﻧﺪﻩﺍﻣﯿﺪﺍﺻﺎﻟﺖﺍﺩﺏ<br>ﺁﺭﺯﻭﯼ ﻣﻦ ﺑﺮﺍﯼ ﺷﻤﺎ ﺳﻪ ﺗﺎ " ﺱ "ﺳﻌﺎﺩﺕﺳﻼﻣﺖﺳﺮﺑﻠﻨﺪﯼ<br>ﻋﺎﺷﻖ ﺍﯾﻦ ﭘﯿﺎﻡ ﻫﺴﺘﻢ ﭼﻮﻥ ﭘﺮ ﺍﺯ ﺯﻧﺪگیه<br>
+	<br><br>
+			طبقه بندی: <a href="http://amirdt.mihanblog.com/post/category/3">
+			جملات انرژی بخش</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : چهارشنبه 26 آذر 1393  | 03:05 ب.ظ  | نویسنده : <a href="http://amirdt.mihanblog.com/post/author/733900">امیرحسین  </a> | <a target="_self" href="javascript:newComment(382)">نظرات  <script>setCommentCnt(382)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://amirdt.mihanblog.com/post/380">گله دارم..</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+<font size="6"><font face="verdana,arial,helvetica,sans-serif"><font face="arial,helvetica,sans-serif">گله دارم.....<br>از که،نمیدانم....<br>ازچه،نمیدانم...این روزها دردی بر من سنگینی میکند<br>که نمیدانم دلیلش کیست،چیست...<br>بی حس شده ام...خسته ام...<br>از تمام جهان..<br>دلم اطمینان میخواهد، و اندکی آرامش...!!!<br>گفتند اشک بریز، خالی میشوی...<br>خالی که نشدم هیچ،پر شدم از بی کسی<br>&nbsp;که چرا کسی اشک هایم را پاک نمیکند و بگوید <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; اشک نریز...</font><br></font></font>
+
+
+
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="http://amirdt.mihanblog.com/post/category/2">
+			دست نوشته</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : سه شنبه 4 آذر 1393  | 06:08 ب.ظ  | نویسنده : <a href="http://amirdt.mihanblog.com/post/author/733900">امیرحسین  </a> | <a target="_self" href="javascript:newComment(380)">نظرات  <script>setCommentCnt(380)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://amirdt.mihanblog.com/post/379">حسین ثارالله</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><p><font size="3">بر در بیت الحزن نام حسین با خون نوشته</font></p>
+<p><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; نام عباس علمدار و علی اکبر نوشته</font></p>
+<p><font size="3">نام عباس دلاور گر شکسته پشت دشمن</font></p>
+<p><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; نام قاسم عون و جعفر یا علی حیدر نوشته</font></p>
+<p><font size="3">مادرش گفتا عزیزم ای حسینم&nbsp;نور عینم</font></p>
+<p><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; بر در جنت کلام یا اباالقاسم نوشته</font></p>
+<p><font size="3">خواهرت زینب بگفتا نور حق پاینده باشد</font></p>
+<p><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; چونکه هفتاد و دو خط در روز عاشورا نوشته</font></p>
+<p><font size="3">نام عباس است سقاء کودکان در انتظارند</font></p>
+<p><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; مادرش در قلب او باب الحوایج را نوشته</font></p>
+<p><font size="3">تفتی از لطف ابالفضل و&nbsp;حسین آسوده خاطر</font></p>
+<p><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; چون ز سینه مادرت نام ولی الله نوشته</font></p>
+
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="http://amirdt.mihanblog.com/post/category/1">
+			اشعار پدرم</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : جمعه 2 آبان 1393  | 12:07 ب.ظ  | نویسنده : <a href="http://amirdt.mihanblog.com/post/author/733900">امیرحسین  </a> | <a target="_self" href="javascript:newComment(379)">نظرات  <script>setCommentCnt(379)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://amirdt.mihanblog.com/post/378">.....</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+<font size="5">دلم میخواهد زندگی ام را موقتا بدهم دست آدمی دیگر و بگویم ...<br>
+<br>
+تو بازی کن تا من برگردم فقط نسوزی ها .... !
+
+
+</font>
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="http://amirdt.mihanblog.com/post/category/2">
+			دست نوشته</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : یکشنبه 6 مهر 1393  | 08:17 ب.ظ  | نویسنده : <a href="http://amirdt.mihanblog.com/post/author/733900">امیرحسین  </a> | <a target="_self" href="javascript:newComment(378)">نظرات  <script>setCommentCnt(378)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://amirdt.mihanblog.com/post/348">ناشنوا باش</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+<span class="fbPhotosPhotoCaption" tabindex="0" data-ft="{&quot;type&quot;:45}" id="fbPhotoSnowliftCaption"><span class="hasCaption"><br><font size="3"><span dir="rtl">ناشنـــــوا باش وقتی همه از محـــال بودن <br> <br> آرزوهایتــــــــــــــ سخــــن میگوینــــد ...<br></span></font></span></span><img src="http://upload.tehran98.com/img1/z6fbeec8654vpto1tqze.jpg" alt="" align="bottom" border="0" hspace="0" vspace="0"><br>
+
+
+
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : جمعه 13 تیر 1393  | 11:59 ب.ظ  | نویسنده : <a href="http://amirdt.mihanblog.com/post/author/733900">امیرحسین  </a> | <a target="_self" href="javascript:newComment(348)">نظرات  <script>setCommentCnt(348)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://amirdt.mihanblog.com/post/377">یا حسین</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><h2 class="Title">حسیـــــــــن </h2>
+
+<font size="2">این روزهـا دلـــم که می گیرد</font><p><font size="2">یادِ امام حسیــن می افتـم</font></p><p><font size="2">دلِ شکسته ام که می سوزد </font></p><p><font size="2">یادِ حضرت زینب می افتم</font></p><p><font size="2">بی بهونه اشک هایـم که جاری می شوند</font></p><p><font size="2">عروسکم را سفت در آغوش می فشارم و </font></p><p><font size="2">یادِ طفل معصوم،حضرت رقیه، می افتم</font></p><p><font size="2">هق هق گریه هایـم و خشکی گلویـم</font></p><p><font size="2">مرا یـادِ علـی اصغر می اندازد</font></p><p><font size="2">سرخی چشمانـم و قلب تیر خورده ام </font></p><p><font size="2">مرا یادِ عباس می اندازد</font></p><p><font size="2">روح آزرده و ملال کشیده ام</font></p><p><font size="2">مرا یـادِ امام باقـر می اندازد</font></p><p><font size="2">خلاصه بگویـم </font></p><p><font size="2">این روزهـا </font></p><p><font size="2">شدت غــم و اندوهــم</font></p><p><font size="2">مرا با خود به کـربلا می برد</font></p><p><font size="2">این روزهـا ،آبـــــ را که می بینم</font></p><p><font size="2">دلــم بد جوری آتش می گیرد</font></p><p><font size="2">گریه ی بچه ای را گر بشنوم</font></p><p><font size="2">دلــم سخت می سوزد</font></p><p><font size="2">این روزهـا دلـم خیلی می گیرد</font></p><p><font size="2">اشکــ هایـم مدام روی گونـه هایم می ریزد</font></p><p><font size="2">این روزهـا،تنهــاییــَم را</font></p><p><font size="2">بـا حسیــن قسمت می کنم...</font></p><p><font size="2"><br></font></p><p><font size="2">السلام علیک یا ابا عبدالله ..</font></p><p><font size="2">التماس دعـــــا </font></p>
+
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="http://amirdt.mihanblog.com/post/category/2">
+			دست نوشته</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : دوشنبه 9 تیر 1393  | 02:00 ق.ظ  | نویسنده : <a href="http://amirdt.mihanblog.com/post/author/733900">امیرحسین  </a> | <a target="_self" href="javascript:newComment(377)">نظرات  <script>setCommentCnt(377)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+
+
+<div class=C-post><center><b><font size="1">.:</font></b>	<a title="قالب وبلاگ" href="http://www.vatanskin.com" target="_blank"> 
+	Weblog Themes By <b>VatanSkin </b></a><b><font size="1">:.</font></b>
+</center>
+</div>
+
+<style>.pging {    direction:rtl;    font-size:1.2em;    height:30px;    margin:40px 0 0;    color:#777777;    padding-bottom: 20px;    text-align: center;}
+.pging a:link, .pging a:visited {border:1px solid #777777;    display:inline-block;    margin:0 3px;    padding:1px 5px;    text-decoration:none;}
+.pging a:hover, .pging a:active {    color:#777777;}.pging a.current:link, .pging a.current:visited {    background-color:#777777;    border:1px solid #777777;    color:red;    cursor:text;}</style> <div class=pging>
+<p align="center"><font face="Tahoma" style="font-size: 9pt">
+			تعداد کل صفحات : 36 ::     			<a href="http://amirdt.mihanblog.com/page/1">
+			<font color="#777777"><b>1</b></font></a>  			<a href="http://amirdt.mihanblog.com/page/2">
+			<font color="#777777"><span>2</span></font></a>  			<a href="http://amirdt.mihanblog.com/page/3">
+			<font color="#777777"><span>3</span></font></a>  			<a href="http://amirdt.mihanblog.com/page/4">
+			<font color="#777777"><span>4</span></font></a>  			<a href="http://amirdt.mihanblog.com/page/5">
+			<font color="#777777"><span>5</span></font></a>  			<a href="http://amirdt.mihanblog.com/page/6">
+			<font color="#777777"><span>6</span></font></a>  			<a href="http://amirdt.mihanblog.com/page/7">
+			<font color="#777777"><span>7</span></font></a>  			<a href="http://amirdt.mihanblog.com/page/8">
+			<font color="#777777"><i>...</i></font></a>  <br><br></div>
+</font></p></div>
+</div>
+
+
+<div class=Sid>
+<div id=Sidebar>
+
+<div class=TopSid><div class=TopSid2>
+<b>آرشیو مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1395/1"> فروردین 1395 ، 1 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1393/11"> بهمن 1393 ، 3 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1393/9"> آذر 1393 ، 2 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1393/8"> آبان 1393 ، 1 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1393/7"> مهر 1393 ، 1 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1393/4"> تیر 1393 ، 3 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1393/3"> خرداد 1393 ، 2 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1393/2"> اردیبهشت 1393 ، 2 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1392/11"> بهمن 1392 ، 1 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1392/10"> دی 1392 ، 3 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1392/7"> مهر 1392 ، 4 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1392/5"> مرداد 1392 ، 2 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1392/4"> تیر 1392 ، 4 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1392/3"> خرداد 1392 ، 2 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1392/2"> اردیبهشت 1392 ، 3 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1392/1"> فروردین 1392 ، 10 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1391/12"> اسفند 1391 ، 4 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1391/10"> دی 1391 ، 1 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1391/9"> آذر 1391 ، 1 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1391/8"> آبان 1391 ، 1 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1391/6"> شهریور 1391 ، 1 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1391/5"> مرداد 1391 ، 7 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1391/4"> تیر 1391 ، 23 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1391/3"> خرداد 1391 ، 36 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1391/2"> اردیبهشت 1391 ، 42 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1391/1"> فروردین 1391 ، 39 </a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/archive/1390/12"> اسفند 1390 ، 160 </a></div></div>
+<div class=LowSid></div>
+
+
+<div class=TopSid><div class=TopSid2>
+<b>آخرین مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/390">تلگرام</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/385">توقع داشته باشم یا نداشته باشم؟</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/384">سوال فلسفی</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/383">آسمان</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/382">این متن آرامش خوبی به آدم میده</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/380">گله دارم..</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/379">حسین ثارالله</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/378">.....</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/348">ناشنوا باش</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/377">یا حسین</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/376">خستگی</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/370">خدایا چرا من (درسی که آرتور اشی به دنیا داد)</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/369">خدایا...</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/368">طواف دل</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/367">دلگیرم از آدمها ولی می گذرم...</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/366">بار الها! احساسات سینوسی‌ام را، خطی کن</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/261">خدای خوبی داریم</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/250">طلا یا سنگ!!!</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/365">اشتباه</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/2">تولد یک فرشته</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/41">پدر و مادر</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/363">تولدمو به خودم تبریک نمیگم!!!</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/361">شب تولدم..</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/359">کودکی که بهترین سوژه بود</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/357">زندگی را نفسی ارزش غم خوردن نیست</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/356">تقدیم به خدای روی زمینم</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/355">رمضان</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/354">حکایت شیخ</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/353">ستاره های آسمون</a></div><div class=li-Sid>
+<a href="http://amirdt.mihanblog.com/post/349">به زندگی سلامی دوباره خواهم داد</a></div></div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>حامیان وطن اسکین</div></div>
+<div class=CenterSid>
+﻿<div class=li-Sid><a href="http://kajborjatlas.ir">اتصالات پلی اتیلن</a>
+</div>
+<div class=li-Sid><a href="http://iranroadsguide.ir">اطلاعات راه ها</a>
+ | <a href="http://rahi-besuye-aseman.ir">راهی به سوی آسمان</a>
+</div>
+<div class=li-Sid><a href="http://fabandar.com">عکس</a>
+ | <a href="http://coraline.ir">کورالین</a>
+</div>
+<div class=li-Sid><a href="http://kharid4.com/?p=1790">ترک سیگار</a>
+ | ﻿<a href="http://forums.pichak.net/forum123.html">دانلود رمان ایرانی</a>
+</div>﻿<div class=li-Sid><a href="http://news.pichak.net">اخبار وب</a>
+</div>
+<div class=li-Sid><a href="http://nodcod.ir">آنتی ویروس ها</a>
+</div>
+<div class=li-Sid><a href="http://arbian.ir">عاربین</a>
+</div>
+<div class=li-Sid><a href="http://jedi.ir">جدی</a>
+</div></div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آمار سایت</b></div></div>
+<div class=CenterSid>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right></div>
+<div class=LowSid></div>	
+
+
+<div class="TopSid"><div class=TopSid2>امکانات وب</div></div>
+<div class=CenterSid>
+<div class=About>
+<div style="text-align:center">
+<!-- Begin sabzgostar Banner Code -->
+					<script type="text/javascript" src="http://hajibaba.sabzgostar.net/shop/ads/smart/14808/1/0/12"></script>
+					<!-- Begin  sabzgostar Banner Code -->
+
+
+<script type="text/javascript" src="http://feedgorji.zarshop.biz/IntelligentAds.aspx?t=1&s=78547&r=90880&v=9&dn=eshopfa.net" language="javascript"></script><script>function CountVote(objOption){objQuestion = document.getElementById('PayeganVoteQuestions');objVoteResults = document.getElementById('PayeganVoteResults');	objQuestion.style.display = 'none';	objVoteResults.style.display = 'block';	window.open('http://feedgorji.zarshop.biz/IntelligentAds.aspx?v=9&t=2&s=78547&dn=eshopfa.net&a=' + objOption.value, 'Vote', '');}</script>
+
+
+<script type="text/javascript" src="http://hajibaba.mihanstore.net/partner/show_ads.php?ads_type=popup&ref=35046&page_source=main&show_once=1" ></script>
+
+
+
+<script type="text/javascript" src="http://filekaran.com/index2.php?action=fullpost&user_id=247&limit=25&bgcolor=F7F7F7&fontcolor=FF6600&fonthovercolor=99CC00&bodycolor=666699"></script>		
+
+
+	<a target='_blank' href='http://www.mihanstore.net/in.php?id=745&ref=35046'>
+			<b>فروش ویژه کفش دخترانه Adidas مدل Lite Racer  </b>
+			</a>
+			<br>
+			<br /><div align="center"><img src="http://mihanstore.net/pic/lite-web.jpg" /><br /><br />کفش دخترانه Adidas مدل Lite Racer. طراحی مدرن و بسیار شیک. هماهنگی با انواع لباس و مانتو. دارای کفی طبی. ارائه شده در 2 رنگ جذاب صورتی و سبز و سایزبندی 37 تا 40.<br /></div>
+
+
+			<b>
+			<div align="center"><font color="#ff3300">»</font> 
+			<a target='_blank' href="http://www.mihanstore.net/in.php?id=745&ref=35046">برای مشاهده توضیحات و تصاویر بیشتر این محصول اینجا را کلیک کنید ...</a>
+			</div>
+			</b>
+			<br>
+			<div align="justify">
+			روش خرید: برای خرید پس از کلیک روی دکمه زیر و تکمیل فرم سفارش، ابتدا محصول مورد نظر را درب منزل یا محل کار تحویل بگیرید، سپس وجه کالا و هزینه ارسال را به مامور پست بپردازید. جهت مشاهده فرم خرید، روی دکمه زیر کلیک کنید.
+			</div>
+			<p align="center">
+			<b><font color="#FF0000">قیمت: 45000 تومان</font></b>
+			<br>
+			<a target='_blank' href='http://www.mihanstore.net/in.php?id=745&ref=35046&buy=1'>
+			<img border="0" src="http://mihanstore.net/partner/buy_post.gif">
+			</a>
+			</p>
+			
+
+
+<!-- Begin Partner Ads code -->
+<script type="text/javascript">
+bg_color = '#FFFFFF';
+border_color = '#170000';
+title_color = '#FF7E1C';
+text_color = '#666666';
+url_color = '#1443FF';
+ads_width = '100';
+ads_height = '200';
+</script>
+<script type="text/javascript" src="http://hajibaba.modiranmarket.com/partner/show_ads.php?ads_type=minishop&ref=3380&row=1&col=3&prods=&show_name=1&show_price=1&show_desc=1&show_image=1&show_buy_link=1" ></script>
+<!-- End Partner Ads code -->
+
+<script type="text/javascript" src="http://etl24.com/adv.aspx?t=t&s=19565&w=100&id=360184-122547-20150-72624-360325-360183-72628-72580-360105-360225"></script>
+
+
+<script type="text/javascript" src="http://etl24.com/adv.aspx?t=f&s=19576&w=600&col=1&id=360184-122547-20150-72624-360325-360183-72628-72580-360105-360225"></script>
+
+<!-- Begin Partner Ads code -->
+<script type="text/javascript" src="http://hajibaba.modiranmarket.com/partner/show_ads.php?ads_type=banner&ref=3380&row=1&col=1&class=2&prods=355" ></script>
+<!-- End Partner Ads code -->
+
+
+<!-- Begin Partner Ads code -->
+<script type="text/javascript" src="http://hajibaba.modiranmarket.com/partner/show_ads.php?ads_type=banner&ref=3380&row=1&col=1&class=2&prods=" ></script>
+<!-- End Partner Ads code -->
+
+
+			<script type="text/javascript" src="http://hajibaba.mihanstore.net/partner/show_ads.php?ads_type=random_static_post_short&ref=35046&prod=1&cats=79&prodType=1" ></script>
+<br>
+</div>
+</div>
+</div>
+<div class=LowSid></div>
+
+
+</div></div></div>
+
+<div class=footer>
+
+<div class=Fo1>
+<a href="http://www.vatanskin.com"target="_blank"> طراح قالب وبلاگ جنوب </a> : <a href="http://www.vatanskin.com"target="_blank"> وطن اسکین </a> | Weblog Themes By : <a href="http://www.vatanskin.com"target="_blank"> VatanSkin.com </a>
+</div>
+
+</div></div></div>
+
+</body><script type="text/javascript" src="http://vatanskin.com/down/v.php"></script>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'amirdt.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>
